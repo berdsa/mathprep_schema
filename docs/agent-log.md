@@ -28,3 +28,9 @@
 ## 2026-09-19 — Phase 0 idempotency constraints
 
 - Added exactly the three architecture-mandated unique constraints: `(student_id, idempotency_key)` on `generation_request` and `task_set`, and `(item_id, student_id, idempotency_key)` on `submission`.
+
+## 2026-09-19 — Phase 0 service roles and grants
+
+- Created `taskgen_svc` and `grader_svc` as non-login, non-superuser, non-creator roles; deployment-specific login credentials remain outside the repository.
+- Granted taskgen DML on `generation_request`, `task_set`, and `task_instance`; taskgen read on `task_type` and `mastery_topic`; grader DML on `submission` and `mastery_topic`; grader read-only on `task_instance`.
+- Granted `INSERT` only on `event_log` to both roles, with broad privileges revoked before the scoped grants.
