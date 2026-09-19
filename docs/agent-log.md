@@ -49,3 +49,15 @@
 
 - Phase 0 database scope is complete: additive DDL for the ERD, exact §6 dictionary seeds, the three specified idempotency constraints, least-privilege service roles, clean fresh-Postgres migration verification, and rejected forbidden-write probes.
 - Release checkpoint: `v0.1.0`. Phase boundary reached; Phase 1 work must wait for explicit go-ahead.
+
+## 2026-09-20 — Phase 0 step 7, GitHub remote
+
+- Confirmed the tracked `github` remote points to `https://github.com/berdsa/mathprep_schema.git` for both fetch and push; no remote change was needed.
+
+## 2026-09-20 — Phase 0 step 7, shared Go module
+
+- Added `pkg/core/go.mod` with module path `github.com/berdsa/mathprep_schema` and pinned the `google/uuid` dependency.
+- Added typed constants for every seeded §6 dictionary value and ERD row structs for all nine ERD tables.
+- Implemented the `EXACT-INT` parse → normalize → compare → verdict pipeline with the converged input contract and reason codes.
+- Added CORRECT, INCORRECT, UNPARSEABLE, and boundary tests; package tests pass with the repository's Go 1.24.3 SDK.
+- Commits: `90e8d80`, `11a09b6`, `d392c4a`, `ce48093`, `01129c4`.
