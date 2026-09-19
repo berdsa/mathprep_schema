@@ -113,7 +113,7 @@ erDiagram
     TASK_TYPE {
         string type_id PK
         string domain "dictionary"
-        int grade
+        string grade "dictionary: 1,2,3,4,5,6,7,8,9,10,11,UNIVERSITY"
         string spec_version
         string generation_mode "dictionary: CODE, HYBRID-AI"
         string status "dictionary: DRAFT, GATED, FINAL"

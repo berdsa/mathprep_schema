@@ -41,7 +41,7 @@ type GenerationRequest struct {
 type TaskType struct {
 	TypeID            string
 	Domain            Domain
-	Grade             int
+	Grade             GradeBand
 	SpecVersion       string
 	GenerationMode    GenerationMode
 	Status            TaskTypeStatus
