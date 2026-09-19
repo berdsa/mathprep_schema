@@ -24,7 +24,7 @@ Unchanged in substance: `raw_input` 90 days then redacted to verdict+reason_code
 ## Residency & sub-processors
 Unchanged: existing VPS, `ASM-09`. **HYBRID-AI sub-processor note (G3-NUM-005)** unchanged from prior pass — operand values and template slots only, never `student_id` or `raw_input`, per ADR-005.
 
-**New role added this pass:** `mathprep-analytics`, when built, gets a read-only DB role scoped to `EVENT_LOG` and its own derived tables — it is never granted access to `USERS`, the identity-mapping table, or `SUBMISSION.raw_input`, since none of its stated purposes (empirical difficulty, discrimination, drift) require raw identity or raw input text.
+**New role added this pass:** `analytics`, when built, gets a read-only DB role scoped to `EVENT_LOG` and its own derived tables — it is never granted access to `USERS`, the identity-mapping table, or `SUBMISSION.raw_input`, since none of its stated purposes (empirical difficulty, discrimination, drift) require raw identity or raw input text.
 
 ## Deletion / export
 Unchanged: no self-service UI in this backlog's scope; manual admin action against `user_id`; export is a JSON dump per student across `TASK_SET`/`TASK_INSTANCE`/`SUBMISSION`/`MASTERY_TOPIC`. **Extended this pass:** an export must also either include or explicitly account for that student's `EVENT_LOG` rows — an export that silently omits journal history is incomplete, not just minimal.

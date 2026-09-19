@@ -22,12 +22,12 @@ FR-001 through FR-006 are carried forward from the prior pass with two textual u
 
 ## FR-007 — Generation is mediated by a durable job queue, not an in-request call *(new)*
 
-As `mathprep-taskgen`, I want incoming generation requests recorded as rows before any work starts, so that a crash mid-generation never loses the request and never double-processes it.
+As `taskgen`, I want incoming generation requests recorded as rows before any work starts, so that a crash mid-generation never loses the request and never double-processes it.
 
 ```gherkin
 Scenario: Happy path — request accepted, processed, polled to completion
   Given the bot submits a generation request for student S, grade 3, count 10
-  When mathprep-taskgen's HTTP handler receives it
+  When taskgen's HTTP handler receives it
   Then a GENERATION_REQUEST row is inserted with status=PENDING and a request_id is returned with 202 Accepted
   And a background worker within the same service picks it up via SELECT ... FOR UPDATE SKIP LOCKED
   And on completion the row's status becomes DONE and TASK_SET/TASK_INSTANCE rows exist
@@ -75,7 +75,7 @@ Scenario: Failure/abuse — journal is never mutated after the fact
   Then this is rejected at the database role level (EVENT_LOG's write role has INSERT-only privilege)
 ```
 
-**Explicitly out of FR-008's scope:** computing rollups, p-values, discrimination indices, or mastery drift from `EVENT_LOG`. That consumption is `mathprep-analytics`, a separate later-phase deliverable per the operator's own phasing instruction — not blocked by, and not blocking, FR-008 itself. `MASTERY_TOPIC.ema_score` (needed by FR-001) is updated incrementally by `mathprep-grader` directly off each `SUBMISSION`, not by the deferred analytics service — this distinction matters and is restated in `08-developer-backlog.md`.
+**Explicitly out of FR-008's scope:** computing rollups, p-values, discrimination indices, or mastery drift from `EVENT_LOG`. That consumption is `analytics`, a separate later-phase deliverable per the operator's own phasing instruction — not blocked by, and not blocking, FR-008 itself. `MASTERY_TOPIC.ema_score` (needed by FR-001) is updated incrementally by `grader` directly off each `SUBMISSION`, not by the deferred analytics service — this distinction matters and is restated in `08-developer-backlog.md`.
 
 ## Non-functional requirements
 Unchanged from prior pass (NFR-001…007) with NFR-004 now read as "per type **and per service that owns it**" and NFR-007 (`raw_input` retention) unchanged. No new NFRs this pass; CAS-specific NFRs (evaluator timeout budget, sandboxing overhead) are deferred to whichever pass first specs a CAS-bearing type, per `00-scope-lock.md`'s SCOPE-AMD-01 note.

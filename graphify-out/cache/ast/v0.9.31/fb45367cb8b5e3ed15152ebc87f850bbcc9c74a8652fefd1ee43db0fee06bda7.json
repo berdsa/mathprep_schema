@@ -1,0 +1,1 @@
+{"nodes": [{"id": "$graphify-root$_migrations_000002_seed_dictionaries_up_sql", "label": "000002_seed_dictionaries.up.sql", "file_type": "code", "source_file": "migrations/000002_seed_dictionaries.up.sql", "source_location": null}], "edges": []}

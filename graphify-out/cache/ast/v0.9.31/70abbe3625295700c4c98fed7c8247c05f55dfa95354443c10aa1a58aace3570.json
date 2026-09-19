@@ -1,0 +1,1 @@
+{"nodes": [{"id": "$graphify-root$_migrations_000004_create_service_roles_down_sql", "label": "000004_create_service_roles.down.sql", "file_type": "code", "source_file": "migrations/000004_create_service_roles.down.sql", "source_location": null}], "edges": []}

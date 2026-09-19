@@ -35,8 +35,8 @@ Unchanged from prior pass — Ученица 3 класса, Ученица 6 к
 | ASM-08 | Согласие опекуна удовлетворено статусом оператора как законного представителя, в рамках семейного пилота | Оператор/Legal |
 | ASM-09 | Существующий VPS достаточен для семейного пилота, новый sub-processor не вводится | Оператор |
 | ASM-10 *(new)* | Bot/Web общаются с сервисами через тонкий HTTP, не напрямую с БД | Инженер/Оператор |
-| ASM-11 *(new)* | Worker внутри `mathprep-taskgen` — горутина в том же бинарнике, не отдельный деплоймый сервис | Инженер |
-| ASM-12 *(new)* | Общий Go-модуль `mathprep-schema` — единственное разрешённое исключение из «нет общего кода между сервисами» | Оператор (может наложить вето) |
+| ASM-11 *(new)* | Worker внутри `taskgen` — горутина в том же бинарнике, не отдельный деплоймый сервис | Инженер |
+| ASM-12 *(new)* | Общий Go-модуль `schema` — единственное разрешённое исключение из «нет общего кода между сервисами» | Оператор (может наложить вето) |
 
 ## Реестр открытых вопросов — consolidated
 
@@ -55,12 +55,12 @@ Unchanged from prior pass — Ученица 3 класса, Ученица 6 к
 
 | Business goal | FR | Component |
 |---|---|---|
-| BG-01 "immediate, trustworthy verdict" | FR-002, FR-003, FR-004 | `mathprep-schema`'s validation pipeline, consumed by `mathprep-grader` |
-| BG-02 "extend catalog without regressions" | FR-005, FR-006 + golden tests | `mathprep-taskgen` registry, defect-remediation job |
-| BG-03 "no student misgraded due to input-format friction" | FR-004 + input contract | `mathprep-grader` Stage-1 parse |
-| BG-04 "weak topics get more practice" | FR-001 | `mathprep-taskgen` weighting (algorithm not yet specified) |
-| BG-05 "no request lost, none double-processed" *(new)* | FR-007 | `mathprep-taskgen` job queue |
-| BG-06 "complete history for future analytics, without blocking it" *(new)* | FR-008 | `EVENT_LOG`, written by both `mathprep-taskgen` and `mathprep-grader` |
+| BG-01 "immediate, trustworthy verdict" | FR-002, FR-003, FR-004 | `schema`'s validation pipeline, consumed by `grader` |
+| BG-02 "extend catalog without regressions" | FR-005, FR-006 + golden tests | `taskgen` registry, defect-remediation job |
+| BG-03 "no student misgraded due to input-format friction" | FR-004 + input contract | `grader` Stage-1 parse |
+| BG-04 "weak topics get more practice" | FR-001 | `taskgen` weighting (algorithm not yet specified) |
+| BG-05 "no request lost, none double-processed" *(new)* | FR-007 | `taskgen` job queue |
+| BG-06 "complete history for future analytics, without blocking it" *(new)* | FR-008 | `EVENT_LOG`, written by both `taskgen` and `grader` |
 
 No orphan FRs (six map to six goals); no orphan ERD entities (`USERS`, `STUDENTS`, `GENERATION_REQUEST`, `TASK_TYPE`, `TASK_SET`, `TASK_INSTANCE`, `SUBMISSION`, `MASTERY_TOPIC`, `EVENT_LOG` — all reachable from at least one FR above).
 
@@ -70,4 +70,4 @@ No orphan FRs (six map to six goals); no orphan ERD entities (`USERS`, `STUDENTS
 **Per service release:** all Gherkin scenarios (FR-001…008) automated and green in that service's own CI; golden tests green for every type it owns; its own STRIDE-boundary mitigations implemented; data-governance gates closed for family-pilot scope.
 
 ## Migration / rollout / rollback
-Rollout: each service has its own CI/CD to the shared VPS; `mathprep-taskgen`'s registry loads only `FINAL`/`GATED` types. Rollback trigger (numeric, unchanged): `unparseable_rate > 25%` for a newly-registered type within its first 100 submissions → config-only allowlist change disables that `type_id`, no redeploy. Migration: additive-only until `OPEN-07` closes; owned solely by `mathprep-schema` — neither `mathprep-taskgen` nor `mathprep-grader` ships its own migration files (this was implicit before, made explicit now that there are three repos that could otherwise each try to own a piece of the schema).
+Rollout: each service has its own CI/CD to the shared VPS; `taskgen`'s registry loads only `FINAL`/`GATED` types. Rollback trigger (numeric, unchanged): `unparseable_rate > 25%` for a newly-registered type within its first 100 submissions → config-only allowlist change disables that `type_id`, no redeploy. Migration: additive-only until `OPEN-07` closes; owned solely by `schema` — neither `taskgen` nor `grader` ships its own migration files (this was implicit before, made explicit now that there are three repos that could otherwise each try to own a piece of the schema).

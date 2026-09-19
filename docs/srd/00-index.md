@@ -22,10 +22,10 @@
 
 | Репозиторий | Назначение | Статус |
 |---|---|---|
-| `mathprep-schema` | DDL-миграции, справочники, версия схемы, минимальный shared Go-пакет с общими enum/структурами строк | NOT STARTED |
-| `mathprep-taskgen` | Генерация инстансов заданий + назначение студенту (job-worker на Postgres) | NOT STARTED |
-| `mathprep-grader` | Приём и валидация ответов | NOT STARTED |
-| `mathprep-analytics` | **Поздняя фаза.** Роллапы поверх журнала событий | NOT STARTED — не начинать раньше `08-developer-backlog.md` Фазы «Analytics» |
+| `schema` | DDL-миграции, справочники, версия схемы, минимальный shared Go-пакет с общими enum/структурами строк | NOT STARTED |
+| `taskgen` | Генерация инстансов заданий + назначение студенту (job-worker на Postgres) | NOT STARTED |
+| `grader` | Приём и валидация ответов | NOT STARTED |
+| `analytics` | **Поздняя фаза.** Роллапы поверх журнала событий | NOT STARTED — не начинать раньше `08-developer-backlog.md` Фазы «Analytics» |
 
 ## Реестр допущений и открытых вопросов — сводный, обновлён
 

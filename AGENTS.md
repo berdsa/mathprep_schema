@@ -1,4 +1,4 @@
-# AGENTS.md — mathprep-schema
+# AGENTS.md — schema
 
 ## What this repo is
 Owns every PostgreSQL DDL migration and seed dictionary for the MathPrep project, plus a small versioned Go module of shared dictionary constants, ERD row structs, and the shared answer-validation pipeline (`parse → normalize → compare → verdict`). This is the one disclosed exception to "no shared code between services" — see ADR-007 in `docs/srd/05-decisions.md` for why it exists and what it does *not* cover (no business logic, no HTTP handlers).
@@ -13,7 +13,7 @@ Go + PostgreSQL only. No Kafka, no Redis (`CON-04`, `CON-09`, ADR-006). Migratio
 Docker Desktop is already running. **No docker-compose file.** One container, started with its own explicit command:
 ```
 docker run -d \
-  --name mathprep-postgres \
+  --name postgres \
   -e POSTGRES_USER=mathprep \
   -e POSTGRES_PASSWORD=<local dev password — set via shell env, never commit it> \
   -e POSTGRES_DB=mathprep \

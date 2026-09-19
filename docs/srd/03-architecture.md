@@ -6,25 +6,25 @@ Supersedes the prior pass's single-`app-api` diagrams. Reflects ADR-006 (indepen
 
 ```mermaid
 graph TD
-    Bot[Telegram Bot] -->|POST generation request| TG[mathprep-taskgen]
+    Bot[Telegram Bot] -->|POST generation request| TG[taskgen]
     Bot -->|poll status / fetch items| TG
-    Web[QR Self-Check Web Page] -->|POST submission| GR[mathprep-grader]
+    Web[QR Self-Check Web Page] -->|POST submission| GR[grader]
     TG -->|read/write mathprep schema| DB[(PostgreSQL: mathprep schema)]
     GR -->|read/write mathprep schema| DB
     TG -.->|internal worker goroutine, same binary| TG
-    AN[mathprep-analytics — later phase, not built yet] -.->|reads EVENT_LOG, read-only role| DB
+    AN[analytics — later phase, not built yet] -.->|reads EVENT_LOG, read-only role| DB
 ```
-Asserts: three independently deployable Go binaries (`mathprep-taskgen`, `mathprep-grader`, and later `mathprep-analytics`), one shared Postgres schema owned by `mathprep-schema`'s migrations, zero direct service-to-service network calls — all coordination is through the database (CON-04, CON-09, CON-10). Does not cover: authentication of the bot's own webhook (see `backend-integration.md` §5), or the CAS evaluator (no consumer yet, `OPEN-06`).
+Asserts: three independently deployable Go binaries (`taskgen`, `grader`, and later `analytics`), one shared Postgres schema owned by `schema`'s migrations, zero direct service-to-service network calls — all coordination is through the database (CON-04, CON-09, CON-10). Does not cover: authentication of the bot's own webhook (see `backend-integration.md` §5), or the CAS evaluator (no consumer yet, `OPEN-06`).
 
-`mathprep-taskgen`'s "worker" is not a fourth service — it is a goroutine inside the same binary, run in the same process as its HTTP handler (CON-06: keep this simple at family scale). This satisfies "separate independent services" (the operator's unit of separation was taskgen vs. grader vs. analytics, not handler-vs-worker within one service) — flagged as `[ASSUMPTION: ASM-11]` since the operator did not spell out whether handler and worker must themselves be separate deployables; the cheaper interpretation is adopted, reversible later at low cost (it is already structured as two goroutines communicating only through the DB, so splitting them into two binaries later is a small change).
+`taskgen`'s "worker" is not a fourth service — it is a goroutine inside the same binary, run in the same process as its HTTP handler (CON-06: keep this simple at family scale). This satisfies "separate independent services" (the operator's unit of separation was taskgen vs. grader vs. analytics, not handler-vs-worker within one service) — flagged as `[ASSUMPTION: ASM-11]` since the operator did not spell out whether handler and worker must themselves be separate deployables; the cheaper interpretation is adopted, reversible later at low cost (it is already structured as two goroutines communicating only through the DB, so splitting them into two binaries later is a small change).
 
 ## Sequence — generation via job queue (FR-007)
 
 ```mermaid
 sequenceDiagram
     participant Bot
-    participant TG as mathprep-taskgen (API)
-    participant W as mathprep-taskgen (worker goroutine)
+    participant TG as taskgen (API)
+    participant W as taskgen (worker goroutine)
     participant DB as PostgreSQL
 
     Bot->>TG: POST /v1/generation-requests {student_id, grade, topics, count, idempotency_key}
@@ -55,7 +55,7 @@ Asserts: idempotency checked before any row is written (FR-007); the lease/heart
 sequenceDiagram
     participant Student
     participant Web as QR Web Page
-    participant GR as mathprep-grader
+    participant GR as grader
     participant DB as PostgreSQL
 
     Student->>Web: open QR link (signed, time-boxed token)
@@ -64,7 +64,7 @@ sequenceDiagram
         GR-->>Web: item_id, rendered problem (locale + render_target aware)
         Student->>Web: enter answer
         Web->>GR: POST /v1/items/:id/submissions (raw_input, idempotency_key)
-        GR->>GR: parse -> normalize -> compare -> verdict (shared pipeline package, vendored from mathprep-schema)
+        GR->>GR: parse -> normalize -> compare -> verdict (shared pipeline package, vendored from schema)
         GR->>DB: INSERT SUBMISSION + EVENT_LOG row (one transaction)
         GR->>DB: UPDATE MASTERY_TOPIC (incremental EMA update — core, not deferred analytics)
         GR-->>Web: verdict, reason_code
@@ -72,7 +72,7 @@ sequenceDiagram
         GR-->>Web: 401 TOKEN_INVALID
     end
 ```
-Asserts: `mathprep-grader` never calls `mathprep-taskgen` over the network — it reads `TASK_INSTANCE`'s frozen `correct_answer_json` directly from the shared schema. `MASTERY_TOPIC` update happens here, synchronously, because FR-001 needs it — this is the audit-flagged distinction (finding on log-journal phasing) made concrete in the diagram itself, not just in prose.
+Asserts: `grader` never calls `taskgen` over the network — it reads `TASK_INSTANCE`'s frozen `correct_answer_json` directly from the shared schema. `MASTERY_TOPIC` update happens here, synchronously, because FR-001 needs it — this is the audit-flagged distinction (finding on log-journal phasing) made concrete in the diagram itself, not just in prose.
 
 ## State machine — TaskInstance lifecycle
 Unchanged from the prior pass (`ISSUED → ANSWERED → FINALIZED / INVALIDATED → REGRADED → FINALIZED`, `ISSUED → EXPIRED`). `EXPIRED` threshold remains a config value, default 30 days, not hardcoded (see `08-developer-backlog.md` Phase 0).

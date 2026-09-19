@@ -1,0 +1,122 @@
+{
+  "AGENTS.md": {
+    "mtime": 1789817332.0351515,
+    "ast_hash": "e8137eab10171e42684290fe5e1da3c6",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1789812425.0980315,
+    "ast_hash": "e47b53a869308f400f9c4064d3ce9d89",
+    "semantic_hash": ""
+  },
+  "docs/agent-log.md": {
+    "mtime": 1789821070.196085,
+    "ast_hash": "e830a2c8eda2cf5894be97765a7ff712",
+    "semantic_hash": ""
+  },
+  "docs/srd/00-conventions.md": {
+    "mtime": 1789817210.9252872,
+    "ast_hash": "4dd38b4a59aa12264cf6cdcf4e4bb636",
+    "semantic_hash": ""
+  },
+  "docs/srd/00-index.md": {
+    "mtime": 1789817210.9624312,
+    "ast_hash": "e4626a0144f56fbe89d9d890938cfe13",
+    "semantic_hash": ""
+  },
+  "docs/srd/00-scope-lock.md": {
+    "mtime": 1789817210.9134753,
+    "ast_hash": "0dbe6ee75544a57111799fca4429aec2",
+    "semantic_hash": ""
+  },
+  "docs/srd/01-current-state.md": {
+    "mtime": 1789817332.0256555,
+    "ast_hash": "d032be535820c02afd521fafbb524b12",
+    "semantic_hash": ""
+  },
+  "docs/srd/02-requirements.md": {
+    "mtime": 1789817210.9291804,
+    "ast_hash": "942bd7caebe6d873e2a296470823c177",
+    "semantic_hash": ""
+  },
+  "docs/srd/03-architecture.md": {
+    "mtime": 1789817332.0104434,
+    "ast_hash": "a21cd673367b6495ff2995eab3ca4376",
+    "semantic_hash": ""
+  },
+  "docs/srd/04-nfr-risk-ops.md": {
+    "mtime": 1789817332.0446012,
+    "ast_hash": "73658872bbf5eedf312833cdd74a50b3",
+    "semantic_hash": ""
+  },
+  "docs/srd/05-decisions.md": {
+    "mtime": 1789817332.0428817,
+    "ast_hash": "c5c8f6ad4a7f27ae6e0b660a8ef39dc9",
+    "semantic_hash": ""
+  },
+  "docs/srd/06-traceability.md": {
+    "mtime": 1789817332.0461173,
+    "ast_hash": "d62583109c2b6ef487e6a84c15d556c9",
+    "semantic_hash": ""
+  },
+  "docs/srd/07-task-type-specs-exemplars.md": {
+    "mtime": 1789758841.6566737,
+    "ast_hash": "d4f652143b0e2aece772dfafe0941555",
+    "semantic_hash": ""
+  },
+  "docs/srd/08-developer-backlog.md": {
+    "mtime": 1789817332.0395925,
+    "ast_hash": "cd41189a78a66c051e24bd50e928de5d",
+    "semantic_hash": ""
+  },
+  "docs/srd/backend-integration.md": {
+    "mtime": 1789817332.0297964,
+    "ast_hash": "c0f0ce020760e050154a83657fd7ac69",
+    "semantic_hash": ""
+  },
+  "docs/srd/data-governance.md": {
+    "mtime": 1789817332.0211625,
+    "ast_hash": "7d351c9732215601517b2cca70299ce5",
+    "semantic_hash": ""
+  },
+  "migrations/000001_create_phase0_schema.down.sql": {
+    "mtime": 1789819605.8537836,
+    "ast_hash": "7cfcf532b9432407f2b26cc6d636cdd3",
+    "semantic_hash": ""
+  },
+  "migrations/000001_create_phase0_schema.up.sql": {
+    "mtime": 1789819605.8031898,
+    "ast_hash": "01f20d9d5a41a71b0d5e5d46e5e21aeb",
+    "semantic_hash": ""
+  },
+  "migrations/000002_seed_dictionaries.down.sql": {
+    "mtime": 1789819971.6014917,
+    "ast_hash": "5ef22791c5d0407b70a31e219c4a1a95",
+    "semantic_hash": ""
+  },
+  "migrations/000002_seed_dictionaries.up.sql": {
+    "mtime": 1789819971.5498662,
+    "ast_hash": "db8343fd03612f2747c7f4a7b266096a",
+    "semantic_hash": ""
+  },
+  "migrations/000003_add_idempotency_constraints.down.sql": {
+    "mtime": 1789820050.8936281,
+    "ast_hash": "63da32d1fc337b33dbd8116a3ac9fc8c",
+    "semantic_hash": ""
+  },
+  "migrations/000003_add_idempotency_constraints.up.sql": {
+    "mtime": 1789820050.8440006,
+    "ast_hash": "34ffd8763b50a12674628f6516ffa222",
+    "semantic_hash": ""
+  },
+  "migrations/000004_create_service_roles.down.sql": {
+    "mtime": 1789820101.882409,
+    "ast_hash": "ddfd859f792834ceb483711000e4d719",
+    "semantic_hash": ""
+  },
+  "migrations/000004_create_service_roles.up.sql": {
+    "mtime": 1789820101.8333652,
+    "ast_hash": "843852865243fd09619b93338757f372",
+    "semantic_hash": ""
+  }
+}

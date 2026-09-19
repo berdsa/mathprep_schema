@@ -35,7 +35,7 @@ Unchanged from prior pass (decimal comma, space-grouped digits, `;` interval sep
 
 ## 6. Data-dictionary tables — **new this pass, Phase-0 deliverable**
 
-These are the enumerations previously used only in prose. They now become actual lookup tables (or `CHECK` constraints, developer's call per §9 of `08-developer-backlog.md`), seeded once in `mathprep-schema`, referenced by both `mathprep-taskgen` and `mathprep-grader`.
+These are the enumerations previously used only in prose. They now become actual lookup tables (or `CHECK` constraints, developer's call per §9 of `08-developer-backlog.md`), seeded once in `schema`, referenced by both `taskgen` and `grader`.
 
 | Dictionary | Values | Consumer |
 |---|---|---|
@@ -59,4 +59,4 @@ Unchanged: 200-attempt retry cap, `WARN` at 50, fallback pool, never an infinite
 
 ## 8. Cross-service contract discipline — **new this pass**
 
-Because generation and validation are now two independent codebases (not two modules in one binary), the shared vocabulary in §6 above is the **only** thing allowed to drift between them undetected if it isn't centralized. Rule: neither `mathprep-taskgen` nor `mathprep-grader` hardcodes any enum from §6 as a Go string literal in application logic — both import the generated types from the `mathprep-schema` module (see ADR-006, ADR-007). A reason code, verdict, or validation-method string that exists in one service's code but not in the `mathprep-schema` module is a build-time error, not a runtime surprise.
+Because generation and validation are now two independent codebases (not two modules in one binary), the shared vocabulary in §6 above is the **only** thing allowed to drift between them undetected if it isn't centralized. Rule: neither `taskgen` nor `grader` hardcodes any enum from §6 as a Go string literal in application logic — both import the generated types from the `schema` module (see ADR-006, ADR-007). A reason code, verdict, or validation-method string that exists in one service's code but not in the `schema` module is a build-time error, not a runtime surprise.
