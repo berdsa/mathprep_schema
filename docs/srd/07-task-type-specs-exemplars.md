@@ -1,0 +1,92 @@
+# 07 — Wave-A Exemplar Task-Type Specs
+
+*Five fully-specced types (renamed from "Tier-1" to avoid the Tier/Wave terminology collision fixed this pass — see `00-scope-lock.md`). These are the template the remaining Wave-A backlog replicates, and the reference implementation for Phase 1 of `08-developer-backlog.md`. Each spec's `locale` and `render_target` fields are now explicit columns per the architecture update (findings A, B).*
+
+## G3-NUM-001 — Multi-digit addition with carry
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Addition of two 3-digit numbers requiring carry / NUM / 3 / Apply |
+| Provenance / ref_status | seed, `[SOURCED: REF-01]` — grade alignment `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode | CODE |
+| locale / render_target | `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `"{a} + {b} = ?"`; alt-text `"Сложение: {a} плюс {b}"` |
+| Variables | `a: int [100,899]`; `b: int [100,899]` |
+| Generation constraint | reject-and-retry until ≥1 carry occurs; T2 additionally requires cascade into a 4th digit |
+| Solution | `c = a + b` |
+| equivalence_policy | **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; strip trim/leading `+`/leading zeros; any `,`/`.` ⇒ `WRONG_FORMAT`; max length 6 |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, EMPTY_INPUT, INPUT_TOO_LONG` |
+| Verification oracle | independent big-int recompute; assert ≥1 carry; 1000/1000 required |
+| Tiers | T1: `a,b∈[100,899]`, 1–2 carries. T2: forces cascade into a 4th digit |
+| Instance space | T1 ≥100,000 (est.). T2 ≥5,000 (est.). Dedup `(type_id,a,b)`, cooldown 30 days |
+| Worked examples | `134+219=353`; `257+486=743` (wrong: `"734"` transposition → INCORRECT); T2 edge `995+108=1103`, input `"01103"` → strip → CORRECT |
+| Misconception tags | `MISC-CARRY-DROP`, `MISC-DIGIT-TRANSPOSE` |
+
+## G3-NUM-014 — Division with remainder
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | `a ÷ b`, `b ∤ a` / NUM / 3 / Apply |
+| generation_mode / locale / render_target | CODE / `ru-KZ` / `plaintext`, `unicode-math` |
+| Variables | `a∈[10,99]`, `b∈[2,9]`, reject if `a mod b == 0` |
+| Solution | `TUPLE(quotient, remainder)` |
+| equivalence_policy | **STRICT-FORM** — order fixed |
+| Input contract | `^\s*([0-9]{1,3})\s*(?:,\|;\|ост\.?\|остаток)\s*([0-9]{1,3})\s*$`, case-insensitive; bare number ⇒ `INCOMPLETE_TUPLE` |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, INCOMPLETE_TUPLE` |
+| Verification oracle | recompute via stdlib integer division; assert `0 ≤ remainder < b`; 1000/1000 |
+| Tiers | T1: `a∈[10,99], b∈[2,9]` |
+| Instance space | ≥600 valid pairs (est.). Dedup `(type_id,a,b)`, cooldown 30 days |
+| Worked examples | `53÷6=8 ост 5`; `97÷8=12 ост 1`; edge `11÷9=1 ост 2` |
+| Misconception tags | `MISC-REMAINDER-OMIT`, `MISC-REMAINDER-GE-DIVISOR` |
+
+## G6-FRA-003 — Fraction addition, unlike denominators, proper result
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | `a/b + c/d`, `b≠d` / FRA / 6 / Apply |
+| generation_mode / locale / render_target | CODE / `ru-KZ` / `plaintext`, `unicode-math` |
+| Variables | `a<b`, `c<d`, `b≠d`, `b,d∈[2,12]` |
+| Generation constraint | reject if sum `≥1` (kept proper; improper/mixed is a separate backlog type, `G6-FRA-004`, not specced here) |
+| Solution | `p/q = reduce(a·d+c·b, b·d)` |
+| equivalence_policy | **STRICT-FORM** — reduction to lowest terms *is* the assessed skill |
+| Input contract | `^\s*([0-9]+)\s*/\s*([0-9]+)\s*$`; OR-of-validators: bare integer accepted if `q` reduces to 1; **decimal equivalents deliberately not accepted** |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, CANON_NOT_REDUCED` |
+| Verification oracle | independent rational-arithmetic recompute; assert `gcd(p,q)=1`; assert `p/q<1`; 1000/1000 |
+| Instance space | ≥300 valid combinations (est.). Dedup `(type_id,a,b,c,d)`, cooldown 30 days |
+| Worked examples | `1/4+1/6=5/12`; `1/6+1/3=1/2`, input `"3/6"` → INCORRECT/`CANON_NOT_REDUCED`; edge (LCM=larger denom) `3/4+1/8=7/8` |
+| Misconception tags | `MISC-DENOM-ADD`, `MISC-UNREDUCED` |
+
+## G6-GEO-009 — Point quadrant identification
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Which quadrant/axis is `(x,y)` in / GEO / 6 / Understand |
+| generation_mode / locale / render_target | CODE / `ru-KZ` / `plaintext` |
+| equivalence_policy | **STRICT-FORM** via enumerated whitelist (BOOL) |
+| Input vocabulary | `{I, II, III, IV, Ox, Oy, O}`, synonyms mapped case-insensitively |
+| Generation constraint | T1: `x,y≠0`, proper quadrants, `x,y∈[±1,±10]`. T2: axis/origin cases placed **by construction**, not left to chance: `x=0,y∈[±1,±150]`; `y=0,x∈[±1,±150]`; and the single origin case `(0,0)` |
+| Verification oracle | independent `sign(x),sign(y)` lookup; assert output always in the 7-value whitelist; assert T1 never emits axis/origin; 1000/1000 per tier |
+| Instance space | T1: 400 (est.), PASS. **T2: 601 (300+300+1), PASS — but the origin sub-case has `\|S\|=1` by mathematical necessity and will always repeat; declared exception, not a defect** |
+| Worked examples | `(3,5)→I`; `(-4,2)→II`; T2 edge `(0,4)→Oy` |
+| Misconception tags | `MISC-SIGN-SWAP`, `MISC-AXIS-AS-QUADRANT` |
+
+## G3-NUM-005 — Simple word problem (addition/subtraction) [HYBRID-AI]
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Narrative add/sub word problem / NUM / 3 / Apply |
+| generation_mode | **HYBRID-AI**, `authoring_time: true` (ADR-005) |
+| locale / render_target | `ru-KZ` / `plaintext` |
+| Answer-first construction | operands and answer chosen by CODE first; AI only wraps them in narrative, never invents/verifies a number |
+| Prompt profile ID | `PP-WORDPROB-ADDSUB-01` |
+| Provider | "Luna" per prior routing hypothesis — `[UNVERIFIED]`, gated by `OPEN-03` |
+| Automated validation gate | narrative must contain both operand values verbatim; failing narratives reject-and-retry or fall back to a MANUAL template pool |
+| Human-review policy | 100% review before FINAL; any spec_version bump re-triggers review; post-FINAL 5% monthly sample |
+| Benchmark requirement | gold set of 50 hand-written `ru-KZ` word problems before exiting GATED |
+| Unit cost per item | **`[OPEN]`** — no measured figure exists; do not ship to production until measured against `OPEN-03`'s benchmark |
+| Variables / equivalence_policy | inherited from `G3-NUM-001` (same `a,b`, same STRICT-FORM integer answer) — instance space and oracle not restated |
+| Edge cases | narrative-generation failure at authoring time only — no AI call happens per served instance (ADR-005), so this can never be a runtime failure |
+
+*Remaining Wave-A backlog (grade-3 and grade-6 rows of `math-task-catalog.md` not yet specced) follows this same field template — see `08-developer-backlog.md` for the sequencing.*
