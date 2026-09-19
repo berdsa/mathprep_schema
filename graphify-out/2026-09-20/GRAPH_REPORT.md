@@ -1,16 +1,16 @@
 # Graph Report - schema  (2026-09-20)
 
 ## Corpus Check
-- 27 files · ~13,524 words
+- 28 files · ~13,715 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 180 nodes · 219 edges · 26 communities (24 shown, 2 thin omitted)
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
+- 186 nodes · 231 edges · 26 communities (24 shown, 2 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d392c4a6`
+- Built from commit: `ce480930`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -33,19 +33,19 @@
 - Agent log
 - 05-decisions.md
 - 000001_create_phase0_schema.up.sql
-- pipeline.go
+- ValidateExactInt
 
 ## God Nodes (most connected - your core abstractions)
 1. `Agent log` - 11 edges
 2. `02 — Requirements` - 10 edges
 3. `00 — Conventions` - 9 edges
 4. `task_type` - 8 edges
-5. `AGENTS.md — schema` - 8 edges
-6. `06 — Traceability, Glossary, Stakeholders, Open Items` - 8 edges
-7. `task_instance` - 7 edges
-8. `TaskType` - 7 edges
-9. `00 — Scope Lock` - 7 edges
-10. `08 — Developer Backlog` - 7 edges
+5. `ValidateExactInt()` - 8 edges
+6. `AGENTS.md — schema` - 8 edges
+7. `06 — Traceability, Glossary, Stakeholders, Open Items` - 8 edges
+8. `task_instance` - 7 edges
+9. `TaskType` - 7 edges
+10. `00 — Scope Lock` - 7 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `TaskType` --references--> `ValidationMethod`  [EXTRACTED]
@@ -128,9 +128,9 @@ Nodes (11): 2026-09-19 — Phase 0 base DDL, 2026-09-19 — Phase 0 dictionary s
 Cohesion: 0.19
 Nodes (21): domain, equivalence_policy, event_log, generation_mode, generation_request, grade_band, locale, mastery_topic (+13 more)
 
-### Community 25 - "pipeline.go"
-Cohesion: 0.58
-Nodes (8): ReasonCode, CompareExactInt(), NormalizeExactInt(), ParseExactInt(), ValidateExactInt(), ParsedExactInt, Result, Stage
+### Community 25 - "ValidateExactInt"
+Cohesion: 0.31
+Nodes (13): ReasonCode, CompareExactInt(), NormalizeExactInt(), ParseExactInt(), TestValidateExactIntBoundary(), TestValidateExactIntCorrect(), TestValidateExactIntIncorrect(), TestValidateExactIntUnparseable() (+5 more)
 
 ## Knowledge Gaps
 - **90 isolated node(s):** `grade_band`, `event_log`, `GradeBand`, `github.com/berdsa/mathprep_schema`, `What this repo is` (+85 more)
@@ -140,9 +140,9 @@ Nodes (8): ReasonCode, CompareExactInt(), NormalizeExactInt(), ParseExactInt(), 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `ReasonCode` connect `pipeline.go` to `constants.go`?**
-  _High betweenness centrality (0.011) - this node is a cross-community bridge._
-- **Why does `Submission` connect `constants.go` to `pipeline.go`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+- **Why does `ReasonCode` connect `ValidateExactInt` to `constants.go`?**
+  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **Why does `Submission` connect `constants.go` to `ValidateExactInt`?**
+  _High betweenness centrality (0.010) - this node is a cross-community bridge._
 - **What connects `grade_band`, `event_log`, `GradeBand` to the rest of the system?**
   _90 weakly-connected nodes found - possible documentation gaps or missing edges._

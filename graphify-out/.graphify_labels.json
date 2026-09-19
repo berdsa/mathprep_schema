@@ -24,5 +24,7 @@
   "22": "000003_add_idempotency_constraints.up.sql",
   "23": "000004_create_service_roles.down.sql",
   "24": "000004_create_service_roles.up.sql",
-  "25": "ValidateExactInt"
+  "25": "ValidateExactInt",
+  "26": "000005_task_type_grade_band.down.sql",
+  "27": "000005_task_type_grade_band.up.sql"
 }

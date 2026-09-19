@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   "docs/agent-log.md": {
-    "mtime": 1789853645.330667,
-    "ast_hash": "5051e2a2190c76a13d1b240573baab6c",
+    "mtime": 1789854546.5113108,
+    "ast_hash": "78e23f57d1f3bff52f33eaa5c2a4cb97",
     "semantic_hash": ""
   },
   "docs/srd/00-conventions.md": {
@@ -35,8 +35,8 @@
     "semantic_hash": ""
   },
   "docs/srd/03-architecture.md": {
-    "mtime": 1789817332.0104434,
-    "ast_hash": "a21cd673367b6495ff2995eab3ca4376",
+    "mtime": 1789854556.8342032,
+    "ast_hash": "6564bd0bca28be0a7674a1b4f4cbe885",
     "semantic_hash": ""
   },
   "docs/srd/04-nfr-risk-ops.md": {
@@ -125,8 +125,8 @@
     "semantic_hash": ""
   },
   "pkg/core/rows.go": {
-    "mtime": 1789853961.097348,
-    "ast_hash": "22b168859fc2cf7062054c95f7645672",
+    "mtime": 1789854444.6080997,
+    "ast_hash": "b6d459a3cbb64c45429c12170290cad1",
     "semantic_hash": ""
   },
   "pkg/core/validation/pipeline.go": {
@@ -137,6 +137,16 @@
   "pkg/core/validation/pipeline_test.go": {
     "mtime": 1789854103.6764548,
     "ast_hash": "da29998784fe531636742ad69c4ae3c5",
+    "semantic_hash": ""
+  },
+  "migrations/000005_task_type_grade_band.down.sql": {
+    "mtime": 1789854444.607497,
+    "ast_hash": "ea39515b6821aada2bc48268f88cb480",
+    "semantic_hash": ""
+  },
+  "migrations/000005_task_type_grade_band.up.sql": {
+    "mtime": 1789854444.6064272,
+    "ast_hash": "2489ad64b538bf8d100cc6ffc5d30a49",
     "semantic_hash": ""
   }
 }

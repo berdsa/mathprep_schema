@@ -429,7 +429,7 @@
       "_origin": "ast",
       "id": "core_reasoncode",
       "community": 25,
-      "community_name": "pipeline.go",
+      "community_name": "ValidateExactInt",
       "norm_label": "reasoncode"
     },
     {
@@ -640,7 +640,7 @@
       "_origin": "ast",
       "id": "pkg_core_validation_pipeline",
       "community": 25,
-      "community_name": "pipeline.go",
+      "community_name": "ValidateExactInt",
       "norm_label": "pipeline.go"
     },
     {
@@ -651,7 +651,7 @@
       "_origin": "ast",
       "id": "validation_stage",
       "community": 25,
-      "community_name": "pipeline.go",
+      "community_name": "ValidateExactInt",
       "norm_label": "stage"
     },
     {
@@ -662,7 +662,7 @@
       "_origin": "ast",
       "id": "validation_result",
       "community": 25,
-      "community_name": "pipeline.go",
+      "community_name": "ValidateExactInt",
       "norm_label": "result"
     },
     {
@@ -673,7 +673,7 @@
       "_origin": "ast",
       "id": "validation_parsedexactint",
       "community": 25,
-      "community_name": "pipeline.go",
+      "community_name": "ValidateExactInt",
       "norm_label": "parsedexactint"
     },
     {
@@ -684,7 +684,7 @@
       "_origin": "ast",
       "id": "pkg_core_validation_pipeline_parseexactint",
       "community": 25,
-      "community_name": "pipeline.go",
+      "community_name": "ValidateExactInt",
       "norm_label": "parseexactint()"
     },
     {
@@ -695,7 +695,7 @@
       "_origin": "ast",
       "id": "pkg_core_validation_pipeline_normalizeexactint",
       "community": 25,
-      "community_name": "pipeline.go",
+      "community_name": "ValidateExactInt",
       "norm_label": "normalizeexactint()"
     },
     {
@@ -706,7 +706,7 @@
       "_origin": "ast",
       "id": "pkg_core_validation_pipeline_compareexactint",
       "community": 25,
-      "community_name": "pipeline.go",
+      "community_name": "ValidateExactInt",
       "norm_label": "compareexactint()"
     },
     {
@@ -717,8 +717,74 @@
       "_origin": "ast",
       "id": "pkg_core_validation_pipeline_validateexactint",
       "community": 25,
-      "community_name": "pipeline.go",
+      "community_name": "ValidateExactInt",
       "norm_label": "validateexactint()"
+    },
+    {
+      "label": "pipeline_test.go",
+      "file_type": "code",
+      "source_file": "pkg/core/validation/pipeline_test.go",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "pkg_core_validation_pipeline_test",
+      "community": 25,
+      "community_name": "ValidateExactInt",
+      "norm_label": "pipeline_test.go"
+    },
+    {
+      "label": "TestValidateExactIntCorrect()",
+      "file_type": "code",
+      "source_file": "pkg/core/validation/pipeline_test.go",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "pkg_core_validation_pipeline_test_testvalidateexactintcorrect",
+      "community": 25,
+      "community_name": "ValidateExactInt",
+      "norm_label": "testvalidateexactintcorrect()"
+    },
+    {
+      "label": "T",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "t",
+      "community": 25,
+      "community_name": "ValidateExactInt",
+      "norm_label": "t"
+    },
+    {
+      "label": "TestValidateExactIntIncorrect()",
+      "file_type": "code",
+      "source_file": "pkg/core/validation/pipeline_test.go",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "pkg_core_validation_pipeline_test_testvalidateexactintincorrect",
+      "community": 25,
+      "community_name": "ValidateExactInt",
+      "norm_label": "testvalidateexactintincorrect()"
+    },
+    {
+      "label": "TestValidateExactIntUnparseable()",
+      "file_type": "code",
+      "source_file": "pkg/core/validation/pipeline_test.go",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "pkg_core_validation_pipeline_test_testvalidateexactintunparseable",
+      "community": 25,
+      "community_name": "ValidateExactInt",
+      "norm_label": "testvalidateexactintunparseable()"
+    },
+    {
+      "label": "TestValidateExactIntBoundary()",
+      "file_type": "code",
+      "source_file": "pkg/core/validation/pipeline_test.go",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "pkg_core_validation_pipeline_test_testvalidateexactintboundary",
+      "community": 25,
+      "community_name": "ValidateExactInt",
+      "norm_label": "testvalidateexactintboundary()"
     },
     {
       "label": "AGENTS.md",
@@ -3309,6 +3375,18 @@
     {
       "relation": "calls",
       "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "pkg/core/validation/pipeline_test.go",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "pkg_core_validation_pipeline_test_testvalidateexactintboundary",
+      "target": "pkg_core_validation_pipeline_parseexactint"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
       "source_location": "L80",
@@ -3340,6 +3418,134 @@
       "_origin": "ast",
       "source": "pkg_core_validation_pipeline_validateexactint",
       "target": "pkg_core_validation_pipeline_compareexactint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "pkg/core/validation/pipeline_test.go",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "pkg_core_validation_pipeline_test_testvalidateexactintcorrect",
+      "target": "pkg_core_validation_pipeline_validateexactint"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "pkg/core/validation/pipeline_test.go",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "pkg_core_validation_pipeline_test_testvalidateexactintincorrect",
+      "target": "pkg_core_validation_pipeline_validateexactint"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "pkg/core/validation/pipeline_test.go",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "pkg_core_validation_pipeline_test_testvalidateexactintunparseable",
+      "target": "pkg_core_validation_pipeline_validateexactint"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pkg/core/validation/pipeline_test.go",
+      "source_location": "L39",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "pkg_core_validation_pipeline_test",
+      "target": "pkg_core_validation_pipeline_test_testvalidateexactintboundary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pkg/core/validation/pipeline_test.go",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "pkg_core_validation_pipeline_test",
+      "target": "pkg_core_validation_pipeline_test_testvalidateexactintcorrect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pkg/core/validation/pipeline_test.go",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "pkg_core_validation_pipeline_test",
+      "target": "pkg_core_validation_pipeline_test_testvalidateexactintincorrect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pkg/core/validation/pipeline_test.go",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "pkg_core_validation_pipeline_test",
+      "target": "pkg_core_validation_pipeline_test_testvalidateexactintunparseable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "pkg/core/validation/pipeline_test.go",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "source": "pkg_core_validation_pipeline_test_testvalidateexactintcorrect",
+      "target": "t",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "pkg/core/validation/pipeline_test.go",
+      "source_location": "L39",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "source": "pkg_core_validation_pipeline_test_testvalidateexactintboundary",
+      "target": "t",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "pkg/core/validation/pipeline_test.go",
+      "source_location": "L20",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "source": "pkg_core_validation_pipeline_test_testvalidateexactintincorrect",
+      "target": "t",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "pkg/core/validation/pipeline_test.go",
+      "source_location": "L28",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "source": "pkg_core_validation_pipeline_test_testvalidateexactintunparseable",
+      "target": "t",
       "confidence_score": 1.0
     },
     {
@@ -4444,5 +4650,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "d392c4a6ef4797b7107fa462a9c503ae198f8889"
+  "built_at_commit": "ce48093070b171925368987791cfb021435f8ea9"
 }

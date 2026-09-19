@@ -24,5 +24,5 @@
   "22": "000003_add_idempotency_constraints.up.sql",
   "23": "000004_create_service_roles.down.sql",
   "24": "000004_create_service_roles.up.sql",
-  "25": "pipeline.go"
+  "25": "ValidateExactInt"
 }
