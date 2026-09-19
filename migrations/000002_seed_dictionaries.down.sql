@@ -1,0 +1,12 @@
+DELETE FROM user_type;
+DELETE FROM locale;
+DELETE FROM render_target;
+DELETE FROM reason_code;
+DELETE FROM verdict;
+DELETE FROM task_type_status;
+DELETE FROM generation_mode;
+DELETE FROM equivalence_policy;
+DELETE FROM validation_method;
+DELETE FROM tier_code;
+DELETE FROM grade_band;
+DELETE FROM domain;
