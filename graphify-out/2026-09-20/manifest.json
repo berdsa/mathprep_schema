@@ -133,10 +133,5 @@
     "mtime": 1789854053.717443,
     "ast_hash": "2cdc81f62ff8979f44ab38203b049d85",
     "semantic_hash": ""
-  },
-  "pkg/core/validation/pipeline_test.go": {
-    "mtime": 1789854103.6764548,
-    "ast_hash": "da29998784fe531636742ad69c4ae3c5",
-    "semantic_hash": ""
   }
 }

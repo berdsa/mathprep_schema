@@ -21,7 +21,7 @@ docker run -d \
   -v mathprep_pgdata:/var/lib/postgresql/data \
   postgres:16
 ```
-Do not add a Kafka container, or any other container, without an explicit go-ahead from Ken — the current architecture (job queue on Postgres) doesn't need one.
+Do not add a Kafka container, or any other container, without an explicit go-ahead from me — the current architecture (job queue on Postgres) doesn't need one.
 
 ## Conventions
 - Every dictionary value in `00-conventions.md` §6 is seeded exactly as written.
