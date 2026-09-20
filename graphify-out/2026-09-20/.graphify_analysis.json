@@ -19,6 +19,7 @@
       "pkg_core_validation_pipeline_test_testvalidateexactintunparseable",
       "pkg_core_validation_pipeline_test_testvalidateexactrat",
       "pkg_core_validation_pipeline_test_testvalidateroman",
+      "pkg_core_validation_pipeline_test_testvalidatetol",
       "pkg_core_validation_pipeline_test_testvalidatetuple",
       "pkg_core_validation_pipeline_validate",
       "pkg_core_validation_pipeline_validatebool",
@@ -26,6 +27,7 @@
       "pkg_core_validation_pipeline_validateexactint",
       "pkg_core_validation_pipeline_validateexactrat",
       "pkg_core_validation_pipeline_validateroman",
+      "pkg_core_validation_pipeline_validatetol",
       "pkg_core_validation_pipeline_validatetuple",
       "reasoncode",
       "t",
@@ -313,7 +315,7 @@
     ]
   },
   "cohesion": {
-    "0": 0.15151515151515152,
+    "0": 0.14453781512605043,
     "1": 0.07142857142857142,
     "2": 0.15384615384615385,
     "3": 0.07407407407407407,
@@ -357,7 +359,7 @@
     {
       "id": "validation_result",
       "label": "Result",
-      "degree": 11
+      "degree": 12
     },
     {
       "id": "docs_srd_02_requirements_02_requirements",
@@ -380,6 +382,11 @@
       "degree": 9
     },
     {
+      "id": "pkg_core_validation_pipeline_validate",
+      "label": "Validate()",
+      "degree": 9
+    },
+    {
       "id": "pkg_core_validation_pipeline_validateexactint",
       "label": "ValidateExactInt()",
       "degree": 9
@@ -387,11 +394,6 @@
     {
       "id": "core_tasktype",
       "label": "TaskType",
-      "degree": 8
-    },
-    {
-      "id": "agents_agents_md_schema",
-      "label": "AGENTS.md \u2014 schema",
       "degree": 8
     }
   ],
