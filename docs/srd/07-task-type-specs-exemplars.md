@@ -1320,3 +1320,21 @@
 | Instance space | `18×41×21 = 15,498` parameter combinations (exact) |
 | Worked examples | `lim(x→2)(3x−1)→5`; `lim(x→−3)(−2x+4)→10`; `lim(x→0)(7x+9)→9` |
 | Misconception tags | `MISC-SUBSTITUTE-WRONG-POINT`, `MISC-SIGN-ERROR`, `MISC-CONFUSE-SLOPE-AND-VALUE` |
+
+## G10-ALG-001 — Binomial theorem term
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Find a binomial coefficient / ALG / 10 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `Find the coefficient of x^{n-k}y^k in (x+y)^n.` |
+| Variables | `n∈[2,10]`; `k∈[0,n]` |
+| Generation constraint | The requested term is uniquely identified by its exponent of y. |
+| Solution | `C(n,k)=n!/(k!(n−k)!)` |
+| equivalence_policy | **STRICT-FORM** via shared EXACT-INT validator |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; shared exact-integer contract |
+| Verdict model / oracle | `OK, VALUE_MISMATCH, WRONG_FORMAT, EMPTY_INPUT, INPUT_TOO_LONG`; independently compute the binomial coefficient, two batches of 1000 |
+| Tiers | T1/T2: `n∈[2,10]`, `k∈[0,n]` |
+| Instance space | `∑(n+1)` for n=2..10 = 63 ordered pairs (exact) |
+| Worked examples | coefficient of `x²y²` in `(x+y)^4` → 6; coefficient of `x⁴y` in `(x+y)^5` → 5; coefficient of `y³` in `(x+y)^3` → 1 |
+| Misconception tags | `MISC-EXPONENT-INDEX`, `MISC-FACTORIAL-OFF-BY-ONE`, `MISC-OMIT-BINOMIAL-COEFFICIENT` |
