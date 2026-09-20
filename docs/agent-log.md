@@ -208,3 +208,8 @@
 
 - Added the canonical full-field specification for rational-function domain checks.
 - Reuses the shared SET validator; no schema implementation change is required.
+
+## 2026-09-20 — G7-NS-001 specification
+
+- Added the canonical full-field specification for prime factorization.
+- Reuses the shared CANON list validator; no schema implementation change is required.

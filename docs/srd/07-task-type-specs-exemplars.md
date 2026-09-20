@@ -1201,3 +1201,18 @@
 | Verdict model / oracle | `OK, VALUE_MISMATCH, WRONG_FORMAT`; independently exclude the denominator root, two batches of 1000 |
 | Worked examples | `d=0,[-1,0,1,2]→[-1,1,2]`; `d=3,[2,3,4,5]→[2,4,5]` |
 | Misconception tags | `MISC-INCLUDE-POLE`, `MISC-EXCLUDE-WRONG-VALUE`, `MISC-ORDER-SET` |
+
+## G7-NS-001 — Prime factorization
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Factor an integer into primes / NS / 7 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `Write the prime factorization of {n}.` |
+| Variables | `n∈[2,999]` |
+| Solution | Sorted prime factors with multiplicity |
+| equivalence_policy | **CANON** via the shared canonical-list validator |
+| Input contract | shared canonical prime-factor list contract |
+| Verdict model / oracle | `OK, VALUE_MISMATCH, WRONG_FORMAT`; independently factor `n`, two batches of 1000 |
+| Worked examples | `12→2 2 3`; `97→97`; `360→2 2 2 3 3 5` |
+| Misconception tags | `MISC-OMIT-MULTIPLICITY`, `MISC-STOP-NONPRIME`, `MISC-FACTOR-ARITHMETIC` |
