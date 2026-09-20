@@ -1170,3 +1170,19 @@
 | Instance space | finite generated datasets and four statistic choices |
 | Worked examples | `mean[2,4,6,8,10]→6`; `median[1,3,7,9,12]→7`; `range[2,5,8,11,14]→12` |
 | Misconception tags | `MISC-MEAN-SUM`, `MISC-MEDIAN-UNSORTED`, `MISC-RANGE-ADD` |
+
+## G7-F-001 — Function evaluation
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Evaluate a polynomial function / F / 7 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `f(x)={a}x²+{b}x+{c}. Find f({x}).` |
+| Variables | `a∈[-5,5]\{0}`; `b,c,x∈[-5,5]` |
+| Solution | `a·x²+b·x+c` |
+| equivalence_policy | **STRICT-FORM** via shared EXACT-INT validator |
+| Input contract | shared exact-integer contract |
+| Verdict model / oracle | `OK, VALUE_MISMATCH, WRONG_FORMAT`; independent polynomial recomputation, two batches of 1000 |
+| Instance space | `10×11³×11 = 146,410` coefficient/input cases |
+| Worked examples | `2x²+3x+1 at x=2→15`; `−x²+4 at x=−3→−5`; `3x²−2x at x=0→0` |
+| Misconception tags | `MISC-OMIT-SQUARE`, `MISC-SIGN-ERROR`, `MISC-CONSTANT-OMISSION` |
