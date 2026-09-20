@@ -92,6 +92,27 @@
 | Worked examples | `(3,5)→I`; `(-4,2)→II`; `(0,4)→Oy` |
 | Misconception tags | `MISC-SIGN-SWAP`, `MISC-AXIS-AS-QUADRANT`, `MISC-ORIGIN-OMISSION` |
 
+## G6-GEO-002 — Distance between two points
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Distance between two points / GEO / 6 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode / locale / render_target | CODE / `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `Distance between ({x1}, {y1}) and ({x2}, {y2}) = ?` |
+| Variables | `x1,y1,x2,y2: int [-10,10]`, with distinct points |
+| Generation constraint | Reject equal points; compute the positive Euclidean distance from the coordinate differences. |
+| Solution | `sqrt((x2-x1)^2 + (y2-y1)^2)` |
+| equivalence_policy | **EQUIV-CLASS** within `1e-6` via the shared TOL validator |
+| Input contract | `^\s*[0-9]+(?:[.,][0-9]+)?\s*$`; decimal comma or point accepted; surrounding whitespace accepted |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT` |
+| Verification oracle | independently recompute the Euclidean distance from persisted coordinates; two batches of 1000 required |
+| Tiers | T1/T2: coordinates in `[-10,10]`; tier metadata changes assignment difficulty only |
+| Instance space | `21^4-21^2 = 194,040` ordered distinct point pairs; dedup `(type_id,x1,y1,x2,y2)` |
+| Worked examples | `(0,0)` to `(3,4)` → `5`; `(1,1)` to `(4,5)` → `5`; `(0,0)` to `(1,1)` → `1.414213562` |
+| Misconception tags | `MISC-DISTANCE-MANHATTAN`, `MISC-SQUARE-ROOT`, `MISC-COORDINATE-SUBTRACTION` |
+
 ## G3-NUM-005 — Simple word problem (addition/subtraction) [HYBRID-AI]
 
 | Field | Value |
