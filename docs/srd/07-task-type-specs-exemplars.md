@@ -310,3 +310,25 @@
 | Instance space | 5 named-shape cases (exact) |
 | Worked examples | triangle → 3; rectangle → 4; hexagon → 6 |
 | Misconception tags | `MISC-SIDE-VERTEX-CONFUSION`, `MISC-SHAPE-MEMORY` |
+
+## G3-NUM-002 — Multiplication fact
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Multiplication fact / NUM / 3–4 / Recall |
+| Provenance / ref_status | seed, `[SOURCED: REF-01]` — grade alignment `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode | CODE |
+| locale / render_target | `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `{a} × {b} = ?` |
+| Variables | `a,b∈[0,12]` |
+| Generation constraint | Deterministic ordered-pair draw; answer is the product `a·b`. |
+| Solution | `a·b` |
+| equivalence_policy | **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; shared EXACT-INT contract |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, EMPTY_INPUT, INPUT_TOO_LONG` |
+| Verification oracle | independently recompute `a·b`; two batches of 1000 required |
+| Tiers | T1/T2: factors `[0,12]` |
+| Instance space | 13×13 = 169 ordered factor pairs (exact) |
+| Worked examples | `3×4→12`; `0×9→0`; `12×12→144` |
+| Misconception tags | `MISC-ADDITION-INSTEAD-OF-MULTIPLICATION`, `MISC-FACT-RECALL`, `MISC-OPERAND-ORDER` |

@@ -89,3 +89,6 @@
 ## 2026-09-20 — CANON list validator
 
 - Added canonical numeric-list sorting and comparison for the ordering task family.
+## 2026-09-20 — G3-NUM-002
+
+- Appended the canonical full field-table specification for multiplication facts, with exact factor bounds, shared EXACT-INT input contract, instance-space count, worked examples, and misconception tags.
