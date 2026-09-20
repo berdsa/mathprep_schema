@@ -1504,3 +1504,17 @@
 | Verification oracle | Independently test the absolute ratio; two batches of 1000 |
 | Worked examples | `r=1/2→YES`; `r=−1/3→YES`; `r=2→NO` |
 | Misconception tags | `MISC-ABSOLUTE-RATIO`, `MISC-ALTERNATING-CONFUSION`, `MISC-BOUNDARY-RATIO` |
+
+## UNI-SEQ-002 — Sum of a convergent series
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Sum a convergent geometric series / SEQ / University / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `Find Σ from n=0 to ∞ of {a}({r})^n.` |
+| Variables | `a∈[1,9]`; `r∈{-1/2,-1/3,1/3,1/2}` |
+| Solution | `a/(1−r)` |
+| equivalence_policy | **TOL** shared numeric tolerance |
+| Verification oracle | Independently apply the geometric sum formula; two batches of 1000 |
+| Worked examples | `Σ 3(1/2)^n→6`; `Σ 2(−1/3)^n→3/2`; `Σ 9(1/3)^n→27/2` |
+| Misconception tags | `MISC-USE-R-INSTEAD-OF-1-MINUS-R`, `MISC-SIGN-ERROR`, `MISC-STARTING-INDEX` |
