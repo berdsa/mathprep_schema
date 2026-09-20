@@ -155,6 +155,27 @@
 | Worked examples | `2×3×4→24`; `1×5×10→50`; `20×20×20→8000` |
 | Misconception tags | `MISC-OMIT-DIMENSION`, `MISC-ADD-DIMENSIONS`, `MISC-AREA-AS-VOLUME` |
 
+## G6-GEO-003 — Missing triangle angle
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Missing angle in a triangle / GEO / 6 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode / locale / render_target | CODE / `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `Triangle angles are {a}° and {b}°. The missing angle?` |
+| Variables | `a,b: int [1,178]`, with `a+b<180` |
+| Generation constraint | Sample two positive known angles whose sum is less than 180°. |
+| Solution | `180-a-b` degrees |
+| equivalence_policy | **STRICT-FORM** via the shared EXACT-INT validator |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; degree symbols and decimal input rejected |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, EMPTY_INPUT, INPUT_TOO_LONG` |
+| Verification oracle | independently subtract the two persisted angles from 180°; two batches of 1000 required |
+| Tiers | T1/T2: same triangle constraints; tier metadata controls assignment difficulty only |
+| Instance space | `15,753` valid ordered angle pairs under `a+b<180` |
+| Worked examples | `60°,70°→50°`; `90°,45°→45°`; `1°,1°→178°` |
+| Misconception tags | `MISC-ANGLE-SUM`, `MISC-SUBTRACTION-ORDER`, `MISC-REFLEX-ANGLE` |
+
 ## G3-NUM-005 — Simple word problem (addition/subtraction) [HYBRID-AI]
 
 | Field | Value |
