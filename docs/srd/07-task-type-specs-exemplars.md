@@ -198,6 +198,17 @@
 | Verification oracle / space | independent multiplication; 1000/1000 per seed batch; 36 combinations |
 | Worked examples / misconceptions | `3 groups of 4→12`; `5 groups of 10→50`; `2 groups of 2→4`; `MISC-COUNT-GROUPS`, `MISC-ADD-FACTOR` |
 
+## G3-NUM-019 — Division as sharing
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Share a quantity equally / NUM / 3 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template / variables | `{n} items shared equally among {g} groups. Each group?`; `g∈[2,10]`, `each∈[1,10]`, `n=g·each≤100` |
+| Solution / policy / input contract | `n/g`; **STRICT-FORM**; `^\s*\+?0*([0-9]{1,5})\s*$` |
+| Verification / space / examples | independent division, 1000/1000 per batch; 90 pairs; `12÷3→4`, `100÷10→10`, `2÷2→1` |
+| Misconceptions | `MISC-DIVISION-SHARING`, `MISC-GROUP-COUNT` |
+
 ## G1-NUM-001 — Addition within range
 
 | Field | Value |
