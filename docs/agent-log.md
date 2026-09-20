@@ -203,3 +203,8 @@
 
 - Added the canonical full-field specification for polynomial function evaluation.
 - Reuses the shared EXACT-INT validator; no schema implementation change is required.
+
+## 2026-09-20 — G7-F-002 specification
+
+- Added the canonical full-field specification for rational-function domain checks.
+- Reuses the shared SET validator; no schema implementation change is required.
