@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "docs/srd/07-task-type-specs-exemplars.md": {
-    "mtime": 1789907354.8272498,
-    "ast_hash": "f8c6b706295b61a020f0debc70fc0194",
+    "mtime": 1789907507.2121558,
+    "ast_hash": "4fb7a28b721f7ab1a035251bbf18156d",
     "semantic_hash": ""
   },
   "docs/srd/08-developer-backlog.md": {
@@ -125,13 +125,13 @@
     "semantic_hash": "b6d459a3cbb64c45429c12170290cad1"
   },
   "pkg/core/validation/pipeline.go": {
-    "mtime": 1789907304.4386568,
-    "ast_hash": "22dfb68b41854bd1afd0a6b524daf39e",
+    "mtime": 1789907482.4677618,
+    "ast_hash": "44924a32b7f260b5aa5db3aad4c2e297",
     "semantic_hash": ""
   },
   "pkg/core/validation/pipeline_test.go": {
-    "mtime": 1789907300.5909796,
-    "ast_hash": "2d2f8ea672376d337b7a57c34d0cbeea",
+    "mtime": 1789907482.468373,
+    "ast_hash": "0d1441c1c0c5fd86bdad057840f8f0b4",
     "semantic_hash": ""
   },
   "migrations/000005_task_type_grade_band.down.sql": {
