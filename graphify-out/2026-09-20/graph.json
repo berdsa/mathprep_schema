@@ -323,6 +323,28 @@
       "norm_label": "000004_create_service_roles.up.sql"
     },
     {
+      "label": "000005_task_type_grade_band.down.sql",
+      "file_type": "code",
+      "source_file": "migrations/000005_task_type_grade_band.down.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000005_task_type_grade_band_down",
+      "community": 26,
+      "community_name": "000005_task_type_grade_band.down.sql",
+      "norm_label": "000005_task_type_grade_band.down.sql"
+    },
+    {
+      "label": "000005_task_type_grade_band.up.sql",
+      "file_type": "code",
+      "source_file": "migrations/000005_task_type_grade_band.up.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000005_task_type_grade_band_up",
+      "community": 27,
+      "community_name": "000005_task_type_grade_band.up.sql",
+      "norm_label": "000005_task_type_grade_band.up.sql"
+    },
+    {
       "label": "constants.go",
       "file_type": "code",
       "source_file": "pkg/core/constants.go",
@@ -1016,6 +1038,28 @@
       "community": 15,
       "community_name": "Agent log",
       "norm_label": "2026-09-20 \u2014 phase 0 step 7, github remote"
+    },
+    {
+      "label": "2026-09-20 \u2014 Phase 0 step 7, shared Go module",
+      "file_type": "document",
+      "source_file": "docs/agent-log.md",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "docs_agent_log_2026_09_20_phase_0_step_7_shared_go_module",
+      "community": 15,
+      "community_name": "Agent log",
+      "norm_label": "2026-09-20 \u2014 phase 0 step 7, shared go module"
+    },
+    {
+      "label": "2026-09-20 \u2014 TASK_TYPE grade-band correction",
+      "file_type": "document",
+      "source_file": "docs/agent-log.md",
+      "source_location": "L65",
+      "_origin": "ast",
+      "id": "docs_agent_log_2026_09_20_task_type_grade_band_correction",
+      "community": 15,
+      "community_name": "Agent log",
+      "norm_label": "2026-09-20 \u2014 task_type grade-band correction"
     },
     {
       "label": "00-conventions.md",
@@ -2309,6 +2353,17 @@
     {
       "relation": "references",
       "confidence": "EXTRACTED",
+      "source_file": "migrations/000005_task_type_grade_band.up.sql",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "migrations_000001_create_phase0_schema_up_task_type",
+      "target": "migrations_000001_create_phase0_schema_up_grade_band",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
       "source_file": "migrations/000001_create_phase0_schema.up.sql",
       "source_location": "L117",
       "weight": 1.0,
@@ -2691,6 +2746,18 @@
       "_origin": "ast",
       "source": "core_tasktype",
       "target": "core_domain",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "pkg/core/rows.go",
+      "source_location": "L44",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast",
+      "source": "core_tasktype",
+      "target": "core_gradeband",
       "confidence_score": 1.0
     },
     {
@@ -3760,6 +3827,28 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/agent-log.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_agent_log_agent_log",
+      "target": "docs_agent_log_2026_09_20_phase_0_step_7_shared_go_module",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/agent-log.md",
+      "source_location": "L65",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_agent_log_agent_log",
+      "target": "docs_agent_log_2026_09_20_task_type_grade_band_correction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/srd/00-conventions.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -4650,5 +4739,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "ce48093070b171925368987791cfb021435f8ea9"
+  "built_at_commit": "0dbe404b5e3399dffef4bf8df2a7fd657ac5f6b4"
 }
