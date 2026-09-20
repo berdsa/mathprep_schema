@@ -234,6 +234,11 @@
 - Added the canonical full-field specification for clean exponential equations.
 - Reuses the shared EXACT-INT validator; no schema implementation change is required.
 
+## 2026-09-20 — G10-SEQ-001 specification
+
+- Added the canonical full-field specification for arithmetic sequence terms and sums.
+- Reuses the shared EXACT-INT validator; no schema implementation change is required.
+
 ## 2026-09-20 — G10-TRG-001 notation correction
 
 - Clarified that answers are integer multiples of π/12 so the shared integer SET validator can enforce the canonical angle set.

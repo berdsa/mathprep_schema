@@ -1274,3 +1274,17 @@
 | Input contract / oracle | shared exact-integer contract; independently recover the clean exponent, two batches of 1000 |
 | Worked examples | `2^x=8→3`; `3^x=9→2`; `5^x=125→3` |
 | Misconception tags | `MISC-BASE-EXPONENT-SWAP`, `MISC-LOG-INVERSE`, `MISC-OFF-BY-ONE` |
+
+## G10-SEQ-001 — Arithmetic sequence
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Find a term or sum of an arithmetic sequence / SEQ / 10 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `a₁={a1}, d={d}. Find {operation} for n={n}.` |
+| Variables | `a1∈[-10,10]`; `d∈[-5,5]`; `n∈[1,10]`; operation∈{term,sum}` |
+| Solution | term=`a1+(n−1)d`; sum=`n(2a1+(n−1)d)/2` |
+| equivalence_policy | **STRICT-FORM** via shared EXACT-INT validator |
+| Input contract / oracle | shared exact-integer contract; independently recompute the selected formula, two batches of 1000 |
+| Worked examples | `a1=3,d=2,n=5 term→11`; `a1=3,d=2,n=5 sum→35` |
+| Misconception tags | `MISC-OFF-BY-ONE`, `MISC-TERM-SUM-SWAP`, `MISC-SIGN-ERROR` |
