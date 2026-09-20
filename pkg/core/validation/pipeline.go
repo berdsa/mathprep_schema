@@ -34,9 +34,40 @@ func Validate(method core.ValidationMethod, raw, correctAnswer string) Result {
 		return ValidateExactInt(raw, correctAnswer)
 	case core.ValidationMethodBool:
 		return ValidateBool(raw, correctAnswer)
+	case core.ValidationMethodCanon:
+		return ValidateCanonList(raw, correctAnswer)
 	default:
 		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
 	}
+}
+
+func ValidateCanonList(raw, correctAnswer string) Result {
+	parts := strings.FieldsFunc(strings.TrimSpace(raw), func(r rune) bool { return r == ',' || r == ';' || r == ' ' })
+	if len(parts) == 0 {
+		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
+	}
+	values := make([]int, len(parts))
+	for i, p := range parts {
+		n, err := strconv.Atoi(p)
+		if err != nil {
+			return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
+		}
+		values[i] = n
+	}
+	for i := 1; i < len(values); i++ {
+		for j := i; j > 0 && values[j] < values[j-1]; j-- {
+			values[j], values[j-1] = values[j-1], values[j]
+		}
+	}
+	normalized := make([]string, len(values))
+	for i, n := range values {
+		normalized[i] = strconv.Itoa(n)
+	}
+	got := strings.Join(normalized, " ")
+	if got != strings.TrimSpace(correctAnswer) {
+		return Result{Verdict: core.VerdictIncorrect, ReasonCode: core.ReasonValueMismatch, Normalized: got, Stage: StageVerdict, CorrectAnswer: correctAnswer}
+	}
+	return Result{Verdict: core.VerdictCorrect, ReasonCode: core.ReasonOK, Normalized: got, Stage: StageVerdict, CorrectAnswer: correctAnswer}
 }
 
 // ValidateBool handles the fixed-vocabulary, case-insensitive BOOL contract.

@@ -68,3 +68,12 @@ func TestValidateBool(t *testing.T) {
 		t.Fatalf("got %+v", got)
 	}
 }
+
+func TestValidateCanonList(t *testing.T) {
+	if got := ValidateCanonList("3, 1, 2", "1 2 3"); got.Verdict != core.VerdictCorrect {
+		t.Fatalf("got %+v", got)
+	}
+	if got := ValidateCanonList("1 3 2", "1 2 4"); got.Verdict != core.VerdictIncorrect {
+		t.Fatalf("got %+v", got)
+	}
+}

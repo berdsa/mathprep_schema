@@ -85,3 +85,7 @@
 ## 2026-09-20 — BOOL shared validator
 
 - Added the catalog BOOL validator with the declared fixed comparison vocabulary and case-insensitive synonym normalization.
+
+## 2026-09-20 — CANON list validator
+
+- Added canonical numeric-list sorting and comparison for the ordering task family.
