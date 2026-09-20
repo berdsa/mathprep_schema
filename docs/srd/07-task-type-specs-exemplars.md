@@ -209,6 +209,17 @@
 | Verification / space / examples | independent division, 1000/1000 per batch; 90 pairs; `12÷3→4`, `100÷10→10`, `2÷2→1` |
 | Misconceptions | `MISC-DIVISION-SHARING`, `MISC-GROUP-COUNT` |
 
+## G3-NUM-020 — Multiplication word problem
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Equal bags and items / NUM / 3 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template / variables | `{a} bags with {b} apples each. Total apples?`; `a,b∈[2,10]` |
+| Solution / policy / input contract | `a·b`; **STRICT-FORM**; `^\s*\+?0*([0-9]{1,5})\s*$` |
+| Verification / space / examples | independent multiplication, 1000/1000 per batch; 81 pairs; `2×3→6`, `10×10→100`, `5×7→35` |
+| Misconceptions | `MISC-FACTOR-COUNT`, `MISC-ADD-INSTEAD-MULTIPLY` |
+
 ## G1-NUM-001 — Addition within range
 
 | Field | Value |
