@@ -91,6 +91,28 @@
 
 *Remaining Wave-A backlog (grade-3 and grade-6 rows of `math-task-catalog.md` not yet specced) follows this same field template — see `08-developer-backlog.md` for the sequencing.*
 
+## G3-NUM-012 — Roman numeral conversion
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Convert an integer to a Roman numeral / NUM / 3 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode | CODE |
+| locale / render_target | `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `Convert {n} to a Roman numeral.`; alt-text `Перевод числа {n} в римскую запись` |
+| Variables | `n: int [1,3999]` |
+| Generation constraint | sample uniformly from the inclusive range; emit canonical subtractive notation (`IV`, `IX`, `XL`, `XC`, `CD`, `CM`) |
+| Solution | canonical Roman representation of `n` |
+| equivalence_policy | **STRICT-FORM** — canonical Roman spelling is the assessed skill |
+| Input contract | `^\s*([MDCLXVI]+)\s*$`; trim surrounding whitespace, case-fold to uppercase, reject non-canonical or out-of-range forms |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT` |
+| Verification oracle | independently convert `n` using a value/symbol table; assert parse(convert(n)) = n and canonical(convert(n)) = convert(n); 1000/1000 per seed batch |
+| Tiers | T1/T2: `n∈[1,3999]`; tiers differ only in assignment difficulty metadata |
+| Instance space | exactly 3,999 values; dedup `(type_id,n)`, cooldown 30 days |
+| Worked examples | `4→IV`; `944→CMXLIV`; edge `3999→MMMCMXCIX` |
+| Misconception tags | `MISC-ROMAN-ADDITIVE`, `MISC-ROMAN-SUBTRACTIVE`, `MISC-ROMAN-NONCANONICAL` |
+
 ## G1-NUM-001 — Addition within range
 
 | Field | Value |

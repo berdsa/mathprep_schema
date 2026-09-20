@@ -78,6 +78,24 @@ func TestValidateCanonList(t *testing.T) {
 	}
 }
 
+func TestValidateRoman(t *testing.T) {
+	tests := []struct {
+		input, answer string
+		verdict       core.Verdict
+	}{
+		{"MCMXCIX", "MCMXCIX", core.VerdictCorrect},
+		{" xiv ", "XIV", core.VerdictCorrect},
+		{"IIII", "IV", core.VerdictUnparseable},
+		{"XIV", "XV", core.VerdictIncorrect},
+	}
+	for _, tc := range tests {
+		got := ValidateRoman(tc.input, tc.answer)
+		if got.Verdict != tc.verdict {
+			t.Errorf("ValidateRoman(%q,%q) = %s, want %s", tc.input, tc.answer, got.Verdict, tc.verdict)
+		}
+	}
+}
+
 func TestValidateTuple(t *testing.T) {
 	if got := ValidateTuple("8 ост. 5", "8,5"); got.Verdict != core.VerdictCorrect {
 		t.Fatalf("got %+v", got)

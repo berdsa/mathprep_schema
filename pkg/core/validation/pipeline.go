@@ -69,6 +69,9 @@ func ValidateTuple(raw, correctAnswer string) Result {
 }
 
 func ValidateCanonList(raw, correctAnswer string) Result {
+	if isRoman(correctAnswer) {
+		return ValidateRoman(raw, correctAnswer)
+	}
 	parts := strings.FieldsFunc(strings.TrimSpace(raw), func(r rune) bool { return r == ',' || r == ';' || r == ' ' })
 	if len(parts) == 0 {
 		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
@@ -95,6 +98,61 @@ func ValidateCanonList(raw, correctAnswer string) Result {
 		return Result{Verdict: core.VerdictIncorrect, ReasonCode: core.ReasonValueMismatch, Normalized: got, Stage: StageVerdict, CorrectAnswer: correctAnswer}
 	}
 	return Result{Verdict: core.VerdictCorrect, ReasonCode: core.ReasonOK, Normalized: got, Stage: StageVerdict, CorrectAnswer: correctAnswer}
+}
+
+var romanInput = regexp.MustCompile(`^\s*([MDCLXVI]+)\s*$`)
+
+func isRoman(value string) bool {
+	return romanInput.MatchString(strings.ToUpper(strings.TrimSpace(value)))
+}
+
+// ValidateRoman accepts canonical Roman numerals in the inclusive range
+// 1..3999. Non-canonical spellings are rejected rather than silently fixed.
+func ValidateRoman(raw, correctAnswer string) Result {
+	got := strings.ToUpper(strings.TrimSpace(raw))
+	if !romanInput.MatchString(got) {
+		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
+	}
+	value, ok := parseRoman(got)
+	if !ok {
+		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
+	}
+	normalized := romanFromInt(value)
+	if normalized != strings.TrimSpace(correctAnswer) {
+		return Result{Verdict: core.VerdictIncorrect, ReasonCode: core.ReasonValueMismatch, Normalized: normalized, Stage: StageVerdict, CorrectAnswer: correctAnswer}
+	}
+	return Result{Verdict: core.VerdictCorrect, ReasonCode: core.ReasonOK, Normalized: normalized, Stage: StageVerdict, CorrectAnswer: correctAnswer}
+}
+
+func parseRoman(s string) (int, bool) {
+	values := map[byte]int{'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+	total := 0
+	for i := 0; i < len(s); i++ {
+		v, ok := values[s[i]]
+		if !ok {
+			return 0, false
+		}
+		if i+1 < len(s) && v < values[s[i+1]] {
+			total -= v
+		} else {
+			total += v
+		}
+	}
+	return total, total >= 1 && total <= 3999 && romanFromInt(total) == s
+}
+
+func romanFromInt(n int) string {
+	var b strings.Builder
+	for _, pair := range []struct {
+		value  int
+		symbol string
+	}{{1000, "M"}, {900, "CM"}, {500, "D"}, {400, "CD"}, {100, "C"}, {90, "XC"}, {50, "L"}, {40, "XL"}, {10, "X"}, {9, "IX"}, {5, "V"}, {4, "IV"}, {1, "I"}} {
+		for n >= pair.value {
+			b.WriteString(pair.symbol)
+			n -= pair.value
+		}
+	}
+	return b.String()
 }
 
 // ValidateBool handles the fixed-vocabulary, case-insensitive BOOL contract.
