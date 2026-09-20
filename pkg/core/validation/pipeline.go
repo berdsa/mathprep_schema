@@ -26,6 +26,17 @@ type Result struct {
 	CorrectAnswer string
 }
 
+// Validate dispatches through the task type's declared validation method.
+// New validators belong here so the submission handler remains generic.
+func Validate(method core.ValidationMethod, raw, correctAnswer string) Result {
+	switch method {
+	case core.ValidationMethodExactInt:
+		return ValidateExactInt(raw, correctAnswer)
+	default:
+		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
+	}
+}
+
 // ParsedExactInt is the parse-stage representation of an EXACT-INT answer.
 // Its digits have passed the input contract but have not been numerically
 // normalized yet.

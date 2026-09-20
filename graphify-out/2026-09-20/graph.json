@@ -2105,6 +2105,116 @@
       "community": 11,
       "community_name": "Data Governance",
       "norm_label": "deletion / export"
+    },
+    {
+      "label": "math-task-catalog.md",
+      "file_type": "document",
+      "source_file": "docs/srd/math-task-catalog.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_srd_math_task_catalog",
+      "community": 28,
+      "community_name": "Math Task Type Catalog \u2014 Grade 1 to University",
+      "norm_label": "math-task-catalog.md"
+    },
+    {
+      "label": "Math Task Type Catalog \u2014 Grade 1 to University",
+      "file_type": "document",
+      "source_file": "docs/srd/math-task-catalog.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_srd_math_task_catalog_math_task_type_catalog_grade_1_to_university",
+      "community": 28,
+      "community_name": "Math Task Type Catalog \u2014 Grade 1 to University",
+      "norm_label": "math task type catalog \u2014 grade 1 to university"
+    },
+    {
+      "label": "Validation-method legend",
+      "file_type": "document",
+      "source_file": "docs/srd/math-task-catalog.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "docs_srd_math_task_catalog_validation_method_legend",
+      "community": 28,
+      "community_name": "Math Task Type Catalog \u2014 Grade 1 to University",
+      "norm_label": "validation-method legend"
+    },
+    {
+      "label": "Grade 1\u20132 (ages 6\u20138)",
+      "file_type": "document",
+      "source_file": "docs/srd/math-task-catalog.md",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "docs_srd_math_task_catalog_grade_1_2_ages_6_8",
+      "community": 28,
+      "community_name": "Math Task Type Catalog \u2014 Grade 1 to University",
+      "norm_label": "grade 1\u20132 (ages 6\u20138)"
+    },
+    {
+      "label": "Grade 3\u20134 (ages 8\u201310)",
+      "file_type": "document",
+      "source_file": "docs/srd/math-task-catalog.md",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "docs_srd_math_task_catalog_grade_3_4_ages_8_10",
+      "community": 28,
+      "community_name": "Math Task Type Catalog \u2014 Grade 1 to University",
+      "norm_label": "grade 3\u20134 (ages 8\u201310)"
+    },
+    {
+      "label": "Grade 5\u20136 (ages 10\u201312)",
+      "file_type": "document",
+      "source_file": "docs/srd/math-task-catalog.md",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "docs_srd_math_task_catalog_grade_5_6_ages_10_12",
+      "community": 28,
+      "community_name": "Math Task Type Catalog \u2014 Grade 1 to University",
+      "norm_label": "grade 5\u20136 (ages 10\u201312)"
+    },
+    {
+      "label": "Grade 7\u20139 (ages 12\u201315)",
+      "file_type": "document",
+      "source_file": "docs/srd/math-task-catalog.md",
+      "source_location": "L72",
+      "_origin": "ast",
+      "id": "docs_srd_math_task_catalog_grade_7_9_ages_12_15",
+      "community": 28,
+      "community_name": "Math Task Type Catalog \u2014 Grade 1 to University",
+      "norm_label": "grade 7\u20139 (ages 12\u201315)"
+    },
+    {
+      "label": "Grade 10\u201311 (ages 15\u201318)",
+      "file_type": "document",
+      "source_file": "docs/srd/math-task-catalog.md",
+      "source_location": "L97",
+      "_origin": "ast",
+      "id": "docs_srd_math_task_catalog_grade_10_11_ages_15_18",
+      "community": 28,
+      "community_name": "Math Task Type Catalog \u2014 Grade 1 to University",
+      "norm_label": "grade 10\u201311 (ages 15\u201318)"
+    },
+    {
+      "label": "University (higher mathematics)",
+      "file_type": "document",
+      "source_file": "docs/srd/math-task-catalog.md",
+      "source_location": "L117",
+      "_origin": "ast",
+      "id": "docs_srd_math_task_catalog_university_higher_mathematics",
+      "community": 28,
+      "community_name": "Math Task Type Catalog \u2014 Grade 1 to University",
+      "norm_label": "university (higher mathematics)"
+    },
+    {
+      "label": "Notes for implementation (methodologist + BA perspective)",
+      "file_type": "document",
+      "source_file": "docs/srd/math-task-catalog.md",
+      "source_location": "L146",
+      "_origin": "ast",
+      "id": "docs_srd_math_task_catalog_notes_for_implementation_methodologist_ba_perspective",
+      "community": 28,
+      "community_name": "Math Task Type Catalog \u2014 Grade 1 to University",
+      "norm_label": "notes for implementation (methodologist + ba perspective)"
     }
   ],
   "links": [
@@ -4758,8 +4868,107 @@
       "source": "docs_srd_data_governance_data_governance",
       "target": "docs_srd_data_governance_residency_sub_processors",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/srd/math-task-catalog.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_srd_math_task_catalog",
+      "target": "docs_srd_math_task_catalog_math_task_type_catalog_grade_1_to_university",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/srd/math-task-catalog.md",
+      "source_location": "L97",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_srd_math_task_catalog_math_task_type_catalog_grade_1_to_university",
+      "target": "docs_srd_math_task_catalog_grade_10_11_ages_15_18",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/srd/math-task-catalog.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_srd_math_task_catalog_math_task_type_catalog_grade_1_to_university",
+      "target": "docs_srd_math_task_catalog_grade_1_2_ages_6_8",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/srd/math-task-catalog.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_srd_math_task_catalog_math_task_type_catalog_grade_1_to_university",
+      "target": "docs_srd_math_task_catalog_grade_3_4_ages_8_10",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/srd/math-task-catalog.md",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_srd_math_task_catalog_math_task_type_catalog_grade_1_to_university",
+      "target": "docs_srd_math_task_catalog_grade_5_6_ages_10_12",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/srd/math-task-catalog.md",
+      "source_location": "L72",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_srd_math_task_catalog_math_task_type_catalog_grade_1_to_university",
+      "target": "docs_srd_math_task_catalog_grade_7_9_ages_12_15",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/srd/math-task-catalog.md",
+      "source_location": "L146",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_srd_math_task_catalog_math_task_type_catalog_grade_1_to_university",
+      "target": "docs_srd_math_task_catalog_notes_for_implementation_methodologist_ba_perspective",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/srd/math-task-catalog.md",
+      "source_location": "L117",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_srd_math_task_catalog_math_task_type_catalog_grade_1_to_university",
+      "target": "docs_srd_math_task_catalog_university_higher_mathematics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/srd/math-task-catalog.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_srd_math_task_catalog_math_task_type_catalog_grade_1_to_university",
+      "target": "docs_srd_math_task_catalog_validation_method_legend",
+      "confidence_score": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "ee4eb3d8919fd6664f514896a2c93b03a987ba7f"
+  "built_at_commit": "cc7d9c81a59884168ac0d08347f5f12d2038f582"
 }

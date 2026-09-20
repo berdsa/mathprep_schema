@@ -75,3 +75,9 @@
 - Updated validation package imports to the actual sub-package path `github.com/berdsa/mathprep_schema/pkg/core`; no Go source files were moved.
 - `GOROOT=/usr/local/go GOTOOLCHAIN=local go mod tidy` and `go test ./...` pass from the repository root.
 - A throwaway external smoke package imported `github.com/berdsa/mathprep_schema/pkg/core` and referenced `core.VerdictCorrect` successfully against the working tree.
+
+## 2026-09-20 — One-time generic grader dispatch
+
+- Added `validation.Validate(method, raw, correct)` as the shared dispatch entry point.
+- The grader submission handler now reads `task_type.validation_method` and dispatches through the shared pipeline instead of assuming `EXACT-INT`.
+- Existing EXACT-INT behavior remains covered by the package tests.

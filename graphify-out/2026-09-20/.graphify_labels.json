@@ -26,5 +26,6 @@
   "24": "000004_create_service_roles.up.sql",
   "25": "ValidateExactInt",
   "26": "000005_task_type_grade_band.down.sql",
-  "27": "000005_task_type_grade_band.up.sql"
+  "27": "000005_task_type_grade_band.up.sql",
+  "28": "Math Task Type Catalog — Grade 1 to University"
 }

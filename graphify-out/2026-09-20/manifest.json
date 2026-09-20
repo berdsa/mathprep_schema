@@ -148,5 +148,10 @@
     "mtime": 1789853749.1494234,
     "ast_hash": "68d4bcdcdcf931e924b8c3b1f227b534",
     "semantic_hash": ""
+  },
+  "docs/srd/math-task-catalog.md": {
+    "mtime": 1789744148.833297,
+    "ast_hash": "83ce014201d46ff6c7e58dd4d6acd988",
+    "semantic_hash": ""
   }
 }
