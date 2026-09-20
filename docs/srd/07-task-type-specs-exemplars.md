@@ -218,6 +218,27 @@
 | Worked examples | `2x+3=11→4`; `5x+1=26→5`; `1x+20=30→10` |
 | Misconception tags | `MISC-SUBTRACT-CONSTANT`, `MISC-DIVIDE-COEFFICIENT`, `MISC-SIGN-ERROR` |
 
+## G7-EE-002 — Linear system (2 variables)
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Solve a two-variable linear system / EE / 7 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode / locale / render_target | CODE / `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `{a1}x + {b1}y = {c1}; {a2}x + {b2}y = {c2}` |
+| Variables | positive coefficients in `[1,10]`, positive solution `x,y∈[1,10]`; reject zero determinant |
+| Generation constraint | Construct both constants from the selected integer solution and reject parallel coefficient rows. |
+| Solution | ordered tuple `(x,y)` |
+| equivalence_policy | **STRICT-FORM** ordered tuple via the shared TUPLE validator |
+| Input contract | ordered integer tuple with comma or `x,y` separator; surrounding whitespace accepted |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT` |
+| Verification oracle | independently solve using the determinant formula and compare both components; two batches of 1000 required |
+| Tiers | T1/T2: positive coefficients and solutions in stated bounds |
+| Instance space | finite constructed coefficient/solution tuples after determinant rejection |
+| Worked examples | `x+y=7; 2x+y=10→(3,4)`; `2x+3y=16; x+y=6→(2,4)`; `x+2y=8; 3x+y=9→(2,3)` |
+| Misconception tags | `MISC-DETERMINANT`, `MISC-TUPLE-ORDER`, `MISC-ELIMINATION-SIGN` |
+
 ## G3-NUM-005 — Simple word problem (addition/subtraction) [HYBRID-AI]
 
 | Field | Value |
