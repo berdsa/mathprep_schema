@@ -1,16 +1,16 @@
 # Graph Report - schema  (2026-09-20)
 
 ## Corpus Check
-- 31 files · ~24,852 words
+- 31 files · ~24,928 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 281 nodes · 366 edges · 29 communities (27 shown, 2 thin omitted)
+- 282 nodes · 368 edges · 29 communities (27 shown, 2 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 11 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5a2e77fc`
+- Built from commit: `514f6554`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -78,8 +78,8 @@ Cohesion: 0.05
 Nodes (43): 07 — Wave-A Exemplar Task-Type Specs, G1-NUM-001 — Addition within range, G1-NUM-002 — Subtraction within range, G1-NUM-003 — Number comparison, G1-NUM-004 — Missing addend, G1-NUM-005 — Simple word problem (addition/subtraction), G1-NUM-006 — Place value, G1-NUM-007 — Ordering a list (+35 more)
 
 ### Community 3 - "pipeline.go"
-Cohesion: 0.15
-Nodes (34): ReasonCode, CompareExactInt(), gcd64(), isRoman(), NormalizeExactInt(), ParseExactInt(), parseExactRat(), parseRatio() (+26 more)
+Cohesion: 0.14
+Nodes (35): ReasonCode, CompareExactInt(), gcd64(), isQuadrantLabel(), isRoman(), NormalizeExactInt(), ParseExactInt(), parseExactRat() (+27 more)
 
 ### Community 4 - "000001_create_phase0_schema.up.sql"
 Cohesion: 0.19
@@ -154,4 +154,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `07 — Wave-A Exemplar Task-Type Specs` be split into smaller, more focused modules?**
   _Cohesion score 0.045454545454545456 - nodes in this community are weakly interconnected._
 - **Should `pipeline.go` be split into smaller, more focused modules?**
-  _Cohesion score 0.1492063492063492 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.14414414414414414 - nodes in this community are weakly interconnected._
