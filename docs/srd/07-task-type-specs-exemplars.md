@@ -134,3 +134,25 @@
 | Instance space | 231 ordered pairs with `a≥b` (exact) |
 | Worked examples | `9−4=5`; `7−7=0`; `20−3=17` (wrong `16` → INCORRECT) |
 | Misconception tags | `MISC-SUBTRACT-BORROW`, `MISC-OPERAND-ORDER`, `MISC-OFF-BY-ONE` |
+
+## G1-NUM-003 — Number comparison
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Compare two whole numbers / NUM / 1–2 / Understand |
+| Provenance / ref_status | seed, `[SOURCED: REF-01]` — grade alignment `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode | CODE |
+| locale / render_target | `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `"Compare {a} and {b}: <, >, ="` |
+| Variables | `a,b: int [0,20]` |
+| Generation constraint | Uniform deterministic draw; answer is the one of `<`, `>`, `=` selected by integer comparison. |
+| Solution | compare `a` and `b` directly |
+| equivalence_policy | **STRICT-FORM** via BOOL whitelist |
+| Input contract | `<`, `>`, `=`, plus `less`, `less than`, `greater`, `greater than`, `equal`, `equal to`, case-insensitive |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT` |
+| Verification oracle | independently compare persisted operands; two batches of 1000 required |
+| Tiers | T1/T2: `a,b∈[0,20]` |
+| Instance space | 441 ordered operand pairs (exact) |
+| Worked examples | `3,7→<`; `9,4→>`; `5,5→=` |
+| Misconception tags | `MISC-SIGN-DIRECTION`, `MISC-EQUALITY-OVERUSE` |
