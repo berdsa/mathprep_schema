@@ -3,7 +3,7 @@ package validation
 import (
 	"testing"
 
-	core "github.com/berdsa/mathprep_schema"
+	core "github.com/berdsa/mathprep_schema/pkg/core"
 )
 
 func TestValidateExactIntCorrect(t *testing.T) {

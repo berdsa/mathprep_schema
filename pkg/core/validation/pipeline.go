@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/berdsa/mathprep_schema"
+	core "github.com/berdsa/mathprep_schema/pkg/core"
 )
 
 type Stage string
