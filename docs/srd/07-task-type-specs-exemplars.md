@@ -1476,3 +1476,31 @@
 | Verification oracle | Independently evaluate the antiderivative at both bounds; two batches of 1000 |
 | Worked examples | `∫[0,2](3x+1)dx=8`; `∫[-1,1]2x dx=0`; `∫[1,3](x−2)dx=0` |
 | Misconception tags | `MISC-BOUND-SWAP`, `MISC-ANTIDERIVATIVE-SIGN`, `MISC-FORGET-CONSTANT-TERM` |
+
+## UNI-CAL-007 — Double integral
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Evaluate a constant double integral over a rectangle / CAL / University / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `∬_R {c} dA, R=[{x1},{x2}]×[{y1},{y2}] = ?` |
+| Variables | `c∈[-9,9]`; integer bounds `x1<x2`, `y1<y2` in `[-5,5]` |
+| Solution | `c(x2−x1)(y2−y1)` |
+| equivalence_policy | **TOL** shared numeric tolerance |
+| Verification oracle | Independently multiply integrand by rectangle area; two batches of 1000 |
+| Worked examples | `∬_R 3 dA, R=[0,2]×[0,4]→24`; `∬_R 0 dA→0`; `∬_R −2, R=[−1,1]×[2,5]→−12` |
+| Misconception tags | `MISC-AREA-OMISSION`, `MISC-BOUND-SWAP`, `MISC-SIGN-ERROR` |
+
+## UNI-SEQ-001 — Series convergence test
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Determine convergence of a geometric series / SEQ / University / Analyze |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `Does Σ from n=0 to ∞ of ({r})^n converge?` |
+| Variables | `r∈{-2,-3/2,-1/2,-1/3,1/3,1/2,3/2,2}` |
+| Solution | YES iff `|r|<1` |
+| equivalence_policy | **BOOL** fixed vocabulary `YES` / `NO` |
+| Verification oracle | Independently test the absolute ratio; two batches of 1000 |
+| Worked examples | `r=1/2→YES`; `r=−1/3→YES`; `r=2→NO` |
+| Misconception tags | `MISC-ABSOLUTE-RATIO`, `MISC-ALTERNATING-CONFUSION`, `MISC-BOUNDARY-RATIO` |
