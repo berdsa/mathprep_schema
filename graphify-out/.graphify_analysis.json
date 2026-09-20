@@ -30,6 +30,32 @@
       "uuid"
     ],
     "1": [
+      "pkg_core_validation_pipeline",
+      "pkg_core_validation_pipeline_compareexactint",
+      "pkg_core_validation_pipeline_normalizeexactint",
+      "pkg_core_validation_pipeline_parseexactint",
+      "pkg_core_validation_pipeline_test",
+      "pkg_core_validation_pipeline_test_testvalidatebool",
+      "pkg_core_validation_pipeline_test_testvalidatecanonlist",
+      "pkg_core_validation_pipeline_test_testvalidateexactintboundary",
+      "pkg_core_validation_pipeline_test_testvalidateexactintcorrect",
+      "pkg_core_validation_pipeline_test_testvalidateexactintincorrect",
+      "pkg_core_validation_pipeline_test_testvalidateexactintunparseable",
+      "pkg_core_validation_pipeline_test_testvalidatetuple",
+      "pkg_core_validation_pipeline_validate",
+      "pkg_core_validation_pipeline_validatebool",
+      "pkg_core_validation_pipeline_validatecanonlist",
+      "pkg_core_validation_pipeline_validateexactint",
+      "pkg_core_validation_pipeline_validatetuple",
+      "reasoncode",
+      "t",
+      "validation_parsedexactint",
+      "validation_result",
+      "validation_stage",
+      "validationmethod",
+      "verdict"
+    ],
+    "2": [
       "migrations_000001_create_phase0_schema_up",
       "migrations_000001_create_phase0_schema_up_domain",
       "migrations_000001_create_phase0_schema_up_equivalence_policy",
@@ -52,30 +78,6 @@
       "migrations_000001_create_phase0_schema_up_users",
       "migrations_000001_create_phase0_schema_up_validation_method",
       "migrations_000001_create_phase0_schema_up_verdict"
-    ],
-    "2": [
-      "pkg_core_validation_pipeline",
-      "pkg_core_validation_pipeline_compareexactint",
-      "pkg_core_validation_pipeline_normalizeexactint",
-      "pkg_core_validation_pipeline_parseexactint",
-      "pkg_core_validation_pipeline_test",
-      "pkg_core_validation_pipeline_test_testvalidatebool",
-      "pkg_core_validation_pipeline_test_testvalidatecanonlist",
-      "pkg_core_validation_pipeline_test_testvalidateexactintboundary",
-      "pkg_core_validation_pipeline_test_testvalidateexactintcorrect",
-      "pkg_core_validation_pipeline_test_testvalidateexactintincorrect",
-      "pkg_core_validation_pipeline_test_testvalidateexactintunparseable",
-      "pkg_core_validation_pipeline_validate",
-      "pkg_core_validation_pipeline_validatebool",
-      "pkg_core_validation_pipeline_validatecanonlist",
-      "pkg_core_validation_pipeline_validateexactint",
-      "reasoncode",
-      "t",
-      "validation_parsedexactint",
-      "validation_result",
-      "validation_stage",
-      "validationmethod",
-      "verdict"
     ],
     "3": [
       "docs_agent_log",
@@ -270,8 +272,8 @@
   },
   "cohesion": {
     "0": 0.15384615384615385,
-    "1": 0.19480519480519481,
-    "2": 0.21645021645021645,
+    "1": 0.2028985507246377,
+    "2": 0.19480519480519481,
     "3": 0.13333333333333333,
     "4": 0.18181818181818182,
     "5": 0.2,
@@ -326,6 +328,11 @@
       "degree": 9
     },
     {
+      "id": "validation_result",
+      "label": "Result",
+      "degree": 9
+    },
+    {
       "id": "pkg_core_validation_pipeline_validateexactint",
       "label": "ValidateExactInt()",
       "degree": 9
@@ -343,11 +350,6 @@
     {
       "id": "core_tasktype",
       "label": "TaskType",
-      "degree": 8
-    },
-    {
-      "id": "validation_result",
-      "label": "Result",
       "degree": 8
     }
   ],
