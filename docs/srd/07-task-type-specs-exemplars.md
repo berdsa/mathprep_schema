@@ -176,6 +176,27 @@
 | Worked examples | `60°,70°→50°`; `90°,45°→45°`; `1°,1°→178°` |
 | Misconception tags | `MISC-ANGLE-SUM`, `MISC-SUBTRACTION-ORDER`, `MISC-REFLEX-ANGLE` |
 
+## G6-MD-002 — Unit conversion
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Convert between metres and centimetres / MD / 6 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode / locale / render_target | CODE / `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `Convert {value} {from} to {to}.` |
+| Variables | `value: int [1,999]`; direction is `cm→m` or `m→cm` |
+| Generation constraint | Select a positive integer value and one of the two supported directions. |
+| Solution | `value/100` for `cm→m`; `value×100` for `m→cm` |
+| equivalence_policy | **EQUIV-CLASS** within `1e-6` via the shared TOL validator |
+| Input contract | decimal numeric text with `.` or `,` separator; surrounding whitespace accepted |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT` |
+| Verification oracle | independently apply the selected conversion factor; two batches of 1000 required |
+| Tiers | T1/T2: `value∈[1,999]`; tier metadata controls assignment difficulty only |
+| Instance space | 3,996 ordered value/direction pairs |
+| Worked examples | `250 cm→2.5 m`; `3 m→300 cm`; `1 cm→0.01 m` |
+| Misconception tags | `MISC-FACTOR-INVERSE`, `MISC-DECIMAL-PLACE`, `MISC-UNIT-SWAP` |
+
 ## G3-NUM-005 — Simple word problem (addition/subtraction) [HYBRID-AI]
 
 | Field | Value |
