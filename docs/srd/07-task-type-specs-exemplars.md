@@ -244,3 +244,25 @@
 | Instance space | finite multisets over 21 values for lengths 3–5; exact total 6561+10626+23751 = 40938 sequences before dedup |
 | Worked examples | `[3,1,2]→1 2 3`; `[9,4,4]→4 4 9`; `[0,20,7]→0 7 20` |
 | Misconception tags | `MISC-SORT-DIRECTION`, `MISC-DUPLICATE-DROP` |
+
+## G1-NUM-008 — Money counting
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Count mixed 1-unit and 5-unit coins / NUM / 1–2 / Apply |
+| Provenance / ref_status | seed, `[SOURCED: REF-01]` — grade alignment `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode | CODE |
+| locale / render_target | `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `"{a} coins of {x} + {b} coins of {y} = ?"` |
+| Variables | `a,b∈[0,20]`; denominations fixed to `x=1`, `y=5` |
+| Generation constraint | Deterministic count draw; answer is total value in units. |
+| Solution | `a·1+b·5` |
+| equivalence_policy | **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; shared EXACT-INT contract |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, EMPTY_INPUT, INPUT_TOO_LONG` |
+| Verification oracle | independently recompute coin value; two batches of 1000 required |
+| Tiers | T1/T2: counts `[0,20]` |
+| Instance space | 441 ordered count pairs (exact) |
+| Worked examples | `3×1+4×5→23`; `0×1+2×5→10`; `7×1+0×5→7` |
+| Misconception tags | `MISC-COIN-COUNT-VALUE`, `MISC-DENOMINATION-SWAP` |
