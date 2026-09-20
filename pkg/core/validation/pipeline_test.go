@@ -123,6 +123,15 @@ func TestValidateExactRat(t *testing.T) {
 	}
 }
 
+func TestValidateRatio(t *testing.T) {
+	if got := ValidateRatio("6:8", "3:4"); got.ReasonCode != core.ReasonCanonNotReduced {
+		t.Fatalf("expected unreduced ratio, got %+v", got)
+	}
+	if got := ValidateRatio("3 : 4", "3:4"); got.Verdict != core.VerdictCorrect {
+		t.Fatalf("expected correct ratio, got %+v", got)
+	}
+}
+
 func TestValidateTol(t *testing.T) {
 	if got := ValidateTol("1,0000004", "1", 1e-6); got.Verdict != core.VerdictCorrect {
 		t.Fatalf("got %+v", got)

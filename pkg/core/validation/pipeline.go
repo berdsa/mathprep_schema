@@ -36,6 +36,9 @@ func Validate(method core.ValidationMethod, raw, correctAnswer string) Result {
 	case core.ValidationMethodBool:
 		return ValidateBool(raw, correctAnswer)
 	case core.ValidationMethodCanon:
+		if strings.Contains(correctAnswer, ":") {
+			return ValidateRatio(raw, correctAnswer)
+		}
 		return ValidateCanonList(raw, correctAnswer)
 	case core.ValidationMethodTuple:
 		return ValidateTuple(raw, correctAnswer)
@@ -46,6 +49,42 @@ func Validate(method core.ValidationMethod, raw, correctAnswer string) Result {
 	default:
 		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
 	}
+}
+
+var ratioInput = regexp.MustCompile(`^\s*([0-9]+)\s*:\s*([0-9]+)\s*$`)
+
+// ValidateRatio validates a positive ratio in reduced canonical form.
+func ValidateRatio(raw, correctAnswer string) Result {
+	got, gotCanonical, gotReason := parseRatio(raw)
+	if gotReason != core.ReasonOK {
+		return Result{Verdict: core.VerdictUnparseable, ReasonCode: gotReason, Stage: StageParse, CorrectAnswer: correctAnswer}
+	}
+	want, wantCanonical, wantReason := parseRatio(correctAnswer)
+	if wantReason != core.ReasonOK {
+		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonParseError, Stage: StageCompare, CorrectAnswer: correctAnswer}
+	}
+	if got != want {
+		return Result{Verdict: core.VerdictIncorrect, ReasonCode: core.ReasonValueMismatch, Normalized: gotCanonical, Stage: StageVerdict, CorrectAnswer: correctAnswer}
+	}
+	return Result{Verdict: core.VerdictCorrect, ReasonCode: core.ReasonOK, Normalized: gotCanonical, Stage: StageVerdict, CorrectAnswer: wantCanonical}
+}
+
+func parseRatio(raw string) (string, string, core.ReasonCode) {
+	m := ratioInput.FindStringSubmatch(raw)
+	if m == nil {
+		return "", "", core.ReasonWrongFormat
+	}
+	a, _ := strconv.Atoi(m[1])
+	b, _ := strconv.Atoi(m[2])
+	if a == 0 || b == 0 {
+		return "", "", core.ReasonWrongFormat
+	}
+	g := int(gcd64(int64(a), int64(b)))
+	canonical := strconv.Itoa(a/g) + ":" + strconv.Itoa(b/g)
+	if m[1] != strconv.Itoa(a/g) || m[2] != strconv.Itoa(b/g) {
+		return "", canonical, core.ReasonCanonNotReduced
+	}
+	return canonical, canonical, core.ReasonOK
 }
 
 func ValidateTol(raw, correctAnswer string, tolerance float64) Result {
