@@ -781,3 +781,23 @@
 | Instance space | `98×98×2 = 19,208` ordered operand/operation cases |
 | Worked examples | `GCD of 18 and 24→6`; `LCM of 6 and 8→24`; `GCD of 35 and 49→7` |
 | Misconception tags | `MISC-GCD-AS-LCM`, `MISC-LCM-AS-PRODUCT`, `MISC-FACTORIZATION-ERROR` |
+
+## G6-NS-002 — Negative number arithmetic
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Compute with signed numbers / NS / 6 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `{a} {operation} {b} = ?` |
+| Variables | `a,b∈[-99,99]\{0}`; `operation∈{+,−,×,÷}`; division requires `a mod b=0` |
+| Generation constraint | Draw nonzero signed operands; reject non-integral division. |
+| Solution | ordinary signed integer arithmetic |
+| equivalence_policy | **STRICT-FORM** — canonical integer |
+| Input contract | `^\s*[+-]?0*[0-9]{1,5}\s*$`; shared EXACT-INT contract |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, EMPTY_INPUT, INPUT_TOO_LONG` |
+| Verification oracle | Independently recompute the selected signed operation; two batches of 1000 required |
+| Tiers | T1/T2: nonzero signed operands in `[-99,99]`, exact division only |
+| Instance space | finite accepted signed operand/operator tuples, excluding zero and non-integral divisions |
+| Worked examples | `−7+3→−4`; `−6×−5→30`; `−24÷6→−4` |
+| Misconception tags | `MISC-SIGN-RULE`, `MISC-NEGATIVE-DIVISION`, `MISC-ABSOLUTE-VALUE` |
