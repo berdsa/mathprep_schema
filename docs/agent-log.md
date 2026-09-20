@@ -116,3 +116,7 @@
 ## 2026-09-20 — G3-NUM-009
 
 - Appended the canonical full field-table specification for rectangle/square perimeter.
+
+## 2026-09-20 — G3-NUM-010
+
+- Appended the canonical full field-table specification for rectangle/square area.

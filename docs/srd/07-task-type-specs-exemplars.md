@@ -464,3 +464,25 @@
 | Instance space | 20×20 = 400 ordered side pairs (exact) |
 | Worked examples | `3,4→14`; `5,5→20`; `1,20→42` |
 | Misconception tags | `MISC-AREA-INSTEAD-OF-PERIMETER`, `MISC-SIDE-COUNT`, `MISC-ONE-SIDE-OMITTED` |
+
+## G3-NUM-010 — Area of rectangle/square
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Find the area from two side lengths / GEO / 3–4 / Apply |
+| Provenance / ref_status | seed, `[SOURCED: REF-01]` — grade alignment `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode | CODE |
+| locale / render_target | `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `Sides {a}, {b} — area?` |
+| Variables | `a,b∈[1,20]`; equal sides represent a square |
+| Generation constraint | Deterministic side-length draw; area is `a·b`. |
+| Solution | `a·b` |
+| equivalence_policy | **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; shared EXACT-INT contract |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, EMPTY_INPUT, INPUT_TOO_LONG` |
+| Verification oracle | independently apply the area formula; two batches of 1000 required |
+| Tiers | T1/T2: side lengths `[1,20]` |
+| Instance space | 20×20 = 400 ordered side pairs (exact) |
+| Worked examples | `3,4→12`; `5,5→25`; `1,20→20` |
+| Misconception tags | `MISC-PERIMETER-INSTEAD-OF-AREA`, `MISC-SIDE-COUNT`, `MISC-ONE-SIDE-OMITTED` |
