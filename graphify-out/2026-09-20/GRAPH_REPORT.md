@@ -1,16 +1,16 @@
 # Graph Report - schema  (2026-09-20)
 
 ## Corpus Check
-- 31 files · ~26,810 words
+- 31 files · ~27,094 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 293 nodes · 384 edges · 29 communities (27 shown, 2 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 12 edges (avg confidence: 0.8)
+- 296 nodes · 391 edges · 30 communities (28 shown, 2 thin omitted)
+- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 13 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `9bcee948`
+- Built from commit: `33ee7446`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -20,6 +20,7 @@
 - 07 — Wave-A Exemplar Task-Type Specs
 - pipeline.go
 - 000001_create_phase0_schema.up.sql
+- pipeline_test.go
 - 02 — Requirements
 - 00 — Conventions
 - Math Task Type Catalog — Grade 1 to University
@@ -37,10 +38,10 @@
 - github.com/berdsa/mathprep_schema
 
 ## God Nodes (most connected - your core abstractions)
-1. `07 — Wave-A Exemplar Task-Type Specs` - 51 edges
+1. `07 — Wave-A Exemplar Task-Type Specs` - 52 edges
 2. `Agent log` - 36 edges
-3. `Result` - 14 edges
-4. `Validate()` - 11 edges
+3. `Result` - 15 edges
+4. `Validate()` - 12 edges
 5. `02 — Requirements` - 10 edges
 6. `task_type` - 9 edges
 7. `ValidateExactInt()` - 9 edges
@@ -49,21 +50,21 @@
 10. `ReasonCode` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `TaskType` --references--> `GradeBand`  [EXTRACTED]
-  pkg/core/rows.go → pkg/core/constants.go
-- `Validate()` --references--> `ValidationMethod`  [EXTRACTED]
-  pkg/core/validation/pipeline.go → pkg/core/constants.go
-- `TaskType` --references--> `EquivalencePolicy`  [EXTRACTED]
-  pkg/core/rows.go → pkg/core/constants.go
-- `TaskType` --references--> `GenerationMode`  [EXTRACTED]
-  pkg/core/rows.go → pkg/core/constants.go
-- `TaskType` --references--> `TaskTypeStatus`  [EXTRACTED]
-  pkg/core/rows.go → pkg/core/constants.go
+- `TestValidateInterval()` --calls--> `ValidateInterval()`  [INFERRED]
+  pkg/core/validation/pipeline_test.go → pkg/core/validation/pipeline.go
+- `TestValidateSet()` --calls--> `ValidateSet()`  [INFERRED]
+  pkg/core/validation/pipeline_test.go → pkg/core/validation/pipeline.go
+- `TestValidateRatio()` --calls--> `ValidateRatio()`  [INFERRED]
+  pkg/core/validation/pipeline_test.go → pkg/core/validation/pipeline.go
+- `TestValidateTol()` --calls--> `ValidateTol()`  [INFERRED]
+  pkg/core/validation/pipeline_test.go → pkg/core/validation/pipeline.go
+- `TestValidateExactRat()` --calls--> `ValidateExactRat()`  [INFERRED]
+  pkg/core/validation/pipeline_test.go → pkg/core/validation/pipeline.go
 
 ## Import Cycles
 - None detected.
 
-## Communities (29 total, 2 thin omitted)
+## Communities (30 total, 2 thin omitted)
 
 ### Community 0 - "Agent log"
 Cohesion: 0.05
@@ -75,15 +76,19 @@ Nodes (24): Domain, EquivalencePolicy, EventLog, GenerationMode, GenerationReque
 
 ### Community 2 - "07 — Wave-A Exemplar Task-Type Specs"
 Cohesion: 0.04
-Nodes (51): 07 — Wave-A Exemplar Task-Type Specs, G1-NUM-001 — Addition within range, G1-NUM-002 — Subtraction within range, G1-NUM-003 — Number comparison, G1-NUM-004 — Missing addend, G1-NUM-005 — Simple word problem (addition/subtraction), G1-NUM-006 — Place value, G1-NUM-007 — Ordering a list (+43 more)
+Nodes (52): 07 — Wave-A Exemplar Task-Type Specs, G1-NUM-001 — Addition within range, G1-NUM-002 — Subtraction within range, G1-NUM-003 — Number comparison, G1-NUM-004 — Missing addend, G1-NUM-005 — Simple word problem (addition/subtraction), G1-NUM-006 — Place value, G1-NUM-007 — Ordering a list (+44 more)
 
 ### Community 3 - "pipeline.go"
-Cohesion: 0.13
-Nodes (38): ReasonCode, CompareExactInt(), gcd64(), isQuadrantLabel(), isRoman(), joinInts(), NormalizeExactInt(), ParseExactInt() (+30 more)
+Cohesion: 0.20
+Nodes (26): ReasonCode, CompareExactInt(), gcd64(), isQuadrantLabel(), isRoman(), joinInts(), NormalizeExactInt(), ParseExactInt() (+18 more)
 
 ### Community 4 - "000001_create_phase0_schema.up.sql"
 Cohesion: 0.19
 Nodes (21): domain, equivalence_policy, event_log, generation_mode, generation_request, grade_band, locale, mastery_topic (+13 more)
+
+### Community 5 - "pipeline_test.go"
+Cohesion: 0.25
+Nodes (14): TestValidateBool(), TestValidateCanonList(), TestValidateExactIntBoundary(), TestValidateExactIntCorrect(), TestValidateExactIntIncorrect(), TestValidateExactIntUnparseable(), TestValidateExactRat(), TestValidateInterval() (+6 more)
 
 ### Community 6 - "02 — Requirements"
 Cohesion: 0.18
@@ -138,7 +143,7 @@ Cohesion: 0.50
 Nodes (3): 00 — Индекс артефактов трека `math-task-catalog`, Реестр допущений и открытых вопросов — сводный, обновлён, Реестр репозиториев (введён этим ходом, см. ADR-006)
 
 ## Knowledge Gaps
-- **166 isolated node(s):** `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is`, `Source of truth`, `Stack` (+161 more)
+- **167 isolated node(s):** `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is`, `Source of truth`, `Stack` (+162 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -148,10 +153,8 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `ReasonCode` connect `pipeline.go` to `constants.go`?**
   _High betweenness centrality (0.014) - this node is a cross-community bridge._
 - **What connects `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is` to the rest of the system?**
-  _166 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _167 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Agent log` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
 - **Should `07 — Wave-A Exemplar Task-Type Specs` be split into smaller, more focused modules?**
-  _Cohesion score 0.038461538461538464 - nodes in this community are weakly interconnected._
-- **Should `pipeline.go` be split into smaller, more focused modules?**
-  _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.03773584905660377 - nodes in this community are weakly interconnected._

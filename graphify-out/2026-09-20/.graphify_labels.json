@@ -4,6 +4,7 @@
   "2": "07 — Wave-A Exemplar Task-Type Specs",
   "3": "pipeline.go",
   "4": "000001_create_phase0_schema.up.sql",
+  "5": "pipeline_test.go",
   "6": "02 — Requirements",
   "7": "00 — Conventions",
   "8": "Math Task Type Catalog — Grade 1 to University",
