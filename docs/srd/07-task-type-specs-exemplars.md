@@ -1050,3 +1050,23 @@
 | Instance space | finite accepted signed operand/operator tuples, excluding zero and non-integral divisions |
 | Worked examples | `−7+3→−4`; `−6×−5→30`; `−24÷6→−4` |
 | Misconception tags | `MISC-SIGN-RULE`, `MISC-NEGATIVE-DIVISION`, `MISC-ABSOLUTE-VALUE` |
+
+## G7-GEO-002 — Similar triangles ratio
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Find a corresponding side using a scale factor / GEO / 7 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `A similar triangle has side {a}. The scale factor is {k}. What is the corresponding side?` |
+| Variables | `a∈[2,40]`; `k∈{1/2,2/3,3/4,1,3/2,2,5/2}` |
+| Generation constraint | Choose a positive integer side and a fixed rational scale factor; the corresponding side is `a·k`. |
+| Solution | `a·k`, rendered as a decimal when non-integral |
+| equivalence_policy | **EQUIV-CLASS** within `1e-6` via the shared TOL validator |
+| Input contract | shared TOL numeric contract |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT` |
+| Verification oracle | Independently multiply the persisted side by the persisted rational scale factor; two batches of 1000 required |
+| Tiers | T1/T2: side `[2,40]`, one of seven scale factors |
+| Instance space | `39×7 = 273` ordered side/scale-factor cases |
+| Worked examples | `a=6,k=1/2→3`; `a=8,k=3/2→12`; `a=10,k=2/3→6.666666666666667` |
+| Misconception tags | `MISC-INVERT-SCALE`, `MISC-ADD-SCALE`, `MISC-ROUND-EARLY` |

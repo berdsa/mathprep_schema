@@ -168,3 +168,8 @@
 
 - Added the canonical full-field specification for negative-number arithmetic.
 - Reuses the shared EXACT-INT validator; no schema implementation change is required.
+
+## 2026-09-20 — G7-GEO-002 specification
+
+- Added the canonical full-field specification for similar-triangle scale-factor tasks.
+- Reuses the shared TOL validator; no schema implementation change is required.
