@@ -223,3 +223,7 @@
 
 - Added the canonical full-field specification for special-value sine equations.
 - Reuses the shared SET validator; no schema implementation change is required.
+
+## 2026-09-20 — G10-TRG-001 notation correction
+
+- Clarified that answers are integer multiples of π/12 so the shared integer SET validator can enforce the canonical angle set.

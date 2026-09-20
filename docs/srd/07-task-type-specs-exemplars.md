@@ -1238,9 +1238,9 @@
 |---|---|
 | Title / domain / grade / Bloom | Solve a special-value sine equation on `[0,2π)` / TRG / 10 / Apply |
 | spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
-| Template | `Solve sin(x)={k} for x∈[0,2π).` |
+| Template | `Solve sin(x)={k} for x∈[0,2π); answer as multiples m of π/12.` |
 | Variables | `k∈{1/2,√2/2,√3/2}` |
-| Solution | The two canonical angles in the first and second quadrants |
+| Solution | The two integer multipliers m for the canonical angles |
 | equivalence_policy | **SET** via the shared unordered numeric-set validator |
 | Input contract | shared numeric SET contract |
 | Verdict model / oracle | `OK, VALUE_MISMATCH, WRONG_FORMAT`; independently derive the two special angles, two batches of 1000 |
