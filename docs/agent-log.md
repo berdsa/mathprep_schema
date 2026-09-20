@@ -140,3 +140,7 @@
 ## 2026-09-20 — G6-DEC-001 specification
 
 - Added the canonical full-field decimal-arithmetic specification with TOL validation and independent-operation examples.
+## 2026-09-20 — G6-PCT-001 specification
+
+- Added the canonical full-field specification for percentage-of-a-number tasks.
+- Reuses the shared EXACT-RAT validator; no schema implementation change is required.

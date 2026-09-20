@@ -681,3 +681,23 @@
 | Tiers / instance space | T1/T2 use the same bounds; 12×11×12×11×2 generated operation cases before reduction |
 | Worked examples | `2/3×3/4=1/2`; `5/6÷2/3=5/4`; edge `1/2×2/12=1/12` |
 | Misconception tags | `MISC-FRACTION-INVERT`, `MISC-FRACTION-CROSS-MULTIPLY`, `MISC-UNREDUCED` |
+
+## G6-PCT-001 — Percentage of a number
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Find a percentage of a whole number / DEC / 6 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `What is {p}% of {n}?` |
+| Variables | `p∈[1,99]`; `n∈[10,999]`; `p·n` is positive |
+| Generation constraint | Draw integer percentage and whole-number operands; compute and reduce the result as a rational number. |
+| Solution | `reduce(p·n,100)` |
+| equivalence_policy | **STRICT-FORM** — reduced fraction required; bare integer accepted when denominator reduces to 1 |
+| Input contract | `^\s*[+-]?[0-9]+(?:\s*/\s*[0-9]+)?\s*$`; shared EXACT-RAT contract |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, CANON_NOT_REDUCED` |
+| Verification oracle | Independently compute `p·n/100`, reduce by gcd, and compare; two batches of 1000 required |
+| Tiers | T1/T2: `p∈[1,99]`, `n∈[10,999]` |
+| Instance space | `99×990 = 98,010` ordered percentage/whole-number pairs (exact) |
+| Worked examples | `10% of 80→8`; `25% of 60→15`; `15% of 40→6` |
+| Misconception tags | `MISC-PERCENT-DIVIDE-10`, `MISC-PERCENT-MULTIPLY-100`, `MISC-UNREDUCED` |
