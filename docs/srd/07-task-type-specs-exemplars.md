@@ -239,6 +239,27 @@
 | Worked examples | `x+y=7; 2x+y=10→(3,4)`; `2x+3y=16; x+y=6→(2,4)`; `x+2y=8; 3x+y=9→(2,3)` |
 | Misconception tags | `MISC-DETERMINANT`, `MISC-TUPLE-ORDER`, `MISC-ELIMINATION-SIGN` |
 
+## G7-EE-003 — Quadratic equation
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Solve a quadratic equation / EE / 7 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode / locale / render_target | CODE / `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `x² + {b}x + {c} = 0` |
+| Variables | distinct integer roots `r1,r2∈[-10,10]`; `b=-(r1+r2)`, `c=r1·r2` |
+| Generation constraint | Reject equal roots so the answer is a two-member set. |
+| Solution | unordered set `{r1,r2}` |
+| equivalence_policy | **STRICT-FORM** unordered integer set via the shared SET validator |
+| Input contract | comma-, semicolon-, or whitespace-separated integer roots; duplicates rejected |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT` |
+| Verification oracle | independently multiply `(x-r1)(x-r2)` and verify both roots; two batches of 1000 required |
+| Tiers | T1/T2: distinct roots in `[-10,10]` |
+| Instance space | `21×20 = 420` ordered root draws before set normalization |
+| Worked examples | `x²-7x+12=0→{3,4}`; `x²+x-6=0→{-3,2}`; `x²- x-20=0→{-4,5}` |
+| Misconception tags | `MISC-ROOT-SIGN`, `MISC-FACTOR-PAIR`, `MISC-SET-ORDER` |
+
 ## G3-NUM-005 — Simple word problem (addition/subtraction) [HYBRID-AI]
 
 | Field | Value |
