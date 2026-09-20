@@ -741,3 +741,23 @@
 | Instance space | finite accepted ordered pairs from `98×98`, filtered by `gcd(a,b)>1` |
 | Worked examples | `6:8→3:4`; `15:25→3:5`; `18:24→3:4` |
 | Misconception tags | `MISC-DIVIDE-ONE-TERM`, `MISC-WRONG-GCD`, `MISC-UNREDUCED` |
+
+## G6-RP-001 — Proportion solving
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Solve a one-variable proportion / RP / 6 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `{a}/{b} = {c}/x, find x` |
+| Variables | `a,b,c∈[1,12]`; `a` divides `b·c`; `a,b,c` positive |
+| Generation constraint | Reject non-integral solutions; answer is `x=b·c/a`. |
+| Solution | `x = b·c/a` |
+| equivalence_policy | **STRICT-FORM** — shared EXACT-RAT canonical integer or reduced fraction |
+| Input contract | `^\s*[+-]?[0-9]+(?:\s*/\s*[0-9]+)?\s*$`; shared EXACT-RAT contract |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, CANON_NOT_REDUCED` |
+| Verification oracle | Independently recompute `b·c/a` and reduce; two batches of 1000 required |
+| Tiers | T1/T2: positive coefficients `[1,12]`, integral solution only |
+| Instance space | accepted ordered triples from `12³`, filtered by `a|(b·c)` |
+| Worked examples | `2/3=4/x→x=6`; `3/5=6/x→x=10`; `4/9=8/x→x=18` |
+| Misconception tags | `MISC-CROSS-MULTIPLY-WRONG`, `MISC-INVERT-PROPORTION`, `MISC-OMIT-DIVISOR` |
