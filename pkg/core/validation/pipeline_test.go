@@ -67,6 +67,12 @@ func TestValidateBool(t *testing.T) {
 	if got := ValidateBool("maybe", "<"); got.Verdict != core.VerdictUnparseable {
 		t.Fatalf("got %+v", got)
 	}
+	if got := ValidateBool(" oy ", "Oy"); got.Verdict != core.VerdictCorrect || got.Normalized != "Oy" {
+		t.Fatalf("got %+v", got)
+	}
+	if got := ValidateBool("quadrant I", "I"); got.Verdict != core.VerdictUnparseable {
+		t.Fatalf("got %+v", got)
+	}
 }
 
 func TestValidateCanonList(t *testing.T) {

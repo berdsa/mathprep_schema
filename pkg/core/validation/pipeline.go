@@ -285,6 +285,9 @@ func romanFromInt(n int) string {
 // comparison so task types do not need their own parsing code.
 func ValidateBool(raw, correctAnswer string) Result {
 	canonical := map[string]string{"<": "<", "less": "<", "less than": "<", ">": ">", "greater": ">", "greater than": ">", "=": "=", "equal": "=", "equal to": "="}
+	if isQuadrantLabel(correctAnswer) {
+		canonical = map[string]string{"i": "I", "ii": "II", "iii": "III", "iv": "IV", "ox": "Ox", "oy": "Oy", "o": "O"}
+	}
 	normalized, ok := canonical[strings.ToLower(strings.TrimSpace(raw))]
 	if !ok {
 		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
@@ -293,6 +296,15 @@ func ValidateBool(raw, correctAnswer string) Result {
 		return Result{Verdict: core.VerdictIncorrect, ReasonCode: core.ReasonValueMismatch, Normalized: normalized, Stage: StageVerdict, CorrectAnswer: correctAnswer}
 	}
 	return Result{Verdict: core.VerdictCorrect, ReasonCode: core.ReasonOK, Normalized: normalized, Stage: StageVerdict, CorrectAnswer: correctAnswer}
+}
+
+func isQuadrantLabel(answer string) bool {
+	switch answer {
+	case "I", "II", "III", "IV", "Ox", "Oy", "O":
+		return true
+	default:
+		return false
+	}
 }
 
 // ParsedExactInt is the parse-stage representation of an EXACT-INT answer.
