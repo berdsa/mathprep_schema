@@ -121,6 +121,10 @@
 
 - Added the convention-defined ordered tuple parser/normalizer and generic pipeline dispatch for `TUPLE`; the schema version is now `v0.2.5`.
 
+## 2026-09-20 — G3-NUM-011
+
+- Appended the canonical full field-table specification for division with remainder using the convention-defined ordered TUPLE validator.
+
 ## 2026-09-20 — G3-NUM-010
 
 - Appended the canonical full field-table specification for rectangle/square area.

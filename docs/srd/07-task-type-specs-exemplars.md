@@ -486,3 +486,25 @@
 | Instance space | 20×20 = 400 ordered side pairs (exact) |
 | Worked examples | `3,4→12`; `5,5→25`; `1,20→20` |
 | Misconception tags | `MISC-PERIMETER-INSTEAD-OF-AREA`, `MISC-SIDE-COUNT`, `MISC-ONE-SIDE-OMITTED` |
+
+## G3-NUM-011 — Division with remainder
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Divide with quotient and remainder / NUM / 3–4 / Apply |
+| Provenance / ref_status | seed, `[SOURCED: REF-01]` — grade alignment `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode | CODE |
+| locale / render_target | `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `{a} ÷ {b} = ? remainder ?` |
+| Variables | `a∈[10,99]`; `b∈[2,9]`; reject exact division |
+| Generation constraint | `a mod b != 0`; answer is ordered `(quotient,remainder)`, with `0≤remainder<b`. |
+| Solution | `TUPLE(a÷b,a mod b)` |
+| equivalence_policy | **STRICT-FORM** ordered tuple |
+| Input contract | `^\s*([0-9]{1,3})\s*(?:,|;|ост\.?|остаток)\s*([0-9]{1,3})\s*$`; bare number is `INCOMPLETE_TUPLE` |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, INCOMPLETE_TUPLE` |
+| Verification oracle | independently recompute quotient/remainder; two batches of 1000 required |
+| Tiers | T1/T2: `a∈[10,99]`, `b∈[2,9]` |
+| Instance space | 720 ordered candidates minus 167 exact-division pairs = 553 valid ordered pairs (exact) |
+| Worked examples | `53÷6→8,5`; `97÷8→12,1`; `11÷9→1,2` |
+| Misconception tags | `MISC-REMAINDER-OMIT`, `MISC-REMAINDER-GE-DIVISOR`, `MISC-DIVISOR-DIVIDEND-SWAP` |
