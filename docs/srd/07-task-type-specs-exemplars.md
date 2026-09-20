@@ -1186,3 +1186,18 @@
 | Instance space | `10×11³×11 = 146,410` coefficient/input cases |
 | Worked examples | `2x²+3x+1 at x=2→15`; `−x²+4 at x=−3→−5`; `3x²−2x at x=0→0` |
 | Misconception tags | `MISC-OMIT-SQUARE`, `MISC-SIGN-ERROR`, `MISC-CONSTANT-OMISSION` |
+
+## G7-F-002 — Domain check
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Identify excluded inputs from a rational function domain / F / 7 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `For f(x)=1/(x−{d}), which candidates in [{v1}, {v2}, {v3}, {v4}] are defined?` |
+| Variables | `d∈[-5,5]`; candidates are `d−1,d,d+1,d+2` |
+| Solution | All candidates except `d`, as an unordered SET |
+| equivalence_policy | **EQUIV-CLASS** under shared SET validation |
+| Input contract | shared SET integer contract |
+| Verdict model / oracle | `OK, VALUE_MISMATCH, WRONG_FORMAT`; independently exclude the denominator root, two batches of 1000 |
+| Worked examples | `d=0,[-1,0,1,2]→[-1,1,2]`; `d=3,[2,3,4,5]→[2,4,5]` |
+| Misconception tags | `MISC-INCLUDE-POLE`, `MISC-EXCLUDE-WRONG-VALUE`, `MISC-ORDER-SET` |
