@@ -156,3 +156,25 @@
 | Instance space | 441 ordered operand pairs (exact) |
 | Worked examples | `3,7→<`; `9,4→>`; `5,5→=` |
 | Misconception tags | `MISC-SIGN-DIRECTION`, `MISC-EQUALITY-OVERUSE` |
+
+## G1-NUM-004 — Missing addend
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Find the missing addend / NUM / 1–2 / Apply |
+| Provenance / ref_status | seed, `[SOURCED: REF-01]` — grade alignment `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode | CODE |
+| locale / render_target | `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `"{a} + ? = {c}"` |
+| Variables | `a,c: int [0,20]`, reordered so `c≥a` |
+| Generation constraint | Deterministically draw two values and reorder; answer is `c−a`. |
+| Solution | `x = c − a` |
+| equivalence_policy | **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; shared EXACT-INT contract |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, EMPTY_INPUT, INPUT_TOO_LONG` |
+| Verification oracle | independently reorder and subtract; two batches of 1000 required |
+| Tiers | T1/T2: `0≤a≤c≤20` |
+| Instance space | 231 ordered `(a,c)` pairs (exact) |
+| Worked examples | `3+?=7→4`; `0+?=0→0`; `12+?=20→8` |
+| Misconception tags | `MISC-INVERSE-OPERATION`, `MISC-SUBTRAHEND-CONFUSION` |
