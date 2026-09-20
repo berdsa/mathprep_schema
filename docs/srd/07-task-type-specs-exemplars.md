@@ -376,3 +376,25 @@
 | Instance space | finite accepted ordered triples from 900×900×2, filtered by operation constraints |
 | Worked examples | `247+386→633`; `758−269→489`; `995+108→1103` |
 | Misconception tags | `MISC-CARRY-DROP`, `MISC-BORROW-DROP`, `MISC-DIGIT-TRANSPOSE` |
+
+## G3-NUM-006 — Order of operations
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Evaluate multiplication/division before addition/subtraction / NUM / 3–4 / Apply |
+| Provenance / ref_status | seed, `[SOURCED: REF-01]` — grade alignment `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode | CODE |
+| locale / render_target | `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `{a} + {b} × {c} − {d} ÷ {e} = ?` |
+| Variables | `a,b,c,e,q∈[1,9]`; `d=e·q` |
+| Generation constraint | Division is exact; standard precedence is required: multiplication/division before addition/subtraction. |
+| Solution | `a+b·c−q` |
+| equivalence_policy | **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; shared EXACT-INT contract |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, EMPTY_INPUT, INPUT_TOO_LONG` |
+| Verification oracle | independently evaluate with precedence; two batches of 1000 required |
+| Tiers | T1/T2: all displayed variables `[1,9]`, exact division |
+| Instance space | 9⁵ = 59049 ordered parameter combinations (exact) |
+| Worked examples | `2+3×4−8÷2→10`; `9+1×7−6÷3→14`; `5+8×2−9÷3→18` |
+| Misconception tags | `MISC-LEFT-TO-RIGHT`, `MISC-DIVISION-PRECEDENCE`, `MISC-DIVISION-TRUNCATION` |

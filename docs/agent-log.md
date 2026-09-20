@@ -100,3 +100,7 @@
 ## 2026-09-20 — G3-NUM-004
 
 - Appended the canonical full field-table specification for combined three-digit addition/subtraction with explicit carry/borrow constraints.
+
+## 2026-09-20 — G3-NUM-006
+
+- Appended the canonical full field-table specification for integer order-of-operations expressions with exact division.
