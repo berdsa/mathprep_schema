@@ -13,14 +13,37 @@
 
 **Новая цена ошибки, называемая явно:** university и часть Grade 10-11 требуют CAS (символьные вычисления: производные, интегралы, факторизация). Sandboxed CAS evaluator (`OPEN-06`, ранее «когда-нибудь») становится **обязательной фазой бэклога** прежде, чем разработчик может закрыть хотя бы один тип из этих полос. Это не пересчитано в сроки — сроков в этом пакете никто не называл — но это реальный, самый крупный инженерный пункт всего трека, и он больше не «Tier 3, потом».
 
-## Терминологическая правка (самопроверка, не директива оператора)
+## SCOPE AMENDMENT — SCOPE-AMD-02 (this pass)
+
+Operator directive: task content must support Kazakh (`kk-KZ`), Russian (`ru-KZ`), and English (locale code TBD, `en-US` assumed pending confirmation), with the data model open to adding further locales later without a schema change.
+
+**Overrides:** `ASM-03` (content locale fixed to `ru-KZ` only) and `OOS-08` (`kk-KZ` explicitly out of scope) are both superseded. English was never previously in scope at all — this is new, not a re-opening.
+
+**What this changes, concretely:**
+- A type's `Template` field moves from a single string to a per-locale map. Every already-`GATED` type needs retrofitting, not just new ones going forward.
+- `NotationProfile` needs real entries for `kk-KZ` and the chosen English locale code, not just `ru-KZ`. Kazakh notation conventions (decimal separator, function names, GCD/LCM terms) are **not sourced anywhere in this SRD** and must not be invented — confirm with a real curriculum source or the operator directly.
+- `EXACT-RAT`/`TOL`-class validation (anything decimal-separator-sensitive) becomes locale-aware in `pkg/core` — currently assumes one fixed convention.
+- A locale-selection mechanism is needed: `STUDENTS.preferred_locale` plus an optional per-request override, neither of which exists in the ERD yet.
+- Translated templates carry the same correctness stakes as `G3-NUM-005`'s HYBRID-AI narratives — a bad translation can change what a problem is actually asking. Same discipline applies: authored once per template, reviewed once, not generated per-instance.
+
+**Does not change:** the underlying dictionary-driven locale architecture already anticipated this (`00-conventions.md` §6 already reserved `kk-KZ` as a dictionary value) — this amendment activates and extends a pattern that was already designed for, not one invented from scratch.
+
+
 
 Слово «Tier» ранее использовалось в двух смыслах одновременно: (а) волна раскатки по классам, (б) уровень сложности параметров внутри одного типа (`T1`/`T2` картриджа). Разведено:
 
 - **Wave** — волна раскатки по классам/предметным полосам (замена бывшего «Tier 1/2/3» в старом смысле).
 - **Tier** (`T1`, `T2`, …) — остаётся только за уровнем сложности внутри одного типа, как в картридже.
 
-## 1. Разрешение `context_binding` (обновлено)
+## SCOPE AMENDMENT — SCOPE-AMD-03 (this pass)
+
+**Finding this responds to:** the catalog in active use (`math-task-catalog_updated.md`, operator-supplied, AI-generated) is structured entirely on US Common Core (domain codes `OA/NBT/NF/MD/RP/NS/EE/F/SP`; Grades 9–11 labeled by US course name, not grade number). ~30 task types were implemented and marked `GATED` against it before this was caught; none yet served to a real student (confirmed by operator). Separately: `task_type` was found to have **zero rows** in the live database — the DB-persistence side of the registry was never actually wired, a gap in the original Phase 1 prompts, not an agent failure (see `11-catalog-regrade-and-e2e-audit.md`).
+
+**Decision (operator, this pass): keep every already-generated task type — do not discard or rebuild from scratch.** Re-assign each one to its correct grade under Kazakhstan/Russia curriculum convention where knowable, falling back to broader international consensus where not, and never leave several grades grouped under one ID band (the earlier `G1-2` combined band is also corrected by this pass). Catalog entries not yet implemented are tracked in `docs/BLOCKED.md`, not silently dropped.
+
+`OPEN-01` (frozen Kazakhstani curriculum edition) remains unresolved — neither operator nor model has a verifiable source. The Russian ФГОС standard is treated as the more defensible primary reference where Kazakhstan-specific detail is unavailable, given shared post-Soviet educational heritage and this project's own `ru-KZ` locale — this is a reasoned methodological choice, not a verified fact, and every grade placement not traceable to an actual source stays marked as such rather than presented as authoritative.
+
+
 
 | Поле | Значение | Тег |
 |---|---|---|

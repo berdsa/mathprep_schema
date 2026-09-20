@@ -50,7 +50,7 @@ These are the enumerations previously used only in prose. They now become actual
 | `reason_code` | `OK, PARSE_ERROR, EMPTY_INPUT, INPUT_TOO_LONG, WRONG_FORMAT, VALUE_MISMATCH, CANON_NOT_REDUCED, INCOMPLETE_TUPLE, SET_CARDINALITY_MISMATCH, CAS_TIMEOUT` — extend only by adding a row and documenting it here | `submission.reason_code` |
 | `render_target` | `plaintext, unicode-math` (Wave A/B); `latex, html-mathml` reserved, not seeded yet | `task_instance.render_target` |
 | `locale` | `ru-KZ` (seeded); `kk-KZ` reserved, not seeded yet (OOS-08) | `task_instance.locale`, `task_type.locale` |
-| `user_type` *(new, per this pass — see finding G)* | `STUDENT, GUARDIAN, ADMIN` — only `STUDENT` is exercised by any FR in this pack; the other two are declared so the column never needs an unplanned migration when the client-access-expansion track needs them | `users.user_type` |
+| `user_type` *(new, per this pass — see finding G)* | `STUDENT, GUARDIAN, ADMIN, TEACHER` — only `STUDENT` is exercised by any FR in this pack; the others are declared so the column never needs an unplanned migration later. `TEACHER` added this pass, dictionary value only — no capability built yet, pending clarification of whether it means the operator in a different UI role (covered by `ASM-08`) or a real third party (reopens `OPEN-02`) | `users.user_type` |
 
 `[DERIVED]` — none of these value sets were stated verbatim by the operator; they are extracted from the cartridge's mandatory-field vocabulary (REF-02) and this session's own prose. Flagged for review, not asserted as final.
 
