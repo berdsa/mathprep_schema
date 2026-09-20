@@ -122,3 +122,12 @@ func TestValidateExactRat(t *testing.T) {
 		t.Fatalf("got %+v", got)
 	}
 }
+
+func TestValidateTol(t *testing.T) {
+	if got := ValidateTol("1,0000004", "1", 1e-6); got.Verdict != core.VerdictCorrect {
+		t.Fatalf("got %+v", got)
+	}
+	if got := ValidateTol("1.01", "1", 1e-6); got.Verdict != core.VerdictIncorrect {
+		t.Fatalf("got %+v", got)
+	}
+}

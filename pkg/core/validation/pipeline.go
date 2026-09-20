@@ -2,6 +2,7 @@
 package validation
 
 import (
+	"math"
 	"regexp"
 	"strconv"
 	"strings"
@@ -40,9 +41,26 @@ func Validate(method core.ValidationMethod, raw, correctAnswer string) Result {
 		return ValidateTuple(raw, correctAnswer)
 	case core.ValidationMethodExactRat:
 		return ValidateExactRat(raw, correctAnswer)
+	case core.ValidationMethodTol:
+		return ValidateTol(raw, correctAnswer, 1e-6)
 	default:
 		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
 	}
+}
+
+func ValidateTol(raw, correctAnswer string, tolerance float64) Result {
+	got, err := strconv.ParseFloat(strings.TrimSpace(strings.ReplaceAll(raw, ",", ".")), 64)
+	if err != nil {
+		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
+	}
+	want, err := strconv.ParseFloat(strings.TrimSpace(strings.ReplaceAll(correctAnswer, ",", ".")), 64)
+	if err != nil {
+		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonParseError, Stage: StageCompare, CorrectAnswer: correctAnswer}
+	}
+	if math.Abs(got-want) > tolerance {
+		return Result{Verdict: core.VerdictIncorrect, ReasonCode: core.ReasonValueMismatch, Normalized: strconv.FormatFloat(got, 'f', -1, 64), Stage: StageVerdict, CorrectAnswer: correctAnswer}
+	}
+	return Result{Verdict: core.VerdictCorrect, ReasonCode: core.ReasonOK, Normalized: strconv.FormatFloat(got, 'f', -1, 64), Stage: StageVerdict, CorrectAnswer: correctAnswer}
 }
 
 var exactRatInput = regexp.MustCompile(`^\s*([0-9]+)(?:\s*/\s*([0-9]+))?\s*$`)
