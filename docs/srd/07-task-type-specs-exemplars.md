@@ -1302,3 +1302,21 @@
 | Input contract / oracle | shared exact-integer contract; independently recompute the selected formula, two batches of 1000 |
 | Worked examples | `a1=2,r=3,n=4 term→54`; `a1=2,r=3,n=4 sum→80` |
 | Misconception tags | `MISC-ARITHMETIC-AS-GEOMETRIC`, `MISC-OFF-BY-ONE`, `MISC-SUM-FORMULA` |
+
+## G10-CAL-001 — Basic limit
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Evaluate a basic polynomial limit / CAL / 10 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `lim(x→{a}) ({p}x {q-sign} {q}) = ?` |
+| Variables | `p∈[-9,9]\{0}`; `q∈[-20,20]`; `a∈[-10,10]` |
+| Generation constraint | The function is linear and defined at every real x, so direct substitution gives a finite exact integer limit. |
+| Solution | `p·a+q` |
+| equivalence_policy | **STRICT-FORM** via shared EXACT-INT validator |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; shared exact-integer contract |
+| Verdict model / oracle | `OK, VALUE_MISMATCH, WRONG_FORMAT, EMPTY_INPUT, INPUT_TOO_LONG`; independently substitute `a` and evaluate, two batches of 1000 |
+| Tiers | T1/T2: `p∈[-9,9]\{0}`, `q∈[-20,20]`, `a∈[-10,10]` |
+| Instance space | `18×41×21 = 15,498` parameter combinations (exact) |
+| Worked examples | `lim(x→2)(3x−1)→5`; `lim(x→−3)(−2x+4)→10`; `lim(x→0)(7x+9)→9` |
+| Misconception tags | `MISC-SUBSTITUTE-WRONG-POINT`, `MISC-SIGN-ERROR`, `MISC-CONFUSE-SLOPE-AND-VALUE` |
