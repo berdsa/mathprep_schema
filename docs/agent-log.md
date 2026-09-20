@@ -96,3 +96,7 @@
 ## 2026-09-20 — G3-NUM-003
 
 - Appended the canonical full field-table specification for exact division, including constructed divisibility, exact finite instance space, shared EXACT-INT contract, worked examples, and misconception tags.
+
+## 2026-09-20 — G3-NUM-004
+
+- Appended the canonical full field-table specification for combined three-digit addition/subtraction with explicit carry/borrow constraints.

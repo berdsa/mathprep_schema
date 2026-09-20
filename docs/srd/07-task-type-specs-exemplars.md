@@ -354,3 +354,25 @@
 | Instance space | 12×13 = 156 divisor/quotient pairs (exact) |
 | Worked examples | `12÷3→4`; `0÷7→0`; `144÷12→12` |
 | Misconception tags | `MISC-DIVISION-AS-MULTIPLICATION`, `MISC-REMAINDER-IGNORED`, `MISC-DIVISOR-DIVIDEND-SWAP` |
+
+## G3-NUM-004 — Multi-digit add/sub (carry/borrow)
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Multi-digit addition or subtraction with carry/borrow / NUM / 3–4 / Apply |
+| Provenance / ref_status | seed, `[SOURCED: REF-01]` — grade alignment `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode | CODE |
+| locale / render_target | `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `{a} {op} {b} = ?` |
+| Variables | `op∈{+,−}`; `a,b∈[100,999]`; subtraction requires `a≥b` |
+| Generation constraint | Addition instances contain at least one carry; subtraction instances contain at least one borrow. |
+| Solution | integer sum or difference according to `op` |
+| equivalence_policy | **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; shared EXACT-INT contract |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, EMPTY_INPUT, INPUT_TOO_LONG` |
+| Verification oracle | independently recompute operation and carry/borrow predicate; two batches of 1000 required |
+| Tiers | T1/T2: three-digit operands; carry/borrow required |
+| Instance space | finite accepted ordered triples from 900×900×2, filtered by operation constraints |
+| Worked examples | `247+386→633`; `758−269→489`; `995+108→1103` |
+| Misconception tags | `MISC-CARRY-DROP`, `MISC-BORROW-DROP`, `MISC-DIGIT-TRANSPOSE` |
