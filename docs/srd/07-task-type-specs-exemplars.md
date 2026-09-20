@@ -1356,3 +1356,21 @@
 | Instance space | `∑N(N−1)/2` for N=2..20 = 1,330 accepted triples (exact) |
 | Worked examples | `P(A∩B)=2/10,P(B)=5/10→2/5`; `3/12, P(B)=6/12→1/2`; `1/8, P(B)=4/8→1/4` |
 | Misconception tags | `MISC-CONDITIONAL-AS-JOINT`, `MISC-INVERT-CONDITION`, `MISC-UNREDUCED-FRACTION` |
+
+## G10-CPLX-001 — Complex number arithmetic
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Perform exact arithmetic on complex numbers / CPLX / 10 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `({a}+{b}i) {op} ({c}+{d}i) = ?` |
+| Variables | Integer real and imaginary components; operation∈{+,−,×,÷}; division instances are constructed to have integer quotients |
+| Generation constraint | For division, construct the first operand as the exact product of the displayed divisor and an integer quotient pair. |
+| Solution | Ordered pair `(real, imaginary)` for the selected operation |
+| equivalence_policy | **TUPLE** exact component-wise integer match |
+| Input contract | shared integer-pair tuple contract |
+| Verdict model / oracle | `OK, VALUE_MISMATCH, WRONG_FORMAT`; independently recompute complex components, two batches of 1000 |
+| Tiers | T1/T2: component magnitudes bounded by 18; exact integer division only |
+| Instance space | Finite generated tuples from the declared component and operation choices |
+| Worked examples | `(2+3i)+(4−i)→(6,2)`; `(2+3i)(4−i)→(11,10)`; `(3+5i)/(1+i)→(4,1)` |
+| Misconception tags | `MISC-IMAGINARY-SIGN`, `MISC-DISTRIBUTIVE-ERROR`, `MISC-COMPLEX-DIVISION-CONJUGATE` |
