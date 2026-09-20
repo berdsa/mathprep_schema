@@ -1446,3 +1446,33 @@
 | Instance space | `21×18×18 = 6,804` parameter triples |
 | Worked examples | `lim(x→2)[3(x−2)]/[4(x−2)]→3/4`; `[-2(x+1)]/[6(x+1)]→−1/3`; `5(x−0)/10(x−0)→1/2` |
 | Misconception tags | `MISC-FAIL-CANCEL`, `MISC-INVERT-FRACTION`, `MISC-UNREDUCED` |
+
+## UNI-CAL-004 — Gradient / directional derivative
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Compute a gradient or directional derivative of a linear function / CAL / University / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `f(x,y)={a}x+{b}y+{c} at ({x0},{y0}); find {operation}.` |
+| Variables | `a,b,c,x0,y0∈[-9,9]`; operation∈{gradient,directional derivative}; direction is one of ±x or ±y axes |
+| Generation constraint | Linear f has constant gradient `(a,b)`; axis directions make the directional derivative an exact signed component. |
+| Solution | Gradient=`(a,b)`; directional derivative=`±a` or `±b` |
+| equivalence_policy | **TUPLE / TOL** numeric comparison |
+| Input contract | shared finite numeric tuple contract |
+| Verdict model / oracle | `OK, VALUE_MISMATCH, WRONG_FORMAT`; independently compute components, two batches of 1000 |
+| Worked examples | `3x−2y+1→∇f=(3,−2)`; x-direction→3; negative y-direction→2 |
+| Misconception tags | `MISC-GRADIENT-SWAP`, `MISC-DIRECTION-SIGN`, `MISC-USE-FUNCTION-VALUE` |
+
+## UNI-CAL-006 — Definite integral
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Evaluate a definite integral of a linear function / CAL / University / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `∫[{l},{u}] ({a}x+{b}) dx = ?` |
+| Variables | `a,b∈[-9,9]`; bounds `l,u∈[-5,5]`, `l<u` |
+| Solution | `a(u²−l²)/2+b(u−l)` |
+| equivalence_policy | **TOL** shared numeric tolerance |
+| Verification oracle | Independently evaluate the antiderivative at both bounds; two batches of 1000 |
+| Worked examples | `∫[0,2](3x+1)dx=8`; `∫[-1,1]2x dx=0`; `∫[1,3](x−2)dx=0` |
+| Misconception tags | `MISC-BOUND-SWAP`, `MISC-ANTIDERIVATIVE-SIGN`, `MISC-FORGET-CONSTANT-TERM` |
