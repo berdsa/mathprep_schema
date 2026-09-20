@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   "docs/agent-log.md": {
-    "mtime": 1789898233.7040818,
-    "ast_hash": "432da0ab5fe6f3f5778e568483cad42b",
+    "mtime": 1789905132.8644173,
+    "ast_hash": "ff49bedff5957e803ea4c0e2d46e9e75",
     "semantic_hash": ""
   },
   "docs/srd/00-conventions.md": {
@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "docs/srd/07-task-type-specs-exemplars.md": {
-    "mtime": 1789900093.9012456,
-    "ast_hash": "ad4e262e6a225daada9e82d3b698ef58",
+    "mtime": 1789905830.4580448,
+    "ast_hash": "6a641dfcbef943d87e3dc2f7f407409d",
     "semantic_hash": ""
   },
   "docs/srd/08-developer-backlog.md": {
