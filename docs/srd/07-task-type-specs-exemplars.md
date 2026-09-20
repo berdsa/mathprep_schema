@@ -222,3 +222,25 @@
 | Instance space | 3000 `(n,position)` combinations (exact) |
 | Worked examples | tens digit of `347` → `4`; hundreds digit of `805` → `8`; ones digit of `0` → `0` |
 | Misconception tags | `MISC-PLACE-SHIFT`, `MISC-ZERO-PLACE` |
+
+## G1-NUM-007 — Ordering a list
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Sort a short list ascending / NUM / 1–2 / Apply |
+| Provenance / ref_status | seed, `[SOURCED: REF-01]` — grade alignment `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode | CODE |
+| locale / render_target | `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `Order [{list}] from smallest to largest` |
+| Variables | list length 3–5; values ∈ `[0,20]` |
+| Generation constraint | Deterministic list draw; correct answer is stable ascending canonical form with spaces. |
+| Solution | numeric ascending sort |
+| equivalence_policy | **STRICT-FORM** canonical sorted list |
+| Input contract | comma/semicolon/space-separated signed integer tokens; canonical output uses one space |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT` |
+| Verification oracle | independent sort; two batches of 1000 required |
+| Tiers | T1/T2: list length 3–5, values `[0,20]` |
+| Instance space | finite multisets over 21 values for lengths 3–5; exact total 6561+10626+23751 = 40938 sequences before dedup |
+| Worked examples | `[3,1,2]→1 2 3`; `[9,4,4]→4 4 9`; `[0,20,7]→0 7 20` |
+| Misconception tags | `MISC-SORT-DIRECTION`, `MISC-DUPLICATE-DROP` |
