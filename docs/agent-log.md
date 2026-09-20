@@ -128,3 +128,7 @@
 ## 2026-09-20 — G3-NUM-010
 
 - Appended the canonical full field-table specification for rectangle/square area.
+## 2026-09-20 — EXACT-RAT shared validation
+
+- Added the shared EXACT-RAT parse/normalize/compare/verdict dispatcher path, including lowest-terms enforcement and canonical integer output.
+- Added unit coverage for correct, unreduced, mismatched, and zero-denominator answers.
