@@ -266,3 +266,25 @@
 | Instance space | 441 ordered count pairs (exact) |
 | Worked examples | `3×1+4×5→23`; `0×1+2×5→10`; `7×1+0×5→7` |
 | Misconception tags | `MISC-COIN-COUNT-VALUE`, `MISC-DENOMINATION-SWAP` |
+
+## G1-NUM-009 — Skip counting / next term
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Continue an arithmetic skip-counting sequence / NUM / 1–2 / Apply |
+| Provenance / ref_status | seed, `[SOURCED: REF-01]` — grade alignment `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode | CODE |
+| locale / render_target | `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `"{start}, {start+step}, ... next? (step {step})"` |
+| Variables | `start∈[0,20]`; `step∈[1,10]`; shown-term count `∈[2,5]` |
+| Generation constraint | Deterministic arithmetic progression; answer is the next term after the shown sequence. |
+| Solution | `start + step·count` |
+| equivalence_policy | **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; shared EXACT-INT contract |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, EMPTY_INPUT, INPUT_TOO_LONG` |
+| Verification oracle | independently recompute the next arithmetic term; two batches of 1000 required |
+| Tiers | T1/T2: `start∈[0,20]`, `step∈[1,10]`, count `[2,5]` |
+| Instance space | 21×10×4 = 840 parameter combinations (exact) |
+| Worked examples | `2,5,... step 3→8`; `0,10,... step 10→20`; `7,8,... step 1→9` |
+| Misconception tags | `MISC-STEP-OFF-BY-ONE`, `MISC-ADD-WRONG-TERM` |
