@@ -144,3 +144,8 @@
 
 - Added the canonical full-field specification for percentage-of-a-number tasks.
 - Reuses the shared EXACT-RAT validator; no schema implementation change is required.
+
+## 2026-09-20 — G6-PCT-002 specification
+
+- Added the canonical full-field specification for percentage-change tasks.
+- Reuses the shared TOL validator; no schema implementation change is required.

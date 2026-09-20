@@ -701,3 +701,23 @@
 | Instance space | `99×990 = 98,010` ordered percentage/whole-number pairs (exact) |
 | Worked examples | `10% of 80→8`; `25% of 60→15`; `15% of 40→6` |
 | Misconception tags | `MISC-PERCENT-DIVIDE-10`, `MISC-PERCENT-MULTIPLY-100`, `MISC-UNREDUCED` |
+
+## G6-PCT-002 — Percentage change
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Apply a percentage increase or decrease / DEC / 6 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `{n} increases/decreases by {p}% → ?` |
+| Variables | `n∈[10,999]`; `p∈[1,50]`; `direction∈{increase,decrease}` |
+| Generation constraint | Draw a positive whole-number base and a percentage change; decrease remains positive. |
+| Solution | `n·(100±p)/100`, with `+` for increase and `−` for decrease |
+| equivalence_policy | **EQUIV-CLASS** within the shared TOL tolerance `1e-6` |
+| Input contract | decimal numeric text with `.` or `,` separator; surrounding whitespace accepted |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT` |
+| Verification oracle | Independently recompute the percentage multiplier; two batches of 1000 required |
+| Tiers | T1/T2: `n∈[10,999]`, `p∈[1,50]`, either direction |
+| Instance space | `990×50×2 = 99,000` ordered base/percentage/direction cases (exact) |
+| Worked examples | `100 increases by 10%→110`; `80 decreases by 25%→60`; `50 increases by 15%→57.5` |
+| Misconception tags | `MISC-ADD-PERCENT-AS-POINTS`, `MISC-DECREASE-SIGN`, `MISC-DIVIDE-BY-100-TWICE` |
