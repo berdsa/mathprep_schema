@@ -92,3 +92,7 @@
 ## 2026-09-20 — G3-NUM-002
 
 - Appended the canonical full field-table specification for multiplication facts, with exact factor bounds, shared EXACT-INT input contract, instance-space count, worked examples, and misconception tags.
+
+## 2026-09-20 — G3-NUM-003
+
+- Appended the canonical full field-table specification for exact division, including constructed divisibility, exact finite instance space, shared EXACT-INT contract, worked examples, and misconception tags.

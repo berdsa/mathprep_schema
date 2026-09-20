@@ -332,3 +332,25 @@
 | Instance space | 13×13 = 169 ordered factor pairs (exact) |
 | Worked examples | `3×4→12`; `0×9→0`; `12×12→144` |
 | Misconception tags | `MISC-ADDITION-INSTEAD-OF-MULTIPLICATION`, `MISC-FACT-RECALL`, `MISC-OPERAND-ORDER` |
+
+## G3-NUM-003 — Exact division
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Exact division fact / NUM / 3–4 / Apply |
+| Provenance / ref_status | seed, `[SOURCED: REF-01]` — grade alignment `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode | CODE |
+| locale / render_target | `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `{a} ÷ {b} = ?` |
+| Variables | divisor `b∈[1,12]`; quotient `q∈[0,12]`; dividend `a=b·q` |
+| Generation constraint | Deterministic divisor/quotient draw; dividend is constructed so `b∣a`. |
+| Solution | `a÷b` |
+| equivalence_policy | **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; shared EXACT-INT contract |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, EMPTY_INPUT, INPUT_TOO_LONG` |
+| Verification oracle | independently divide the displayed dividend by divisor; two batches of 1000 required |
+| Tiers | T1/T2: divisor `[1,12]`, quotient `[0,12]` |
+| Instance space | 12×13 = 156 divisor/quotient pairs (exact) |
+| Worked examples | `12÷3→4`; `0÷7→0`; `144÷12→12` |
+| Misconception tags | `MISC-DIVISION-AS-MULTIPLICATION`, `MISC-REMAINDER-IGNORED`, `MISC-DIVISOR-DIVIDEND-SWAP` |
