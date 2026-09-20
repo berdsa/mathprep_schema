@@ -1216,3 +1216,18 @@
 | Verdict model / oracle | `OK, VALUE_MISMATCH, WRONG_FORMAT`; independently factor `n`, two batches of 1000 |
 | Worked examples | `12→2 2 3`; `97→97`; `360→2 2 2 3 3 5` |
 | Misconception tags | `MISC-OMIT-MULTIPLICITY`, `MISC-STOP-NONPRIME`, `MISC-FACTOR-ARITHMETIC` |
+
+## G7-NS-002 — Divisibility check
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Determine whether an integer is divisible by a divisor / NS / 7 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `Is {n} divisible by {d}?` |
+| Variables | `n∈[2,999]`; `d∈[2,20]` |
+| Solution | YES iff `n mod d = 0` |
+| equivalence_policy | **STRICT-FORM** via shared BOOL validator |
+| Input contract | shared boolean vocabulary contract |
+| Verdict model / oracle | `OK, VALUE_MISMATCH, WRONG_FORMAT`; independently compute the remainder, two batches of 1000 |
+| Worked examples | `12,3→YES`; `13,3→NO`; `100,10→YES` |
+| Misconception tags | `MISC-CONFUSE-QUOTIENT`, `MISC-OFF-BY-ONE`, `MISC-FACTOR-ERROR` |

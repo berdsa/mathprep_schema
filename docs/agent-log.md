@@ -213,3 +213,8 @@
 
 - Added the canonical full-field specification for prime factorization.
 - Reuses the shared CANON list validator; no schema implementation change is required.
+
+## 2026-09-20 — G7-NS-002 specification
+
+- Added the canonical full-field specification for divisibility checks.
+- Reuses the shared BOOL validator; no schema implementation change is required.
