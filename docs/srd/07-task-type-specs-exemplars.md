@@ -420,3 +420,25 @@
 | Instance space | 900×2 = 1800 ordered cases (exact) |
 | Worked examples | `347→350` nearest 10; `650→700` nearest 100; `999→1000` nearest 10 |
 | Misconception tags | `MISC-WRONG-PLACE`, `MISC-DOWN-ON-FIVE`, `MISC-DIGIT-TRUNCATION` |
+
+## G3-NUM-008 — Unit fraction of a quantity
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Find one unit fraction of a whole quantity / NUM / 3–4 / Apply |
+| Provenance / ref_status | seed, `[SOURCED: REF-01]` — grade alignment `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode | CODE |
+| locale / render_target | `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `What is 1/{b} of {n}?` |
+| Variables | `b∈[2,9]`; `q∈[1,99]`; `n=b·q` |
+| Generation constraint | Deterministic denominator/quotient draw; quantity is divisible by denominator. |
+| Solution | `n÷b=q` |
+| equivalence_policy | **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; shared EXACT-INT contract |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, EMPTY_INPUT, INPUT_TOO_LONG` |
+| Verification oracle | independently divide `n` by `b`; two batches of 1000 required |
+| Tiers | T1/T2: denominator `[2,9]`, quotient `[1,99]` |
+| Instance space | 8×99 = 792 denominator/quotient pairs (exact) |
+| Worked examples | `1/4 of 20→5`; `1/3 of 27→9`; `1/9 of 81→9` |
+| Misconception tags | `MISC-MULTIPLY-INSTEAD-OF-DIVIDE`, `MISC-DENOMINATOR-INVERT`, `MISC-NONDIVISIBLE-ROUNDING` |
