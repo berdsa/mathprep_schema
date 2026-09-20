@@ -104,3 +104,7 @@
 ## 2026-09-20 — G3-NUM-006
 
 - Appended the canonical full field-table specification for integer order-of-operations expressions with exact division.
+
+## 2026-09-20 — G3-NUM-007
+
+- Appended the canonical full field-table specification for nearest-ten and nearest-hundred rounding with half-up ties.

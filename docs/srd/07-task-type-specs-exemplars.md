@@ -398,3 +398,25 @@
 | Instance space | 9⁵ = 59049 ordered parameter combinations (exact) |
 | Worked examples | `2+3×4−8÷2→10`; `9+1×7−6÷3→14`; `5+8×2−9÷3→18` |
 | Misconception tags | `MISC-LEFT-TO-RIGHT`, `MISC-DIVISION-PRECEDENCE`, `MISC-DIVISION-TRUNCATION` |
+
+## G3-NUM-007 — Rounding
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Round a whole number to the nearest ten or hundred / NUM / 3–4 / Apply |
+| Provenance / ref_status | seed, `[SOURCED: REF-01]` — grade alignment `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode | CODE |
+| locale / render_target | `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `Round {n} to the nearest {place}` |
+| Variables | `n∈[100,999]`; `place∈{10,100}` |
+| Generation constraint | Deterministic draw; half cases round upward away from zero. |
+| Solution | nearest multiple of `place` |
+| equivalence_policy | **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; shared EXACT-INT contract |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, EMPTY_INPUT, INPUT_TOO_LONG` |
+| Verification oracle | independently apply half-up rounding; two batches of 1000 required |
+| Tiers | T1/T2: `n∈[100,999]`, place ten or hundred |
+| Instance space | 900×2 = 1800 ordered cases (exact) |
+| Worked examples | `347→350` nearest 10; `650→700` nearest 100; `999→1000` nearest 10 |
+| Misconception tags | `MISC-WRONG-PLACE`, `MISC-DOWN-ON-FIVE`, `MISC-DIGIT-TRUNCATION` |
