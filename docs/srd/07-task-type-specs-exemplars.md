@@ -112,3 +112,25 @@
 | Instance space | 441 ordered operand pairs (exact); dedup `(type_id,a,b)`, cooldown 30 days |
 | Worked examples | `3+4=7`; `0+19=19` (input `"019"` → strip → CORRECT); `12+8=20` (wrong: `"21"` → INCORRECT) |
 | Misconception tags | `MISC-ADD-FACT`, `MISC-PLACE-VALUE`, `MISC-OFF-BY-ONE` |
+
+## G1-NUM-002 — Subtraction within range
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Subtraction within 0–20 without negative result / NUM / 1–2 / Apply |
+| Provenance / ref_status | seed, `[SOURCED: REF-01]` — grade alignment `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode | CODE |
+| locale / render_target | `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `"{a} − {b} = ?"`; alt-text `"Вычитание: {a} минус {b}"` |
+| Variables | `a: int [0,20]`; `b: int [0,20]`; swap so `a≥b` |
+| Generation constraint | Deterministic draw, then order operands so the result is non-negative. |
+| Solution | `c = a − b` |
+| equivalence_policy | **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; strip trim/leading `+`/leading zeros; any `,`/`.` ⇒ `WRONG_FORMAT`; max length 6 |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, EMPTY_INPUT, INPUT_TOO_LONG` |
+| Verification oracle | independently redraw/order operands and recompute; two batches of 1000 required |
+| Tiers | T1: `a,b∈[0,20]`, `a≥b`; T2 same space. |
+| Instance space | 231 ordered pairs with `a≥b` (exact) |
+| Worked examples | `9−4=5`; `7−7=0`; `20−3=17` (wrong `16` → INCORRECT) |
+| Misconception tags | `MISC-SUBTRACT-BORROW`, `MISC-OPERAND-ORDER`, `MISC-OFF-BY-ONE` |
