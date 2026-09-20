@@ -134,6 +134,27 @@
 | Worked examples | `face 1→1/6`; `face 4→1/6`; `face 6→1/6` |
 | Misconception tags | `MISC-FAVORABLE-OUTCOMES`, `MISC-PROBABILITY-ONE`, `MISC-DENOMINATOR` |
 
+## G6-MD-001 — Volume of a rectangular prism
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Volume of a rectangular prism / MD / 6 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode / locale / render_target | CODE / `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `Dimensions {a} × {b} × {c} — volume?` |
+| Variables | `a,b,c: int [1,20]` |
+| Generation constraint | Sample three positive integer dimensions and compute `a·b·c`. |
+| Solution | `a·b·c` cubic units |
+| equivalence_policy | **STRICT-FORM** via the shared EXACT-INT validator |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; decimal and unit text rejected |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, EMPTY_INPUT, INPUT_TOO_LONG` |
+| Verification oracle | independently multiply the three persisted dimensions; two batches of 1000 required |
+| Tiers | T1/T2: `a,b,c∈[1,20]`; tier metadata controls assignment difficulty only |
+| Instance space | exactly `20^3 = 8,000` ordered dimension triples |
+| Worked examples | `2×3×4→24`; `1×5×10→50`; `20×20×20→8000` |
+| Misconception tags | `MISC-OMIT-DIMENSION`, `MISC-ADD-DIMENSIONS`, `MISC-AREA-AS-VOLUME` |
+
 ## G3-NUM-005 — Simple word problem (addition/subtraction) [HYBRID-AI]
 
 | Field | Value |
