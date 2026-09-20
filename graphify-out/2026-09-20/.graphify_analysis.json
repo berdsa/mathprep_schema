@@ -1,6 +1,71 @@
 {
   "communities": {
     "0": [
+      "pkg_core_validation_pipeline",
+      "pkg_core_validation_pipeline_compareexactint",
+      "pkg_core_validation_pipeline_gcd64",
+      "pkg_core_validation_pipeline_isroman",
+      "pkg_core_validation_pipeline_normalizeexactint",
+      "pkg_core_validation_pipeline_parseexactint",
+      "pkg_core_validation_pipeline_parseexactrat",
+      "pkg_core_validation_pipeline_parseroman",
+      "pkg_core_validation_pipeline_romanfromint",
+      "pkg_core_validation_pipeline_test",
+      "pkg_core_validation_pipeline_test_testvalidatebool",
+      "pkg_core_validation_pipeline_test_testvalidatecanonlist",
+      "pkg_core_validation_pipeline_test_testvalidateexactintboundary",
+      "pkg_core_validation_pipeline_test_testvalidateexactintcorrect",
+      "pkg_core_validation_pipeline_test_testvalidateexactintincorrect",
+      "pkg_core_validation_pipeline_test_testvalidateexactintunparseable",
+      "pkg_core_validation_pipeline_test_testvalidateexactrat",
+      "pkg_core_validation_pipeline_test_testvalidateroman",
+      "pkg_core_validation_pipeline_test_testvalidatetuple",
+      "pkg_core_validation_pipeline_validate",
+      "pkg_core_validation_pipeline_validatebool",
+      "pkg_core_validation_pipeline_validatecanonlist",
+      "pkg_core_validation_pipeline_validateexactint",
+      "pkg_core_validation_pipeline_validateexactrat",
+      "pkg_core_validation_pipeline_validateroman",
+      "pkg_core_validation_pipeline_validatetuple",
+      "reasoncode",
+      "t",
+      "validation_parsedexactint",
+      "validation_result",
+      "validation_stage",
+      "validationmethod",
+      "verdict"
+    ],
+    "1": [
+      "docs_agent_log",
+      "docs_agent_log_2026_09_19_phase_0_base_ddl",
+      "docs_agent_log_2026_09_19_phase_0_dictionary_seeds",
+      "docs_agent_log_2026_09_19_phase_0_forbidden_write_probes",
+      "docs_agent_log_2026_09_19_phase_0_idempotency_constraints",
+      "docs_agent_log_2026_09_19_phase_0_migration_plan",
+      "docs_agent_log_2026_09_19_phase_0_migration_verification",
+      "docs_agent_log_2026_09_19_phase_0_service_roles_and_grants",
+      "docs_agent_log_2026_09_19_phase_0_summary",
+      "docs_agent_log_2026_09_19_repository_initialization",
+      "docs_agent_log_2026_09_20_bool_shared_validator",
+      "docs_agent_log_2026_09_20_canon_list_validator",
+      "docs_agent_log_2026_09_20_g3_num_002",
+      "docs_agent_log_2026_09_20_g3_num_003",
+      "docs_agent_log_2026_09_20_g3_num_004",
+      "docs_agent_log_2026_09_20_g3_num_006",
+      "docs_agent_log_2026_09_20_g3_num_007",
+      "docs_agent_log_2026_09_20_g3_num_008",
+      "docs_agent_log_2026_09_20_g3_num_009",
+      "docs_agent_log_2026_09_20_g3_num_010",
+      "docs_agent_log_2026_09_20_g3_num_011",
+      "docs_agent_log_2026_09_20_one_time_generic_grader_dispatch",
+      "docs_agent_log_2026_09_20_phase_0_step_7_github_remote",
+      "docs_agent_log_2026_09_20_phase_0_step_7_shared_go_module",
+      "docs_agent_log_2026_09_20_shared_go_module_root_correction",
+      "docs_agent_log_2026_09_20_task_type_grade_band_correction",
+      "docs_agent_log_2026_09_20_tuple_validator",
+      "docs_agent_log_agent_log"
+    ],
+    "2": [
       "core_domain",
       "core_equivalencepolicy",
       "core_eventlog",
@@ -29,33 +94,36 @@
       "time",
       "uuid"
     ],
-    "1": [
-      "pkg_core_validation_pipeline",
-      "pkg_core_validation_pipeline_compareexactint",
-      "pkg_core_validation_pipeline_normalizeexactint",
-      "pkg_core_validation_pipeline_parseexactint",
-      "pkg_core_validation_pipeline_test",
-      "pkg_core_validation_pipeline_test_testvalidatebool",
-      "pkg_core_validation_pipeline_test_testvalidatecanonlist",
-      "pkg_core_validation_pipeline_test_testvalidateexactintboundary",
-      "pkg_core_validation_pipeline_test_testvalidateexactintcorrect",
-      "pkg_core_validation_pipeline_test_testvalidateexactintincorrect",
-      "pkg_core_validation_pipeline_test_testvalidateexactintunparseable",
-      "pkg_core_validation_pipeline_test_testvalidatetuple",
-      "pkg_core_validation_pipeline_validate",
-      "pkg_core_validation_pipeline_validatebool",
-      "pkg_core_validation_pipeline_validatecanonlist",
-      "pkg_core_validation_pipeline_validateexactint",
-      "pkg_core_validation_pipeline_validatetuple",
-      "reasoncode",
-      "t",
-      "validation_parsedexactint",
-      "validation_result",
-      "validation_stage",
-      "validationmethod",
-      "verdict"
+    "3": [
+      "docs_srd_07_task_type_specs_exemplars",
+      "docs_srd_07_task_type_specs_exemplars_07_wave_a_exemplar_task_type_specs",
+      "docs_srd_07_task_type_specs_exemplars_g1_num_001_addition_within_range",
+      "docs_srd_07_task_type_specs_exemplars_g1_num_002_subtraction_within_range",
+      "docs_srd_07_task_type_specs_exemplars_g1_num_003_number_comparison",
+      "docs_srd_07_task_type_specs_exemplars_g1_num_004_missing_addend",
+      "docs_srd_07_task_type_specs_exemplars_g1_num_005_simple_word_problem_addition_subtraction",
+      "docs_srd_07_task_type_specs_exemplars_g1_num_006_place_value",
+      "docs_srd_07_task_type_specs_exemplars_g1_num_007_ordering_a_list",
+      "docs_srd_07_task_type_specs_exemplars_g1_num_008_money_counting",
+      "docs_srd_07_task_type_specs_exemplars_g1_num_009_skip_counting_next_term",
+      "docs_srd_07_task_type_specs_exemplars_g1_num_010_shape_property_lookup",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_001_multi_digit_addition_with_carry",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_002_multiplication_fact",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_003_exact_division",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_004_multi_digit_add_sub_carry_borrow",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_005_simple_word_problem_addition_subtraction_hybrid_ai",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_006_order_of_operations",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_007_rounding",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_008_unit_fraction_of_a_quantity",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_009_perimeter_of_rectangle_square",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_010_area_of_rectangle_square",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_011_division_with_remainder",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_012_roman_numeral_conversion",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_014_division_with_remainder",
+      "docs_srd_07_task_type_specs_exemplars_g6_fra_003_fraction_addition_unlike_denominators_proper_result",
+      "docs_srd_07_task_type_specs_exemplars_g6_geo_009_point_quadrant_identification"
     ],
-    "2": [
+    "4": [
       "migrations_000001_create_phase0_schema_up",
       "migrations_000001_create_phase0_schema_up_domain",
       "migrations_000001_create_phase0_schema_up_equivalence_policy",
@@ -79,24 +147,7 @@
       "migrations_000001_create_phase0_schema_up_validation_method",
       "migrations_000001_create_phase0_schema_up_verdict"
     ],
-    "3": [
-      "docs_agent_log",
-      "docs_agent_log_2026_09_19_phase_0_base_ddl",
-      "docs_agent_log_2026_09_19_phase_0_dictionary_seeds",
-      "docs_agent_log_2026_09_19_phase_0_forbidden_write_probes",
-      "docs_agent_log_2026_09_19_phase_0_idempotency_constraints",
-      "docs_agent_log_2026_09_19_phase_0_migration_plan",
-      "docs_agent_log_2026_09_19_phase_0_migration_verification",
-      "docs_agent_log_2026_09_19_phase_0_service_roles_and_grants",
-      "docs_agent_log_2026_09_19_phase_0_summary",
-      "docs_agent_log_2026_09_19_repository_initialization",
-      "docs_agent_log_2026_09_20_phase_0_step_7_github_remote",
-      "docs_agent_log_2026_09_20_phase_0_step_7_shared_go_module",
-      "docs_agent_log_2026_09_20_shared_go_module_root_correction",
-      "docs_agent_log_2026_09_20_task_type_grade_band_correction",
-      "docs_agent_log_agent_log"
-    ],
-    "4": [
+    "5": [
       "docs_srd_02_requirements",
       "docs_srd_02_requirements_02_requirements",
       "docs_srd_02_requirements_fr_001_generate_a_daily_task_set_with_adaptive_topic_weighting",
@@ -109,7 +160,7 @@
       "docs_srd_02_requirements_fr_008_every_service_call_appends_to_an_immutable_event_journal_new",
       "docs_srd_02_requirements_non_functional_requirements"
     ],
-    "5": [
+    "6": [
       "docs_srd_00_conventions",
       "docs_srd_00_conventions_00_conventions",
       "docs_srd_00_conventions_1_id_scheme",
@@ -121,7 +172,7 @@
       "docs_srd_00_conventions_7_generation_safety_rules",
       "docs_srd_00_conventions_8_cross_service_contract_discipline_new_this_pass"
     ],
-    "6": [
+    "7": [
       "docs_srd_math_task_catalog",
       "docs_srd_math_task_catalog_grade_10_11_ages_15_18",
       "docs_srd_math_task_catalog_grade_1_2_ages_6_8",
@@ -133,7 +184,7 @@
       "docs_srd_math_task_catalog_university_higher_mathematics",
       "docs_srd_math_task_catalog_validation_method_legend"
     ],
-    "7": [
+    "8": [
       "agents",
       "agents_agents_md_schema",
       "agents_conventions",
@@ -144,7 +195,7 @@
       "agents_what_this_repo_is",
       "agents_workflow"
     ],
-    "8": [
+    "9": [
       "docs_srd_06_traceability",
       "docs_srd_06_traceability_06_traceability_glossary_stakeholders_open_items",
       "docs_srd_06_traceability_definition_of_done",
@@ -155,7 +206,7 @@
       "docs_srd_06_traceability_\u0440\u0435\u0435\u0441\u0442\u0440_\u0434\u043e\u043f\u0443\u0449\u0435\u043d\u0438\u0439_consolidated",
       "docs_srd_06_traceability_\u0440\u0435\u0435\u0441\u0442\u0440_\u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0445_\u0432\u043e\u043f\u0440\u043e\u0441\u043e\u0432_consolidated"
     ],
-    "9": [
+    "10": [
       "docs_srd_00_scope_lock",
       "docs_srd_00_scope_lock_00_scope_lock",
       "docs_srd_00_scope_lock_1_\u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043d\u0438\u0435_context_binding_\u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u043e",
@@ -165,7 +216,7 @@
       "docs_srd_00_scope_lock_scope_amendment_scope_amd_01_\u044d\u0442\u043e\u0442_\u0445\u043e\u0434",
       "docs_srd_00_scope_lock_\u0442\u0435\u0440\u043c\u0438\u043d\u043e\u043b\u043e\u0433\u0438\u0447\u0435\u0441\u043a\u0430\u044f_\u043f\u0440\u0430\u0432\u043a\u0430_\u0441\u0430\u043c\u043e\u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0430_\u043d\u0435_\u0434\u0438\u0440\u0435\u043a\u0442\u0438\u0432\u0430_\u043e\u043f\u0435\u0440\u0430\u0442\u043e\u0440\u0430"
     ],
-    "10": [
+    "11": [
       "docs_srd_08_developer_backlog",
       "docs_srd_08_developer_backlog_08_developer_backlog",
       "docs_srd_08_developer_backlog_confirmation_gate_applies_before_every_subsequent_type_not_just_this_first_one",
@@ -175,7 +226,7 @@
       "docs_srd_08_developer_backlog_phase_1_one_task_type_end_to_end_taskgen_grader_repos_first_commits",
       "docs_srd_08_developer_backlog_phase_2_remaining_types_one_at_a_time_curriculum_order"
     ],
-    "11": [
+    "12": [
       "docs_srd_backend_integration",
       "docs_srd_backend_integration_1_repository_split_and_what_each_one_owns",
       "docs_srd_backend_integration_2_shared_validation_pipeline_lives_in_schema_imported_by_grader",
@@ -185,7 +236,7 @@
       "docs_srd_backend_integration_6_event_journal_fr_008_write_side_contract",
       "docs_srd_backend_integration_backend_integration"
     ],
-    "12": [
+    "13": [
       "docs_srd_03_architecture",
       "docs_srd_03_architecture_03_architecture",
       "docs_srd_03_architecture_context_diagram",
@@ -194,7 +245,7 @@
       "docs_srd_03_architecture_sequence_generation_via_job_queue_fr_007",
       "docs_srd_03_architecture_state_machine_taskinstance_lifecycle"
     ],
-    "13": [
+    "14": [
       "docs_srd_04_nfr_risk_ops",
       "docs_srd_04_nfr_risk_ops_04_nfr_risk_ops",
       "docs_srd_04_nfr_risk_ops_failure_modes",
@@ -202,15 +253,6 @@
       "docs_srd_04_nfr_risk_ops_performance_availability",
       "docs_srd_04_nfr_risk_ops_raid_register",
       "docs_srd_04_nfr_risk_ops_security_stride_per_trust_boundary_updated_for_3_services"
-    ],
-    "14": [
-      "docs_srd_07_task_type_specs_exemplars",
-      "docs_srd_07_task_type_specs_exemplars_07_wave_a_exemplar_task_type_specs",
-      "docs_srd_07_task_type_specs_exemplars_g3_num_001_multi_digit_addition_with_carry",
-      "docs_srd_07_task_type_specs_exemplars_g3_num_005_simple_word_problem_addition_subtraction_hybrid_ai",
-      "docs_srd_07_task_type_specs_exemplars_g3_num_014_division_with_remainder",
-      "docs_srd_07_task_type_specs_exemplars_g6_fra_003_fraction_addition_unlike_denominators_proper_result",
-      "docs_srd_07_task_type_specs_exemplars_g6_geo_009_point_quadrant_identification"
     ],
     "15": [
       "docs_srd_data_governance",
@@ -271,19 +313,19 @@
     ]
   },
   "cohesion": {
-    "0": 0.15384615384615385,
-    "1": 0.2028985507246377,
-    "2": 0.19480519480519481,
-    "3": 0.13333333333333333,
-    "4": 0.18181818181818182,
-    "5": 0.2,
+    "0": 0.15151515151515152,
+    "1": 0.07142857142857142,
+    "2": 0.15384615384615385,
+    "3": 0.07407407407407407,
+    "4": 0.19480519480519481,
+    "5": 0.18181818181818182,
     "6": 0.2,
-    "7": 0.2222222222222222,
+    "7": 0.2,
     "8": 0.2222222222222222,
-    "9": 0.25,
+    "9": 0.2222222222222222,
     "10": 0.25,
     "11": 0.25,
-    "12": 0.2857142857142857,
+    "12": 0.25,
     "13": 0.2857142857142857,
     "14": 0.2857142857142857,
     "15": 0.2857142857142857,
@@ -305,12 +347,27 @@
     {
       "id": "docs_agent_log_agent_log",
       "label": "Agent log",
-      "degree": 14
+      "degree": 27
+    },
+    {
+      "id": "docs_srd_07_task_type_specs_exemplars_07_wave_a_exemplar_task_type_specs",
+      "label": "07 \u2014 Wave-A Exemplar Task-Type Specs",
+      "degree": 26
+    },
+    {
+      "id": "validation_result",
+      "label": "Result",
+      "degree": 11
     },
     {
       "id": "docs_srd_02_requirements_02_requirements",
       "label": "02 \u2014 Requirements",
       "degree": 10
+    },
+    {
+      "id": "migrations_000001_create_phase0_schema_up_task_type",
+      "label": "task_type",
+      "degree": 9
     },
     {
       "id": "docs_srd_00_conventions_00_conventions",
@@ -323,33 +380,18 @@
       "degree": 9
     },
     {
-      "id": "migrations_000001_create_phase0_schema_up_task_type",
-      "label": "task_type",
-      "degree": 9
-    },
-    {
-      "id": "validation_result",
-      "label": "Result",
-      "degree": 9
-    },
-    {
       "id": "pkg_core_validation_pipeline_validateexactint",
       "label": "ValidateExactInt()",
       "degree": 9
     },
     {
-      "id": "agents_agents_md_schema",
-      "label": "AGENTS.md \u2014 schema",
-      "degree": 8
-    },
-    {
-      "id": "docs_srd_06_traceability_06_traceability_glossary_stakeholders_open_items",
-      "label": "06 \u2014 Traceability, Glossary, Stakeholders, Open Items",
-      "degree": 8
-    },
-    {
       "id": "core_tasktype",
       "label": "TaskType",
+      "degree": 8
+    },
+    {
+      "id": "agents_agents_md_schema",
+      "label": "AGENTS.md \u2014 schema",
       "degree": 8
     }
   ],
