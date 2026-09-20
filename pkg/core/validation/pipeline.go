@@ -3,7 +3,9 @@ package validation
 
 import (
 	"math"
+	"reflect"
 	"regexp"
+	"sort"
 	"strconv"
 	"strings"
 
@@ -42,6 +44,8 @@ func Validate(method core.ValidationMethod, raw, correctAnswer string) Result {
 		return ValidateCanonList(raw, correctAnswer)
 	case core.ValidationMethodTuple:
 		return ValidateTuple(raw, correctAnswer)
+	case core.ValidationMethodSet:
+		return ValidateSet(raw, correctAnswer)
 	case core.ValidationMethodExactRat:
 		return ValidateExactRat(raw, correctAnswer)
 	case core.ValidationMethodTol:
@@ -49,6 +53,52 @@ func Validate(method core.ValidationMethod, raw, correctAnswer string) Result {
 	default:
 		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
 	}
+}
+
+// ValidateSet compares comma- or whitespace-separated integer members after
+// sorting and rejecting duplicates.
+func ValidateSet(raw, correctAnswer string) Result {
+	parse := func(value string) ([]int, bool) {
+		parts := strings.FieldsFunc(strings.TrimSpace(value), func(r rune) bool { return r == ',' || r == ';' || r == ' ' })
+		if len(parts) == 0 {
+			return nil, false
+		}
+		out := make([]int, len(parts))
+		for i, part := range parts {
+			n, err := strconv.Atoi(part)
+			if err != nil {
+				return nil, false
+			}
+			out[i] = n
+		}
+		sort.Ints(out)
+		for i := 1; i < len(out); i++ {
+			if out[i] == out[i-1] {
+				return nil, false
+			}
+		}
+		return out, true
+	}
+	got, ok := parse(raw)
+	if !ok {
+		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
+	}
+	want, ok := parse(correctAnswer)
+	if !ok {
+		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonParseError, Stage: StageCompare, CorrectAnswer: correctAnswer}
+	}
+	if !reflect.DeepEqual(got, want) {
+		return Result{Verdict: core.VerdictIncorrect, ReasonCode: core.ReasonValueMismatch, Normalized: joinInts(got), Stage: StageVerdict, CorrectAnswer: correctAnswer}
+	}
+	return Result{Verdict: core.VerdictCorrect, ReasonCode: core.ReasonOK, Normalized: joinInts(got), Stage: StageVerdict, CorrectAnswer: joinInts(want)}
+}
+
+func joinInts(values []int) string {
+	parts := make([]string, len(values))
+	for i, value := range values {
+		parts[i] = strconv.Itoa(value)
+	}
+	return strings.Join(parts, ",")
 }
 
 var ratioInput = regexp.MustCompile(`^\s*([0-9]+)\s*:\s*([0-9]+)\s*$`)

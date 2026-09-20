@@ -114,6 +114,18 @@ func TestValidateTuple(t *testing.T) {
 	}
 }
 
+func TestValidateSet(t *testing.T) {
+	if got := ValidateSet("-2, 5", "5,-2"); got.Verdict != core.VerdictCorrect {
+		t.Fatalf("got %+v", got)
+	}
+	if got := ValidateSet("1,1", "1,2"); got.Verdict != core.VerdictUnparseable {
+		t.Fatalf("got %+v", got)
+	}
+	if got := ValidateSet("1,3", "1,2"); got.Verdict != core.VerdictIncorrect {
+		t.Fatalf("got %+v", got)
+	}
+}
+
 func TestValidateExactRat(t *testing.T) {
 	if got := ValidateExactRat("5/12", "5/12"); got.Verdict != core.VerdictCorrect {
 		t.Fatalf("got %+v", got)
