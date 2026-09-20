@@ -1110,3 +1110,23 @@
 | Instance space | `3×3 = 9` angle/function cases |
 | Worked examples | `sin(30°)→0.5`; `cos(45°)→0.7071067811865476`; `tan(60°)→1.7320508075688763` |
 | Misconception tags | `MISC-DEGREE-RADIAN`, `MISC-SIN-COS-SWAP`, `MISC-TAN-INVERSION` |
+
+## G7-SP-001 — Permutations and combinations
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Compute a permutation or combination / SP / 7 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `Compute {n}{operation}{k}.` |
+| Variables | `n∈[3,10]`; `k∈[1,n]`; `operation∈{P,C}` |
+| Generation constraint | Positive integer `n` and `k≤n`; `nPk=n!/(n-k)!`, `nCk=n!/(k!(n-k)!)`. |
+| Solution | Exact non-negative integer result |
+| equivalence_policy | **STRICT-FORM** via the shared EXACT-INT validator |
+| Input contract | shared exact-integer contract |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT` |
+| Verification oracle | Independently compute factorial formulas from persisted parameters; two batches of 1000 required |
+| Tiers | T1/T2: `n∈[3,10]`, `k∈[1,n]`, either operation |
+| Instance space | `2×Σ(n)` for `n=3..10`, or `104` ordered parameter cases |
+| Worked examples | `5P2→20`; `5C2→10`; `10P3→720` |
+| Misconception tags | `MISC-PERM-COMB-SWAP`, `MISC-FACTORIAL-OFF-BY-ONE`, `MISC-IGNORE-ORDER` |

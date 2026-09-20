@@ -183,3 +183,8 @@
 
 - Added the canonical full-field specification for special-angle trigonometric ratios.
 - Reuses the shared TOL validator; no schema implementation change is required.
+
+## 2026-09-20 — G7-SP-001 specification
+
+- Added the canonical full-field specification for permutation and combination tasks.
+- Reuses the shared EXACT-INT validator; no schema implementation change is required.
