@@ -77,3 +77,15 @@ func TestValidateCanonList(t *testing.T) {
 		t.Fatalf("got %+v", got)
 	}
 }
+
+func TestValidateTuple(t *testing.T) {
+	if got := ValidateTuple("8 ост. 5", "8,5"); got.Verdict != core.VerdictCorrect {
+		t.Fatalf("got %+v", got)
+	}
+	if got := ValidateTuple("8", "8,5"); got.ReasonCode != core.ReasonIncompleteTuple {
+		t.Fatalf("got %+v", got)
+	}
+	if got := ValidateTuple("5,8", "8,5"); got.Verdict != core.VerdictIncorrect {
+		t.Fatalf("got %+v", got)
+	}
+}

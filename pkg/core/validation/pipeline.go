@@ -36,9 +36,36 @@ func Validate(method core.ValidationMethod, raw, correctAnswer string) Result {
 		return ValidateBool(raw, correctAnswer)
 	case core.ValidationMethodCanon:
 		return ValidateCanonList(raw, correctAnswer)
+	case core.ValidationMethodTuple:
+		return ValidateTuple(raw, correctAnswer)
 	default:
 		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
 	}
+}
+
+var tupleInput = regexp.MustCompile(`^\s*([0-9]{1,3})\s*(?:,|;|ост\.?|остаток)\s*([0-9]{1,3})\s*$`)
+
+// ValidateTuple validates an ordered non-negative integer pair. Separators
+// follow the canonical TUPLE contract; components are never sorted.
+func ValidateTuple(raw, correctAnswer string) Result {
+	match := tupleInput.FindStringSubmatch(strings.ToLower(raw))
+	if len(match) != 3 {
+		if strings.TrimSpace(raw) != "" && !strings.ContainsAny(raw, ",;ост") {
+			return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonIncompleteTuple, Stage: StageParse, CorrectAnswer: correctAnswer}
+		}
+		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
+	}
+	got := match[1] + "," + match[2]
+	correct := strings.TrimSpace(correctAnswer)
+	correctMatch := tupleInput.FindStringSubmatch(strings.ToLower(correct))
+	if len(correctMatch) != 3 {
+		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonParseError, Stage: StageCompare, CorrectAnswer: correctAnswer}
+	}
+	canonical := correctMatch[1] + "," + correctMatch[2]
+	if got != canonical {
+		return Result{Verdict: core.VerdictIncorrect, ReasonCode: core.ReasonValueMismatch, Normalized: got, Stage: StageVerdict, CorrectAnswer: correctAnswer}
+	}
+	return Result{Verdict: core.VerdictCorrect, ReasonCode: core.ReasonOK, Normalized: got, Stage: StageVerdict, CorrectAnswer: correctAnswer}
 }
 
 func ValidateCanonList(raw, correctAnswer string) Result {

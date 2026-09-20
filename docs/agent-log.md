@@ -117,6 +117,10 @@
 
 - Appended the canonical full field-table specification for rectangle/square perimeter.
 
+## 2026-09-20 — TUPLE validator
+
+- Added the convention-defined ordered tuple parser/normalizer and generic pipeline dispatch for `TUPLE`; the schema version is now `v0.2.5`.
+
 ## 2026-09-20 — G3-NUM-010
 
 - Appended the canonical full field-table specification for rectangle/square area.
