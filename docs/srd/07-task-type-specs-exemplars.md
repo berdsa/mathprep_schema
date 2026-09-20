@@ -1428,3 +1428,21 @@
 | Instance space | Finite accepted coefficient/solution tuples from the declared bounds |
 | Worked examples | `x+y=5, 2x−y=1→(2,3)`; `2x+y=7, x−y=−1→(2,3)`; `3x+2y=8, x−y=1→(2,1)` |
 | Misconception tags | `MISC-DETERMINANT-ZERO`, `MISC-CRAMER-NUMERATOR`, `MISC-ROW-COLUMN-SWAP` |
+
+## UNI-CAL-001 — Limit with indeterminate form
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Evaluate a removable 0/0 limit by cancellation / CAL / University / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `lim(x→{a}) [{m}(x−{a})]/[{n}(x−{a})] = ?` |
+| Variables | `a∈[-10,10]`; nonzero `m,n∈[-9,9]` |
+| Generation constraint | Both numerator and denominator vanish at x=a, and the common factor cancels for x≠a. |
+| Solution | Reduced rational `m/n` |
+| equivalence_policy | **STRICT-FORM** reduced exact rational via shared EXACT-RAT |
+| Input contract | shared exact-rational numeric/fraction contract |
+| Verdict model / oracle | `OK, VALUE_MISMATCH, WRONG_FORMAT, CANON_NOT_REDUCED`; independently cancel and reduce, two batches of 1000 |
+| Tiers | T1/T2: stated integer bounds |
+| Instance space | `21×18×18 = 6,804` parameter triples |
+| Worked examples | `lim(x→2)[3(x−2)]/[4(x−2)]→3/4`; `[-2(x+1)]/[6(x+1)]→−1/3`; `5(x−0)/10(x−0)→1/2` |
+| Misconception tags | `MISC-FAIL-CANCEL`, `MISC-INVERT-FRACTION`, `MISC-UNREDUCED` |
