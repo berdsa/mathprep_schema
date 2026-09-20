@@ -185,6 +185,19 @@
 | Instance space / examples | 100 pairs; `?÷7=3→21`, `?÷10=10→100`, `?÷2=1→2` |
 | Misconception tags | `MISC-DIVIDEND-DIVISOR-SWAP`, `MISC-MULTIPLICATION-FACT` |
 
+## G3-NUM-018 — Multiplication as repeated addition
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Model multiplication as repeated addition / NUM / 3 / Understand |
+| spec_version / generation_mode | 1.0.0-draft / CODE |
+| locale / render_target | `ru-KZ` / `plaintext`, `unicode-math` |
+| Template / variables | `{a} groups of {b}: {b} + ... = ?`; `a∈[2,5]`, `b∈[2,10]` |
+| Solution / equivalence_policy | `a·b`; **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$` |
+| Verification oracle / space | independent multiplication; 1000/1000 per seed batch; 36 combinations |
+| Worked examples / misconceptions | `3 groups of 4→12`; `5 groups of 10→50`; `2 groups of 2→4`; `MISC-COUNT-GROUPS`, `MISC-ADD-FACTOR` |
+
 ## G1-NUM-001 — Addition within range
 
 | Field | Value |
