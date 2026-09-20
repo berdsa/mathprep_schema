@@ -1,16 +1,16 @@
 # Graph Report - schema  (2026-09-20)
 
 ## Corpus Check
-- 31 files · ~26,367 words
+- 31 files · ~26,614 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 289 nodes · 375 edges · 29 communities (27 shown, 2 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 11 edges (avg confidence: 0.8)
+- 292 nodes · 383 edges · 29 communities (27 shown, 2 thin omitted)
+- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 12 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `fa1249bc`
+- Built from commit: `32b74315`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -39,8 +39,8 @@
 ## God Nodes (most connected - your core abstractions)
 1. `07 — Wave-A Exemplar Task-Type Specs` - 50 edges
 2. `Agent log` - 36 edges
-3. `Result` - 13 edges
-4. `Validate()` - 10 edges
+3. `Result` - 14 edges
+4. `Validate()` - 11 edges
 5. `02 — Requirements` - 10 edges
 6. `task_type` - 9 edges
 7. `ValidateExactInt()` - 9 edges
@@ -78,8 +78,8 @@ Cohesion: 0.04
 Nodes (50): 07 — Wave-A Exemplar Task-Type Specs, G1-NUM-001 — Addition within range, G1-NUM-002 — Subtraction within range, G1-NUM-003 — Number comparison, G1-NUM-004 — Missing addend, G1-NUM-005 — Simple word problem (addition/subtraction), G1-NUM-006 — Place value, G1-NUM-007 — Ordering a list (+42 more)
 
 ### Community 3 - "pipeline.go"
-Cohesion: 0.14
-Nodes (35): ReasonCode, CompareExactInt(), gcd64(), isQuadrantLabel(), isRoman(), NormalizeExactInt(), ParseExactInt(), parseExactRat() (+27 more)
+Cohesion: 0.13
+Nodes (38): ReasonCode, CompareExactInt(), gcd64(), isQuadrantLabel(), isRoman(), joinInts(), NormalizeExactInt(), ParseExactInt() (+30 more)
 
 ### Community 4 - "000001_create_phase0_schema.up.sql"
 Cohesion: 0.19
@@ -154,4 +154,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `07 — Wave-A Exemplar Task-Type Specs` be split into smaller, more focused modules?**
   _Cohesion score 0.0392156862745098 - nodes in this community are weakly interconnected._
 - **Should `pipeline.go` be split into smaller, more focused modules?**
-  _Cohesion score 0.14414414414414414 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
