@@ -1070,3 +1070,23 @@
 | Instance space | `39×7 = 273` ordered side/scale-factor cases |
 | Worked examples | `a=6,k=1/2→3`; `a=8,k=3/2→12`; `a=10,k=2/3→6.666666666666667` |
 | Misconception tags | `MISC-INVERT-SCALE`, `MISC-ADD-SCALE`, `MISC-ROUND-EARLY` |
+
+## G7-GEO-003 — Circle metrics
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Find a circle's circumference or area / GEO / 7 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `Find the {operation} of a circle with radius {r}. Use π in your answer.` |
+| Variables | `operation∈{circumference,area}`; `r∈[1,20]` |
+| Generation constraint | Positive integer radius; circumference is `2πr`, area is `πr²`. |
+| Solution | Numeric decimal evaluation using the standard library π constant |
+| equivalence_policy | **EQUIV-CLASS** within `1e-6` via the shared TOL validator |
+| Input contract | shared TOL numeric contract |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT` |
+| Verification oracle | Independently recompute `2πr` or `πr²` from persisted parameters; two batches of 1000 required |
+| Tiers | T1/T2: radius `[1,20]`, either operation |
+| Instance space | `20×2 = 40` ordered radius/operation cases |
+| Worked examples | `circumference,r=1→6.283185307179586`; `area,r=2→12.566370614359172`; `circumference,r=3→18.84955592153876` |
+| Misconception tags | `MISC-AREA-AS-CIRCUMFERENCE`, `MISC-DIAMETER-AS-RADIUS`, `MISC-OMIT-PI` |
