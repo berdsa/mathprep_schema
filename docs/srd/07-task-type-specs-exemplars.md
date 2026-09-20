@@ -90,3 +90,25 @@
 | Edge cases | narrative-generation failure at authoring time only — no AI call happens per served instance (ADR-005), so this can never be a runtime failure |
 
 *Remaining Wave-A backlog (grade-3 and grade-6 rows of `math-task-catalog.md` not yet specced) follows this same field template — see `08-developer-backlog.md` for the sequencing.*
+
+## G1-NUM-001 — Addition within range
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Addition within 0–20 / NUM / 1–2 / Apply |
+| Provenance / ref_status | seed, `[SOURCED: REF-01]` — grade alignment `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode | CODE |
+| locale / render_target | `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `"{a} + {b} = ?"`; alt-text `"Сложение: {a} плюс {b}"` |
+| Variables | `a: int [0,20]`; `b: int [0,20]` |
+| Generation constraint | Uniform deterministic draw of both operands from the inclusive range; no rejection is needed. |
+| Solution | `c = a + b` |
+| equivalence_policy | **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; strip trim/leading `+`/leading zeros; any `,`/`.` ⇒ `WRONG_FORMAT`; max length 6 |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, EMPTY_INPUT, INPUT_TOO_LONG` |
+| Verification oracle | independent recompute from persisted `a,b`; assert both operands and answer are in range; two batches of 1000 required |
+| Tiers | T1: `a,b∈[0,20]`; T2 uses the same parameter space with mixed carries encouraged by seed selection. |
+| Instance space | 441 ordered operand pairs (exact); dedup `(type_id,a,b)`, cooldown 30 days |
+| Worked examples | `3+4=7`; `0+19=19` (input `"019"` → strip → CORRECT); `12+8=20` (wrong: `"21"` → INCORRECT) |
+| Misconception tags | `MISC-ADD-FACT`, `MISC-PLACE-VALUE`, `MISC-OFF-BY-ONE` |

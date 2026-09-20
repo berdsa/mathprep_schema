@@ -77,77 +77,77 @@
   "migrations/000001_create_phase0_schema.down.sql": {
     "mtime": 1789819605.8537836,
     "ast_hash": "7cfcf532b9432407f2b26cc6d636cdd3",
-    "semantic_hash": ""
+    "semantic_hash": "7cfcf532b9432407f2b26cc6d636cdd3"
   },
   "migrations/000001_create_phase0_schema.up.sql": {
     "mtime": 1789819605.8031898,
     "ast_hash": "01f20d9d5a41a71b0d5e5d46e5e21aeb",
-    "semantic_hash": ""
+    "semantic_hash": "01f20d9d5a41a71b0d5e5d46e5e21aeb"
   },
   "migrations/000002_seed_dictionaries.down.sql": {
     "mtime": 1789819971.6014917,
     "ast_hash": "5ef22791c5d0407b70a31e219c4a1a95",
-    "semantic_hash": ""
+    "semantic_hash": "5ef22791c5d0407b70a31e219c4a1a95"
   },
   "migrations/000002_seed_dictionaries.up.sql": {
     "mtime": 1789819971.5498662,
     "ast_hash": "db8343fd03612f2747c7f4a7b266096a",
-    "semantic_hash": ""
+    "semantic_hash": "db8343fd03612f2747c7f4a7b266096a"
   },
   "migrations/000003_add_idempotency_constraints.down.sql": {
     "mtime": 1789820050.8936281,
     "ast_hash": "63da32d1fc337b33dbd8116a3ac9fc8c",
-    "semantic_hash": ""
+    "semantic_hash": "63da32d1fc337b33dbd8116a3ac9fc8c"
   },
   "migrations/000003_add_idempotency_constraints.up.sql": {
     "mtime": 1789820050.8440006,
     "ast_hash": "34ffd8763b50a12674628f6516ffa222",
-    "semantic_hash": ""
+    "semantic_hash": "34ffd8763b50a12674628f6516ffa222"
   },
   "migrations/000004_create_service_roles.down.sql": {
     "mtime": 1789820101.882409,
     "ast_hash": "ddfd859f792834ceb483711000e4d719",
-    "semantic_hash": ""
+    "semantic_hash": "ddfd859f792834ceb483711000e4d719"
   },
   "migrations/000004_create_service_roles.up.sql": {
     "mtime": 1789820101.8333652,
     "ast_hash": "843852865243fd09619b93338757f372",
-    "semantic_hash": ""
+    "semantic_hash": "843852865243fd09619b93338757f372"
   },
   "pkg/core/constants.go": {
     "mtime": 1789853878.5341136,
     "ast_hash": "0d6f982bb937749676ae2982ea97bc41",
-    "semantic_hash": ""
+    "semantic_hash": "0d6f982bb937749676ae2982ea97bc41"
   },
   "pkg/core/rows.go": {
     "mtime": 1789854444.6080997,
     "ast_hash": "b6d459a3cbb64c45429c12170290cad1",
-    "semantic_hash": ""
+    "semantic_hash": "b6d459a3cbb64c45429c12170290cad1"
   },
   "pkg/core/validation/pipeline.go": {
-    "mtime": 1789889896.5801117,
-    "ast_hash": "ec957206bb39ab1c3026e7d29f130364",
-    "semantic_hash": ""
+    "mtime": 1789894111.916376,
+    "ast_hash": "1a6737ed65f47e4eb3c24559fb2111a0",
+    "semantic_hash": "1a6737ed65f47e4eb3c24559fb2111a0"
   },
   "pkg/core/validation/pipeline_test.go": {
     "mtime": 1789889896.5807407,
     "ast_hash": "b9b1d7b494379029a0f7cefc28df3cf0",
-    "semantic_hash": ""
+    "semantic_hash": "b9b1d7b494379029a0f7cefc28df3cf0"
   },
   "migrations/000005_task_type_grade_band.down.sql": {
     "mtime": 1789854444.607497,
     "ast_hash": "ea39515b6821aada2bc48268f88cb480",
-    "semantic_hash": ""
+    "semantic_hash": "ea39515b6821aada2bc48268f88cb480"
   },
   "migrations/000005_task_type_grade_band.up.sql": {
     "mtime": 1789854444.6064272,
     "ast_hash": "2489ad64b538bf8d100cc6ffc5d30a49",
-    "semantic_hash": ""
+    "semantic_hash": "2489ad64b538bf8d100cc6ffc5d30a49"
   },
   "go.mod": {
     "mtime": 1789853749.1494234,
     "ast_hash": "68d4bcdcdcf931e924b8c3b1f227b534",
-    "semantic_hash": ""
+    "semantic_hash": "68d4bcdcdcf931e924b8c3b1f227b534"
   },
   "docs/srd/math-task-catalog.md": {
     "mtime": 1789744148.833297,
