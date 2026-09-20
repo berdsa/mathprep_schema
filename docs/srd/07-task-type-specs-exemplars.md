@@ -289,6 +289,22 @@
 | Worked examples | `2x+3≤11→(-∞,4]`; `5x+1≤26→(-∞,5]`; `x+20≤10→(-∞,-10]` |
 | Misconception tags | `MISC-INEQUALITY-DIRECTION`, `MISC-ENDPOINT`, `MISC-SUBTRACT-CONSTANT` |
 
+## G7-EE-006 — Exponent rules
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Apply the product rule for exponents / EE / 7 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `a^m × a^n = ?` |
+| Variables | `a∈[2,5]`, `m,n∈[1,5]` |
+| Solution | `a^(m+n)` evaluated as an exact integer |
+| equivalence_policy | **STRICT-FORM** via the shared EXACT-INT validator |
+| Input contract | shared exact-integer contract |
+| Verdict model / oracle | `OK, VALUE_MISMATCH, WRONG_FORMAT`; independently compute both powers and product; two batches of 1000 |
+| Instance space | `4×5×5 = 100` tuples |
+| Worked examples | `2^3×2^4→128`; `3^2×3^1→27`; `5^1×5^2→125` |
+| Misconception tags | `MISC-EXPONENT-ADD`, `MISC-BASE-MULTIPLY`, `MISC-EXPONENT-MULTIPLY` |
+
 ## G3-NUM-005 — Simple word problem (addition/subtraction) [HYBRID-AI]
 
 | Field | Value |
