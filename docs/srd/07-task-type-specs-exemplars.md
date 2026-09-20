@@ -220,6 +220,17 @@
 | Verification / space / examples | independent multiplication, 1000/1000 per batch; 81 pairs; `2×3→6`, `10×10→100`, `5×7→35` |
 | Misconceptions | `MISC-FACTOR-COUNT`, `MISC-ADD-INSTEAD-MULTIPLY` |
 
+## G3-NUM-021 — Division word problem
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Equal cookie sharing / NUM / 3 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template / variables | `{n} cookies shared among {g} kids. Each gets?`; `g∈[2,10]`, `each∈[1,10]`, `n=g·each≤100` |
+| Solution / policy / input contract | `n/g`; **STRICT-FORM**; `^\s*\+?0*([0-9]{1,5})\s*$` |
+| Verification / space / examples | independent division, 1000/1000 per batch; 90 pairs; `12÷3→4`, `100÷10→10`, `2÷2→1` |
+| Misconceptions | `MISC-SHARING-UNEQUAL`, `MISC-DIVISOR-QUOTIENT` |
+
 ## G1-NUM-001 — Addition within range
 
 | Field | Value |
