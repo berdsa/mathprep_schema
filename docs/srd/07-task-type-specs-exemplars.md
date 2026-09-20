@@ -1246,3 +1246,17 @@
 | Verdict model / oracle | `OK, VALUE_MISMATCH, WRONG_FORMAT`; independently derive the two special angles, two batches of 1000 |
 | Worked examples | `sin(x)=1/2→π/6,5π/6`; `sin(x)=√2/2→π/4,3π/4` |
 | Misconception tags | `MISC-WRONG-QUADRANT`, `MISC-DEGREE-RADIAN`, `MISC-MISSING-SECOND-SOLUTION` |
+
+## G10-LOG-001 — Logarithmic equation
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Solve a basic logarithmic equation / LOG / 10 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `Solve log_{b}(x)={c}.` |
+| Variables | `b∈[2,5]`; `c∈[1,5]` |
+| Solution | `x=b^c` |
+| equivalence_policy | **STRICT-FORM** via shared EXACT-INT validator |
+| Input contract / oracle | shared exact-integer contract; independently compute the power, two batches of 1000 |
+| Worked examples | `log₂(x)=3→8`; `log₃(x)=2→9`; `log₅(x)=3→125` |
+| Misconception tags | `MISC-BASE-EXPONENT-SWAP`, `MISC-ADD-LOGS`, `MISC-NONPOSITIVE-ARGUMENT` |
