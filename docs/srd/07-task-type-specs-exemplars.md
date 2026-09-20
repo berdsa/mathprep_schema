@@ -193,7 +193,7 @@
 | Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT` |
 | Verification oracle | independently apply the selected conversion factor; two batches of 1000 required |
 | Tiers | T1/T2: `value∈[1,999]`; tier metadata controls assignment difficulty only |
-| Instance space | 3,996 ordered value/direction pairs |
+| Instance space | 1,998 ordered value/direction pairs |
 | Worked examples | `250 cm→2.5 m`; `3 m→300 cm`; `1 cm→0.01 m` |
 | Misconception tags | `MISC-FACTOR-INVERSE`, `MISC-DECIMAL-PLACE`, `MISC-UNIT-SWAP` |
 
