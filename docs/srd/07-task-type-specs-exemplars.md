@@ -649,6 +649,20 @@
 | Worked examples | `53÷6→8,5`; `97÷8→12,1`; `11÷9→1,2` |
 | Misconception tags | `MISC-REMAINDER-OMIT`, `MISC-REMAINDER-GE-DIVISOR`, `MISC-DIVISOR-DIVIDEND-SWAP` |
 
+## G6-DEC-001 — Decimal arithmetic
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Decimal addition, subtraction, multiplication, or division / DEC / 6 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `{a} {operation} {b} = ?` |
+| Variables / constraint | `a,b∈[1.0,99.9]` with one decimal place; operation chosen from `+,-,×,÷`; division rejects zero divisor |
+| Solution / equivalence_policy | ordinary decimal arithmetic; **EQUIV-CLASS** within `1e-6` |
+| Input contract | decimal numeric text with `.` or `,` separator; surrounding whitespace accepted |
+| Verdict model / oracle | `OK, VALUE_MISMATCH, WRONG_FORMAT`; independent float recompute, 1000/1000 per seed batch |
+| Worked examples | `1.2+3.4=4.6`; `9.0-2.5=6.5`; `2.5×4.0=10.0` |
+| Misconception tags | `MISC-DECIMAL-PLACE`, `MISC-OPERATION-SIGN`, `MISC-DIVIDE-BY-ZERO` |
+
 ## G6-FRA-004 — Fraction multiplication/division
 
 | Field | Value |

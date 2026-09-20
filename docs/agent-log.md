@@ -136,3 +136,7 @@
 ## 2026-09-20 — G6-FRA-004 specification
 
 - Added the canonical full-field specification for fraction multiplication/division, including reduced EXACT-RAT answers and worked examples.
+
+## 2026-09-20 — G6-DEC-001 specification
+
+- Added the canonical full-field decimal-arithmetic specification with TOL validation and independent-operation examples.
