@@ -288,3 +288,25 @@
 | Instance space | 21×10×4 = 840 parameter combinations (exact) |
 | Worked examples | `2,5,... step 3→8`; `0,10,... step 10→20`; `7,8,... step 1→9` |
 | Misconception tags | `MISC-STEP-OFF-BY-ONE`, `MISC-ADD-WRONG-TERM` |
+
+## G1-NUM-010 — Shape property lookup
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Count sides of a named basic shape / GEO / 1–2 / Remember |
+| Provenance / ref_status | seed, `[SOURCED: REF-01]` — grade alignment `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode | CODE |
+| locale / render_target | `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `How many sides does a {shape} have?` |
+| Variables | shape ∈ {triangle, square, rectangle, pentagon, hexagon} |
+| Generation constraint | Deterministic draw from the fixed five-shape vocabulary. |
+| Solution | lookup sides `{3,4,4,5,6}` |
+| equivalence_policy | **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; shared EXACT-INT contract |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, EMPTY_INPUT, INPUT_TOO_LONG` |
+| Verification oracle | independent vocabulary lookup; two batches of 1000 required |
+| Tiers | T1/T2: fixed vocabulary |
+| Instance space | 5 named-shape cases (exact) |
+| Worked examples | triangle → 3; rectangle → 4; hexagon → 6 |
+| Misconception tags | `MISC-SIDE-VERTEX-CONFUSION`, `MISC-SHAPE-MEMORY` |
