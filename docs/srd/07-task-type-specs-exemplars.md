@@ -1338,3 +1338,21 @@
 | Instance space | `∑(n+1)` for n=2..10 = 63 ordered pairs (exact) |
 | Worked examples | coefficient of `x²y²` in `(x+y)^4` → 6; coefficient of `x⁴y` in `(x+y)^5` → 5; coefficient of `y³` in `(x+y)^3` → 1 |
 | Misconception tags | `MISC-EXPONENT-INDEX`, `MISC-FACTORIAL-OFF-BY-ONE`, `MISC-OMIT-BINOMIAL-COEFFICIENT` |
+
+## G10-SP-001 — Conditional probability
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Compute a conditional probability from joint and marginal counts / SP / 10 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `P(A∩B)={j}/{N}, P(B)={b}/{N}. Find P(A\|B).` |
+| Variables | `N∈[2,20]`; `b∈[2,N]`; `j∈[1,b−1]` |
+| Generation constraint | The joint count is a positive proper subset of B, so `P(A\|B)=j/b` is defined and is reduced before storage. |
+| Solution | `reduce(j,b)` |
+| equivalence_policy | **STRICT-FORM** reduced exact rational via the shared EXACT-RAT validator |
+| Input contract | `^\s*[+-]?[0-9]+(?:\s*/\s*[0-9]+)?\s*$`; shared EXACT-RAT contract |
+| Verdict model / oracle | `OK, VALUE_MISMATCH, WRONG_FORMAT, CANON_NOT_REDUCED`; independently divide the joint count by the B count and reduce, two batches of 1000 |
+| Tiers | T1/T2: `N∈[2,20]`, `b∈[2,N]`, `j∈[1,b−1]` |
+| Instance space | `∑N(N−1)/2` for N=2..20 = 1,330 accepted triples (exact) |
+| Worked examples | `P(A∩B)=2/10,P(B)=5/10→2/5`; `3/12, P(B)=6/12→1/2`; `1/8, P(B)=4/8→1/4` |
+| Misconception tags | `MISC-CONDITIONAL-AS-JOINT`, `MISC-INVERT-CONDITION`, `MISC-UNREDUCED-FRACTION` |
