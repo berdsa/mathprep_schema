@@ -178,3 +178,25 @@
 | Instance space | 231 ordered `(a,c)` pairs (exact) |
 | Worked examples | `3+?=7→4`; `0+?=0→0`; `12+?=20→8` |
 | Misconception tags | `MISC-INVERSE-OPERATION`, `MISC-SUBTRAHEND-CONFUSION` |
+
+## G1-NUM-005 — Simple word problem (addition/subtraction)
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | One-step apple add/subtraction story / NUM / 1–2 / Apply |
+| Provenance / ref_status | seed, `[SOURCED: REF-01]` — grade alignment `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode | CODE |
+| locale / render_target | `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `Had {a} apples, got {b} / gave away {b}. How many now?` |
+| Variables | `a,b: int [0,20]`; subtraction reordered so `a≥b`; operation ∈ {add, subtract} |
+| Generation constraint | Choose operands and operation deterministically; answer-first values are inserted into a fixed narrative template. |
+| Solution | `a+b` for got-more, `a−b` for gave-away |
+| equivalence_policy | **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; shared EXACT-INT contract |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, EMPTY_INPUT, INPUT_TOO_LONG` |
+| Verification oracle | independently redraw operation/operands and recompute; two batches of 1000 required |
+| Tiers | T1/T2: operands in `[0,20]`, subtraction non-negative |
+| Instance space | 441 add cases plus 231 subtraction cases (exact) |
+| Worked examples | `Had 3, got 4→7`; `Had 9, gave away 4→5`; `Had 0, got 0→0` |
+| Misconception tags | `MISC-WORD-OPERATION`, `MISC-SUBTRACTION-DIRECTION` |
