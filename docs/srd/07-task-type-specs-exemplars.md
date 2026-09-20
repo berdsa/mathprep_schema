@@ -305,6 +305,22 @@
 | Worked examples | `2^3×2^4→128`; `3^2×3^1→27`; `5^1×5^2→125` |
 | Misconception tags | `MISC-EXPONENT-ADD`, `MISC-BASE-MULTIPLY`, `MISC-EXPONENT-MULTIPLY` |
 
+## G7-GEO-001 — Pythagorean theorem
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Find a right-triangle hypotenuse / GEO / 7 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `A right triangle has legs a and b. What is its hypotenuse?` |
+| Variables | `(a,b,c)` selected from ordered Pythagorean triples with `a,b∈[3,40]` |
+| Solution | `c`, where `a²+b²=c²` |
+| equivalence_policy | **STRICT-FORM** via the shared EXACT-INT validator |
+| Input contract | shared exact-integer contract |
+| Verdict model / oracle | `OK, VALUE_MISMATCH, WRONG_FORMAT`; independently verify `a²+b²=c²`; two batches of 1000 |
+| Instance space | 10 ordered leg/triple choices |
+| Worked examples | `3,4→5`; `5,12→13`; `8,15→17` |
+| Misconception tags | `MISC-ADD-LEGS`, `MISC-NO-SQUARE-ROOT`, `MISC-SWAP-HYPOTENUSE` |
+
 ## G3-NUM-005 — Simple word problem (addition/subtraction) [HYBRID-AI]
 
 | Field | Value |
