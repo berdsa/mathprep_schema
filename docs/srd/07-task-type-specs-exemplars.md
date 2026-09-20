@@ -113,6 +113,27 @@
 | Worked examples | `(0,0)` to `(3,4)` → `5`; `(1,1)` to `(4,5)` → `5`; `(0,0)` to `(1,1)` → `1.414213562` |
 | Misconception tags | `MISC-DISTANCE-MANHATTAN`, `MISC-SQUARE-ROOT`, `MISC-COORDINATE-SUBTRACTION` |
 
+## G6-SP-001 — Basic single-event probability
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Probability of one die outcome / SP / 6 / Understand |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode / locale / render_target | CODE / `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `What is the probability of rolling {face} on a fair six-sided die?` |
+| Variables | `face: int [1,6]` |
+| Generation constraint | Select one face uniformly; all six outcomes are equally likely. |
+| Solution | `1/6` |
+| equivalence_policy | **STRICT-FORM** exact rational in lowest terms via the shared EXACT-RAT validator |
+| Input contract | `^\s*([0-9]+)(?:\s*/\s*([0-9]+))?\s*$`; bare integer accepted only when the correct rational has denominator 1; decimal equivalents rejected |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, CANON_NOT_REDUCED` |
+| Verification oracle | independently recompute one favorable outcome over six equally likely outcomes; two batches of 1000 required |
+| Tiers | T1/T2: `face∈[1,6]`; tier metadata controls assignment difficulty only |
+| Instance space | exactly six face prompts |
+| Worked examples | `face 1→1/6`; `face 4→1/6`; `face 6→1/6` |
+| Misconception tags | `MISC-FAVORABLE-OUTCOMES`, `MISC-PROBABILITY-ONE`, `MISC-DENOMINATOR` |
+
 ## G3-NUM-005 — Simple word problem (addition/subtraction) [HYBRID-AI]
 
 | Field | Value |
