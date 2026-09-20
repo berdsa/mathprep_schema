@@ -38,9 +38,77 @@ func Validate(method core.ValidationMethod, raw, correctAnswer string) Result {
 		return ValidateCanonList(raw, correctAnswer)
 	case core.ValidationMethodTuple:
 		return ValidateTuple(raw, correctAnswer)
+	case core.ValidationMethodExactRat:
+		return ValidateExactRat(raw, correctAnswer)
 	default:
 		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
 	}
+}
+
+var exactRatInput = regexp.MustCompile(`^\s*([0-9]+)(?:\s*/\s*([0-9]+))?\s*$`)
+
+// ValidateExactRat parses rational answers, reduces both sides for comparison,
+// and rejects a fraction that was not submitted in lowest terms.
+func ValidateExactRat(raw, correctAnswer string) Result {
+	got, gotReduced, reason := parseExactRat(raw)
+	if reason != core.ReasonOK {
+		return Result{Verdict: core.VerdictUnparseable, ReasonCode: reason, Stage: StageParse, CorrectAnswer: correctAnswer}
+	}
+	correct, _, correctReason := parseExactRat(correctAnswer)
+	if correctReason != core.ReasonOK {
+		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonParseError, Stage: StageCompare, CorrectAnswer: correctAnswer}
+	}
+	if got != correct {
+		return Result{Verdict: core.VerdictIncorrect, ReasonCode: core.ReasonValueMismatch, Normalized: gotReduced, Stage: StageVerdict, CorrectAnswer: correctAnswer}
+	}
+	return Result{Verdict: core.VerdictCorrect, ReasonCode: core.ReasonOK, Normalized: gotReduced, Stage: StageVerdict, CorrectAnswer: correctAnswer}
+}
+
+func parseExactRat(raw string) (canonical, reduced string, reason core.ReasonCode) {
+	match := exactRatInput.FindStringSubmatch(raw)
+	if len(match) != 3 {
+		if strings.TrimSpace(raw) == "" {
+			return "", "", core.ReasonEmptyInput
+		}
+		return "", "", core.ReasonWrongFormat
+	}
+	numerator, err := strconv.ParseInt(match[1], 10, 64)
+	if err != nil {
+		return "", "", core.ReasonWrongFormat
+	}
+	denominator := int64(1)
+	if match[2] != "" {
+		denominator, err = strconv.ParseInt(match[2], 10, 64)
+		if err != nil || denominator == 0 {
+			return "", "", core.ReasonWrongFormat
+		}
+	}
+	if denominator < 0 {
+		numerator, denominator = -numerator, -denominator
+	}
+	divisor := gcd64(numerator, denominator)
+	reducedNumerator, reducedDenominator := numerator/divisor, denominator/divisor
+	reduced = strconv.FormatInt(reducedNumerator, 10)
+	if reducedDenominator != 1 {
+		reduced += "/" + strconv.FormatInt(reducedDenominator, 10)
+	}
+	if match[2] != "" && (numerator != reducedNumerator || denominator != reducedDenominator) {
+		return "", reduced, core.ReasonCanonNotReduced
+	}
+	return reduced, reduced, core.ReasonOK
+}
+
+func gcd64(a, b int64) int64 {
+	if a < 0 {
+		a = -a
+	}
+	for b != 0 {
+		a, b = b, a%b
+	}
+	if a == 0 {
+		return 1
+	}
+	return a
 }
 
 var tupleInput = regexp.MustCompile(`^\s*([0-9]{1,3})\s*(?:,|;|ост\.?|остаток)\s*([0-9]{1,3})\s*$`)

@@ -107,3 +107,18 @@ func TestValidateTuple(t *testing.T) {
 		t.Fatalf("got %+v", got)
 	}
 }
+
+func TestValidateExactRat(t *testing.T) {
+	if got := ValidateExactRat("5/12", "5/12"); got.Verdict != core.VerdictCorrect {
+		t.Fatalf("got %+v", got)
+	}
+	if got := ValidateExactRat("3/6", "1/2"); got.ReasonCode != core.ReasonCanonNotReduced {
+		t.Fatalf("got %+v", got)
+	}
+	if got := ValidateExactRat("1/3", "1/2"); got.Verdict != core.VerdictIncorrect {
+		t.Fatalf("got %+v", got)
+	}
+	if got := ValidateExactRat("1/0", "1/2"); got.Verdict != core.VerdictUnparseable {
+		t.Fatalf("got %+v", got)
+	}
+}
