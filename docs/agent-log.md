@@ -112,3 +112,7 @@
 ## 2026-09-20 — G3-NUM-008
 
 - Appended the canonical full field-table specification for exact unit-fraction quantities.
+
+## 2026-09-20 — G3-NUM-009
+
+- Appended the canonical full field-table specification for rectangle/square perimeter.

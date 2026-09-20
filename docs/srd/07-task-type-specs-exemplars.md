@@ -442,3 +442,25 @@
 | Instance space | 8×99 = 792 denominator/quotient pairs (exact) |
 | Worked examples | `1/4 of 20→5`; `1/3 of 27→9`; `1/9 of 81→9` |
 | Misconception tags | `MISC-MULTIPLY-INSTEAD-OF-DIVIDE`, `MISC-DENOMINATOR-INVERT`, `MISC-NONDIVISIBLE-ROUNDING` |
+
+## G3-NUM-009 — Perimeter of rectangle/square
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Find the perimeter from two side lengths / GEO / 3–4 / Apply |
+| Provenance / ref_status | seed, `[SOURCED: REF-01]` — grade alignment `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode | CODE |
+| locale / render_target | `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `Sides {a}, {b} — perimeter?` |
+| Variables | `a,b∈[1,20]`; equal sides represent a square |
+| Generation constraint | Deterministic side-length draw; perimeter is `2a+2b`. |
+| Solution | `2(a+b)` |
+| equivalence_policy | **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; shared EXACT-INT contract |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, EMPTY_INPUT, INPUT_TOO_LONG` |
+| Verification oracle | independently apply the perimeter formula; two batches of 1000 required |
+| Tiers | T1/T2: side lengths `[1,20]` |
+| Instance space | 20×20 = 400 ordered side pairs (exact) |
+| Worked examples | `3,4→14`; `5,5→20`; `1,20→42` |
+| Misconception tags | `MISC-AREA-INSTEAD-OF-PERIMETER`, `MISC-SIDE-COUNT`, `MISC-ONE-SIDE-OMITTED` |
