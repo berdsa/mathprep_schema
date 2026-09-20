@@ -72,6 +72,26 @@
 | Worked examples | `(3,5)→I`; `(-4,2)→II`; T2 edge `(0,4)→Oy` |
 | Misconception tags | `MISC-SIGN-SWAP`, `MISC-AXIS-AS-QUADRANT` |
 
+## G6-GEO-001 — Point quadrant identification
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Which quadrant/axis is `(x,y)` in / GEO / 6 / Understand |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode / locale / render_target | CODE / `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `Which quadrant or axis contains ({x}, {y})?` |
+| Variables | `x,y: int [-10,10]` for T1; T2 includes axis and origin cases with coordinates in `[-150,150]` |
+| Generation constraint | T1 samples nonzero coordinates and therefore emits only quadrants. T2 constructs quadrant, axis, and origin cases explicitly; no case is left to chance. |
+| Solution | `I` if `x>0,y>0`; `II` if `x<0,y>0`; `III` if `x<0,y<0`; `IV` if `x>0,y<0`; `Ox` if `y=0,x≠0`; `Oy` if `x=0,y≠0`; `O` if `x=y=0` |
+| equivalence_policy | **STRICT-FORM** via the shared BOOL whitelist |
+| Input contract | `^\s*(I|II|III|IV|Ox|Oy|O)\s*$`; case-insensitive; surrounding whitespace accepted; no prose synonyms |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT` |
+| Verification oracle | independently map the signs of persisted `x,y`; assert T1 never emits axis/origin and T2 covers all seven output values; 1000/1000 per tier |
+| Instance space | T1: 400 ordered nonzero coordinate pairs. T2: 400 quadrant pairs plus 600 axis points and one origin; the origin repetition is a declared mathematical exception. |
+| Worked examples | `(3,5)→I`; `(-4,2)→II`; `(0,4)→Oy` |
+| Misconception tags | `MISC-SIGN-SWAP`, `MISC-AXIS-AS-QUADRANT`, `MISC-ORIGIN-OMISSION` |
+
 ## G3-NUM-005 — Simple word problem (addition/subtraction) [HYBRID-AI]
 
 | Field | Value |
