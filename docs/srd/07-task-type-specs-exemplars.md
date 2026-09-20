@@ -1130,3 +1130,23 @@
 | Instance space | `2×Σ(n)` for `n=3..10`, or `104` ordered parameter cases |
 | Worked examples | `5P2→20`; `5C2→10`; `10P3→720` |
 | Misconception tags | `MISC-PERM-COMB-SWAP`, `MISC-FACTORIAL-OFF-BY-ONE`, `MISC-IGNORE-ORDER` |
+
+## G7-SP-002 — Compound probability
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Compute the probability of independent events combined by and/or / SP / 7 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `P(A)={p1}/{d1}, P(B)={p2}/{d2}. Find P(A {operation} B).` |
+| Variables | `p1,p2∈[1,5]`; `d1,d2∈[2,6]`; each numerator is less than its denominator; `operation∈{and,or}` |
+| Generation constraint | Events are independent; `P(and)=P(A)P(B)`, `P(or)=P(A)+P(B)−P(A)P(B)`. Reduce the stored fraction. |
+| Solution | Reduced exact rational |
+| equivalence_policy | **STRICT-FORM** — reduced fraction required via the shared EXACT-RAT validator |
+| Input contract | `^\s*([0-9]+)\s*/\s*([0-9]+)\s*$`; shared EXACT-RAT contract |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, CANON_NOT_REDUCED` |
+| Verification oracle | Independently recompute the selected rational expression and reduce; two batches of 1000 required |
+| Tiers | T1/T2: positive proper fractions with denominators `[2,6]`, either operation |
+| Instance space | finite accepted tuples from the declared bounds and two operations |
+| Worked examples | `1/2 and 1/3→1/6`; `1/2 or 1/3→2/3`; `2/3 and 3/4→1/2` |
+| Misconception tags | `MISC-AND-AS-ADD`, `MISC-OR-AS-MULTIPLY`, `MISC-UNREDUCED-FRACTION` |

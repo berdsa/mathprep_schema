@@ -188,3 +188,8 @@
 
 - Added the canonical full-field specification for permutation and combination tasks.
 - Reuses the shared EXACT-INT validator; no schema implementation change is required.
+
+## 2026-09-20 — G7-SP-002 specification
+
+- Added the canonical full-field specification for compound probability tasks.
+- Reuses the shared EXACT-RAT validator; no schema implementation change is required.
