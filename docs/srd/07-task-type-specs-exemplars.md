@@ -648,3 +648,22 @@
 | Instance space | 720 ordered candidates minus 167 exact-division pairs = 553 valid ordered pairs (exact) |
 | Worked examples | `53÷6→8,5`; `97÷8→12,1`; `11÷9→1,2` |
 | Misconception tags | `MISC-REMAINDER-OMIT`, `MISC-REMAINDER-GE-DIVISOR`, `MISC-DIVISOR-DIVIDEND-SWAP` |
+
+## G6-FRA-004 — Fraction multiplication/division
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Multiply or divide fractions / FRA / 6 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `{a}/{b} {operation} {c}/{d} = ?` |
+| Variables | `a,c∈[1,12]`; `b,d∈[2,12]`; both input fractions proper |
+| Generation constraint | choose multiplication or division uniformly; division numerator `c` is nonzero; reduce the stored result |
+| Solution | multiply: `reduce(a·c,b·d)`; divide: `reduce(a·d,b·c)` |
+| equivalence_policy | **STRICT-FORM** — reduced fraction required |
+| Input contract | `^\s*([0-9]+)\s*/\s*([0-9]+)\s*$`; bare integer accepted only when the reduced denominator is 1 |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, CANON_NOT_REDUCED` |
+| Verification oracle | independently apply the selected cross-product operation and gcd reduction; 1000/1000 per seed batch |
+| Tiers / instance space | T1/T2 use the same bounds; 12×11×12×11×2 generated operation cases before reduction |
+| Worked examples | `2/3×3/4=1/2`; `5/6÷2/3=5/4`; edge `1/2×2/12=1/12` |
+| Misconception tags | `MISC-FRACTION-INVERT`, `MISC-FRACTION-CROSS-MULTIPLY`, `MISC-UNREDUCED` |

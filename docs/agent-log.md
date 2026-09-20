@@ -132,3 +132,7 @@
 
 - Added the shared EXACT-RAT parse/normalize/compare/verdict dispatcher path, including lowest-terms enforcement and canonical integer output.
 - Added unit coverage for correct, unreduced, mismatched, and zero-denominator answers.
+
+## 2026-09-20 — G6-FRA-004 specification
+
+- Added the canonical full-field specification for fraction multiplication/division, including reduced EXACT-RAT answers and worked examples.
