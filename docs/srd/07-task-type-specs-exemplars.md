@@ -113,6 +113,64 @@
 | Worked examples | `4→IV`; `944→CMXLIV`; edge `3999→MMMCMXCIX` |
 | Misconception tags | `MISC-ROMAN-ADDITIVE`, `MISC-ROMAN-SUBTRACTIVE`, `MISC-ROMAN-NONCANONICAL` |
 
+## G3-NUM-013 — Simple sequence pattern
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Find the next term in an arithmetic or geometric sequence / NUM / 3 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode | CODE |
+| locale / render_target | `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `{mode} pattern: {t1}, {t2}, {t3}, {t4}, ... next?` |
+| Variables | Arithmetic: `a∈[0,20]`, `d∈[1,10]`; geometric: `a∈[1,5]`, `r∈[2,5]` |
+| Generation constraint | choose arithmetic or geometric uniformly; construct four terms and require the fifth term `≤100` |
+| Solution | arithmetic `a+4d`; geometric `a·r^4` |
+| equivalence_policy | **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; shared EXACT-INT normalization; decimal and sequence text answers are rejected |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, EMPTY_INPUT, INPUT_TOO_LONG` |
+| Verification oracle | independently recompute the selected recurrence from stored `mode`, `a`, and `step`; 1000/1000 per seed batch |
+| Tiers | T1/T2: same bounds; tier metadata controls assignment difficulty |
+| Instance space | arithmetic 210 valid pairs plus geometric 6 valid pairs, 216 combinations total |
+| Worked examples | `2,5,8,11→14`; `1,2,4,8→16`; edge `5,20,80,?` is excluded because the fifth term exceeds 100 |
+| Misconception tags | `MISC-SEQUENCE-DIFFERENCE`, `MISC-SEQUENCE-RATIO`, `MISC-OFF-BY-ONE-TERM` |
+
+## G3-NUM-015 — Missing factor
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Find the missing factor / NUM / 3 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode | CODE |
+| locale / render_target | `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `{a} × ? = {c}` |
+| Variables | `a∈[2,10]`, `factor∈[1,10]`, `c=a·factor` |
+| Generation constraint | `c≤100`; construct `c` from the two factors so divisibility is guaranteed |
+| Solution | `factor=c/a` |
+| equivalence_policy | **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; shared EXACT-INT normalization |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, EMPTY_INPUT, INPUT_TOO_LONG` |
+| Verification oracle | independently divide `c` by `a` and assert zero remainder; 1000/1000 per seed batch |
+| Tiers | T1/T2: `a∈[2,10]`, `factor∈[1,10]` |
+| Instance space | exactly 90 `(a,factor)` combinations |
+| Worked examples | `3×?=21→7`; `10×?=100→10`; edge `2×?=2→1` |
+| Misconception tags | `MISC-MULTIPLICATION-FACT`, `MISC-DIVISION-INVERSE`, `MISC-PLACE-VALUE` |
+
+## G3-NUM-016 — Missing divisor
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Find the missing divisor / NUM / 3 / Apply |
+| spec_version / generation_mode | 1.0.0-draft / CODE |
+| locale / render_target | `ru-KZ` / `plaintext`, `unicode-math` |
+| Template / variables | `{a} ÷ ? = {c}`; divisor and quotient `∈[1,10]`, `a=divisor·c` |
+| Solution / equivalence_policy | `a/c`; **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$` |
+| Verification oracle | independently construct and divide; 1000/1000 per seed batch |
+| Instance space / examples | 100 pairs; `21÷?=3→7`, `100÷?=10→10`, `2÷?=2→1` |
+| Misconception tags | `MISC-DIVISOR-DIVIDEND-SWAP`, `MISC-FACT-FAMILY` |
+
 ## G1-NUM-001 — Addition within range
 
 | Field | Value |
