@@ -1392,3 +1392,21 @@
 | Instance space | Finite generated component/operation tuples; angle subset uses three special relations |
 | Worked examples | `(2,3)·(4,−1)→5`; `| (3,4) |→5`; angle between `(1,0)` and `(0,2)` → 90° |
 | Misconception tags | `MISC-DOT-AS-COMPONENTWISE`, `MISC-MAGNITUDE-SQUARE-ROOT`, `MISC-ANGLE-SUPPLEMENT` |
+
+## G10-MAT-001 — Matrix operations
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Add, multiply, or find the determinant of 2×2 matrices / MAT / 10 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `A=[[{a},{b}],[{c},{d}]], B=[[{e},{f}],[{g},{h}]]. Find {operation}.` |
+| Variables | Matrix entries in `[-5,5]`; operation∈{add,multiply,determinant of A} |
+| Generation constraint | All operations are exact integer arithmetic on 2×2 matrices. |
+| Solution | Element-wise sum, matrix product, or `ad−bc` as selected |
+| equivalence_policy | **MATRIX / EXACT-INT** via shared matrix validator |
+| Input contract | shared integer matrix/scalar contract |
+| Verdict model / oracle | `OK, VALUE_MISMATCH, WRONG_FORMAT`; independently recompute entries, two batches of 1000 |
+| Tiers | T1/T2: entries `[-5,5]` |
+| Instance space | `11^8×3` generated operation tuples (with replacement) |
+| Worked examples | `[[1,2],[3,4]]+[[5,6],[7,8]]→[[6,8],[10,12]]`; product→`[[19,22],[43,50]]`; determinant of A→`−2` |
+| Misconception tags | `MISC-ELEMENTWISE-PRODUCT`, `MISC-ROW-COLUMN-ORDER`, `MISC-DETERMINANT-SIGN` |
