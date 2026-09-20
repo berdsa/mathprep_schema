@@ -1,16 +1,16 @@
 # Graph Report - schema  (2026-09-20)
 
 ## Corpus Check
-- 30 files · ~13,990 words
+- 31 files · ~16,172 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 191 nodes · 236 edges · 28 communities (26 shown, 2 thin omitted)
+- 201 nodes · 245 edges · 29 communities (27 shown, 2 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ee4eb3d8`
+- Built from commit: `cc7d9c81`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -34,18 +34,19 @@
 - 05-decisions.md
 - 000001_create_phase0_schema.up.sql
 - ValidateExactInt
+- Math Task Type Catalog — Grade 1 to University
 
 ## God Nodes (most connected - your core abstractions)
 1. `Agent log` - 14 edges
 2. `02 — Requirements` - 10 edges
 3. `task_type` - 9 edges
 4. `00 — Conventions` - 9 edges
-5. `TaskType` - 8 edges
-6. `ValidateExactInt()` - 8 edges
-7. `AGENTS.md — schema` - 8 edges
-8. `06 — Traceability, Glossary, Stakeholders, Open Items` - 8 edges
-9. `task_instance` - 7 edges
-10. `00 — Scope Lock` - 7 edges
+5. `Math Task Type Catalog — Grade 1 to University` - 9 edges
+6. `TaskType` - 8 edges
+7. `ValidateExactInt()` - 8 edges
+8. `AGENTS.md — schema` - 8 edges
+9. `06 — Traceability, Glossary, Stakeholders, Open Items` - 8 edges
+10. `task_instance` - 7 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `TaskType` --references--> `GradeBand`  [EXTRACTED]
@@ -62,7 +63,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (28 total, 2 thin omitted)
+## Communities (29 total, 2 thin omitted)
 
 ### Community 1 - "02 — Requirements"
 Cohesion: 0.18
@@ -132,8 +133,12 @@ Nodes (21): domain, equivalence_policy, event_log, generation_mode, generation_r
 Cohesion: 0.31
 Nodes (13): ReasonCode, CompareExactInt(), NormalizeExactInt(), ParseExactInt(), TestValidateExactIntBoundary(), TestValidateExactIntCorrect(), TestValidateExactIntIncorrect(), TestValidateExactIntUnparseable() (+5 more)
 
+### Community 28 - "Math Task Type Catalog — Grade 1 to University"
+Cohesion: 0.20
+Nodes (9): Grade 10–11 (ages 15–18), Grade 1–2 (ages 6–8), Grade 3–4 (ages 8–10), Grade 5–6 (ages 10–12), Grade 7–9 (ages 12–15), Math Task Type Catalog — Grade 1 to University, Notes for implementation (methodologist + BA perspective), University (higher mathematics) (+1 more)
+
 ## Knowledge Gaps
-- **91 isolated node(s):** `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is`, `Source of truth`, `Stack` (+86 more)
+- **99 isolated node(s):** `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is`, `Source of truth`, `Stack` (+94 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -141,10 +146,10 @@ Nodes (13): ReasonCode, CompareExactInt(), NormalizeExactInt(), ParseExactInt(),
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `ReasonCode` connect `ValidateExactInt` to `constants.go`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
+  _High betweenness centrality (0.016) - this node is a cross-community bridge._
 - **Why does `Submission` connect `constants.go` to `ValidateExactInt`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
+  _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **What connects `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is` to the rest of the system?**
-  _91 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _99 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Agent log` be split into smaller, more focused modules?**
   _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._

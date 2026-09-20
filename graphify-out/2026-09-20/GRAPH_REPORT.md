@@ -1,16 +1,16 @@
 # Graph Report - schema  (2026-09-20)
 
 ## Corpus Check
-- 30 files · ~13,919 words
+- 30 files · ~13,990 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 190 nodes · 235 edges · 28 communities (26 shown, 2 thin omitted)
+- 191 nodes · 236 edges · 28 communities (26 shown, 2 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0dbe404b`
+- Built from commit: `ee4eb3d8`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -36,7 +36,7 @@
 - ValidateExactInt
 
 ## God Nodes (most connected - your core abstractions)
-1. `Agent log` - 13 edges
+1. `Agent log` - 14 edges
 2. `02 — Requirements` - 10 edges
 3. `task_type` - 9 edges
 4. `00 — Conventions` - 9 edges
@@ -121,8 +121,8 @@ Cohesion: 0.50
 Nodes (3): 00 — Индекс артефактов трека `math-task-catalog`, Реестр допущений и открытых вопросов — сводный, обновлён, Реестр репозиториев (введён этим ходом, см. ADR-006)
 
 ### Community 15 - "Agent log"
-Cohesion: 0.14
-Nodes (13): 2026-09-19 — Phase 0 base DDL, 2026-09-19 — Phase 0 dictionary seeds, 2026-09-19 — Phase 0 forbidden-write probes, 2026-09-19 — Phase 0 idempotency constraints, 2026-09-19 — Phase 0 migration plan, 2026-09-19 — Phase 0 migration verification, 2026-09-19 — Phase 0 service roles and grants, 2026-09-19 — Phase 0 summary (+5 more)
+Cohesion: 0.13
+Nodes (14): 2026-09-19 — Phase 0 base DDL, 2026-09-19 — Phase 0 dictionary seeds, 2026-09-19 — Phase 0 forbidden-write probes, 2026-09-19 — Phase 0 idempotency constraints, 2026-09-19 — Phase 0 migration plan, 2026-09-19 — Phase 0 migration verification, 2026-09-19 — Phase 0 service roles and grants, 2026-09-19 — Phase 0 summary (+6 more)
 
 ### Community 17 - "000001_create_phase0_schema.up.sql"
 Cohesion: 0.19
@@ -133,7 +133,7 @@ Cohesion: 0.31
 Nodes (13): ReasonCode, CompareExactInt(), NormalizeExactInt(), ParseExactInt(), TestValidateExactIntBoundary(), TestValidateExactIntCorrect(), TestValidateExactIntIncorrect(), TestValidateExactIntUnparseable() (+5 more)
 
 ## Knowledge Gaps
-- **90 isolated node(s):** `event_log`, `github.com/berdsa/mathprep_schema`, `What this repo is`, `Source of truth`, `Stack` (+85 more)
+- **91 isolated node(s):** `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is`, `Source of truth`, `Stack` (+86 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -144,7 +144,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.018) - this node is a cross-community bridge._
 - **Why does `Submission` connect `constants.go` to `ValidateExactInt`?**
   _High betweenness centrality (0.010) - this node is a cross-community bridge._
-- **What connects `event_log`, `github.com/berdsa/mathprep_schema`, `What this repo is` to the rest of the system?**
-  _90 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is` to the rest of the system?**
+  _91 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Agent log` be split into smaller, more focused modules?**
-  _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
