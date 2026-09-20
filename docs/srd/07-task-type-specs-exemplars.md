@@ -197,6 +197,27 @@
 | Worked examples | `250 cm→2.5 m`; `3 m→300 cm`; `1 cm→0.01 m` |
 | Misconception tags | `MISC-FACTOR-INVERSE`, `MISC-DECIMAL-PLACE`, `MISC-UNIT-SWAP` |
 
+## G7-EE-001 — Linear equation (1 variable)
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Solve a one-variable linear equation / EE / 7 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode / locale / render_target | CODE / `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `{a}x + {b} = {c}` |
+| Variables | `a∈[1,10]`, `x∈[1,10]`, `b∈[1,20]`, `c=a·x+b` |
+| Generation constraint | Construct `c` from a positive integer solution so division is exact. |
+| Solution | `x=(c-b)/a` |
+| equivalence_policy | **STRICT-FORM** exact rational via the shared EXACT-RAT validator |
+| Input contract | shared exact-rational numeric/fraction contract; reduced fractions required; decimal equivalents rejected |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, CANON_NOT_REDUCED` |
+| Verification oracle | independently solve by subtracting `b` and dividing by `a`; two batches of 1000 required |
+| Tiers | T1/T2: same positive integer-solution bounds |
+| Instance space | `10×10×20×10 = 20,000` constructed parameter tuples |
+| Worked examples | `2x+3=11→4`; `5x+1=26→5`; `1x+20=30→10` |
+| Misconception tags | `MISC-SUBTRACT-CONSTANT`, `MISC-DIVIDE-COEFFICIENT`, `MISC-SIGN-ERROR` |
+
 ## G3-NUM-005 — Simple word problem (addition/subtraction) [HYBRID-AI]
 
 | Field | Value |
