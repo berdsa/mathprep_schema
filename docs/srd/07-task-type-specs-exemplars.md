@@ -761,3 +761,23 @@
 | Instance space | accepted ordered triples from `12³`, filtered by `a|(b·c)` |
 | Worked examples | `2/3=4/x→x=6`; `3/5=6/x→x=10`; `4/9=8/x→x=18` |
 | Misconception tags | `MISC-CROSS-MULTIPLY-WRONG`, `MISC-INVERT-PROPORTION`, `MISC-OMIT-DIVISOR` |
+
+## G6-NS-001 — GCD / LCM
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Compute the greatest common divisor or least common multiple / NS / 6 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `{operation} of {a} and {b}` |
+| Variables | `a,b∈[2,99]`; `operation∈{GCD,LCM}` |
+| Generation constraint | Positive integer operands; LCM is computed as `a·b/gcd(a,b)`. |
+| Solution | `gcd(a,b)` or `lcm(a,b)` according to operation |
+| equivalence_policy | **STRICT-FORM** — canonical integer |
+| Input contract | `^\s*\+?0*[0-9]{1,5}\s*$`; shared EXACT-INT contract |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, EMPTY_INPUT, INPUT_TOO_LONG` |
+| Verification oracle | Independently compute Euclidean gcd and derived lcm; two batches of 1000 required |
+| Tiers | T1/T2: positive operands `[2,99]`, either operation |
+| Instance space | `98×98×2 = 19,208` ordered operand/operation cases |
+| Worked examples | `GCD of 18 and 24→6`; `LCM of 6 and 8→24`; `GCD of 35 and 49→7` |
+| Misconception tags | `MISC-GCD-AS-LCM`, `MISC-LCM-AS-PRODUCT`, `MISC-FACTORIZATION-ERROR` |

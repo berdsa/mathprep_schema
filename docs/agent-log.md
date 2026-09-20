@@ -158,3 +158,8 @@
 
 - Added the canonical full-field specification for one-variable proportion solving.
 - Reuses the shared EXACT-RAT validator; no schema implementation change is required.
+
+## 2026-09-20 — G6-NS-001 specification
+
+- Added the canonical full-field specification for GCD/LCM tasks.
+- Reuses the shared EXACT-INT validator; no schema implementation change is required.
