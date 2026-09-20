@@ -32,9 +32,26 @@ func Validate(method core.ValidationMethod, raw, correctAnswer string) Result {
 	switch method {
 	case core.ValidationMethodExactInt:
 		return ValidateExactInt(raw, correctAnswer)
+	case core.ValidationMethodBool:
+		return ValidateBool(raw, correctAnswer)
 	default:
 		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
 	}
+}
+
+// ValidateBool handles the fixed-vocabulary, case-insensitive BOOL contract.
+// The stored answer is already canonical; synonyms are normalized before
+// comparison so task types do not need their own parsing code.
+func ValidateBool(raw, correctAnswer string) Result {
+	canonical := map[string]string{"<": "<", "less": "<", "less than": "<", ">": ">", "greater": ">", "greater than": ">", "=": "=", "equal": "=", "equal to": "="}
+	normalized, ok := canonical[strings.ToLower(strings.TrimSpace(raw))]
+	if !ok {
+		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
+	}
+	if normalized != correctAnswer {
+		return Result{Verdict: core.VerdictIncorrect, ReasonCode: core.ReasonValueMismatch, Normalized: normalized, Stage: StageVerdict, CorrectAnswer: correctAnswer}
+	}
+	return Result{Verdict: core.VerdictCorrect, ReasonCode: core.ReasonOK, Normalized: normalized, Stage: StageVerdict, CorrectAnswer: correctAnswer}
 }
 
 // ParsedExactInt is the parse-stage representation of an EXACT-INT answer.

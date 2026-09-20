@@ -81,3 +81,7 @@
 - Added `validation.Validate(method, raw, correct)` as the shared dispatch entry point.
 - The grader submission handler now reads `task_type.validation_method` and dispatches through the shared pipeline instead of assuming `EXACT-INT`.
 - Existing EXACT-INT behavior remains covered by the package tests.
+
+## 2026-09-20 — BOOL shared validator
+
+- Added the catalog BOOL validator with the declared fixed comparison vocabulary and case-insensitive synonym normalization.

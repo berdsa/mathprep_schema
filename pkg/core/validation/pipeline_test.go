@@ -56,3 +56,15 @@ func TestValidateExactIntBoundary(t *testing.T) {
 		})
 	}
 }
+
+func TestValidateBool(t *testing.T) {
+	if got := ValidateBool(" Less than ", "<"); got.Verdict != core.VerdictCorrect {
+		t.Fatalf("got %+v", got)
+	}
+	if got := ValidateBool("greater", "<"); got.Verdict != core.VerdictIncorrect {
+		t.Fatalf("got %+v", got)
+	}
+	if got := ValidateBool("maybe", "<"); got.Verdict != core.VerdictUnparseable {
+		t.Fatalf("got %+v", got)
+	}
+}

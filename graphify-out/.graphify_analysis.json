@@ -10,6 +10,7 @@
       "core_gradeband",
       "core_locale",
       "core_masterytopic",
+      "core_reasoncode",
       "core_rendertarget",
       "core_student",
       "core_submission",
@@ -53,22 +54,26 @@
       "migrations_000001_create_phase0_schema_up_verdict"
     ],
     "2": [
-      "core_reasoncode",
       "pkg_core_validation_pipeline",
       "pkg_core_validation_pipeline_compareexactint",
       "pkg_core_validation_pipeline_normalizeexactint",
       "pkg_core_validation_pipeline_parseexactint",
       "pkg_core_validation_pipeline_test",
+      "pkg_core_validation_pipeline_test_testvalidatebool",
       "pkg_core_validation_pipeline_test_testvalidateexactintboundary",
       "pkg_core_validation_pipeline_test_testvalidateexactintcorrect",
       "pkg_core_validation_pipeline_test_testvalidateexactintincorrect",
       "pkg_core_validation_pipeline_test_testvalidateexactintunparseable",
       "pkg_core_validation_pipeline_validate",
+      "pkg_core_validation_pipeline_validatebool",
       "pkg_core_validation_pipeline_validateexactint",
+      "reasoncode",
       "t",
       "validation_parsedexactint",
       "validation_result",
-      "validation_stage"
+      "validation_stage",
+      "validationmethod",
+      "verdict"
     ],
     "3": [
       "docs_agent_log",
@@ -262,9 +267,9 @@
     ]
   },
   "cohesion": {
-    "0": 0.16,
+    "0": 0.15384615384615385,
     "1": 0.19480519480519481,
-    "2": 0.3,
+    "2": 0.23157894736842105,
     "3": 0.13333333333333333,
     "4": 0.18181818181818182,
     "5": 0.2,
@@ -357,15 +362,15 @@
       "why": "peripheral node `GradeBand` unexpectedly reaches hub `TaskType`"
     },
     {
-      "source": "Validate()",
+      "source": "TaskType",
       "target": "ValidationMethod",
       "source_files": [
-        "pkg/core/validation/pipeline.go",
+        "pkg/core/rows.go",
         "pkg/core/constants.go"
       ],
       "confidence": "EXTRACTED",
       "relation": "references",
-      "why": "bridges separate communities"
+      "why": "peripheral node `ValidationMethod` unexpectedly reaches hub `TaskType`"
     },
     {
       "source": "TaskType",
