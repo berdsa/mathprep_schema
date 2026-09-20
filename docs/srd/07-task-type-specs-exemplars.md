@@ -1150,3 +1150,23 @@
 | Instance space | finite accepted tuples from the declared bounds and two operations |
 | Worked examples | `1/2 and 1/3→1/6`; `1/2 or 1/3→2/3`; `2/3 and 3/4→1/2` |
 | Misconception tags | `MISC-AND-AS-ADD`, `MISC-OR-AS-MULTIPLY`, `MISC-UNREDUCED-FRACTION` |
+
+## G7-SP-003 — Measures of center and spread
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Compute mean, median, mode, or range / SP / 7 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `Find the {statistic} of [{v1}, {v2}, {v3}, {v4}, {v5}].` |
+| Variables | five integer values in `[1,20]`; statistic∈{mean,median,mode,range} |
+| Generation constraint | Values are sorted for display; mode datasets contain a unique repeated value. |
+| Solution | Numeric result; mean is the arithmetic average. |
+| equivalence_policy | **EQUIV-CLASS** within `1e-6` via shared TOL validator |
+| Input contract | shared TOL numeric contract |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT` |
+| Verification oracle | Independently compute the selected statistic from persisted values; two batches of 1000 required |
+| Tiers | T1/T2: five values `[1,20]`, four statistics |
+| Instance space | finite generated datasets and four statistic choices |
+| Worked examples | `mean[2,4,6,8,10]→6`; `median[1,3,7,9,12]→7`; `range[2,5,8,11,14]→12` |
+| Misconception tags | `MISC-MEAN-SUM`, `MISC-MEDIAN-UNSORTED`, `MISC-RANGE-ADD` |

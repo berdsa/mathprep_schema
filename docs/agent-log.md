@@ -193,3 +193,8 @@
 
 - Added the canonical full-field specification for compound probability tasks.
 - Reuses the shared EXACT-RAT validator; no schema implementation change is required.
+
+## 2026-09-20 — G7-SP-003 specification
+
+- Added the canonical full-field specification for measures of center and spread.
+- Reuses the shared TOL validator; no schema implementation change is required.
