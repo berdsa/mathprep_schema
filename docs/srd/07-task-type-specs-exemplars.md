@@ -200,3 +200,25 @@
 | Instance space | 441 add cases plus 231 subtraction cases (exact) |
 | Worked examples | `Had 3, got 4→7`; `Had 9, gave away 4→5`; `Had 0, got 0→0` |
 | Misconception tags | `MISC-WORD-OPERATION`, `MISC-SUBTRACTION-DIRECTION` |
+
+## G1-NUM-006 — Place value
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Digit in ones, tens, or hundreds place / NUM / 1–2 / Understand |
+| Provenance / ref_status | seed, `[SOURCED: REF-01]` — grade alignment `[UNVERIFIED]` pending MISS-01 |
+| spec_version | 1.0.0-draft |
+| generation_mode | CODE |
+| locale / render_target | `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `What digit is in the {ones/tens/hundreds} place of {n}?` |
+| Variables | `n∈[0,999]`; position ∈ {ones,tens,hundreds} |
+| Generation constraint | Uniform deterministic draw of `n` and position. |
+| Solution | `floor(n/10^p) mod 10` |
+| equivalence_policy | **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; shared EXACT-INT contract |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, EMPTY_INPUT, INPUT_TOO_LONG` |
+| Verification oracle | independent digit extraction; two batches of 1000 required |
+| Tiers | T1/T2: `n∈[0,999]` |
+| Instance space | 3000 `(n,position)` combinations (exact) |
+| Worked examples | tens digit of `347` → `4`; hundreds digit of `805` → `8`; ones digit of `0` → `0` |
+| Misconception tags | `MISC-PLACE-SHIFT`, `MISC-ZERO-PLACE` |
