@@ -1374,3 +1374,21 @@
 | Instance space | Finite generated tuples from the declared component and operation choices |
 | Worked examples | `(2+3i)+(4−i)→(6,2)`; `(2+3i)(4−i)→(11,10)`; `(3+5i)/(1+i)→(4,1)` |
 | Misconception tags | `MISC-IMAGINARY-SIGN`, `MISC-DISTRIBUTIVE-ERROR`, `MISC-COMPLEX-DIVISION-CONJUGATE` |
+
+## G10-VEC-001 — Vector operations
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Compute a vector dot product, magnitude, or special angle / VEC / 10 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `u=({u1},{u2}), v=({v1},{v2}). Find {operation}.` |
+| Variables | Integer 2D components in `[-9,9]`; operation∈{dot,magnitude of u,angle between} |
+| Generation constraint | Angle instances use equal, opposite, or perpendicular nonzero vectors, yielding 0°, 180°, or 90° exactly. |
+| Solution | Dot=`u1v1+u2v2`; magnitude=`√(u1²+u2²)`; angle is the special angle in degrees |
+| equivalence_policy | **TOL** with shared numeric tolerance |
+| Input contract | shared finite numeric contract |
+| Verdict model / oracle | `OK, VALUE_MISMATCH, WRONG_FORMAT`; independently recompute the selected vector operation, two batches of 1000 |
+| Tiers | T1/T2: components `[-9,9]`, nonzero vectors for magnitude and angle |
+| Instance space | Finite generated component/operation tuples; angle subset uses three special relations |
+| Worked examples | `(2,3)·(4,−1)→5`; `| (3,4) |→5`; angle between `(1,0)` and `(0,2)` → 90° |
+| Misconception tags | `MISC-DOT-AS-COMPONENTWISE`, `MISC-MAGNITUDE-SQUARE-ROOT`, `MISC-ANGLE-SUPPLEMENT` |
