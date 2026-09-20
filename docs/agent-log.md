@@ -218,3 +218,8 @@
 
 - Added the canonical full-field specification for divisibility checks.
 - Reuses the shared BOOL validator; no schema implementation change is required.
+
+## 2026-09-20 — G10-TRG-001 specification
+
+- Added the canonical full-field specification for special-value sine equations.
+- Reuses the shared SET validator; no schema implementation change is required.

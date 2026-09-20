@@ -1231,3 +1231,18 @@
 | Verdict model / oracle | `OK, VALUE_MISMATCH, WRONG_FORMAT`; independently compute the remainder, two batches of 1000 |
 | Worked examples | `12,3→YES`; `13,3→NO`; `100,10→YES` |
 | Misconception tags | `MISC-CONFUSE-QUOTIENT`, `MISC-OFF-BY-ONE`, `MISC-FACTOR-ERROR` |
+
+## G10-TRG-001 — Trigonometric equation
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Solve a special-value sine equation on `[0,2π)` / TRG / 10 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `Solve sin(x)={k} for x∈[0,2π).` |
+| Variables | `k∈{1/2,√2/2,√3/2}` |
+| Solution | The two canonical angles in the first and second quadrants |
+| equivalence_policy | **SET** via the shared unordered numeric-set validator |
+| Input contract | shared numeric SET contract |
+| Verdict model / oracle | `OK, VALUE_MISMATCH, WRONG_FORMAT`; independently derive the two special angles, two batches of 1000 |
+| Worked examples | `sin(x)=1/2→π/6,5π/6`; `sin(x)=√2/2→π/4,3π/4` |
+| Misconception tags | `MISC-WRONG-QUADRANT`, `MISC-DEGREE-RADIAN`, `MISC-MISSING-SECOND-SOLUTION` |
