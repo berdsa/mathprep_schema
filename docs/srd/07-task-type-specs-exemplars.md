@@ -1410,3 +1410,21 @@
 | Instance space | `11^8×3` generated operation tuples (with replacement) |
 | Worked examples | `[[1,2],[3,4]]+[[5,6],[7,8]]→[[6,8],[10,12]]`; product→`[[19,22],[43,50]]`; determinant of A→`−2` |
 | Misconception tags | `MISC-ELEMENTWISE-PRODUCT`, `MISC-ROW-COLUMN-ORDER`, `MISC-DETERMINANT-SIGN` |
+
+## G10-LINALG-001 — Linear system via matrices
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Solve a 2×2 linear system using its coefficient matrix / LINALG / 10 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `A=[[{a},{b}],[{c},{d}]], A·[x,y]=[{e},{f}]. Find (x,y).` |
+| Variables | Coefficients `a,b,c,d∈[-5,5]`; determinant `ad−bc≠0`; constructed integer solution `x,y∈[-10,10]` |
+| Generation constraint | Construct the right-hand side from a nonsingular coefficient matrix and the chosen integer solution. |
+| Solution | Ordered tuple `(x,y)` |
+| equivalence_policy | **TUPLE** exact component-wise integer match |
+| Input contract | shared integer-pair tuple contract |
+| Verdict model / oracle | `OK, VALUE_MISMATCH, WRONG_FORMAT`; independently solve by determinant/Cramer's rule, two batches of 1000 |
+| Tiers | T1/T2: coefficient entries `[-5,5]`, determinant nonzero, solution entries `[-10,10]` |
+| Instance space | Finite accepted coefficient/solution tuples from the declared bounds |
+| Worked examples | `x+y=5, 2x−y=1→(2,3)`; `2x+y=7, x−y=−1→(2,3)`; `3x+2y=8, x−y=1→(2,1)` |
+| Misconception tags | `MISC-DETERMINANT-ZERO`, `MISC-CRAMER-NUMERATOR`, `MISC-ROW-COLUMN-SWAP` |
