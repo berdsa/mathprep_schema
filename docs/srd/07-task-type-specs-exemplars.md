@@ -1288,3 +1288,17 @@
 | Input contract / oracle | shared exact-integer contract; independently recompute the selected formula, two batches of 1000 |
 | Worked examples | `a1=3,d=2,n=5 term→11`; `a1=3,d=2,n=5 sum→35` |
 | Misconception tags | `MISC-OFF-BY-ONE`, `MISC-TERM-SUM-SWAP`, `MISC-SIGN-ERROR` |
+
+## G10-SEQ-002 — Geometric sequence
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Find a term or finite sum of a geometric sequence / SEQ / 10 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `a₁={a1}, r={r}. Find {operation} for n={n}.` |
+| Variables | `a1∈[-5,5]\{0}`; `r∈{-2,-1,1,2}`; `n∈[1,8]`; operation∈{term,sum}` |
+| Solution | term=`a1·r^(n−1)`; sum=`a1(r^n−1)/(r−1)` for `r≠1`, and `a1n` for `r=1` |
+| equivalence_policy | **STRICT-FORM** via shared EXACT-INT validator |
+| Input contract / oracle | shared exact-integer contract; independently recompute the selected formula, two batches of 1000 |
+| Worked examples | `a1=2,r=3,n=4 term→54`; `a1=2,r=3,n=4 sum→80` |
+| Misconception tags | `MISC-ARITHMETIC-AS-GEOMETRIC`, `MISC-OFF-BY-ONE`, `MISC-SUM-FORMULA` |
