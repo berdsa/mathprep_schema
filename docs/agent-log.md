@@ -149,3 +149,7 @@
 
 - Added the canonical full-field specification for percentage-change tasks.
 - Reuses the shared TOL validator; no schema implementation change is required.
+
+## 2026-09-20 — G6-RAT-001 preparation
+
+- Added the canonical ratio-simplification specification and shared CANON ratio validator support.

@@ -721,3 +721,23 @@
 | Instance space | `990×50×2 = 99,000` ordered base/percentage/direction cases (exact) |
 | Worked examples | `100 increases by 10%→110`; `80 decreases by 25%→60`; `50 increases by 15%→57.5` |
 | Misconception tags | `MISC-ADD-PERCENT-AS-POINTS`, `MISC-DECREASE-SIGN`, `MISC-DIVIDE-BY-100-TWICE` |
+
+## G6-RAT-001 — Ratio simplification
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Simplify a ratio / RP / 6 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `Simplify {a} : {b}` |
+| Variables | `a,b∈[2,99]`; `gcd(a,b)>1` |
+| Generation constraint | Draw a positive reducible ratio and divide both terms by their gcd. |
+| Solution | `a/g : b/g`, where `g=gcd(a,b)` |
+| equivalence_policy | **STRICT-FORM** — reduced canonical ratio required |
+| Input contract | `^\s*[0-9]+\s*:\s*[0-9]+\s*$` |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, CANON_NOT_REDUCED` |
+| Verification oracle | Independently compute gcd and reduced terms; two batches of 1000 required |
+| Tiers | T1/T2: positive two-term ratios in `[2,99]` with nontrivial gcd |
+| Instance space | finite accepted ordered pairs from `98×98`, filtered by `gcd(a,b)>1` |
+| Worked examples | `6:8→3:4`; `15:25→3:5`; `18:24→3:4` |
+| Misconception tags | `MISC-DIVIDE-ONE-TERM`, `MISC-WRONG-GCD`, `MISC-UNREDUCED` |
