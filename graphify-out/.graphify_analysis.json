@@ -54,7 +54,8 @@
       "docs_srd_07_task_type_specs_exemplars_g7_ee_002_linear_system_2_variables",
       "docs_srd_07_task_type_specs_exemplars_g7_ee_003_quadratic_equation",
       "docs_srd_07_task_type_specs_exemplars_g7_ee_004_quadratic_inequality",
-      "docs_srd_07_task_type_specs_exemplars_g7_ee_005_linear_inequality"
+      "docs_srd_07_task_type_specs_exemplars_g7_ee_005_linear_inequality",
+      "docs_srd_07_task_type_specs_exemplars_g7_ee_006_exponent_rules"
     ],
     "1": [
       "docs_agent_log",
@@ -95,6 +96,7 @@
       "docs_agent_log_agent_log"
     ],
     "2": [
+      "core_reasoncode",
       "pkg_core_validation_pipeline",
       "pkg_core_validation_pipeline_compareexactint",
       "pkg_core_validation_pipeline_gcd64",
@@ -118,12 +120,9 @@
       "pkg_core_validation_pipeline_validateset",
       "pkg_core_validation_pipeline_validatetol",
       "pkg_core_validation_pipeline_validatetuple",
-      "reasoncode",
       "validation_parsedexactint",
       "validation_result",
-      "validation_stage",
-      "validationmethod",
-      "verdict"
+      "validation_stage"
     ],
     "3": [
       "core_domain",
@@ -135,7 +134,6 @@
       "core_gradeband",
       "core_locale",
       "core_masterytopic",
-      "core_reasoncode",
       "core_rendertarget",
       "core_student",
       "core_submission",
@@ -361,10 +359,10 @@
     ]
   },
   "cohesion": {
-    "0": 0.037037037037037035,
+    "0": 0.03636363636363636,
     "1": 0.05555555555555555,
-    "2": 0.17980295566502463,
-    "3": 0.15384615384615385,
+    "2": 0.2022792022792023,
+    "3": 0.16,
     "4": 0.19480519480519481,
     "5": 0.24761904761904763,
     "6": 0.18181818181818182,
@@ -396,7 +394,7 @@
     {
       "id": "docs_srd_07_task_type_specs_exemplars_07_wave_a_exemplar_task_type_specs",
       "label": "07 \u2014 Wave-A Exemplar Task-Type Specs",
-      "degree": 53
+      "degree": 54
     },
     {
       "id": "docs_agent_log_agent_log",
@@ -424,6 +422,11 @@
       "degree": 9
     },
     {
+      "id": "pkg_core_validation_pipeline_validateexactint",
+      "label": "ValidateExactInt()",
+      "degree": 9
+    },
+    {
       "id": "docs_srd_00_conventions_00_conventions",
       "label": "00 \u2014 Conventions",
       "degree": 9
@@ -434,13 +437,8 @@
       "degree": 9
     },
     {
-      "id": "pkg_core_validation_pipeline_validateexactint",
-      "label": "ValidateExactInt()",
-      "degree": 9
-    },
-    {
-      "id": "core_tasktype",
-      "label": "TaskType",
+      "id": "core_reasoncode",
+      "label": "ReasonCode",
       "degree": 8
     }
   ],

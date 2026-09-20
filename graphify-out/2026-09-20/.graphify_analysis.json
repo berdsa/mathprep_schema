@@ -1,65 +1,6 @@
 {
   "communities": {
     "0": [
-      "docs_agent_log",
-      "docs_agent_log_2026_09_19_phase_0_base_ddl",
-      "docs_agent_log_2026_09_19_phase_0_dictionary_seeds",
-      "docs_agent_log_2026_09_19_phase_0_forbidden_write_probes",
-      "docs_agent_log_2026_09_19_phase_0_idempotency_constraints",
-      "docs_agent_log_2026_09_19_phase_0_migration_plan",
-      "docs_agent_log_2026_09_19_phase_0_migration_verification",
-      "docs_agent_log_2026_09_19_phase_0_service_roles_and_grants",
-      "docs_agent_log_2026_09_19_phase_0_summary",
-      "docs_agent_log_2026_09_19_repository_initialization",
-      "docs_agent_log_2026_09_20_bool_shared_validator",
-      "docs_agent_log_2026_09_20_canon_list_validator",
-      "docs_agent_log_2026_09_20_g3_num_002",
-      "docs_agent_log_2026_09_20_g3_num_003",
-      "docs_agent_log_2026_09_20_g3_num_004",
-      "docs_agent_log_2026_09_20_g3_num_006",
-      "docs_agent_log_2026_09_20_g3_num_007",
-      "docs_agent_log_2026_09_20_g3_num_008",
-      "docs_agent_log_2026_09_20_g3_num_009",
-      "docs_agent_log_2026_09_20_g3_num_010",
-      "docs_agent_log_2026_09_20_g3_num_011",
-      "docs_agent_log_2026_09_20_one_time_generic_grader_dispatch",
-      "docs_agent_log_2026_09_20_phase_0_step_7_github_remote",
-      "docs_agent_log_2026_09_20_phase_0_step_7_shared_go_module",
-      "docs_agent_log_2026_09_20_shared_go_module_root_correction",
-      "docs_agent_log_2026_09_20_task_type_grade_band_correction",
-      "docs_agent_log_2026_09_20_tuple_validator",
-      "docs_agent_log_agent_log"
-    ],
-    "1": [
-      "core_domain",
-      "core_equivalencepolicy",
-      "core_eventlog",
-      "core_generationmode",
-      "core_generationrequest",
-      "core_generationrequeststatus",
-      "core_gradeband",
-      "core_locale",
-      "core_masterytopic",
-      "core_reasoncode",
-      "core_rendertarget",
-      "core_student",
-      "core_submission",
-      "core_taskinstance",
-      "core_taskset",
-      "core_tasktype",
-      "core_tasktypestatus",
-      "core_tiercode",
-      "core_user",
-      "core_usertype",
-      "core_validationmethod",
-      "core_verdict",
-      "pkg_core_constants",
-      "pkg_core_rows",
-      "rawmessage",
-      "time",
-      "uuid"
-    ],
-    "2": [
       "docs_srd_07_task_type_specs_exemplars",
       "docs_srd_07_task_type_specs_exemplars_07_wave_a_exemplar_task_type_specs",
       "docs_srd_07_task_type_specs_exemplars_g1_num_001_addition_within_range",
@@ -84,15 +25,84 @@
       "docs_srd_07_task_type_specs_exemplars_g3_num_010_area_of_rectangle_square",
       "docs_srd_07_task_type_specs_exemplars_g3_num_011_division_with_remainder",
       "docs_srd_07_task_type_specs_exemplars_g3_num_012_roman_numeral_conversion",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_013_simple_sequence_pattern",
       "docs_srd_07_task_type_specs_exemplars_g3_num_014_division_with_remainder",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_015_missing_factor",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_016_missing_divisor",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_017_missing_dividend",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_018_multiplication_as_repeated_addition",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_019_division_as_sharing",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_020_multiplication_word_problem",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_021_division_word_problem",
+      "docs_srd_07_task_type_specs_exemplars_g6_dec_001_decimal_arithmetic",
       "docs_srd_07_task_type_specs_exemplars_g6_fra_003_fraction_addition_unlike_denominators_proper_result",
-      "docs_srd_07_task_type_specs_exemplars_g6_geo_009_point_quadrant_identification"
+      "docs_srd_07_task_type_specs_exemplars_g6_fra_004_fraction_multiplication_division",
+      "docs_srd_07_task_type_specs_exemplars_g6_geo_001_point_quadrant_identification",
+      "docs_srd_07_task_type_specs_exemplars_g6_geo_002_distance_between_two_points",
+      "docs_srd_07_task_type_specs_exemplars_g6_geo_003_missing_triangle_angle",
+      "docs_srd_07_task_type_specs_exemplars_g6_geo_009_point_quadrant_identification",
+      "docs_srd_07_task_type_specs_exemplars_g6_md_001_volume_of_a_rectangular_prism",
+      "docs_srd_07_task_type_specs_exemplars_g6_md_002_unit_conversion",
+      "docs_srd_07_task_type_specs_exemplars_g6_ns_001_gcd_lcm",
+      "docs_srd_07_task_type_specs_exemplars_g6_ns_002_negative_number_arithmetic",
+      "docs_srd_07_task_type_specs_exemplars_g6_pct_001_percentage_of_a_number",
+      "docs_srd_07_task_type_specs_exemplars_g6_pct_002_percentage_change",
+      "docs_srd_07_task_type_specs_exemplars_g6_rat_001_ratio_simplification",
+      "docs_srd_07_task_type_specs_exemplars_g6_rp_001_proportion_solving",
+      "docs_srd_07_task_type_specs_exemplars_g6_sp_001_basic_single_event_probability",
+      "docs_srd_07_task_type_specs_exemplars_g7_ee_001_linear_equation_1_variable",
+      "docs_srd_07_task_type_specs_exemplars_g7_ee_002_linear_system_2_variables",
+      "docs_srd_07_task_type_specs_exemplars_g7_ee_003_quadratic_equation",
+      "docs_srd_07_task_type_specs_exemplars_g7_ee_004_quadratic_inequality",
+      "docs_srd_07_task_type_specs_exemplars_g7_ee_005_linear_inequality",
+      "docs_srd_07_task_type_specs_exemplars_g7_ee_006_exponent_rules"
     ],
-    "3": [
+    "1": [
+      "docs_agent_log",
+      "docs_agent_log_2026_09_19_phase_0_base_ddl",
+      "docs_agent_log_2026_09_19_phase_0_dictionary_seeds",
+      "docs_agent_log_2026_09_19_phase_0_forbidden_write_probes",
+      "docs_agent_log_2026_09_19_phase_0_idempotency_constraints",
+      "docs_agent_log_2026_09_19_phase_0_migration_plan",
+      "docs_agent_log_2026_09_19_phase_0_migration_verification",
+      "docs_agent_log_2026_09_19_phase_0_service_roles_and_grants",
+      "docs_agent_log_2026_09_19_phase_0_summary",
+      "docs_agent_log_2026_09_19_repository_initialization",
+      "docs_agent_log_2026_09_20_bool_shared_validator",
+      "docs_agent_log_2026_09_20_canon_list_validator",
+      "docs_agent_log_2026_09_20_exact_rat_shared_validation",
+      "docs_agent_log_2026_09_20_g3_num_002",
+      "docs_agent_log_2026_09_20_g3_num_003",
+      "docs_agent_log_2026_09_20_g3_num_004",
+      "docs_agent_log_2026_09_20_g3_num_006",
+      "docs_agent_log_2026_09_20_g3_num_007",
+      "docs_agent_log_2026_09_20_g3_num_008",
+      "docs_agent_log_2026_09_20_g3_num_009",
+      "docs_agent_log_2026_09_20_g3_num_010",
+      "docs_agent_log_2026_09_20_g3_num_011",
+      "docs_agent_log_2026_09_20_g6_dec_001_specification",
+      "docs_agent_log_2026_09_20_g6_fra_004_specification",
+      "docs_agent_log_2026_09_20_g6_ns_001_specification",
+      "docs_agent_log_2026_09_20_g6_ns_002_specification",
+      "docs_agent_log_2026_09_20_g6_pct_002_specification",
+      "docs_agent_log_2026_09_20_g6_rat_001_preparation",
+      "docs_agent_log_2026_09_20_g6_rp_001_specification",
+      "docs_agent_log_2026_09_20_one_time_generic_grader_dispatch",
+      "docs_agent_log_2026_09_20_phase_0_step_7_github_remote",
+      "docs_agent_log_2026_09_20_phase_0_step_7_shared_go_module",
+      "docs_agent_log_2026_09_20_shared_go_module_root_correction",
+      "docs_agent_log_2026_09_20_task_type_grade_band_correction",
+      "docs_agent_log_2026_09_20_tuple_validator",
+      "docs_agent_log_agent_log"
+    ],
+    "2": [
+      "core_reasoncode",
       "pkg_core_validation_pipeline",
       "pkg_core_validation_pipeline_compareexactint",
       "pkg_core_validation_pipeline_gcd64",
+      "pkg_core_validation_pipeline_isquadrantlabel",
       "pkg_core_validation_pipeline_isroman",
+      "pkg_core_validation_pipeline_joinints",
       "pkg_core_validation_pipeline_normalizeexactint",
       "pkg_core_validation_pipeline_parseexactint",
       "pkg_core_validation_pipeline_parseexactrat",
@@ -104,16 +114,43 @@
       "pkg_core_validation_pipeline_validatecanonlist",
       "pkg_core_validation_pipeline_validateexactint",
       "pkg_core_validation_pipeline_validateexactrat",
+      "pkg_core_validation_pipeline_validateinterval",
       "pkg_core_validation_pipeline_validateratio",
       "pkg_core_validation_pipeline_validateroman",
+      "pkg_core_validation_pipeline_validateset",
       "pkg_core_validation_pipeline_validatetol",
       "pkg_core_validation_pipeline_validatetuple",
-      "reasoncode",
       "validation_parsedexactint",
       "validation_result",
-      "validation_stage",
-      "validationmethod",
-      "verdict"
+      "validation_stage"
+    ],
+    "3": [
+      "core_domain",
+      "core_equivalencepolicy",
+      "core_eventlog",
+      "core_generationmode",
+      "core_generationrequest",
+      "core_generationrequeststatus",
+      "core_gradeband",
+      "core_locale",
+      "core_masterytopic",
+      "core_rendertarget",
+      "core_student",
+      "core_submission",
+      "core_taskinstance",
+      "core_taskset",
+      "core_tasktype",
+      "core_tasktypestatus",
+      "core_tiercode",
+      "core_user",
+      "core_usertype",
+      "core_validationmethod",
+      "core_verdict",
+      "pkg_core_constants",
+      "pkg_core_rows",
+      "rawmessage",
+      "time",
+      "uuid"
     ],
     "4": [
       "migrations_000001_create_phase0_schema_up",
@@ -148,8 +185,10 @@
       "pkg_core_validation_pipeline_test_testvalidateexactintincorrect",
       "pkg_core_validation_pipeline_test_testvalidateexactintunparseable",
       "pkg_core_validation_pipeline_test_testvalidateexactrat",
+      "pkg_core_validation_pipeline_test_testvalidateinterval",
       "pkg_core_validation_pipeline_test_testvalidateratio",
       "pkg_core_validation_pipeline_test_testvalidateroman",
+      "pkg_core_validation_pipeline_test_testvalidateset",
       "pkg_core_validation_pipeline_test_testvalidatetol",
       "pkg_core_validation_pipeline_test_testvalidatetuple",
       "t"
@@ -320,12 +359,12 @@
     ]
   },
   "cohesion": {
-    "0": 0.07142857142857142,
-    "1": 0.15384615384615385,
-    "2": 0.07407407407407407,
-    "3": 0.21,
+    "0": 0.03636363636363636,
+    "1": 0.05555555555555555,
+    "2": 0.2022792022792023,
+    "3": 0.16,
     "4": 0.19480519480519481,
-    "5": 0.28205128205128205,
+    "5": 0.24761904761904763,
     "6": 0.18181818181818182,
     "7": 0.2,
     "8": 0.2,
@@ -353,19 +392,24 @@
   },
   "gods": [
     {
-      "id": "docs_agent_log_agent_log",
-      "label": "Agent log",
-      "degree": 27
-    },
-    {
       "id": "docs_srd_07_task_type_specs_exemplars_07_wave_a_exemplar_task_type_specs",
       "label": "07 \u2014 Wave-A Exemplar Task-Type Specs",
-      "degree": 26
+      "degree": 54
+    },
+    {
+      "id": "docs_agent_log_agent_log",
+      "label": "Agent log",
+      "degree": 35
     },
     {
       "id": "validation_result",
       "label": "Result",
-      "degree": 13
+      "degree": 15
+    },
+    {
+      "id": "pkg_core_validation_pipeline_validate",
+      "label": "Validate()",
+      "degree": 12
     },
     {
       "id": "docs_srd_02_requirements_02_requirements",
@@ -373,13 +417,13 @@
       "degree": 10
     },
     {
-      "id": "pkg_core_validation_pipeline_validate",
-      "label": "Validate()",
-      "degree": 10
-    },
-    {
       "id": "migrations_000001_create_phase0_schema_up_task_type",
       "label": "task_type",
+      "degree": 9
+    },
+    {
+      "id": "pkg_core_validation_pipeline_validateexactint",
+      "label": "ValidateExactInt()",
       "degree": 9
     },
     {
@@ -393,17 +437,34 @@
       "degree": 9
     },
     {
-      "id": "pkg_core_validation_pipeline_validateexactint",
-      "label": "ValidateExactInt()",
-      "degree": 9
-    },
-    {
-      "id": "core_tasktype",
-      "label": "TaskType",
+      "id": "core_reasoncode",
+      "label": "ReasonCode",
       "degree": 8
     }
   ],
   "surprises": [
+    {
+      "source": "TestValidateInterval()",
+      "target": "ValidateInterval()",
+      "source_files": [
+        "pkg/core/validation/pipeline_test.go",
+        "pkg/core/validation/pipeline.go"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "TestValidateSet()",
+      "target": "ValidateSet()",
+      "source_files": [
+        "pkg/core/validation/pipeline_test.go",
+        "pkg/core/validation/pipeline.go"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
     {
       "source": "TestValidateRatio()",
       "target": "ValidateRatio()",
@@ -429,28 +490,6 @@
     {
       "source": "TestValidateExactRat()",
       "target": "ValidateExactRat()",
-      "source_files": [
-        "pkg/core/validation/pipeline_test.go",
-        "pkg/core/validation/pipeline.go"
-      ],
-      "confidence": "INFERRED",
-      "relation": "calls",
-      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
-    },
-    {
-      "source": "TestValidateTuple()",
-      "target": "ValidateTuple()",
-      "source_files": [
-        "pkg/core/validation/pipeline_test.go",
-        "pkg/core/validation/pipeline.go"
-      ],
-      "confidence": "INFERRED",
-      "relation": "calls",
-      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
-    },
-    {
-      "source": "TestValidateCanonList()",
-      "target": "ValidateCanonList()",
       "source_files": [
         "pkg/core/validation/pipeline_test.go",
         "pkg/core/validation/pipeline.go"

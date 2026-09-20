@@ -1,24 +1,24 @@
 # Graph Report - schema  (2026-09-20)
 
 ## Corpus Check
-- 31 files · ~27,255 words
+- 31 files · ~27,389 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 297 nodes · 392 edges · 30 communities (28 shown, 2 thin omitted)
+- 298 nodes · 393 edges · 30 communities (28 shown, 2 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 13 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b18e574b`
+- Built from commit: `37a00f2a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- Agent log
-- constants.go
 - 07 — Wave-A Exemplar Task-Type Specs
+- Agent log
 - pipeline.go
+- constants.go
 - 000001_create_phase0_schema.up.sql
 - pipeline_test.go
 - 02 — Requirements
@@ -38,7 +38,7 @@
 - github.com/berdsa/mathprep_schema
 
 ## God Nodes (most connected - your core abstractions)
-1. `07 — Wave-A Exemplar Task-Type Specs` - 53 edges
+1. `07 — Wave-A Exemplar Task-Type Specs` - 54 edges
 2. `Agent log` - 36 edges
 3. `Result` - 15 edges
 4. `Validate()` - 12 edges
@@ -66,21 +66,21 @@
 
 ## Communities (30 total, 2 thin omitted)
 
-### Community 0 - "Agent log"
+### Community 0 - "07 — Wave-A Exemplar Task-Type Specs"
+Cohesion: 0.04
+Nodes (54): 07 — Wave-A Exemplar Task-Type Specs, G1-NUM-001 — Addition within range, G1-NUM-002 — Subtraction within range, G1-NUM-003 — Number comparison, G1-NUM-004 — Missing addend, G1-NUM-005 — Simple word problem (addition/subtraction), G1-NUM-006 — Place value, G1-NUM-007 — Ordering a list (+46 more)
+
+### Community 1 - "Agent log"
 Cohesion: 0.05
 Nodes (36): 2026-09-19 — Phase 0 base DDL, 2026-09-19 — Phase 0 dictionary seeds, 2026-09-19 — Phase 0 forbidden-write probes, 2026-09-19 — Phase 0 idempotency constraints, 2026-09-19 — Phase 0 migration plan, 2026-09-19 — Phase 0 migration verification, 2026-09-19 — Phase 0 service roles and grants, 2026-09-19 — Phase 0 summary (+28 more)
 
-### Community 1 - "constants.go"
-Cohesion: 0.16
-Nodes (24): Domain, EquivalencePolicy, EventLog, GenerationMode, GenerationRequest, GenerationRequestStatus, GradeBand, Locale (+16 more)
-
-### Community 2 - "07 — Wave-A Exemplar Task-Type Specs"
-Cohesion: 0.04
-Nodes (53): 07 — Wave-A Exemplar Task-Type Specs, G1-NUM-001 — Addition within range, G1-NUM-002 — Subtraction within range, G1-NUM-003 — Number comparison, G1-NUM-004 — Missing addend, G1-NUM-005 — Simple word problem (addition/subtraction), G1-NUM-006 — Place value, G1-NUM-007 — Ordering a list (+45 more)
-
-### Community 3 - "pipeline.go"
+### Community 2 - "pipeline.go"
 Cohesion: 0.20
 Nodes (26): ReasonCode, CompareExactInt(), gcd64(), isQuadrantLabel(), isRoman(), joinInts(), NormalizeExactInt(), ParseExactInt() (+18 more)
+
+### Community 3 - "constants.go"
+Cohesion: 0.16
+Nodes (24): Domain, EquivalencePolicy, EventLog, GenerationMode, GenerationRequest, GenerationRequestStatus, GradeBand, Locale (+16 more)
 
 ### Community 4 - "000001_create_phase0_schema.up.sql"
 Cohesion: 0.19
@@ -143,7 +143,7 @@ Cohesion: 0.50
 Nodes (3): 00 — Индекс артефактов трека `math-task-catalog`, Реестр допущений и открытых вопросов — сводный, обновлён, Реестр репозиториев (введён этим ходом, см. ADR-006)
 
 ## Knowledge Gaps
-- **168 isolated node(s):** `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is`, `Source of truth`, `Stack` (+163 more)
+- **169 isolated node(s):** `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is`, `Source of truth`, `Stack` (+164 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -153,8 +153,8 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `ReasonCode` connect `pipeline.go` to `constants.go`?**
   _High betweenness centrality (0.014) - this node is a cross-community bridge._
 - **What connects `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is` to the rest of the system?**
-  _168 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _169 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `07 — Wave-A Exemplar Task-Type Specs` be split into smaller, more focused modules?**
+  _Cohesion score 0.03636363636363636 - nodes in this community are weakly interconnected._
 - **Should `Agent log` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
-- **Should `07 — Wave-A Exemplar Task-Type Specs` be split into smaller, more focused modules?**
-  _Cohesion score 0.037037037037037035 - nodes in this community are weakly interconnected._
