@@ -260,6 +260,21 @@
 | Worked examples | `x²-7x+12=0→{3,4}`; `x²+x-6=0→{-3,2}`; `x²- x-20=0→{-4,5}` |
 | Misconception tags | `MISC-ROOT-SIGN`, `MISC-FACTOR-PAIR`, `MISC-SET-ORDER` |
 
+## G7-EE-004 — Quadratic inequality
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Solve a quadratic inequality / EE / 7 / Analyze |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `x² + {b}x + {c} > 0` |
+| Variables | roots `r1<r2` in `[1,10]`; `b=-(r1+r2)`, `c=r1·r2` |
+| Solution / equivalence_policy | `(-∞,r1) ∪ (r2,∞)`; **STRICT-FORM** canonical interval |
+| Input contract | canonical interval text; this implementation emits the right-open branch `({r2},∞)` for the positive-side prompt |
+| Generation constraint | use `x² + {b}x + {c} > 0` and ask for the positive solution branch `x>{r2}` |
+| Verdict model / oracle | `OK, VALUE_MISMATCH, WRONG_FORMAT`; independently verify the selected root boundary; two batches of 1000 |
+| Worked examples | `x²-7x+12>0→(4,∞)`; `x²-5x+6>0→(3,∞)`; `x²-3x+2>0→(2,∞)` |
+| Misconception tags | `MISC-SIGN-CHART`, `MISC-ROOT-BOUNDARY`, `MISC-OPEN-CLOSED` |
+
 ## G3-NUM-005 — Simple word problem (addition/subtraction) [HYBRID-AI]
 
 | Field | Value |

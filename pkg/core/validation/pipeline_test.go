@@ -126,6 +126,15 @@ func TestValidateSet(t *testing.T) {
 	}
 }
 
+func TestValidateInterval(t *testing.T) {
+	if got := ValidateInterval(" ( 3, ∞ ) ", "(3,∞)"); got.Verdict != core.VerdictCorrect {
+		t.Fatalf("got %+v", got)
+	}
+	if got := ValidateInterval("(4,∞)", "(3,∞)"); got.Verdict != core.VerdictIncorrect {
+		t.Fatalf("got %+v", got)
+	}
+}
+
 func TestValidateExactRat(t *testing.T) {
 	if got := ValidateExactRat("5/12", "5/12"); got.Verdict != core.VerdictCorrect {
 		t.Fatalf("got %+v", got)

@@ -41,6 +41,9 @@ func Validate(method core.ValidationMethod, raw, correctAnswer string) Result {
 		if strings.Contains(correctAnswer, ":") {
 			return ValidateRatio(raw, correctAnswer)
 		}
+		if strings.Contains(correctAnswer, "∞") {
+			return ValidateInterval(raw, correctAnswer)
+		}
 		return ValidateCanonList(raw, correctAnswer)
 	case core.ValidationMethodTuple:
 		return ValidateTuple(raw, correctAnswer)
@@ -53,6 +56,23 @@ func Validate(method core.ValidationMethod, raw, correctAnswer string) Result {
 	default:
 		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
 	}
+}
+
+var rightOpenInterval = regexp.MustCompile(`^\s*\(\s*(-?[0-9]+)\s*,\s*∞\s*\)\s*$`)
+
+func ValidateInterval(raw, correctAnswer string) Result {
+	got := rightOpenInterval.FindStringSubmatch(raw)
+	want := rightOpenInterval.FindStringSubmatch(correctAnswer)
+	if len(got) != 2 {
+		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
+	}
+	if len(want) != 2 {
+		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonParseError, Stage: StageCompare, CorrectAnswer: correctAnswer}
+	}
+	if got[1] != want[1] {
+		return Result{Verdict: core.VerdictIncorrect, ReasonCode: core.ReasonValueMismatch, Normalized: "(" + got[1] + ",∞)", Stage: StageVerdict, CorrectAnswer: correctAnswer}
+	}
+	return Result{Verdict: core.VerdictCorrect, ReasonCode: core.ReasonOK, Normalized: "(" + got[1] + ",∞)", Stage: StageVerdict, CorrectAnswer: "(" + want[1] + ",∞)"}
 }
 
 // ValidateSet compares comma- or whitespace-separated integer members after
