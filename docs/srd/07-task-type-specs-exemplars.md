@@ -171,6 +171,20 @@
 | Instance space / examples | 100 pairs; `21÷?=3→7`, `100÷?=10→10`, `2÷?=2→1` |
 | Misconception tags | `MISC-DIVISOR-DIVIDEND-SWAP`, `MISC-FACT-FAMILY` |
 
+## G3-NUM-017 — Missing dividend
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Find the missing dividend / NUM / 3 / Apply |
+| spec_version / generation_mode | 1.0.0-draft / CODE |
+| locale / render_target | `ru-KZ` / `plaintext`, `unicode-math` |
+| Template / variables | `? ÷ {b} = {c}`; `b,c∈[1,10]`, dividend `a=b·c≤100` |
+| Solution / equivalence_policy | `b·c`; **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$` |
+| Verification oracle | independently multiply divisor and quotient; 1000/1000 per seed batch |
+| Instance space / examples | 100 pairs; `?÷7=3→21`, `?÷10=10→100`, `?÷2=1→2` |
+| Misconception tags | `MISC-DIVIDEND-DIVISOR-SWAP`, `MISC-MULTIPLICATION-FACT` |
+
 ## G1-NUM-001 — Addition within range
 
 | Field | Value |
