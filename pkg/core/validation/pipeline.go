@@ -59,10 +59,17 @@ func Validate(method core.ValidationMethod, raw, correctAnswer string) Result {
 }
 
 var rightOpenInterval = regexp.MustCompile(`^\s*\(\s*(-?[0-9]+)\s*,\s*∞\s*\)\s*$`)
+var leftClosedInterval = regexp.MustCompile(`^\s*\(\s*-∞\s*,\s*(-?[0-9]+)\s*\]\s*$`)
 
 func ValidateInterval(raw, correctAnswer string) Result {
 	got := rightOpenInterval.FindStringSubmatch(raw)
 	want := rightOpenInterval.FindStringSubmatch(correctAnswer)
+	close := "]"
+	if len(got) != 2 || len(want) != 2 {
+		got = leftClosedInterval.FindStringSubmatch(raw)
+		want = leftClosedInterval.FindStringSubmatch(correctAnswer)
+		close = "]"
+	}
 	if len(got) != 2 {
 		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
 	}
@@ -70,7 +77,10 @@ func ValidateInterval(raw, correctAnswer string) Result {
 		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonParseError, Stage: StageCompare, CorrectAnswer: correctAnswer}
 	}
 	if got[1] != want[1] {
-		return Result{Verdict: core.VerdictIncorrect, ReasonCode: core.ReasonValueMismatch, Normalized: "(" + got[1] + ",∞)", Stage: StageVerdict, CorrectAnswer: correctAnswer}
+		return Result{Verdict: core.VerdictIncorrect, ReasonCode: core.ReasonValueMismatch, Normalized: "(-∞," + got[1] + close, Stage: StageVerdict, CorrectAnswer: correctAnswer}
+	}
+	if strings.Contains(correctAnswer, "-∞") {
+		return Result{Verdict: core.VerdictCorrect, ReasonCode: core.ReasonOK, Normalized: "(-∞," + got[1] + close, Stage: StageVerdict, CorrectAnswer: "(-∞," + want[1] + close}
 	}
 	return Result{Verdict: core.VerdictCorrect, ReasonCode: core.ReasonOK, Normalized: "(" + got[1] + ",∞)", Stage: StageVerdict, CorrectAnswer: "(" + want[1] + ",∞)"}
 }

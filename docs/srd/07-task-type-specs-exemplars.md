@@ -275,6 +275,20 @@
 | Worked examples | `x²-7x+12>0→(4,∞)`; `x²-5x+6>0→(3,∞)`; `x²-3x+2>0→(2,∞)` |
 | Misconception tags | `MISC-SIGN-CHART`, `MISC-ROOT-BOUNDARY`, `MISC-OPEN-CLOSED` |
 
+## G7-EE-005 — Linear inequality
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Solve a linear inequality / EE / 7 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `{a}x + {b} ≤ {c}` |
+| Variables | `a∈[1,10]`, boundary `k∈[-10,10]`, `b∈[1,20]`, `c=a·k+b` |
+| Solution / equivalence_policy | `(-∞,k]`; **STRICT-FORM** canonical interval |
+| Input contract | `^\s*\(\s*-∞\s*,\s*(-?[0-9]+)\s*\]\s*$` |
+| Verdict model / oracle | `OK, VALUE_MISMATCH, WRONG_FORMAT`; independently recompute `(c-b)/a`; two batches of 1000 |
+| Worked examples | `2x+3≤11→(-∞,4]`; `5x+1≤26→(-∞,5]`; `x+20≤10→(-∞,-10]` |
+| Misconception tags | `MISC-INEQUALITY-DIRECTION`, `MISC-ENDPOINT`, `MISC-SUBTRACT-CONSTANT` |
+
 ## G3-NUM-005 — Simple word problem (addition/subtraction) [HYBRID-AI]
 
 | Field | Value |
