@@ -11,7 +11,7 @@
       "source_file": "go.mod",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 28,
+      "community": 29,
       "community_name": "github.com/berdsa/mathprep_schema",
       "norm_label": "github.com/berdsa/mathprep_schema",
       "id": "pkg_github_com_berdsa_mathprep_schema"
@@ -22,7 +22,7 @@
       "source_file": "migrations/000001_create_phase0_schema.down.sql",
       "source_location": null,
       "_origin": "ast",
-      "community": 19,
+      "community": 20,
       "community_name": "000001_create_phase0_schema.down.sql",
       "norm_label": "000001_create_phase0_schema.down.sql",
       "id": "migrations_000001_create_phase0_schema_down"
@@ -275,7 +275,7 @@
       "source_file": "migrations/000002_seed_dictionaries.down.sql",
       "source_location": null,
       "_origin": "ast",
-      "community": 20,
+      "community": 21,
       "community_name": "000002_seed_dictionaries.down.sql",
       "norm_label": "000002_seed_dictionaries.down.sql",
       "id": "migrations_000002_seed_dictionaries_down"
@@ -286,7 +286,7 @@
       "source_file": "migrations/000002_seed_dictionaries.up.sql",
       "source_location": null,
       "_origin": "ast",
-      "community": 21,
+      "community": 22,
       "community_name": "000002_seed_dictionaries.up.sql",
       "norm_label": "000002_seed_dictionaries.up.sql",
       "id": "migrations_000002_seed_dictionaries_up"
@@ -297,7 +297,7 @@
       "source_file": "migrations/000003_add_idempotency_constraints.down.sql",
       "source_location": null,
       "_origin": "ast",
-      "community": 22,
+      "community": 23,
       "community_name": "000003_add_idempotency_constraints.down.sql",
       "norm_label": "000003_add_idempotency_constraints.down.sql",
       "id": "migrations_000003_add_idempotency_constraints_down"
@@ -308,7 +308,7 @@
       "source_file": "migrations/000003_add_idempotency_constraints.up.sql",
       "source_location": null,
       "_origin": "ast",
-      "community": 23,
+      "community": 24,
       "community_name": "000003_add_idempotency_constraints.up.sql",
       "norm_label": "000003_add_idempotency_constraints.up.sql",
       "id": "migrations_000003_add_idempotency_constraints_up"
@@ -319,7 +319,7 @@
       "source_file": "migrations/000004_create_service_roles.down.sql",
       "source_location": null,
       "_origin": "ast",
-      "community": 24,
+      "community": 25,
       "community_name": "000004_create_service_roles.down.sql",
       "norm_label": "000004_create_service_roles.down.sql",
       "id": "migrations_000004_create_service_roles_down"
@@ -330,7 +330,7 @@
       "source_file": "migrations/000004_create_service_roles.up.sql",
       "source_location": null,
       "_origin": "ast",
-      "community": 25,
+      "community": 26,
       "community_name": "000004_create_service_roles.up.sql",
       "norm_label": "000004_create_service_roles.up.sql",
       "id": "migrations_000004_create_service_roles_up"
@@ -341,7 +341,7 @@
       "source_file": "migrations/000005_task_type_grade_band.down.sql",
       "source_location": null,
       "_origin": "ast",
-      "community": 26,
+      "community": 27,
       "community_name": "000005_task_type_grade_band.down.sql",
       "norm_label": "000005_task_type_grade_band.down.sql",
       "id": "migrations_000005_task_type_grade_band_down"
@@ -352,7 +352,7 @@
       "source_file": "migrations/000005_task_type_grade_band.up.sql",
       "source_location": null,
       "_origin": "ast",
-      "community": 27,
+      "community": 28,
       "community_name": "000005_task_type_grade_band.up.sql",
       "norm_label": "000005_task_type_grade_band.up.sql",
       "id": "migrations_000005_task_type_grade_band_up"
@@ -363,7 +363,7 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "community_name": "constants.go",
       "norm_label": "constants.go",
       "id": "pkg_core_constants"
@@ -374,7 +374,7 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "community_name": "constants.go",
       "norm_label": "domain",
       "id": "core_domain"
@@ -385,7 +385,7 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L26",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "community_name": "constants.go",
       "norm_label": "gradeband",
       "id": "core_gradeband"
@@ -396,7 +396,7 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L43",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "community_name": "constants.go",
       "norm_label": "tiercode",
       "id": "core_tiercode"
@@ -407,7 +407,7 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L51",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "community_name": "constants.go",
       "norm_label": "validationmethod",
       "id": "core_validationmethod"
@@ -418,7 +418,7 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L67",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "community_name": "constants.go",
       "norm_label": "equivalencepolicy",
       "id": "core_equivalencepolicy"
@@ -429,7 +429,7 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L75",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "community_name": "constants.go",
       "norm_label": "generationmode",
       "id": "core_generationmode"
@@ -440,7 +440,7 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L82",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "community_name": "constants.go",
       "norm_label": "tasktypestatus",
       "id": "core_tasktypestatus"
@@ -451,7 +451,7 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L90",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "community_name": "constants.go",
       "norm_label": "verdict",
       "id": "core_verdict"
@@ -462,7 +462,7 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L98",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "community_name": "pipeline.go",
       "norm_label": "reasoncode",
       "id": "core_reasoncode"
@@ -473,7 +473,7 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L113",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "community_name": "constants.go",
       "norm_label": "rendertarget",
       "id": "core_rendertarget"
@@ -484,7 +484,7 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L120",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "community_name": "constants.go",
       "norm_label": "locale",
       "id": "core_locale"
@@ -495,7 +495,7 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L124",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "community_name": "constants.go",
       "norm_label": "usertype",
       "id": "core_usertype"
@@ -506,7 +506,7 @@
       "source_file": "pkg/core/rows.go",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "community_name": "constants.go",
       "norm_label": "rows.go",
       "id": "pkg_core_rows"
@@ -517,7 +517,7 @@
       "source_file": "pkg/core/rows.go",
       "source_location": "L10",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "community_name": "constants.go",
       "norm_label": "user",
       "id": "core_user"
@@ -528,7 +528,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "community_name": "constants.go",
       "norm_label": "uuid",
       "id": "uuid"
@@ -539,7 +539,7 @@
       "source_file": "pkg/core/rows.go",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "community_name": "constants.go",
       "norm_label": "student",
       "id": "core_student"
@@ -550,7 +550,7 @@
       "source_file": "pkg/core/rows.go",
       "source_location": "L20",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "community_name": "constants.go",
       "norm_label": "generationrequeststatus",
       "id": "core_generationrequeststatus"
@@ -561,7 +561,7 @@
       "source_file": "pkg/core/rows.go",
       "source_location": "L29",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "community_name": "constants.go",
       "norm_label": "generationrequest",
       "id": "core_generationrequest"
@@ -572,7 +572,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "community_name": "constants.go",
       "norm_label": "rawmessage",
       "id": "rawmessage"
@@ -583,7 +583,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "community_name": "constants.go",
       "norm_label": "time",
       "id": "time"
@@ -594,7 +594,7 @@
       "source_file": "pkg/core/rows.go",
       "source_location": "L41",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "community_name": "constants.go",
       "norm_label": "tasktype",
       "id": "core_tasktype"
@@ -605,7 +605,7 @@
       "source_file": "pkg/core/rows.go",
       "source_location": "L53",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "community_name": "constants.go",
       "norm_label": "taskset",
       "id": "core_taskset"
@@ -616,7 +616,7 @@
       "source_file": "pkg/core/rows.go",
       "source_location": "L61",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "community_name": "constants.go",
       "norm_label": "taskinstance",
       "id": "core_taskinstance"
@@ -627,7 +627,7 @@
       "source_file": "pkg/core/rows.go",
       "source_location": "L75",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "community_name": "constants.go",
       "norm_label": "submission",
       "id": "core_submission"
@@ -638,7 +638,7 @@
       "source_file": "pkg/core/rows.go",
       "source_location": "L87",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "community_name": "constants.go",
       "norm_label": "masterytopic",
       "id": "core_masterytopic"
@@ -649,7 +649,7 @@
       "source_file": "pkg/core/rows.go",
       "source_location": "L95",
       "_origin": "ast",
-      "community": 2,
+      "community": 1,
       "community_name": "constants.go",
       "norm_label": "eventlog",
       "id": "core_eventlog"
@@ -660,7 +660,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 0,
+      "community": 5,
       "community_name": "pipeline.go",
       "norm_label": "t",
       "id": "t"
@@ -671,7 +671,7 @@
       "source_file": "AGENTS.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 8,
+      "community": 9,
       "community_name": "AGENTS.md \u2014 schema",
       "norm_label": "agents.md",
       "id": "agents"
@@ -682,7 +682,7 @@
       "source_file": "AGENTS.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 8,
+      "community": 9,
       "community_name": "AGENTS.md \u2014 schema",
       "norm_label": "agents.md \u2014 schema",
       "id": "agents_agents_md_schema"
@@ -693,7 +693,7 @@
       "source_file": "AGENTS.md",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 8,
+      "community": 9,
       "community_name": "AGENTS.md \u2014 schema",
       "norm_label": "what this repo is",
       "id": "agents_what_this_repo_is"
@@ -704,7 +704,7 @@
       "source_file": "AGENTS.md",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 8,
+      "community": 9,
       "community_name": "AGENTS.md \u2014 schema",
       "norm_label": "source of truth",
       "id": "agents_source_of_truth"
@@ -715,7 +715,7 @@
       "source_file": "AGENTS.md",
       "source_location": "L9",
       "_origin": "ast",
-      "community": 8,
+      "community": 9,
       "community_name": "AGENTS.md \u2014 schema",
       "norm_label": "stack",
       "id": "agents_stack"
@@ -726,7 +726,7 @@
       "source_file": "AGENTS.md",
       "source_location": "L12",
       "_origin": "ast",
-      "community": 8,
+      "community": 9,
       "community_name": "AGENTS.md \u2014 schema",
       "norm_label": "local infra",
       "id": "agents_local_infra"
@@ -737,7 +737,7 @@
       "source_file": "AGENTS.md",
       "source_location": "L26",
       "_origin": "ast",
-      "community": 8,
+      "community": 9,
       "community_name": "AGENTS.md \u2014 schema",
       "norm_label": "conventions",
       "id": "agents_conventions"
@@ -748,7 +748,7 @@
       "source_file": "AGENTS.md",
       "source_location": "L31",
       "_origin": "ast",
-      "community": 8,
+      "community": 9,
       "community_name": "AGENTS.md \u2014 schema",
       "norm_label": "workflow",
       "id": "agents_workflow"
@@ -759,7 +759,7 @@
       "source_file": "AGENTS.md",
       "source_location": "L34",
       "_origin": "ast",
-      "community": 8,
+      "community": 9,
       "community_name": "AGENTS.md \u2014 schema",
       "norm_label": "testing",
       "id": "agents_testing"
@@ -770,7 +770,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "agent-log.md",
       "id": "docs_agent_log"
@@ -781,7 +781,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "agent log",
       "id": "docs_agent_log_agent_log"
@@ -792,7 +792,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "2026-09-19 \u2014 repository initialization",
       "id": "docs_agent_log_2026_09_19_repository_initialization"
@@ -803,7 +803,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L11",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "2026-09-19 \u2014 phase 0 migration plan",
       "id": "docs_agent_log_2026_09_19_phase_0_migration_plan"
@@ -814,7 +814,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L17",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "2026-09-19 \u2014 phase 0 base ddl",
       "id": "docs_agent_log_2026_09_19_phase_0_base_ddl"
@@ -825,7 +825,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L23",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "2026-09-19 \u2014 phase 0 dictionary seeds",
       "id": "docs_agent_log_2026_09_19_phase_0_dictionary_seeds"
@@ -836,7 +836,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L28",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "2026-09-19 \u2014 phase 0 idempotency constraints",
       "id": "docs_agent_log_2026_09_19_phase_0_idempotency_constraints"
@@ -847,7 +847,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L32",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "2026-09-19 \u2014 phase 0 service roles and grants",
       "id": "docs_agent_log_2026_09_19_phase_0_service_roles_and_grants"
@@ -858,7 +858,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L38",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "2026-09-19 \u2014 phase 0 migration verification",
       "id": "docs_agent_log_2026_09_19_phase_0_migration_verification"
@@ -869,7 +869,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L43",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "2026-09-19 \u2014 phase 0 forbidden-write probes",
       "id": "docs_agent_log_2026_09_19_phase_0_forbidden_write_probes"
@@ -880,7 +880,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L48",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "2026-09-19 \u2014 phase 0 summary",
       "id": "docs_agent_log_2026_09_19_phase_0_summary"
@@ -891,7 +891,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L53",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "2026-09-20 \u2014 phase 0 step 7, github remote",
       "id": "docs_agent_log_2026_09_20_phase_0_step_7_github_remote"
@@ -902,7 +902,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L57",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "2026-09-20 \u2014 phase 0 step 7, shared go module",
       "id": "docs_agent_log_2026_09_20_phase_0_step_7_shared_go_module"
@@ -913,7 +913,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L65",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "2026-09-20 \u2014 task_type grade-band correction",
       "id": "docs_agent_log_2026_09_20_task_type_grade_band_correction"
@@ -924,7 +924,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L72",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "2026-09-20 \u2014 shared go module root correction",
       "id": "docs_agent_log_2026_09_20_shared_go_module_root_correction"
@@ -935,7 +935,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L79",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "2026-09-20 \u2014 one-time generic grader dispatch",
       "id": "docs_agent_log_2026_09_20_one_time_generic_grader_dispatch"
@@ -946,7 +946,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L85",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "2026-09-20 \u2014 bool shared validator",
       "id": "docs_agent_log_2026_09_20_bool_shared_validator"
@@ -957,7 +957,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L89",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "2026-09-20 \u2014 canon list validator",
       "id": "docs_agent_log_2026_09_20_canon_list_validator"
@@ -968,7 +968,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L92",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "2026-09-20 \u2014 g3-num-002",
       "id": "docs_agent_log_2026_09_20_g3_num_002"
@@ -979,7 +979,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L96",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "2026-09-20 \u2014 g3-num-003",
       "id": "docs_agent_log_2026_09_20_g3_num_003"
@@ -990,7 +990,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L100",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "2026-09-20 \u2014 g3-num-004",
       "id": "docs_agent_log_2026_09_20_g3_num_004"
@@ -1001,7 +1001,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L104",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "2026-09-20 \u2014 g3-num-006",
       "id": "docs_agent_log_2026_09_20_g3_num_006"
@@ -1012,7 +1012,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L108",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "2026-09-20 \u2014 g3-num-007",
       "id": "docs_agent_log_2026_09_20_g3_num_007"
@@ -1023,7 +1023,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L112",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "2026-09-20 \u2014 g3-num-008",
       "id": "docs_agent_log_2026_09_20_g3_num_008"
@@ -1034,7 +1034,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L116",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "2026-09-20 \u2014 g3-num-009",
       "id": "docs_agent_log_2026_09_20_g3_num_009"
@@ -1045,7 +1045,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L120",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "2026-09-20 \u2014 tuple validator",
       "id": "docs_agent_log_2026_09_20_tuple_validator"
@@ -1056,7 +1056,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L124",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "2026-09-20 \u2014 g3-num-011",
       "id": "docs_agent_log_2026_09_20_g3_num_011"
@@ -1067,7 +1067,7 @@
       "source_file": "docs/agent-log.md",
       "source_location": "L128",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "community_name": "Agent log",
       "norm_label": "2026-09-20 \u2014 g3-num-010",
       "id": "docs_agent_log_2026_09_20_g3_num_010"
@@ -1078,7 +1078,7 @@
       "source_file": "docs/srd/00-conventions.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 6,
+      "community": 7,
       "community_name": "00 \u2014 Conventions",
       "norm_label": "00-conventions.md",
       "id": "docs_srd_00_conventions"
@@ -1089,7 +1089,7 @@
       "source_file": "docs/srd/00-conventions.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 6,
+      "community": 7,
       "community_name": "00 \u2014 Conventions",
       "norm_label": "00 \u2014 conventions",
       "id": "docs_srd_00_conventions_00_conventions"
@@ -1100,7 +1100,7 @@
       "source_file": "docs/srd/00-conventions.md",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 6,
+      "community": 7,
       "community_name": "00 \u2014 Conventions",
       "norm_label": "1. id scheme",
       "id": "docs_srd_00_conventions_1_id_scheme"
@@ -1111,7 +1111,7 @@
       "source_file": "docs/srd/00-conventions.md",
       "source_location": "L11",
       "_origin": "ast",
-      "community": 6,
+      "community": 7,
       "community_name": "00 \u2014 Conventions",
       "norm_label": "2. validation-method legend, normalization, and reason codes",
       "id": "docs_srd_00_conventions_2_validation_method_legend_normalization_and_reason_codes"
@@ -1122,7 +1122,7 @@
       "source_file": "docs/srd/00-conventions.md",
       "source_location": "L27",
       "_origin": "ast",
-      "community": 6,
+      "community": 7,
       "community_name": "00 \u2014 Conventions",
       "norm_label": "3. canonical-form grammar",
       "id": "docs_srd_00_conventions_3_canonical_form_grammar"
@@ -1133,7 +1133,7 @@
       "source_file": "docs/srd/00-conventions.md",
       "source_location": "L30",
       "_origin": "ast",
-      "community": 6,
+      "community": 7,
       "community_name": "00 \u2014 Conventions",
       "norm_label": "4. difficulty tier model",
       "id": "docs_srd_00_conventions_4_difficulty_tier_model"
@@ -1144,7 +1144,7 @@
       "source_file": "docs/srd/00-conventions.md",
       "source_location": "L33",
       "_origin": "ast",
-      "community": 6,
+      "community": 7,
       "community_name": "00 \u2014 Conventions",
       "norm_label": "5. notationprofile \u2014 `ru-kz`",
       "id": "docs_srd_00_conventions_5_notationprofile_ru_kz"
@@ -1155,7 +1155,7 @@
       "source_file": "docs/srd/00-conventions.md",
       "source_location": "L36",
       "_origin": "ast",
-      "community": 6,
+      "community": 7,
       "community_name": "00 \u2014 Conventions",
       "norm_label": "6. data-dictionary tables \u2014 **new this pass, phase-0 deliverable**",
       "id": "docs_srd_00_conventions_6_data_dictionary_tables_new_this_pass_phase_0_deliverable"
@@ -1166,7 +1166,7 @@
       "source_file": "docs/srd/00-conventions.md",
       "source_location": "L57",
       "_origin": "ast",
-      "community": 6,
+      "community": 7,
       "community_name": "00 \u2014 Conventions",
       "norm_label": "7. generation-safety rules",
       "id": "docs_srd_00_conventions_7_generation_safety_rules"
@@ -1177,7 +1177,7 @@
       "source_file": "docs/srd/00-conventions.md",
       "source_location": "L60",
       "_origin": "ast",
-      "community": 6,
+      "community": 7,
       "community_name": "00 \u2014 Conventions",
       "norm_label": "8. cross-service contract discipline \u2014 **new this pass**",
       "id": "docs_srd_00_conventions_8_cross_service_contract_discipline_new_this_pass"
@@ -1188,7 +1188,7 @@
       "source_file": "docs/srd/00-index.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 17,
+      "community": 18,
       "community_name": "00 \u2014 \u0418\u043d\u0434\u0435\u043a\u0441 \u0430\u0440\u0442\u0435\u0444\u0430\u043a\u0442\u043e\u0432 \u0442\u0440\u0435\u043a\u0430 `math-task-catalog`",
       "norm_label": "00-index.md",
       "id": "docs_srd_00_index"
@@ -1199,7 +1199,7 @@
       "source_file": "docs/srd/00-index.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 17,
+      "community": 18,
       "community_name": "00 \u2014 \u0418\u043d\u0434\u0435\u043a\u0441 \u0430\u0440\u0442\u0435\u0444\u0430\u043a\u0442\u043e\u0432 \u0442\u0440\u0435\u043a\u0430 `math-task-catalog`",
       "norm_label": "00 \u2014 \u0438\u043d\u0434\u0435\u043a\u0441 \u0430\u0440\u0442\u0435\u0444\u0430\u043a\u0442\u043e\u0432 \u0442\u0440\u0435\u043a\u0430 `math-task-catalog`",
       "id": "docs_srd_00_index_00_\u0438\u043d\u0434\u0435\u043a\u0441_\u0430\u0440\u0442\u0435\u0444\u0430\u043a\u0442\u043e\u0432_\u0442\u0440\u0435\u043a\u0430_math_task_catalog"
@@ -1210,7 +1210,7 @@
       "source_file": "docs/srd/00-index.md",
       "source_location": "L21",
       "_origin": "ast",
-      "community": 17,
+      "community": 18,
       "community_name": "00 \u2014 \u0418\u043d\u0434\u0435\u043a\u0441 \u0430\u0440\u0442\u0435\u0444\u0430\u043a\u0442\u043e\u0432 \u0442\u0440\u0435\u043a\u0430 `math-task-catalog`",
       "norm_label": "\u0440\u0435\u0435\u0441\u0442\u0440 \u0440\u0435\u043f\u043e\u0437\u0438\u0442\u043e\u0440\u0438\u0435\u0432 (\u0432\u0432\u0435\u0434\u0435\u043d \u044d\u0442\u0438\u043c \u0445\u043e\u0434\u043e\u043c, \u0441\u043c. adr-006)",
       "id": "docs_srd_00_index_\u0440\u0435\u0435\u0441\u0442\u0440_\u0440\u0435\u043f\u043e\u0437\u0438\u0442\u043e\u0440\u0438\u0435\u0432_\u0432\u0432\u0435\u0434\u0451\u043d_\u044d\u0442\u0438\u043c_\u0445\u043e\u0434\u043e\u043c_\u0441\u043c_adr_006"
@@ -1221,7 +1221,7 @@
       "source_file": "docs/srd/00-index.md",
       "source_location": "L30",
       "_origin": "ast",
-      "community": 17,
+      "community": 18,
       "community_name": "00 \u2014 \u0418\u043d\u0434\u0435\u043a\u0441 \u0430\u0440\u0442\u0435\u0444\u0430\u043a\u0442\u043e\u0432 \u0442\u0440\u0435\u043a\u0430 `math-task-catalog`",
       "norm_label": "\u0440\u0435\u0435\u0441\u0442\u0440 \u0434\u043e\u043f\u0443\u0449\u0435\u043d\u0438\u0438 \u0438 \u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0445 \u0432\u043e\u043f\u0440\u043e\u0441\u043e\u0432 \u2014 \u0441\u0432\u043e\u0434\u043d\u044b\u0438, \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d",
       "id": "docs_srd_00_index_\u0440\u0435\u0435\u0441\u0442\u0440_\u0434\u043e\u043f\u0443\u0449\u0435\u043d\u0438\u0439_\u0438_\u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0445_\u0432\u043e\u043f\u0440\u043e\u0441\u043e\u0432_\u0441\u0432\u043e\u0434\u043d\u044b\u0439_\u043e\u0431\u043d\u043e\u0432\u043b\u0451\u043d"
@@ -1232,7 +1232,7 @@
       "source_file": "docs/srd/00-scope-lock.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 10,
+      "community": 11,
       "community_name": "00 \u2014 Scope Lock",
       "norm_label": "00-scope-lock.md",
       "id": "docs_srd_00_scope_lock"
@@ -1243,7 +1243,7 @@
       "source_file": "docs/srd/00-scope-lock.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 10,
+      "community": 11,
       "community_name": "00 \u2014 Scope Lock",
       "norm_label": "00 \u2014 scope lock",
       "id": "docs_srd_00_scope_lock_00_scope_lock"
@@ -1254,7 +1254,7 @@
       "source_file": "docs/srd/00-scope-lock.md",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 10,
+      "community": 11,
       "community_name": "00 \u2014 Scope Lock",
       "norm_label": "scope amendment \u2014 scope-amd-01 (\u044d\u0442\u043e\u0442 \u0445\u043e\u0434)",
       "id": "docs_srd_00_scope_lock_scope_amendment_scope_amd_01_\u044d\u0442\u043e\u0442_\u0445\u043e\u0434"
@@ -1265,7 +1265,7 @@
       "source_file": "docs/srd/00-scope-lock.md",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 10,
+      "community": 11,
       "community_name": "00 \u2014 Scope Lock",
       "norm_label": "\u0442\u0435\u0440\u043c\u0438\u043d\u043e\u043b\u043e\u0433\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043f\u0440\u0430\u0432\u043a\u0430 (\u0441\u0430\u043c\u043e\u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0430, \u043d\u0435 \u0434\u0438\u0440\u0435\u043a\u0442\u0438\u0432\u0430 \u043e\u043f\u0435\u0440\u0430\u0442\u043e\u0440\u0430)",
       "id": "docs_srd_00_scope_lock_\u0442\u0435\u0440\u043c\u0438\u043d\u043e\u043b\u043e\u0433\u0438\u0447\u0435\u0441\u043a\u0430\u044f_\u043f\u0440\u0430\u0432\u043a\u0430_\u0441\u0430\u043c\u043e\u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0430_\u043d\u0435_\u0434\u0438\u0440\u0435\u043a\u0442\u0438\u0432\u0430_\u043e\u043f\u0435\u0440\u0430\u0442\u043e\u0440\u0430"
@@ -1276,7 +1276,7 @@
       "source_file": "docs/srd/00-scope-lock.md",
       "source_location": "L23",
       "_origin": "ast",
-      "community": 10,
+      "community": 11,
       "community_name": "00 \u2014 Scope Lock",
       "norm_label": "1. \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043d\u0438\u0435 `context_binding` (\u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u043e)",
       "id": "docs_srd_00_scope_lock_1_\u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043d\u0438\u0435_context_binding_\u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u043e"
@@ -1287,7 +1287,7 @@
       "source_file": "docs/srd/00-scope-lock.md",
       "source_location": "L40",
       "_origin": "ast",
-      "community": 10,
+      "community": 11,
       "community_name": "00 \u2014 Scope Lock",
       "norm_label": "2. \u0432 \u0441\u043a\u043e\u0443\u043f\u0435 (\u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u043e)",
       "id": "docs_srd_00_scope_lock_2_\u0432_\u0441\u043a\u043e\u0443\u043f\u0435_\u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u043e"
@@ -1298,7 +1298,7 @@
       "source_file": "docs/srd/00-scope-lock.md",
       "source_location": "L51",
       "_origin": "ast",
-      "community": 10,
+      "community": 11,
       "community_name": "00 \u2014 Scope Lock",
       "norm_label": "3. \u0432\u043d\u0435 \u0441\u043a\u043e\u0443\u043f\u0430 (\u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u043e)",
       "id": "docs_srd_00_scope_lock_3_\u0432\u043d\u0435_\u0441\u043a\u043e\u0443\u043f\u0430_\u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u043e"
@@ -1309,7 +1309,7 @@
       "source_file": "docs/srd/00-scope-lock.md",
       "source_location": "L61",
       "_origin": "ast",
-      "community": 10,
+      "community": 11,
       "community_name": "00 \u2014 Scope Lock",
       "norm_label": "4\u20137. \u0433\u043b\u043e\u0441\u0441\u0430\u0440\u0438\u0438, \u043a\u0430\u0440\u0442\u0430 \u0441\u0442\u0435\u0438\u043a\u0445\u043e\u043b\u0434\u0435\u0440\u043e\u0432, \u0440\u0435\u0435\u0441\u0442\u0440 \u0434\u043e\u043f\u0443\u0449\u0435\u043d\u0438\u0438, \u0440\u0435\u0435\u0441\u0442\u0440 \u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0445 \u0432\u043e\u043f\u0440\u043e\u0441\u043e\u0432",
       "id": "docs_srd_00_scope_lock_4_7_\u0433\u043b\u043e\u0441\u0441\u0430\u0440\u0438\u0439_\u043a\u0430\u0440\u0442\u0430_\u0441\u0442\u0435\u0439\u043a\u0445\u043e\u043b\u0434\u0435\u0440\u043e\u0432_\u0440\u0435\u0435\u0441\u0442\u0440_\u0434\u043e\u043f\u0443\u0449\u0435\u043d\u0438\u0439_\u0440\u0435\u0435\u0441\u0442\u0440_\u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0445_\u0432\u043e\u043f\u0440\u043e\u0441\u043e\u0432"
@@ -1320,7 +1320,7 @@
       "source_file": "docs/srd/01-current-state.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 16,
+      "community": 17,
       "community_name": "01 \u2014 Current State",
       "norm_label": "01-current-state.md",
       "id": "docs_srd_01_current_state"
@@ -1331,7 +1331,7 @@
       "source_file": "docs/srd/01-current-state.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 16,
+      "community": 17,
       "community_name": "01 \u2014 Current State",
       "norm_label": "01 \u2014 current state",
       "id": "docs_srd_01_current_state_01_current_state"
@@ -1342,7 +1342,7 @@
       "source_file": "docs/srd/01-current-state.md",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 16,
+      "community": 17,
       "community_name": "01 \u2014 Current State",
       "norm_label": "1. \u0447\u0442\u043e \u043f\u043e\u0434\u0430\u043d\u043e, \u0430 \u0447\u0442\u043e \u043d\u0435\u0442 \u2014 \u0431\u0435\u0437 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0438 \u0441 \u043f\u0440\u043e\u0448\u043b\u043e\u0433\u043e \u0445\u043e\u0434\u0430",
       "id": "docs_srd_01_current_state_1_\u0447\u0442\u043e_\u043f\u043e\u0434\u0430\u043d\u043e_\u0430_\u0447\u0442\u043e_\u043d\u0435\u0442_\u0431\u0435\u0437_\u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0439_\u0441_\u043f\u0440\u043e\u0448\u043b\u043e\u0433\u043e_\u0445\u043e\u0434\u0430"
@@ -1353,7 +1353,7 @@
       "source_file": "docs/srd/01-current-state.md",
       "source_location": "L17",
       "_origin": "ast",
-      "community": 16,
+      "community": 17,
       "community_name": "01 \u2014 Current State",
       "norm_label": "2. \u0436\u0435\u0441\u0442\u043a\u0438\u0435 \u0442\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u043e\u0433\u0440\u0430\u043d\u0438\u0447\u0435\u043d\u0438\u044f \u2014 \u043f\u0435\u0440\u0435\u0441\u043c\u043e\u0442\u0440\u0435\u043d\u044b \u044d\u0442\u0438\u043c \u0445\u043e\u0434\u043e\u043c",
       "id": "docs_srd_01_current_state_2_\u0436\u0451\u0441\u0442\u043a\u0438\u0435_\u0442\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u0435_\u043e\u0433\u0440\u0430\u043d\u0438\u0447\u0435\u043d\u0438\u044f_\u043f\u0435\u0440\u0435\u0441\u043c\u043e\u0442\u0440\u0435\u043d\u044b_\u044d\u0442\u0438\u043c_\u0445\u043e\u0434\u043e\u043c"
@@ -1364,7 +1364,7 @@
       "source_file": "docs/srd/01-current-state.md",
       "source_location": "L31",
       "_origin": "ast",
-      "community": 16,
+      "community": 17,
       "community_name": "01 \u2014 Current State",
       "norm_label": "3. \u0440\u0430\u043d\u0435\u0435 \u043f\u0440\u0438\u043d\u044f\u0442\u044b\u0435 \u0440\u0435\u0448\u0435\u043d\u0438\u044f \u2014 \u0441\u0442\u0430\u0442\u0443\u0441",
       "id": "docs_srd_01_current_state_3_\u0440\u0430\u043d\u0435\u0435_\u043f\u0440\u0438\u043d\u044f\u0442\u044b\u0435_\u0440\u0435\u0448\u0435\u043d\u0438\u044f_\u0441\u0442\u0430\u0442\u0443\u0441"
@@ -1375,7 +1375,7 @@
       "source_file": "docs/srd/01-current-state.md",
       "source_location": "L37",
       "_origin": "ast",
-      "community": 16,
+      "community": 17,
       "community_name": "01 \u2014 Current State",
       "norm_label": "4. \u0447\u0442\u043e \u043d\u0435 \u043c\u043e\u0434\u0438\u0444\u0438\u0446\u0438\u0440\u0443\u0435\u0442\u0441\u044f \u2014 \u0431\u0435\u0437 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0438",
       "id": "docs_srd_01_current_state_4_\u0447\u0442\u043e_\u043d\u0435_\u043c\u043e\u0434\u0438\u0444\u0438\u0446\u0438\u0440\u0443\u0435\u0442\u0441\u044f_\u0431\u0435\u0437_\u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0439"
@@ -1386,7 +1386,7 @@
       "source_file": "docs/srd/02-requirements.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 5,
+      "community": 6,
       "community_name": "02 \u2014 Requirements",
       "norm_label": "02-requirements.md",
       "id": "docs_srd_02_requirements"
@@ -1397,7 +1397,7 @@
       "source_file": "docs/srd/02-requirements.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 5,
+      "community": 6,
       "community_name": "02 \u2014 Requirements",
       "norm_label": "02 \u2014 requirements",
       "id": "docs_srd_02_requirements_02_requirements"
@@ -1408,7 +1408,7 @@
       "source_file": "docs/srd/02-requirements.md",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 5,
+      "community": 6,
       "community_name": "02 \u2014 Requirements",
       "norm_label": "fr-001 \u2014 generate a daily task set with adaptive topic weighting",
       "id": "docs_srd_02_requirements_fr_001_generate_a_daily_task_set_with_adaptive_topic_weighting"
@@ -1419,7 +1419,7 @@
       "source_file": "docs/srd/02-requirements.md",
       "source_location": "L8",
       "_origin": "ast",
-      "community": 5,
+      "community": 6,
       "community_name": "02 \u2014 Requirements",
       "norm_label": "fr-002 \u2014 validate a submitted answer and return a verdict",
       "id": "docs_srd_02_requirements_fr_002_validate_a_submitted_answer_and_return_a_verdict"
@@ -1430,7 +1430,7 @@
       "source_file": "docs/srd/02-requirements.md",
       "source_location": "L11",
       "_origin": "ast",
-      "community": 5,
+      "community": 6,
       "community_name": "02 \u2014 Requirements",
       "norm_label": "fr-003 \u2014 idempotent resubmission",
       "id": "docs_srd_02_requirements_fr_003_idempotent_resubmission"
@@ -1441,7 +1441,7 @@
       "source_file": "docs/srd/02-requirements.md",
       "source_location": "L14",
       "_origin": "ast",
-      "community": 5,
+      "community": 6,
       "community_name": "02 \u2014 Requirements",
       "norm_label": "fr-004 \u2014 unparseable never affects mastery or attempt counters",
       "id": "docs_srd_02_requirements_fr_004_unparseable_never_affects_mastery_or_attempt_counters"
@@ -1452,7 +1452,7 @@
       "source_file": "docs/srd/02-requirements.md",
       "source_location": "L17",
       "_origin": "ast",
-      "community": 5,
+      "community": 6,
       "community_name": "02 \u2014 Requirements",
       "norm_label": "fr-005 \u2014 defect-triggered invalidation and re-grade, snapshot preserved",
       "id": "docs_srd_02_requirements_fr_005_defect_triggered_invalidation_and_re_grade_snapshot_preserved"
@@ -1463,7 +1463,7 @@
       "source_file": "docs/srd/02-requirements.md",
       "source_location": "L20",
       "_origin": "ast",
-      "community": 5,
+      "community": 6,
       "community_name": "02 \u2014 Requirements",
       "norm_label": "fr-006 \u2014 fallback-pool exhaustion never silently shrinks a batch",
       "id": "docs_srd_02_requirements_fr_006_fallback_pool_exhaustion_never_silently_shrinks_a_batch"
@@ -1474,7 +1474,7 @@
       "source_file": "docs/srd/02-requirements.md",
       "source_location": "L23",
       "_origin": "ast",
-      "community": 5,
+      "community": 6,
       "community_name": "02 \u2014 Requirements",
       "norm_label": "fr-007 \u2014 generation is mediated by a durable job queue, not an in-request call *(new)*",
       "id": "docs_srd_02_requirements_fr_007_generation_is_mediated_by_a_durable_job_queue_not_an_in_request_call_new"
@@ -1485,7 +1485,7 @@
       "source_file": "docs/srd/02-requirements.md",
       "source_location": "L52",
       "_origin": "ast",
-      "community": 5,
+      "community": 6,
       "community_name": "02 \u2014 Requirements",
       "norm_label": "fr-008 \u2014 every service call appends to an immutable event journal *(new)*",
       "id": "docs_srd_02_requirements_fr_008_every_service_call_appends_to_an_immutable_event_journal_new"
@@ -1496,7 +1496,7 @@
       "source_file": "docs/srd/02-requirements.md",
       "source_location": "L80",
       "_origin": "ast",
-      "community": 5,
+      "community": 6,
       "community_name": "02 \u2014 Requirements",
       "norm_label": "non-functional requirements",
       "id": "docs_srd_02_requirements_non_functional_requirements"
@@ -1507,7 +1507,7 @@
       "source_file": "docs/srd/03-architecture.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 13,
+      "community": 14,
       "community_name": "03 \u2014 Architecture",
       "norm_label": "03-architecture.md",
       "id": "docs_srd_03_architecture"
@@ -1518,7 +1518,7 @@
       "source_file": "docs/srd/03-architecture.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 13,
+      "community": 14,
       "community_name": "03 \u2014 Architecture",
       "norm_label": "03 \u2014 architecture",
       "id": "docs_srd_03_architecture_03_architecture"
@@ -1529,7 +1529,7 @@
       "source_file": "docs/srd/03-architecture.md",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 13,
+      "community": 14,
       "community_name": "03 \u2014 Architecture",
       "norm_label": "context diagram",
       "id": "docs_srd_03_architecture_context_diagram"
@@ -1540,7 +1540,7 @@
       "source_file": "docs/srd/03-architecture.md",
       "source_location": "L21",
       "_origin": "ast",
-      "community": 13,
+      "community": 14,
       "community_name": "03 \u2014 Architecture",
       "norm_label": "sequence \u2014 generation via job queue (fr-007)",
       "id": "docs_srd_03_architecture_sequence_generation_via_job_queue_fr_007"
@@ -1551,7 +1551,7 @@
       "source_file": "docs/srd/03-architecture.md",
       "source_location": "L52",
       "_origin": "ast",
-      "community": 13,
+      "community": 14,
       "community_name": "03 \u2014 Architecture",
       "norm_label": "sequence \u2014 answer submission via qr (unchanged pattern, new owning service)",
       "id": "docs_srd_03_architecture_sequence_answer_submission_via_qr_unchanged_pattern_new_owning_service"
@@ -1562,7 +1562,7 @@
       "source_file": "docs/srd/03-architecture.md",
       "source_location": "L77",
       "_origin": "ast",
-      "community": 13,
+      "community": 14,
       "community_name": "03 \u2014 Architecture",
       "norm_label": "state machine \u2014 taskinstance lifecycle",
       "id": "docs_srd_03_architecture_state_machine_taskinstance_lifecycle"
@@ -1573,7 +1573,7 @@
       "source_file": "docs/srd/03-architecture.md",
       "source_location": "L80",
       "_origin": "ast",
-      "community": 13,
+      "community": 14,
       "community_name": "03 \u2014 Architecture",
       "norm_label": "erd \u2014 revised (findings a, b, e, g applied)",
       "id": "docs_srd_03_architecture_erd_revised_findings_a_b_e_g_applied"
@@ -1584,7 +1584,7 @@
       "source_file": "docs/srd/04-nfr-risk-ops.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 14,
+      "community": 15,
       "community_name": "04 \u2014 NFR, Risk, Ops",
       "norm_label": "04-nfr-risk-ops.md",
       "id": "docs_srd_04_nfr_risk_ops"
@@ -1595,7 +1595,7 @@
       "source_file": "docs/srd/04-nfr-risk-ops.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 14,
+      "community": 15,
       "community_name": "04 \u2014 NFR, Risk, Ops",
       "norm_label": "04 \u2014 nfr, risk, ops",
       "id": "docs_srd_04_nfr_risk_ops_04_nfr_risk_ops"
@@ -1606,7 +1606,7 @@
       "source_file": "docs/srd/04-nfr-risk-ops.md",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 14,
+      "community": 15,
       "community_name": "04 \u2014 NFR, Risk, Ops",
       "norm_label": "performance & availability",
       "id": "docs_srd_04_nfr_risk_ops_performance_availability"
@@ -1617,7 +1617,7 @@
       "source_file": "docs/srd/04-nfr-risk-ops.md",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 14,
+      "community": 15,
       "community_name": "04 \u2014 NFR, Risk, Ops",
       "norm_label": "observability",
       "id": "docs_srd_04_nfr_risk_ops_observability"
@@ -1628,7 +1628,7 @@
       "source_file": "docs/srd/04-nfr-risk-ops.md",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 14,
+      "community": 15,
       "community_name": "04 \u2014 NFR, Risk, Ops",
       "norm_label": "security \u2014 stride per trust boundary (updated for 3 services)",
       "id": "docs_srd_04_nfr_risk_ops_security_stride_per_trust_boundary_updated_for_3_services"
@@ -1639,7 +1639,7 @@
       "source_file": "docs/srd/04-nfr-risk-ops.md",
       "source_location": "L32",
       "_origin": "ast",
-      "community": 14,
+      "community": 15,
       "community_name": "04 \u2014 NFR, Risk, Ops",
       "norm_label": "raid register",
       "id": "docs_srd_04_nfr_risk_ops_raid_register"
@@ -1650,7 +1650,7 @@
       "source_file": "docs/srd/04-nfr-risk-ops.md",
       "source_location": "L41",
       "_origin": "ast",
-      "community": 14,
+      "community": 15,
       "community_name": "04 \u2014 NFR, Risk, Ops",
       "norm_label": "failure modes",
       "id": "docs_srd_04_nfr_risk_ops_failure_modes"
@@ -1661,7 +1661,7 @@
       "source_file": "docs/srd/05-decisions.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 18,
+      "community": 19,
       "community_name": "05-decisions.md",
       "norm_label": "05-decisions.md",
       "id": "docs_srd_05_decisions"
@@ -1672,7 +1672,7 @@
       "source_file": "docs/srd/05-decisions.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 18,
+      "community": 19,
       "community_name": "05-decisions.md",
       "norm_label": "05 \u2014 decisions (adrs)",
       "id": "docs_srd_05_decisions_05_decisions_adrs"
@@ -1683,7 +1683,7 @@
       "source_file": "docs/srd/06-traceability.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 9,
+      "community": 10,
       "community_name": "06 \u2014 Traceability, Glossary, Stakeholders, Open Items",
       "norm_label": "06-traceability.md",
       "id": "docs_srd_06_traceability"
@@ -1694,7 +1694,7 @@
       "source_file": "docs/srd/06-traceability.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 9,
+      "community": 10,
       "community_name": "06 \u2014 Traceability, Glossary, Stakeholders, Open Items",
       "norm_label": "06 \u2014 traceability, glossary, stakeholders, open items",
       "id": "docs_srd_06_traceability_06_traceability_glossary_stakeholders_open_items"
@@ -1705,7 +1705,7 @@
       "source_file": "docs/srd/06-traceability.md",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 9,
+      "community": 10,
       "community_name": "06 \u2014 Traceability, Glossary, Stakeholders, Open Items",
       "norm_label": "glossary \u2014 carried forward from `00-scope-lock.md` (single normative copy per quality-gate rule)",
       "id": "docs_srd_06_traceability_glossary_carried_forward_from_00_scope_lock_md_single_normative_copy_per_quality_gate_rule"
@@ -1716,7 +1716,7 @@
       "source_file": "docs/srd/06-traceability.md",
       "source_location": "L21",
       "_origin": "ast",
-      "community": 9,
+      "community": 10,
       "community_name": "06 \u2014 Traceability, Glossary, Stakeholders, Open Items",
       "norm_label": "\u043a\u0430\u0440\u0442\u0430 \u0441\u0442\u0435\u0438\u043a\u0445\u043e\u043b\u0434\u0435\u0440\u043e\u0432",
       "id": "docs_srd_06_traceability_\u043a\u0430\u0440\u0442\u0430_\u0441\u0442\u0435\u0439\u043a\u0445\u043e\u043b\u0434\u0435\u0440\u043e\u0432"
@@ -1727,7 +1727,7 @@
       "source_file": "docs/srd/06-traceability.md",
       "source_location": "L24",
       "_origin": "ast",
-      "community": 9,
+      "community": 10,
       "community_name": "06 \u2014 Traceability, Glossary, Stakeholders, Open Items",
       "norm_label": "\u0440\u0435\u0435\u0441\u0442\u0440 \u0434\u043e\u043f\u0443\u0449\u0435\u043d\u0438\u0438 \u2014 consolidated",
       "id": "docs_srd_06_traceability_\u0440\u0435\u0435\u0441\u0442\u0440_\u0434\u043e\u043f\u0443\u0449\u0435\u043d\u0438\u0439_consolidated"
@@ -1738,7 +1738,7 @@
       "source_file": "docs/srd/06-traceability.md",
       "source_location": "L41",
       "_origin": "ast",
-      "community": 9,
+      "community": 10,
       "community_name": "06 \u2014 Traceability, Glossary, Stakeholders, Open Items",
       "norm_label": "\u0440\u0435\u0435\u0441\u0442\u0440 \u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0445 \u0432\u043e\u043f\u0440\u043e\u0441\u043e\u0432 \u2014 consolidated",
       "id": "docs_srd_06_traceability_\u0440\u0435\u0435\u0441\u0442\u0440_\u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0445_\u0432\u043e\u043f\u0440\u043e\u0441\u043e\u0432_consolidated"
@@ -1749,7 +1749,7 @@
       "source_file": "docs/srd/06-traceability.md",
       "source_location": "L54",
       "_origin": "ast",
-      "community": 9,
+      "community": 10,
       "community_name": "06 \u2014 Traceability, Glossary, Stakeholders, Open Items",
       "norm_label": "traceability matrix",
       "id": "docs_srd_06_traceability_traceability_matrix"
@@ -1760,7 +1760,7 @@
       "source_file": "docs/srd/06-traceability.md",
       "source_location": "L67",
       "_origin": "ast",
-      "community": 9,
+      "community": 10,
       "community_name": "06 \u2014 Traceability, Glossary, Stakeholders, Open Items",
       "norm_label": "definition of done",
       "id": "docs_srd_06_traceability_definition_of_done"
@@ -1771,7 +1771,7 @@
       "source_file": "docs/srd/06-traceability.md",
       "source_location": "L72",
       "_origin": "ast",
-      "community": 9,
+      "community": 10,
       "community_name": "06 \u2014 Traceability, Glossary, Stakeholders, Open Items",
       "norm_label": "migration / rollout / rollback",
       "id": "docs_srd_06_traceability_migration_rollout_rollback"
@@ -1782,7 +1782,7 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "07-task-type-specs-exemplars.md",
       "id": "docs_srd_07_task_type_specs_exemplars"
@@ -1793,7 +1793,7 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "07 \u2014 wave-a exemplar task-type specs",
       "id": "docs_srd_07_task_type_specs_exemplars_07_wave_a_exemplar_task_type_specs"
@@ -1804,7 +1804,7 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "g3-num-001 \u2014 multi-digit addition with carry",
       "id": "docs_srd_07_task_type_specs_exemplars_g3_num_001_multi_digit_addition_with_carry"
@@ -1815,7 +1815,7 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L27",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "g3-num-014 \u2014 division with remainder",
       "id": "docs_srd_07_task_type_specs_exemplars_g3_num_014_division_with_remainder"
@@ -1826,7 +1826,7 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L44",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "g6-fra-003 \u2014 fraction addition, unlike denominators, proper result",
       "id": "docs_srd_07_task_type_specs_exemplars_g6_fra_003_fraction_addition_unlike_denominators_proper_result"
@@ -1837,7 +1837,7 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L61",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "g6-geo-009 \u2014 point quadrant identification",
       "id": "docs_srd_07_task_type_specs_exemplars_g6_geo_009_point_quadrant_identification"
@@ -1848,7 +1848,7 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L75",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "g3-num-005 \u2014 simple word problem (addition/subtraction) [hybrid-ai]",
       "id": "docs_srd_07_task_type_specs_exemplars_g3_num_005_simple_word_problem_addition_subtraction_hybrid_ai"
@@ -1859,7 +1859,7 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L94",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "g3-num-012 \u2014 roman numeral conversion",
       "id": "docs_srd_07_task_type_specs_exemplars_g3_num_012_roman_numeral_conversion"
@@ -1870,7 +1870,7 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L116",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "g1-num-001 \u2014 addition within range",
       "id": "docs_srd_07_task_type_specs_exemplars_g1_num_001_addition_within_range"
@@ -1881,7 +1881,7 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L138",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "g1-num-002 \u2014 subtraction within range",
       "id": "docs_srd_07_task_type_specs_exemplars_g1_num_002_subtraction_within_range"
@@ -1892,7 +1892,7 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L160",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "g1-num-003 \u2014 number comparison",
       "id": "docs_srd_07_task_type_specs_exemplars_g1_num_003_number_comparison"
@@ -1903,7 +1903,7 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L182",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "g1-num-004 \u2014 missing addend",
       "id": "docs_srd_07_task_type_specs_exemplars_g1_num_004_missing_addend"
@@ -1914,7 +1914,7 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L204",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "g1-num-005 \u2014 simple word problem (addition/subtraction)",
       "id": "docs_srd_07_task_type_specs_exemplars_g1_num_005_simple_word_problem_addition_subtraction"
@@ -1925,7 +1925,7 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L226",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "g1-num-006 \u2014 place value",
       "id": "docs_srd_07_task_type_specs_exemplars_g1_num_006_place_value"
@@ -1936,7 +1936,7 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L248",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "g1-num-007 \u2014 ordering a list",
       "id": "docs_srd_07_task_type_specs_exemplars_g1_num_007_ordering_a_list"
@@ -1947,7 +1947,7 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L270",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "g1-num-008 \u2014 money counting",
       "id": "docs_srd_07_task_type_specs_exemplars_g1_num_008_money_counting"
@@ -1958,7 +1958,7 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L292",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "g1-num-009 \u2014 skip counting / next term",
       "id": "docs_srd_07_task_type_specs_exemplars_g1_num_009_skip_counting_next_term"
@@ -1969,7 +1969,7 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L314",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "g1-num-010 \u2014 shape property lookup",
       "id": "docs_srd_07_task_type_specs_exemplars_g1_num_010_shape_property_lookup"
@@ -1980,7 +1980,7 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L336",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "g3-num-002 \u2014 multiplication fact",
       "id": "docs_srd_07_task_type_specs_exemplars_g3_num_002_multiplication_fact"
@@ -1991,7 +1991,7 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L358",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "g3-num-003 \u2014 exact division",
       "id": "docs_srd_07_task_type_specs_exemplars_g3_num_003_exact_division"
@@ -2002,7 +2002,7 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L380",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "g3-num-004 \u2014 multi-digit add/sub (carry/borrow)",
       "id": "docs_srd_07_task_type_specs_exemplars_g3_num_004_multi_digit_add_sub_carry_borrow"
@@ -2013,7 +2013,7 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L402",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "g3-num-006 \u2014 order of operations",
       "id": "docs_srd_07_task_type_specs_exemplars_g3_num_006_order_of_operations"
@@ -2024,7 +2024,7 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L424",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "g3-num-007 \u2014 rounding",
       "id": "docs_srd_07_task_type_specs_exemplars_g3_num_007_rounding"
@@ -2035,7 +2035,7 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L446",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "g3-num-008 \u2014 unit fraction of a quantity",
       "id": "docs_srd_07_task_type_specs_exemplars_g3_num_008_unit_fraction_of_a_quantity"
@@ -2046,7 +2046,7 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L468",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "g3-num-009 \u2014 perimeter of rectangle/square",
       "id": "docs_srd_07_task_type_specs_exemplars_g3_num_009_perimeter_of_rectangle_square"
@@ -2057,7 +2057,7 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L490",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "g3-num-010 \u2014 area of rectangle/square",
       "id": "docs_srd_07_task_type_specs_exemplars_g3_num_010_area_of_rectangle_square"
@@ -2068,7 +2068,7 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L512",
       "_origin": "ast",
-      "community": 3,
+      "community": 2,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "g3-num-011 \u2014 division with remainder",
       "id": "docs_srd_07_task_type_specs_exemplars_g3_num_011_division_with_remainder"
@@ -2079,7 +2079,7 @@
       "source_file": "docs/srd/08-developer-backlog.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 11,
+      "community": 12,
       "community_name": "08 \u2014 Developer Backlog",
       "norm_label": "08-developer-backlog.md",
       "id": "docs_srd_08_developer_backlog"
@@ -2090,7 +2090,7 @@
       "source_file": "docs/srd/08-developer-backlog.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 11,
+      "community": 12,
       "community_name": "08 \u2014 Developer Backlog",
       "norm_label": "08 \u2014 developer backlog",
       "id": "docs_srd_08_developer_backlog_08_developer_backlog"
@@ -2101,7 +2101,7 @@
       "source_file": "docs/srd/08-developer-backlog.md",
       "source_location": "L9",
       "_origin": "ast",
-      "community": 11,
+      "community": 12,
       "community_name": "08 \u2014 Developer Backlog",
       "norm_label": "phase 0 \u2014 schema, tables, dictionaries (`schema` repo)",
       "id": "docs_srd_08_developer_backlog_phase_0_schema_tables_dictionaries_schema_repo"
@@ -2112,7 +2112,7 @@
       "source_file": "docs/srd/08-developer-backlog.md",
       "source_location": "L29",
       "_origin": "ast",
-      "community": 11,
+      "community": 12,
       "community_name": "08 \u2014 Developer Backlog",
       "norm_label": "phase 1 \u2014 one task type, end to end (`taskgen` + `grader` repos, first commits)",
       "id": "docs_srd_08_developer_backlog_phase_1_one_task_type_end_to_end_taskgen_grader_repos_first_commits"
@@ -2123,7 +2123,7 @@
       "source_file": "docs/srd/08-developer-backlog.md",
       "source_location": "L56",
       "_origin": "ast",
-      "community": 11,
+      "community": 12,
       "community_name": "08 \u2014 Developer Backlog",
       "norm_label": "confirmation gate (applies before every subsequent type, not just this first one)",
       "id": "docs_srd_08_developer_backlog_confirmation_gate_applies_before_every_subsequent_type_not_just_this_first_one"
@@ -2134,7 +2134,7 @@
       "source_file": "docs/srd/08-developer-backlog.md",
       "source_location": "L71",
       "_origin": "ast",
-      "community": 11,
+      "community": 12,
       "community_name": "08 \u2014 Developer Backlog",
       "norm_label": "phase 2+ \u2014 remaining types, one at a time, curriculum order",
       "id": "docs_srd_08_developer_backlog_phase_2_remaining_types_one_at_a_time_curriculum_order"
@@ -2145,7 +2145,7 @@
       "source_file": "docs/srd/08-developer-backlog.md",
       "source_location": "L83",
       "_origin": "ast",
-      "community": 11,
+      "community": 12,
       "community_name": "08 \u2014 Developer Backlog",
       "norm_label": "deferred phase \u2014 analytics (`analytics` repo, started only after the above is substantially stable)",
       "id": "docs_srd_08_developer_backlog_deferred_phase_analytics_analytics_repo_started_only_after_the_above_is_substantially_stable"
@@ -2156,7 +2156,7 @@
       "source_file": "docs/srd/08-developer-backlog.md",
       "source_location": "L97",
       "_origin": "ast",
-      "community": 11,
+      "community": 12,
       "community_name": "08 \u2014 Developer Backlog",
       "norm_label": "cross-cutting notes for the developer, gathered from every chapter's fine print",
       "id": "docs_srd_08_developer_backlog_cross_cutting_notes_for_the_developer_gathered_from_every_chapter_s_fine_print"
@@ -2167,7 +2167,7 @@
       "source_file": "docs/srd/backend-integration.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 12,
+      "community": 13,
       "community_name": "Backend Integration",
       "norm_label": "backend-integration.md",
       "id": "docs_srd_backend_integration"
@@ -2178,7 +2178,7 @@
       "source_file": "docs/srd/backend-integration.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 12,
+      "community": 13,
       "community_name": "Backend Integration",
       "norm_label": "backend integration",
       "id": "docs_srd_backend_integration_backend_integration"
@@ -2189,7 +2189,7 @@
       "source_file": "docs/srd/backend-integration.md",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 12,
+      "community": 13,
       "community_name": "Backend Integration",
       "norm_label": "1. repository split and what each one owns",
       "id": "docs_srd_backend_integration_1_repository_split_and_what_each_one_owns"
@@ -2200,7 +2200,7 @@
       "source_file": "docs/srd/backend-integration.md",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 12,
+      "community": 13,
       "community_name": "Backend Integration",
       "norm_label": "2. shared validation pipeline (lives in `schema`, imported by `grader`)",
       "id": "docs_srd_backend_integration_2_shared_validation_pipeline_lives_in_schema_imported_by_grader"
@@ -2211,7 +2211,7 @@
       "source_file": "docs/srd/backend-integration.md",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 12,
+      "community": 13,
       "community_name": "Backend Integration",
       "norm_label": "3. cas security boundary \u2014 reserved, still no consumer, but now schedule-relevant",
       "id": "docs_srd_backend_integration_3_cas_security_boundary_reserved_still_no_consumer_but_now_schedule_relevant"
@@ -2222,7 +2222,7 @@
       "source_file": "docs/srd/backend-integration.md",
       "source_location": "L22",
       "_origin": "ast",
-      "community": 12,
+      "community": 13,
       "community_name": "Backend Integration",
       "norm_label": "4. golden tests",
       "id": "docs_srd_backend_integration_4_golden_tests"
@@ -2233,7 +2233,7 @@
       "source_file": "docs/srd/backend-integration.md",
       "source_location": "L25",
       "_origin": "ast",
-      "community": 12,
+      "community": 13,
       "community_name": "Backend Integration",
       "norm_label": "5. api contracts",
       "id": "docs_srd_backend_integration_5_api_contracts"
@@ -2244,7 +2244,7 @@
       "source_file": "docs/srd/backend-integration.md",
       "source_location": "L76",
       "_origin": "ast",
-      "community": 12,
+      "community": 13,
       "community_name": "Backend Integration",
       "norm_label": "6. event journal (fr-008) \u2014 write-side contract",
       "id": "docs_srd_backend_integration_6_event_journal_fr_008_write_side_contract"
@@ -2255,7 +2255,7 @@
       "source_file": "docs/srd/data-governance.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 15,
+      "community": 16,
       "community_name": "Data Governance",
       "norm_label": "data-governance.md",
       "id": "docs_srd_data_governance"
@@ -2266,7 +2266,7 @@
       "source_file": "docs/srd/data-governance.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 15,
+      "community": 16,
       "community_name": "Data Governance",
       "norm_label": "data governance",
       "id": "docs_srd_data_governance_data_governance"
@@ -2277,7 +2277,7 @@
       "source_file": "docs/srd/data-governance.md",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 15,
+      "community": 16,
       "community_name": "Data Governance",
       "norm_label": "data inventory & classification \u2014 updated for users/students split",
       "id": "docs_srd_data_governance_data_inventory_classification_updated_for_users_students_split"
@@ -2288,7 +2288,7 @@
       "source_file": "docs/srd/data-governance.md",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 15,
+      "community": 16,
       "community_name": "Data Governance",
       "norm_label": "lawful basis and consent",
       "id": "docs_srd_data_governance_lawful_basis_and_consent"
@@ -2299,7 +2299,7 @@
       "source_file": "docs/srd/data-governance.md",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 15,
+      "community": 16,
       "community_name": "Data Governance",
       "norm_label": "minimization & retention",
       "id": "docs_srd_data_governance_minimization_retention"
@@ -2310,7 +2310,7 @@
       "source_file": "docs/srd/data-governance.md",
       "source_location": "L24",
       "_origin": "ast",
-      "community": 15,
+      "community": 16,
       "community_name": "Data Governance",
       "norm_label": "residency & sub-processors",
       "id": "docs_srd_data_governance_residency_sub_processors"
@@ -2321,7 +2321,7 @@
       "source_file": "docs/srd/data-governance.md",
       "source_location": "L29",
       "_origin": "ast",
-      "community": 15,
+      "community": 16,
       "community_name": "Data Governance",
       "norm_label": "deletion / export",
       "id": "docs_srd_data_governance_deletion_export"
@@ -2332,7 +2332,7 @@
       "source_file": "docs/srd/math-task-catalog.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 7,
+      "community": 8,
       "community_name": "Math Task Type Catalog \u2014 Grade 1 to University",
       "norm_label": "math-task-catalog.md",
       "id": "docs_srd_math_task_catalog"
@@ -2343,7 +2343,7 @@
       "source_file": "docs/srd/math-task-catalog.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 7,
+      "community": 8,
       "community_name": "Math Task Type Catalog \u2014 Grade 1 to University",
       "norm_label": "math task type catalog \u2014 grade 1 to university",
       "id": "docs_srd_math_task_catalog_math_task_type_catalog_grade_1_to_university"
@@ -2354,7 +2354,7 @@
       "source_file": "docs/srd/math-task-catalog.md",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 7,
+      "community": 8,
       "community_name": "Math Task Type Catalog \u2014 Grade 1 to University",
       "norm_label": "validation-method legend",
       "id": "docs_srd_math_task_catalog_validation_method_legend"
@@ -2365,7 +2365,7 @@
       "source_file": "docs/srd/math-task-catalog.md",
       "source_location": "L21",
       "_origin": "ast",
-      "community": 7,
+      "community": 8,
       "community_name": "Math Task Type Catalog \u2014 Grade 1 to University",
       "norm_label": "grade 1\u20132 (ages 6\u20138)",
       "id": "docs_srd_math_task_catalog_grade_1_2_ages_6_8"
@@ -2376,7 +2376,7 @@
       "source_file": "docs/srd/math-task-catalog.md",
       "source_location": "L36",
       "_origin": "ast",
-      "community": 7,
+      "community": 8,
       "community_name": "Math Task Type Catalog \u2014 Grade 1 to University",
       "norm_label": "grade 3\u20134 (ages 8\u201310)",
       "id": "docs_srd_math_task_catalog_grade_3_4_ages_8_10"
@@ -2387,7 +2387,7 @@
       "source_file": "docs/srd/math-task-catalog.md",
       "source_location": "L52",
       "_origin": "ast",
-      "community": 7,
+      "community": 8,
       "community_name": "Math Task Type Catalog \u2014 Grade 1 to University",
       "norm_label": "grade 5\u20136 (ages 10\u201312)",
       "id": "docs_srd_math_task_catalog_grade_5_6_ages_10_12"
@@ -2398,7 +2398,7 @@
       "source_file": "docs/srd/math-task-catalog.md",
       "source_location": "L72",
       "_origin": "ast",
-      "community": 7,
+      "community": 8,
       "community_name": "Math Task Type Catalog \u2014 Grade 1 to University",
       "norm_label": "grade 7\u20139 (ages 12\u201315)",
       "id": "docs_srd_math_task_catalog_grade_7_9_ages_12_15"
@@ -2409,7 +2409,7 @@
       "source_file": "docs/srd/math-task-catalog.md",
       "source_location": "L97",
       "_origin": "ast",
-      "community": 7,
+      "community": 8,
       "community_name": "Math Task Type Catalog \u2014 Grade 1 to University",
       "norm_label": "grade 10\u201311 (ages 15\u201318)",
       "id": "docs_srd_math_task_catalog_grade_10_11_ages_15_18"
@@ -2420,7 +2420,7 @@
       "source_file": "docs/srd/math-task-catalog.md",
       "source_location": "L117",
       "_origin": "ast",
-      "community": 7,
+      "community": 8,
       "community_name": "Math Task Type Catalog \u2014 Grade 1 to University",
       "norm_label": "university (higher mathematics)",
       "id": "docs_srd_math_task_catalog_university_higher_mathematics"
@@ -2431,7 +2431,7 @@
       "source_file": "docs/srd/math-task-catalog.md",
       "source_location": "L146",
       "_origin": "ast",
-      "community": 7,
+      "community": 8,
       "community_name": "Math Task Type Catalog \u2014 Grade 1 to University",
       "norm_label": "notes for implementation (methodologist + ba perspective)",
       "id": "docs_srd_math_task_catalog_notes_for_implementation_methodologist_ba_perspective"
@@ -2442,7 +2442,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 0,
+      "community": 3,
       "norm_label": "verdict",
       "id": "verdict"
     },
@@ -2452,7 +2452,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 0,
+      "community": 3,
       "norm_label": "reasoncode",
       "id": "reasoncode"
     },
@@ -2462,7 +2462,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 0,
+      "community": 3,
       "norm_label": "validationmethod",
       "id": "validationmethod"
     },
@@ -2472,9 +2472,9 @@
       "source_file": "pkg/core/validation/pipeline.go",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "pipeline.go",
-      "id": "pkg_core_validation_pipeline"
+      "id": "pkg_core_validation_pipeline",
+      "community": 3,
+      "norm_label": "pipeline.go"
     },
     {
       "label": "Stage",
@@ -2482,9 +2482,9 @@
       "source_file": "pkg/core/validation/pipeline.go",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "stage",
-      "id": "validation_stage"
+      "id": "validation_stage",
+      "community": 3,
+      "norm_label": "stage"
     },
     {
       "label": "Result",
@@ -2492,9 +2492,9 @@
       "source_file": "pkg/core/validation/pipeline.go",
       "source_location": "L22",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "result",
-      "id": "validation_result"
+      "id": "validation_result",
+      "community": 3,
+      "norm_label": "result"
     },
     {
       "label": "Validate()",
@@ -2502,169 +2502,189 @@
       "source_file": "pkg/core/validation/pipeline.go",
       "source_location": "L32",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "validate()",
-      "id": "pkg_core_validation_pipeline_validate"
+      "id": "pkg_core_validation_pipeline_validate",
+      "community": 3,
+      "norm_label": "validate()"
+    },
+    {
+      "label": "ValidateRatio()",
+      "file_type": "code",
+      "source_file": "pkg/core/validation/pipeline.go",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "pkg_core_validation_pipeline_validateratio",
+      "community": 3,
+      "norm_label": "validateratio()"
+    },
+    {
+      "label": "parseRatio()",
+      "file_type": "code",
+      "source_file": "pkg/core/validation/pipeline.go",
+      "source_location": "L72",
+      "_origin": "ast",
+      "id": "pkg_core_validation_pipeline_parseratio",
+      "community": 3,
+      "norm_label": "parseratio()"
     },
     {
       "label": "ValidateTol()",
       "file_type": "code",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L51",
+      "source_location": "L90",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "validatetol()",
-      "id": "pkg_core_validation_pipeline_validatetol"
+      "id": "pkg_core_validation_pipeline_validatetol",
+      "community": 3,
+      "norm_label": "validatetol()"
     },
     {
       "label": "ValidateExactRat()",
       "file_type": "code",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L70",
+      "source_location": "L109",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "validateexactrat()",
-      "id": "pkg_core_validation_pipeline_validateexactrat"
+      "id": "pkg_core_validation_pipeline_validateexactrat",
+      "community": 3,
+      "norm_label": "validateexactrat()"
     },
     {
       "label": "parseExactRat()",
       "file_type": "code",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L85",
+      "source_location": "L124",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "parseexactrat()",
-      "id": "pkg_core_validation_pipeline_parseexactrat"
+      "id": "pkg_core_validation_pipeline_parseexactrat",
+      "community": 3,
+      "norm_label": "parseexactrat()"
     },
     {
       "label": "gcd64()",
       "file_type": "code",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L119",
+      "source_location": "L158",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "gcd64()",
-      "id": "pkg_core_validation_pipeline_gcd64"
+      "id": "pkg_core_validation_pipeline_gcd64",
+      "community": 3,
+      "norm_label": "gcd64()"
     },
     {
       "label": "ValidateTuple()",
       "file_type": "code",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L136",
+      "source_location": "L175",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "validatetuple()",
-      "id": "pkg_core_validation_pipeline_validatetuple"
+      "id": "pkg_core_validation_pipeline_validatetuple",
+      "community": 3,
+      "norm_label": "validatetuple()"
     },
     {
       "label": "ValidateCanonList()",
       "file_type": "code",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L157",
+      "source_location": "L196",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "validatecanonlist()",
-      "id": "pkg_core_validation_pipeline_validatecanonlist"
+      "id": "pkg_core_validation_pipeline_validatecanonlist",
+      "community": 3,
+      "norm_label": "validatecanonlist()"
     },
     {
       "label": "isRoman()",
       "file_type": "code",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L191",
+      "source_location": "L230",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "isroman()",
-      "id": "pkg_core_validation_pipeline_isroman"
+      "id": "pkg_core_validation_pipeline_isroman",
+      "community": 3,
+      "norm_label": "isroman()"
     },
     {
       "label": "ValidateRoman()",
       "file_type": "code",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L197",
+      "source_location": "L236",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "validateroman()",
-      "id": "pkg_core_validation_pipeline_validateroman"
+      "id": "pkg_core_validation_pipeline_validateroman",
+      "community": 3,
+      "norm_label": "validateroman()"
     },
     {
       "label": "parseRoman()",
       "file_type": "code",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L213",
+      "source_location": "L252",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "parseroman()",
-      "id": "pkg_core_validation_pipeline_parseroman"
+      "id": "pkg_core_validation_pipeline_parseroman",
+      "community": 3,
+      "norm_label": "parseroman()"
     },
     {
       "label": "romanFromInt()",
       "file_type": "code",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L230",
+      "source_location": "L269",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "romanfromint()",
-      "id": "pkg_core_validation_pipeline_romanfromint"
+      "id": "pkg_core_validation_pipeline_romanfromint",
+      "community": 3,
+      "norm_label": "romanfromint()"
     },
     {
       "label": "ValidateBool()",
       "file_type": "code",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L247",
+      "source_location": "L286",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "validatebool()",
-      "id": "pkg_core_validation_pipeline_validatebool"
+      "id": "pkg_core_validation_pipeline_validatebool",
+      "community": 3,
+      "norm_label": "validatebool()"
     },
     {
       "label": "ParsedExactInt",
       "file_type": "code",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L262",
+      "source_location": "L301",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "parsedexactint",
-      "id": "validation_parsedexactint"
+      "id": "validation_parsedexactint",
+      "community": 3,
+      "norm_label": "parsedexactint"
     },
     {
       "label": "ParseExactInt()",
       "file_type": "code",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L268",
+      "source_location": "L307",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "parseexactint()",
-      "id": "pkg_core_validation_pipeline_parseexactint"
+      "id": "pkg_core_validation_pipeline_parseexactint",
+      "community": 3,
+      "norm_label": "parseexactint()"
     },
     {
       "label": "NormalizeExactInt()",
       "file_type": "code",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L287",
+      "source_location": "L326",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "normalizeexactint()",
-      "id": "pkg_core_validation_pipeline_normalizeexactint"
+      "id": "pkg_core_validation_pipeline_normalizeexactint",
+      "community": 3,
+      "norm_label": "normalizeexactint()"
     },
     {
       "label": "CompareExactInt()",
       "file_type": "code",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L299",
+      "source_location": "L338",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "compareexactint()",
-      "id": "pkg_core_validation_pipeline_compareexactint"
+      "id": "pkg_core_validation_pipeline_compareexactint",
+      "community": 3,
+      "norm_label": "compareexactint()"
     },
     {
       "label": "ValidateExactInt()",
       "file_type": "code",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L309",
+      "source_location": "L348",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "validateexactint()",
-      "id": "pkg_core_validation_pipeline_validateexactint"
+      "id": "pkg_core_validation_pipeline_validateexactint",
+      "community": 3,
+      "norm_label": "validateexactint()"
     },
     {
       "label": "pipeline_test.go",
@@ -2672,9 +2692,9 @@
       "source_file": "pkg/core/validation/pipeline_test.go",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "pipeline_test.go",
-      "id": "pkg_core_validation_pipeline_test"
+      "id": "pkg_core_validation_pipeline_test",
+      "community": 5,
+      "norm_label": "pipeline_test.go"
     },
     {
       "label": "TestValidateExactIntCorrect()",
@@ -2682,9 +2702,9 @@
       "source_file": "pkg/core/validation/pipeline_test.go",
       "source_location": "L9",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "testvalidateexactintcorrect()",
-      "id": "pkg_core_validation_pipeline_test_testvalidateexactintcorrect"
+      "id": "pkg_core_validation_pipeline_test_testvalidateexactintcorrect",
+      "community": 5,
+      "norm_label": "testvalidateexactintcorrect()"
     },
     {
       "label": "TestValidateExactIntIncorrect()",
@@ -2692,9 +2712,9 @@
       "source_file": "pkg/core/validation/pipeline_test.go",
       "source_location": "L20",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "testvalidateexactintincorrect()",
-      "id": "pkg_core_validation_pipeline_test_testvalidateexactintincorrect"
+      "id": "pkg_core_validation_pipeline_test_testvalidateexactintincorrect",
+      "community": 5,
+      "norm_label": "testvalidateexactintincorrect()"
     },
     {
       "label": "TestValidateExactIntUnparseable()",
@@ -2702,9 +2722,9 @@
       "source_file": "pkg/core/validation/pipeline_test.go",
       "source_location": "L28",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "testvalidateexactintunparseable()",
-      "id": "pkg_core_validation_pipeline_test_testvalidateexactintunparseable"
+      "id": "pkg_core_validation_pipeline_test_testvalidateexactintunparseable",
+      "community": 5,
+      "norm_label": "testvalidateexactintunparseable()"
     },
     {
       "label": "TestValidateExactIntBoundary()",
@@ -2712,9 +2732,9 @@
       "source_file": "pkg/core/validation/pipeline_test.go",
       "source_location": "L39",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "testvalidateexactintboundary()",
-      "id": "pkg_core_validation_pipeline_test_testvalidateexactintboundary"
+      "id": "pkg_core_validation_pipeline_test_testvalidateexactintboundary",
+      "community": 5,
+      "norm_label": "testvalidateexactintboundary()"
     },
     {
       "label": "TestValidateBool()",
@@ -2722,9 +2742,9 @@
       "source_file": "pkg/core/validation/pipeline_test.go",
       "source_location": "L60",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "testvalidatebool()",
-      "id": "pkg_core_validation_pipeline_test_testvalidatebool"
+      "id": "pkg_core_validation_pipeline_test_testvalidatebool",
+      "community": 5,
+      "norm_label": "testvalidatebool()"
     },
     {
       "label": "TestValidateCanonList()",
@@ -2732,9 +2752,9 @@
       "source_file": "pkg/core/validation/pipeline_test.go",
       "source_location": "L72",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "testvalidatecanonlist()",
-      "id": "pkg_core_validation_pipeline_test_testvalidatecanonlist"
+      "id": "pkg_core_validation_pipeline_test_testvalidatecanonlist",
+      "community": 5,
+      "norm_label": "testvalidatecanonlist()"
     },
     {
       "label": "TestValidateRoman()",
@@ -2742,9 +2762,9 @@
       "source_file": "pkg/core/validation/pipeline_test.go",
       "source_location": "L81",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "testvalidateroman()",
-      "id": "pkg_core_validation_pipeline_test_testvalidateroman"
+      "id": "pkg_core_validation_pipeline_test_testvalidateroman",
+      "community": 5,
+      "norm_label": "testvalidateroman()"
     },
     {
       "label": "TestValidateTuple()",
@@ -2752,9 +2772,9 @@
       "source_file": "pkg/core/validation/pipeline_test.go",
       "source_location": "L99",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "testvalidatetuple()",
-      "id": "pkg_core_validation_pipeline_test_testvalidatetuple"
+      "id": "pkg_core_validation_pipeline_test_testvalidatetuple",
+      "community": 5,
+      "norm_label": "testvalidatetuple()"
     },
     {
       "label": "TestValidateExactRat()",
@@ -2762,19 +2782,29 @@
       "source_file": "pkg/core/validation/pipeline_test.go",
       "source_location": "L111",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "testvalidateexactrat()",
-      "id": "pkg_core_validation_pipeline_test_testvalidateexactrat"
+      "id": "pkg_core_validation_pipeline_test_testvalidateexactrat",
+      "community": 5,
+      "norm_label": "testvalidateexactrat()"
+    },
+    {
+      "label": "TestValidateRatio()",
+      "file_type": "code",
+      "source_file": "pkg/core/validation/pipeline_test.go",
+      "source_location": "L126",
+      "_origin": "ast",
+      "id": "pkg_core_validation_pipeline_test_testvalidateratio",
+      "community": 5,
+      "norm_label": "testvalidateratio()"
     },
     {
       "label": "TestValidateTol()",
       "file_type": "code",
       "source_file": "pkg/core/validation/pipeline_test.go",
-      "source_location": "L126",
+      "source_location": "L135",
       "_origin": "ast",
-      "community": 0,
-      "norm_label": "testvalidatetol()",
-      "id": "pkg_core_validation_pipeline_test_testvalidatetol"
+      "id": "pkg_core_validation_pipeline_test_testvalidatetol",
+      "community": 5,
+      "norm_label": "testvalidatetol()"
     }
   ],
   "links": [
@@ -3907,9 +3937,9 @@
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_test_testvalidatebool",
-      "target": "t"
+      "target": "t",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -3919,9 +3949,9 @@
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_test_testvalidatecanonlist",
-      "target": "t"
+      "target": "t",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -3931,9 +3961,9 @@
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_test_testvalidateexactintboundary",
-      "target": "t"
+      "target": "t",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -3943,9 +3973,9 @@
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_test_testvalidateexactintcorrect",
-      "target": "t"
+      "target": "t",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -3955,9 +3985,9 @@
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_test_testvalidateexactintincorrect",
-      "target": "t"
+      "target": "t",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -3967,9 +3997,9 @@
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_test_testvalidateexactintunparseable",
-      "target": "t"
+      "target": "t",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -3979,21 +4009,9 @@
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_test_testvalidateexactrat",
-      "target": "t"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "pkg/core/validation/pipeline_test.go",
-      "source_location": "L81",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "pkg_core_validation_pipeline_test_testvalidateroman",
-      "target": "t"
+      "target": "t",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -4003,9 +4021,33 @@
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
+      "source": "pkg_core_validation_pipeline_test_testvalidateratio",
+      "target": "t",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "pkg/core/validation/pipeline_test.go",
+      "source_location": "L81",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "source": "pkg_core_validation_pipeline_test_testvalidateroman",
+      "target": "t",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "pkg/core/validation/pipeline_test.go",
+      "source_location": "L135",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
       "source": "pkg_core_validation_pipeline_test_testvalidatetol",
-      "target": "t"
+      "target": "t",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -4015,9 +4057,9 @@
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_test_testvalidatetuple",
-      "target": "t"
+      "target": "t",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -5622,57 +5664,69 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "validation_result",
-      "target": "verdict"
+      "target": "verdict",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L299",
+      "source_location": "L338",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_compareexactint",
-      "target": "reasoncode"
+      "target": "reasoncode",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L287",
+      "source_location": "L326",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_normalizeexactint",
-      "target": "reasoncode"
+      "target": "reasoncode",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L268",
+      "source_location": "L307",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_parseexactint",
-      "target": "reasoncode"
+      "target": "reasoncode",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L85",
+      "source_location": "L124",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_parseexactrat",
-      "target": "reasoncode"
+      "target": "reasoncode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "pkg/core/validation/pipeline.go",
+      "source_location": "L72",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast",
+      "source": "pkg_core_validation_pipeline_parseratio",
+      "target": "reasoncode",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -5682,9 +5736,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "validation_result",
-      "target": "reasoncode"
+      "target": "reasoncode",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -5694,86 +5748,31 @@
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_validate",
-      "target": "validationmethod"
+      "target": "validationmethod",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L299",
+      "source_location": "L338",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline",
-      "target": "pkg_core_validation_pipeline_compareexactint"
+      "target": "pkg_core_validation_pipeline_compareexactint",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L119",
+      "source_location": "L158",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline",
-      "target": "pkg_core_validation_pipeline_gcd64"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L191",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "pkg_core_validation_pipeline",
-      "target": "pkg_core_validation_pipeline_isroman"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L287",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "pkg_core_validation_pipeline",
-      "target": "pkg_core_validation_pipeline_normalizeexactint"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L268",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "pkg_core_validation_pipeline",
-      "target": "pkg_core_validation_pipeline_parseexactint"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L85",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "pkg_core_validation_pipeline",
-      "target": "pkg_core_validation_pipeline_parseexactrat"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L213",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "pkg_core_validation_pipeline",
-      "target": "pkg_core_validation_pipeline_parseroman"
+      "target": "pkg_core_validation_pipeline_gcd64",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -5782,9 +5781,75 @@
       "source_location": "L230",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline",
-      "target": "pkg_core_validation_pipeline_romanfromint"
+      "target": "pkg_core_validation_pipeline_isroman",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pkg/core/validation/pipeline.go",
+      "source_location": "L326",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "pkg_core_validation_pipeline",
+      "target": "pkg_core_validation_pipeline_normalizeexactint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pkg/core/validation/pipeline.go",
+      "source_location": "L307",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "pkg_core_validation_pipeline",
+      "target": "pkg_core_validation_pipeline_parseexactint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pkg/core/validation/pipeline.go",
+      "source_location": "L124",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "pkg_core_validation_pipeline",
+      "target": "pkg_core_validation_pipeline_parseexactrat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pkg/core/validation/pipeline.go",
+      "source_location": "L72",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "pkg_core_validation_pipeline",
+      "target": "pkg_core_validation_pipeline_parseratio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pkg/core/validation/pipeline.go",
+      "source_location": "L252",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "pkg_core_validation_pipeline",
+      "target": "pkg_core_validation_pipeline_parseroman",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pkg/core/validation/pipeline.go",
+      "source_location": "L269",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "pkg_core_validation_pipeline",
+      "target": "pkg_core_validation_pipeline_romanfromint",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -5793,97 +5858,108 @@
       "source_location": "L32",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline",
-      "target": "pkg_core_validation_pipeline_validate"
+      "target": "pkg_core_validation_pipeline_validate",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L247",
+      "source_location": "L286",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline",
-      "target": "pkg_core_validation_pipeline_validatebool"
+      "target": "pkg_core_validation_pipeline_validatebool",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L157",
+      "source_location": "L196",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline",
-      "target": "pkg_core_validation_pipeline_validatecanonlist"
+      "target": "pkg_core_validation_pipeline_validatecanonlist",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L309",
+      "source_location": "L348",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline",
-      "target": "pkg_core_validation_pipeline_validateexactint"
+      "target": "pkg_core_validation_pipeline_validateexactint",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L70",
+      "source_location": "L109",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline",
-      "target": "pkg_core_validation_pipeline_validateexactrat"
+      "target": "pkg_core_validation_pipeline_validateexactrat",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L197",
+      "source_location": "L57",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline",
-      "target": "pkg_core_validation_pipeline_validateroman"
+      "target": "pkg_core_validation_pipeline_validateratio",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L51",
+      "source_location": "L236",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline",
-      "target": "pkg_core_validation_pipeline_validatetol"
+      "target": "pkg_core_validation_pipeline_validateroman",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L136",
+      "source_location": "L90",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline",
-      "target": "pkg_core_validation_pipeline_validatetuple"
+      "target": "pkg_core_validation_pipeline_validatetol",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L262",
+      "source_location": "L175",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline",
-      "target": "validation_parsedexactint"
+      "target": "pkg_core_validation_pipeline_validatetuple",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pkg/core/validation/pipeline.go",
+      "source_location": "L301",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "pkg_core_validation_pipeline",
+      "target": "validation_parsedexactint",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -5892,9 +5968,9 @@
       "source_location": "L22",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline",
-      "target": "validation_result"
+      "target": "validation_result",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -5903,45 +5979,45 @@
       "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline",
-      "target": "validation_stage"
+      "target": "validation_stage",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L299",
+      "source_location": "L338",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_compareexactint",
-      "target": "validation_stage"
+      "target": "validation_stage",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L287",
+      "source_location": "L326",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_normalizeexactint",
-      "target": "validation_stage"
+      "target": "validation_stage",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L268",
+      "source_location": "L307",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_parseexactint",
-      "target": "validation_stage"
+      "target": "validation_stage",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -5951,9 +6027,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "validation_result",
-      "target": "validation_stage"
+      "target": "validation_stage",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -5963,93 +6039,105 @@
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_validate",
-      "target": "validation_result"
+      "target": "validation_result",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L247",
+      "source_location": "L286",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_validatebool",
-      "target": "validation_result"
+      "target": "validation_result",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L157",
+      "source_location": "L196",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_validatecanonlist",
-      "target": "validation_result"
+      "target": "validation_result",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L309",
+      "source_location": "L348",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_validateexactint",
-      "target": "validation_result"
+      "target": "validation_result",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L70",
+      "source_location": "L109",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_validateexactrat",
-      "target": "validation_result"
+      "target": "validation_result",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L197",
+      "source_location": "L57",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
+      "source": "pkg_core_validation_pipeline_validateratio",
+      "target": "validation_result",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "pkg/core/validation/pipeline.go",
+      "source_location": "L236",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast",
       "source": "pkg_core_validation_pipeline_validateroman",
-      "target": "validation_result"
+      "target": "validation_result",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L51",
+      "source_location": "L90",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_validatetol",
-      "target": "validation_result"
+      "target": "validation_result",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L136",
+      "source_location": "L175",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_validatetuple",
-      "target": "validation_result"
+      "target": "validation_result",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -6059,21 +6147,21 @@
       "source_location": "L37",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_validate",
-      "target": "pkg_core_validation_pipeline_validatebool"
+      "target": "pkg_core_validation_pipeline_validatebool",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L39",
+      "source_location": "L42",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_validate",
-      "target": "pkg_core_validation_pipeline_validatecanonlist"
+      "target": "pkg_core_validation_pipeline_validatecanonlist",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -6083,45 +6171,57 @@
       "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_validate",
-      "target": "pkg_core_validation_pipeline_validateexactint"
+      "target": "pkg_core_validation_pipeline_validateexactint",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L43",
+      "source_location": "L46",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_validate",
-      "target": "pkg_core_validation_pipeline_validateexactrat"
+      "target": "pkg_core_validation_pipeline_validateexactrat",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L45",
+      "source_location": "L40",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_validate",
-      "target": "pkg_core_validation_pipeline_validatetol"
+      "target": "pkg_core_validation_pipeline_validateratio",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L41",
+      "source_location": "L48",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_validate",
-      "target": "pkg_core_validation_pipeline_validatetuple"
+      "target": "pkg_core_validation_pipeline_validatetol",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pkg/core/validation/pipeline.go",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "pkg_core_validation_pipeline_validate",
+      "target": "pkg_core_validation_pipeline_validatetuple",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -6130,6 +6230,42 @@
       "confidence_score": 0.8,
       "source_file": "pkg/core/validation/pipeline_test.go",
       "source_location": "L127",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "pkg_core_validation_pipeline_test_testvalidateratio",
+      "target": "pkg_core_validation_pipeline_validateratio"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pkg/core/validation/pipeline.go",
+      "source_location": "L58",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "pkg_core_validation_pipeline_validateratio",
+      "target": "pkg_core_validation_pipeline_parseratio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pkg/core/validation/pipeline.go",
+      "source_location": "L82",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "pkg_core_validation_pipeline_parseratio",
+      "target": "pkg_core_validation_pipeline_gcd64",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "pkg/core/validation/pipeline_test.go",
+      "source_location": "L136",
       "weight": 1.0,
       "_origin": "ast",
       "source": "pkg_core_validation_pipeline_test_testvalidatetol",
@@ -6152,24 +6288,24 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L71",
+      "source_location": "L110",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_validateexactrat",
-      "target": "pkg_core_validation_pipeline_parseexactrat"
+      "target": "pkg_core_validation_pipeline_parseexactrat",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L107",
+      "source_location": "L146",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_parseexactrat",
-      "target": "pkg_core_validation_pipeline_gcd64"
+      "target": "pkg_core_validation_pipeline_gcd64",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -6200,24 +6336,24 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L158",
+      "source_location": "L197",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_validatecanonlist",
-      "target": "pkg_core_validation_pipeline_isroman"
+      "target": "pkg_core_validation_pipeline_isroman",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L159",
+      "source_location": "L198",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_validatecanonlist",
-      "target": "pkg_core_validation_pipeline_validateroman"
+      "target": "pkg_core_validation_pipeline_validateroman",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -6236,36 +6372,36 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L202",
+      "source_location": "L241",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_validateroman",
-      "target": "pkg_core_validation_pipeline_parseroman"
+      "target": "pkg_core_validation_pipeline_parseroman",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L206",
+      "source_location": "L245",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_validateroman",
-      "target": "pkg_core_validation_pipeline_romanfromint"
+      "target": "pkg_core_validation_pipeline_romanfromint",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L227",
+      "source_location": "L266",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_parseroman",
-      "target": "pkg_core_validation_pipeline_romanfromint"
+      "target": "pkg_core_validation_pipeline_romanfromint",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -6283,25 +6419,25 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L287",
+      "source_location": "L326",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_normalizeexactint",
-      "target": "validation_parsedexactint"
+      "target": "validation_parsedexactint",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L268",
+      "source_location": "L307",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_parseexactint",
-      "target": "validation_parsedexactint"
+      "target": "validation_parsedexactint",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -6320,36 +6456,36 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L310",
+      "source_location": "L349",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_validateexactint",
-      "target": "pkg_core_validation_pipeline_parseexactint"
+      "target": "pkg_core_validation_pipeline_parseexactint",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L315",
+      "source_location": "L354",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_validateexactint",
-      "target": "pkg_core_validation_pipeline_normalizeexactint"
+      "target": "pkg_core_validation_pipeline_normalizeexactint",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "pkg/core/validation/pipeline.go",
-      "source_location": "L341",
+      "source_location": "L380",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_validateexactint",
-      "target": "pkg_core_validation_pipeline_compareexactint"
+      "target": "pkg_core_validation_pipeline_compareexactint",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -6394,9 +6530,9 @@
       "source_location": "L60",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_test",
-      "target": "pkg_core_validation_pipeline_test_testvalidatebool"
+      "target": "pkg_core_validation_pipeline_test_testvalidatebool",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -6405,9 +6541,9 @@
       "source_location": "L72",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_test",
-      "target": "pkg_core_validation_pipeline_test_testvalidatecanonlist"
+      "target": "pkg_core_validation_pipeline_test_testvalidatecanonlist",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -6416,9 +6552,9 @@
       "source_location": "L39",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_test",
-      "target": "pkg_core_validation_pipeline_test_testvalidateexactintboundary"
+      "target": "pkg_core_validation_pipeline_test_testvalidateexactintboundary",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -6427,9 +6563,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_test",
-      "target": "pkg_core_validation_pipeline_test_testvalidateexactintcorrect"
+      "target": "pkg_core_validation_pipeline_test_testvalidateexactintcorrect",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -6438,9 +6574,9 @@
       "source_location": "L20",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_test",
-      "target": "pkg_core_validation_pipeline_test_testvalidateexactintincorrect"
+      "target": "pkg_core_validation_pipeline_test_testvalidateexactintincorrect",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -6449,9 +6585,9 @@
       "source_location": "L28",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_test",
-      "target": "pkg_core_validation_pipeline_test_testvalidateexactintunparseable"
+      "target": "pkg_core_validation_pipeline_test_testvalidateexactintunparseable",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -6460,20 +6596,9 @@
       "source_location": "L111",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_test",
-      "target": "pkg_core_validation_pipeline_test_testvalidateexactrat"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "pkg/core/validation/pipeline_test.go",
-      "source_location": "L81",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "pkg_core_validation_pipeline_test",
-      "target": "pkg_core_validation_pipeline_test_testvalidateroman"
+      "target": "pkg_core_validation_pipeline_test_testvalidateexactrat",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -6482,9 +6607,31 @@
       "source_location": "L126",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_test",
-      "target": "pkg_core_validation_pipeline_test_testvalidatetol"
+      "target": "pkg_core_validation_pipeline_test_testvalidateratio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pkg/core/validation/pipeline_test.go",
+      "source_location": "L81",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "pkg_core_validation_pipeline_test",
+      "target": "pkg_core_validation_pipeline_test_testvalidateroman",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pkg/core/validation/pipeline_test.go",
+      "source_location": "L135",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "pkg_core_validation_pipeline_test",
+      "target": "pkg_core_validation_pipeline_test_testvalidatetol",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -6493,11 +6640,11 @@
       "source_location": "L99",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "pkg_core_validation_pipeline_test",
-      "target": "pkg_core_validation_pipeline_test_testvalidatetuple"
+      "target": "pkg_core_validation_pipeline_test_testvalidatetuple",
+      "confidence_score": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "810db9ca99d8568d88d93bc5aee0cbee868cf26c"
+  "built_at_commit": "c50afa17a258c04a3c514b30274fd41ccb8f667e"
 }
