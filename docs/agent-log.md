@@ -247,3 +247,7 @@
 ## 2026-09-20 — G10-TRG-001 notation correction
 
 - Clarified that answers are integer multiples of π/12 so the shared integer SET validator can enforce the canonical angle set.
+## 2026-09-20 — task type reconciliation grant
+
+- Added migration `000006_taskgen_task_type_reconciliation` so the taskgen service role can insert and update its registered `task_type` rows at startup. Its existing `SELECT` grant remains in place.
+- Local database also needed the already committed `000005_task_type_grade_band` migration before University rows could be stored.
