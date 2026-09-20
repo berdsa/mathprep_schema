@@ -1260,3 +1260,17 @@
 | Input contract / oracle | shared exact-integer contract; independently compute the power, two batches of 1000 |
 | Worked examples | `log₂(x)=3→8`; `log₃(x)=2→9`; `log₅(x)=3→125` |
 | Misconception tags | `MISC-BASE-EXPONENT-SWAP`, `MISC-ADD-LOGS`, `MISC-NONPOSITIVE-ARGUMENT` |
+
+## G10-EXP-001 — Exponential equation
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Solve a clean exponential equation / EXP / 10 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `Solve {a}^x={b}.` |
+| Variables | `a∈[2,5]`; `x∈[1,5]`; `b=a^x` |
+| Solution | `x` |
+| equivalence_policy | **STRICT-FORM** via shared EXACT-INT validator |
+| Input contract / oracle | shared exact-integer contract; independently recover the clean exponent, two batches of 1000 |
+| Worked examples | `2^x=8→3`; `3^x=9→2`; `5^x=125→3` |
+| Misconception tags | `MISC-BASE-EXPONENT-SWAP`, `MISC-LOG-INVERSE`, `MISC-OFF-BY-ONE` |
