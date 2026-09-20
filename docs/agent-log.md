@@ -178,3 +178,8 @@
 
 - Added the canonical full-field specification for circle circumference and area tasks.
 - Reuses the shared TOL validator; no schema implementation change is required.
+
+## 2026-09-20 — G7-GEO-004 specification
+
+- Added the canonical full-field specification for special-angle trigonometric ratios.
+- Reuses the shared TOL validator; no schema implementation change is required.

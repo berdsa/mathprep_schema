@@ -1090,3 +1090,23 @@
 | Instance space | `20×2 = 40` ordered radius/operation cases |
 | Worked examples | `circumference,r=1→6.283185307179586`; `area,r=2→12.566370614359172`; `circumference,r=3→18.84955592153876` |
 | Misconception tags | `MISC-AREA-AS-CIRCUMFERENCE`, `MISC-DIAMETER-AS-RADIUS`, `MISC-OMIT-PI` |
+
+## G7-GEO-004 — Basic trig ratio
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Evaluate a special-angle trigonometric ratio / GEO / 7 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| Template | `Find {function}({angle}°).` |
+| Variables | `angle∈{30,45,60}`; `function∈{sin,cos,tan}` |
+| Generation constraint | Use only the three special angles; tangent is evaluated directly from sine and cosine. |
+| Solution | Standard-library floating-point evaluation in radians |
+| equivalence_policy | **EQUIV-CLASS** within `1e-6` via the shared TOL validator |
+| Input contract | shared TOL numeric contract |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT` |
+| Verification oracle | Independently evaluate the selected ratio from the persisted angle and function; two batches of 1000 required |
+| Tiers | T1/T2: three angles and three functions |
+| Instance space | `3×3 = 9` angle/function cases |
+| Worked examples | `sin(30°)→0.5`; `cos(45°)→0.7071067811865476`; `tan(60°)→1.7320508075688763` |
+| Misconception tags | `MISC-DEGREE-RADIAN`, `MISC-SIN-COS-SWAP`, `MISC-TAN-INVERSION` |
