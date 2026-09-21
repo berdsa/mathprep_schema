@@ -531,6 +531,21 @@
 | Worked examples | `Had 3 apples. Got 4 more. How many now?→7`; `Had 0...20 more→20`; `Had 12...8 more→20` |
 | Misconception tags | `MISC-ADD-FACT`, `MISC-WORD-OPERATION`, `MISC-BOUNDARY` |
 
+## G1-NUM-017 — Word problem: add change unknown
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Addition word problem, change unknown / NUM / 1 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `Had {a} apples. Got some more, now {c}. How many more?` |
+| Variables / constraint | `a,c: int [0,20]`; `c≥a`; fixed noun `apples` |
+| Solution / equivalence_policy | `c−a`; **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; decimals and commas reject |
+| Verification oracle / instance space | independent subtraction; 1000/1000 per seed batch; 231 ordered pairs |
+| Worked examples | `Had 3 apples...now 7→4`; `Had 0...now 20→20`; `Had 12...now 20→8` |
+| Misconception tags | `MISC-SUBTRACT-MINUS`, `MISC-WORD-OPERATION`, `MISC-BOUNDARY` |
+
 ## G1-NUM-012 — Missing subtrahend
 
 | Field | Value |
