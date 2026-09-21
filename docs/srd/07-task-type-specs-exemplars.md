@@ -3178,6 +3178,10 @@
 | G11-VEC-001 | Display two 2D vectors and ask for their dot product. | EXACT-INT |
 | G11-MAT-002 | Display a 2×2 matrix and ask for its determinant. | EXACT-INT |
 
+| U-MAT-005 | Dimension of a visible vector span | EXACT-INT |
+| U-MAT-006 | Orthogonality of visible vectors | BOOL |
+| U-MAT-007 | Singular values of a visible diagonal matrix | SET |
+
 | U-ALG-008 | Partial fractions with visible distinct factors and an explicit coefficient order | CANON |
 | U-CAL-016 | L’Hôpital limit `sin(x)/x` at zero | EXACT-INT |
 | U-STA-004 | Law of large numbers recognition | BOOL |
