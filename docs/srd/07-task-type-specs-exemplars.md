@@ -2495,3 +2495,13 @@
 | Variables / constraint | values satisfy the catalog bounds; generated numbers are distinct where required |
 | Solution / equivalence_policy | exact integer, boolean, or canonical order as specified; **STRICT-FORM** |
 | Verification oracle / instance space | deterministic arithmetic oracle; 1000/1000 per seed batch |
+## G2-MEA-009..013 — Length operations
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Length operations / MEA / 2 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / templates | `plaintext`, `unicode-math`; every length and unit is displayed |
+| Variables / constraint | centimeter values satisfy the catalog ranges and ordering constraints |
+| Solution / equivalence_policy | exact integer, boolean, or canonical order as specified; **STRICT-FORM** |
+| Verification oracle / instance space | deterministic length oracle; 1000/1000 per seed batch |
