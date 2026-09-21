@@ -2364,3 +2364,15 @@
 | Verification oracle / instance space | independent addition; 1000/1000 per seed batch; 1,111 ordered triples |
 | Worked examples | `1+2+3→6`; `0+10+10→20`; `10+0+0→10` |
 | Misconception tags | `MISC-ADD-FACT`, `MISC-BOUNDARY-OVERFLOW`, `MISC-PLACE-VALUE` |
+## G2-GEO-011 — Shape sides lookup
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Count polygon sides / GEO / 2 / Understand |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `How many sides does a {shape} have?` |
+| Variables / constraint | shape∈{triangle,square,rectangle,pentagon,hexagon}; circle excluded to resolve the catalog FLAG |
+| Solution / equivalence_policy | polygon side count; **STRICT-FORM** EXACT-INT |
+| Verification oracle / instance space | independent lookup; 1000/1000 per seed batch; five unambiguous polygons |
+| Worked examples | `triangle→3`; `rectangle→4`; `hexagon→6` |
