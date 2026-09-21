@@ -2705,3 +2705,13 @@
 | Variables / constraint | values satisfy six-digit, rounding, addition, and subtraction bounds |
 | Solution / equivalence_policy | exact integer; **STRICT-FORM** EXACT-INT |
 | Verification oracle / instance space | deterministic large-number oracle; 1000/1000 per seed batch |
+## G4-NUM-027..031 — Large multiplication, division, and estimation
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Large multiplication, division, and estimation / NUM / 4 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / templates | `plaintext`, `unicode-math`; all operands, divisors, and rounding instructions are explicit |
+| Variables / constraint | values satisfy multi-digit multiplication/division and estimation bounds |
+| Solution / equivalence_policy | exact integer or tuple as specified; **STRICT-FORM** |
+| Verification oracle / instance space | deterministic large-arithmetic oracle; 1000/1000 per seed batch |
