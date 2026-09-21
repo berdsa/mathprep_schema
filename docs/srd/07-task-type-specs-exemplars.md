@@ -1023,6 +1023,18 @@
 | Verification oracle / instance space | independent addition by ten; 1000/1000 per seed batch |
 | Worked examples | `0→10`; `42→52`; `89→99` |
 
+## G2-NUM-022 — Ten less than n
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Subtract ten from a number / NUM / 2 / Understand |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `What is 10 less than {n}?` |
+| Variables / constraint | `n∈[10,99]` |
+| Solution / equivalence_policy | `n−10`; **STRICT-FORM** EXACT-INT |
+| Verification oracle / instance space | independent subtraction by ten; 1000/1000 per seed batch |
+| Worked examples | `10→0`; `42→32`; `99→89` |
+
 ## G1-STA-002 — Data difference
 
 | Field | Value |
