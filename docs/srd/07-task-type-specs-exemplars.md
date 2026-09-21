@@ -1035,6 +1035,18 @@
 | Verification oracle / instance space | independent subtraction by ten; 1000/1000 per seed batch |
 | Worked examples | `10→0`; `42→32`; `99→89` |
 
+## G2-NUM-023 — Add two-digit and one-digit without carry
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Add without carrying / NUM / 2 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `{a} + {b} = ?` |
+| Variables / constraint | `a∈[10,98]`; `b∈[1,9]`; ones(a)+b<10 |
+| Solution / equivalence_policy | `a+b`; **STRICT-FORM** EXACT-INT |
+| Verification oracle / instance space | independent addition with no carry; 1000/1000 per seed batch |
+| Worked examples | `23+4→27`; `51+8→59` |
+
 ## G1-STA-002 — Data difference
 
 | Field | Value |

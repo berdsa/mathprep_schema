@@ -465,3 +465,7 @@
 ## 2026-09-21 — G2-NUM-022 canonical spec
 
 - Added the canonical Grade 2 ten-less-than-number specification.
+
+## 2026-09-21 — G2-NUM-023 canonical spec
+
+- Added the canonical Grade 2 no-carry two-digit-plus-one-digit addition specification.
