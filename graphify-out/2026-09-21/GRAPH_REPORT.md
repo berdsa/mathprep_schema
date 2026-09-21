@@ -1,16 +1,16 @@
-# Graph Report - schema  (2026-09-20)
+# Graph Report - schema  (2026-09-21)
 
 ## Corpus Check
-- 31 files · ~27,389 words
+- 33 files · ~32,860 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 298 nodes · 393 edges · 30 communities (28 shown, 2 thin omitted)
+- 346 nodes · 439 edges · 31 communities (29 shown, 2 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 13 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `37a00f2a`
+- Built from commit: `42702f5e`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -20,7 +20,6 @@
 - pipeline.go
 - constants.go
 - 000001_create_phase0_schema.up.sql
-- pipeline_test.go
 - 02 — Requirements
 - 00 — Conventions
 - Math Task Type Catalog — Grade 1 to University
@@ -38,8 +37,8 @@
 - github.com/berdsa/mathprep_schema
 
 ## God Nodes (most connected - your core abstractions)
-1. `07 — Wave-A Exemplar Task-Type Specs` - 54 edges
-2. `Agent log` - 36 edges
+1. `07 — Wave-A Exemplar Task-Type Specs` - 83 edges
+2. `Agent log` - 53 edges
 3. `Result` - 15 edges
 4. `Validate()` - 12 edges
 5. `02 — Requirements` - 10 edges
@@ -50,33 +49,33 @@
 10. `ReasonCode` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `TestValidateInterval()` --calls--> `ValidateInterval()`  [INFERRED]
-  pkg/core/validation/pipeline_test.go → pkg/core/validation/pipeline.go
-- `TestValidateSet()` --calls--> `ValidateSet()`  [INFERRED]
-  pkg/core/validation/pipeline_test.go → pkg/core/validation/pipeline.go
-- `TestValidateRatio()` --calls--> `ValidateRatio()`  [INFERRED]
-  pkg/core/validation/pipeline_test.go → pkg/core/validation/pipeline.go
-- `TestValidateTol()` --calls--> `ValidateTol()`  [INFERRED]
-  pkg/core/validation/pipeline_test.go → pkg/core/validation/pipeline.go
-- `TestValidateExactRat()` --calls--> `ValidateExactRat()`  [INFERRED]
-  pkg/core/validation/pipeline_test.go → pkg/core/validation/pipeline.go
+- `TaskType` --references--> `GradeBand`  [EXTRACTED]
+  pkg/core/rows.go → pkg/core/constants.go
+- `Validate()` --references--> `ValidationMethod`  [EXTRACTED]
+  pkg/core/validation/pipeline.go → pkg/core/constants.go
+- `TaskType` --references--> `EquivalencePolicy`  [EXTRACTED]
+  pkg/core/rows.go → pkg/core/constants.go
+- `TaskType` --references--> `GenerationMode`  [EXTRACTED]
+  pkg/core/rows.go → pkg/core/constants.go
+- `TaskType` --references--> `TaskTypeStatus`  [EXTRACTED]
+  pkg/core/rows.go → pkg/core/constants.go
 
 ## Import Cycles
 - None detected.
 
-## Communities (30 total, 2 thin omitted)
+## Communities (31 total, 2 thin omitted)
 
 ### Community 0 - "07 — Wave-A Exemplar Task-Type Specs"
-Cohesion: 0.04
-Nodes (54): 07 — Wave-A Exemplar Task-Type Specs, G1-NUM-001 — Addition within range, G1-NUM-002 — Subtraction within range, G1-NUM-003 — Number comparison, G1-NUM-004 — Missing addend, G1-NUM-005 — Simple word problem (addition/subtraction), G1-NUM-006 — Place value, G1-NUM-007 — Ordering a list (+46 more)
+Cohesion: 0.02
+Nodes (83): 07 — Wave-A Exemplar Task-Type Specs, G10-ALG-001 — Binomial theorem term, G10-CAL-001 — Basic limit, G10-CPLX-001 — Complex number arithmetic, G10-EXP-001 — Exponential equation, G10-LINALG-001 — Linear system via matrices, G10-LOG-001 — Logarithmic equation, G10-MAT-001 — Matrix operations (+75 more)
 
 ### Community 1 - "Agent log"
-Cohesion: 0.05
-Nodes (36): 2026-09-19 — Phase 0 base DDL, 2026-09-19 — Phase 0 dictionary seeds, 2026-09-19 — Phase 0 forbidden-write probes, 2026-09-19 — Phase 0 idempotency constraints, 2026-09-19 — Phase 0 migration plan, 2026-09-19 — Phase 0 migration verification, 2026-09-19 — Phase 0 service roles and grants, 2026-09-19 — Phase 0 summary (+28 more)
+Cohesion: 0.04
+Nodes (53): 2026-09-19 — Phase 0 base DDL, 2026-09-19 — Phase 0 dictionary seeds, 2026-09-19 — Phase 0 forbidden-write probes, 2026-09-19 — Phase 0 idempotency constraints, 2026-09-19 — Phase 0 migration plan, 2026-09-19 — Phase 0 migration verification, 2026-09-19 — Phase 0 service roles and grants, 2026-09-19 — Phase 0 summary (+45 more)
 
 ### Community 2 - "pipeline.go"
-Cohesion: 0.20
-Nodes (26): ReasonCode, CompareExactInt(), gcd64(), isQuadrantLabel(), isRoman(), joinInts(), NormalizeExactInt(), ParseExactInt() (+18 more)
+Cohesion: 0.13
+Nodes (40): ReasonCode, CompareExactInt(), gcd64(), isQuadrantLabel(), isRoman(), joinInts(), NormalizeExactInt(), ParseExactInt() (+32 more)
 
 ### Community 3 - "constants.go"
 Cohesion: 0.16
@@ -85,10 +84,6 @@ Nodes (24): Domain, EquivalencePolicy, EventLog, GenerationMode, GenerationReque
 ### Community 4 - "000001_create_phase0_schema.up.sql"
 Cohesion: 0.19
 Nodes (21): domain, equivalence_policy, event_log, generation_mode, generation_request, grade_band, locale, mastery_topic (+13 more)
-
-### Community 5 - "pipeline_test.go"
-Cohesion: 0.25
-Nodes (14): TestValidateBool(), TestValidateCanonList(), TestValidateExactIntBoundary(), TestValidateExactIntCorrect(), TestValidateExactIntIncorrect(), TestValidateExactIntUnparseable(), TestValidateExactRat(), TestValidateInterval() (+6 more)
 
 ### Community 6 - "02 — Requirements"
 Cohesion: 0.18
@@ -112,7 +107,7 @@ Nodes (8): 06 — Traceability, Glossary, Stakeholders, Open Items, Definition o
 
 ### Community 11 - "00 — Scope Lock"
 Cohesion: 0.25
-Nodes (7): 00 — Scope Lock, 1. Разрешение `context_binding` (обновлено), 2. В скоупе (обновлено), 3. Вне скоупа (обновлено), 4–7. Глоссарий, карта стейкхолдеров, реестр допущений, реестр открытых вопросов, SCOPE AMENDMENT — SCOPE-AMD-01 (этот ход), Терминологическая правка (самопроверка, не директива оператора)
+Nodes (7): 00 — Scope Lock, 2. В скоупе (обновлено), 3. Вне скоупа (обновлено), 4–7. Глоссарий, карта стейкхолдеров, реестр допущений, реестр открытых вопросов, SCOPE AMENDMENT — SCOPE-AMD-01 (этот ход), SCOPE AMENDMENT — SCOPE-AMD-02 (this pass), SCOPE AMENDMENT — SCOPE-AMD-03 (this pass)
 
 ### Community 12 - "08 — Developer Backlog"
 Cohesion: 0.25
@@ -143,7 +138,7 @@ Cohesion: 0.50
 Nodes (3): 00 — Индекс артефактов трека `math-task-catalog`, Реестр допущений и открытых вопросов — сводный, обновлён, Реестр репозиториев (введён этим ходом, см. ADR-006)
 
 ## Knowledge Gaps
-- **169 isolated node(s):** `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is`, `Source of truth`, `Stack` (+164 more)
+- **215 isolated node(s):** `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is`, `Source of truth`, `Stack` (+210 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -151,10 +146,12 @@ Nodes (3): 00 — Индекс артефактов трека `math-task-catalo
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `ReasonCode` connect `pipeline.go` to `constants.go`?**
-  _High betweenness centrality (0.014) - this node is a cross-community bridge._
+  _High betweenness centrality (0.010) - this node is a cross-community bridge._
 - **What connects `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is` to the rest of the system?**
-  _169 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _215 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `07 — Wave-A Exemplar Task-Type Specs` be split into smaller, more focused modules?**
-  _Cohesion score 0.03636363636363636 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.023809523809523808 - nodes in this community are weakly interconnected._
 - **Should `Agent log` be split into smaller, more focused modules?**
-  _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.037037037037037035 - nodes in this community are weakly interconnected._
+- **Should `pipeline.go` be split into smaller, more focused modules?**
+  _Cohesion score 0.12775842044134728 - nodes in this community are weakly interconnected._

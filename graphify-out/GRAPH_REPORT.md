@@ -1,16 +1,16 @@
 # Graph Report - schema  (2026-09-21)
 
 ## Corpus Check
-- 33 files · ~32,860 words
+- 35 files · ~34,225 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 346 nodes · 439 edges · 31 communities (29 shown, 2 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 13 edges (avg confidence: 0.8)
+- 356 nodes · 462 edges · 34 communities (32 shown, 2 thin omitted)
+- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 14 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `42702f5e`
+- Built from commit: `5ed317a1`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -35,12 +35,13 @@
 - 00 — Индекс артефактов трека `math-task-catalog`
 - 05-decisions.md
 - github.com/berdsa/mathprep_schema
+- pipeline_test.go
 
 ## God Nodes (most connected - your core abstractions)
 1. `07 — Wave-A Exemplar Task-Type Specs` - 83 edges
-2. `Agent log` - 53 edges
-3. `Result` - 15 edges
-4. `Validate()` - 12 edges
+2. `Agent log` - 54 edges
+3. `Result` - 16 edges
+4. `Validate()` - 14 edges
 5. `02 — Requirements` - 10 edges
 6. `task_type` - 9 edges
 7. `ValidateExactInt()` - 9 edges
@@ -49,33 +50,33 @@
 10. `ReasonCode` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `TaskType` --references--> `GradeBand`  [EXTRACTED]
-  pkg/core/rows.go → pkg/core/constants.go
-- `Validate()` --references--> `ValidationMethod`  [EXTRACTED]
-  pkg/core/validation/pipeline.go → pkg/core/constants.go
-- `TaskType` --references--> `EquivalencePolicy`  [EXTRACTED]
-  pkg/core/rows.go → pkg/core/constants.go
-- `TaskType` --references--> `GenerationMode`  [EXTRACTED]
-  pkg/core/rows.go → pkg/core/constants.go
-- `TaskType` --references--> `TaskTypeStatus`  [EXTRACTED]
-  pkg/core/rows.go → pkg/core/constants.go
+- `TestValidateMatrix()` --calls--> `Validate()`  [INFERRED]
+  pkg/core/validation/pipeline_test.go → pkg/core/validation/pipeline.go
+- `TestValidateInterval()` --calls--> `ValidateInterval()`  [INFERRED]
+  pkg/core/validation/pipeline_test.go → pkg/core/validation/pipeline.go
+- `TestValidateSet()` --calls--> `ValidateSet()`  [INFERRED]
+  pkg/core/validation/pipeline_test.go → pkg/core/validation/pipeline.go
+- `TestValidateRatio()` --calls--> `ValidateRatio()`  [INFERRED]
+  pkg/core/validation/pipeline_test.go → pkg/core/validation/pipeline.go
+- `TestValidateTol()` --calls--> `ValidateTol()`  [INFERRED]
+  pkg/core/validation/pipeline_test.go → pkg/core/validation/pipeline.go
 
 ## Import Cycles
 - None detected.
 
-## Communities (31 total, 2 thin omitted)
+## Communities (34 total, 2 thin omitted)
 
 ### Community 0 - "07 — Wave-A Exemplar Task-Type Specs"
 Cohesion: 0.02
-Nodes (83): 07 — Wave-A Exemplar Task-Type Specs, G10-ALG-001 — Binomial theorem term, G10-CAL-001 — Basic limit, G10-CPLX-001 — Complex number arithmetic, G10-EXP-001 — Exponential equation, G10-LINALG-001 — Linear system via matrices, G10-LOG-001 — Logarithmic equation, G10-MAT-001 — Matrix operations (+75 more)
+Nodes (83): 07 — Wave-A Exemplar Task-Type Specs, G10-CAL-001 — Basic limit, G10-PRO-001 — Basic single-event probability, G10-PRO-002 — Compound probability, G10-TRG-001 — Trigonometric equation, G11-ALG-001 — Linear system via matrices, G11-FUN-001 — Exponential equation, G11-LOG-001 — Logarithmic equation (+75 more)
 
 ### Community 1 - "Agent log"
 Cohesion: 0.04
-Nodes (53): 2026-09-19 — Phase 0 base DDL, 2026-09-19 — Phase 0 dictionary seeds, 2026-09-19 — Phase 0 forbidden-write probes, 2026-09-19 — Phase 0 idempotency constraints, 2026-09-19 — Phase 0 migration plan, 2026-09-19 — Phase 0 migration verification, 2026-09-19 — Phase 0 service roles and grants, 2026-09-19 — Phase 0 summary (+45 more)
+Nodes (54): 2026-09-19 — Phase 0 base DDL, 2026-09-19 — Phase 0 dictionary seeds, 2026-09-19 — Phase 0 forbidden-write probes, 2026-09-19 — Phase 0 idempotency constraints, 2026-09-19 — Phase 0 migration plan, 2026-09-19 — Phase 0 migration verification, 2026-09-19 — Phase 0 service roles and grants, 2026-09-19 — Phase 0 summary (+46 more)
 
 ### Community 2 - "pipeline.go"
-Cohesion: 0.13
-Nodes (40): ReasonCode, CompareExactInt(), gcd64(), isQuadrantLabel(), isRoman(), joinInts(), NormalizeExactInt(), ParseExactInt() (+32 more)
+Cohesion: 0.17
+Nodes (32): ReasonCode, CompareExactInt(), flattenNumericValue(), formatNumericValue(), gcd64(), isQuadrantLabel(), isRoman(), joinInts() (+24 more)
 
 ### Community 3 - "constants.go"
 Cohesion: 0.16
@@ -137,8 +138,12 @@ Nodes (5): 01 — Current State, 1. Что подано, а что нет — б
 Cohesion: 0.50
 Nodes (3): 00 — Индекс артефактов трека `math-task-catalog`, Реестр допущений и открытых вопросов — сводный, обновлён, Реестр репозиториев (введён этим ходом, см. ADR-006)
 
+### Community 31 - "pipeline_test.go"
+Cohesion: 0.23
+Nodes (15): TestValidateBool(), TestValidateCanonList(), TestValidateExactIntBoundary(), TestValidateExactIntCorrect(), TestValidateExactIntIncorrect(), TestValidateExactIntUnparseable(), TestValidateExactRat(), TestValidateInterval() (+7 more)
+
 ## Knowledge Gaps
-- **215 isolated node(s):** `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is`, `Source of truth`, `Stack` (+210 more)
+- **216 isolated node(s):** `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is`, `Source of truth`, `Stack` (+211 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -146,12 +151,10 @@ Nodes (3): 00 — Индекс артефактов трека `math-task-catalo
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `ReasonCode` connect `pipeline.go` to `constants.go`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
+  _High betweenness centrality (0.011) - this node is a cross-community bridge._
 - **What connects `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is` to the rest of the system?**
-  _215 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _216 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `07 — Wave-A Exemplar Task-Type Specs` be split into smaller, more focused modules?**
   _Cohesion score 0.023809523809523808 - nodes in this community are weakly interconnected._
 - **Should `Agent log` be split into smaller, more focused modules?**
-  _Cohesion score 0.037037037037037035 - nodes in this community are weakly interconnected._
-- **Should `pipeline.go` be split into smaller, more focused modules?**
-  _Cohesion score 0.12775842044134728 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.03636363636363636 - nodes in this community are weakly interconnected._

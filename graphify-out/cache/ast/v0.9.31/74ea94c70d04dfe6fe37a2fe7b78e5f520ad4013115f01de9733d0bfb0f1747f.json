@@ -1,0 +1,1 @@
+{"nodes": [{"id": "$graphify-root$_migrations_000007_task_type_catalog_relabel_down_sql", "label": "000007_task_type_catalog_relabel.down.sql", "file_type": "code", "source_file": "migrations/000007_task_type_catalog_relabel.down.sql", "source_location": null}], "edges": []}

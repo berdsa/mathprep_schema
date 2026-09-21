@@ -2,7 +2,7 @@
 
 *Five fully-specced types (renamed from "Tier-1" to avoid the Tier/Wave terminology collision fixed this pass — see `00-scope-lock.md`). These are the template the remaining Wave-A backlog replicates, and the reference implementation for Phase 1 of `08-developer-backlog.md`. Each spec's `locale` and `render_target` fields are now explicit columns per the architecture update (findings A, B).*
 
-## G3-NUM-001 — Multi-digit addition with carry
+## G4-NUM-001 — Multi-digit addition with carry
 
 | Field | Value |
 |---|---|
@@ -41,7 +41,7 @@
 | Worked examples | `53÷6=8 ост 5`; `97÷8=12 ост 1`; edge `11÷9=1 ост 2` |
 | Misconception tags | `MISC-REMAINDER-OMIT`, `MISC-REMAINDER-GE-DIVISOR` |
 
-## G6-FRA-003 — Fraction addition, unlike denominators, proper result
+## G5-FRA-003 — Fraction addition, unlike denominators, proper result
 
 | Field | Value |
 |---|---|
@@ -92,7 +92,7 @@
 | Worked examples | `(3,5)→I`; `(-4,2)→II`; `(0,4)→Oy` |
 | Misconception tags | `MISC-SIGN-SWAP`, `MISC-AXIS-AS-QUADRANT`, `MISC-ORIGIN-OMISSION` |
 
-## G6-GEO-002 — Distance between two points
+## G8-GEO-002 — Distance between two points
 
 | Field | Value |
 |---|---|
@@ -113,7 +113,7 @@
 | Worked examples | `(0,0)` to `(3,4)` → `5`; `(1,1)` to `(4,5)` → `5`; `(0,0)` to `(1,1)` → `1.414213562` |
 | Misconception tags | `MISC-DISTANCE-MANHATTAN`, `MISC-SQUARE-ROOT`, `MISC-COORDINATE-SUBTRACTION` |
 
-## G6-SP-001 — Basic single-event probability
+## G10-PRO-001 — Basic single-event probability
 
 | Field | Value |
 |---|---|
@@ -134,7 +134,7 @@
 | Worked examples | `face 1→1/6`; `face 4→1/6`; `face 6→1/6` |
 | Misconception tags | `MISC-FAVORABLE-OUTCOMES`, `MISC-PROBABILITY-ONE`, `MISC-DENOMINATOR` |
 
-## G6-MD-001 — Volume of a rectangular prism
+## G5-MEA-001 — Volume of a rectangular prism
 
 | Field | Value |
 |---|---|
@@ -155,7 +155,7 @@
 | Worked examples | `2×3×4→24`; `1×5×10→50`; `20×20×20→8000` |
 | Misconception tags | `MISC-OMIT-DIMENSION`, `MISC-ADD-DIMENSIONS`, `MISC-AREA-AS-VOLUME` |
 
-## G6-GEO-003 — Missing triangle angle
+## G7-GEO-003 — Missing triangle angle
 
 | Field | Value |
 |---|---|
@@ -176,7 +176,7 @@
 | Worked examples | `60°,70°→50°`; `90°,45°→45°`; `1°,1°→178°` |
 | Misconception tags | `MISC-ANGLE-SUM`, `MISC-SUBTRACTION-ORDER`, `MISC-REFLEX-ANGLE` |
 
-## G6-MD-002 — Unit conversion
+## G4-MEA-002 — Unit conversion
 
 | Field | Value |
 |---|---|
@@ -197,7 +197,7 @@
 | Worked examples | `250 cm→2.5 m`; `3 m→300 cm`; `1 cm→0.01 m` |
 | Misconception tags | `MISC-FACTOR-INVERSE`, `MISC-DECIMAL-PLACE`, `MISC-UNIT-SWAP` |
 
-## G7-EE-001 — Linear equation (1 variable)
+## G6-ALG-001 — Linear equation (1 variable)
 
 | Field | Value |
 |---|---|
@@ -218,7 +218,7 @@
 | Worked examples | `2x+3=11→4`; `5x+1=26→5`; `1x+20=30→10` |
 | Misconception tags | `MISC-SUBTRACT-CONSTANT`, `MISC-DIVIDE-COEFFICIENT`, `MISC-SIGN-ERROR` |
 
-## G7-EE-002 — Linear system (2 variables)
+## G7-ALG-002 — Linear system (2 variables)
 
 | Field | Value |
 |---|---|
@@ -239,7 +239,7 @@
 | Worked examples | `x+y=7; 2x+y=10→(3,4)`; `2x+3y=16; x+y=6→(2,4)`; `x+2y=8; 3x+y=9→(2,3)` |
 | Misconception tags | `MISC-DETERMINANT`, `MISC-TUPLE-ORDER`, `MISC-ELIMINATION-SIGN` |
 
-## G7-EE-003 — Quadratic equation
+## G8-ALG-003 — Quadratic equation
 
 | Field | Value |
 |---|---|
@@ -260,7 +260,7 @@
 | Worked examples | `x²-7x+12=0→{3,4}`; `x²+x-6=0→{-3,2}`; `x²- x-20=0→{-4,5}` |
 | Misconception tags | `MISC-ROOT-SIGN`, `MISC-FACTOR-PAIR`, `MISC-SET-ORDER` |
 
-## G7-EE-004 — Quadratic inequality
+## G8-ALG-004 — Quadratic inequality
 
 | Field | Value |
 |---|---|
@@ -275,7 +275,7 @@
 | Worked examples | `x²-7x+12>0→(4,∞)`; `x²-5x+6>0→(3,∞)`; `x²-3x+2>0→(2,∞)` |
 | Misconception tags | `MISC-SIGN-CHART`, `MISC-ROOT-BOUNDARY`, `MISC-OPEN-CLOSED` |
 
-## G7-EE-005 — Linear inequality
+## G7-ALG-005 — Linear inequality
 
 | Field | Value |
 |---|---|
@@ -289,7 +289,7 @@
 | Worked examples | `2x+3≤11→(-∞,4]`; `5x+1≤26→(-∞,5]`; `x+20≤10→(-∞,-10]` |
 | Misconception tags | `MISC-INEQUALITY-DIRECTION`, `MISC-ENDPOINT`, `MISC-SUBTRACT-CONSTANT` |
 
-## G7-EE-006 — Exponent rules
+## G7-ALG-006 — Exponent rules
 
 | Field | Value |
 |---|---|
@@ -305,7 +305,7 @@
 | Worked examples | `2^3×2^4→128`; `3^2×3^1→27`; `5^1×5^2→125` |
 | Misconception tags | `MISC-EXPONENT-ADD`, `MISC-BASE-MULTIPLY`, `MISC-EXPONENT-MULTIPLY` |
 
-## G7-GEO-001 — Pythagorean theorem
+## G8-GEO-001 — Pythagorean theorem
 
 | Field | Value |
 |---|---|
@@ -321,7 +321,7 @@
 | Worked examples | `3,4→5`; `5,12→13`; `8,15→17` |
 | Misconception tags | `MISC-ADD-LEGS`, `MISC-NO-SQUARE-ROOT`, `MISC-SWAP-HYPOTENUSE` |
 
-## G3-NUM-005 — Simple word problem (addition/subtraction) [HYBRID-AI]
+## G4-NUM-005 — Simple word problem (addition/subtraction) [HYBRID-AI]
 
 | Field | Value |
 |---|---|
@@ -335,12 +335,12 @@
 | Human-review policy | 100% review before FINAL; any spec_version bump re-triggers review; post-FINAL 5% monthly sample |
 | Benchmark requirement | gold set of 50 hand-written `ru-KZ` word problems before exiting GATED |
 | Unit cost per item | **`[OPEN]`** — no measured figure exists; do not ship to production until measured against `OPEN-03`'s benchmark |
-| Variables / equivalence_policy | inherited from `G3-NUM-001` (same `a,b`, same STRICT-FORM integer answer) — instance space and oracle not restated |
+| Variables / equivalence_policy | inherited from `G4-NUM-001` (same `a,b`, same STRICT-FORM integer answer) — instance space and oracle not restated |
 | Edge cases | narrative-generation failure at authoring time only — no AI call happens per served instance (ADR-005), so this can never be a runtime failure |
 
 *Remaining Wave-A backlog (grade-3 and grade-6 rows of `math-task-catalog.md` not yet specced) follows this same field template — see `08-developer-backlog.md` for the sequencing.*
 
-## G3-NUM-012 — Roman numeral conversion
+## G4-NUM-012 — Roman numeral conversion
 
 | Field | Value |
 |---|---|
@@ -480,7 +480,7 @@
 | Verification / space / examples | independent division, 1000/1000 per batch; 90 pairs; `12÷3→4`, `100÷10→10`, `2÷2→1` |
 | Misconceptions | `MISC-SHARING-UNEQUAL`, `MISC-DIVISOR-QUOTIENT` |
 
-## G1-NUM-001 — Addition within range
+## G2-NUM-001 — Addition within range
 
 | Field | Value |
 |---|---|
@@ -568,7 +568,7 @@
 | Worked examples | `3+?=7→4`; `0+?=0→0`; `12+?=20→8` |
 | Misconception tags | `MISC-INVERSE-OPERATION`, `MISC-SUBTRAHEND-CONFUSION` |
 
-## G1-NUM-005 — Simple word problem (addition/subtraction)
+## G2-NUM-005 — Simple word problem (addition/subtraction)
 
 | Field | Value |
 |---|---|
@@ -590,7 +590,7 @@
 | Worked examples | `Had 3, got 4→7`; `Had 9, gave away 4→5`; `Had 0, got 0→0` |
 | Misconception tags | `MISC-WORD-OPERATION`, `MISC-SUBTRACTION-DIRECTION` |
 
-## G1-NUM-006 — Place value
+## G2-NUM-006 — Place value
 
 | Field | Value |
 |---|---|
@@ -634,7 +634,7 @@
 | Worked examples | `[3,1,2]→1 2 3`; `[9,4,4]→4 4 9`; `[0,20,7]→0 7 20` |
 | Misconception tags | `MISC-SORT-DIRECTION`, `MISC-DUPLICATE-DROP` |
 
-## G1-NUM-008 — Money counting
+## G2-MEA-008 — Money counting
 
 | Field | Value |
 |---|---|
@@ -656,7 +656,7 @@
 | Worked examples | `3×1+4×5→23`; `0×1+2×5→10`; `7×1+0×5→7` |
 | Misconception tags | `MISC-COIN-COUNT-VALUE`, `MISC-DENOMINATION-SWAP` |
 
-## G1-NUM-009 — Skip counting / next term
+## G2-NUM-009 — Skip counting / next term
 
 | Field | Value |
 |---|---|
@@ -678,7 +678,7 @@
 | Worked examples | `2,5,... step 3→8`; `0,10,... step 10→20`; `7,8,... step 1→9` |
 | Misconception tags | `MISC-STEP-OFF-BY-ONE`, `MISC-ADD-WRONG-TERM` |
 
-## G1-NUM-010 — Shape property lookup
+## G2-GEO-010 — Shape property lookup
 
 | Field | Value |
 |---|---|
@@ -744,7 +744,7 @@
 | Worked examples | `12÷3→4`; `0÷7→0`; `144÷12→12` |
 | Misconception tags | `MISC-DIVISION-AS-MULTIPLICATION`, `MISC-REMAINDER-IGNORED`, `MISC-DIVISOR-DIVIDEND-SWAP` |
 
-## G3-NUM-004 — Multi-digit add/sub (carry/borrow)
+## G4-NUM-004 — Multi-digit add/sub (carry/borrow)
 
 | Field | Value |
 |---|---|
@@ -810,7 +810,7 @@
 | Worked examples | `347→350` nearest 10; `650→700` nearest 100; `999→1000` nearest 10 |
 | Misconception tags | `MISC-WRONG-PLACE`, `MISC-DOWN-ON-FIVE`, `MISC-DIGIT-TRUNCATION` |
 
-## G3-NUM-008 — Unit fraction of a quantity
+## G3-FRA-008 — Unit fraction of a quantity
 
 | Field | Value |
 |---|---|
@@ -832,7 +832,7 @@
 | Worked examples | `1/4 of 20→5`; `1/3 of 27→9`; `1/9 of 81→9` |
 | Misconception tags | `MISC-MULTIPLY-INSTEAD-OF-DIVIDE`, `MISC-DENOMINATOR-INVERT`, `MISC-NONDIVISIBLE-ROUNDING` |
 
-## G3-NUM-009 — Perimeter of rectangle/square
+## G3-MEA-009 — Perimeter of rectangle/square
 
 | Field | Value |
 |---|---|
@@ -854,7 +854,7 @@
 | Worked examples | `3,4→14`; `5,5→20`; `1,20→42` |
 | Misconception tags | `MISC-AREA-INSTEAD-OF-PERIMETER`, `MISC-SIDE-COUNT`, `MISC-ONE-SIDE-OMITTED` |
 
-## G3-NUM-010 — Area of rectangle/square
+## G3-MEA-010 — Area of rectangle/square
 
 | Field | Value |
 |---|---|
@@ -898,7 +898,7 @@
 | Worked examples | `53÷6→8,5`; `97÷8→12,1`; `11÷9→1,2` |
 | Misconception tags | `MISC-REMAINDER-OMIT`, `MISC-REMAINDER-GE-DIVISOR`, `MISC-DIVISOR-DIVIDEND-SWAP` |
 
-## G6-DEC-001 — Decimal arithmetic
+## G5-DEC-001 — Decimal arithmetic
 
 | Field | Value |
 |---|---|
@@ -931,7 +931,7 @@
 | Worked examples | `2/3×3/4=1/2`; `5/6÷2/3=5/4`; edge `1/2×2/12=1/12` |
 | Misconception tags | `MISC-FRACTION-INVERT`, `MISC-FRACTION-CROSS-MULTIPLY`, `MISC-UNREDUCED` |
 
-## G6-PCT-001 — Percentage of a number
+## G6-DEC-001 — Percentage of a number
 
 | Field | Value |
 |---|---|
@@ -951,7 +951,7 @@
 | Worked examples | `10% of 80→8`; `25% of 60→15`; `15% of 40→6` |
 | Misconception tags | `MISC-PERCENT-DIVIDE-10`, `MISC-PERCENT-MULTIPLY-100`, `MISC-UNREDUCED` |
 
-## G6-PCT-002 — Percentage change
+## G6-DEC-002 — Percentage change
 
 | Field | Value |
 |---|---|
@@ -971,7 +971,7 @@
 | Worked examples | `100 increases by 10%→110`; `80 decreases by 25%→60`; `50 increases by 15%→57.5` |
 | Misconception tags | `MISC-ADD-PERCENT-AS-POINTS`, `MISC-DECREASE-SIGN`, `MISC-DIVIDE-BY-100-TWICE` |
 
-## G6-RAT-001 — Ratio simplification
+## G6-NUM-001 — Ratio simplification
 
 | Field | Value |
 |---|---|
@@ -991,7 +991,7 @@
 | Worked examples | `6:8→3:4`; `15:25→3:5`; `18:24→3:4` |
 | Misconception tags | `MISC-DIVIDE-ONE-TERM`, `MISC-WRONG-GCD`, `MISC-UNREDUCED` |
 
-## G6-RP-001 — Proportion solving
+## G6-FRA-001 — Proportion solving
 
 | Field | Value |
 |---|---|
@@ -1011,7 +1011,7 @@
 | Worked examples | `2/3=4/x→x=6`; `3/5=6/x→x=10`; `4/9=8/x→x=18` |
 | Misconception tags | `MISC-CROSS-MULTIPLY-WRONG`, `MISC-INVERT-PROPORTION`, `MISC-OMIT-DIVISOR` |
 
-## G6-NS-001 — GCD / LCM
+## G5-NUM-001 — GCD / LCM
 
 | Field | Value |
 |---|---|
@@ -1031,7 +1031,7 @@
 | Worked examples | `GCD of 18 and 24→6`; `LCM of 6 and 8→24`; `GCD of 35 and 49→7` |
 | Misconception tags | `MISC-GCD-AS-LCM`, `MISC-LCM-AS-PRODUCT`, `MISC-FACTORIZATION-ERROR` |
 
-## G6-NS-002 — Negative number arithmetic
+## G6-NUM-002 — Negative number arithmetic
 
 | Field | Value |
 |---|---|
@@ -1051,7 +1051,7 @@
 | Worked examples | `−7+3→−4`; `−6×−5→30`; `−24÷6→−4` |
 | Misconception tags | `MISC-SIGN-RULE`, `MISC-NEGATIVE-DIVISION`, `MISC-ABSOLUTE-VALUE` |
 
-## G7-GEO-002 — Similar triangles ratio
+## G9-GEO-002 — Similar triangles ratio
 
 | Field | Value |
 |---|---|
@@ -1071,7 +1071,7 @@
 | Worked examples | `a=6,k=1/2→3`; `a=8,k=3/2→12`; `a=10,k=2/3→6.666666666666667` |
 | Misconception tags | `MISC-INVERT-SCALE`, `MISC-ADD-SCALE`, `MISC-ROUND-EARLY` |
 
-## G7-GEO-003 — Circle metrics
+## G6-GEO-003 — Circle metrics
 
 | Field | Value |
 |---|---|
@@ -1091,7 +1091,7 @@
 | Worked examples | `circumference,r=1→6.283185307179586`; `area,r=2→12.566370614359172`; `circumference,r=3→18.84955592153876` |
 | Misconception tags | `MISC-AREA-AS-CIRCUMFERENCE`, `MISC-DIAMETER-AS-RADIUS`, `MISC-OMIT-PI` |
 
-## G7-GEO-004 — Basic trig ratio
+## G8-TRG-004 — Basic trig ratio
 
 | Field | Value |
 |---|---|
@@ -1111,7 +1111,7 @@
 | Worked examples | `sin(30°)→0.5`; `cos(45°)→0.7071067811865476`; `tan(60°)→1.7320508075688763` |
 | Misconception tags | `MISC-DEGREE-RADIAN`, `MISC-SIN-COS-SWAP`, `MISC-TAN-INVERSION` |
 
-## G7-SP-001 — Permutations and combinations
+## G9-DIS-001 — Permutations and combinations
 
 | Field | Value |
 |---|---|
@@ -1131,7 +1131,7 @@
 | Worked examples | `5P2→20`; `5C2→10`; `10P3→720` |
 | Misconception tags | `MISC-PERM-COMB-SWAP`, `MISC-FACTORIAL-OFF-BY-ONE`, `MISC-IGNORE-ORDER` |
 
-## G7-SP-002 — Compound probability
+## G10-PRO-002 — Compound probability
 
 | Field | Value |
 |---|---|
@@ -1151,7 +1151,7 @@
 | Worked examples | `1/2 and 1/3→1/6`; `1/2 or 1/3→2/3`; `2/3 and 3/4→1/2` |
 | Misconception tags | `MISC-AND-AS-ADD`, `MISC-OR-AS-MULTIPLY`, `MISC-UNREDUCED-FRACTION` |
 
-## G7-SP-003 — Measures of center and spread
+## G7-STA-003 — Measures of center and spread
 
 | Field | Value |
 |---|---|
@@ -1171,7 +1171,7 @@
 | Worked examples | `mean[2,4,6,8,10]→6`; `median[1,3,7,9,12]→7`; `range[2,5,8,11,14]→12` |
 | Misconception tags | `MISC-MEAN-SUM`, `MISC-MEDIAN-UNSORTED`, `MISC-RANGE-ADD` |
 
-## G7-F-001 — Function evaluation
+## G8-FUN-001 — Function evaluation
 
 | Field | Value |
 |---|---|
@@ -1187,7 +1187,7 @@
 | Worked examples | `2x²+3x+1 at x=2→15`; `−x²+4 at x=−3→−5`; `3x²−2x at x=0→0` |
 | Misconception tags | `MISC-OMIT-SQUARE`, `MISC-SIGN-ERROR`, `MISC-CONSTANT-OMISSION` |
 
-## G7-F-002 — Domain check
+## G7-FUN-002 — Domain check
 
 | Field | Value |
 |---|---|
@@ -1202,7 +1202,7 @@
 | Worked examples | `d=0,[-1,0,1,2]→[-1,1,2]`; `d=3,[2,3,4,5]→[2,4,5]` |
 | Misconception tags | `MISC-INCLUDE-POLE`, `MISC-EXCLUDE-WRONG-VALUE`, `MISC-ORDER-SET` |
 
-## G7-NS-001 — Prime factorization
+## G5-DIS-001 — Prime factorization
 
 | Field | Value |
 |---|---|
@@ -1217,7 +1217,7 @@
 | Worked examples | `12→2 2 3`; `97→97`; `360→2 2 2 3 3 5` |
 | Misconception tags | `MISC-OMIT-MULTIPLICITY`, `MISC-STOP-NONPRIME`, `MISC-FACTOR-ARITHMETIC` |
 
-## G7-NS-002 — Divisibility check
+## G5-NUM-002 — Divisibility check
 
 | Field | Value |
 |---|---|
@@ -1247,7 +1247,7 @@
 | Worked examples | `sin(x)=1/2→π/6,5π/6`; `sin(x)=√2/2→π/4,3π/4` |
 | Misconception tags | `MISC-WRONG-QUADRANT`, `MISC-DEGREE-RADIAN`, `MISC-MISSING-SECOND-SOLUTION` |
 
-## G10-LOG-001 — Logarithmic equation
+## G11-LOG-001 — Logarithmic equation
 
 | Field | Value |
 |---|---|
@@ -1261,7 +1261,7 @@
 | Worked examples | `log₂(x)=3→8`; `log₃(x)=2→9`; `log₅(x)=3→125` |
 | Misconception tags | `MISC-BASE-EXPONENT-SWAP`, `MISC-ADD-LOGS`, `MISC-NONPOSITIVE-ARGUMENT` |
 
-## G10-EXP-001 — Exponential equation
+## G11-FUN-001 — Exponential equation
 
 | Field | Value |
 |---|---|
@@ -1275,7 +1275,7 @@
 | Worked examples | `2^x=8→3`; `3^x=9→2`; `5^x=125→3` |
 | Misconception tags | `MISC-BASE-EXPONENT-SWAP`, `MISC-LOG-INVERSE`, `MISC-OFF-BY-ONE` |
 
-## G10-SEQ-001 — Arithmetic sequence
+## G9-FUN-001 — Arithmetic sequence
 
 | Field | Value |
 |---|---|
@@ -1289,7 +1289,7 @@
 | Worked examples | `a1=3,d=2,n=5 term→11`; `a1=3,d=2,n=5 sum→35` |
 | Misconception tags | `MISC-OFF-BY-ONE`, `MISC-TERM-SUM-SWAP`, `MISC-SIGN-ERROR` |
 
-## G10-SEQ-002 — Geometric sequence
+## G9-FUN-002 — Geometric sequence
 
 | Field | Value |
 |---|---|
@@ -1321,7 +1321,7 @@
 | Worked examples | `lim(x→2)(3x−1)→5`; `lim(x→−3)(−2x+4)→10`; `lim(x→0)(7x+9)→9` |
 | Misconception tags | `MISC-SUBSTITUTE-WRONG-POINT`, `MISC-SIGN-ERROR`, `MISC-CONFUSE-SLOPE-AND-VALUE` |
 
-## G10-ALG-001 — Binomial theorem term
+## G9-ALG-001 — Binomial theorem term
 
 | Field | Value |
 |---|---|
@@ -1339,7 +1339,7 @@
 | Worked examples | coefficient of `x²y²` in `(x+y)^4` → 6; coefficient of `x⁴y` in `(x+y)^5` → 5; coefficient of `y³` in `(x+y)^3` → 1 |
 | Misconception tags | `MISC-EXPONENT-INDEX`, `MISC-FACTORIAL-OFF-BY-ONE`, `MISC-OMIT-BINOMIAL-COEFFICIENT` |
 
-## G10-SP-001 — Conditional probability
+## G11-PRO-001 — Conditional probability
 
 | Field | Value |
 |---|---|
@@ -1357,7 +1357,7 @@
 | Worked examples | `P(A∩B)=2/10,P(B)=5/10→2/5`; `3/12, P(B)=6/12→1/2`; `1/8, P(B)=4/8→1/4` |
 | Misconception tags | `MISC-CONDITIONAL-AS-JOINT`, `MISC-INVERT-CONDITION`, `MISC-UNREDUCED-FRACTION` |
 
-## G10-CPLX-001 — Complex number arithmetic
+## G11-NUM-001 — Complex number arithmetic
 
 | Field | Value |
 |---|---|
@@ -1375,7 +1375,7 @@
 | Worked examples | `(2+3i)+(4−i)→(6,2)`; `(2+3i)(4−i)→(11,10)`; `(3+5i)/(1+i)→(4,1)` |
 | Misconception tags | `MISC-IMAGINARY-SIGN`, `MISC-DISTRIBUTIVE-ERROR`, `MISC-COMPLEX-DIVISION-CONJUGATE` |
 
-## G10-VEC-001 — Vector operations
+## G9-VEC-001 — Vector operations
 
 | Field | Value |
 |---|---|
@@ -1393,7 +1393,7 @@
 | Worked examples | `(2,3)·(4,−1)→5`; `| (3,4) |→5`; angle between `(1,0)` and `(0,2)` → 90° |
 | Misconception tags | `MISC-DOT-AS-COMPONENTWISE`, `MISC-MAGNITUDE-SQUARE-ROOT`, `MISC-ANGLE-SUPPLEMENT` |
 
-## G10-MAT-001 — Matrix operations
+## G11-MAT-001 — Matrix operations
 
 | Field | Value |
 |---|---|
@@ -1411,7 +1411,7 @@
 | Worked examples | `[[1,2],[3,4]]+[[5,6],[7,8]]→[[6,8],[10,12]]`; product→`[[19,22],[43,50]]`; determinant of A→`−2` |
 | Misconception tags | `MISC-ELEMENTWISE-PRODUCT`, `MISC-ROW-COLUMN-ORDER`, `MISC-DETERMINANT-SIGN` |
 
-## G10-LINALG-001 — Linear system via matrices
+## G11-ALG-001 — Linear system via matrices
 
 | Field | Value |
 |---|---|
@@ -1429,7 +1429,7 @@
 | Worked examples | `x+y=5, 2x−y=1→(2,3)`; `2x+y=7, x−y=−1→(2,3)`; `3x+2y=8, x−y=1→(2,1)` |
 | Misconception tags | `MISC-DETERMINANT-ZERO`, `MISC-CRAMER-NUMERATOR`, `MISC-ROW-COLUMN-SWAP` |
 
-## UNI-CAL-001 — Limit with indeterminate form
+## U-CAL-001 — Limit with indeterminate form
 
 | Field | Value |
 |---|---|
@@ -1447,7 +1447,7 @@
 | Worked examples | `lim(x→2)[3(x−2)]/[4(x−2)]→3/4`; `[-2(x+1)]/[6(x+1)]→−1/3`; `5(x−0)/10(x−0)→1/2` |
 | Misconception tags | `MISC-FAIL-CANCEL`, `MISC-INVERT-FRACTION`, `MISC-UNREDUCED` |
 
-## UNI-CAL-004 — Gradient / directional derivative
+## U-CAL-004 — Gradient / directional derivative
 
 | Field | Value |
 |---|---|
@@ -1463,7 +1463,7 @@
 | Worked examples | `3x−2y+1→∇f=(3,−2)`; x-direction→3; negative y-direction→2 |
 | Misconception tags | `MISC-GRADIENT-SWAP`, `MISC-DIRECTION-SIGN`, `MISC-USE-FUNCTION-VALUE` |
 
-## UNI-CAL-006 — Definite integral
+## U-CAL-006 — Definite integral
 
 | Field | Value |
 |---|---|
@@ -1477,7 +1477,7 @@
 | Worked examples | `∫[0,2](3x+1)dx=8`; `∫[-1,1]2x dx=0`; `∫[1,3](x−2)dx=0` |
 | Misconception tags | `MISC-BOUND-SWAP`, `MISC-ANTIDERIVATIVE-SIGN`, `MISC-FORGET-CONSTANT-TERM` |
 
-## UNI-CAL-007 — Double integral
+## U-CAL-007 — Double integral
 
 | Field | Value |
 |---|---|
@@ -1491,7 +1491,7 @@
 | Worked examples | `∬_R 3 dA, R=[0,2]×[0,4]→24`; `∬_R 0 dA→0`; `∬_R −2, R=[−1,1]×[2,5]→−12` |
 | Misconception tags | `MISC-AREA-OMISSION`, `MISC-BOUND-SWAP`, `MISC-SIGN-ERROR` |
 
-## UNI-SEQ-001 — Series convergence test
+## U-FUN-001 — Series convergence test
 
 | Field | Value |
 |---|---|
@@ -1505,7 +1505,7 @@
 | Worked examples | `r=1/2→YES`; `r=−1/3→YES`; `r=2→NO` |
 | Misconception tags | `MISC-ABSOLUTE-RATIO`, `MISC-ALTERNATING-CONFUSION`, `MISC-BOUNDARY-RATIO` |
 
-## UNI-SEQ-002 — Sum of a convergent series
+## U-FUN-002 — Sum of a convergent series
 
 | Field | Value |
 |---|---|

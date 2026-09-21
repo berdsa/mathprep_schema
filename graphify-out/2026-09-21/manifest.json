@@ -5,13 +5,13 @@
     "semantic_hash": ""
   },
   "docs/agent-log.md": {
-    "mtime": 1789905132.8644173,
-    "ast_hash": "ff49bedff5957e803ea4c0e2d46e9e75",
+    "mtime": 1789929481.7473006,
+    "ast_hash": "8c5135e108a9816fc23f57dbb780abc9",
     "semantic_hash": ""
   },
   "docs/srd/00-conventions.md": {
-    "mtime": 1789817210.9252872,
-    "ast_hash": "4dd38b4a59aa12264cf6cdcf4e4bb636",
+    "mtime": 1789926319.282909,
+    "ast_hash": "e9b453542da205fc0cab0d51285efea6",
     "semantic_hash": ""
   },
   "docs/srd/00-index.md": {
@@ -20,8 +20,8 @@
     "semantic_hash": ""
   },
   "docs/srd/00-scope-lock.md": {
-    "mtime": 1789817210.9134753,
-    "ast_hash": "0dbe6ee75544a57111799fca4429aec2",
+    "mtime": 1789926260.26155,
+    "ast_hash": "d77ab137b9019770acb9d74858ca7831",
     "semantic_hash": ""
   },
   "docs/srd/01-current-state.md": {
@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "docs/srd/07-task-type-specs-exemplars.md": {
-    "mtime": 1789907784.2925408,
-    "ast_hash": "cf6fc3a6a88d454bcc51f292d7dfdded",
+    "mtime": 1789923697.0076768,
+    "ast_hash": "68ef2638d6b647ffa5fcd562081baf88",
     "semantic_hash": ""
   },
   "docs/srd/08-developer-backlog.md": {
@@ -152,6 +152,16 @@
   "docs/srd/math-task-catalog.md": {
     "mtime": 1789744148.833297,
     "ast_hash": "83ce014201d46ff6c7e58dd4d6acd988",
+    "semantic_hash": ""
+  },
+  "migrations/000006_taskgen_task_type_reconciliation.down.sql": {
+    "mtime": 1789926575.022911,
+    "ast_hash": "5630fa6a32fe51c8375540a43d397056",
+    "semantic_hash": ""
+  },
+  "migrations/000006_taskgen_task_type_reconciliation.up.sql": {
+    "mtime": 1789926575.0222797,
+    "ast_hash": "249494ce600c3c924d9f3c6c7eabafe2",
     "semantic_hash": ""
   }
 }

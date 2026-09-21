@@ -112,6 +112,9 @@ func TestValidateTuple(t *testing.T) {
 	if got := ValidateTuple("5,8", "8,5"); got.Verdict != core.VerdictIncorrect {
 		t.Fatalf("got %+v", got)
 	}
+	if got := ValidateTuple("-7", "-7"); got.Verdict != core.VerdictCorrect {
+		t.Fatalf("scalar tuple contract should accept signed integer: %+v", got)
+	}
 }
 
 func TestValidateSet(t *testing.T) {
@@ -165,5 +168,23 @@ func TestValidateTol(t *testing.T) {
 	}
 	if got := ValidateTol("1.01", "1", 1e-6); got.Verdict != core.VerdictIncorrect {
 		t.Fatalf("got %+v", got)
+	}
+	if got := ValidateTol("[1.0000001, 2.0]", "[1,2]", 1e-6); got.Verdict != core.VerdictCorrect {
+		t.Fatalf("array tolerance should compare element-wise: %+v", got)
+	}
+	if got := ValidateTol("[1,3]", "[1,2]", 1e-6); got.Verdict != core.VerdictIncorrect {
+		t.Fatalf("array mismatch should be incorrect: %+v", got)
+	}
+}
+
+func TestValidateMatrix(t *testing.T) {
+	if got := Validate(core.ValidationMethodMatrix, "[[1, 2.0000001], [3, 4]]", "[[1,2],[3,4]]"); got.Verdict != core.VerdictCorrect {
+		t.Fatalf("matrix should compare element-wise: %+v", got)
+	}
+	if got := Validate(core.ValidationMethodMatrix, "[[1, 2, 3]]", "[[1,2],[3,4]]"); got.Verdict != core.VerdictIncorrect {
+		t.Fatalf("matrix shape mismatch should be incorrect: %+v", got)
+	}
+	if got := Validate(core.ValidationMethodMatrix, "-6", "-6"); got.Verdict != core.VerdictCorrect {
+		t.Fatalf("matrix determinant scalar should be accepted: %+v", got)
 	}
 }

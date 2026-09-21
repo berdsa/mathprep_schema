@@ -252,3 +252,8 @@
 
 - Added migration `000006_taskgen_task_type_reconciliation` so the taskgen service role can insert and update its registered `task_type` rows at startup. Its existing `SELECT` grant remains in place.
 - Local database also needed the already committed `000005_task_type_grade_band` migration before University rows could be stored.
+
+## 2026-09-21 — catalog relabel and shared validators
+
+- Added the transactional `000007_task_type_catalog_relabel` migration, including foreign-key-safe relabeling of existing task instances and a reverse migration with legacy-domain restoration.
+- Extended the shared validation pipeline with element-wise MATRIX comparison, numeric-array TOL comparison, and scalar support for the existing TUPLE method; added focused tests.

@@ -24,7 +24,7 @@ Operator directive: task content must support Kazakh (`kk-KZ`), Russian (`ru-KZ`
 - `NotationProfile` needs real entries for `kk-KZ` and the chosen English locale code, not just `ru-KZ`. Kazakh notation conventions (decimal separator, function names, GCD/LCM terms) are **not sourced anywhere in this SRD** and must not be invented — confirm with a real curriculum source or the operator directly.
 - `EXACT-RAT`/`TOL`-class validation (anything decimal-separator-sensitive) becomes locale-aware in `pkg/core` — currently assumes one fixed convention.
 - A locale-selection mechanism is needed: `STUDENTS.preferred_locale` plus an optional per-request override, neither of which exists in the ERD yet.
-- Translated templates carry the same correctness stakes as `G3-NUM-005`'s HYBRID-AI narratives — a bad translation can change what a problem is actually asking. Same discipline applies: authored once per template, reviewed once, not generated per-instance.
+- Translated templates carry the same correctness stakes as `G4-NUM-005`'s HYBRID-AI narratives — a bad translation can change what a problem is actually asking. Same discipline applies: authored once per template, reviewed once, not generated per-instance.
 
 **Does not change:** the underlying dictionary-driven locale architecture already anticipated this (`00-conventions.md` §6 already reserved `kk-KZ` as a dictionary value) — this amendment activates and extends a pattern that was already designed for, not one invented from scratch.
 

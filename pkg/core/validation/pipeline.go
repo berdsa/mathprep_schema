@@ -2,6 +2,7 @@
 package validation
 
 import (
+	"encoding/json"
 	"math"
 	"reflect"
 	"regexp"
@@ -53,6 +54,8 @@ func Validate(method core.ValidationMethod, raw, correctAnswer string) Result {
 		return ValidateExactRat(raw, correctAnswer)
 	case core.ValidationMethodTol:
 		return ValidateTol(raw, correctAnswer, 1e-6)
+	case core.ValidationMethodMatrix:
+		return ValidateMatrix(raw, correctAnswer, 1e-6)
 	default:
 		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
 	}
@@ -168,18 +171,109 @@ func parseRatio(raw string) (string, string, core.ReasonCode) {
 }
 
 func ValidateTol(raw, correctAnswer string, tolerance float64) Result {
-	got, err := strconv.ParseFloat(strings.TrimSpace(strings.ReplaceAll(raw, ",", ".")), 64)
+	got, err := parseNumericValue(raw)
 	if err != nil {
 		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
 	}
-	want, err := strconv.ParseFloat(strings.TrimSpace(strings.ReplaceAll(correctAnswer, ",", ".")), 64)
+	want, err := parseNumericValue(correctAnswer)
 	if err != nil {
 		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonParseError, Stage: StageCompare, CorrectAnswer: correctAnswer}
 	}
-	if math.Abs(got-want) > tolerance {
-		return Result{Verdict: core.VerdictIncorrect, ReasonCode: core.ReasonValueMismatch, Normalized: strconv.FormatFloat(got, 'f', -1, 64), Stage: StageVerdict, CorrectAnswer: correctAnswer}
+	if !numericValuesMatch(got, want, tolerance) {
+		return Result{Verdict: core.VerdictIncorrect, ReasonCode: core.ReasonValueMismatch, Normalized: formatNumericValue(got), Stage: StageVerdict, CorrectAnswer: correctAnswer}
 	}
-	return Result{Verdict: core.VerdictCorrect, ReasonCode: core.ReasonOK, Normalized: strconv.FormatFloat(got, 'f', -1, 64), Stage: StageVerdict, CorrectAnswer: correctAnswer}
+	return Result{Verdict: core.VerdictCorrect, ReasonCode: core.ReasonOK, Normalized: formatNumericValue(got), Stage: StageVerdict, CorrectAnswer: correctAnswer}
+}
+
+// ValidateMatrix compares a scalar or a rectangular JSON numeric array
+// element-wise. Scalars are accepted because determinant variants of the
+// matrix task have a scalar answer while sum/product variants have matrices.
+func ValidateMatrix(raw, correctAnswer string, tolerance float64) Result {
+	got, err := parseNumericValue(raw)
+	if err != nil {
+		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
+	}
+	want, err := parseNumericValue(correctAnswer)
+	if err != nil {
+		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonParseError, Stage: StageCompare, CorrectAnswer: correctAnswer}
+	}
+	if !numericValuesMatch(got, want, tolerance) {
+		return Result{Verdict: core.VerdictIncorrect, ReasonCode: core.ReasonValueMismatch, Normalized: formatNumericValue(got), Stage: StageVerdict, CorrectAnswer: correctAnswer}
+	}
+	return Result{Verdict: core.VerdictCorrect, ReasonCode: core.ReasonOK, Normalized: formatNumericValue(got), Stage: StageVerdict, CorrectAnswer: correctAnswer}
+}
+
+type numericValue struct {
+	values []float64
+	shape  []int
+}
+
+func parseNumericValue(raw string) (numericValue, error) {
+	trimmed := strings.TrimSpace(raw)
+	if trimmed == "" {
+		return numericValue{}, strconv.ErrSyntax
+	}
+	if !strings.HasPrefix(trimmed, "[") {
+		value, err := strconv.ParseFloat(strings.ReplaceAll(trimmed, ",", "."), 64)
+		if err != nil {
+			return numericValue{}, err
+		}
+		return numericValue{values: []float64{value}}, nil
+	}
+	var decoded any
+	if err := json.Unmarshal([]byte(trimmed), &decoded); err != nil {
+		return numericValue{}, err
+	}
+	return flattenNumericValue(decoded)
+}
+
+func flattenNumericValue(value any) (numericValue, error) {
+	switch value := value.(type) {
+	case float64:
+		return numericValue{values: []float64{value}}, nil
+	case []any:
+		if len(value) == 0 {
+			return numericValue{shape: []int{0}}, nil
+		}
+		first, err := flattenNumericValue(value[0])
+		if err != nil {
+			return numericValue{}, err
+		}
+		out := numericValue{shape: append([]int{len(value)}, first.shape...), values: append([]float64{}, first.values...)}
+		for _, item := range value[1:] {
+			part, err := flattenNumericValue(item)
+			if err != nil || !reflect.DeepEqual(part.shape, first.shape) {
+				return numericValue{}, strconv.ErrSyntax
+			}
+			out.values = append(out.values, part.values...)
+		}
+		return out, nil
+	default:
+		return numericValue{}, strconv.ErrSyntax
+	}
+}
+
+func numericValuesMatch(got, want numericValue, tolerance float64) bool {
+	if !reflect.DeepEqual(got.shape, want.shape) || len(got.values) != len(want.values) {
+		return false
+	}
+	for i := range got.values {
+		if math.Abs(got.values[i]-want.values[i]) > tolerance {
+			return false
+		}
+	}
+	return true
+}
+
+func formatNumericValue(value numericValue) string {
+	if len(value.shape) == 0 {
+		return strconv.FormatFloat(value.values[0], 'f', -1, 64)
+	}
+	encoded, err := json.Marshal(value.values)
+	if err != nil {
+		return ""
+	}
+	return string(encoded)
 }
 
 var exactRatInput = regexp.MustCompile(`^\s*([0-9]+)(?:\s*/\s*([0-9]+))?\s*$`)
@@ -253,6 +347,17 @@ var tupleInput = regexp.MustCompile(`^\s*([0-9]{1,3})\s*(?:,|;|ост\.?|ост�
 // ValidateTuple validates an ordered non-negative integer pair. Separators
 // follow the canonical TUPLE contract; components are never sorted.
 func ValidateTuple(raw, correctAnswer string) Result {
+	if !strings.ContainsAny(correctAnswer, ",;ост") {
+		got, gotErr := strconv.ParseInt(strings.TrimSpace(raw), 10, 64)
+		want, wantErr := strconv.ParseInt(strings.TrimSpace(correctAnswer), 10, 64)
+		if gotErr != nil || wantErr != nil {
+			return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
+		}
+		if got != want {
+			return Result{Verdict: core.VerdictIncorrect, ReasonCode: core.ReasonValueMismatch, Normalized: strconv.FormatInt(got, 10), Stage: StageVerdict, CorrectAnswer: correctAnswer}
+		}
+		return Result{Verdict: core.VerdictCorrect, ReasonCode: core.ReasonOK, Normalized: strconv.FormatInt(got, 10), Stage: StageVerdict, CorrectAnswer: correctAnswer}
+	}
 	match := tupleInput.FindStringSubmatch(strings.ToLower(raw))
 	if len(match) != 3 {
 		if strings.TrimSpace(raw) != "" && !strings.ContainsAny(raw, ",;ост") {

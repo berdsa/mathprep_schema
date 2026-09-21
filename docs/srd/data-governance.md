@@ -22,7 +22,7 @@ Unchanged in substance: `raw_input` 90 days then redacted to verdict+reason_code
 **New this pass:** `EVENT_LOG` retention is **indefinite by design** (FR-008's entire purpose is a complete history for later analytics) — this is a deliberate exception to the 90-day `raw_input` policy above, so the two must not be confused: `EVENT_LOG.payload_json` for a `SUBMISSION_GRADED` event should carry the verdict and reason_code, **not a copy of `raw_input`** — otherwise the 90-day minimization on `SUBMISSION.raw_input` is silently defeated by an indefinitely-retained duplicate in the journal. `[DERIVED]` — this is a genuine minimization requirement the new journal introduces; flagging it now rather than letting the developer discover it as a compliance gap later.
 
 ## Residency & sub-processors
-Unchanged: existing VPS, `ASM-09`. **HYBRID-AI sub-processor note (G3-NUM-005)** unchanged from prior pass — operand values and template slots only, never `student_id` or `raw_input`, per ADR-005.
+Unchanged: existing VPS, `ASM-09`. **HYBRID-AI sub-processor note (G4-NUM-005)** unchanged from prior pass — operand values and template slots only, never `student_id` or `raw_input`, per ADR-005.
 
 **New role added this pass:** `analytics`, when built, gets a read-only DB role scoped to `EVENT_LOG` and its own derived tables — it is never granted access to `USERS`, the identity-mapping table, or `SUBMISSION.raw_input`, since none of its stated purposes (empirical difficulty, discrimination, drift) require raw identity or raw input text.
 

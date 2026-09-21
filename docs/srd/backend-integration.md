@@ -38,7 +38,7 @@ Unchanged: `testdata/golden/<TypeID>.json`, N≥20 fixed-seed cases per type inc
 ```json
 // 200 response, once DONE
 { "request_id": "uuid", "status": "DONE", "task_set_id": "uuid",
-  "items": [ { "item_id": "uuid", "type_id": "G3-NUM-001", "spec_version": "1.0.0",
+  "items": [ { "item_id": "uuid", "type_id": "G4-NUM-001", "spec_version": "1.0.0",
                "tier": "T1", "locale": "ru-KZ", "render_target": "plaintext",
                "problem": "257 + 486 = ?" } ] }
 ```

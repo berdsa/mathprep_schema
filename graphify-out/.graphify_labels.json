@@ -29,5 +29,8 @@
   "27": "000005_task_type_grade_band.down.sql",
   "28": "000005_task_type_grade_band.up.sql",
   "29": "github.com/berdsa/mathprep_schema",
-  "30": "000006_taskgen_task_type_reconciliation.up.sql"
+  "30": "000006_taskgen_task_type_reconciliation.up.sql",
+  "31": "pipeline_test.go",
+  "32": "000007_task_type_catalog_relabel.down.sql",
+  "33": "000007_task_type_catalog_relabel.up.sql"
 }

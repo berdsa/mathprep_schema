@@ -28,12 +28,12 @@ Every phase below ends with an explicit **Exit criteria** list. Do not start the
 
 ## Phase 1 — One task type, end to end (`taskgen` + `grader` repos, first commits)
 
-**Chosen type: `G3-NUM-001`** (simplest validation method, `EXACT-INT`, no tuple/rational complexity — the right first case to prove the pattern, not the hardest one).
+**Chosen type: `G4-NUM-001`** (simplest validation method, `EXACT-INT`, no tuple/rational complexity — the right first case to prove the pattern, not the hardest one).
 
 **`taskgen`:**
 1. Repository skeleton, imports `schema v0.1.0`.
-2. Generator registry (`map[string]Generator`), boot-time duplicate-key panic check, build-time allowlist so only `FINAL`/`GATED` types load (empty for now except `G3-NUM-001` once it's GATED).
-3. `Generate()` implementation for `G3-NUM-001` exactly per `07-task-type-specs-exemplars.md`: variable ranges, reject-and-retry for ≥1 carry, 200-attempt cap with `WARN` at 50.
+2. Generator registry (`map[string]Generator`), boot-time duplicate-key panic check, build-time allowlist so only `FINAL`/`GATED` types load (empty for now except `G4-NUM-001` once it's GATED).
+3. `Generate()` implementation for `G4-NUM-001` exactly per `07-task-type-specs-exemplars.md`: variable ranges, reject-and-retry for ≥1 carry, 200-attempt cap with `WARN` at 50.
 4. `GENERATION_REQUEST` table: `POST /v1/generation-requests` handler (insert row, check idempotency first) + `GET /v1/generation-requests/:id` + the worker goroutine (`SELECT ... FOR UPDATE SKIP LOCKED`, lease/heartbeat, write `TASK_SET`+`TASK_INSTANCE`+`EVENT_LOG` in one transaction).
 5. Webhook-style auth stub for the bot boundary (real Telegram signature check can follow; a placeholder shared-secret header is acceptable for this phase, documented as such).
 
@@ -44,12 +44,12 @@ Every phase below ends with an explicit **Exit criteria** list. Do not start the
 4. QR-token verification stub (real signing scheme can follow; document the placeholder).
 
 **Verification (both repos):**
-- Verification oracle: generate 1000 instances of `G3-NUM-001`, independently recompute each via a second code path (stdlib big-int), assert equality and non-degeneracy (≥1 carry present). Zero failures required.
+- Verification oracle: generate 1000 instances of `G4-NUM-001`, independently recompute each via a second code path (stdlib big-int), assert equality and non-degeneracy (≥1 carry present). Zero failures required.
 - Golden tests: ≥20 fixed-seed cases per `00-conventions.md` §golden-test convention, covering `CORRECT`/`INCORRECT`/`UNPARSEABLE`/boundary.
 - Manual QA: the operator (or a reviewer) solves 10 freshly generated instances "blind" and confirms every one is correct and the rendered `ru-KZ` text reads naturally.
 
 **Exit criteria:**
-- 1000/1000 oracle pass, golden tests green, manual QA complete, `G3-NUM-001` marked `GATED` in `TASK_TYPE`.
+- 1000/1000 oracle pass, golden tests green, manual QA complete, `G4-NUM-001` marked `GATED` in `TASK_TYPE`.
 
 ---
 
@@ -64,7 +64,7 @@ This is the "several stages" the operator asked for, made concrete rather than l
 | C — Content review | The rendered problem text, in `ru-KZ`, reads naturally at the stated grade level; worked examples in the spec are re-verified by hand | Operator |
 | D — Explicit go/no-go | Written approval to proceed to the next type. **Silence is not approval** — the developer waits for an explicit yes before starting the next type's Phase-2-style work | Operator |
 
-Only after Stage D does work on the next type begin. This gate repeats for every single type from here through the end of the university wave — it is not a one-time bar cleared after `G3-NUM-001`.
+Only after Stage D does work on the next type begin. This gate repeats for every single type from here through the end of the university wave — it is not a one-time bar cleared after `G4-NUM-001`.
 
 ---
 
