@@ -756,6 +756,21 @@
 | Worked examples | `circle→2D`; `cube→3D`; `cylinder→3D` |
 | Misconception tags | `MISC-DIMENSION-CONFUSION`, `MISC-SHAPE-CLASS` |
 
+## G1-GEO-002 — Half fraction
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Name one of two equal parts as a fraction / GEO / 1 / Understand |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `A shape is split into 2 equal parts. One part is what fraction?` |
+| Variables / constraint | fixed two equal parts |
+| Solution / equivalence_policy | `1/2`; **STRICT-FORM** EXACT-RAT |
+| Input contract | shared exact-rational contract |
+| Verification oracle / instance space | fixed answer; 1000/1000 per seed batch |
+| Worked examples | `2 equal parts→1/2`; equivalent `2/4` is not strict form; `1/2` is correct |
+| Misconception tags | `MISC-FRACTION-NUMERATOR`, `MISC-FRACTION-DENOMINATOR` |
+
 ## G1-STA-002 — Data difference
 
 | Field | Value |
