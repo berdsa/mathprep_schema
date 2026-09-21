@@ -786,6 +786,21 @@
 | Worked examples | `4 equal parts→1/4`; equivalent `2/8` is not strict form; `1/4` is correct |
 | Misconception tags | `MISC-FRACTION-NUMERATOR`, `MISC-FRACTION-DENOMINATOR` |
 
+## G1-GEO-004 — Shaded fraction
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Find the shaded fraction / GEO / 1 / Understand |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `A shape is split into {d} equal parts. {s} part is shaded. What fraction is shaded?` |
+| Variables / constraint | `d∈{2,4}`; `s=1` |
+| Solution / equivalence_policy | `s/d`; **STRICT-FORM** EXACT-RAT |
+| Input contract | shared exact-rational contract |
+| Verification oracle / instance space | independent shaded-fraction calculation; 1000/1000 per seed batch; 2 denominators |
+| Worked examples | `1 of 2→1/2`; `1 of 4→1/4`; `1 shaded part is shown explicitly` |
+| Misconception tags | `MISC-FRACTION-NUMERATOR`, `MISC-FRACTION-DENOMINATOR`, `MISC-SHADED-COUNT` |
+
 ## G1-STA-002 — Data difference
 
 | Field | Value |
