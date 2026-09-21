@@ -3051,3 +3051,10 @@
 | G7-GEO-015 | Display two remote interior angles and ask for the exterior angle. | EXACT-INT |
 | G7-GEO-016 | Display two triangles' three side lengths and ask whether SSS proves congruence. | BOOL |
 | G7-GEO-017 | Display two triangles' two sides and included angles and ask whether SAS proves congruence. | BOOL |
+| G7-GEO-018 | Display corresponding parts and ask whether equal displayed lengths are equal. | BOOL |
+| G7-GEO-019 | Display an isosceles triangle's vertex angle and ask for each base angle. | EXACT-INT |
+| G7-GEO-020 | Display three side lengths and ask whether they satisfy the triangle inequality. | BOOL |
+| G7-GEO-021 | Display an angle and ask for one half from its bisector. | EXACT-INT |
+| G7-GEO-022 | Display rectangle side lengths and ask for area. | EXACT-INT |
+| G7-GEO-023 | Display a central angle and ask for the intercepted arc measure. | EXACT-INT |
+| G7-GEO-024 | Display the number of sides of a regular polygon and ask for symmetry-line count. | EXACT-INT |
