@@ -3178,6 +3178,9 @@
 | G11-VEC-001 | Display two 2D vectors and ask for their dot product. | EXACT-INT |
 | G11-MAT-002 | Display a 2×2 matrix and ask for its determinant. | EXACT-INT |
 
+| U-STA-007 | ANOVA F-statistic from visible group data | TOL |
+| U-CAL-020 | Complex-number division with visible operands | TUPLE |
+
 | U-CAL-017 | One bisection midpoint for visible interval and function | TOL |
 | U-CAL-018 | Trapezoidal-rule approximation with visible interval and n | TOL |
 | U-CAL-019 | Lagrange interpolation at a visible x | TOL |
