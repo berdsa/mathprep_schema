@@ -576,6 +576,21 @@
 | Worked examples | `3+4=7, ask 4+3→7`; `0+20=20→20`; `12+8=20→20` |
 | Misconception tags | `MISC-ADD-FACT`, `MISC-COMMUTATIVE-ORDER`, `MISC-BOUNDARY` |
 
+## G1-NUM-023 — Fact family subtraction
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Use an addition fact family for subtraction / NUM / 1 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `If {a} + {b} = {c}, what is {c} − {a}?` |
+| Variables / constraint | `a,b: int [0,20]`; `a+b≤20`; `c=a+b` |
+| Solution / equivalence_policy | `b`; **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; decimals and commas reject |
+| Verification oracle / instance space | independent subtraction; 1000/1000 per seed batch; 231 ordered pairs |
+| Worked examples | `3+4=7, ask 7−3→4`; `0+20=20→20`; `12+8=20→8` |
+| Misconception tags | `MISC-ADD-FACT`, `MISC-SUBTRACT-MINUS`, `MISC-FACT-FAMILY` |
+
 ## G1-NUM-020 — Word problem: subtract change unknown
 
 | Field | Value |
