@@ -3109,3 +3109,8 @@
 | G8-GEO-008 | Display a triangle base and ask for the parallel midsegment length. | EXACT-RAT |
 | G8-GEO-009 | Display a distance to a perpendicular bisector and ask for the equal distance. | EXACT-INT |
 | G8-GEO-010 | Display a median and the centroid ratio and ask for the longer segment. | EXACT-RAT |
+| G8-GEO-011 | Display two lengths and ask for their geometric mean. | TOL |
+| G8-GEO-012 | Display right-triangle legs and ask for the hypotenuse. | TOL |
+| G8-GEO-013 | Display a 45-45-90 leg and ask for the hypotenuse. | TOL |
+| G8-GEO-014 | Display a 30-60-90 short leg and ask for the hypotenuse. | EXACT-INT |
+| G8-GEO-015 | Display a right-triangle angle and adjacent side and ask for the opposite side. | TOL |
