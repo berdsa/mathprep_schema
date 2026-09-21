@@ -341,3 +341,7 @@
 ## 2026-09-21 — G1-MEA-005 canonical spec
 
 - Added the canonical G1 time-plus-hours specification using the catalog-permitted EXACT-INT-minutes output contract.
+
+## 2026-09-21 — G1-MEA-006 canonical spec and clock validation
+
+- Added the canonical G1 time-plus-half-hour specification and shared canonical H:MM validation, keeping clock times distinct from ratios.
