@@ -831,6 +831,21 @@
 | Worked examples | `triangle has 3 sides→TRUE` |
 | Misconception tags | `MISC-SHAPE-SIDES`, `MISC-TRUE-FALSE` |
 
+## G1-GEO-007 — Compare sides
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Compare triangle and square side counts / GEO / 1 / Understand |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `Which has more sides: triangle or square?` |
+| Variables / constraint | fixed options |
+| Solution / equivalence_policy | `square`; **STRICT-FORM** BOOL |
+| Input contract | shared BOOL contract with canonical shape label `square` |
+| Verification oracle / instance space | fixed answer; 1000/1000 per seed batch |
+| Worked examples | `triangle (3) vs square (4)→square` |
+| Misconception tags | `MISC-SHAPE-SIDES`, `MISC-COMPARISON` |
+
 ## G1-STA-002 — Data difference
 
 | Field | Value |
