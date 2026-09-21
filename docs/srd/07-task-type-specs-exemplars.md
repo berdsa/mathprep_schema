@@ -3082,3 +3082,14 @@
 | G8-ALG-007 | Display a strict linear inequality with a unique boundary. | CANON |
 | G8-ALG-008 | Display nested same-base powers and require canonical exponent output. | CANON |
 | G8-ALG-009 | Display `√x=a` and ask for `x`. | EXACT-INT |
+
+## G8-FUN-002..003 and G8-GEO-004..007 — Linear functions and coordinate geometry
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G8-FUN-002 | Display `y=ax+b` and ask for its slope. | EXACT-INT |
+| G8-FUN-003 | Display two graph points and require canonical `y=mx+b` output. | CANON |
+| G8-GEO-004 | Display three sides and ask whether the converse of Pythagorean applies. | BOOL |
+| G8-GEO-005 | Display a point and translation vector; ask for the image point. | TUPLE |
+| G8-GEO-006 | Display a point and ask for its x-axis reflection. | TUPLE |
+| G8-GEO-007 | Display a point and ask for its 90° counterclockwise rotation. | TUPLE |
