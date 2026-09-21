@@ -3178,6 +3178,11 @@
 | G11-VEC-001 | Display two 2D vectors and ask for their dot product. | EXACT-INT |
 | G11-MAT-002 | Display a 2×2 matrix and ask for its determinant. | EXACT-INT |
 
+| U-STA-001 | Binomial probability with visible n, p, and k | TOL |
+| U-STA-002 | Normal interval probability with visible μ, σ, a, and b | TOL |
+| U-STA-003 | Joint-table probability with visible cell and total | TOL |
+| U-PRO-003 | Conditional probability with visible joint and conditioning probabilities | TOL |
+
 | U-CAL-008 | Directional derivative of visible `x²+y²` data | TOL |
 | U-CAL-009 | Constant triple integral over a visible box | TOL |
 | U-CAL-010 | Constant-vector line integral over a visible segment | TOL |
