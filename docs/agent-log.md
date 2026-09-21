@@ -500,3 +500,7 @@
 ## 2026-09-21 — G2-GEO-011 canonical spec
 
 - Resolved the catalog circle-side-count FLAG by restricting the shape set to five unambiguous polygons, then added the canonical lookup specification.
+
+## 2026-09-21 — G2-GEO-012 canonical spec
+
+- Added the canonical Grade 2 polygon-vertices lookup specification using the same unambiguous shape set.

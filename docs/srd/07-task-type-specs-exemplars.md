@@ -2376,3 +2376,15 @@
 | Solution / equivalence_policy | polygon side count; **STRICT-FORM** EXACT-INT |
 | Verification oracle / instance space | independent lookup; 1000/1000 per seed batch; five unambiguous polygons |
 | Worked examples | `triangle→3`; `rectangle→4`; `hexagon→6` |
+
+## G2-GEO-012 — Shape vertices lookup
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Count polygon vertices / GEO / 2 / Understand |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `How many vertices does a {shape} have?` |
+| Variables / constraint | shape∈{triangle,square,rectangle,pentagon,hexagon}; polygon set avoids circle convention |
+| Solution / equivalence_policy | vertex count; **STRICT-FORM** EXACT-INT |
+| Verification oracle / instance space | independent lookup; 1000/1000 per seed batch; five polygons |
+| Worked examples | `triangle→3`; `rectangle→4`; `hexagon→6` |
