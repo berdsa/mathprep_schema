@@ -2759,6 +2759,16 @@
 
 ## G7-ALG-008..011 — Equations, inequalities, and interval notation
 
+## G7-GEO-001..002, G7-GEO-004..006 — Scale, composite area, and cross-sections
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G7-GEO-001 | Display scale and drawing length; ask actual length. | TOL |
+| G7-GEO-002 | Display map scale and map distance; ask actual distance. | TOL |
+| G7-GEO-004 | Display actual and drawing lengths; ask scale factor. | TOL |
+| G7-GEO-005 | Display rectangle and semicircle dimensions; ask total area. | TOL |
+| G7-GEO-006 | Display cylinder cross-section question. | BOOL |
+
 | ID | Generator contract | Answer / validation |
 |---|---|---|
 | G7-ALG-008 | Display `a(x+b)=c` with all values shown; ask x. | EXACT-RAT |
