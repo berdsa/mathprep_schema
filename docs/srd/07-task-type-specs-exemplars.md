@@ -2565,3 +2565,13 @@
 | Variables / constraint | fixed fractions; shaded denominator in `{2,3,4}`; rows `[2,6]` and divisible totals |
 | Solution / equivalence_policy | exact rational, integer, or BOOL label as specified; **STRICT-FORM** |
 | Verification oracle / instance space | deterministic fraction/geometry oracle; 1000/1000 per seed batch |
+## G3-NUM-022..028 — Three-digit arithmetic
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Three-digit arithmetic / NUM / 3 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / templates | `plaintext`, `unicode-math`; all operands and requested operation are displayed |
+| Variables / constraint | values satisfy no-regrouping, regrouping, borrow, and multiple-of-100 bounds |
+| Solution / equivalence_policy | exact integer; **STRICT-FORM** EXACT-INT |
+| Verification oracle / instance space | deterministic arithmetic oracle; 1000/1000 per seed batch |
