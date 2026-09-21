@@ -2735,6 +2735,17 @@
 
 ## G6-FRA-005..007 — Ratios and unit-rate language
 
+## G6-DEC-003..005, G6-FRA-008..009, G6-NUM-004 — Percent, ratio, and division tasks
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G6-DEC-003 | Display percent and student count; ask percentage count. | EXACT-INT |
+| G6-DEC-004 | Display fraction over 100; ask percent. | TOL |
+| G6-FRA-008 | Display ratio and divisible total; ask larger part. | EXACT-INT |
+| G6-FRA-009 | Display two fractions; ask quotient. | EXACT-RAT |
+| G6-NUM-004 | Display multi-digit division; ask quotient and remainder. | TUPLE |
+| G6-DEC-005 | Display two decimal addends; ask sum. | TOL |
+
 | ID | Generator contract | Answer / validation |
 |---|---|---|
 | G6-FRA-005 | Display equivalent ratio with a multiple denominator and ask missing term. | EXACT-INT |
