@@ -1119,6 +1119,18 @@
 | Verification oracle / instance space | independent sequence continuation; 1000/1000 per seed batch |
 | Worked examples | `0,?,2→1`; `118,?,120→119` |
 
+## G2-NUM-030 — Greater of two numbers
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Identify the greater number / NUM / 2 / Understand |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `Which is greater: {a} or {b}?` |
+| Variables / constraint | `a,b∈[10,99]`; `a≠b` |
+| Solution / equivalence_policy | `max(a,b)`; **STRICT-FORM** EXACT-INT |
+| Verification oracle / instance space | independent maximum; 1000/1000 per seed batch |
+| Worked examples | `12 or 45→45`; `87 or 31→87` |
+
 ## G1-STA-002 — Data difference
 
 | Field | Value |

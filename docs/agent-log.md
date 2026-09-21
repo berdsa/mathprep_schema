@@ -493,3 +493,7 @@
 ## 2026-09-21 — G2-NUM-029 canonical spec
 
 - Added the canonical Grade 2 missing-middle sequence specification.
+
+## 2026-09-21 — G2-NUM-030 canonical spec
+
+- Added the canonical Grade 2 greater-of-two-numbers specification.
