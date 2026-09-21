@@ -1,0 +1,1 @@
+{"nodes": [{"id": "$graphify-root$_migrations_000008_grant_taskgen_student_read_down_sql", "label": "000008_grant_taskgen_student_read.down.sql", "file_type": "code", "source_file": "migrations/000008_grant_taskgen_student_read.down.sql", "source_location": null}], "edges": []}
