@@ -987,6 +987,18 @@
 | Verification oracle / instance space | independent sort; 1000/1000 per seed batch |
 | Worked examples | `12,5,30→5 12 30`; `99,0,42→0 42 99` |
 
+## G2-NUM-019 — Add multiple of 10
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Add a two-digit number and a multiple of ten / NUM / 2 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `{a} + {b} = ?` |
+| Variables / constraint | `a∈[10,90]`; `b∈{10,…,90}`; `a+b≤99` |
+| Solution / equivalence_policy | `a+b`; **STRICT-FORM** EXACT-INT |
+| Verification oracle / instance space | independent addition; 1000/1000 per seed batch |
+| Worked examples | `23+10→33`; `19+80→99` |
+
 ## G1-STA-002 — Data difference
 
 | Field | Value |

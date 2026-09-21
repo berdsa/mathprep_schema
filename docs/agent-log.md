@@ -449,3 +449,7 @@
 ## 2026-09-21 — G2-NUM-018 canonical spec
 
 - Added the canonical Grade 2 three-number ordering specification.
+
+## 2026-09-21 — G2-NUM-019 canonical spec
+
+- Added the canonical Grade 2 addition-with-multiple-of-ten specification.
