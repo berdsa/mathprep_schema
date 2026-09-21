@@ -43,7 +43,7 @@ func TestValidateExactIntBoundary(t *testing.T) {
 		reason core.ReasonCode
 	}{
 		{name: "five digits accepted", input: "99999", reason: core.ReasonOK},
-		{name: "six digits fail grammar", input: "100000", reason: core.ReasonWrongFormat},
+		{name: "six digits accepted", input: "100000", reason: core.ReasonOK},
 		{name: "more than six characters too long", input: "1000000", reason: core.ReasonInputTooLong},
 	}
 
@@ -101,6 +101,27 @@ func TestValidateCanonList(t *testing.T) {
 		t.Fatalf("got %+v", got)
 	}
 	if got := ValidateCanonList("1 3 2", "1 2 4"); got.Verdict != core.VerdictIncorrect {
+		t.Fatalf("got %+v", got)
+	}
+}
+
+func TestValidateCanonStrictForm(t *testing.T) {
+	if got := Validate(core.ValidationMethodCanon, "(x-5)(x+5)", "(x-5)(x+5)"); got.Verdict != core.VerdictCorrect {
+		t.Fatalf("got %+v", got)
+	}
+	if got := Validate(core.ValidationMethodCanon, "(x-5)(x+6)", "(x-5)(x+5)"); got.Verdict != core.VerdictIncorrect {
+		t.Fatalf("got %+v", got)
+	}
+}
+
+func TestValidateExactIntAcceptsSixDigits(t *testing.T) {
+	if got := ValidateExactInt("814170", "814170"); got.Verdict != core.VerdictCorrect {
+		t.Fatalf("got %+v", got)
+	}
+}
+
+func TestValidateExactIntAcceptsNegative(t *testing.T) {
+	if got := ValidateExactInt("-13", "-13"); got.Verdict != core.VerdictCorrect {
 		t.Fatalf("got %+v", got)
 	}
 }

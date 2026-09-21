@@ -125,13 +125,13 @@
     "semantic_hash": "b6d459a3cbb64c45429c12170290cad1"
   },
   "pkg/core/validation/pipeline.go": {
-    "mtime": 1789982295.1946514,
-    "ast_hash": "9a8565b1f2d4a857d5d88c8e6d2c057e",
+    "mtime": 1789998416.98422,
+    "ast_hash": "50c68cfecfd69e374dcc90446404f799",
     "semantic_hash": ""
   },
   "pkg/core/validation/pipeline_test.go": {
-    "mtime": 1789972096.5694013,
-    "ast_hash": "37ed142dd0399495cb8a4d7e26641255",
+    "mtime": 1789998416.9848313,
+    "ast_hash": "d8a3b09a3a03f2d9dad4ab7637ef5c2f",
     "semantic_hash": ""
   },
   "migrations/000005_task_type_grade_band.down.sql": {

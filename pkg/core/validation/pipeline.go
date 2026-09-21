@@ -414,7 +414,19 @@ func ValidateCanonList(raw, correctAnswer string) Result {
 	for i, p := range parts {
 		n, err := strconv.Atoi(p)
 		if err != nil {
-			return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
+			// CANON also covers strict-form answers that are not numeric
+			// lists, such as factored expressions and function formulas.
+			// Those answers have no generic algebraic normalizer here, so
+			// compare the declared canonical form literally.
+			got := strings.TrimSpace(raw)
+			want := strings.TrimSpace(correctAnswer)
+			if got == "" {
+				return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
+			}
+			if got != want {
+				return Result{Verdict: core.VerdictIncorrect, ReasonCode: core.ReasonValueMismatch, Normalized: got, Stage: StageVerdict, CorrectAnswer: correctAnswer}
+			}
+			return Result{Verdict: core.VerdictCorrect, ReasonCode: core.ReasonOK, Normalized: got, Stage: StageVerdict, CorrectAnswer: correctAnswer}
 		}
 		values[i] = n
 	}
@@ -523,7 +535,7 @@ type ParsedExactInt struct {
 	digits string
 }
 
-var exactIntInput = regexp.MustCompile(`^\s*\+?0*([0-9]{1,5})\s*$`)
+var exactIntInput = regexp.MustCompile(`^\s*([+-]?)0*([0-9]{1,6})\s*$`)
 
 func ParseExactInt(raw string) (ParsedExactInt, core.ReasonCode, Stage) {
 	trimmed := strings.TrimSpace(raw)
@@ -538,10 +550,14 @@ func ParseExactInt(raw string) (ParsedExactInt, core.ReasonCode, Stage) {
 	}
 
 	match := exactIntInput.FindStringSubmatch(raw)
-	if len(match) != 2 {
+	if len(match) != 3 {
 		return ParsedExactInt{}, core.ReasonWrongFormat, StageParse
 	}
-	return ParsedExactInt{digits: match[1]}, core.ReasonOK, StageParse
+	digits := match[2]
+	if match[1] == "-" {
+		digits = "-" + digits
+	}
+	return ParsedExactInt{digits: digits}, core.ReasonOK, StageParse
 }
 
 func NormalizeExactInt(parsed ParsedExactInt) (string, core.ReasonCode, Stage) {
@@ -549,11 +565,11 @@ func NormalizeExactInt(parsed ParsedExactInt) (string, core.ReasonCode, Stage) {
 		return "", core.ReasonParseError, StageNormalize
 	}
 
-	value, err := strconv.ParseUint(parsed.digits, 10, 64)
+	value, err := strconv.ParseInt(parsed.digits, 10, 64)
 	if err != nil {
 		return "", core.ReasonParseError, StageNormalize
 	}
-	return strconv.FormatUint(value, 10), core.ReasonOK, StageNormalize
+	return strconv.FormatInt(value, 10), core.ReasonOK, StageNormalize
 }
 
 func CompareExactInt(given, correct string) (bool, core.ReasonCode, Stage) {
