@@ -771,6 +771,21 @@
 | Worked examples | `2 red,5 blue,3 green→blue`; `9,4,1→red`; `1,3,8→green` |
 | Misconception tags | `MISC-COMPARE-SIGN`, `MISC-COUNT-MOST`, `MISC-BOUNDARY` |
 
+## G1-MEA-008 — Unit selection for length
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Select the unit used to measure length / MEA / 1 / Understand |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `Which unit measures length: cm, kg, or L?` |
+| Variables / constraint | fixed options `cm`, `kg`, `L` |
+| Solution / equivalence_policy | `cm`; **STRICT-FORM** BOOL label |
+| Input contract | `cm`, `kg`, or `L`, case-insensitive where applicable |
+| Verification oracle / instance space | fixed answer; 1000/1000 per seed batch |
+| Worked examples | `length→cm`; `mass→kg` is not the requested unit; `volume→L` is not the requested unit |
+| Misconception tags | `MISC-UNIT-CONFUSION`, `MISC-LENGTH-UNIT` |
+
 ## G1-MEA-007 — Time minus half-hour
 
 | Field | Value |
