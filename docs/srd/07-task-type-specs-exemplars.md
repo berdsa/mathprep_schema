@@ -846,6 +846,21 @@
 | Worked examples | `triangle (3) vs square (4)→square` |
 | Misconception tags | `MISC-SHAPE-SIDES`, `MISC-COMPARISON` |
 
+## G1-GEO-008 — Shape with four equal sides
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Identify a square by side and angle properties / GEO / 1 / Understand |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `Which shape has 4 equal sides and four right angles: square, rectangle, triangle, circle?` |
+| Variables / constraint | fixed options; the added angle condition makes the answer unique |
+| Solution / equivalence_policy | `square`; **STRICT-FORM** BOOL |
+| Input contract | shared BOOL contract with canonical shape label `square` |
+| Verification oracle / instance space | fixed answer; 1000/1000 per seed batch |
+| Worked examples | `four equal sides and four right angles→square` |
+| Misconception tags | `MISC-SHAPE-SIDES`, `MISC-SQUARE-RECTANGLE` |
+
 ## G1-STA-002 — Data difference
 
 | Field | Value |

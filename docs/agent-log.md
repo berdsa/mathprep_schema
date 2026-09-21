@@ -405,3 +405,7 @@
 ## 2026-09-21 — G1-GEO-007 canonical spec
 
 - Added the canonical G1 shape-side comparison specification and registered `square` in the shared BOOL vocabulary.
+
+## 2026-09-21 — G1-GEO-008 canonical spec
+
+- Resolved the catalog FLAG by adding the four-right-angles condition, making `square` the unique answer.
