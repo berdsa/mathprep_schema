@@ -816,6 +816,21 @@
 | Worked examples | `A=9,B=4→5`; `A=20,B=1→19`; `A=7,B=7→0` |
 | Misconception tags | `MISC-SUBTRACT-MINUS`, `MISC-UNIT-OMISSION`, `MISC-WORD-OPERATION` |
 
+## G1-STA-004 — Data total pets
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Add cat and dog counts / STA / 1 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `Counts: {a} cats, {b} dogs. Total pets?` |
+| Variables / constraint | `a,b: int [0,10]` |
+| Solution / equivalence_policy | `a+b`; **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; decimals and commas reject |
+| Verification oracle / instance space | independent total; 1000/1000 per seed batch; 121 ordered pairs |
+| Worked examples | `3 cats+4 dogs→7`; `0+0→0`; `10+10→20` |
+| Misconception tags | `MISC-ADD-FACT`, `MISC-COUNT-TOTAL`, `MISC-BOUNDARY` |
+
 ## G1-MEA-007 — Time minus half-hour
 
 | Field | Value |
