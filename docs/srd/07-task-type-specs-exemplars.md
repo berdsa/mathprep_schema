@@ -2695,3 +2695,13 @@
 | Variables / constraint | values satisfy catalog ranges and valid missing-operation construction |
 | Solution / equivalence_policy | exact integer or BOOL label as specified; **STRICT-FORM** |
 | Verification oracle / instance space | deterministic operations oracle; 1000/1000 per seed batch |
+## G4-NUM-023..026 — Large-number place value and arithmetic
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Large-number place value and arithmetic / NUM / 4 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / templates | `plaintext`, `unicode-math`; numbers, places, rounding units, and operands are explicit |
+| Variables / constraint | values satisfy six-digit, rounding, addition, and subtraction bounds |
+| Solution / equivalence_policy | exact integer; **STRICT-FORM** EXACT-INT |
+| Verification oracle / instance space | deterministic large-number oracle; 1000/1000 per seed batch |
