@@ -3158,3 +3158,16 @@
 | G10-PRO-007 | Display event probabilities and intersection and ask whether events are independent. | BOOL |
 | G10-PRO-008 | Display favorable outcomes and total outcomes and ask for the probability. | EXACT-RAT |
 | G10-PRO-009 | Display a two-outcome payoff model and ask for expected value. | TOL |
+
+## G10-ALG-001,003..005,007..010 — Rational, theorem, radical, variation, and induction contracts
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G10-ALG-001 | Display `a/(x-b)` and ask for the vertical asymptote. | EXACT-INT |
+| G10-ALG-003 | Display a polynomial and divisor and ask for the remainder. | EXACT-INT |
+| G10-ALG-004 | Display a polynomial-factor claim and ask whether it is true. | BOOL |
+| G10-ALG-005 | Display a polynomial and ask for its possible rational roots. | SET |
+| G10-ALG-007 | Display a radical equation and ask for the exact solution. | EXACT-RAT |
+| G10-ALG-008 | Display direct variation data and ask for `k`. | EXACT-RAT |
+| G10-ALG-009 | Display inverse variation data and ask for `k`. | EXACT-INT |
+| G10-ALG-010 | Display the induction base case and ask whether it holds. | BOOL |
