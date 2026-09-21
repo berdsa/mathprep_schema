@@ -939,6 +939,18 @@
 | Verification oracle / instance space | independent decomposition; 1000/1000 per seed batch |
 | Worked examples | `10→1,0`; `47→4,7`; `99→9,9` |
 
+## G2-NUM-015 — Value of tens digit
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Find the tens place value / NUM / 2 / Understand |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `What is the value of the tens digit in {n}?` |
+| Variables / constraint | `n∈[10,99]` |
+| Solution / equivalence_policy | `10·floor(n/10)`; **STRICT-FORM** EXACT-INT |
+| Verification oracle / instance space | independent place-value calculation; 1000/1000 per seed batch |
+| Worked examples | `10→10`; `47→40`; `99→90` |
+
 ## G1-STA-002 — Data difference
 
 | Field | Value |

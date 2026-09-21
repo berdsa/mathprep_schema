@@ -433,3 +433,7 @@
 ## 2026-09-21 — G2-NUM-014 canonical spec
 
 - Added the canonical Grade 2 ordered place-value tuple specification.
+
+## 2026-09-21 — G2-NUM-015 canonical spec
+
+- Added the canonical Grade 2 tens-place-value specification.
