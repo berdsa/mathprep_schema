@@ -3029,3 +3029,7 @@
 | G7-FUN-010 | Display `ax+by=c` and ask for its slope. | EXACT-RAT |
 | G7-FUN-011 | Display slope and y-intercept and require canonical `y=mx+b` output. | CANON |
 | G7-FUN-012 | Display a point and slope and require canonical `y-y1=m(x-x1)` output. | CANON |
+| G7-GEO-011 | Display an alternate-interior angle pair on parallel lines and ask for the equal angle. | EXACT-INT |
+| G7-STA-009 | Display a signed slope in context and ask whether the output increases as x increases. | BOOL |
+| G7-ALG-016 | Display `a(x+b)-c=d` and ask for `x`. | EXACT-RAT |
+| G7-ALG-017 | Display a variables-on-both-sides equation and ask for its unique solution. | EXACT-RAT |
