@@ -480,6 +480,27 @@
 | Verification / space / examples | independent division, 1000/1000 per batch; 90 pairs; `12÷3→4`, `100÷10→10`, `2÷2→1` |
 | Misconceptions | `MISC-SHARING-UNEQUAL`, `MISC-DIVISOR-QUOTIENT` |
 
+## G1-NUM-011 — Addition within 20
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Addition within 20 / NUM / 1 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode | 1.0.0-draft / CODE |
+| locale / render_target | `ru-KZ` / `plaintext`, `unicode-math` |
+| Template | `{a} + {b} = ?`; alt-text `Сложение: {a} плюс {b}` |
+| Variables | `a,b: int [0,20]`; `a+b≤20` |
+| Generation constraint | Sample `a` uniformly from `[0,20]`, then `b` uniformly from `[0,20-a]`; no rejection is needed. |
+| Solution | `a+b` |
+| equivalence_policy | **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; trim whitespace, accept leading `+` and zeros, reject decimal/comma input, max length 6 |
+| Verdict model | `OK, VALUE_MISMATCH, WRONG_FORMAT, EMPTY_INPUT, INPUT_TOO_LONG` |
+| Verification oracle | Independently recompute `a+b` from persisted parameters; seed batches A/B, 1000/1000 each |
+| Tiers | T1 and T2 use the same valid arithmetic space; tier metadata controls assignment only. |
+| Instance space | `∑(21-a)=231` ordered parameter pairs; dedup `(type_id,a,b)`, cooldown 30 days |
+| Worked examples | `3+4=7`; `0+20=20`; `12+8=20`; input `007` → CORRECT |
+| Misconception tags | `MISC-ADD-FACT`, `MISC-BOUNDARY-OVERFLOW`, `MISC-PLACE-VALUE` |
+
 ## G2-NUM-001 — Addition within range
 
 | Field | Value |
