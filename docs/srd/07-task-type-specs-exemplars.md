@@ -1047,6 +1047,18 @@
 | Verification oracle / instance space | independent addition with no carry; 1000/1000 per seed batch |
 | Worked examples | `23+4→27`; `51+8→59` |
 
+## G2-NUM-024 — Skip count by 10s
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Continue counting by tens / NUM / 2 / Understand |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `{start}, {start+10}, {start+20}, ... (add 10 each time). What comes next?` |
+| Variables / constraint | `start∈{0,10,…,90}`; next `≤120` |
+| Solution / equivalence_policy | `start+30`; **STRICT-FORM** EXACT-INT |
+| Verification oracle / instance space | independent skip-count continuation; 1000/1000 per seed batch |
+| Worked examples | `0,10,20→30`; `90,100,110→120` |
+
 ## G1-STA-002 — Data difference
 
 | Field | Value |
