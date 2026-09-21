@@ -2761,6 +2761,15 @@
 
 ## G7-GEO-001..002, G7-GEO-004..006 — Scale, composite area, and cross-sections
 
+## G7-GEO-007..010 — Angle relationships
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G7-GEO-007 | Display acute angle and ask complement. | EXACT-INT |
+| G7-GEO-008 | Display angle and ask supplement. | EXACT-INT |
+| G7-GEO-009 | Display one vertical angle and ask its equal partner. | EXACT-INT |
+| G7-GEO-010 | Display two triangle angles and ask the third. | EXACT-INT |
+
 | ID | Generator contract | Answer / validation |
 |---|---|---|
 | G7-GEO-001 | Display scale and drawing length; ask actual length. | TOL |
