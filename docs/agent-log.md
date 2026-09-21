@@ -353,3 +353,7 @@
 ## 2026-09-21 — G1-STA-001 canonical spec
 
 - Added the canonical G1 three-category data-total specification; taskgen implements the generator and reuses the existing EXACT-INT validator.
+
+## 2026-09-21 — G1-STA-002 canonical spec
+
+- Added the canonical G1 data-difference specification; taskgen implements the generator and reuses the existing EXACT-INT validator.
