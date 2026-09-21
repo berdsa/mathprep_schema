@@ -3171,3 +3171,6 @@
 | G10-ALG-008 | Display direct variation data and ask for `k`. | EXACT-RAT |
 | G10-ALG-009 | Display inverse variation data and ask for `k`. | EXACT-INT |
 | G10-ALG-010 | Display the induction base case and ask whether it holds. | BOOL |
+| G10-FUN-001 | Display linear `f` and `g` and an input; ask for `(f∘g)(x)`. | EXACT-INT |
+| G10-FUN-002 | Display a linear function and ask for its inverse in canonical form. | CANON |
+| G10-FUN-003 | Display a vertical function shift and ask whether it moves upward. | BOOL |
