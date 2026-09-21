@@ -445,3 +445,7 @@
 ## 2026-09-21 — G2-NUM-017 canonical spec
 
 - Added the canonical Grade 2 two-digit comparison specification.
+
+## 2026-09-21 — G2-NUM-018 canonical spec
+
+- Added the canonical Grade 2 three-number ordering specification.

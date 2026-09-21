@@ -975,6 +975,18 @@
 | Verification oracle / instance space | independent comparison; 1000/1000 per seed batch |
 | Worked examples | `12 vs 45→<`; `87 vs 31→>` |
 
+## G2-NUM-018 — Order three numbers
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Order three numbers / NUM / 2 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `Order {a}, {b}, {c} from smallest to largest.` |
+| Variables / constraint | `a,b,c∈[0,99]`; all distinct |
+| Solution / equivalence_policy | ascending space-separated sequence; **STRICT-FORM** CANON |
+| Verification oracle / instance space | independent sort; 1000/1000 per seed batch |
+| Worked examples | `12,5,30→5 12 30`; `99,0,42→0 42 99` |
+
 ## G1-STA-002 — Data difference
 
 | Field | Value |
