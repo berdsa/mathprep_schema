@@ -2535,3 +2535,13 @@
 | Variables / constraint | counts `[0,50]`; line-plot length `[3,10]`; sum at most 100 |
 | Solution / equivalence_policy | exact integer or category label; **STRICT-FORM** |
 | Verification oracle / instance space | deterministic data oracle; 1000/1000 per seed batch |
+## G2-MEA-018..019 — Measurement checks
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Measurement units and comparison / MEA / 2 / Understand |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / templates | `plaintext`, `unicode-math`; options and both measurements are displayed |
+| Variables / constraint | fixed unit options; centimeter values `[1,200]` |
+| Solution / equivalence_policy | `kg` or TRUE/FALSE; **STRICT-FORM** BOOL |
+| Verification oracle / instance space | deterministic measurement oracle; 1000/1000 per seed batch |
