@@ -2733,6 +2733,14 @@
 
 ## G6-NUM-003, G6-FRA-002..003, G6-GEO-004..006 — Coordinates and introductory division
 
+## G6-FRA-005..007 — Ratios and unit-rate language
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G6-FRA-005 | Display equivalent ratio with a multiple denominator and ask missing term. | EXACT-INT |
+| G6-FRA-006 | Display items and total cost in neutral units; ask cost per item. | TOL |
+| G6-FRA-007 | Display units and total price in neutral units; ask price per unit. | TOL |
+
 | ID | Generator contract | Answer / validation |
 |---|---|---|
 | G6-NUM-003 | Display a nonnegative coordinate and ask x-coordinate. | EXACT-INT |
