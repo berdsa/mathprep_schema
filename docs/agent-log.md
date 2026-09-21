@@ -333,3 +333,7 @@
 ## 2026-09-21 — G1-MEA-003 canonical spec
 
 - Added the canonical G1 length-comparison specification; taskgen implements the generator and reuses the existing BOOL validator.
+
+## 2026-09-21 — G1-MEA-004 canonical spec
+
+- Added the canonical G1 length-ordering specification; taskgen implements the generator and reuses the existing CANON validator.
