@@ -2665,3 +2665,13 @@
 | Variables / constraint | values satisfy four-digit decomposition, comparison, ordering, expanded-form, and multiplication bounds |
 | Solution / equivalence_policy | tuple, canonical, boolean, or exact integer as specified; **STRICT-FORM** |
 | Verification oracle / instance space | deterministic arithmetic oracle; 1000/1000 per seed batch |
+## G4-NUM-009..011 — Division and multi-step arithmetic
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Division and multi-step arithmetic / NUM / 4 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / templates | `plaintext`, `unicode-math`; all divisors, operands, and word-problem quantities are displayed |
+| Variables / constraint | divisors `[2,9]`; exact/remainder relations valid; word-problem total covers amount given |
+| Solution / equivalence_policy | exact integer, tuple, or exact integer as specified; **STRICT-FORM** |
+| Verification oracle / instance space | deterministic division oracle; 1000/1000 per seed batch |
