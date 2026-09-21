@@ -2655,3 +2655,13 @@
 | Variables / constraint | valid partition counts and unequal comparison areas/perimeters; right-angle choices exclude unconstrained triangle |
 | Solution / equivalence_policy | exact rational, integer, or BOOL label; **STRICT-FORM** |
 | Verification oracle / instance space | deterministic geometry oracle; 1000/1000 per seed batch |
+## G4-NUM-002..008 — Multi-digit place value and multiplication
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Multi-digit place value and multiplication / NUM / 4 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / templates | `plaintext`, `unicode-math`; all digits, operands, and requested ordering are displayed |
+| Variables / constraint | values satisfy four-digit decomposition, comparison, ordering, expanded-form, and multiplication bounds |
+| Solution / equivalence_policy | tuple, canonical, boolean, or exact integer as specified; **STRICT-FORM** |
+| Verification oracle / instance space | deterministic arithmetic oracle; 1000/1000 per seed batch |
