@@ -927,6 +927,18 @@
 | Verification oracle / instance space | independent place-value calculation; 1000/1000 per seed batch |
 | Worked examples | `10→0`; `47→7`; `99→9` |
 
+## G2-NUM-014 — Place-value decomposition
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Decompose a two-digit number / NUM / 2 / Understand |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `Write {n} as (tens, ones).` |
+| Variables / constraint | `n∈[10,99]`; answer is `(floor(n/10), n mod 10)` |
+| Solution / equivalence_policy | ordered tuple `t,o`; **STRICT-FORM** TUPLE |
+| Verification oracle / instance space | independent decomposition; 1000/1000 per seed batch |
+| Worked examples | `10→1,0`; `47→4,7`; `99→9,9` |
+
 ## G1-STA-002 — Data difference
 
 | Field | Value |
