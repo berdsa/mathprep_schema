@@ -501,6 +501,21 @@
 | Worked examples | `3+4=7`; `0+20=20`; `12+8=20`; input `007` → CORRECT |
 | Misconception tags | `MISC-ADD-FACT`, `MISC-BOUNDARY-OVERFLOW`, `MISC-PLACE-VALUE` |
 
+## G1-NUM-012 — Missing subtrahend
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Missing subtrahend / NUM / 1 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `{a} − ? = {c}` |
+| Variables / constraint | `a,c: int [0,20]`; `a≥c`; `b=a−c` |
+| Solution / equivalence_policy | `a−c`; **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; decimals and commas reject |
+| Verification oracle / instance space | independent subtraction; 1000/1000 per seed batch; 231 ordered `(a,c)` pairs |
+| Worked examples | `9−?=4→5`; `20−?=0→20`; `7−?=7→0` |
+| Misconception tags | `MISC-SUBTRACT-MINUS`, `MISC-UNKNOWN-SIDE`, `MISC-BOUNDARY` |
+
 ## G2-NUM-001 — Addition within range
 
 | Field | Value |
