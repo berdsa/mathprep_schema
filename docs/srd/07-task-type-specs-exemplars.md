@@ -3196,3 +3196,13 @@ The following catalog types use CODE generation, `ru-KZ` plaintext rendering, st
 | G2-MEA-005 | `Three pieces are a,b,c cm. Total?`; answer `a+b+c`, each in `[1,100]` | EXACT-INT |
 | G2-MEA-006 | `It is h:00. What time is k minutes later?`; answer total minutes, `k∈{5,…,55}` | CANON |
 | G2-MEA-007 | `It is h:m. What time is k minutes earlier?`; answer total minutes, `m≥k`, multiples of five | CANON |
+
+| G2-GEO-001 | Shape sides lookup; unique fixed shape vocabulary | EXACT-INT |
+| G2-GEO-002 | Shape vertices lookup; fixed polygon vocabulary | EXACT-INT |
+| G2-GEO-003 | Ask which of four uniquely selected shapes has `n` sides | BOOL |
+| G2-GEO-004 | Count every flat or curved boundary surface of the displayed solid | EXACT-INT |
+| G2-GEO-005 | Cube edge count | EXACT-INT |
+| G2-GEO-006 | Cube vertex count | EXACT-INT |
+| G2-GEO-007 | Ask whether a displayed shape is a quadrilateral | BOOL |
+| G2-GEO-008 | Rectangle rows × columns equal-square count | EXACT-INT |
+| G2-GEO-009 | Unit-square area from displayed rows and columns | EXACT-INT |
