@@ -349,3 +349,7 @@
 ## 2026-09-21 — G1-MEA-007 canonical spec
 
 - Added the canonical G1 time-minus-half-hour specification; taskgen reuses the shared clock-time canonical validator.
+
+## 2026-09-21 — G1-STA-001 canonical spec
+
+- Added the canonical G1 three-category data-total specification; taskgen implements the generator and reuses the existing EXACT-INT validator.
