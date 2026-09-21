@@ -2615,3 +2615,13 @@
 | Variables / constraint | denominators and numerators satisfy the catalog bounds; comparisons use valid unequal values |
 | Solution / equivalence_policy | exact rational, integer, or BOOL label as specified; **STRICT-FORM** |
 | Verification oracle / instance space | deterministic fraction oracle; 1000/1000 per seed batch |
+## G3-MEA-011..016 — Time and unit conversion
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Time and unit conversion / MEA / 3 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / templates | `plaintext`, `unicode-math`; all times, offsets, and source units are displayed |
+| Variables / constraint | minute, hour, length, capacity, and mass values satisfy catalog bounds |
+| Solution / equivalence_policy | canonical time or exact integer as specified; **STRICT-FORM** |
+| Verification oracle / instance space | deterministic measurement oracle; 1000/1000 per seed batch |
