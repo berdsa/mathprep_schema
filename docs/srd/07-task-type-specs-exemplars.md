@@ -963,6 +963,18 @@
 | Verification oracle / instance space | independent place-value calculation; 1000/1000 per seed batch |
 | Worked examples | `10→0`; `47→7`; `99→9` |
 
+## G2-NUM-017 — Compare two-digit numbers
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Compare two-digit numbers / NUM / 2 / Understand |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `Compare {a} and {b}: answer <, >, or =` |
+| Variables / constraint | `a,b∈[10,99]`; `a≠b` |
+| Solution / equivalence_policy | relational symbol; **STRICT-FORM** BOOL |
+| Verification oracle / instance space | independent comparison; 1000/1000 per seed batch |
+| Worked examples | `12 vs 45→<`; `87 vs 31→>` |
+
 ## G1-STA-002 — Data difference
 
 | Field | Value |

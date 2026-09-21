@@ -441,3 +441,7 @@
 ## 2026-09-21 — G2-NUM-016 canonical spec
 
 - Added the canonical Grade 2 ones-place-value specification.
+
+## 2026-09-21 — G2-NUM-017 canonical spec
+
+- Added the canonical Grade 2 two-digit comparison specification.
