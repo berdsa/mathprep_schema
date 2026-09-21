@@ -3068,3 +3068,7 @@
 | G8-NUM-003 | Display a perfect square and ask for its square root. | EXACT-INT |
 | G8-NUM-004 | Display a perfect cube and ask for its cube root. | EXACT-INT |
 | G8-NUM-005 | Display a negative integer exponent and ask for its exact reciprocal fraction. | EXACT-RAT |
+| G8-GEO-003 | Display two line slopes and ask whether the lines are parallel. | BOOL |
+| G8-NUM-006 | Display same-base powers and require canonical exponent-combination output. | CANON |
+| G8-NUM-007 | Display an integer in expanded scientific-notation form and ask for canonical notation. | CANON |
+| G8-NUM-008 | Display two scientific-notation factors and ask for their product in scientific notation. | CANON |
