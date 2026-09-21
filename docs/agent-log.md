@@ -313,3 +313,7 @@
 ## 2026-09-21 — G1-NUM-024 canonical spec and BOOL extension
 
 - Added the canonical G1 true/false equation specification and extended the shared BOOL validator with canonical TRUE/FALSE answers and focused coverage.
+
+## 2026-09-21 — G1-NUM-025 canonical spec
+
+- Added the canonical G1 multi-step addition/subtraction specification; taskgen implements the generator and reuses the existing EXACT-INT validator.
