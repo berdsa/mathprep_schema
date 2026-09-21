@@ -2745,6 +2745,15 @@
 
 ## G6-GEO-008..012 — Areas, fractional volume, and surface area
 
+## G6-GEO-013..015 and G6-STA-001 — Prisms, nets, coordinate geometry, and statistical questions
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G6-GEO-013 | Display triangular-prism dimensions and ask surface area. | TOL |
+| G6-GEO-014 | Display net face description and ask possible solid. | BOOL |
+| G6-GEO-015 | Display rectangle vertices and ask area. | EXACT-INT |
+| G6-STA-001 | Display a question and ask whether it is statistical. | BOOL |
+
 | ID | Generator contract | Answer / validation |
 |---|---|---|
 | G6-GEO-008 | Display triangle base and height; ask area. | TOL |
