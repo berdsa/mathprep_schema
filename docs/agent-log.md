@@ -325,3 +325,7 @@
 ## 2026-09-21 — G1-MEA-001 canonical spec
 
 - Added the canonical G1 length-addition specification; taskgen implements the generator and reuses the existing EXACT-INT validator.
+
+## 2026-09-21 — G1-MEA-002 canonical spec
+
+- Added the canonical G1 length-subtraction specification; taskgen implements the generator and reuses the existing EXACT-INT validator.
