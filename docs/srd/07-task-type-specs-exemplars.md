@@ -801,6 +801,21 @@
 | Worked examples | `8 cm vs 3 cm→TRUE`; `3 vs 8→FALSE`; `5 vs 5→FALSE` |
 | Misconception tags | `MISC-COMPARE-SIGN`, `MISC-UNIT-OMISSION`, `MISC-EQUALITY` |
 
+## G1-MEA-010 — Length difference word problem
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Find how much longer one length is / MEA / 1 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `A is {a} cm, B is {b} cm. How much longer is A?` |
+| Variables / constraint | `a,b: int [1,20]`; `a≥b` |
+| Solution / equivalence_policy | `a−b` centimeters; **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; decimals and commas reject |
+| Verification oracle / instance space | independent difference; 1000/1000 per seed batch; 210 ordered pairs |
+| Worked examples | `A=9,B=4→5`; `A=20,B=1→19`; `A=7,B=7→0` |
+| Misconception tags | `MISC-SUBTRACT-MINUS`, `MISC-UNIT-OMISSION`, `MISC-WORD-OPERATION` |
+
 ## G1-MEA-007 — Time minus half-hour
 
 | Field | Value |
