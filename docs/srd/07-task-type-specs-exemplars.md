@@ -561,6 +561,21 @@
 | Worked examples | `Had some...got 4, now 7→3`; `got 20, now 20→0`; `got 8, now 20→12` |
 | Misconception tags | `MISC-SUBTRACT-MINUS`, `MISC-WORD-OPERATION`, `MISC-UNKNOWN-START` |
 
+## G1-NUM-019 — Word problem: subtract result unknown
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Subtraction word problem, result unknown / NUM / 1 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `Had {a} apples. Gave away {b}. How many left?` |
+| Variables / constraint | `a,b: int [0,20]`; `a≥b`; fixed noun `apples` |
+| Solution / equivalence_policy | `a−b`; **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; decimals and commas reject |
+| Verification oracle / instance space | independent subtraction; 1000/1000 per seed batch; 231 ordered pairs |
+| Worked examples | `Had 9...gave 4→5`; `Had 20...gave 0→20`; `Had 7...gave 7→0` |
+| Misconception tags | `MISC-SUBTRACT-MINUS`, `MISC-WORD-OPERATION`, `MISC-BOUNDARY` |
+
 ## G1-NUM-012 — Missing subtrahend
 
 | Field | Value |
