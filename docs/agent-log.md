@@ -369,3 +369,7 @@
 ## 2026-09-21 — G1-MEA-009 canonical spec
 
 - Added the canonical G1 true/false measurement-comparison specification; taskgen reuses the shared TRUE/FALSE BOOL validator.
+
+## 2026-09-21 — G1-MEA-010 canonical spec
+
+- Added the canonical G1 length-difference word-problem specification; taskgen implements the generator and reuses the existing EXACT-INT validator.
