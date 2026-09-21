@@ -3037,3 +3037,7 @@
 | G7-ALG-019 | Display a one-variable linear inequality and require canonical `x≤k` output. | CANON |
 | G7-ALG-020 | Display slope-intercept form and ask for the `(slope,y-intercept)` tuple. | TUPLE |
 | G7-ALG-021 | Display a point and slope and require canonical point-slope line output. | CANON |
+| G7-ALG-022 | Display a line slope and ask for the perpendicular slope. | EXACT-RAT |
+| G7-ALG-023 | Display two linear graphs with a unique intersection and ask for the point. | TUPLE |
+| G7-ALG-024 | Display a substitution system and ask for its ordered-pair solution. | TUPLE |
+| G7-ALG-025 | Display a two-equation elimination system and ask for its ordered-pair solution. | TUPLE |
