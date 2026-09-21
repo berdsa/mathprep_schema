@@ -3178,6 +3178,9 @@
 | G11-VEC-001 | Display two 2D vectors and ask for their dot product. | EXACT-INT |
 | G11-MAT-002 | Display a 2×2 matrix and ask for its determinant. | EXACT-INT |
 
+| G8-FRA-001 | Display `n` and ask whether `√n` is rational; perfect and non-perfect squares are constructed | BOOL |
+| G8-FRA-002 | Display `n` and ask for `√n` to two decimal places | TOL |
+
 | G9-GEO-001 | Display `a`, `A`, and `B` and ask for `b` using `a/sin(A)=b/sin(B)` | TOL |
 
 | G6-GEO-002 | Display two points whose coordinate differences form an integer Pythagorean triple; ask for their distance | TOL |
