@@ -501,6 +501,21 @@
 | Worked examples | `3+4=7`; `0+20=20`; `12+8=20`; input `007` → CORRECT |
 | Misconception tags | `MISC-ADD-FACT`, `MISC-BOUNDARY-OVERFLOW`, `MISC-PLACE-VALUE` |
 
+## G1-NUM-015 — Compare expression to number
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Compare an addition expression with a number / NUM / 1 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `Compare {a} + {b} and {c}: <, >, =` |
+| Variables / constraint | `a,b,c: int [0,20]`; `a+b≤20` |
+| Solution / equivalence_policy | compare `a+b` with `c`, returning `<`, `>`, or `=`; **STRICT-FORM** |
+| Input contract | `^\s*(<|>|=)\s*$` |
+| Verification oracle / instance space | independent comparison; 1000/1000 per seed batch; 4,851 ordered triples |
+| Worked examples | `2+3 vs 5→=`; `0+4 vs 7→<`; `10+8 vs 3→>` |
+| Misconception tags | `MISC-ADD-FACT`, `MISC-COMPARE-SIGN`, `MISC-BOUNDARY` |
+
 ## G1-NUM-012 — Missing subtrahend
 
 | Field | Value |
