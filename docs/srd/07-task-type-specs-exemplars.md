@@ -816,6 +816,21 @@
 | Worked examples | `4 equal parts→4`; the prompt states the count directly |
 | Misconception tags | `MISC-COUNT-PARTS`, `MISC-FRACTION-DENOMINATOR` |
 
+## G1-GEO-006 — Boolean shape property
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Recognize a triangle's sides / GEO / 1 / Understand |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `Does a triangle have 3 sides?` |
+| Variables / constraint | fixed proposition |
+| Solution / equivalence_policy | `TRUE`; **STRICT-FORM** BOOL |
+| Input contract | shared BOOL contract |
+| Verification oracle / instance space | fixed answer; 1000/1000 per seed batch |
+| Worked examples | `triangle has 3 sides→TRUE` |
+| Misconception tags | `MISC-SHAPE-SIDES`, `MISC-TRUE-FALSE` |
+
 ## G1-STA-002 — Data difference
 
 | Field | Value |

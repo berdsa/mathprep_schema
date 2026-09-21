@@ -397,3 +397,7 @@
 ## 2026-09-21 — G1-GEO-005 canonical spec
 
 - Added the canonical G1 equal-parts count specification with a fixed answer of four.
+
+## 2026-09-21 — G1-GEO-006 canonical spec
+
+- Added the canonical G1 triangle-side boolean specification.
