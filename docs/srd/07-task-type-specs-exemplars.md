@@ -3072,3 +3072,13 @@
 | G8-NUM-006 | Display same-base powers and require canonical exponent-combination output. | CANON |
 | G8-NUM-007 | Display an integer in expanded scientific-notation form and ask for canonical notation. | CANON |
 | G8-NUM-008 | Display two scientific-notation factors and ask for their product in scientific notation. | CANON |
+
+## G8-ALG-005..009 — Systems, inequalities, and exponents
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G8-ALG-005 | Display two linear equations in slope-intercept form with a unique intersection. | TUPLE |
+| G8-ALG-006 | Display an adult/child ticket system with total and revenue. | TUPLE |
+| G8-ALG-007 | Display a strict linear inequality with a unique boundary. | CANON |
+| G8-ALG-008 | Display nested same-base powers and require canonical exponent output. | CANON |
+| G8-ALG-009 | Display `√x=a` and ask for `x`. | EXACT-INT |
