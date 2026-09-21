@@ -357,3 +357,7 @@
 ## 2026-09-21 — G1-STA-002 canonical spec
 
 - Added the canonical G1 data-difference specification; taskgen implements the generator and reuses the existing EXACT-INT validator.
+
+## 2026-09-21 — G1-STA-003 canonical spec and BOOL labels
+
+- Added the canonical G1 most-category specification and extended the shared BOOL validator with the fixed red/blue/green category vocabulary.
