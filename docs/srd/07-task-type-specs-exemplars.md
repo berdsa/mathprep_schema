@@ -2723,6 +2723,18 @@
 
 ## G5-NUM-009 and G5-DEC-005..008 — Multi-step arithmetic and decimal place work
 
+## G5-DEC-009..015 — Decimal arithmetic and estimation
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G5-DEC-009 | Display two hundredths decimals and ask their sum. | TOL |
+| G5-DEC-010 | Display nonnegative hundredths decimals and ask their difference. | TOL |
+| G5-DEC-011 | Display decimal and power of ten; ask product. | TOL |
+| G5-DEC-012 | Display two decimals; ask product. | TOL |
+| G5-DEC-013 | Display decimal and power of ten; ask quotient. | TOL |
+| G5-DEC-014 | Display clean decimal division; ask quotient. | TOL |
+| G5-DEC-015 | Display two decimals and ask whole-number estimate. | EXACT-INT |
+
 | ID | Generator contract | Answer / validation |
 |---|---|---|
 | G5-NUM-009 | Display a spend/earn/spend story with all values shown. | EXACT-INT |
