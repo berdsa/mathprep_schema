@@ -381,3 +381,7 @@
 ## 2026-09-21 — G1-GEO-001 canonical spec and BOOL dimensions
 
 - Added the canonical G1 2D/3D classification specification and extended the shared BOOL validator with the fixed 2D/3D vocabulary.
+
+## 2026-09-21 — G1-GEO-002 canonical spec
+
+- Added the canonical G1 half-fraction specification; taskgen implements the fixed generator and reuses the existing EXACT-RAT validator.
