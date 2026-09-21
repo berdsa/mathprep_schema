@@ -666,6 +666,21 @@
 | Worked examples | `9 cm−4 cm→5 cm`; `20−1→19`; `7−7→0` |
 | Misconception tags | `MISC-SUBTRACT-MINUS`, `MISC-UNIT-OMISSION`, `MISC-BOUNDARY` |
 
+## G1-MEA-003 — Compare lengths
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Compare two lengths / MEA / 1 / Understand |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `Compare {a} cm and {b} cm: <, >, =` |
+| Variables / constraint | `a,b: int [1,20]` |
+| Solution / equivalence_policy | compare `a` and `b`, returning `<`, `>`, or `=`; **STRICT-FORM** |
+| Input contract | `^\s*(<|>|=)\s*$` plus shared BOOL synonyms |
+| Verification oracle / instance space | independent comparison; 1000/1000 per seed batch; 400 ordered pairs |
+| Worked examples | `3 cm vs 4 cm→<`; `5 vs 5→=`; `8 vs 2→>` |
+| Misconception tags | `MISC-COMPARE-SIGN`, `MISC-UNIT-OMISSION`, `MISC-BOUNDARY` |
+
 ## G1-NUM-020 — Word problem: subtract change unknown
 
 | Field | Value |
