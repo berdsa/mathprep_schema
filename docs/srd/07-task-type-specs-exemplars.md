@@ -2737,6 +2737,18 @@
 
 ## G6-DEC-003..005, G6-FRA-008..009, G6-NUM-004 — Percent, ratio, and division tasks
 
+## G6-DEC-006..007, G6-NUM-005..006, G6-FRA-010..011, G6-GEO-007 — Signed numbers and rational comparison
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G6-DEC-006 | Display decimal addition/subtraction with operands shown. | TOL |
+| G6-DEC-007 | Display decimal multiplication with operands shown. | TOL |
+| G6-NUM-005 | Display distance left of zero; ask signed value. | EXACT-INT |
+| G6-NUM-006 | Display an integer absolute-value expression. | EXACT-INT |
+| G6-FRA-010 | Display two rational numbers and ask comparison. | BOOL |
+| G6-FRA-011 | Display four rational numbers and ask ascending order. | CANON |
+| G6-GEO-007 | Display a non-axis point and ask quadrant. | BOOL |
+
 | ID | Generator contract | Answer / validation |
 |---|---|---|
 | G6-DEC-003 | Display percent and student count; ask percentage count. | EXACT-INT |
