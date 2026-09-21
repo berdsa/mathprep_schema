@@ -265,3 +265,7 @@
 
 - Added the transactional `000007_task_type_catalog_relabel` migration, including foreign-key-safe relabeling of existing task instances and a reverse migration with legacy-domain restoration.
 - Extended the shared validation pipeline with element-wise MATRIX comparison, numeric-array TOL comparison, and scalar support for the existing TUPLE method; added focused tests.
+
+## 2026-09-21 — G1-NUM-013 canonical spec
+
+- Added the canonical G1 missing-minuend specification; taskgen implements the generator and reuses the existing EXACT-INT validator.
