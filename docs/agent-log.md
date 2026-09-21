@@ -504,3 +504,7 @@
 ## 2026-09-21 — G2-GEO-012 canonical spec
 
 - Added the canonical Grade 2 polygon-vertices lookup specification using the same unambiguous shape set.
+
+## 2026-09-21 — G2-GEO-013 canonical spec
+
+- Resolved the nonunique-options FLAG by removing rectangle, and extended shared BOOL labels for the unique shape options.

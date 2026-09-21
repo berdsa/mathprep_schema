@@ -2388,3 +2388,15 @@
 | Solution / equivalence_policy | vertex count; **STRICT-FORM** EXACT-INT |
 | Verification oracle / instance space | independent lookup; 1000/1000 per seed batch; five polygons |
 | Worked examples | `triangle→3`; `rectangle→4`; `hexagon→6` |
+
+## G2-GEO-013 — Shape with N sides
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Identify a shape by side count / GEO / 2 / Understand |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `Which shape has {n} sides: triangle, square, pentagon, hexagon?` |
+| Variables / constraint | `n∈{3,4,5,6}`; options are unique after removing rectangle |
+| Solution / equivalence_policy | shape label; **STRICT-FORM** BOOL |
+| Verification oracle / instance space | independent side-count lookup; 1000/1000 per seed batch; four unique options |
+| Worked examples | `3→triangle`; `4→square`; `5→pentagon`; `6→hexagon` |
