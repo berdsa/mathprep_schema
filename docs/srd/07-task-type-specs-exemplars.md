@@ -3058,3 +3058,13 @@
 | G7-GEO-022 | Display rectangle side lengths and ask for area. | EXACT-INT |
 | G7-GEO-023 | Display a central angle and ask for the intercepted arc measure. | EXACT-INT |
 | G7-GEO-024 | Display the number of sides of a regular polygon and ask for symmetry-line count. | EXACT-INT |
+
+## G8-NUM-001..005 — Irrational numbers, roots, and negative exponents
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G8-NUM-001 | Display `√n` and ask whether it is rational. | BOOL |
+| G8-NUM-002 | Display `√n` and ask for a two-decimal approximation. | TOL |
+| G8-NUM-003 | Display a perfect square and ask for its square root. | EXACT-INT |
+| G8-NUM-004 | Display a perfect cube and ask for its cube root. | EXACT-INT |
+| G8-NUM-005 | Display a negative integer exponent and ask for its exact reciprocal fraction. | EXACT-RAT |
