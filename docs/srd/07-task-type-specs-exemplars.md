@@ -696,6 +696,21 @@
 | Worked examples | `3,1,2→1 2 3`; `20,5,12→5 12 20`; `7,9,4→4 7 9` |
 | Misconception tags | `MISC-ORDER-DIRECTION`, `MISC-DUPLICATE`, `MISC-UNIT-OMISSION` |
 
+## G1-MEA-005 — Time plus hours
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Add whole hours to a clock time / MEA / 1 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `It is {h}:00. What time is {k} hours later? Enter the answer in minutes.` |
+| Variables / constraint | `h∈[1,11]`, `k∈[1,3]`; `h+k≤12` |
+| Solution / equivalence_policy | `60(h+k)` minutes; **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; decimals and commas reject |
+| Verification oracle / instance space | independent time addition; 1000/1000 per seed batch; 30 valid `(h,k)` pairs |
+| Worked examples | `1:00+1h→120`; `9:00+3h→720`; `11:00+1h→720` |
+| Misconception tags | `MISC-TIME-UNIT`, `MISC-OFF-BY-60`, `MISC-BOUNDARY` |
+
 ## G1-NUM-020 — Word problem: subtract change unknown
 
 | Field | Value |
