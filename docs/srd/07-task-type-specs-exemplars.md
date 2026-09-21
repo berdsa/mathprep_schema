@@ -3124,3 +3124,15 @@
 | G8-GEO-023 | Display a point and ask for its y-axis reflection. | TUPLE |
 | G8-FUN-005 | Display a square-root function and ask for its domain. | CANON |
 | G8-FUN-006 | Display an absolute-value function and ask for its vertex. | TUPLE |
+
+## G9-PRO-001, G9-STA-003..004, G9-FUN-003, G9-GEO-003..005 — Counting, frequency, transformations, and triangle trigonometry
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G9-PRO-001 | Display shirt and pants counts and ask for outfit count. | EXACT-INT |
+| G9-STA-003 | Display a two-way table's four cells and ask for the total. | EXACT-INT |
+| G9-STA-004 | Display a count out of a total and ask for relative frequency. | TOL |
+| G9-FUN-003 | Display a vertical function shift and ask whether it moves upward. | BOOL |
+| G9-GEO-003 | Display a sine-law relation and ask for the unknown side. | TOL |
+| G9-GEO-004 | Display a cosine-law expression and ask for the third side. | TOL |
+| G9-GEO-005 | Display the trigonometric triangle-area expression and ask for area. | TOL |
