@@ -2625,3 +2625,13 @@
 | Variables / constraint | minute, hour, length, capacity, and mass values satisfy catalog bounds |
 | Solution / equivalence_policy | canonical time or exact integer as specified; **STRICT-FORM** |
 | Verification oracle / instance space | deterministic measurement oracle; 1000/1000 per seed batch |
+## G3-STA-001..004 — Graph and pictograph readings
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Graph and pictograph readings / STA / 3 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / templates | `plaintext`, `unicode-math`; every graph value, category, symbol count, and key is displayed |
+| Variables / constraint | values satisfy catalog bounds and nonnegative count constraints |
+| Solution / equivalence_policy | exact integer; **STRICT-FORM** EXACT-INT |
+| Verification oracle / instance space | deterministic graph oracle; 1000/1000 per seed batch |
