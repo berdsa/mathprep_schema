@@ -3175,3 +3175,5 @@
 | G10-FUN-002 | Display a linear function and ask for its inverse in canonical form. | CANON |
 | G10-FUN-003 | Display a vertical function shift and ask whether it moves upward. | BOOL |
 | G11-TRG-001 | Display `sin(x)=1/2` on `[0°,360°)` and ask for all solutions. | SET |
+| G11-VEC-001 | Display two 2D vectors and ask for their dot product. | EXACT-INT |
+| G11-MAT-002 | Display a 2×2 matrix and ask for its determinant. | EXACT-INT |
