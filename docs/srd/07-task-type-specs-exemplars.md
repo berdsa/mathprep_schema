@@ -903,6 +903,18 @@
 | Verification oracle / instance space | independent predecessor calculation; 1000/1000 per seed batch |
 | Worked examples | `1→0`; `120→119`; `45→44` |
 
+## G2-NUM-012 — Tens digit
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Identify the tens digit / NUM / 2 / Understand |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `What digit is in the tens place of {n}?` |
+| Variables / constraint | `n∈[10,99]` |
+| Solution / equivalence_policy | `floor(n/10)`; **STRICT-FORM** EXACT-INT |
+| Verification oracle / instance space | independent place-value calculation; 1000/1000 per seed batch |
+| Worked examples | `10→1`; `47→4`; `99→9` |
+
 ## G1-STA-002 — Data difference
 
 | Field | Value |
