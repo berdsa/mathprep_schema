@@ -2725,6 +2725,18 @@
 
 ## G5-DEC-009..015 — Decimal arithmetic and estimation
 
+## G5-FRA-004..010 — Fraction operations with unlike denominators
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G5-FRA-004 | Display two proper fractions with unlike denominators and add. | EXACT-RAT |
+| G5-FRA-005 | Display two proper fractions with unlike denominators and subtract. | EXACT-RAT |
+| G5-FRA-006 | Display mixed numbers with unlike denominators and add. | EXACT-RAT |
+| G5-FRA-007 | Display mixed numbers with unlike denominators and subtract. | EXACT-RAT |
+| G5-FRA-008 | Display a fraction addition word problem. | EXACT-RAT |
+| G5-FRA-009 | Display two proper fractions and multiply. | EXACT-RAT |
+| G5-FRA-010 | Display two mixed numbers and multiply. | EXACT-RAT |
+
 | ID | Generator contract | Answer / validation |
 |---|---|---|
 | G5-DEC-009 | Display two hundredths decimals and ask their sum. | TOL |
