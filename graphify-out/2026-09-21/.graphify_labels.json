@@ -4,7 +4,7 @@
   "2": "pipeline.go",
   "3": "constants.go",
   "4": "000001_create_phase0_schema.up.sql",
-  "5": "000006_taskgen_task_type_reconciliation.down.sql",
+  "5": "pipeline_test.go",
   "6": "02 — Requirements",
   "7": "00 — Conventions",
   "8": "Math Task Type Catalog — Grade 1 to University",
@@ -28,6 +28,5 @@
   "26": "000004_create_service_roles.up.sql",
   "27": "000005_task_type_grade_band.down.sql",
   "28": "000005_task_type_grade_band.up.sql",
-  "29": "github.com/berdsa/mathprep_schema",
-  "30": "000006_taskgen_task_type_reconciliation.up.sql"
+  "29": "github.com/berdsa/mathprep_schema"
 }
