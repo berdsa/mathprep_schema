@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "docs/srd/07-task-type-specs-exemplars.md": {
-    "mtime": 1789977611.5051668,
-    "ast_hash": "23ad381c7a9b4f9ceee4eee22a6af869",
+    "mtime": 1789992809.6004024,
+    "ast_hash": "f670d21093467765a3743afb3e0cbe02",
     "semantic_hash": ""
   },
   "docs/srd/08-developer-backlog.md": {
@@ -125,8 +125,8 @@
     "semantic_hash": "b6d459a3cbb64c45429c12170290cad1"
   },
   "pkg/core/validation/pipeline.go": {
-    "mtime": 1789977427.8189857,
-    "ast_hash": "5002f1ef774e17ebbe871b8e58d839c0",
+    "mtime": 1789982295.1946514,
+    "ast_hash": "9a8565b1f2d4a857d5d88c8e6d2c057e",
     "semantic_hash": ""
   },
   "pkg/core/validation/pipeline_test.go": {

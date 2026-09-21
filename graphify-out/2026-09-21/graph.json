@@ -2646,6 +2646,17 @@
       "norm_label": "2026-09-21 \u2014 g2-geo-013 canonical spec"
     },
     {
+      "label": "2026-09-21 \u2014 G2-GEO-014 canonical spec",
+      "file_type": "document",
+      "source_file": "docs/agent-log.md",
+      "source_location": "L512",
+      "_origin": "ast",
+      "id": "docs_agent_log_2026_09_21_g2_geo_014_canonical_spec",
+      "community": 1,
+      "community_name": "Agent log",
+      "norm_label": "2026-09-21 \u2014 g2-geo-014 canonical spec"
+    },
+    {
       "label": "00-conventions.md",
       "file_type": "document",
       "source_file": "docs/srd/00-conventions.md",
@@ -4965,6 +4976,17 @@
       "community": 0,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "g2-geo-013 \u2014 shape with n sides"
+    },
+    {
+      "label": "G2-GEO-014 \u2014 3D faces lookup",
+      "file_type": "document",
+      "source_file": "docs/srd/07-task-type-specs-exemplars.md",
+      "source_location": "L2404",
+      "_origin": "ast",
+      "id": "docs_srd_07_task_type_specs_exemplars_g2_geo_014_3d_faces_lookup",
+      "community": 0,
+      "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
+      "norm_label": "g2-geo-014 \u2014 3d faces lookup"
     },
     {
       "label": "08-developer-backlog.md",
@@ -9211,6 +9233,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/agent-log.md",
+      "source_location": "L512",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_agent_log_agent_log",
+      "target": "docs_agent_log_2026_09_21_g2_geo_014_canonical_spec",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/agent-log.md",
       "source_location": "L417",
       "weight": 1.0,
       "_origin": "ast",
@@ -10707,6 +10740,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
+      "source_location": "L2404",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_srd_07_task_type_specs_exemplars_07_wave_a_exemplar_task_type_specs",
+      "target": "docs_srd_07_task_type_specs_exemplars_g2_geo_014_3d_faces_lookup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L1453",
       "weight": 1.0,
       "_origin": "ast",
@@ -11992,5 +12036,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "98bd3d41ae704f9e9c2b0900b4c4f5f361d28f96"
+  "built_at_commit": "7e57f65ca1cc1a9ac9a6bf18d604d6ca345fbd90"
 }

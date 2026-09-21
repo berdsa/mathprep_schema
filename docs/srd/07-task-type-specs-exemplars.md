@@ -3177,3 +3177,22 @@
 | G11-TRG-001 | Display `sin(x)=1/2` on `[0°,360°)` and ask for all solutions. | SET |
 | G11-VEC-001 | Display two 2D vectors and ask for their dot product. | EXACT-INT |
 | G11-MAT-002 | Display a 2×2 matrix and ask for its determinant. | EXACT-INT |
+
+## Grade 2 early number and measurement contracts
+
+The following catalog types use CODE generation, `ru-KZ` plaintext rendering, strict-form validation, and `1.0.0-draft`. Every displayed operand is persisted in `Params` and the answer is frozen in the instance.
+
+| Type | Template and solution | Validation |
+|---|---|---|
+| G2-NUM-002 | `What number comes before n?`; answer `n-1`, `n∈[1,120]` | EXACT-INT |
+| G2-NUM-003 | `What digit is in the tens place of n?`; answer `floor(n/10)%10`, `n∈[10,99]` | EXACT-INT |
+| G2-NUM-004 | `What digit is in the ones place of n?`; answer `n%10`, `n∈[10,99]` | EXACT-INT |
+| G2-NUM-007 | `What is the value of the tens digit in n?`; answer `10*floor(n/10)`, `n∈[10,99]` | EXACT-INT |
+| G2-NUM-008 | `What is the value of the ones digit in n?`; answer `n%10`, `n∈[10,99]` | EXACT-INT |
+| G2-MEA-001 | `A board is a cm. Another is b cm. Total?`; answer `a+b`, `a,b∈[1,100]` | EXACT-INT |
+| G2-MEA-002 | `A rope is a cm. Cut b cm. Left?`; answer `a-b`, `1≤b≤a≤100` | EXACT-INT |
+| G2-MEA-003 | `Compare a cm and b cm`; answer `<`, `>`, or `=`, `a,b∈[1,200]` | BOOL |
+| G2-MEA-004 | `Order a,b,c cm from shortest to longest`; answer canonical ascending tuple | CANON |
+| G2-MEA-005 | `Three pieces are a,b,c cm. Total?`; answer `a+b+c`, each in `[1,100]` | EXACT-INT |
+| G2-MEA-006 | `It is h:00. What time is k minutes later?`; answer total minutes, `k∈{5,…,55}` | CANON |
+| G2-MEA-007 | `It is h:m. What time is k minutes earlier?`; answer total minutes, `m≥k`, multiples of five | CANON |
