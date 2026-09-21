@@ -425,3 +425,7 @@
 ## 2026-09-21 — G2-NUM-012 canonical spec
 
 - Added the canonical Grade 2 tens-digit specification.
+
+## 2026-09-21 — G2-NUM-013 canonical spec
+
+- Added the canonical Grade 2 ones-digit specification.
