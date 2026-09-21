@@ -76,6 +76,9 @@ func TestValidateBool(t *testing.T) {
 	if got := ValidateBool("L", "L"); got.Verdict != core.VerdictCorrect {
 		t.Fatalf("got %+v", got)
 	}
+	if got := ValidateBool("3d", "3D"); got.Verdict != core.VerdictCorrect {
+		t.Fatalf("got %+v", got)
+	}
 	if got := ValidateBool(" oy ", "Oy"); got.Verdict != core.VerdictCorrect || got.Normalized != "Oy" {
 		t.Fatalf("got %+v", got)
 	}

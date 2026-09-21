@@ -741,6 +741,21 @@
 | Worked examples | `2 red+3 blue+4 green→9`; `0+0+0→0`; `10+10+10→30` |
 | Misconception tags | `MISC-ADD-FACT`, `MISC-COUNT-TOTAL`, `MISC-BOUNDARY` |
 
+## G1-GEO-001 — 2D or 3D classification
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Classify a named shape as 2D or 3D / GEO / 1 / Understand |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `Is a {shape} a 2D or 3D shape?` |
+| Variables / constraint | `shape∈{circle,triangle,square,cube,sphere,cylinder}` |
+| Solution / equivalence_policy | `2D` for circle/triangle/square, `3D` for cube/sphere/cylinder; **STRICT-FORM** |
+| Input contract | `2D` or `3D`, case-insensitive |
+| Verification oracle / instance space | independent classification; 1000/1000 per seed batch; six shapes |
+| Worked examples | `circle→2D`; `cube→3D`; `cylinder→3D` |
+| Misconception tags | `MISC-DIMENSION-CONFUSION`, `MISC-SHAPE-CLASS` |
+
 ## G1-STA-002 — Data difference
 
 | Field | Value |
