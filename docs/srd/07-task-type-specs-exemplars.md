@@ -3136,3 +3136,12 @@
 | G9-GEO-003 | Display a sine-law relation and ask for the unknown side. | TOL |
 | G9-GEO-004 | Display a cosine-law expression and ask for the third side. | TOL |
 | G9-GEO-005 | Display the trigonometric triangle-area expression and ask for area. | TOL |
+| G9-VEC-002 | Display two 2D vectors and ask for their sum. | TUPLE |
+| G9-GEO-006 | Display an inscribed angle and ask for its intercepted arc. | EXACT-INT |
+| G9-GEO-007 | Display circle radius and chord-center distance and ask for chord length. | TOL |
+| G9-GEO-008 | Display radius and central angle and ask for arc length. | TOL |
+| G9-GEO-009 | Display radius and central angle and ask for sector area. | TOL |
+| G9-GEO-010 | Display circle center and radius and require canonical equation form. | CANON |
+| G9-FUN-004 | Display arithmetic-sequence first term, difference, and count; ask for the sum. | EXACT-INT |
+| G9-FUN-005 | Display geometric-sequence first term, ratio, and count; ask for the sum. | EXACT-INT |
+| G9-TRG-001 | Display two angles and one side and ask for the other side using the sine law. | TOL |
