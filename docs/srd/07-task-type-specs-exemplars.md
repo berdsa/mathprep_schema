@@ -3178,6 +3178,9 @@
 | G11-VEC-001 | Display two 2D vectors and ask for their dot product. | EXACT-INT |
 | G11-MAT-002 | Display a 2×2 matrix and ask for its determinant. | EXACT-INT |
 
+| U-STA-008 | Known-σ confidence interval with visible mean, σ, and n | TUPLE |
+| U-STA-009 | Two-sided z-test p-value with visible z | TOL |
+
 | U-CAL-023 | Analytic-function recognition for visible `f(z)=z²` | BOOL |
 | U-CAL-024 | Uniform-continuity recognition for visible `f(x)=x²` on ℝ | BOOL |
 | U-CAL-025 | Riemann-integrability recognition for a visible step function | BOOL |
