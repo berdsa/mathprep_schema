@@ -2605,3 +2605,13 @@
 | Variables / constraint | values satisfy rounding, regrouping, borrowing, and place-value bounds |
 | Solution / equivalence_policy | exact integer; **STRICT-FORM** EXACT-INT |
 | Verification oracle / instance space | deterministic arithmetic oracle; 1000/1000 per seed batch |
+## G3-FRA-009..014 — Elementary fraction representations
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Fraction representations and comparison / FRA / 3 / Understand |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / templates | `plaintext`, `unicode-math`; all numerators, denominators, positions, and shaded counts are displayed |
+| Variables / constraint | denominators and numerators satisfy the catalog bounds; comparisons use valid unequal values |
+| Solution / equivalence_policy | exact rational, integer, or BOOL label as specified; **STRICT-FORM** |
+| Verification oracle / instance space | deterministic fraction oracle; 1000/1000 per seed batch |
