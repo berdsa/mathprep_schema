@@ -2435,3 +2435,13 @@
 | Solution / equivalence_policy | `8`; **STRICT-FORM** EXACT-INT |
 | Verification oracle / instance space | fixed-answer oracle; 1000/1000 per seed batch |
 | Worked examples | every seed→`8` |
+## G2-NUM-031..034 — Addition/subtraction within 100
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Basic operations / NUM / 2 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / templates | `plaintext`, `unicode-math` / `{a}+{b}=?`, `{a}-{b}=?`, `{a}+?={c}`, `{a}-?={c}` |
+| Variables / constraint | values in `[0,100]`; generated relations are nonnegative and sums do not exceed 100 |
+| Solution / equivalence_policy | exact arithmetic result; **STRICT-FORM** EXACT-INT |
+| Verification oracle / instance space | independent deterministic arithmetic oracle; 1000/1000 per seed batch |
