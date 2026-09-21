@@ -2585,3 +2585,13 @@
 | Variables / constraint | sequence bounds and word-problem quantities satisfy the catalog ranges |
 | Solution / equivalence_policy | exact integer; **STRICT-FORM** EXACT-INT |
 | Verification oracle / instance space | deterministic sequence/arithmetic oracle; 1000/1000 per seed batch |
+## G3-NUM-036..041 — Multiplication properties and patterns
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Multiplication properties and patterns / NUM / 3 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / templates | `plaintext`, `unicode-math`; all factors, terms, and comparison operands are displayed |
+| Variables / constraint | factor and pattern values satisfy catalog bounds |
+| Solution / equivalence_policy | exact integer or BOOL label; **STRICT-FORM** |
+| Verification oracle / instance space | deterministic multiplication oracle; 1000/1000 per seed batch |
