@@ -2757,6 +2757,15 @@
 
 ## G7-FRA-005 and G7-ALG-001, 004, 007 — Decimal conversion and linear expressions
 
+## G7-ALG-008..011 — Equations, inequalities, and interval notation
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G7-ALG-008 | Display `a(x+b)=c` with all values shown; ask x. | EXACT-RAT |
+| G7-ALG-009 | Display verbal linear equation with all constants shown; ask number. | EXACT-RAT |
+| G7-ALG-010 | Display inequality with constants; ask solution interval. | CANON |
+| G7-ALG-011 | Display `x>a`; ask interval notation. | CANON |
+
 | ID | Generator contract | Answer / validation |
 |---|---|---|
 | G7-FRA-005 | Display a fraction and ask decimal approximation. | TOL |
