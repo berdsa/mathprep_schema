@@ -2485,3 +2485,13 @@
 | Variables / constraint | three-digit values `[100,999]` and valid hundreds/tens/ones decomposition |
 | Solution / equivalence_policy | tuple, integer, canonical expanded form as specified; **STRICT-FORM** |
 | Verification oracle / instance space | deterministic place-value oracle; 1000/1000 per seed batch |
+## G2-NUM-057..062 — Three-digit comparison and sequences
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Three-digit comparison and sequences / NUM / 2 / Understand |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / templates | `plaintext`, `unicode-math`; every compared value and sequence endpoint is shown |
+| Variables / constraint | values satisfy the catalog bounds; generated numbers are distinct where required |
+| Solution / equivalence_policy | exact integer, boolean, or canonical order as specified; **STRICT-FORM** |
+| Verification oracle / instance space | deterministic arithmetic oracle; 1000/1000 per seed batch |
