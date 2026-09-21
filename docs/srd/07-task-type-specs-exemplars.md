@@ -3046,3 +3046,8 @@
 | G7-STA-010 | Display five values and ask for their mean. | EXACT-RAT |
 | G7-STA-011 | Display five values and ask for their range. | EXACT-INT |
 | G7-GEO-012 | Display adjacent segment lengths and ask for the total segment length. | EXACT-INT |
+| G7-GEO-013 | Display two known angle parts and their combined angle; ask for the missing part. | EXACT-INT |
+| G7-GEO-014 | Display a parallel-line transversal angle and ask for its equal corresponding angle. | EXACT-INT |
+| G7-GEO-015 | Display two remote interior angles and ask for the exterior angle. | EXACT-INT |
+| G7-GEO-016 | Display two triangles' three side lengths and ask whether SSS proves congruence. | BOOL |
+| G7-GEO-017 | Display two triangles' two sides and included angles and ask whether SAS proves congruence. | BOOL |
