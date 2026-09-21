@@ -636,6 +636,21 @@
 | Worked examples | `34−2→32`; `58−8→50`; `97−6→91` |
 | Misconception tags | `MISC-SUBTRACT-MINUS`, `MISC-BORROWING`, `MISC-PLACE-VALUE` |
 
+## G1-MEA-001 — Length addition
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Add two lengths / MEA / 1 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `A string is {a} cm. Another is {b} cm. Total length?` |
+| Variables / constraint | `a,b: int [1,20]`; `a+b≤20` |
+| Solution / equivalence_policy | `a+b` centimeters; **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; decimals and commas reject |
+| Verification oracle / instance space | independent length addition; 1000/1000 per seed batch; 190 ordered pairs |
+| Worked examples | `3 cm+4 cm→7 cm`; `1+19→20`; `12+8→20` |
+| Misconception tags | `MISC-ADD-FACT`, `MISC-UNIT-OMISSION`, `MISC-BOUNDARY` |
+
 ## G1-NUM-020 — Word problem: subtract change unknown
 
 | Field | Value |
