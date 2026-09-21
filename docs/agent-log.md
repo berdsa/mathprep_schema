@@ -485,3 +485,7 @@
 ## 2026-09-21 — G2-NUM-027 canonical spec
 
 - Added the canonical Grade 2 place-value construction specification.
+
+## 2026-09-21 — G2-NUM-028 canonical spec
+
+- Added the canonical Grade 2 expanded-form conversion specification.
