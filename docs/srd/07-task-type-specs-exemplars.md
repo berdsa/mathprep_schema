@@ -3178,6 +3178,11 @@
 | G11-VEC-001 | Display two 2D vectors and ask for their dot product. | EXACT-INT |
 | G11-MAT-002 | Display a 2×2 matrix and ask for its determinant. | EXACT-INT |
 
+| U-DIS-004 | Choose k objects from visible n | EXACT-INT |
+| U-DIS-005 | Tree edge count from visible vertex count | EXACT-INT |
+| U-DIS-006 | Chinese-remainder solution with visible congruences | EXACT-INT |
+| U-DIS-007 | Euler-theorem modular exponent with visible a and n | EXACT-INT |
+
 | U-STA-001 | Binomial probability with visible n, p, and k | TOL |
 | U-STA-002 | Normal interval probability with visible μ, σ, a, and b | TOL |
 | U-STA-003 | Joint-table probability with visible cell and total | TOL |
