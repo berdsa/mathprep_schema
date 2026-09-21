@@ -2749,6 +2749,16 @@
 
 ## G6-FRA-012..015 and G6-NUM-007..008 — Signed rational operations
 
+## G7-STA-001..002 and G7-STA-004..006 — Statistical summaries and displays
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G7-STA-001 | Display sorted data and ask IQR. | TOL |
+| G7-STA-002 | Display data and ask mean absolute deviation. | TOL |
+| G7-STA-004 | Display dot-plot values/frequencies and ask total. | EXACT-INT |
+| G7-STA-005 | Display histogram bin counts and ask total. | EXACT-INT |
+| G7-STA-006 | Display five-number summary and ask IQR. | TOL |
+
 | ID | Generator contract | Answer / validation |
 |---|---|---|
 | G6-FRA-012 | Display signed fractions and add. | EXACT-RAT |
