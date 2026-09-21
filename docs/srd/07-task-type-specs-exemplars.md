@@ -2505,3 +2505,13 @@
 | Variables / constraint | centimeter values satisfy the catalog ranges and ordering constraints |
 | Solution / equivalence_policy | exact integer, boolean, or canonical order as specified; **STRICT-FORM** |
 | Verification oracle / instance space | deterministic length oracle; 1000/1000 per seed batch |
+## G2-MEA-014..016 — Clock arithmetic
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Clock arithmetic / MEA / 2 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / templates | `plaintext`, `unicode-math`; displayed times, offsets, and requested format are explicit |
+| Variables / constraint | hours 1–11 and minute values are multiples of five within the catalog bounds |
+| Solution / equivalence_policy | H:MM canonical time or exact elapsed minutes; **STRICT-FORM** |
+| Verification oracle / instance space | deterministic time oracle; 1000/1000 per seed batch |
