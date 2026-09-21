@@ -2719,6 +2719,16 @@
 
 ## G5-FRA-001..002, G5-DEC-002..004, G5-NUM-003 — First Grade 5 arithmetic contracts
 
+## G5-NUM-004..008 — Expressions and alternating patterns
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G5-NUM-004 | Display bracketed arithmetic with all operands shown. | EXACT-INT |
+| G5-NUM-005 | Display a verbal expression request with all values shown. | CANON |
+| G5-NUM-006 | Display a multiplication-by-sum expression and ask for its interpretation. | CANON |
+| G5-NUM-007 | Display parenthesized-order arithmetic with all operands shown. | EXACT-INT |
+| G5-NUM-008 | Display four terms and both alternating increments; ask next term. | EXACT-INT |
+
 | ID | Generator contract | Answer / validation |
 |---|---|---|
 | G5-FRA-001 | Display two fractions in an add word problem. | EXACT-RAT |
