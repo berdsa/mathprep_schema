@@ -2755,6 +2755,15 @@
 
 ## G7-DEC-001..004 — Percent error, rates, and multi-step percent arithmetic
 
+## G7-FRA-005 and G7-ALG-001, 004, 007 — Decimal conversion and linear expressions
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G7-FRA-005 | Display a fraction and ask decimal approximation. | TOL |
+| G7-ALG-001 | Display difference of two linear expressions and ask simplified form. | CANON |
+| G7-ALG-004 | Display sum of two linear expressions and ask simplified form. | CANON |
+| G7-ALG-007 | Display common-factor linear expression and ask factored form. | CANON |
+
 | ID | Generator contract | Answer / validation |
 |---|---|---|
 | G7-DEC-001 | Display actual and estimated values; ask percent error. | TOL |
