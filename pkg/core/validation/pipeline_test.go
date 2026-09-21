@@ -70,6 +70,9 @@ func TestValidateBool(t *testing.T) {
 	if got := ValidateBool("true", "TRUE"); got.Verdict != core.VerdictCorrect {
 		t.Fatalf("got %+v", got)
 	}
+	if got := ValidateBool("blue", "blue"); got.Verdict != core.VerdictCorrect {
+		t.Fatalf("got %+v", got)
+	}
 	if got := ValidateBool(" oy ", "Oy"); got.Verdict != core.VerdictCorrect || got.Normalized != "Oy" {
 		t.Fatalf("got %+v", got)
 	}

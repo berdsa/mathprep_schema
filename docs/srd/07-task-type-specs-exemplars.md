@@ -756,6 +756,21 @@
 | Worked examples | `8 red−3 blue→5`; `0−0→0`; `10−4→6` |
 | Misconception tags | `MISC-SUBTRACT-MINUS`, `MISC-COUNT-DIFFERENCE`, `MISC-BOUNDARY` |
 
+## G1-STA-003 — Data most category
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Identify the category with the most items / STA / 1 / Understand |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `Counts: {a} red, {b} blue, {c} green. Which category has the most? Answer red, blue, or green.` |
+| Variables / constraint | `a,b,c: distinct int [0,10]` |
+| Solution / equivalence_policy | category label with the largest count; **STRICT-FORM** BOOL labels |
+| Input contract | `red`, `blue`, or `green`, case-insensitive |
+| Verification oracle / instance space | independent maximum; 1000/1000 per seed batch; 990 ordered triples |
+| Worked examples | `2 red,5 blue,3 green→blue`; `9,4,1→red`; `1,3,8→green` |
+| Misconception tags | `MISC-COMPARE-SIGN`, `MISC-COUNT-MOST`, `MISC-BOUNDARY` |
+
 ## G1-MEA-007 — Time minus half-hour
 
 | Field | Value |
