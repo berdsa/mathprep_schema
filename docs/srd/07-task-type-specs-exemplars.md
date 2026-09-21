@@ -3003,3 +3003,14 @@
 | Variables / constraint | values satisfy multi-digit multiplication/division and estimation bounds |
 | Solution / equivalence_policy | exact integer or tuple as specified; **STRICT-FORM** |
 | Verification oracle / instance space | deterministic large-arithmetic oracle; 1000/1000 per seed batch |
+
+## G7-STA-007..008 and G7-ALG-012..015 — Population comparisons and linear equation cases
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G7-STA-007 | Display population A/B means and ask which mean is larger. | BOOL |
+| G7-STA-008 | Display population A/B medians and ask which median is larger. | BOOL |
+| G7-ALG-012 | Display `ax+d=cx+rhs` with a unique integer solution and ask for `x`. | EXACT-RAT |
+| G7-ALG-013 | Display a linear equation with unequal constant terms and ask whether it has a solution. | BOOL |
+| G7-ALG-014 | Display an identity of the form `a(x+b)=ax+ab` and ask whether every `x` works. | BOOL |
+| G7-ALG-015 | Display a rational-coefficient linear equation and ask for `x`. | EXACT-RAT |
