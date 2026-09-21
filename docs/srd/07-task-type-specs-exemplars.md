@@ -3033,3 +3033,7 @@
 | G7-STA-009 | Display a signed slope in context and ask whether the output increases as x increases. | BOOL |
 | G7-ALG-016 | Display `a(x+b)-c=d` and ask for `x`. | EXACT-RAT |
 | G7-ALG-017 | Display a variables-on-both-sides equation and ask for its unique solution. | EXACT-RAT |
+| G7-ALG-018 | Display `ax+by=c` and require canonical `y=(c-ax)/b` output. | CANON |
+| G7-ALG-019 | Display a one-variable linear inequality and require canonical `x≤k` output. | CANON |
+| G7-ALG-020 | Display slope-intercept form and ask for the `(slope,y-intercept)` tuple. | TUPLE |
+| G7-ALG-021 | Display a point and slope and require canonical point-slope line output. | CANON |
