@@ -2715,6 +2715,18 @@
 
 ## G4-MEA-011..015 and G4-STA-001 — Composite measurement, line plot, and angles
 
+## G4-GEO-001..007 — Lines, angles, triangles, quadrilaterals, and symmetry
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G4-GEO-001 | Display line/ray/segment and ask endpoint count. | EXACT-INT |
+| G4-GEO-002 | Display angle in `[1,180]` and ask acute/right/obtuse/straight class. | BOOL |
+| G4-GEO-003 | Display valid triangle side lengths and ask side classification. | BOOL |
+| G4-GEO-004 | Display triangle angles summing to 180° and ask angle classification. | BOOL |
+| G4-GEO-005 | Display fixed quadrilateral properties and ask type. | BOOL |
+| G4-GEO-006 | Display a fixed shape and ask symmetry-line count. | EXACT-INT |
+| G4-GEO-007 | Display a fixed polygon and ask angle count. | EXACT-INT |
+
 | ID | Generator contract | Answer / validation |
 |---|---|---|
 | G4-MEA-011 | Display two rectangle dimensions in an L-shape and ask total area. | EXACT-INT |
