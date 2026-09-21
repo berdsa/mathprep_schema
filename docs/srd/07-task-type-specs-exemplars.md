@@ -2595,3 +2595,13 @@
 | Variables / constraint | factor and pattern values satisfy catalog bounds |
 | Solution / equivalence_policy | exact integer or BOOL label; **STRICT-FORM** |
 | Verification oracle / instance space | deterministic multiplication oracle; 1000/1000 per seed batch |
+## G3-NUM-042..047 — Rounding and multi-digit arithmetic
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Rounding and multi-digit arithmetic / NUM / 3 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / templates | `plaintext`, `unicode-math`; numbers, places, and operands are explicit |
+| Variables / constraint | values satisfy rounding, regrouping, borrowing, and place-value bounds |
+| Solution / equivalence_policy | exact integer; **STRICT-FORM** EXACT-INT |
+| Verification oracle / instance space | deterministic arithmetic oracle; 1000/1000 per seed batch |
