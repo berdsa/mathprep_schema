@@ -3024,3 +3024,6 @@
 | G7-FUN-005 | Display two linear functions and ask which is steeper. | BOOL |
 | G7-FUN-006 | Display `f(x)=ax+b` and ask for its rate of change. | EXACT-INT |
 | G7-FUN-007 | Display `f(x)=ax+b` and ask for its initial value `f(0)`. | EXACT-INT |
+| G7-FUN-008 | Display linear and quadratic examples and ask whether each is linear. | BOOL |
+| G7-FUN-009 | Display two points with distinct x-values and ask for the slope. | EXACT-RAT |
+| G7-FUN-010 | Display `ax+by=c` and ask for its slope. | EXACT-RAT |
