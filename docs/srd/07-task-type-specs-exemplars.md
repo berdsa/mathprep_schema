@@ -2455,3 +2455,13 @@
 | Variables / constraint | all displayed values are in the catalog ranges and generated totals are at most 100 |
 | Solution / equivalence_policy | exact arithmetic result; **STRICT-FORM** EXACT-INT |
 | Verification oracle / instance space | deterministic arithmetic oracle; 1000/1000 per seed batch |
+## G2-NUM-039..047 — Groups, comparison, parity, and multiplication facts
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Grade 2 number operations / NUM / 2 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / templates | `plaintext`, `unicode-math`; each prompt displays every operand and requested relation |
+| Variables / constraint | values satisfy the catalog bounds; groups and arrays have totals at most 100 |
+| Solution / equivalence_policy | exact integer, boolean, or canonical set as specified; **STRICT-FORM** |
+| Verification oracle / instance space | deterministic independent oracle; 1000/1000 per seed batch |
