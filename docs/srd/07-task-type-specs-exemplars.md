@@ -591,6 +591,21 @@
 | Worked examples | `3+4=7, ask 7−3→4`; `0+20=20→20`; `12+8=20→8` |
 | Misconception tags | `MISC-ADD-FACT`, `MISC-SUBTRACT-MINUS`, `MISC-FACT-FAMILY` |
 
+## G1-NUM-024 — True/false equation
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Judge whether an addition equation is true / NUM / 1 / Understand |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `Is {a} + {b} = {c} true or false?` |
+| Variables / constraint | `a,b,c: int [0,20]` |
+| Solution / equivalence_policy | `TRUE` iff `a+b=c`, otherwise `FALSE`; **STRICT-FORM** |
+| Input contract | `^\s*(true|false)\s*$`, case-insensitive |
+| Verification oracle / instance space | independent equality check; 1000/1000 per seed batch; 9,261 ordered triples |
+| Worked examples | `3+4=7→TRUE`; `0+20=19→FALSE`; `12+8=20→TRUE` |
+| Misconception tags | `MISC-ADD-FACT`, `MISC-EQUALITY`, `MISC-BOUNDARY` |
+
 ## G1-NUM-020 — Word problem: subtract change unknown
 
 | Field | Value |
