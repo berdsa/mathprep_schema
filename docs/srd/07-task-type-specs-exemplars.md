@@ -606,6 +606,21 @@
 | Worked examples | `3+4=7→TRUE`; `0+20=19→FALSE`; `12+8=20→TRUE` |
 | Misconception tags | `MISC-ADD-FACT`, `MISC-EQUALITY`, `MISC-BOUNDARY` |
 
+## G1-NUM-025 — Multi-step add/subtraction
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Two-step addition and subtraction word problem / NUM / 1 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `Had {a} apples, got {b}, then gave away {c}. How many left?` |
+| Variables / constraint | `a,b,c: int [0,10]`; `a+b≤20`; `c≤a+b` |
+| Solution / equivalence_policy | `a+b−c`; **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; decimals and commas reject |
+| Verification oracle / instance space | independent two-step arithmetic; 1000/1000 per seed batch; 1,331 ordered triples |
+| Worked examples | `3+4−2→5`; `0+10−0→10`; `10+10−10→10` |
+| Misconception tags | `MISC-OPERATION-ORDER`, `MISC-SUBTRACT-MINUS`, `MISC-BOUNDARY` |
+
 ## G1-NUM-020 — Word problem: subtract change unknown
 
 | Field | Value |
