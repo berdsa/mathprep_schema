@@ -457,3 +457,7 @@
 ## 2026-09-21 — G2-NUM-020 canonical spec
 
 - Added the canonical Grade 2 subtraction-with-multiple-of-ten specification.
+
+## 2026-09-21 — G2-NUM-021 canonical spec
+
+- Added the canonical Grade 2 ten-more-than-number specification.
