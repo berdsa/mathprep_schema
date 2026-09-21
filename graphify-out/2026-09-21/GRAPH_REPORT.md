@@ -1,16 +1,16 @@
 # Graph Report - schema  (2026-09-21)
 
 ## Corpus Check
-- 35 files · ~36,807 words
+- 35 files · ~36,975 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 385 nodes · 491 edges · 34 communities (32 shown, 2 thin omitted)
+- 387 nodes · 493 edges · 34 communities (32 shown, 2 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 14 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `fbbd2853`
+- Built from commit: `6a329b4b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -38,8 +38,8 @@
 - pipeline_test.go
 
 ## God Nodes (most connected - your core abstractions)
-1. `07 — Wave-A Exemplar Task-Type Specs` - 98 edges
-2. `Agent log` - 68 edges
+1. `07 — Wave-A Exemplar Task-Type Specs` - 99 edges
+2. `Agent log` - 69 edges
 3. `Result` - 16 edges
 4. `Validate()` - 14 edges
 5. `02 — Requirements` - 10 edges
@@ -68,11 +68,11 @@
 
 ### Community 0 - "07 — Wave-A Exemplar Task-Type Specs"
 Cohesion: 0.02
-Nodes (98): 07 — Wave-A Exemplar Task-Type Specs, G10-CAL-001 — Basic limit, G10-PRO-001 — Basic single-event probability, G10-PRO-002 — Compound probability, G10-TRG-001 — Trigonometric equation, G11-ALG-001 — Linear system via matrices, G11-FUN-001 — Exponential equation, G11-LOG-001 — Logarithmic equation (+90 more)
+Nodes (99): 07 — Wave-A Exemplar Task-Type Specs, G10-CAL-001 — Basic limit, G10-PRO-001 — Basic single-event probability, G10-PRO-002 — Compound probability, G10-TRG-001 — Trigonometric equation, G11-ALG-001 — Linear system via matrices, G11-FUN-001 — Exponential equation, G11-LOG-001 — Logarithmic equation (+91 more)
 
 ### Community 1 - "Agent log"
 Cohesion: 0.03
-Nodes (68): 2026-09-19 — Phase 0 base DDL, 2026-09-19 — Phase 0 dictionary seeds, 2026-09-19 — Phase 0 forbidden-write probes, 2026-09-19 — Phase 0 idempotency constraints, 2026-09-19 — Phase 0 migration plan, 2026-09-19 — Phase 0 migration verification, 2026-09-19 — Phase 0 service roles and grants, 2026-09-19 — Phase 0 summary (+60 more)
+Nodes (69): 2026-09-19 — Phase 0 base DDL, 2026-09-19 — Phase 0 dictionary seeds, 2026-09-19 — Phase 0 forbidden-write probes, 2026-09-19 — Phase 0 idempotency constraints, 2026-09-19 — Phase 0 migration plan, 2026-09-19 — Phase 0 migration verification, 2026-09-19 — Phase 0 service roles and grants, 2026-09-19 — Phase 0 summary (+61 more)
 
 ### Community 2 - "pipeline.go"
 Cohesion: 0.17
@@ -143,7 +143,7 @@ Cohesion: 0.23
 Nodes (15): TestValidateBool(), TestValidateCanonList(), TestValidateExactIntBoundary(), TestValidateExactIntCorrect(), TestValidateExactIntIncorrect(), TestValidateExactIntUnparseable(), TestValidateExactRat(), TestValidateInterval() (+7 more)
 
 ## Knowledge Gaps
-- **245 isolated node(s):** `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is`, `Source of truth`, `Stack` (+240 more)
+- **247 isolated node(s):** `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is`, `Source of truth`, `Stack` (+242 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -153,8 +153,8 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `ReasonCode` connect `pipeline.go` to `constants.go`?**
   _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **What connects `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is` to the rest of the system?**
-  _245 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _247 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `07 — Wave-A Exemplar Task-Type Specs` be split into smaller, more focused modules?**
-  _Cohesion score 0.020202020202020204 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.02 - nodes in this community are weakly interconnected._
 - **Should `Agent log` be split into smaller, more focused modules?**
-  _Cohesion score 0.028985507246376812 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.02857142857142857 - nodes in this community are weakly interconnected._
