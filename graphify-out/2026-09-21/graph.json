@@ -5718,7 +5718,7 @@
       "label": "Grade 3 early number contracts",
       "file_type": "document",
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
-      "source_location": "L3192",
+      "source_location": "L3195",
       "_origin": "ast",
       "id": "docs_srd_07_task_type_specs_exemplars_grade_3_early_number_contracts",
       "community": 0,
@@ -5729,7 +5729,7 @@
       "label": "Grade 2 early number and measurement contracts",
       "file_type": "document",
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
-      "source_location": "L3205",
+      "source_location": "L3208",
       "_origin": "ast",
       "id": "docs_srd_07_task_type_specs_exemplars_grade_2_early_number_and_measurement_contracts",
       "community": 0,
@@ -13127,7 +13127,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
-      "source_location": "L3205",
+      "source_location": "L3208",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_srd_07_task_type_specs_exemplars_07_wave_a_exemplar_task_type_specs",
@@ -13138,7 +13138,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
-      "source_location": "L3192",
+      "source_location": "L3195",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_srd_07_task_type_specs_exemplars_07_wave_a_exemplar_task_type_specs",
@@ -13532,5 +13532,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "bea00461320248b359cc509b2b6309c94b789f4c"
+  "built_at_commit": "0dd4a68ded380271194c6cc2b7d2e096f8db52e6"
 }

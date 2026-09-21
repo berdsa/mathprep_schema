@@ -3178,6 +3178,15 @@
 | G11-VEC-001 | Display two 2D vectors and ask for their dot product. | EXACT-INT |
 | G11-MAT-002 | Display a 2×2 matrix and ask for its determinant. | EXACT-INT |
 
+| U-CAL-008 | Directional derivative of visible `x²+y²` data | TOL |
+| U-CAL-009 | Constant triple integral over a visible box | TOL |
+| U-CAL-010 | Constant-vector line integral over a visible segment | TOL |
+| U-CAL-011 | Constant upward surface flux over a visible rectangle | TOL |
+| U-CAL-012 | Green theorem for visible `P=0,Q=kx` rectangle | TOL |
+| U-CAL-013 | Stokes theorem for visible circular field and radius | TOL |
+| U-CAL-014 | Divergence theorem for visible linear field and box | TOL |
+| U-CAL-015 | Radius of convergence of visible geometric power series | TOL |
+
 | U-ALG-002 | Display visible polar `(r, θ)` and ask for Cartesian `(x,y)` | TUPLE |
 | U-ALG-003 | Display `x=t, y=t²` and ask for the eliminated equation | CANON |
 
