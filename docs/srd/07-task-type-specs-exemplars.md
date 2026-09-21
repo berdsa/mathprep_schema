@@ -861,6 +861,21 @@
 | Worked examples | `four equal sides and four right angles→square` |
 | Misconception tags | `MISC-SHAPE-SIDES`, `MISC-SQUARE-RECTANGLE` |
 
+## G1-GEO-009 — Total sides of two shapes
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Add the sides of two shapes / GEO / 1 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `How many sides do a triangle and square have altogether?` |
+| Variables / constraint | fixed triangle (3 sides) and square (4 sides) |
+| Solution / equivalence_policy | `7`; **STRICT-FORM** EXACT-INT |
+| Input contract | shared exact-integer contract |
+| Verification oracle / instance space | fixed answer; 1000/1000 per seed batch |
+| Worked examples | `3+4→7` |
+| Misconception tags | `MISC-ADD-SIDES`, `MISC-SHAPE-SIDES` |
+
 ## G1-STA-002 — Data difference
 
 | Field | Value |

@@ -409,3 +409,7 @@
 ## 2026-09-21 — G1-GEO-008 canonical spec
 
 - Resolved the catalog FLAG by adding the four-right-angles condition, making `square` the unique answer.
+
+## 2026-09-21 — G1-GEO-009 canonical spec
+
+- Added the canonical G1 total-sides specification for a triangle and square.
