@@ -3014,3 +3014,13 @@
 | G7-ALG-013 | Display a linear equation with unequal constant terms and ask whether it has a solution. | BOOL |
 | G7-ALG-014 | Display an identity of the form `a(x+b)=ax+ab` and ask whether every `x` works. | BOOL |
 | G7-ALG-015 | Display a rational-coefficient linear equation and ask for `x`. | EXACT-RAT |
+
+## G7-FUN-003..007 — Function basics
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G7-FUN-003 | Display a relation with either unique inputs or a repeated input with conflicting outputs; ask whether it is a function. | BOOL |
+| G7-FUN-004 | Display `f(x)=ax+b` and an input; ask for the function value. | EXACT-INT |
+| G7-FUN-005 | Display two linear functions and ask which is steeper. | BOOL |
+| G7-FUN-006 | Display `f(x)=ax+b` and ask for its rate of change. | EXACT-INT |
+| G7-FUN-007 | Display `f(x)=ax+b` and ask for its initial value `f(0)`. | EXACT-INT |
