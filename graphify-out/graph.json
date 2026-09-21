@@ -5715,10 +5715,21 @@
       "norm_label": "g10-alg-001,003..005,007..010 \u2014 rational, theorem, radical, variation, and induction contracts"
     },
     {
-      "label": "Grade 2 early number and measurement contracts",
+      "label": "Grade 3 early number contracts",
       "file_type": "document",
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
       "source_location": "L3181",
+      "_origin": "ast",
+      "id": "docs_srd_07_task_type_specs_exemplars_grade_3_early_number_contracts",
+      "community": 0,
+      "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
+      "norm_label": "grade 3 early number contracts"
+    },
+    {
+      "label": "Grade 2 early number and measurement contracts",
+      "file_type": "document",
+      "source_file": "docs/srd/07-task-type-specs-exemplars.md",
+      "source_location": "L3194",
       "_origin": "ast",
       "id": "docs_srd_07_task_type_specs_exemplars_grade_2_early_number_and_measurement_contracts",
       "community": 0,
@@ -13116,11 +13127,22 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/srd/07-task-type-specs-exemplars.md",
-      "source_location": "L3181",
+      "source_location": "L3194",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_srd_07_task_type_specs_exemplars_07_wave_a_exemplar_task_type_specs",
       "target": "docs_srd_07_task_type_specs_exemplars_grade_2_early_number_and_measurement_contracts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/srd/07-task-type-specs-exemplars.md",
+      "source_location": "L3181",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_srd_07_task_type_specs_exemplars_07_wave_a_exemplar_task_type_specs",
+      "target": "docs_srd_07_task_type_specs_exemplars_grade_3_early_number_contracts",
       "confidence_score": 1.0
     },
     {
@@ -13510,5 +13532,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "13769ac1e45643c1bc4875e8170ba43c1223a014"
+  "built_at_commit": "5e908f5452c5bdd72c63c3f14b38b86b04ee5758"
 }

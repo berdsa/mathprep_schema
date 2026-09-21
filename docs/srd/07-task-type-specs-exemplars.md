@@ -3178,6 +3178,19 @@
 | G11-VEC-001 | Display two 2D vectors and ask for their dot product. | EXACT-INT |
 | G11-MAT-002 | Display a 2×2 matrix and ask for its determinant. | EXACT-INT |
 
+## Grade 3 early number contracts
+
+| Type | Prompt and solution | Validation |
+|---|---|---|
+| G3-NUM-001 | Displayed three-digit addends with no digit regrouping; answer `a+b` | EXACT-INT |
+| G3-NUM-004 | Displayed three-digit subtraction with `a≥b`; answer `a-b` | EXACT-INT |
+| G3-NUM-005 | Displayed number plus a multiple of 100; answer sum | EXACT-INT |
+| G3-NUM-008 | `What is 100 less than n?`; answer `n-100` | EXACT-INT |
+| G3-NUM-009 | Display three terms increasing by 5; answer next term | EXACT-INT |
+| G3-NUM-010 | Display three terms increasing by 10; answer next term | EXACT-INT |
+| G3-NUM-012 | Display three terms decreasing by 5; answer next term | EXACT-INT |
+| G3-NUM-014 | Display `a×b=c` and ask `b×a`; answer `a×b` | EXACT-INT |
+
 ## Grade 2 early number and measurement contracts
 
 The following catalog types use CODE generation, `ru-KZ` plaintext rendering, strict-form validation, and `1.0.0-draft`. Every displayed operand is persisted in `Params` and the answer is frozen in the instance.
