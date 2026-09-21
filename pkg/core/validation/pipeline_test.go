@@ -78,6 +78,15 @@ func TestValidateBool(t *testing.T) {
 	}
 }
 
+func TestValidateClockTime(t *testing.T) {
+	if got := ValidateClockTime(" 5:30 ", "5:30"); got.Verdict != core.VerdictCorrect {
+		t.Fatalf("got %+v", got)
+	}
+	if got := ValidateClockTime("5:60", "5:60"); got.Verdict != core.VerdictUnparseable {
+		t.Fatalf("got %+v", got)
+	}
+}
+
 func TestValidateCanonList(t *testing.T) {
 	if got := ValidateCanonList("3, 1, 2", "1 2 3"); got.Verdict != core.VerdictCorrect {
 		t.Fatalf("got %+v", got)

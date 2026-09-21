@@ -40,6 +40,9 @@ func Validate(method core.ValidationMethod, raw, correctAnswer string) Result {
 		return ValidateBool(raw, correctAnswer)
 	case core.ValidationMethodCanon:
 		if strings.Contains(correctAnswer, ":") {
+			if clockTimePattern.MatchString(correctAnswer) {
+				return ValidateClockTime(raw, correctAnswer)
+			}
 			return ValidateRatio(raw, correctAnswer)
 		}
 		if strings.Contains(correctAnswer, "∞") {
@@ -59,6 +62,27 @@ func Validate(method core.ValidationMethod, raw, correctAnswer string) Result {
 	default:
 		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
 	}
+}
+
+var clockTimePattern = regexp.MustCompile(`^[0-9]{1,2}:[0-9]{2}$`)
+
+// ValidateClockTime validates canonical H:MM clock answers used by elementary
+// time tasks. It is deliberately distinct from ratio validation, which also
+// uses a colon but has different semantics.
+func ValidateClockTime(raw, correctAnswer string) Result {
+	got := strings.TrimSpace(raw)
+	if !clockTimePattern.MatchString(got) || !clockTimePattern.MatchString(correctAnswer) {
+		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
+	}
+	parts := strings.Split(got, ":")
+	minutes, _ := strconv.Atoi(parts[1])
+	if minutes > 59 {
+		return Result{Verdict: core.VerdictUnparseable, ReasonCode: core.ReasonWrongFormat, Stage: StageParse, CorrectAnswer: correctAnswer}
+	}
+	if got != correctAnswer {
+		return Result{Verdict: core.VerdictIncorrect, ReasonCode: core.ReasonValueMismatch, Normalized: got, Stage: StageVerdict, CorrectAnswer: correctAnswer}
+	}
+	return Result{Verdict: core.VerdictCorrect, ReasonCode: core.ReasonOK, Normalized: got, Stage: StageVerdict, CorrectAnswer: correctAnswer}
 }
 
 var rightOpenInterval = regexp.MustCompile(`^\s*\(\s*(-?[0-9]+)\s*,\s*∞\s*\)\s*$`)

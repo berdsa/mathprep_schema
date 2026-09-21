@@ -711,6 +711,21 @@
 | Worked examples | `1:00+1h→120`; `9:00+3h→720`; `11:00+1h→720` |
 | Misconception tags | `MISC-TIME-UNIT`, `MISC-OFF-BY-60`, `MISC-BOUNDARY` |
 
+## G1-MEA-006 — Time plus half-hour
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Add thirty minutes to a clock time / MEA / 1 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `It is {h}:00. What time is 30 minutes later? Use H:MM.` |
+| Variables / constraint | `h∈[1,11]` |
+| Solution / equivalence_policy | `{h}:30`; **STRICT-FORM** clock-time canonical validator |
+| Input contract | canonical `H:MM` with minutes `00..59` |
+| Verification oracle / instance space | independent clock addition; 1000/1000 per seed batch; 11 starting hours |
+| Worked examples | `1:00→1:30`; `5:00→5:30`; `11:00→11:30` |
+| Misconception tags | `MISC-TIME-UNIT`, `MISC-OFF-BY-30`, `MISC-CLOCK-FORMAT` |
+
 ## G1-NUM-020 — Word problem: subtract change unknown
 
 | Field | Value |
