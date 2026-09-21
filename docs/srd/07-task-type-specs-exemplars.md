@@ -3093,3 +3093,7 @@
 | G8-GEO-005 | Display a point and translation vector; ask for the image point. | TUPLE |
 | G8-GEO-006 | Display a point and ask for its x-axis reflection. | TUPLE |
 | G8-GEO-007 | Display a point and ask for its 90° counterclockwise rotation. | TUPLE |
+| G8-ALG-010 | Display an absolute-value equation and ask for its solution set. | SET |
+| G8-ALG-011 | Display an absolute-value inequality and require canonical interval output. | CANON |
+| G8-ALG-012 | Display two terms with a common factor and require canonical GCF factorization. | CANON |
+| G8-ALG-013 | Display a difference of squares and require canonical factorization. | CANON |
