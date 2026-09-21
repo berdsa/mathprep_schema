@@ -2729,6 +2729,15 @@
 
 ## G5-MEA-002..007 and G5-STA-001 — Conversions, line plots, and volume
 
+## G5-GEO-001..003 and G5-NUM-010 — Shape properties and distributive property
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G5-GEO-001 | Display shape/category hierarchy question. | BOOL |
+| G5-GEO-002 | Display a fixed shape and ask right-angle count. | EXACT-INT |
+| G5-GEO-003 | Display rectangular-prism dimensions and ask volume. | EXACT-INT |
+| G5-NUM-010 | Display a sum with its GCF and ask factored canonical form. | CANON |
+
 | ID | Generator contract | Answer / validation |
 |---|---|---|
 | G5-MEA-002 | Display metric conversion and both values. | TOL |
