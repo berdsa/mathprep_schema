@@ -393,3 +393,7 @@
 ## 2026-09-21 — G1-GEO-004 canonical spec
 
 - Added the canonical G1 shaded-fraction specification with two allowed denominators and one explicitly shaded part.
+
+## 2026-09-21 — G1-GEO-005 canonical spec
+
+- Added the canonical G1 equal-parts count specification with a fixed answer of four.

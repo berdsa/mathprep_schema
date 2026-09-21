@@ -801,6 +801,21 @@
 | Worked examples | `1 of 2→1/2`; `1 of 4→1/4`; `1 shaded part is shown explicitly` |
 | Misconception tags | `MISC-FRACTION-NUMERATOR`, `MISC-FRACTION-DENOMINATOR`, `MISC-SHADED-COUNT` |
 
+## G1-GEO-005 — Equal parts count
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Count equal parts / GEO / 1 / Understand |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `A shape is split into 4 equal parts. How many parts?` |
+| Variables / constraint | fixed four equal parts |
+| Solution / equivalence_policy | `4`; **STRICT-FORM** EXACT-INT |
+| Input contract | shared exact-integer contract |
+| Verification oracle / instance space | fixed answer; 1000/1000 per seed batch |
+| Worked examples | `4 equal parts→4`; the prompt states the count directly |
+| Misconception tags | `MISC-COUNT-PARTS`, `MISC-FRACTION-DENOMINATOR` |
+
 ## G1-STA-002 — Data difference
 
 | Field | Value |
