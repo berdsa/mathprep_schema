@@ -2753,6 +2753,15 @@
 
 ## G7-FRA-001..004 — Rates and proportional relationships
 
+## G7-DEC-001..004 — Percent error, rates, and multi-step percent arithmetic
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G7-DEC-001 | Display actual and estimated values; ask percent error. | TOL |
+| G7-DEC-002 | Display bill and tip percentage; ask tip amount. | TOL |
+| G7-DEC-003 | Display principal, rate, and years; ask simple interest. | TOL |
+| G7-DEC-004 | Display price, discount, and tax; ask final price. | TOL |
+
 | ID | Generator contract | Answer / validation |
 |---|---|---|
 | G7-FRA-001 | Display fractional distance and time; ask speed. | EXACT-RAT |
