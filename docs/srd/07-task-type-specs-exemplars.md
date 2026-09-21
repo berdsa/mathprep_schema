@@ -1569,3 +1569,18 @@
 | Verification oracle / instance space | independent addition; 1000/1000 per seed batch; 231 ordered `(b,c)` pairs |
 | Worked examples | `?−4=5→9`; `?−0=20→20`; `?−7=7→14` |
 | Misconception tags | `MISC-SUBTRACT-MINUS`, `MISC-UNKNOWN-SIDE`, `MISC-BOUNDARY` |
+
+## G1-NUM-014 — Add three one-digit numbers
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Add three one-digit numbers / NUM / 1 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `{a} + {b} + {c} = ?` |
+| Variables / constraint | `a,b,c: int [0,10]`; `a+b+c≤20` |
+| Solution / equivalence_policy | `a+b+c`; **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; decimals and commas reject |
+| Verification oracle / instance space | independent addition; 1000/1000 per seed batch; 1,111 ordered triples |
+| Worked examples | `1+2+3→6`; `0+10+10→20`; `10+0+0→10` |
+| Misconception tags | `MISC-ADD-FACT`, `MISC-BOUNDARY-OVERFLOW`, `MISC-PLACE-VALUE` |
