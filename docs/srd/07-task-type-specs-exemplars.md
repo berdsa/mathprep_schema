@@ -726,6 +726,21 @@
 | Worked examples | `1:00→1:30`; `5:00→5:30`; `11:00→11:30` |
 | Misconception tags | `MISC-TIME-UNIT`, `MISC-OFF-BY-30`, `MISC-CLOCK-FORMAT` |
 
+## G1-STA-001 — Data total
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Add three category counts / STA / 1 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `Counts: {a} red, {b} blue, {c} green. Total?` |
+| Variables / constraint | `a,b,c: int [0,10]` |
+| Solution / equivalence_policy | `a+b+c`; **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; decimals and commas reject |
+| Verification oracle / instance space | independent total; 1000/1000 per seed batch; 1,331 ordered triples |
+| Worked examples | `2 red+3 blue+4 green→9`; `0+0+0→0`; `10+10+10→30` |
+| Misconception tags | `MISC-ADD-FACT`, `MISC-COUNT-TOTAL`, `MISC-BOUNDARY` |
+
 ## G1-MEA-007 — Time minus half-hour
 
 | Field | Value |
