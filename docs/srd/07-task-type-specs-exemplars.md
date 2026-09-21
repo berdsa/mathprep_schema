@@ -2721,6 +2721,16 @@
 
 ## G5-NUM-004..008 — Expressions and alternating patterns
 
+## G5-NUM-009 and G5-DEC-005..008 — Multi-step arithmetic and decimal place work
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G5-NUM-009 | Display a spend/earn/spend story with all values shown. | EXACT-INT |
+| G5-DEC-005 | Display a thousandths decimal and named place; ask digit. | EXACT-INT |
+| G5-DEC-006 | Display a thousandths decimal; ask canonical words. | CANON |
+| G5-DEC-007 | Display two thousandths decimals and ask comparison. | BOOL |
+| G5-DEC-008 | Display a thousandths decimal and place; ask rounded value. | TOL |
+
 | ID | Generator contract | Answer / validation |
 |---|---|---|
 | G5-NUM-004 | Display bracketed arithmetic with all operands shown. | EXACT-INT |
