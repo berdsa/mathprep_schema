@@ -1554,3 +1554,18 @@
 | Verification oracle | Independently apply the geometric sum formula; two batches of 1000 |
 | Worked examples | `Σ 3(1/2)^n→6`; `Σ 2(−1/3)^n→3/2`; `Σ 9(1/3)^n→27/2` |
 | Misconception tags | `MISC-USE-R-INSTEAD-OF-1-MINUS-R`, `MISC-SIGN-ERROR`, `MISC-STARTING-INDEX` |
+
+## G1-NUM-013 — Missing minuend
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Missing minuend within 20 / NUM / 1 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `? − {b} = {c}` |
+| Variables / constraint | `b,c: int [0,20]`; `b+c≤20`; `a=b+c` |
+| Solution / equivalence_policy | `b+c`; **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; decimals and commas reject |
+| Verification oracle / instance space | independent addition; 1000/1000 per seed batch; 231 ordered `(b,c)` pairs |
+| Worked examples | `?−4=5→9`; `?−0=20→20`; `?−7=7→14` |
+| Misconception tags | `MISC-SUBTRACT-MINUS`, `MISC-UNKNOWN-SIDE`, `MISC-BOUNDARY` |
