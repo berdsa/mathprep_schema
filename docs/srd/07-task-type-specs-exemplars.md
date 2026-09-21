@@ -3174,3 +3174,4 @@
 | G10-FUN-001 | Display linear `f` and `g` and an input; ask for `(f∘g)(x)`. | EXACT-INT |
 | G10-FUN-002 | Display a linear function and ask for its inverse in canonical form. | CANON |
 | G10-FUN-003 | Display a vertical function shift and ask whether it moves upward. | BOOL |
+| G11-TRG-001 | Display `sin(x)=1/2` on `[0°,360°)` and ask for all solutions. | SET |
