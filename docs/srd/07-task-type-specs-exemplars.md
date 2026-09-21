@@ -3102,3 +3102,10 @@
 | G8-ALG-017 | Display a clean-root quadratic and ask for its solution set by completing the square. | SET |
 | G8-ALG-018 | Display vertex form and ask for the vertex tuple. | TUPLE |
 | G8-ALG-019 | Display nested same-base powers and require canonical exponent output. | CANON |
+| G8-ALG-021 | Display a rational expression with a removable factor and require canonical simplification. | CANON |
+| G8-ALG-022 | Display a rational function with explicit excluded values and require canonical simplification. | CANON |
+| G8-ALG-023 | Display a rational equation with nonzero denominators and ask for the exact solution. | EXACT-RAT |
+| G8-FUN-004 | Display a square-root function and ask for its domain in canonical interval form. | CANON |
+| G8-GEO-008 | Display a triangle base and ask for the parallel midsegment length. | EXACT-RAT |
+| G8-GEO-009 | Display a distance to a perpendicular bisector and ask for the equal distance. | EXACT-INT |
+| G8-GEO-010 | Display a median and the centroid ratio and ask for the longer segment. | EXACT-RAT |
