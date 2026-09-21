@@ -365,3 +365,7 @@
 ## 2026-09-21 — G1-MEA-008 canonical spec and BOOL units
 
 - Added the canonical G1 length-unit selection specification and extended the shared BOOL validator with the fixed cm/kg/L vocabulary.
+
+## 2026-09-21 — G1-MEA-009 canonical spec
+
+- Added the canonical G1 true/false measurement-comparison specification; taskgen reuses the shared TRUE/FALSE BOOL validator.
