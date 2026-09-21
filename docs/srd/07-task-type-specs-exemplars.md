@@ -3178,6 +3178,10 @@
 | G11-VEC-001 | Display two 2D vectors and ask for their dot product. | EXACT-INT |
 | G11-MAT-002 | Display a 2×2 matrix and ask for its determinant. | EXACT-INT |
 
+| U-CAL-017 | One bisection midpoint for visible interval and function | TOL |
+| U-CAL-018 | Trapezoidal-rule approximation with visible interval and n | TOL |
+| U-CAL-019 | Lagrange interpolation at a visible x | TOL |
+
 | U-MAT-005 | Dimension of a visible vector span | EXACT-INT |
 | U-MAT-006 | Orthogonality of visible vectors | BOOL |
 | U-MAT-007 | Singular values of a visible diagonal matrix | SET |
