@@ -481,3 +481,7 @@
 ## 2026-09-21 — G2-NUM-026 canonical spec
 
 - Added the canonical Grade 2 skip-count-by-twos specification with all shown terms and the step rendered.
+
+## 2026-09-21 — G2-NUM-027 canonical spec
+
+- Added the canonical Grade 2 place-value construction specification.

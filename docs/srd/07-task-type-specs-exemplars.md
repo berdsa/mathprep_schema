@@ -1083,6 +1083,18 @@
 | Verification oracle / instance space | independent skip-count continuation; 1000/1000 per seed batch |
 | Worked examples | `0,2,4→6`; `100,102,104→106` |
 
+## G2-NUM-027 — Number from tens and ones
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Construct a number from place values / NUM / 2 / Understand |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `What number has {t} tens and {o} ones?` |
+| Variables / constraint | `t∈[1,9]`; `o∈[0,9]` |
+| Solution / equivalence_policy | `10t+o`; **STRICT-FORM** EXACT-INT |
+| Verification oracle / instance space | independent place-value construction; 1000/1000 per seed batch |
+| Worked examples | `2 tens, 3 ones→23`; `9 tens, 0 ones→90` |
+
 ## G1-STA-002 — Data difference
 
 | Field | Value |
