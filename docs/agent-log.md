@@ -305,3 +305,7 @@
 ## 2026-09-21 — G1-NUM-022 canonical spec
 
 - Added the canonical G1 commutative-property specification; taskgen implements the generator and reuses the existing EXACT-INT validator.
+
+## 2026-09-21 — G1-NUM-023 canonical spec
+
+- Added the canonical G1 fact-family subtraction specification; taskgen implements the generator and reuses the existing EXACT-INT validator.
