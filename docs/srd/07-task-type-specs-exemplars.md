@@ -2743,6 +2743,16 @@
 
 ## G6-ALG-006..010 — Inequalities and variable relationships
 
+## G6-GEO-008..012 — Areas, fractional volume, and surface area
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G6-GEO-008 | Display triangle base and height; ask area. | TOL |
+| G6-GEO-009 | Display parallelogram base and height; ask area. | EXACT-INT |
+| G6-GEO-010 | Display rectangle plus triangle dimensions; ask total area. | TOL |
+| G6-GEO-011 | Display fractional prism dimensions; ask volume. | EXACT-RAT |
+| G6-GEO-012 | Display rectangular-prism dimensions; ask surface area. | EXACT-INT |
+
 | ID | Generator contract | Answer / validation |
 |---|---|---|
 | G6-ALG-006 | Display a one-step inequality and ask for solution. | CANON |
