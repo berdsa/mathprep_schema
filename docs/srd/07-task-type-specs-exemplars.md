@@ -3027,3 +3027,5 @@
 | G7-FUN-008 | Display linear and quadratic examples and ask whether each is linear. | BOOL |
 | G7-FUN-009 | Display two points with distinct x-values and ask for the slope. | EXACT-RAT |
 | G7-FUN-010 | Display `ax+by=c` and ask for its slope. | EXACT-RAT |
+| G7-FUN-011 | Display slope and y-intercept and require canonical `y=mx+b` output. | CANON |
+| G7-FUN-012 | Display a point and slope and require canonical `y-y1=m(x-x1)` output. | CANON |
