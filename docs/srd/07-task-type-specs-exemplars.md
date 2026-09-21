@@ -2675,3 +2675,13 @@
 | Variables / constraint | divisors `[2,9]`; exact/remainder relations valid; word-problem total covers amount given |
 | Solution / equivalence_policy | exact integer, tuple, or exact integer as specified; **STRICT-FORM** |
 | Verification oracle / instance space | deterministic division oracle; 1000/1000 per seed batch |
+## G4-NUM-013..018 — Factors and multiplicative patterns
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Factors, multiples, and multiplicative comparison / NUM / 4 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / templates | `plaintext`, `unicode-math`; all numbers, factors, ratios, and requested lists are displayed |
+| Variables / constraint | values satisfy factor, prime, multiple, and comparison bounds |
+| Solution / equivalence_policy | set, canonical list, boolean, or exact integer as specified; **STRICT-FORM** |
+| Verification oracle / instance space | deterministic factor oracle; 1000/1000 per seed batch |
