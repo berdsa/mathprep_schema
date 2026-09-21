@@ -2525,3 +2525,13 @@
 | Variables / constraint | `h∈[1,11]`; the prompt explicitly states morning context |
 | Solution / equivalence_policy | `AM`; **STRICT-FORM** BOOL |
 | Verification oracle / instance space | fixed contextual answer; 1000/1000 per seed batch |
+## G2-STA-001..005 — Data counts and sums
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Data counts and sums / STA / 2 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / templates | `plaintext`, `unicode-math`; every count or line-plot value is displayed |
+| Variables / constraint | counts `[0,50]`; line-plot length `[3,10]`; sum at most 100 |
+| Solution / equivalence_policy | exact integer or category label; **STRICT-FORM** |
+| Verification oracle / instance space | deterministic data oracle; 1000/1000 per seed batch |
