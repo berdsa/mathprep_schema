@@ -999,6 +999,18 @@
 | Verification oracle / instance space | independent addition; 1000/1000 per seed batch |
 | Worked examples | `23+10→33`; `19+80→99` |
 
+## G2-NUM-020 — Subtract multiple of 10
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Subtract a multiple of ten / NUM / 2 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `{a} − {b} = ?` |
+| Variables / constraint | `a∈[10,99]`; `b∈{10,…,90}`; `a≥b` |
+| Solution / equivalence_policy | `a−b`; **STRICT-FORM** EXACT-INT |
+| Verification oracle / instance space | independent subtraction; 1000/1000 per seed batch |
+| Worked examples | `33−10→23`; `99−80→19` |
+
 ## G1-STA-002 — Data difference
 
 | Field | Value |
