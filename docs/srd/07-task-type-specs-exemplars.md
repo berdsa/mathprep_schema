@@ -2741,6 +2741,16 @@
 
 ## G6-ALG-002..005 — Exponents and algebraic expressions
 
+## G6-ALG-006..010 — Inequalities and variable relationships
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G6-ALG-006 | Display a one-step inequality and ask for solution. | CANON |
+| G6-ALG-007 | Display equation and candidate solution; ask whether it satisfies. | BOOL |
+| G6-ALG-008 | Display equation and non-solution candidate; ask whether it satisfies. | BOOL |
+| G6-ALG-009 | Display `y = kx`; ask dependent variable. | BOOL |
+| G6-ALG-010 | Display `y = kx`; ask effect of doubling x. | BOOL |
+
 | ID | Generator contract | Answer / validation |
 |---|---|---|
 | G6-ALG-002 | Display base, exponent, and addend; ask value. | EXACT-INT |
