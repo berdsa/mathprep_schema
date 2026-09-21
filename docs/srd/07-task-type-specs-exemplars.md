@@ -3178,6 +3178,9 @@
 | G11-VEC-001 | Display two 2D vectors and ask for their dot product. | EXACT-INT |
 | G11-MAT-002 | Display a 2×2 matrix and ask for its determinant. | EXACT-INT |
 
+| U-ALG-002 | Display visible polar `(r, θ)` and ask for Cartesian `(x,y)` | TUPLE |
+| U-ALG-003 | Display `x=t, y=t²` and ask for the eliminated equation | CANON |
+
 | G11-STA-001 | Normal probability from visible μ, σ, and x | TOL |
 | G11-STA-002 | z-score from visible x, μ, and σ | TOL |
 | G11-STA-003 | Standard-normal probability from visible z | TOL |
