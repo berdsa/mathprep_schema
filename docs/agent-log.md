@@ -337,3 +337,7 @@
 ## 2026-09-21 — G1-MEA-004 canonical spec
 
 - Added the canonical G1 length-ordering specification; taskgen implements the generator and reuses the existing CANON validator.
+
+## 2026-09-21 — G1-MEA-005 canonical spec
+
+- Added the canonical G1 time-plus-hours specification using the catalog-permitted EXACT-INT-minutes output contract.
