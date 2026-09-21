@@ -2412,3 +2412,26 @@
 | Solution / equivalence_policy | `cube→6`, `sphere→1`, `cylinder→3`, `cone→2`, `rectangular prism→6`; **STRICT-FORM** EXACT-INT |
 | Verification oracle / instance space | independent surface-count lookup; 1000/1000 per seed batch; five solids |
 | Worked examples | `sphere→1`; `cylinder→3`; `cube→6` |
+## G2-GEO-015 — Cube edges
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Cube edge count / GEO / 2 / Remember |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `How many edges does a cube have?` |
+| Variables / constraint | fixed cube |
+| Solution / equivalence_policy | `12`; **STRICT-FORM** EXACT-INT |
+| Verification oracle / instance space | fixed-answer oracle; 1000/1000 per seed batch |
+| Worked examples | every seed→`12` |
+
+## G2-GEO-016 — Cube vertices
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Cube vertex count / GEO / 2 / Remember |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `How many vertices does a cube have?` |
+| Variables / constraint | fixed cube |
+| Solution / equivalence_policy | `8`; **STRICT-FORM** EXACT-INT |
+| Verification oracle / instance space | fixed-answer oracle; 1000/1000 per seed batch |
+| Worked examples | every seed→`8` |

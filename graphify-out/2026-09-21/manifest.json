@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   "docs/agent-log.md": {
-    "mtime": 1789974260.381377,
-    "ast_hash": "d45414857229dfab4c2e8594ee4e5c0b",
+    "mtime": 1789977454.4629445,
+    "ast_hash": "ce12f6c4ee9368154203f3e8c9dfec12",
     "semantic_hash": ""
   },
   "docs/srd/00-conventions.md": {
@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "docs/srd/07-task-type-specs-exemplars.md": {
-    "mtime": 1789974260.3796368,
-    "ast_hash": "df0dab22b3634585f290bf055c5973c2",
+    "mtime": 1789977454.4607565,
+    "ast_hash": "22be9e124be6e322482829bb7fb14b86",
     "semantic_hash": ""
   },
   "docs/srd/08-developer-backlog.md": {
@@ -125,8 +125,8 @@
     "semantic_hash": "b6d459a3cbb64c45429c12170290cad1"
   },
   "pkg/core/validation/pipeline.go": {
-    "mtime": 1789973267.232407,
-    "ast_hash": "7eef2e18f07ea501d90621d11a440eec",
+    "mtime": 1789977427.8189857,
+    "ast_hash": "5002f1ef774e17ebbe871b8e58d839c0",
     "semantic_hash": ""
   },
   "pkg/core/validation/pipeline_test.go": {
