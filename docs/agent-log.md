@@ -377,3 +377,7 @@
 ## 2026-09-21 — G1-STA-004 canonical spec
 
 - Added the canonical G1 pet-count total specification; taskgen implements the generator and reuses the existing EXACT-INT validator.
+
+## 2026-09-21 — G1-GEO-001 canonical spec and BOOL dimensions
+
+- Added the canonical G1 2D/3D classification specification and extended the shared BOOL validator with the fixed 2D/3D vocabulary.
