@@ -2717,6 +2717,17 @@
 
 ## G4-GEO-001..007 — Lines, angles, triangles, quadrilaterals, and symmetry
 
+## G5-FRA-001..002, G5-DEC-002..004, G5-NUM-003 — First Grade 5 arithmetic contracts
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G5-FRA-001 | Display two fractions in an add word problem. | EXACT-RAT |
+| G5-FRA-002 | Display two fractions in a subtract word problem. | EXACT-RAT |
+| G5-DEC-002 | Display `a/100` and ask for decimal notation. | TOL |
+| G5-DEC-003 | Display two hundredths decimals and ask comparison. | BOOL |
+| G5-DEC-004 | Display a tenths fraction and its decimal and ask whether equal. | BOOL |
+| G5-NUM-003 | Display a parenthesized arithmetic expression and ask its value. | EXACT-INT |
+
 | ID | Generator contract | Answer / validation |
 |---|---|---|
 | G4-GEO-001 | Display line/ray/segment and ask endpoint count. | EXACT-INT |
