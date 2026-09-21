@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   "docs/agent-log.md": {
-    "mtime": 1789971883.5296383,
-    "ast_hash": "32464bc7e3d8b36e15e21612d9cfff96",
+    "mtime": 1789972030.143346,
+    "ast_hash": "1333655a706c899f159c2018ddc714c7",
     "semantic_hash": ""
   },
   "docs/srd/00-conventions.md": {
@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "docs/srd/07-task-type-specs-exemplars.md": {
-    "mtime": 1789971974.119477,
-    "ast_hash": "9ae31bd8c6658191b9b43372a6fb88fd",
+    "mtime": 1789972150.477236,
+    "ast_hash": "3b8c5a1bff6149ccc7a6b9eac67d17fe",
     "semantic_hash": ""
   },
   "docs/srd/08-developer-backlog.md": {
@@ -125,13 +125,13 @@
     "semantic_hash": "b6d459a3cbb64c45429c12170290cad1"
   },
   "pkg/core/validation/pipeline.go": {
-    "mtime": 1789971449.5914626,
-    "ast_hash": "1cbdd38f562662b9176faee4b9630529",
+    "mtime": 1789972096.5689123,
+    "ast_hash": "0f5f0db99372e771497c8b89c10caa25",
     "semantic_hash": ""
   },
   "pkg/core/validation/pipeline_test.go": {
-    "mtime": 1789971449.5929937,
-    "ast_hash": "51f7a7c00c2ecb95746abdde9cbe0a1d",
+    "mtime": 1789972096.5694013,
+    "ast_hash": "37ed142dd0399495cb8a4d7e26641255",
     "semantic_hash": ""
   },
   "migrations/000005_task_type_grade_band.down.sql": {
