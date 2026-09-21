@@ -2685,3 +2685,13 @@
 | Variables / constraint | values satisfy factor, prime, multiple, and comparison bounds |
 | Solution / equivalence_policy | set, canonical list, boolean, or exact integer as specified; **STRICT-FORM** |
 | Verification oracle / instance space | deterministic factor oracle; 1000/1000 per seed batch |
+## G4-NUM-019..022 — Operations and comparisons
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Order of operations and comparisons / NUM / 4 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / templates | `plaintext`, `unicode-math`; all operands, operations, and comparison choices are displayed |
+| Variables / constraint | values satisfy catalog ranges and valid missing-operation construction |
+| Solution / equivalence_policy | exact integer or BOOL label as specified; **STRICT-FORM** |
+| Verification oracle / instance space | deterministic operations oracle; 1000/1000 per seed batch |
