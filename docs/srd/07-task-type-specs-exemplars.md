@@ -3178,6 +3178,11 @@
 | G11-VEC-001 | Display two 2D vectors and ask for their dot product. | EXACT-INT |
 | G11-MAT-002 | Display a 2×2 matrix and ask for its determinant. | EXACT-INT |
 
+| U-CAL-023 | Analytic-function recognition for visible `f(z)=z²` | BOOL |
+| U-CAL-024 | Uniform-continuity recognition for visible `f(x)=x²` on ℝ | BOOL |
+| U-CAL-025 | Riemann-integrability recognition for a visible step function | BOOL |
+| U-CAL-026 | Metric recognition for visible absolute distance | BOOL |
+
 | U-CAL-021 | Residue-theorem contour integral with visible residue | TUPLE |
 | U-CAL-022 | Contour integral of `1/z` on a visible circle | TUPLE |
 
