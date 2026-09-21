@@ -345,3 +345,7 @@
 ## 2026-09-21 — G1-MEA-006 canonical spec and clock validation
 
 - Added the canonical G1 time-plus-half-hour specification and shared canonical H:MM validation, keeping clock times distinct from ratios.
+
+## 2026-09-21 — G1-MEA-007 canonical spec
+
+- Added the canonical G1 time-minus-half-hour specification; taskgen reuses the shared clock-time canonical validator.
