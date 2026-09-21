@@ -2555,3 +2555,13 @@
 | Variables / constraint | listed solids and shapes; grid dimensions `[2,6]` with total at most 36 |
 | Solution / equivalence_policy | exact integer or BOOL label as specified; **STRICT-FORM** |
 | Verification oracle / instance space | deterministic geometry oracle; 1000/1000 per seed batch |
+## G2-GEO-023..031 — Fractions and shape properties
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Elementary fractions and shape properties / GEO / 2 / Understand |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / templates | `plaintext`, `unicode-math`; partitions, shapes, and requested quantities are explicit |
+| Variables / constraint | fixed fractions; shaded denominator in `{2,3,4}`; rows `[2,6]` and divisible totals |
+| Solution / equivalence_policy | exact rational, integer, or BOOL label as specified; **STRICT-FORM** |
+| Verification oracle / instance space | deterministic fraction/geometry oracle; 1000/1000 per seed batch |
