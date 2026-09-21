@@ -1071,6 +1071,18 @@
 | Verification oracle / instance space | independent skip-count continuation; 1000/1000 per seed batch |
 | Worked examples | `0,5,10→15`; `100,105,110→115` |
 
+## G2-NUM-026 — Skip count by 2s
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Continue counting by twos / NUM / 2 / Understand |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `{start}, {start+2}, {start+4}, ... (add 2 each time). What comes next?` |
+| Variables / constraint | `start∈[0,100]`; next `≤120` |
+| Solution / equivalence_policy | `start+6`; **STRICT-FORM** EXACT-INT |
+| Verification oracle / instance space | independent skip-count continuation; 1000/1000 per seed batch |
+| Worked examples | `0,2,4→6`; `100,102,104→106` |
+
 ## G1-STA-002 — Data difference
 
 | Field | Value |
