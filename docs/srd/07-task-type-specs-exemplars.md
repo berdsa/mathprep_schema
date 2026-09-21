@@ -681,6 +681,21 @@
 | Worked examples | `3 cm vs 4 cm→<`; `5 vs 5→=`; `8 vs 2→>` |
 | Misconception tags | `MISC-COMPARE-SIGN`, `MISC-UNIT-OMISSION`, `MISC-BOUNDARY` |
 
+## G1-MEA-004 — Order lengths
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Order three lengths from shortest to longest / MEA / 1 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `Order {a} cm, {b} cm, and {c} cm from shortest to longest.` |
+| Variables / constraint | `a,b,c: distinct int [1,20]` |
+| Solution / equivalence_policy | ascending canonical sequence; **STRICT-FORM** |
+| Input contract | canonical integer list, shared CANON validator |
+| Verification oracle / instance space | independent sort; 1000/1000 per seed batch; 6,840 ordered triples |
+| Worked examples | `3,1,2→1 2 3`; `20,5,12→5 12 20`; `7,9,4→4 7 9` |
+| Misconception tags | `MISC-ORDER-DIRECTION`, `MISC-DUPLICATE`, `MISC-UNIT-OMISSION` |
+
 ## G1-NUM-020 — Word problem: subtract change unknown
 
 | Field | Value |
