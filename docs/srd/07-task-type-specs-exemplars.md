@@ -741,6 +741,21 @@
 | Worked examples | `2 red+3 blue+4 green→9`; `0+0+0→0`; `10+10+10→30` |
 | Misconception tags | `MISC-ADD-FACT`, `MISC-COUNT-TOTAL`, `MISC-BOUNDARY` |
 
+## G1-STA-002 — Data difference
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Find the difference between category counts / STA / 1 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `Counts: {a} red, {b} blue. How many more red?` |
+| Variables / constraint | `a,b: int [0,10]`; `a≥b` |
+| Solution / equivalence_policy | `a−b`; **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; decimals and commas reject |
+| Verification oracle / instance space | independent difference; 1000/1000 per seed batch; 66 ordered pairs |
+| Worked examples | `8 red−3 blue→5`; `0−0→0`; `10−4→6` |
+| Misconception tags | `MISC-SUBTRACT-MINUS`, `MISC-COUNT-DIFFERENCE`, `MISC-BOUNDARY` |
+
 ## G1-MEA-007 — Time minus half-hour
 
 | Field | Value |
