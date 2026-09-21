@@ -269,3 +269,7 @@
 ## 2026-09-21 — G1-NUM-013 canonical spec
 
 - Added the canonical G1 missing-minuend specification; taskgen implements the generator and reuses the existing EXACT-INT validator.
+
+## 2026-09-21 — G1-NUM-014 canonical spec
+
+- Added the canonical G1 three-addend specification; taskgen implements the generator and reuses the existing EXACT-INT validator.
