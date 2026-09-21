@@ -2739,6 +2739,15 @@
 
 ## G6-DEC-006..007, G6-NUM-005..006, G6-FRA-010..011, G6-GEO-007 — Signed numbers and rational comparison
 
+## G6-ALG-002..005 — Exponents and algebraic expressions
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G6-ALG-002 | Display base, exponent, and addend; ask value. | EXACT-INT |
+| G6-ALG-003 | Display verbal expression request with all constants shown. | CANON |
+| G6-ALG-004 | Display distributive-equivalence statement. | BOOL |
+| G6-ALG-005 | Display distributive expression and ask simplified form. | CANON |
+
 | ID | Generator contract | Answer / validation |
 |---|---|---|
 | G6-DEC-006 | Display decimal addition/subtraction with operands shown. | TOL |
