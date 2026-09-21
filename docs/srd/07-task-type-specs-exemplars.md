@@ -2475,3 +2475,13 @@
 | Variables / constraint | values in `[0,100]`; generated sums satisfy catalog bounds |
 | Solution / equivalence_policy | exact result; **STRICT-FORM** EXACT-INT |
 | Verification oracle / instance space | deterministic arithmetic oracle; 1000/1000 per seed batch |
+## G2-NUM-052..056 — Place value
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Place value and expanded form / NUM / 2 / Understand |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / templates | `plaintext`, `unicode-math`; each displayed number/place is explicit |
+| Variables / constraint | three-digit values `[100,999]` and valid hundreds/tens/ones decomposition |
+| Solution / equivalence_policy | tuple, integer, canonical expanded form as specified; **STRICT-FORM** |
+| Verification oracle / instance space | deterministic place-value oracle; 1000/1000 per seed batch |
