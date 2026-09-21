@@ -1059,6 +1059,18 @@
 | Verification oracle / instance space | independent skip-count continuation; 1000/1000 per seed batch |
 | Worked examples | `0,10,20→30`; `90,100,110→120` |
 
+## G2-NUM-025 — Skip count by 5s
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Continue counting by fives / NUM / 2 / Understand |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `{start}, {start+5}, {start+10}, ... (add 5 each time). What comes next?` |
+| Variables / constraint | `start∈[0,100]`; next `≤120` |
+| Solution / equivalence_policy | `start+15`; **STRICT-FORM** EXACT-INT |
+| Verification oracle / instance space | independent skip-count continuation; 1000/1000 per seed batch |
+| Worked examples | `0,5,10→15`; `100,105,110→115` |
+
 ## G1-STA-002 — Data difference
 
 | Field | Value |
