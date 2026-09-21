@@ -2747,6 +2747,17 @@
 
 ## G6-GEO-013..015 and G6-STA-001 — Prisms, nets, coordinate geometry, and statistical questions
 
+## G6-FRA-012..015 and G6-NUM-007..008 — Signed rational operations
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G6-FRA-012 | Display signed fractions and add. | EXACT-RAT |
+| G6-FRA-013 | Display signed fractions and multiply. | EXACT-RAT |
+| G6-FRA-014 | Display temperature and drop; ask new temperature. | EXACT-INT |
+| G6-NUM-007 | Display two integers and ask absolute difference. | EXACT-INT |
+| G6-FRA-015 | Display fraction and ask additive inverse. | EXACT-RAT |
+| G6-NUM-008 | Display commutative-property statement. | BOOL |
+
 | ID | Generator contract | Answer / validation |
 |---|---|---|
 | G6-GEO-013 | Display triangular-prism dimensions and ask surface area. | TOL |
