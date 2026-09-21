@@ -2751,6 +2751,15 @@
 
 ## G7-STA-001..002 and G7-STA-004..006 — Statistical summaries and displays
 
+## G7-FRA-001..004 — Rates and proportional relationships
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G7-FRA-001 | Display fractional distance and time; ask speed. | EXACT-RAT |
+| G7-FRA-002 | Display proportional equation and ask whether proportional. | BOOL |
+| G7-FRA-003 | Display `y=kx` values and ask constant `k`. | EXACT-RAT |
+| G7-FRA-004 | Display proportional table and ask classification. | BOOL |
+
 | ID | Generator contract | Answer / validation |
 |---|---|---|
 | G7-STA-001 | Display sorted data and ask IQR. | TOL |
