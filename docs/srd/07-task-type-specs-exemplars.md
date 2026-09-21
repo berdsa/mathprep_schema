@@ -1107,6 +1107,18 @@
 | Verification oracle / instance space | independent expanded-form conversion; 1000/1000 per seed batch |
 | Worked examples | `20+3→23`; `90+0→90` |
 
+## G2-NUM-029 — Missing middle in count
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Complete a counting sequence / NUM / 2 / Understand |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `Fill blank: {n}, ?, {n+2}` |
+| Variables / constraint | `n∈[0,118]` |
+| Solution / equivalence_policy | `n+1`; **STRICT-FORM** EXACT-INT |
+| Verification oracle / instance space | independent sequence continuation; 1000/1000 per seed batch |
+| Worked examples | `0,?,2→1`; `118,?,120→119` |
+
 ## G1-STA-002 — Data difference
 
 | Field | Value |

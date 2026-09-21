@@ -489,3 +489,7 @@
 ## 2026-09-21 — G2-NUM-028 canonical spec
 
 - Added the canonical Grade 2 expanded-form conversion specification.
+
+## 2026-09-21 — G2-NUM-029 canonical spec
+
+- Added the canonical Grade 2 missing-middle sequence specification.
