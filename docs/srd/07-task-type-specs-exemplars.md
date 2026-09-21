@@ -2400,3 +2400,15 @@
 | Solution / equivalence_policy | shape label; **STRICT-FORM** BOOL |
 | Verification oracle / instance space | independent side-count lookup; 1000/1000 per seed batch; four unique options |
 | Worked examples | `3→triangle`; `4→square`; `5→pentagon`; `6→hexagon` |
+
+## G2-GEO-014 — 3D faces lookup
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Count solid boundary surfaces / GEO / 2 / Understand |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `Counting all flat and curved boundary surfaces, how many faces does a {solid} have?` |
+| Variables / constraint | solid∈{cube,sphere,cylinder,cone,rectangular prism}; curved surfaces count as faces |
+| Solution / equivalence_policy | `cube→6`, `sphere→1`, `cylinder→3`, `cone→2`, `rectangular prism→6`; **STRICT-FORM** EXACT-INT |
+| Verification oracle / instance space | independent surface-count lookup; 1000/1000 per seed batch; five solids |
+| Worked examples | `sphere→1`; `cylinder→3`; `cube→6` |

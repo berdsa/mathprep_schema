@@ -508,3 +508,7 @@
 ## 2026-09-21 — G2-GEO-013 canonical spec
 
 - Resolved the nonunique-options FLAG by removing rectangle, and extended shared BOOL labels for the unique shape options.
+
+## 2026-09-21 — G2-GEO-014 canonical spec
+
+- Resolved the face-count FLAG by explicitly counting all flat and curved boundary surfaces.
