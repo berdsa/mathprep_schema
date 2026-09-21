@@ -361,3 +361,7 @@
 ## 2026-09-21 — G1-STA-003 canonical spec and BOOL labels
 
 - Added the canonical G1 most-category specification and extended the shared BOOL validator with the fixed red/blue/green category vocabulary.
+
+## 2026-09-21 — G1-MEA-008 canonical spec and BOOL units
+
+- Added the canonical G1 length-unit selection specification and extended the shared BOOL validator with the fixed cm/kg/L vocabulary.
