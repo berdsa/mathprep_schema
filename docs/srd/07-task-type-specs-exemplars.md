@@ -2707,6 +2707,39 @@
 | Verification oracle / instance space | deterministic large-number oracle; 1000/1000 per seed batch |
 ## G4-NUM-027..031 — Large multiplication, division, and estimation
 
+## G4-NUM-032..036 — Large-number comparison and representation
+
+## G4-FRA-001..008 — Fraction equivalence and operations
+
+## G4-MEA-003..010 — Unit conversion and rectangle measurement
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G4-MEA-003 | Display integer meters and ask for centimeters. | EXACT-INT |
+| G4-MEA-004 | Display integer centimeters and ask for meters. | TOL |
+| G4-MEA-005 | Display kilometers and meters walked; ask total meters. | EXACT-INT |
+| G4-MEA-006 | Display start/end clock times; ask elapsed minutes. | EXACT-INT |
+| G4-MEA-007 | Display tank capacity and filled liters; ask remaining capacity. | EXACT-INT |
+| G4-MEA-008 | Display kilograms and grams; ask total grams. | EXACT-INT |
+| G4-MEA-009 | Display rectangle dimensions; ask area. | EXACT-INT |
+| G4-MEA-010 | Display rectangle dimensions; ask perimeter. | EXACT-INT |
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G4-FRA-001 | Display `a/b = ?/c` with `c` a multiple of `b`. | EXACT-INT |
+| G4-FRA-002 | Display two proper fractions with unlike denominators and ask comparison. | BOOL |
+| G4-FRA-003..006 | Display like-denominator fraction or mixed-number addition/subtraction; reduce result. | EXACT-RAT |
+| G4-FRA-007 | Display a proper fraction multiplied by a whole number. | EXACT-RAT |
+| G4-FRA-008 | Display a groups-of-fraction word problem. | EXACT-RAT |
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G4-NUM-032 | Draw `a,b ∈ [0,999999]`; prompt displays both and asks `<`, `>`, or `=`. | BOOL |
+| G4-NUM-033 | Draw four distinct values in `[0,999999]`; prompt displays all four and asks ascending order. | CANON tuple |
+| G4-NUM-034 | Draw `n ∈ [1000,999999]`; prompt displays `n` and asks expanded form, omitting zero place terms. | CANON |
+| G4-NUM-035 | Draw five nonzero place-value terms; prompt displays their sum and asks for the number. | EXACT-INT |
+| G4-NUM-036 | Draw one of four fixed number words; prompt displays the word and asks for digits. | EXACT-INT |
+
 | Field | Value |
 |---|---|
 | Title / domain / grade / Bloom | Large multiplication, division, and estimation / NUM / 4 / Apply |
