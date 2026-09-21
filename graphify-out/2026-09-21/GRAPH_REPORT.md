@@ -1,16 +1,16 @@
 # Graph Report - schema  (2026-09-21)
 
 ## Corpus Check
-- 35 files · ~53,321 words
+- 35 files · ~53,479 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 554 nodes · 664 edges · 33 communities (31 shown, 2 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 15 edges (avg confidence: 0.8)
+- 557 nodes · 673 edges · 33 communities (31 shown, 2 thin omitted)
+- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 18 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `4103cb02`
+- Built from commit: `f20470af`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -40,10 +40,10 @@
 1. `07 — Wave-A Exemplar Task-Type Specs` - 215 edges
 2. `Agent log` - 118 edges
 3. `Result` - 17 edges
-4. `Validate()` - 15 edges
-5. `02 — Requirements` - 10 edges
-6. `task_type` - 9 edges
-7. `ValidateExactInt()` - 9 edges
+4. `Validate()` - 16 edges
+5. `ValidateExactInt()` - 11 edges
+6. `02 — Requirements` - 10 edges
+7. `task_type` - 9 edges
 8. `00 — Conventions` - 9 edges
 9. `Math Task Type Catalog — Grade 1 to University` - 9 edges
 10. `ReasonCode` - 8 edges
@@ -74,8 +74,8 @@ Cohesion: 0.02
 Nodes (118): 2026-09-19 — Phase 0 base DDL, 2026-09-19 — Phase 0 dictionary seeds, 2026-09-19 — Phase 0 forbidden-write probes, 2026-09-19 — Phase 0 idempotency constraints, 2026-09-19 — Phase 0 migration plan, 2026-09-19 — Phase 0 migration verification, 2026-09-19 — Phase 0 service roles and grants, 2026-09-19 — Phase 0 summary (+110 more)
 
 ### Community 2 - "pipeline.go"
-Cohesion: 0.11
-Nodes (49): ReasonCode, CompareExactInt(), flattenNumericValue(), formatNumericValue(), gcd64(), isQuadrantLabel(), isRoman(), joinInts() (+41 more)
+Cohesion: 0.10
+Nodes (52): ReasonCode, CompareExactInt(), flattenNumericValue(), formatNumericValue(), gcd64(), isQuadrantLabel(), isRoman(), joinInts() (+44 more)
 
 ### Community 3 - "constants.go"
 Cohesion: 0.16
@@ -147,6 +147,8 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `ReasonCode` connect `pipeline.go` to `constants.go`?**
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
+- **Are the 2 inferred relationships involving `Validate()` (e.g. with `TestValidateCanonStrictForm()` and `TestValidateMatrix()`) actually correct?**
+  _`Validate()` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is` to the rest of the system?**
   _412 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `07 — Wave-A Exemplar Task-Type Specs` be split into smaller, more focused modules?**
@@ -154,4 +156,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `Agent log` be split into smaller, more focused modules?**
   _Cohesion score 0.01680672268907563 - nodes in this community are weakly interconnected._
 - **Should `pipeline.go` be split into smaller, more focused modules?**
-  _Cohesion score 0.10823529411764705 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.10272536687631027 - nodes in this community are weakly interconnected._

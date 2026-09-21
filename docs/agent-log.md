@@ -512,3 +512,7 @@
 ## 2026-09-21 — G2-GEO-014 canonical spec
 
 - Resolved the face-count FLAG by explicitly counting all flat and curved boundary surfaces.
+
+## 2026-09-21 — Taskgen student-read grant
+
+- Added additive migration `000008_grant_taskgen_student_read` granting `taskgen_svc` read access to `students`, allowing taskgen to validate an incoming student foreign key before it writes a generation request.

@@ -30,6 +30,8 @@
   "28": "000005_task_type_grade_band.up.sql",
   "29": "github.com/berdsa/mathprep_schema",
   "30": "000006_taskgen_task_type_reconciliation.up.sql",
+  "31": "000008_grant_taskgen_student_read.down.sql",
   "32": "000007_task_type_catalog_relabel.down.sql",
-  "33": "000007_task_type_catalog_relabel.up.sql"
+  "33": "000007_task_type_catalog_relabel.up.sql",
+  "34": "000008_grant_taskgen_student_read.up.sql"
 }

@@ -1,16 +1,16 @@
 # Graph Report - schema  (2026-09-21)
 
 ## Corpus Check
-- 35 files · ~53,479 words
+- 37 files · ~53,523 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 557 nodes · 673 edges · 33 communities (31 shown, 2 thin omitted)
+- 560 nodes · 674 edges · 35 communities (33 shown, 2 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 18 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `f20470af`
+- Built from commit: `dbb46ca7`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -38,7 +38,7 @@
 
 ## God Nodes (most connected - your core abstractions)
 1. `07 — Wave-A Exemplar Task-Type Specs` - 215 edges
-2. `Agent log` - 118 edges
+2. `Agent log` - 119 edges
 3. `Result` - 17 edges
 4. `Validate()` - 16 edges
 5. `ValidateExactInt()` - 11 edges
@@ -63,7 +63,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (33 total, 2 thin omitted)
+## Communities (35 total, 2 thin omitted)
 
 ### Community 0 - "07 — Wave-A Exemplar Task-Type Specs"
 Cohesion: 0.01
@@ -71,7 +71,7 @@ Nodes (215): 07 — Wave-A Exemplar Task-Type Specs, G10-ALG-001,003..005,007..0
 
 ### Community 1 - "Agent log"
 Cohesion: 0.02
-Nodes (118): 2026-09-19 — Phase 0 base DDL, 2026-09-19 — Phase 0 dictionary seeds, 2026-09-19 — Phase 0 forbidden-write probes, 2026-09-19 — Phase 0 idempotency constraints, 2026-09-19 — Phase 0 migration plan, 2026-09-19 — Phase 0 migration verification, 2026-09-19 — Phase 0 service roles and grants, 2026-09-19 — Phase 0 summary (+110 more)
+Nodes (119): 2026-09-19 — Phase 0 base DDL, 2026-09-19 — Phase 0 dictionary seeds, 2026-09-19 — Phase 0 forbidden-write probes, 2026-09-19 — Phase 0 idempotency constraints, 2026-09-19 — Phase 0 migration plan, 2026-09-19 — Phase 0 migration verification, 2026-09-19 — Phase 0 service roles and grants, 2026-09-19 — Phase 0 summary (+111 more)
 
 ### Community 2 - "pipeline.go"
 Cohesion: 0.10
@@ -138,7 +138,7 @@ Cohesion: 0.50
 Nodes (3): 00 — Индекс артефактов трека `math-task-catalog`, Реестр допущений и открытых вопросов — сводный, обновлён, Реестр репозиториев (введён этим ходом, см. ADR-006)
 
 ## Knowledge Gaps
-- **412 isolated node(s):** `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is`, `Source of truth`, `Stack` (+407 more)
+- **413 isolated node(s):** `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is`, `Source of truth`, `Stack` (+408 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -150,10 +150,10 @@ _Questions this graph is uniquely positioned to answer:_
 - **Are the 2 inferred relationships involving `Validate()` (e.g. with `TestValidateCanonStrictForm()` and `TestValidateMatrix()`) actually correct?**
   _`Validate()` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is` to the rest of the system?**
-  _412 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _413 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `07 — Wave-A Exemplar Task-Type Specs` be split into smaller, more focused modules?**
   _Cohesion score 0.009259259259259259 - nodes in this community are weakly interconnected._
 - **Should `Agent log` be split into smaller, more focused modules?**
-  _Cohesion score 0.01680672268907563 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.016666666666666666 - nodes in this community are weakly interconnected._
 - **Should `pipeline.go` be split into smaller, more focused modules?**
   _Cohesion score 0.10272536687631027 - nodes in this community are weakly interconnected._

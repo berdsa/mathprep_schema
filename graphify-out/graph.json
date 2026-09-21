@@ -402,6 +402,28 @@
       "norm_label": "000007_task_type_catalog_relabel.up.sql"
     },
     {
+      "label": "000008_grant_taskgen_student_read.down.sql",
+      "file_type": "code",
+      "source_file": "migrations/000008_grant_taskgen_student_read.down.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000008_grant_taskgen_student_read_down",
+      "community": 31,
+      "community_name": "000008_grant_taskgen_student_read.down.sql",
+      "norm_label": "000008_grant_taskgen_student_read.down.sql"
+    },
+    {
+      "label": "000008_grant_taskgen_student_read.up.sql",
+      "file_type": "code",
+      "source_file": "migrations/000008_grant_taskgen_student_read.up.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000008_grant_taskgen_student_read_up",
+      "community": 34,
+      "community_name": "000008_grant_taskgen_student_read.up.sql",
+      "norm_label": "000008_grant_taskgen_student_read.up.sql"
+    },
+    {
       "label": "constants.go",
       "file_type": "code",
       "source_file": "pkg/core/constants.go",
@@ -2688,6 +2710,17 @@
       "community": 1,
       "community_name": "Agent log",
       "norm_label": "2026-09-21 \u2014 g2-geo-014 canonical spec"
+    },
+    {
+      "label": "2026-09-21 \u2014 Taskgen student-read grant",
+      "file_type": "document",
+      "source_file": "docs/agent-log.md",
+      "source_location": "L516",
+      "_origin": "ast",
+      "id": "docs_agent_log_2026_09_21_taskgen_student_read_grant",
+      "community": 1,
+      "community_name": "Agent log",
+      "norm_label": "2026-09-21 \u2014 taskgen student-read grant"
     },
     {
       "label": "00-conventions.md",
@@ -10382,6 +10415,17 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/agent-log.md",
+      "source_location": "L516",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_agent_log_agent_log",
+      "target": "docs_agent_log_2026_09_21_taskgen_student_read_grant",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/srd/00-conventions.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -13670,5 +13714,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "f20470afcd57c7184732ab14f40b72a8881ab787"
+  "built_at_commit": "dbb46ca7d88b063842c0c92f47b9eceba557fc65"
 }
