@@ -3041,3 +3041,8 @@
 | G7-ALG-023 | Display two linear graphs with a unique intersection and ask for the point. | TUPLE |
 | G7-ALG-024 | Display a substitution system and ask for its ordered-pair solution. | TUPLE |
 | G7-ALG-025 | Display a two-equation elimination system and ask for its ordered-pair solution. | TUPLE |
+| G7-ALG-026 | Display adult/child ticket prices, total tickets, and revenue; ask for the ordered-pair counts. | TUPLE |
+| G7-FUN-013 | Display `f(x)=ax+b` and an input; ask for function notation evaluation. | EXACT-INT |
+| G7-STA-010 | Display five values and ask for their mean. | EXACT-RAT |
+| G7-STA-011 | Display five values and ask for their range. | EXACT-INT |
+| G7-GEO-012 | Display adjacent segment lengths and ask for the total segment length. | EXACT-INT |
