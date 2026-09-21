@@ -2545,3 +2545,13 @@
 | Variables / constraint | fixed unit options; centimeter values `[1,200]` |
 | Solution / equivalence_policy | `kg` or TRUE/FALSE; **STRICT-FORM** BOOL |
 | Verification oracle / instance space | deterministic measurement oracle; 1000/1000 per seed batch |
+## G2-GEO-017..022 — Solid and grid geometry
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Solid properties and unit-square grids / GEO / 2 / Understand |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / templates | `plaintext`, `unicode-math`; solids, options, rows, columns, and units are explicit |
+| Variables / constraint | listed solids and shapes; grid dimensions `[2,6]` with total at most 36 |
+| Solution / equivalence_policy | exact integer or BOOL label as specified; **STRICT-FORM** |
+| Verification oracle / instance space | deterministic geometry oracle; 1000/1000 per seed batch |
