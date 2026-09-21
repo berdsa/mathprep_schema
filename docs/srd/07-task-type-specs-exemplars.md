@@ -2575,3 +2575,13 @@
 | Variables / constraint | values satisfy no-regrouping, regrouping, borrow, and multiple-of-100 bounds |
 | Solution / equivalence_policy | exact integer; **STRICT-FORM** EXACT-INT |
 | Verification oracle / instance space | deterministic arithmetic oracle; 1000/1000 per seed batch |
+## G3-NUM-029..035 — Sequences and multiplication properties
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Sequences and multiplication properties / NUM / 3 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / templates | `plaintext`, `unicode-math`; displayed terms, steps, factors, and operations are explicit |
+| Variables / constraint | sequence bounds and word-problem quantities satisfy the catalog ranges |
+| Solution / equivalence_policy | exact integer; **STRICT-FORM** EXACT-INT |
+| Verification oracle / instance space | deterministic sequence/arithmetic oracle; 1000/1000 per seed batch |
