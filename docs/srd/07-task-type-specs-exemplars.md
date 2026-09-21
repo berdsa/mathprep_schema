@@ -546,6 +546,21 @@
 | Worked examples | `Had 3 apples...now 7→4`; `Had 0...now 20→20`; `Had 12...now 20→8` |
 | Misconception tags | `MISC-SUBTRACT-MINUS`, `MISC-WORD-OPERATION`, `MISC-BOUNDARY` |
 
+## G1-NUM-020 — Word problem: subtract change unknown
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Subtraction word problem, change unknown / NUM / 1 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `Had {a} apples. Gave some away, now {c}. How many given?` |
+| Variables / constraint | `a,c: int [0,20]`; `a≥c`; fixed noun `apples` |
+| Solution / equivalence_policy | `a−c`; **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; decimals and commas reject |
+| Verification oracle / instance space | independent subtraction; 1000/1000 per seed batch; 231 ordered pairs |
+| Worked examples | `Had 9...now 4→5`; `Had 20...now 0→20`; `Had 7...now 7→0` |
+| Misconception tags | `MISC-SUBTRACT-MINUS`, `MISC-WORD-OPERATION`, `MISC-BOUNDARY` |
+
 ## G1-NUM-018 — Word problem: add start unknown
 
 | Field | Value |
