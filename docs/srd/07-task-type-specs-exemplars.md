@@ -2727,6 +2727,18 @@
 
 ## G5-FRA-004..010 — Fraction operations with unlike denominators
 
+## G5-MEA-002..007 and G5-STA-001 — Conversions, line plots, and volume
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G5-MEA-002 | Display metric conversion and both values. | TOL |
+| G5-MEA-003 | Display customary feet-to-inches conversion. | TOL |
+| G5-STA-001 | Display fraction line-plot values and total. | EXACT-RAT |
+| G5-MEA-004 | Display unit-cube box dimensions and volume. | EXACT-INT |
+| G5-MEA-005 | Display two prism dimensions and total volume. | EXACT-INT |
+| G5-MEA-006 | Display two prism dimensions and ask which volume is larger. | BOOL |
+| G5-MEA-007 | Display tank dimensions and fill height; ask volume. | EXACT-INT |
+
 | ID | Generator contract | Answer / validation |
 |---|---|---|
 | G5-FRA-004 | Display two proper fractions with unlike denominators and add. | EXACT-RAT |
