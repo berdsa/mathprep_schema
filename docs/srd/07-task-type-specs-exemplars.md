@@ -876,6 +876,21 @@
 | Worked examples | `3+4→7` |
 | Misconception tags | `MISC-ADD-SIDES`, `MISC-SHAPE-SIDES` |
 
+## G2-NUM-010 — Next number
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Find the next number / NUM / 2 / Understand |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `What number comes after {n}?` |
+| Variables / constraint | `n∈[0,119]` |
+| Solution / equivalence_policy | `n+1`; **STRICT-FORM** EXACT-INT |
+| Input contract | shared exact-integer contract |
+| Verification oracle / instance space | independent successor calculation; 1000/1000 per seed batch |
+| Worked examples | `0→1`; `119→120`; `45→46` |
+| Misconception tags | `MISC-NEXT-NUMBER`, `MISC-BOUNDARY` |
+
 ## G1-STA-002 — Data difference
 
 | Field | Value |

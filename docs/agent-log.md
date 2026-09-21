@@ -413,3 +413,7 @@
 ## 2026-09-21 — G1-GEO-009 canonical spec
 
 - Added the canonical G1 total-sides specification for a triangle and square.
+
+## 2026-09-21 — G2-NUM-010 canonical spec
+
+- Added the canonical Grade 2 successor-number specification.
