@@ -3114,3 +3114,13 @@
 | G8-GEO-013 | Display a 45-45-90 leg and ask for the hypotenuse. | TOL |
 | G8-GEO-014 | Display a 30-60-90 short leg and ask for the hypotenuse. | EXACT-INT |
 | G8-GEO-015 | Display a right-triangle angle and adjacent side and ask for the opposite side. | TOL |
+| G8-GEO-016 | Display parallelogram base and height and ask for area. | EXACT-INT |
+| G8-GEO-017 | Display rhombus diagonals and ask for area. | EXACT-RAT |
+| G8-GEO-018 | Display square side and ask for area. | EXACT-INT |
+| G8-GEO-019 | Display trapezoid bases and height and ask for area. | EXACT-RAT |
+| G8-GEO-020 | Display kite diagonals and ask for area. | EXACT-RAT |
+| G8-GEO-021 | Display polygon side count and ask for interior-angle sum. | EXACT-INT |
+| G8-GEO-022 | Display regular-polygon side count and ask for one interior angle. | TOL |
+| G8-GEO-023 | Display a point and ask for its y-axis reflection. | TUPLE |
+| G8-FUN-005 | Display a square-root function and ask for its domain. | CANON |
+| G8-FUN-006 | Display an absolute-value function and ask for its vertex. | TUPLE |
