@@ -2713,6 +2713,17 @@
 
 ## G4-MEA-003..010 — Unit conversion and rectangle measurement
 
+## G4-MEA-011..015 and G4-STA-001 — Composite measurement, line plot, and angles
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G4-MEA-011 | Display two rectangle dimensions in an L-shape and ask total area. | EXACT-INT |
+| G4-MEA-012 | Display six outer side lengths of an L-shape and ask perimeter. | EXACT-INT |
+| G4-STA-001 | Display a line plot's fraction values and ask their total. | EXACT-RAT |
+| G4-MEA-013 | Display an angle in degrees and ask acute/right/obtuse classification. | BOOL |
+| G4-MEA-014 | Display one angle on a straight line and ask for the unknown. | EXACT-INT |
+| G4-MEA-015 | Display two angles summing with an unknown to 180° and ask for the unknown. | EXACT-INT |
+
 | ID | Generator contract | Answer / validation |
 |---|---|---|
 | G4-MEA-003 | Display integer meters and ask for centimeters. | EXACT-INT |
