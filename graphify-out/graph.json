@@ -1953,6 +1953,17 @@
       "norm_label": "2026-09-21 \u2014 catalog relabel and shared validators"
     },
     {
+      "label": "2026-09-21 \u2014 G1-NUM-013 canonical spec",
+      "file_type": "document",
+      "source_file": "docs/agent-log.md",
+      "source_location": "L269",
+      "_origin": "ast",
+      "id": "docs_agent_log_2026_09_21_g1_num_013_canonical_spec",
+      "community": 1,
+      "community_name": "Agent log",
+      "norm_label": "2026-09-21 \u2014 g1-num-013 canonical spec"
+    },
+    {
       "label": "00-conventions.md",
       "file_type": "document",
       "source_file": "docs/srd/00-conventions.md",
@@ -3612,6 +3623,17 @@
       "community": 0,
       "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
       "norm_label": "g1-num-013 \u2014 missing minuend"
+    },
+    {
+      "label": "G1-NUM-014 \u2014 Add three one-digit numbers",
+      "file_type": "document",
+      "source_file": "docs/srd/07-task-type-specs-exemplars.md",
+      "source_location": "L1573",
+      "_origin": "ast",
+      "id": "docs_srd_07_task_type_specs_exemplars_g1_num_014_add_three_one_digit_numbers",
+      "community": 0,
+      "community_name": "07 \u2014 Wave-A Exemplar Task-Type Specs",
+      "norm_label": "g1-num-014 \u2014 add three one-digit numbers"
     },
     {
       "label": "08-developer-backlog.md",
@@ -7348,6 +7370,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/agent-log.md",
+      "source_location": "L269",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_agent_log_agent_log",
+      "target": "docs_agent_log_2026_09_21_g1_num_013_canonical_spec",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/agent-log.md",
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
@@ -8167,6 +8200,17 @@
       "_origin": "ast",
       "source": "docs_srd_07_task_type_specs_exemplars_07_wave_a_exemplar_task_type_specs",
       "target": "docs_srd_07_task_type_specs_exemplars_g1_num_013_missing_minuend",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/srd/07-task-type-specs-exemplars.md",
+      "source_location": "L1573",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_srd_07_task_type_specs_exemplars_07_wave_a_exemplar_task_type_specs",
+      "target": "docs_srd_07_task_type_specs_exemplars_g1_num_014_add_three_one_digit_numbers",
       "confidence_score": 1.0
     },
     {
@@ -9238,5 +9282,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "dd8a24542991f3e9601a7356f50982659039cac3"
+  "built_at_commit": "f7a29921202b4d19f027195432095263fb71d18f"
 }
