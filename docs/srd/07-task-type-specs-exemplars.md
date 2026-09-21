@@ -3097,3 +3097,8 @@
 | G8-ALG-011 | Display an absolute-value inequality and require canonical interval output. | CANON |
 | G8-ALG-012 | Display two terms with a common factor and require canonical GCF factorization. | CANON |
 | G8-ALG-013 | Display a difference of squares and require canonical factorization. | CANON |
+| G8-ALG-015 | Display a shifted-square equation with an exact integer solution set. | SET |
+| G8-ALG-016 | Display a quadratic with clean integer roots and ask for its solution set. | SET |
+| G8-ALG-017 | Display a clean-root quadratic and ask for its solution set by completing the square. | SET |
+| G8-ALG-018 | Display vertex form and ask for the vertex tuple. | TUPLE |
+| G8-ALG-019 | Display nested same-base powers and require canonical exponent output. | CANON |
