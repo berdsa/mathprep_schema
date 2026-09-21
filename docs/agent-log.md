@@ -373,3 +373,7 @@
 ## 2026-09-21 — G1-MEA-010 canonical spec
 
 - Added the canonical G1 length-difference word-problem specification; taskgen implements the generator and reuses the existing EXACT-INT validator.
+
+## 2026-09-21 — G1-STA-004 canonical spec
+
+- Added the canonical G1 pet-count total specification; taskgen implements the generator and reuses the existing EXACT-INT validator.
