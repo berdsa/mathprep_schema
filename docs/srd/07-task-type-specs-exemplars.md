@@ -2731,6 +2731,17 @@
 
 ## G5-GEO-001..003 and G5-NUM-010 — Shape properties and distributive property
 
+## G6-NUM-003, G6-FRA-002..003, G6-GEO-004..006 — Coordinates and introductory division
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G6-NUM-003 | Display a nonnegative coordinate and ask x-coordinate. | EXACT-INT |
+| G6-FRA-002 | Display unit fraction divided by whole number. | EXACT-RAT |
+| G6-FRA-003 | Display whole divided by unit fraction. | EXACT-INT |
+| G6-GEO-004 | Display a coordinate and ask x+y. | EXACT-INT |
+| G6-GEO-005 | Display a coordinate and ask y-coordinate. | EXACT-INT |
+| G6-GEO-006 | Display two axis-aligned points and ask distance. | EXACT-INT |
+
 | ID | Generator contract | Answer / validation |
 |---|---|---|
 | G5-GEO-001 | Display shape/category hierarchy question. | BOOL |
