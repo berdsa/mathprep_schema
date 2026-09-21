@@ -3145,3 +3145,16 @@
 | G9-FUN-004 | Display arithmetic-sequence first term, difference, and count; ask for the sum. | EXACT-INT |
 | G9-FUN-005 | Display geometric-sequence first term, ratio, and count; ask for the sum. | EXACT-INT |
 | G9-TRG-001 | Display two angles and one side and ask for the other side using the sine law. | TOL |
+
+## G10-PRO-003..009 and G10-STA-001 — Sampling, probability, and expected value
+
+| ID | Generator contract | Answer / validation |
+|---|---|---|
+| G10-PRO-003 | Display a systematic-selection scenario and ask whether it is random sampling. | BOOL |
+| G10-PRO-004 | Display a stratified sampling scenario and ask whether it is representative by design. | BOOL |
+| G10-PRO-005 | Display two fair coin flips and ask for the probability of two heads. | EXACT-RAT |
+| G10-STA-001 | Display theoretical and experimental probabilities and ask for their difference. | TOL |
+| G10-PRO-006 | Display a probability model whose probabilities sum to one and ask whether it is valid. | BOOL |
+| G10-PRO-007 | Display event probabilities and intersection and ask whether events are independent. | BOOL |
+| G10-PRO-008 | Display favorable outcomes and total outcomes and ask for the probability. | EXACT-RAT |
+| G10-PRO-009 | Display a two-outcome payoff model and ask for expected value. | TOL |
