@@ -3178,6 +3178,9 @@
 | G11-VEC-001 | Display two 2D vectors and ask for their dot product. | EXACT-INT |
 | G11-MAT-002 | Display a 2×2 matrix and ask for its determinant. | EXACT-INT |
 
+| U-CAL-021 | Residue-theorem contour integral with visible residue | TUPLE |
+| U-CAL-022 | Contour integral of `1/z` on a visible circle | TUPLE |
+
 | U-STA-007 | ANOVA F-statistic from visible group data | TOL |
 | U-CAL-020 | Complex-number division with visible operands | TUPLE |
 
