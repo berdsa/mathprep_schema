@@ -3178,6 +3178,11 @@
 | G11-VEC-001 | Display two 2D vectors and ask for their dot product. | EXACT-INT |
 | G11-MAT-002 | Display a 2×2 matrix and ask for its determinant. | EXACT-INT |
 
+| U-ALG-004 | Group recognition for visible `Z₅` addition | BOOL |
+| U-ALG-005 | Ring recognition for visible modular operations on `Z₅` | BOOL |
+| U-ALG-006 | Field recognition for visible modular operations on `Z₅` | BOOL |
+| U-ALG-007 | Homomorphism recognition for visible `φ(x)=2x mod 5` | BOOL |
+
 | U-DIS-004 | Choose k objects from visible n | EXACT-INT |
 | U-DIS-005 | Tree edge count from visible vertex count | EXACT-INT |
 | U-DIS-006 | Chinese-remainder solution with visible congruences | EXACT-INT |
