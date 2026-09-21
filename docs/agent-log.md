@@ -385,3 +385,7 @@
 ## 2026-09-21 — G1-GEO-002 canonical spec
 
 - Added the canonical G1 half-fraction specification; taskgen implements the fixed generator and reuses the existing EXACT-RAT validator.
+
+## 2026-09-21 — G1-GEO-003 canonical spec
+
+- Added the canonical G1 fourth-fraction specification; taskgen implements the fixed generator and reuses the existing EXACT-RAT validator.
