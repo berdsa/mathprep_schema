@@ -293,3 +293,7 @@
 ## 2026-09-21 — G1-NUM-019 canonical spec
 
 - Added the canonical G1 subtraction-result word-problem specification; taskgen implements the generator and reuses the existing EXACT-INT validator.
+
+## 2026-09-21 — G1-NUM-020 canonical spec
+
+- Added the canonical G1 subtraction-change word-problem specification; taskgen implements the generator and reuses the existing EXACT-INT validator.
