@@ -4,6 +4,10 @@
 
 - Added the canonical `G1-NUM-011` addition-within-20 specification to `07-task-type-specs-exemplars.md`; taskgen implemented and verified the corresponding generator.
 
+## 2026-09-21 — Phase 3 G1-NUM-012
+
+- Added the canonical missing-subtrahend specification to `07-task-type-specs-exemplars.md`.
+
 ## 2026-09-19 — Repository initialization
 
 - Confirmed this is the canonical `mathprep-schema` repository and retained all thirteen SRD artifacts directly under `docs/srd/`.

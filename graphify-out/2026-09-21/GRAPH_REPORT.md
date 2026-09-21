@@ -1,16 +1,16 @@
 # Graph Report - schema  (2026-09-21)
 
 ## Corpus Check
-- 35 files · ~34,225 words
+- 35 files · ~34,435 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 356 nodes · 462 edges · 34 communities (32 shown, 2 thin omitted)
+- 357 nodes · 463 edges · 34 communities (32 shown, 2 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 14 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5ed317a1`
+- Built from commit: `bc538ece`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -38,7 +38,7 @@
 - pipeline_test.go
 
 ## God Nodes (most connected - your core abstractions)
-1. `07 — Wave-A Exemplar Task-Type Specs` - 83 edges
+1. `07 — Wave-A Exemplar Task-Type Specs` - 84 edges
 2. `Agent log` - 54 edges
 3. `Result` - 16 edges
 4. `Validate()` - 14 edges
@@ -68,7 +68,7 @@
 
 ### Community 0 - "07 — Wave-A Exemplar Task-Type Specs"
 Cohesion: 0.02
-Nodes (83): 07 — Wave-A Exemplar Task-Type Specs, G10-CAL-001 — Basic limit, G10-PRO-001 — Basic single-event probability, G10-PRO-002 — Compound probability, G10-TRG-001 — Trigonometric equation, G11-ALG-001 — Linear system via matrices, G11-FUN-001 — Exponential equation, G11-LOG-001 — Logarithmic equation (+75 more)
+Nodes (84): 07 — Wave-A Exemplar Task-Type Specs, G10-CAL-001 — Basic limit, G10-PRO-001 — Basic single-event probability, G10-PRO-002 — Compound probability, G10-TRG-001 — Trigonometric equation, G11-ALG-001 — Linear system via matrices, G11-FUN-001 — Exponential equation, G11-LOG-001 — Logarithmic equation (+76 more)
 
 ### Community 1 - "Agent log"
 Cohesion: 0.04
@@ -143,7 +143,7 @@ Cohesion: 0.23
 Nodes (15): TestValidateBool(), TestValidateCanonList(), TestValidateExactIntBoundary(), TestValidateExactIntCorrect(), TestValidateExactIntIncorrect(), TestValidateExactIntUnparseable(), TestValidateExactRat(), TestValidateInterval() (+7 more)
 
 ## Knowledge Gaps
-- **216 isolated node(s):** `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is`, `Source of truth`, `Stack` (+211 more)
+- **217 isolated node(s):** `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is`, `Source of truth`, `Stack` (+212 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -153,8 +153,8 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `ReasonCode` connect `pipeline.go` to `constants.go`?**
   _High betweenness centrality (0.011) - this node is a cross-community bridge._
 - **What connects `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is` to the rest of the system?**
-  _216 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _217 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `07 — Wave-A Exemplar Task-Type Specs` be split into smaller, more focused modules?**
-  _Cohesion score 0.023809523809523808 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.023529411764705882 - nodes in this community are weakly interconnected._
 - **Should `Agent log` be split into smaller, more focused modules?**
   _Cohesion score 0.03636363636363636 - nodes in this community are weakly interconnected._
