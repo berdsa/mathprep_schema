@@ -417,3 +417,7 @@
 ## 2026-09-21 — G2-NUM-010 canonical spec
 
 - Added the canonical Grade 2 successor-number specification.
+
+## 2026-09-21 — G2-NUM-011 canonical spec
+
+- Added the canonical Grade 2 predecessor-number specification.

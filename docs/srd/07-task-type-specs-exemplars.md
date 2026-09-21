@@ -891,6 +891,18 @@
 | Worked examples | `0→1`; `119→120`; `45→46` |
 | Misconception tags | `MISC-NEXT-NUMBER`, `MISC-BOUNDARY` |
 
+## G2-NUM-011 — Previous number
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Find the previous number / NUM / 2 / Understand |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `What number comes before {n}?` |
+| Variables / constraint | `n∈[1,120]` |
+| Solution / equivalence_policy | `n−1`; **STRICT-FORM** EXACT-INT |
+| Verification oracle / instance space | independent predecessor calculation; 1000/1000 per seed batch |
+| Worked examples | `1→0`; `120→119`; `45→44` |
+
 ## G1-STA-002 — Data difference
 
 | Field | Value |
