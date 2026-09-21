@@ -2635,3 +2635,13 @@
 | Variables / constraint | values satisfy catalog bounds and nonnegative count constraints |
 | Solution / equivalence_policy | exact integer; **STRICT-FORM** EXACT-INT |
 | Verification oracle / instance space | deterministic graph oracle; 1000/1000 per seed batch |
+## G3-MEA-017..018 — Area and perimeter
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Area and perimeter / MEA / 3 / Apply |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / templates | `plaintext`, `unicode-math`; all dimensions and side lengths are displayed |
+| Variables / constraint | grid dimensions `[2,12]`, product at most 144; polygon has 3–6 sides with lengths `[1,20]` |
+| Solution / equivalence_policy | exact integer; **STRICT-FORM** EXACT-INT |
+| Verification oracle / instance space | deterministic geometry-measurement oracle; 1000/1000 per seed batch |
