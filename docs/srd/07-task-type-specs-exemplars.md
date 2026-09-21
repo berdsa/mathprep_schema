@@ -786,6 +786,21 @@
 | Worked examples | `length→cm`; `mass→kg` is not the requested unit; `volume→L` is not the requested unit |
 | Misconception tags | `MISC-UNIT-CONFUSION`, `MISC-LENGTH-UNIT` |
 
+## G1-MEA-009 — True/false measurement comparison
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Decide whether one length is longer / MEA / 1 / Understand |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `Is {a} cm longer than {b} cm? Answer true or false.` |
+| Variables / constraint | `a,b: int [1,20]` |
+| Solution / equivalence_policy | `TRUE` iff `a>b`, else `FALSE`; **STRICT-FORM** |
+| Input contract | `true` or `false`, case-insensitive |
+| Verification oracle / instance space | independent comparison; 1000/1000 per seed batch; 400 ordered pairs |
+| Worked examples | `8 cm vs 3 cm→TRUE`; `3 vs 8→FALSE`; `5 vs 5→FALSE` |
+| Misconception tags | `MISC-COMPARE-SIGN`, `MISC-UNIT-OMISSION`, `MISC-EQUALITY` |
+
 ## G1-MEA-007 — Time minus half-hour
 
 | Field | Value |
