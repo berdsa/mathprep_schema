@@ -2515,3 +2515,13 @@
 | Variables / constraint | hours 1–11 and minute values are multiples of five within the catalog bounds |
 | Solution / equivalence_policy | H:MM canonical time or exact elapsed minutes; **STRICT-FORM** |
 | Verification oracle / instance space | deterministic time oracle; 1000/1000 per seed batch |
+## G2-MEA-017 — AM/PM selection
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | AM/PM selection / MEA / 2 / Understand |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `It is {h}:00 during the morning. Is the time AM or PM?` |
+| Variables / constraint | `h∈[1,11]`; the prompt explicitly states morning context |
+| Solution / equivalence_policy | `AM`; **STRICT-FORM** BOOL |
+| Verification oracle / instance space | fixed contextual answer; 1000/1000 per seed batch |

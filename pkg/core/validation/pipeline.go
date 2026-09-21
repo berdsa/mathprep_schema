@@ -493,7 +493,7 @@ func romanFromInt(n int) string {
 // The stored answer is already canonical; synonyms are normalized before
 // comparison so task types do not need their own parsing code.
 func ValidateBool(raw, correctAnswer string) Result {
-	canonical := map[string]string{"<": "<", "less": "<", "less than": "<", ">": ">", "greater": ">", "greater than": ">", "=": "=", "equal": "=", "equal to": "=", "true": "TRUE", "false": "FALSE", "red": "red", "blue": "blue", "green": "green", "cm": "cm", "kg": "kg", "l": "L", "2d": "2D", "3d": "3D", "square": "square", "triangle": "triangle", "pentagon": "pentagon", "hexagon": "hexagon", "odd": "odd", "even": "even"}
+	canonical := map[string]string{"<": "<", "less": "<", "less than": "<", ">": ">", "greater": ">", "greater than": ">", "=": "=", "equal": "=", "equal to": "=", "true": "TRUE", "false": "FALSE", "red": "red", "blue": "blue", "green": "green", "cm": "cm", "kg": "kg", "l": "L", "2d": "2D", "3d": "3D", "square": "square", "triangle": "triangle", "pentagon": "pentagon", "hexagon": "hexagon", "odd": "odd", "even": "even", "am": "AM", "pm": "PM"}
 	if isQuadrantLabel(correctAnswer) {
 		canonical = map[string]string{"i": "I", "ii": "II", "iii": "III", "iv": "IV", "ox": "Ox", "oy": "Oy", "o": "O"}
 	}
