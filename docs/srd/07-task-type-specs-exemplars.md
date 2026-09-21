@@ -2645,3 +2645,13 @@
 | Variables / constraint | grid dimensions `[2,12]`, product at most 144; polygon has 3–6 sides with lengths `[1,20]` |
 | Solution / equivalence_policy | exact integer; **STRICT-FORM** EXACT-INT |
 | Verification oracle / instance space | deterministic geometry-measurement oracle; 1000/1000 per seed batch |
+## G3-GEO-001..009 — Fractions and quadrilateral geometry
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Fraction partitions and geometry / GEO / 3 / Understand |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / templates | `plaintext`, `unicode-math`; all parts, dimensions, shapes, and side-count options are displayed |
+| Variables / constraint | valid partition counts and unequal comparison areas/perimeters; right-angle choices exclude unconstrained triangle |
+| Solution / equivalence_policy | exact rational, integer, or BOOL label; **STRICT-FORM** |
+| Verification oracle / instance space | deterministic geometry oracle; 1000/1000 per seed batch |
