@@ -561,6 +561,21 @@
 | Worked examples | `Gave 4, now 9→13`; `Gave 0, now 20→20`; `Gave 7, now 7→14` |
 | Misconception tags | `MISC-ADD-FACT`, `MISC-WORD-OPERATION`, `MISC-UNKNOWN-START` |
 
+## G1-NUM-022 — Commutative property
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Apply the commutative property of addition / NUM / 1 / Apply |
+| Provenance / ref_status | expanded grade-by-grade catalog, `[UNVERIFIED]` pending MISS-01 |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `If {a} + {b} = {c}, what is {b} + {a}?` |
+| Variables / constraint | `a,b: int [0,20]`; `a+b≤20`; `c=a+b` |
+| Solution / equivalence_policy | `c`; **STRICT-FORM** |
+| Input contract | `^\s*\+?0*([0-9]{1,5})\s*$`; decimals and commas reject |
+| Verification oracle / instance space | independent addition; 1000/1000 per seed batch; 231 ordered pairs |
+| Worked examples | `3+4=7, ask 4+3→7`; `0+20=20→20`; `12+8=20→20` |
+| Misconception tags | `MISC-ADD-FACT`, `MISC-COMMUTATIVE-ORDER`, `MISC-BOUNDARY` |
+
 ## G1-NUM-020 — Word problem: subtract change unknown
 
 | Field | Value |
