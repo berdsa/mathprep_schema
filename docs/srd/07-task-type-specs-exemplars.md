@@ -3178,6 +3178,13 @@
 | G11-VEC-001 | Display two 2D vectors and ask for their dot product. | EXACT-INT |
 | G11-MAT-002 | Display a 2×2 matrix and ask for its determinant. | EXACT-INT |
 
+| G11-STA-001 | Normal probability from visible μ, σ, and x | TOL |
+| G11-STA-002 | z-score from visible x, μ, and σ | TOL |
+| G11-STA-003 | Standard-normal probability from visible z | TOL |
+| G11-STA-004 | Standard error from visible σ and n | TOL |
+| G11-STA-005 | Confidence interval from visible mean, σ, n, and z multiplier | TOL |
+| G11-STA-006 | Hypothesis-test z statistic from visible x̄, μ, σ, and n | TOL |
+
 | G9-GEO-001 | Display `a`, `A`, and `B` and ask for `b` using `a/sin(A)=b/sin(B)` | TOL |
 
 | G6-GEO-002 | Display two points whose coordinate differences form an integer Pythagorean triple; ask for their distance | TOL |
