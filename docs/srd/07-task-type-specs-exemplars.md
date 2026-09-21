@@ -951,6 +951,18 @@
 | Verification oracle / instance space | independent place-value calculation; 1000/1000 per seed batch |
 | Worked examples | `10→10`; `47→40`; `99→90` |
 
+## G2-NUM-016 — Value of ones digit
+
+| Field | Value |
+|---|---|
+| Title / domain / grade / Bloom | Find the ones place value / NUM / 2 / Understand |
+| spec_version / generation_mode / locale | 1.0.0-draft / CODE / `ru-KZ` |
+| render_target / template | `plaintext`, `unicode-math` / `What is the value of the ones digit in {n}?` |
+| Variables / constraint | `n∈[10,99]` |
+| Solution / equivalence_policy | `n mod 10`; **STRICT-FORM** EXACT-INT |
+| Verification oracle / instance space | independent place-value calculation; 1000/1000 per seed batch |
+| Worked examples | `10→0`; `47→7`; `99→9` |
+
 ## G1-STA-002 — Data difference
 
 | Field | Value |

@@ -437,3 +437,7 @@
 ## 2026-09-21 — G2-NUM-015 canonical spec
 
 - Added the canonical Grade 2 tens-place-value specification.
+
+## 2026-09-21 — G2-NUM-016 canonical spec
+
+- Added the canonical Grade 2 ones-place-value specification.
