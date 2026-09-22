@@ -1,16 +1,16 @@
-# Graph Report - schema  (2026-09-21)
+# Graph Report - schema  (2026-09-22)
 
 ## Corpus Check
-- 37 files · ~53,523 words
+- 40 files · ~56,610 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 560 nodes · 674 edges · 35 communities (33 shown, 2 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 18 edges (avg confidence: 0.8)
+- 605 nodes · 732 edges · 37 communities (35 shown, 2 thin omitted)
+- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 19 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `dbb46ca7`
+- Built from commit: `df084f79`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -25,6 +25,7 @@
 - Math Task Type Catalog — Grade 1 to University
 - AGENTS.md — schema
 - 06 — Traceability, Glossary, Stakeholders, Open Items
+- Responses
 - 00 — Scope Lock
 - 08 — Developer Backlog
 - Backend Integration
@@ -38,15 +39,15 @@
 
 ## God Nodes (most connected - your core abstractions)
 1. `07 — Wave-A Exemplar Task-Type Specs` - 215 edges
-2. `Agent log` - 119 edges
+2. `Agent log` - 120 edges
 3. `Result` - 17 edges
 4. `Validate()` - 16 edges
-5. `ValidateExactInt()` - 11 edges
+5. `ValidateExactInt()` - 12 edges
 6. `02 — Requirements` - 10 edges
 7. `task_type` - 9 edges
-8. `00 — Conventions` - 9 edges
-9. `Math Task Type Catalog — Grade 1 to University` - 9 edges
-10. `ReasonCode` - 8 edges
+8. `ReasonCode` - 9 edges
+9. `00 — Conventions` - 9 edges
+10. `Math Task Type Catalog — Grade 1 to University` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `TaskType` --references--> `GradeBand`  [EXTRACTED]
@@ -63,7 +64,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (35 total, 2 thin omitted)
+## Communities (37 total, 2 thin omitted)
 
 ### Community 0 - "07 — Wave-A Exemplar Task-Type Specs"
 Cohesion: 0.01
@@ -71,39 +72,43 @@ Nodes (215): 07 — Wave-A Exemplar Task-Type Specs, G10-ALG-001,003..005,007..0
 
 ### Community 1 - "Agent log"
 Cohesion: 0.02
-Nodes (119): 2026-09-19 — Phase 0 base DDL, 2026-09-19 — Phase 0 dictionary seeds, 2026-09-19 — Phase 0 forbidden-write probes, 2026-09-19 — Phase 0 idempotency constraints, 2026-09-19 — Phase 0 migration plan, 2026-09-19 — Phase 0 migration verification, 2026-09-19 — Phase 0 service roles and grants, 2026-09-19 — Phase 0 summary (+111 more)
+Nodes (120): 2026-09-19 — Phase 0 base DDL, 2026-09-19 — Phase 0 dictionary seeds, 2026-09-19 — Phase 0 forbidden-write probes, 2026-09-19 — Phase 0 idempotency constraints, 2026-09-19 — Phase 0 migration plan, 2026-09-19 — Phase 0 migration verification, 2026-09-19 — Phase 0 service roles and grants, 2026-09-19 — Phase 0 summary (+112 more)
 
 ### Community 2 - "pipeline.go"
 Cohesion: 0.10
-Nodes (52): ReasonCode, CompareExactInt(), flattenNumericValue(), formatNumericValue(), gcd64(), isQuadrantLabel(), isRoman(), joinInts() (+44 more)
+Nodes (53): ReasonCode, CompareExactInt(), flattenNumericValue(), formatNumericValue(), gcd64(), isQuadrantLabel(), isRoman(), joinInts() (+45 more)
 
 ### Community 3 - "constants.go"
-Cohesion: 0.16
-Nodes (24): Domain, EquivalencePolicy, EventLog, GenerationMode, GenerationRequest, GenerationRequestStatus, GradeBand, Locale (+16 more)
+Cohesion: 0.14
+Nodes (28): CASEvaluationOperationType, CASEvaluationRequest, CASEvaluationStatus, Domain, EquivalencePolicy, EventLog, EventType, GenerationMode (+20 more)
 
 ### Community 4 - "000001_create_phase0_schema.up.sql"
-Cohesion: 0.19
-Nodes (21): domain, equivalence_policy, event_log, generation_mode, generation_request, grade_band, locale, mastery_topic (+13 more)
+Cohesion: 0.16
+Nodes (25): domain, equivalence_policy, event_log, generation_mode, generation_request, grade_band, locale, mastery_topic (+17 more)
 
-### Community 6 - "02 — Requirements"
+### Community 5 - "02 — Requirements"
 Cohesion: 0.18
 Nodes (10): 02 — Requirements, FR-001 — Generate a daily task set with adaptive topic weighting, FR-002 — Validate a submitted answer and return a verdict, FR-003 — Idempotent resubmission, FR-004 — UNPARSEABLE never affects mastery or attempt counters, FR-005 — Defect-triggered invalidation and re-grade, snapshot preserved, FR-006 — Fallback-pool exhaustion never silently shrinks a batch, FR-007 — Generation is mediated by a durable job queue, not an in-request call *(new)* (+2 more)
 
-### Community 7 - "00 — Conventions"
+### Community 6 - "00 — Conventions"
 Cohesion: 0.20
 Nodes (9): 00 — Conventions, 1. ID scheme, 2. Validation-method legend, normalization, and reason codes, 3. Canonical-form grammar, 4. Difficulty tier model, 5. NotationProfile — `ru-KZ`, 6. Data-dictionary tables — **new this pass, Phase-0 deliverable**, 7. Generation-safety rules (+1 more)
 
-### Community 8 - "Math Task Type Catalog — Grade 1 to University"
+### Community 7 - "Math Task Type Catalog — Grade 1 to University"
 Cohesion: 0.20
 Nodes (9): Grade 10–11 (ages 15–18), Grade 1–2 (ages 6–8), Grade 3–4 (ages 8–10), Grade 5–6 (ages 10–12), Grade 7–9 (ages 12–15), Math Task Type Catalog — Grade 1 to University, Notes for implementation (methodologist + BA perspective), University (higher mathematics) (+1 more)
 
-### Community 9 - "AGENTS.md — schema"
+### Community 8 - "AGENTS.md — schema"
 Cohesion: 0.22
 Nodes (8): AGENTS.md — schema, Conventions, Local infra, Source of truth, Stack, Testing, What this repo is, Workflow
 
-### Community 10 - "06 — Traceability, Glossary, Stakeholders, Open Items"
+### Community 9 - "06 — Traceability, Glossary, Stakeholders, Open Items"
 Cohesion: 0.22
 Nodes (8): 06 — Traceability, Glossary, Stakeholders, Open Items, Definition of Done, Glossary — carried forward from `00-scope-lock.md` (single normative copy per quality-gate rule), Migration / rollout / rollback, Traceability matrix, Карта стейкхолдеров, Реестр допущений — consolidated, Реестр открытых вопросов — consolidated
+
+### Community 10 - "Responses"
+Cohesion: 0.06
+Nodes (32): `200 OK`, request `DONE` with a task set, `200 OK`, request not `DONE`, `200 OK` response, `202 Accepted`, `400 Bad Request`, `400 Bad Request`, `401 Unauthorized`, `401 Unauthorized` (+24 more)
 
 ### Community 11 - "00 — Scope Lock"
 Cohesion: 0.25
@@ -138,7 +143,7 @@ Cohesion: 0.50
 Nodes (3): 00 — Индекс артефактов трека `math-task-catalog`, Реестр допущений и открытых вопросов — сводный, обновлён, Реестр репозиториев (введён этим ходом, см. ADR-006)
 
 ## Knowledge Gaps
-- **413 isolated node(s):** `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is`, `Source of truth`, `Stack` (+408 more)
+- **436 isolated node(s):** `github.com/berdsa/mathprep_schema`, `What this repo is`, `Source of truth`, `Stack`, `Local infra` (+431 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -149,11 +154,13 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `Validate()` (e.g. with `TestValidateCanonStrictForm()` and `TestValidateMatrix()`) actually correct?**
   _`Validate()` has 2 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `github.com/berdsa/mathprep_schema`, `event_log`, `What this repo is` to the rest of the system?**
-  _413 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `github.com/berdsa/mathprep_schema`, `What this repo is`, `Source of truth` to the rest of the system?**
+  _436 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `07 — Wave-A Exemplar Task-Type Specs` be split into smaller, more focused modules?**
   _Cohesion score 0.009259259259259259 - nodes in this community are weakly interconnected._
 - **Should `Agent log` be split into smaller, more focused modules?**
-  _Cohesion score 0.016666666666666666 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.01652892561983471 - nodes in this community are weakly interconnected._
 - **Should `pipeline.go` be split into smaller, more focused modules?**
-  _Cohesion score 0.10272536687631027 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.10101010101010101 - nodes in this community are weakly interconnected._
+- **Should `constants.go` be split into smaller, more focused modules?**
+  _Cohesion score 0.14482758620689656 - nodes in this community are weakly interconnected._

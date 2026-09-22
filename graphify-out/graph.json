@@ -2855,6 +2855,17 @@
       "norm_label": "2026-09-22 \u2014 cas evaluation contract"
     },
     {
+      "label": "2026-09-22 \u2014 CAS async API contract draft",
+      "file_type": "document",
+      "source_file": "docs/agent-log.md",
+      "source_location": "L525",
+      "_origin": "ast",
+      "id": "docs_agent_log_2026_09_22_cas_async_api_contract_draft",
+      "community": 1,
+      "community_name": "Agent log",
+      "norm_label": "2026-09-22 \u2014 cas async api contract draft"
+    },
+    {
       "label": "api-contract.md",
       "file_type": "document",
       "source_file": "docs/api-contract.md",
@@ -3196,10 +3207,21 @@
       "norm_label": "`500 internal server error`"
     },
     {
-      "label": "Spec-vs-code drift register",
+      "label": "CAS submission lifecycle \u2014 approved exception, not yet implemented",
       "file_type": "document",
       "source_file": "docs/api-contract.md",
       "source_location": "L407",
+      "_origin": "ast",
+      "id": "docs_api_contract_cas_submission_lifecycle_approved_exception_not_yet_implemented",
+      "community": 10,
+      "community_name": "Responses",
+      "norm_label": "cas submission lifecycle \u2014 approved exception, not yet implemented"
+    },
+    {
+      "label": "Spec-vs-code drift register",
+      "file_type": "document",
+      "source_file": "docs/api-contract.md",
+      "source_location": "L431",
       "_origin": "ast",
       "id": "docs_api_contract_spec_vs_code_drift_register",
       "community": 10,
@@ -11196,6 +11218,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/agent-log.md",
+      "source_location": "L525",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_agent_log_agent_log",
+      "target": "docs_agent_log_2026_09_22_cas_async_api_contract_draft",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/agent-log.md",
       "source_location": "L520",
       "weight": 1.0,
       "_origin": "ast",
@@ -11212,6 +11245,17 @@
       "_origin": "ast",
       "source": "docs_api_contract",
       "target": "docs_api_contract_http_api_contract_taskgen_and_grader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/api-contract.md",
+      "source_location": "L407",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_api_contract_http_api_contract_taskgen_and_grader",
+      "target": "docs_api_contract_cas_submission_lifecycle_approved_exception_not_yet_implemented",
       "confidence_score": 1.0
     },
     {
@@ -11240,7 +11284,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/api-contract.md",
-      "source_location": "L407",
+      "source_location": "L431",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_api_contract_http_api_contract_taskgen_and_grader",
@@ -14835,5 +14879,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "52dfb37877a462cafc46e521a9a4b139b6bea7db"
+  "built_at_commit": "df084f79526d3731dc99f55b56e42293a83ab2c5"
 }

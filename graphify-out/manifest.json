@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   "docs/agent-log.md": {
-    "mtime": 1790050628.5270503,
-    "ast_hash": "7024281ba5031a1fb1883923f29bf142",
+    "mtime": 1790062522.1749518,
+    "ast_hash": "ab34248a8647e9d95f3313b514110c74",
     "semantic_hash": ""
   },
   "docs/srd/00-conventions.md": {
@@ -195,8 +195,8 @@
     "semantic_hash": "1070cff61450c7adc0fc48e5e831616e"
   },
   "docs/api-contract.md": {
-    "mtime": 1790044893.354214,
-    "ast_hash": "3d0aa7928a8aeef392577ffe67a0d5c6",
+    "mtime": 1790062435.1024826,
+    "ast_hash": "c072a5f3c516045cd43a1e05157010b0",
     "semantic_hash": ""
   }
 }

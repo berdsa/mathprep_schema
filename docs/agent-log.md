@@ -521,3 +521,8 @@
 
 - Added additive migration `000009_add_cas_evaluation_contract`: CAS operation/status and event-type dictionaries; the bounded, leaseable `cas_evaluation_request` queue; completion/failure event types; and a least-privileged `cas_svc` role.
 - Exported CAS operation/status, CAS completion/failure event, and queue-row constants/structs from the versioned Go module.
+
+## 2026-09-22 — CAS async API contract draft
+
+- Documented the approved CAS-only asynchronous submission exception in `docs/api-contract.md`.
+- The endpoint and worker remain unimplemented pending confirmation of the drafted type specifications.
