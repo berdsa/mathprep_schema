@@ -126,6 +126,13 @@ func TestValidateExactIntAcceptsNegative(t *testing.T) {
 	}
 }
 
+func TestValidateExactIntNegativeMismatchIsIncorrect(t *testing.T) {
+	got := ValidateExactInt("-1", "1")
+	if got.Verdict != core.VerdictIncorrect || got.ReasonCode != core.ReasonValueMismatch {
+		t.Fatalf("got %+v, want INCORRECT/VALUE_MISMATCH", got)
+	}
+}
+
 func TestValidateRoman(t *testing.T) {
 	tests := []struct {
 		input, answer string
