@@ -516,3 +516,8 @@
 ## 2026-09-21 — Taskgen student-read grant
 
 - Added additive migration `000008_grant_taskgen_student_read` granting `taskgen_svc` read access to `students`, allowing taskgen to validate an incoming student foreign key before it writes a generation request.
+
+## 2026-09-22 — CAS evaluation contract
+
+- Added additive migration `000009_add_cas_evaluation_contract`: CAS operation/status and event-type dictionaries; the bounded, leaseable `cas_evaluation_request` queue; completion/failure event types; and a least-privileged `cas_svc` role.
+- Exported CAS operation/status, CAS completion/failure event, and queue-row constants/structs from the versioned Go module.

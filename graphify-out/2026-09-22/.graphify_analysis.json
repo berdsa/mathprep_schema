@@ -1,0 +1,506 @@
+{
+  "communities": {
+    "0": [
+      "docs_srd_07_task_type_specs_exemplars",
+      "docs_srd_07_task_type_specs_exemplars_07_wave_a_exemplar_task_type_specs",
+      "docs_srd_07_task_type_specs_exemplars_g1_num_001_addition_within_range",
+      "docs_srd_07_task_type_specs_exemplars_g1_num_002_subtraction_within_range",
+      "docs_srd_07_task_type_specs_exemplars_g1_num_003_number_comparison",
+      "docs_srd_07_task_type_specs_exemplars_g1_num_004_missing_addend",
+      "docs_srd_07_task_type_specs_exemplars_g1_num_005_simple_word_problem_addition_subtraction",
+      "docs_srd_07_task_type_specs_exemplars_g1_num_006_place_value",
+      "docs_srd_07_task_type_specs_exemplars_g1_num_007_ordering_a_list",
+      "docs_srd_07_task_type_specs_exemplars_g1_num_008_money_counting",
+      "docs_srd_07_task_type_specs_exemplars_g1_num_009_skip_counting_next_term",
+      "docs_srd_07_task_type_specs_exemplars_g1_num_010_shape_property_lookup",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_001_multi_digit_addition_with_carry",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_002_multiplication_fact",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_003_exact_division",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_004_multi_digit_add_sub_carry_borrow",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_005_simple_word_problem_addition_subtraction_hybrid_ai",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_006_order_of_operations",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_007_rounding",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_008_unit_fraction_of_a_quantity",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_009_perimeter_of_rectangle_square",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_010_area_of_rectangle_square",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_011_division_with_remainder",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_012_roman_numeral_conversion",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_013_simple_sequence_pattern",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_014_division_with_remainder",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_015_missing_factor",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_016_missing_divisor",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_017_missing_dividend",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_018_multiplication_as_repeated_addition",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_019_division_as_sharing",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_020_multiplication_word_problem",
+      "docs_srd_07_task_type_specs_exemplars_g3_num_021_division_word_problem",
+      "docs_srd_07_task_type_specs_exemplars_g6_dec_001_decimal_arithmetic",
+      "docs_srd_07_task_type_specs_exemplars_g6_fra_003_fraction_addition_unlike_denominators_proper_result",
+      "docs_srd_07_task_type_specs_exemplars_g6_fra_004_fraction_multiplication_division",
+      "docs_srd_07_task_type_specs_exemplars_g6_geo_001_point_quadrant_identification",
+      "docs_srd_07_task_type_specs_exemplars_g6_geo_002_distance_between_two_points",
+      "docs_srd_07_task_type_specs_exemplars_g6_geo_003_missing_triangle_angle",
+      "docs_srd_07_task_type_specs_exemplars_g6_geo_009_point_quadrant_identification",
+      "docs_srd_07_task_type_specs_exemplars_g6_md_001_volume_of_a_rectangular_prism",
+      "docs_srd_07_task_type_specs_exemplars_g6_md_002_unit_conversion",
+      "docs_srd_07_task_type_specs_exemplars_g6_ns_001_gcd_lcm",
+      "docs_srd_07_task_type_specs_exemplars_g6_ns_002_negative_number_arithmetic",
+      "docs_srd_07_task_type_specs_exemplars_g6_pct_001_percentage_of_a_number",
+      "docs_srd_07_task_type_specs_exemplars_g6_pct_002_percentage_change",
+      "docs_srd_07_task_type_specs_exemplars_g6_rat_001_ratio_simplification",
+      "docs_srd_07_task_type_specs_exemplars_g6_rp_001_proportion_solving",
+      "docs_srd_07_task_type_specs_exemplars_g6_sp_001_basic_single_event_probability",
+      "docs_srd_07_task_type_specs_exemplars_g7_ee_001_linear_equation_1_variable",
+      "docs_srd_07_task_type_specs_exemplars_g7_ee_002_linear_system_2_variables",
+      "docs_srd_07_task_type_specs_exemplars_g7_ee_003_quadratic_equation",
+      "docs_srd_07_task_type_specs_exemplars_g7_ee_004_quadratic_inequality",
+      "docs_srd_07_task_type_specs_exemplars_g7_ee_005_linear_inequality",
+      "docs_srd_07_task_type_specs_exemplars_g7_ee_006_exponent_rules"
+    ],
+    "1": [
+      "docs_agent_log",
+      "docs_agent_log_2026_09_19_phase_0_base_ddl",
+      "docs_agent_log_2026_09_19_phase_0_dictionary_seeds",
+      "docs_agent_log_2026_09_19_phase_0_forbidden_write_probes",
+      "docs_agent_log_2026_09_19_phase_0_idempotency_constraints",
+      "docs_agent_log_2026_09_19_phase_0_migration_plan",
+      "docs_agent_log_2026_09_19_phase_0_migration_verification",
+      "docs_agent_log_2026_09_19_phase_0_service_roles_and_grants",
+      "docs_agent_log_2026_09_19_phase_0_summary",
+      "docs_agent_log_2026_09_19_repository_initialization",
+      "docs_agent_log_2026_09_20_bool_shared_validator",
+      "docs_agent_log_2026_09_20_canon_list_validator",
+      "docs_agent_log_2026_09_20_exact_rat_shared_validation",
+      "docs_agent_log_2026_09_20_g3_num_002",
+      "docs_agent_log_2026_09_20_g3_num_003",
+      "docs_agent_log_2026_09_20_g3_num_004",
+      "docs_agent_log_2026_09_20_g3_num_006",
+      "docs_agent_log_2026_09_20_g3_num_007",
+      "docs_agent_log_2026_09_20_g3_num_008",
+      "docs_agent_log_2026_09_20_g3_num_009",
+      "docs_agent_log_2026_09_20_g3_num_010",
+      "docs_agent_log_2026_09_20_g3_num_011",
+      "docs_agent_log_2026_09_20_g6_dec_001_specification",
+      "docs_agent_log_2026_09_20_g6_fra_004_specification",
+      "docs_agent_log_2026_09_20_g6_ns_001_specification",
+      "docs_agent_log_2026_09_20_g6_ns_002_specification",
+      "docs_agent_log_2026_09_20_g6_pct_002_specification",
+      "docs_agent_log_2026_09_20_g6_rat_001_preparation",
+      "docs_agent_log_2026_09_20_g6_rp_001_specification",
+      "docs_agent_log_2026_09_20_one_time_generic_grader_dispatch",
+      "docs_agent_log_2026_09_20_phase_0_step_7_github_remote",
+      "docs_agent_log_2026_09_20_phase_0_step_7_shared_go_module",
+      "docs_agent_log_2026_09_20_shared_go_module_root_correction",
+      "docs_agent_log_2026_09_20_task_type_grade_band_correction",
+      "docs_agent_log_2026_09_20_tuple_validator",
+      "docs_agent_log_agent_log"
+    ],
+    "2": [
+      "core_reasoncode",
+      "pkg_core_validation_pipeline",
+      "pkg_core_validation_pipeline_compareexactint",
+      "pkg_core_validation_pipeline_gcd64",
+      "pkg_core_validation_pipeline_isquadrantlabel",
+      "pkg_core_validation_pipeline_isroman",
+      "pkg_core_validation_pipeline_joinints",
+      "pkg_core_validation_pipeline_normalizeexactint",
+      "pkg_core_validation_pipeline_parseexactint",
+      "pkg_core_validation_pipeline_parseexactrat",
+      "pkg_core_validation_pipeline_parseratio",
+      "pkg_core_validation_pipeline_parseroman",
+      "pkg_core_validation_pipeline_romanfromint",
+      "pkg_core_validation_pipeline_validate",
+      "pkg_core_validation_pipeline_validatebool",
+      "pkg_core_validation_pipeline_validatecanonlist",
+      "pkg_core_validation_pipeline_validateexactint",
+      "pkg_core_validation_pipeline_validateexactrat",
+      "pkg_core_validation_pipeline_validateinterval",
+      "pkg_core_validation_pipeline_validateratio",
+      "pkg_core_validation_pipeline_validateroman",
+      "pkg_core_validation_pipeline_validateset",
+      "pkg_core_validation_pipeline_validatetol",
+      "pkg_core_validation_pipeline_validatetuple",
+      "validation_parsedexactint",
+      "validation_result",
+      "validation_stage"
+    ],
+    "3": [
+      "core_domain",
+      "core_equivalencepolicy",
+      "core_eventlog",
+      "core_generationmode",
+      "core_generationrequest",
+      "core_generationrequeststatus",
+      "core_gradeband",
+      "core_locale",
+      "core_masterytopic",
+      "core_rendertarget",
+      "core_student",
+      "core_submission",
+      "core_taskinstance",
+      "core_taskset",
+      "core_tasktype",
+      "core_tasktypestatus",
+      "core_tiercode",
+      "core_user",
+      "core_usertype",
+      "core_validationmethod",
+      "core_verdict",
+      "pkg_core_constants",
+      "pkg_core_rows",
+      "rawmessage",
+      "time",
+      "uuid"
+    ],
+    "4": [
+      "migrations_000001_create_phase0_schema_up",
+      "migrations_000001_create_phase0_schema_up_domain",
+      "migrations_000001_create_phase0_schema_up_equivalence_policy",
+      "migrations_000001_create_phase0_schema_up_event_log",
+      "migrations_000001_create_phase0_schema_up_generation_mode",
+      "migrations_000001_create_phase0_schema_up_generation_request",
+      "migrations_000001_create_phase0_schema_up_grade_band",
+      "migrations_000001_create_phase0_schema_up_locale",
+      "migrations_000001_create_phase0_schema_up_mastery_topic",
+      "migrations_000001_create_phase0_schema_up_reason_code",
+      "migrations_000001_create_phase0_schema_up_render_target",
+      "migrations_000001_create_phase0_schema_up_students",
+      "migrations_000001_create_phase0_schema_up_submission",
+      "migrations_000001_create_phase0_schema_up_task_instance",
+      "migrations_000001_create_phase0_schema_up_task_set",
+      "migrations_000001_create_phase0_schema_up_task_type",
+      "migrations_000001_create_phase0_schema_up_task_type_status",
+      "migrations_000001_create_phase0_schema_up_tier_code",
+      "migrations_000001_create_phase0_schema_up_user_type",
+      "migrations_000001_create_phase0_schema_up_users",
+      "migrations_000001_create_phase0_schema_up_validation_method",
+      "migrations_000001_create_phase0_schema_up_verdict"
+    ],
+    "5": [
+      "pkg_core_validation_pipeline_test",
+      "pkg_core_validation_pipeline_test_testvalidatebool",
+      "pkg_core_validation_pipeline_test_testvalidatecanonlist",
+      "pkg_core_validation_pipeline_test_testvalidateexactintboundary",
+      "pkg_core_validation_pipeline_test_testvalidateexactintcorrect",
+      "pkg_core_validation_pipeline_test_testvalidateexactintincorrect",
+      "pkg_core_validation_pipeline_test_testvalidateexactintunparseable",
+      "pkg_core_validation_pipeline_test_testvalidateexactrat",
+      "pkg_core_validation_pipeline_test_testvalidateinterval",
+      "pkg_core_validation_pipeline_test_testvalidateratio",
+      "pkg_core_validation_pipeline_test_testvalidateroman",
+      "pkg_core_validation_pipeline_test_testvalidateset",
+      "pkg_core_validation_pipeline_test_testvalidatetol",
+      "pkg_core_validation_pipeline_test_testvalidatetuple",
+      "t"
+    ],
+    "6": [
+      "docs_srd_02_requirements",
+      "docs_srd_02_requirements_02_requirements",
+      "docs_srd_02_requirements_fr_001_generate_a_daily_task_set_with_adaptive_topic_weighting",
+      "docs_srd_02_requirements_fr_002_validate_a_submitted_answer_and_return_a_verdict",
+      "docs_srd_02_requirements_fr_003_idempotent_resubmission",
+      "docs_srd_02_requirements_fr_004_unparseable_never_affects_mastery_or_attempt_counters",
+      "docs_srd_02_requirements_fr_005_defect_triggered_invalidation_and_re_grade_snapshot_preserved",
+      "docs_srd_02_requirements_fr_006_fallback_pool_exhaustion_never_silently_shrinks_a_batch",
+      "docs_srd_02_requirements_fr_007_generation_is_mediated_by_a_durable_job_queue_not_an_in_request_call_new",
+      "docs_srd_02_requirements_fr_008_every_service_call_appends_to_an_immutable_event_journal_new",
+      "docs_srd_02_requirements_non_functional_requirements"
+    ],
+    "7": [
+      "docs_srd_00_conventions",
+      "docs_srd_00_conventions_00_conventions",
+      "docs_srd_00_conventions_1_id_scheme",
+      "docs_srd_00_conventions_2_validation_method_legend_normalization_and_reason_codes",
+      "docs_srd_00_conventions_3_canonical_form_grammar",
+      "docs_srd_00_conventions_4_difficulty_tier_model",
+      "docs_srd_00_conventions_5_notationprofile_ru_kz",
+      "docs_srd_00_conventions_6_data_dictionary_tables_new_this_pass_phase_0_deliverable",
+      "docs_srd_00_conventions_7_generation_safety_rules",
+      "docs_srd_00_conventions_8_cross_service_contract_discipline_new_this_pass"
+    ],
+    "8": [
+      "docs_srd_math_task_catalog",
+      "docs_srd_math_task_catalog_grade_10_11_ages_15_18",
+      "docs_srd_math_task_catalog_grade_1_2_ages_6_8",
+      "docs_srd_math_task_catalog_grade_3_4_ages_8_10",
+      "docs_srd_math_task_catalog_grade_5_6_ages_10_12",
+      "docs_srd_math_task_catalog_grade_7_9_ages_12_15",
+      "docs_srd_math_task_catalog_math_task_type_catalog_grade_1_to_university",
+      "docs_srd_math_task_catalog_notes_for_implementation_methodologist_ba_perspective",
+      "docs_srd_math_task_catalog_university_higher_mathematics",
+      "docs_srd_math_task_catalog_validation_method_legend"
+    ],
+    "9": [
+      "agents",
+      "agents_agents_md_schema",
+      "agents_conventions",
+      "agents_local_infra",
+      "agents_source_of_truth",
+      "agents_stack",
+      "agents_testing",
+      "agents_what_this_repo_is",
+      "agents_workflow"
+    ],
+    "10": [
+      "docs_srd_06_traceability",
+      "docs_srd_06_traceability_06_traceability_glossary_stakeholders_open_items",
+      "docs_srd_06_traceability_definition_of_done",
+      "docs_srd_06_traceability_glossary_carried_forward_from_00_scope_lock_md_single_normative_copy_per_quality_gate_rule",
+      "docs_srd_06_traceability_migration_rollout_rollback",
+      "docs_srd_06_traceability_traceability_matrix",
+      "docs_srd_06_traceability_\u043a\u0430\u0440\u0442\u0430_\u0441\u0442\u0435\u0439\u043a\u0445\u043e\u043b\u0434\u0435\u0440\u043e\u0432",
+      "docs_srd_06_traceability_\u0440\u0435\u0435\u0441\u0442\u0440_\u0434\u043e\u043f\u0443\u0449\u0435\u043d\u0438\u0439_consolidated",
+      "docs_srd_06_traceability_\u0440\u0435\u0435\u0441\u0442\u0440_\u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0445_\u0432\u043e\u043f\u0440\u043e\u0441\u043e\u0432_consolidated"
+    ],
+    "11": [
+      "docs_srd_00_scope_lock",
+      "docs_srd_00_scope_lock_00_scope_lock",
+      "docs_srd_00_scope_lock_1_\u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043d\u0438\u0435_context_binding_\u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u043e",
+      "docs_srd_00_scope_lock_2_\u0432_\u0441\u043a\u043e\u0443\u043f\u0435_\u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u043e",
+      "docs_srd_00_scope_lock_3_\u0432\u043d\u0435_\u0441\u043a\u043e\u0443\u043f\u0430_\u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u043e",
+      "docs_srd_00_scope_lock_4_7_\u0433\u043b\u043e\u0441\u0441\u0430\u0440\u0438\u0439_\u043a\u0430\u0440\u0442\u0430_\u0441\u0442\u0435\u0439\u043a\u0445\u043e\u043b\u0434\u0435\u0440\u043e\u0432_\u0440\u0435\u0435\u0441\u0442\u0440_\u0434\u043e\u043f\u0443\u0449\u0435\u043d\u0438\u0439_\u0440\u0435\u0435\u0441\u0442\u0440_\u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0445_\u0432\u043e\u043f\u0440\u043e\u0441\u043e\u0432",
+      "docs_srd_00_scope_lock_scope_amendment_scope_amd_01_\u044d\u0442\u043e\u0442_\u0445\u043e\u0434",
+      "docs_srd_00_scope_lock_\u0442\u0435\u0440\u043c\u0438\u043d\u043e\u043b\u043e\u0433\u0438\u0447\u0435\u0441\u043a\u0430\u044f_\u043f\u0440\u0430\u0432\u043a\u0430_\u0441\u0430\u043c\u043e\u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0430_\u043d\u0435_\u0434\u0438\u0440\u0435\u043a\u0442\u0438\u0432\u0430_\u043e\u043f\u0435\u0440\u0430\u0442\u043e\u0440\u0430"
+    ],
+    "12": [
+      "docs_srd_08_developer_backlog",
+      "docs_srd_08_developer_backlog_08_developer_backlog",
+      "docs_srd_08_developer_backlog_confirmation_gate_applies_before_every_subsequent_type_not_just_this_first_one",
+      "docs_srd_08_developer_backlog_cross_cutting_notes_for_the_developer_gathered_from_every_chapter_s_fine_print",
+      "docs_srd_08_developer_backlog_deferred_phase_analytics_analytics_repo_started_only_after_the_above_is_substantially_stable",
+      "docs_srd_08_developer_backlog_phase_0_schema_tables_dictionaries_schema_repo",
+      "docs_srd_08_developer_backlog_phase_1_one_task_type_end_to_end_taskgen_grader_repos_first_commits",
+      "docs_srd_08_developer_backlog_phase_2_remaining_types_one_at_a_time_curriculum_order"
+    ],
+    "13": [
+      "docs_srd_backend_integration",
+      "docs_srd_backend_integration_1_repository_split_and_what_each_one_owns",
+      "docs_srd_backend_integration_2_shared_validation_pipeline_lives_in_schema_imported_by_grader",
+      "docs_srd_backend_integration_3_cas_security_boundary_reserved_still_no_consumer_but_now_schedule_relevant",
+      "docs_srd_backend_integration_4_golden_tests",
+      "docs_srd_backend_integration_5_api_contracts",
+      "docs_srd_backend_integration_6_event_journal_fr_008_write_side_contract",
+      "docs_srd_backend_integration_backend_integration"
+    ],
+    "14": [
+      "docs_srd_03_architecture",
+      "docs_srd_03_architecture_03_architecture",
+      "docs_srd_03_architecture_context_diagram",
+      "docs_srd_03_architecture_erd_revised_findings_a_b_e_g_applied",
+      "docs_srd_03_architecture_sequence_answer_submission_via_qr_unchanged_pattern_new_owning_service",
+      "docs_srd_03_architecture_sequence_generation_via_job_queue_fr_007",
+      "docs_srd_03_architecture_state_machine_taskinstance_lifecycle"
+    ],
+    "15": [
+      "docs_srd_04_nfr_risk_ops",
+      "docs_srd_04_nfr_risk_ops_04_nfr_risk_ops",
+      "docs_srd_04_nfr_risk_ops_failure_modes",
+      "docs_srd_04_nfr_risk_ops_observability",
+      "docs_srd_04_nfr_risk_ops_performance_availability",
+      "docs_srd_04_nfr_risk_ops_raid_register",
+      "docs_srd_04_nfr_risk_ops_security_stride_per_trust_boundary_updated_for_3_services"
+    ],
+    "16": [
+      "docs_srd_data_governance",
+      "docs_srd_data_governance_data_governance",
+      "docs_srd_data_governance_data_inventory_classification_updated_for_users_students_split",
+      "docs_srd_data_governance_deletion_export",
+      "docs_srd_data_governance_lawful_basis_and_consent",
+      "docs_srd_data_governance_minimization_retention",
+      "docs_srd_data_governance_residency_sub_processors"
+    ],
+    "17": [
+      "docs_srd_01_current_state",
+      "docs_srd_01_current_state_01_current_state",
+      "docs_srd_01_current_state_1_\u0447\u0442\u043e_\u043f\u043e\u0434\u0430\u043d\u043e_\u0430_\u0447\u0442\u043e_\u043d\u0435\u0442_\u0431\u0435\u0437_\u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0439_\u0441_\u043f\u0440\u043e\u0448\u043b\u043e\u0433\u043e_\u0445\u043e\u0434\u0430",
+      "docs_srd_01_current_state_2_\u0436\u0451\u0441\u0442\u043a\u0438\u0435_\u0442\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u0435_\u043e\u0433\u0440\u0430\u043d\u0438\u0447\u0435\u043d\u0438\u044f_\u043f\u0435\u0440\u0435\u0441\u043c\u043e\u0442\u0440\u0435\u043d\u044b_\u044d\u0442\u0438\u043c_\u0445\u043e\u0434\u043e\u043c",
+      "docs_srd_01_current_state_3_\u0440\u0430\u043d\u0435\u0435_\u043f\u0440\u0438\u043d\u044f\u0442\u044b\u0435_\u0440\u0435\u0448\u0435\u043d\u0438\u044f_\u0441\u0442\u0430\u0442\u0443\u0441",
+      "docs_srd_01_current_state_4_\u0447\u0442\u043e_\u043d\u0435_\u043c\u043e\u0434\u0438\u0444\u0438\u0446\u0438\u0440\u0443\u0435\u0442\u0441\u044f_\u0431\u0435\u0437_\u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0439"
+    ],
+    "18": [
+      "docs_srd_00_index",
+      "docs_srd_00_index_00_\u0438\u043d\u0434\u0435\u043a\u0441_\u0430\u0440\u0442\u0435\u0444\u0430\u043a\u0442\u043e\u0432_\u0442\u0440\u0435\u043a\u0430_math_task_catalog",
+      "docs_srd_00_index_\u0440\u0435\u0435\u0441\u0442\u0440_\u0434\u043e\u043f\u0443\u0449\u0435\u043d\u0438\u0439_\u0438_\u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0445_\u0432\u043e\u043f\u0440\u043e\u0441\u043e\u0432_\u0441\u0432\u043e\u0434\u043d\u044b\u0439_\u043e\u0431\u043d\u043e\u0432\u043b\u0451\u043d",
+      "docs_srd_00_index_\u0440\u0435\u0435\u0441\u0442\u0440_\u0440\u0435\u043f\u043e\u0437\u0438\u0442\u043e\u0440\u0438\u0435\u0432_\u0432\u0432\u0435\u0434\u0451\u043d_\u044d\u0442\u0438\u043c_\u0445\u043e\u0434\u043e\u043c_\u0441\u043c_adr_006"
+    ],
+    "19": [
+      "docs_srd_05_decisions",
+      "docs_srd_05_decisions_05_decisions_adrs"
+    ],
+    "20": [
+      "migrations_000001_create_phase0_schema_down"
+    ],
+    "21": [
+      "migrations_000002_seed_dictionaries_down"
+    ],
+    "22": [
+      "migrations_000002_seed_dictionaries_up"
+    ],
+    "23": [
+      "migrations_000003_add_idempotency_constraints_down"
+    ],
+    "24": [
+      "migrations_000003_add_idempotency_constraints_up"
+    ],
+    "25": [
+      "migrations_000004_create_service_roles_down"
+    ],
+    "26": [
+      "migrations_000004_create_service_roles_up"
+    ],
+    "27": [
+      "migrations_000005_task_type_grade_band_down"
+    ],
+    "28": [
+      "migrations_000005_task_type_grade_band_up"
+    ],
+    "29": [
+      "pkg_github_com_berdsa_mathprep_schema"
+    ]
+  },
+  "cohesion": {
+    "0": 0.03636363636363636,
+    "1": 0.05555555555555555,
+    "2": 0.2022792022792023,
+    "3": 0.16,
+    "4": 0.19480519480519481,
+    "5": 0.24761904761904763,
+    "6": 0.18181818181818182,
+    "7": 0.2,
+    "8": 0.2,
+    "9": 0.2222222222222222,
+    "10": 0.2222222222222222,
+    "11": 0.25,
+    "12": 0.25,
+    "13": 0.25,
+    "14": 0.2857142857142857,
+    "15": 0.2857142857142857,
+    "16": 0.2857142857142857,
+    "17": 0.3333333333333333,
+    "18": 0.5,
+    "19": 1.0,
+    "20": 1.0,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0,
+    "24": 1.0,
+    "25": 1.0,
+    "26": 1.0,
+    "27": 1.0,
+    "28": 1.0,
+    "29": 1.0
+  },
+  "gods": [
+    {
+      "id": "docs_srd_07_task_type_specs_exemplars_07_wave_a_exemplar_task_type_specs",
+      "label": "07 \u2014 Wave-A Exemplar Task-Type Specs",
+      "degree": 54
+    },
+    {
+      "id": "docs_agent_log_agent_log",
+      "label": "Agent log",
+      "degree": 35
+    },
+    {
+      "id": "validation_result",
+      "label": "Result",
+      "degree": 15
+    },
+    {
+      "id": "pkg_core_validation_pipeline_validate",
+      "label": "Validate()",
+      "degree": 12
+    },
+    {
+      "id": "docs_srd_02_requirements_02_requirements",
+      "label": "02 \u2014 Requirements",
+      "degree": 10
+    },
+    {
+      "id": "migrations_000001_create_phase0_schema_up_task_type",
+      "label": "task_type",
+      "degree": 9
+    },
+    {
+      "id": "pkg_core_validation_pipeline_validateexactint",
+      "label": "ValidateExactInt()",
+      "degree": 9
+    },
+    {
+      "id": "docs_srd_00_conventions_00_conventions",
+      "label": "00 \u2014 Conventions",
+      "degree": 9
+    },
+    {
+      "id": "docs_srd_math_task_catalog_math_task_type_catalog_grade_1_to_university",
+      "label": "Math Task Type Catalog \u2014 Grade 1 to University",
+      "degree": 9
+    },
+    {
+      "id": "core_reasoncode",
+      "label": "ReasonCode",
+      "degree": 8
+    }
+  ],
+  "surprises": [
+    {
+      "source": "TestValidateInterval()",
+      "target": "ValidateInterval()",
+      "source_files": [
+        "pkg/core/validation/pipeline_test.go",
+        "pkg/core/validation/pipeline.go"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "TestValidateSet()",
+      "target": "ValidateSet()",
+      "source_files": [
+        "pkg/core/validation/pipeline_test.go",
+        "pkg/core/validation/pipeline.go"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "TestValidateRatio()",
+      "target": "ValidateRatio()",
+      "source_files": [
+        "pkg/core/validation/pipeline_test.go",
+        "pkg/core/validation/pipeline.go"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "TestValidateTol()",
+      "target": "ValidateTol()",
+      "source_files": [
+        "pkg/core/validation/pipeline_test.go",
+        "pkg/core/validation/pipeline.go"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "TestValidateExactRat()",
+      "target": "ValidateExactRat()",
+      "source_files": [
+        "pkg/core/validation/pipeline_test.go",
+        "pkg/core/validation/pipeline.go"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}

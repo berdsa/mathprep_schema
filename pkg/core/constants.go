@@ -110,6 +110,33 @@ const (
 	ReasonCASTimeout             ReasonCode = "CAS_TIMEOUT"
 )
 
+type CASEvaluationOperationType string
+
+const (
+	CASEvaluationOperationEquivalence CASEvaluationOperationType = "EQUIVALENCE"
+)
+
+type CASEvaluationStatus string
+
+const (
+	CASEvaluationStatusPending    CASEvaluationStatus = "PENDING"
+	CASEvaluationStatusInProgress CASEvaluationStatus = "IN_PROGRESS"
+	CASEvaluationStatusDone       CASEvaluationStatus = "DONE"
+	CASEvaluationStatusFailed     CASEvaluationStatus = "FAILED"
+)
+
+type EventType string
+
+const (
+	EventTypeGenerationRequested    EventType = "GENERATION_REQUESTED"
+	EventTypeGenerationCompleted    EventType = "GENERATION_COMPLETED"
+	EventTypeGenerationFailed       EventType = "GENERATION_FAILED"
+	EventTypeSubmissionGraded       EventType = "SUBMISSION_GRADED"
+	EventTypeMasteryUpdated         EventType = "MASTERY_UPDATED"
+	EventTypeCASEvaluationCompleted EventType = "CAS_EVALUATION_COMPLETED"
+	EventTypeCASEvaluationFailed    EventType = "CAS_EVALUATION_FAILED"
+)
+
 type RenderTarget string
 
 const (

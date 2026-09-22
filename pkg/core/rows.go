@@ -94,9 +94,30 @@ type MasteryTopic struct {
 
 type EventLog struct {
 	EventID     uuid.UUID
-	EventType   string
+	EventType   EventType
 	OccurredAt  time.Time
 	PayloadJSON json.RawMessage
+}
+
+type CASEvaluationRequest struct {
+	RequestID           uuid.UUID
+	RequesterID         uuid.UUID
+	SessionID           string
+	OperationType       CASEvaluationOperationType
+	CandidateExpression string
+	ReferenceExpression string
+	PolicyJSON          json.RawMessage
+	Status              CASEvaluationStatus
+	Verdict             *Verdict
+	ReasonCode          *ReasonCode
+	ResultJSON          json.RawMessage
+	CreatedAt           time.Time
+	StartedAt           *time.Time
+	CompletedAt         *time.Time
+	LeaseExpiresAt      *time.Time
+	HeartbeatAt         *time.Time
+	WallDeadlineAt      time.Time
+	AttemptCount        int
 }
 
 // Row aliases make the database-facing purpose explicit while keeping the
@@ -110,3 +131,4 @@ type TaskInstanceRow = TaskInstance
 type SubmissionRow = Submission
 type MasteryTopicRow = MasteryTopic
 type EventLogRow = EventLog
+type CASEvaluationRequestRow = CASEvaluationRequest
