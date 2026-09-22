@@ -1,11 +1,11 @@
 # Graph Report - schema  (2026-09-22)
 
 ## Corpus Check
-- 40 files · ~56,610 words
+- 40 files · ~56,642 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 605 nodes · 732 edges · 37 communities (35 shown, 2 thin omitted)
+- 606 nodes · 733 edges · 37 communities (35 shown, 2 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 19 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
@@ -39,7 +39,7 @@
 
 ## God Nodes (most connected - your core abstractions)
 1. `07 — Wave-A Exemplar Task-Type Specs` - 215 edges
-2. `Agent log` - 120 edges
+2. `Agent log` - 121 edges
 3. `Result` - 17 edges
 4. `Validate()` - 16 edges
 5. `ValidateExactInt()` - 12 edges
@@ -72,7 +72,7 @@ Nodes (215): 07 — Wave-A Exemplar Task-Type Specs, G10-ALG-001,003..005,007..0
 
 ### Community 1 - "Agent log"
 Cohesion: 0.02
-Nodes (120): 2026-09-19 — Phase 0 base DDL, 2026-09-19 — Phase 0 dictionary seeds, 2026-09-19 — Phase 0 forbidden-write probes, 2026-09-19 — Phase 0 idempotency constraints, 2026-09-19 — Phase 0 migration plan, 2026-09-19 — Phase 0 migration verification, 2026-09-19 — Phase 0 service roles and grants, 2026-09-19 — Phase 0 summary (+112 more)
+Nodes (121): 2026-09-19 — Phase 0 base DDL, 2026-09-19 — Phase 0 dictionary seeds, 2026-09-19 — Phase 0 forbidden-write probes, 2026-09-19 — Phase 0 idempotency constraints, 2026-09-19 — Phase 0 migration plan, 2026-09-19 — Phase 0 migration verification, 2026-09-19 — Phase 0 service roles and grants, 2026-09-19 — Phase 0 summary (+113 more)
 
 ### Community 2 - "pipeline.go"
 Cohesion: 0.10
@@ -143,7 +143,7 @@ Cohesion: 0.50
 Nodes (3): 00 — Индекс артефактов трека `math-task-catalog`, Реестр допущений и открытых вопросов — сводный, обновлён, Реестр репозиториев (введён этим ходом, см. ADR-006)
 
 ## Knowledge Gaps
-- **436 isolated node(s):** `github.com/berdsa/mathprep_schema`, `What this repo is`, `Source of truth`, `Stack`, `Local infra` (+431 more)
+- **437 isolated node(s):** `github.com/berdsa/mathprep_schema`, `What this repo is`, `Source of truth`, `Stack`, `Local infra` (+432 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -155,11 +155,11 @@ _Questions this graph is uniquely positioned to answer:_
 - **Are the 2 inferred relationships involving `Validate()` (e.g. with `TestValidateCanonStrictForm()` and `TestValidateMatrix()`) actually correct?**
   _`Validate()` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `github.com/berdsa/mathprep_schema`, `What this repo is`, `Source of truth` to the rest of the system?**
-  _436 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _437 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `07 — Wave-A Exemplar Task-Type Specs` be split into smaller, more focused modules?**
   _Cohesion score 0.009259259259259259 - nodes in this community are weakly interconnected._
 - **Should `Agent log` be split into smaller, more focused modules?**
-  _Cohesion score 0.01652892561983471 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.01639344262295082 - nodes in this community are weakly interconnected._
 - **Should `pipeline.go` be split into smaller, more focused modules?**
   _Cohesion score 0.10101010101010101 - nodes in this community are weakly interconnected._
 - **Should `constants.go` be split into smaller, more focused modules?**

@@ -2855,6 +2855,17 @@
       "norm_label": "2026-09-22 \u2014 cas evaluation contract"
     },
     {
+      "label": "2026-09-22 \u2014 CAS async API contract draft",
+      "file_type": "document",
+      "source_file": "docs/agent-log.md",
+      "source_location": "L525",
+      "_origin": "ast",
+      "id": "docs_agent_log_2026_09_22_cas_async_api_contract_draft",
+      "community": 1,
+      "community_name": "Agent log",
+      "norm_label": "2026-09-22 \u2014 cas async api contract draft"
+    },
+    {
       "label": "api-contract.md",
       "file_type": "document",
       "source_file": "docs/api-contract.md",
@@ -11201,6 +11212,17 @@
       "_origin": "ast",
       "source": "docs_agent_log_agent_log",
       "target": "docs_agent_log_2026_09_21_taskgen_student_read_grant",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/agent-log.md",
+      "source_location": "L525",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_agent_log_agent_log",
+      "target": "docs_agent_log_2026_09_22_cas_async_api_contract_draft",
       "confidence_score": 1.0
     },
     {

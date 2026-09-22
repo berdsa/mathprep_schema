@@ -50,6 +50,13 @@ type TaskType struct {
 	Locale            Locale
 }
 
+type TaskTypeTemplate struct {
+	TypeID       string
+	Locale       Locale
+	TemplateText string
+	SpecVersion  string
+}
+
 type TaskSet struct {
 	TaskSetID      uuid.UUID
 	StudentID      uuid.UUID

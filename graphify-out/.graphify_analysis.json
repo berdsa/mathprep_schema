@@ -316,6 +316,8 @@
       "docs_agent_log_2026_09_21_phase_3_g1_num_012",
       "docs_agent_log_2026_09_21_phase_3_resumed_with_g1_num_011",
       "docs_agent_log_2026_09_21_taskgen_student_read_grant",
+      "docs_agent_log_2026_09_22_cas_async_api_contract_draft",
+      "docs_agent_log_2026_09_22_cas_evaluation_contract",
       "docs_agent_log_agent_log"
     ],
     "2": [
@@ -336,25 +338,6 @@
       "pkg_core_validation_pipeline_parseratio",
       "pkg_core_validation_pipeline_parseroman",
       "pkg_core_validation_pipeline_romanfromint",
-      "pkg_core_validation_pipeline_test",
-      "pkg_core_validation_pipeline_test_testvalidatebool",
-      "pkg_core_validation_pipeline_test_testvalidatecanonlist",
-      "pkg_core_validation_pipeline_test_testvalidatecanonstrictform",
-      "pkg_core_validation_pipeline_test_testvalidateclocktime",
-      "pkg_core_validation_pipeline_test_testvalidateexactintacceptsnegative",
-      "pkg_core_validation_pipeline_test_testvalidateexactintacceptssixdigits",
-      "pkg_core_validation_pipeline_test_testvalidateexactintboundary",
-      "pkg_core_validation_pipeline_test_testvalidateexactintcorrect",
-      "pkg_core_validation_pipeline_test_testvalidateexactintincorrect",
-      "pkg_core_validation_pipeline_test_testvalidateexactintunparseable",
-      "pkg_core_validation_pipeline_test_testvalidateexactrat",
-      "pkg_core_validation_pipeline_test_testvalidateinterval",
-      "pkg_core_validation_pipeline_test_testvalidatematrix",
-      "pkg_core_validation_pipeline_test_testvalidateratio",
-      "pkg_core_validation_pipeline_test_testvalidateroman",
-      "pkg_core_validation_pipeline_test_testvalidateset",
-      "pkg_core_validation_pipeline_test_testvalidatetol",
-      "pkg_core_validation_pipeline_test_testvalidatetuple",
       "pkg_core_validation_pipeline_validate",
       "pkg_core_validation_pipeline_validatebool",
       "pkg_core_validation_pipeline_validatecanonlist",
@@ -368,43 +351,42 @@
       "pkg_core_validation_pipeline_validateset",
       "pkg_core_validation_pipeline_validatetol",
       "pkg_core_validation_pipeline_validatetuple",
-      "t",
       "validation_numericvalue",
       "validation_parsedexactint",
       "validation_result",
       "validation_stage"
     ],
     "3": [
-      "core_casevaluationoperationtype",
+      "casevaluationoperationtype",
+      "casevaluationstatus",
       "core_casevaluationrequest",
-      "core_casevaluationstatus",
-      "core_domain",
-      "core_equivalencepolicy",
       "core_eventlog",
-      "core_eventtype",
-      "core_generationmode",
       "core_generationrequest",
       "core_generationrequeststatus",
-      "core_gradeband",
-      "core_locale",
       "core_masterytopic",
-      "core_rendertarget",
       "core_student",
       "core_submission",
       "core_taskinstance",
       "core_taskset",
       "core_tasktype",
-      "core_tasktypestatus",
-      "core_tiercode",
       "core_user",
-      "core_usertype",
-      "core_validationmethod",
-      "core_verdict",
-      "pkg_core_constants",
+      "domain",
+      "equivalencepolicy",
+      "eventtype",
+      "generationmode",
+      "gradeband",
       "pkg_core_rows",
+      "pkg_core_rows_go_locale",
       "rawmessage",
+      "reasoncode",
+      "rendertarget",
+      "tasktypestatus",
+      "tiercode",
       "time",
-      "uuid"
+      "usertype",
+      "uuid",
+      "validationmethod",
+      "verdict"
     ],
     "4": [
       "migrations_000001_create_phase0_schema_up",
@@ -428,9 +410,98 @@
       "migrations_000001_create_phase0_schema_up_user_type",
       "migrations_000001_create_phase0_schema_up_users",
       "migrations_000001_create_phase0_schema_up_validation_method",
-      "migrations_000001_create_phase0_schema_up_verdict"
+      "migrations_000001_create_phase0_schema_up_verdict",
+      "migrations_000009_add_cas_evaluation_contract_up",
+      "migrations_000009_add_cas_evaluation_contract_up_cas_evaluation_request",
+      "migrations_000009_add_cas_evaluation_contract_up_cas_evaluation_status",
+      "migrations_000009_add_cas_evaluation_contract_up_cas_operation_type",
+      "migrations_000009_add_cas_evaluation_contract_up_event_type"
     ],
     "5": [
+      "docs_api_contract",
+      "docs_api_contract_200_ok_request_done_with_a_task_set",
+      "docs_api_contract_200_ok_request_not_done",
+      "docs_api_contract_200_ok_response",
+      "docs_api_contract_202_accepted",
+      "docs_api_contract_400_bad_request",
+      "docs_api_contract_401_unauthorized",
+      "docs_api_contract_404_not_found",
+      "docs_api_contract_405_method_not_allowed",
+      "docs_api_contract_422_unprocessable_entity",
+      "docs_api_contract_500_internal_server_error",
+      "docs_api_contract_cas_submission_lifecycle_approved_exception_not_yet_implemented",
+      "docs_api_contract_common_conventions",
+      "docs_api_contract_get_v1_generation_requests_id",
+      "docs_api_contract_grader",
+      "docs_api_contract_http_api_contract_taskgen_and_grader",
+      "docs_api_contract_method_mismatch",
+      "docs_api_contract_post_v1_generation_requests",
+      "docs_api_contract_post_v1_items_id_submissions",
+      "docs_api_contract_request",
+      "docs_api_contract_responses",
+      "docs_api_contract_spec_vs_code_drift_register",
+      "docs_api_contract_taskgen",
+      "docs_api_contract_taskgen_unmatched_paths"
+    ],
+    "6": [
+      "pkg_core_validation_pipeline_test",
+      "pkg_core_validation_pipeline_test_go_t",
+      "pkg_core_validation_pipeline_test_testvalidatebool",
+      "pkg_core_validation_pipeline_test_testvalidatecanonlist",
+      "pkg_core_validation_pipeline_test_testvalidatecanonstrictform",
+      "pkg_core_validation_pipeline_test_testvalidateclocktime",
+      "pkg_core_validation_pipeline_test_testvalidateexactintacceptsnegative",
+      "pkg_core_validation_pipeline_test_testvalidateexactintacceptssixdigits",
+      "pkg_core_validation_pipeline_test_testvalidateexactintboundary",
+      "pkg_core_validation_pipeline_test_testvalidateexactintcorrect",
+      "pkg_core_validation_pipeline_test_testvalidateexactintincorrect",
+      "pkg_core_validation_pipeline_test_testvalidateexactintnegativemismatchisincorrect",
+      "pkg_core_validation_pipeline_test_testvalidateexactintunparseable",
+      "pkg_core_validation_pipeline_test_testvalidateexactrat",
+      "pkg_core_validation_pipeline_test_testvalidateinterval",
+      "pkg_core_validation_pipeline_test_testvalidatematrix",
+      "pkg_core_validation_pipeline_test_testvalidateratio",
+      "pkg_core_validation_pipeline_test_testvalidateroman",
+      "pkg_core_validation_pipeline_test_testvalidateset",
+      "pkg_core_validation_pipeline_test_testvalidatetol",
+      "pkg_core_validation_pipeline_test_testvalidatetuple"
+    ],
+    "7": [
+      "core_tasktypetemplate",
+      "core_tasktypetemplatestore",
+      "core_templatestorestub",
+      "core_templatestorestub_findtasktypelocale",
+      "core_templatestorestub_findtasktypetemplate",
+      "pkg_core_templates",
+      "pkg_core_templates_go_context",
+      "pkg_core_templates_go_locale",
+      "pkg_core_templates_lookuptasktypetemplate",
+      "pkg_core_templates_test",
+      "pkg_core_templates_test_go_context",
+      "pkg_core_templates_test_go_locale",
+      "pkg_core_templates_test_go_t",
+      "pkg_core_templates_test_testlookuptasktypetemplatefallsbacktoprimarylocale",
+      "pkg_core_templates_test_testlookuptasktypetemplatereportsmissingtemplate",
+      "pkg_core_templates_test_testlookuptasktypetemplateusesrequestedlocale"
+    ],
+    "8": [
+      "core_casevaluationoperationtype",
+      "core_casevaluationstatus",
+      "core_domain",
+      "core_equivalencepolicy",
+      "core_eventtype",
+      "core_generationmode",
+      "core_gradeband",
+      "core_locale",
+      "core_rendertarget",
+      "core_tasktypestatus",
+      "core_tiercode",
+      "core_usertype",
+      "core_validationmethod",
+      "core_verdict",
+      "pkg_core_constants"
+    ],
+    "9": [
       "docs_srd_02_requirements",
       "docs_srd_02_requirements_02_requirements",
       "docs_srd_02_requirements_fr_001_generate_a_daily_task_set_with_adaptive_topic_weighting",
@@ -443,7 +514,7 @@
       "docs_srd_02_requirements_fr_008_every_service_call_appends_to_an_immutable_event_journal_new",
       "docs_srd_02_requirements_non_functional_requirements"
     ],
-    "6": [
+    "10": [
       "docs_srd_00_conventions",
       "docs_srd_00_conventions_00_conventions",
       "docs_srd_00_conventions_1_id_scheme",
@@ -455,7 +526,7 @@
       "docs_srd_00_conventions_7_generation_safety_rules",
       "docs_srd_00_conventions_8_cross_service_contract_discipline_new_this_pass"
     ],
-    "7": [
+    "11": [
       "docs_srd_math_task_catalog",
       "docs_srd_math_task_catalog_grade_10_11_ages_15_18",
       "docs_srd_math_task_catalog_grade_1_2_ages_6_8",
@@ -467,7 +538,7 @@
       "docs_srd_math_task_catalog_university_higher_mathematics",
       "docs_srd_math_task_catalog_validation_method_legend"
     ],
-    "8": [
+    "12": [
       "agents",
       "agents_agents_md_schema",
       "agents_conventions",
@@ -478,7 +549,7 @@
       "agents_what_this_repo_is",
       "agents_workflow"
     ],
-    "9": [
+    "13": [
       "docs_srd_06_traceability",
       "docs_srd_06_traceability_06_traceability_glossary_stakeholders_open_items",
       "docs_srd_06_traceability_definition_of_done",
@@ -489,18 +560,7 @@
       "docs_srd_06_traceability_\u0440\u0435\u0435\u0441\u0442\u0440_\u0434\u043e\u043f\u0443\u0449\u0435\u043d\u0438\u0439_consolidated",
       "docs_srd_06_traceability_\u0440\u0435\u0435\u0441\u0442\u0440_\u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0445_\u0432\u043e\u043f\u0440\u043e\u0441\u043e\u0432_consolidated"
     ],
-    "10": [
-      "migrations_000009_add_cas_evaluation_contract_up",
-      "migrations_000009_add_cas_evaluation_contract_up_cas_evaluation_request",
-      "migrations_000009_add_cas_evaluation_contract_up_cas_evaluation_status",
-      "migrations_000009_add_cas_evaluation_contract_up_cas_operation_type",
-      "migrations_000009_add_cas_evaluation_contract_up_event_type",
-      "migrations_000009_add_cas_evaluation_contract_up_sql_event_log",
-      "migrations_000009_add_cas_evaluation_contract_up_sql_verdict",
-      "reason_code",
-      "users"
-    ],
-    "11": [
+    "14": [
       "docs_srd_00_scope_lock",
       "docs_srd_00_scope_lock_00_scope_lock",
       "docs_srd_00_scope_lock_2_\u0432_\u0441\u043a\u043e\u0443\u043f\u0435_\u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u043e",
@@ -510,7 +570,7 @@
       "docs_srd_00_scope_lock_scope_amendment_scope_amd_02_this_pass",
       "docs_srd_00_scope_lock_scope_amendment_scope_amd_03_this_pass"
     ],
-    "12": [
+    "15": [
       "docs_srd_08_developer_backlog",
       "docs_srd_08_developer_backlog_08_developer_backlog",
       "docs_srd_08_developer_backlog_confirmation_gate_applies_before_every_subsequent_type_not_just_this_first_one",
@@ -520,7 +580,7 @@
       "docs_srd_08_developer_backlog_phase_1_one_task_type_end_to_end_taskgen_grader_repos_first_commits",
       "docs_srd_08_developer_backlog_phase_2_remaining_types_one_at_a_time_curriculum_order"
     ],
-    "13": [
+    "16": [
       "docs_srd_backend_integration",
       "docs_srd_backend_integration_1_repository_split_and_what_each_one_owns",
       "docs_srd_backend_integration_2_shared_validation_pipeline_lives_in_schema_imported_by_grader",
@@ -530,7 +590,7 @@
       "docs_srd_backend_integration_6_event_journal_fr_008_write_side_contract",
       "docs_srd_backend_integration_backend_integration"
     ],
-    "14": [
+    "17": [
       "docs_srd_03_architecture",
       "docs_srd_03_architecture_03_architecture",
       "docs_srd_03_architecture_context_diagram",
@@ -539,7 +599,7 @@
       "docs_srd_03_architecture_sequence_generation_via_job_queue_fr_007",
       "docs_srd_03_architecture_state_machine_taskinstance_lifecycle"
     ],
-    "15": [
+    "18": [
       "docs_srd_04_nfr_risk_ops",
       "docs_srd_04_nfr_risk_ops_04_nfr_risk_ops",
       "docs_srd_04_nfr_risk_ops_failure_modes",
@@ -548,7 +608,7 @@
       "docs_srd_04_nfr_risk_ops_raid_register",
       "docs_srd_04_nfr_risk_ops_security_stride_per_trust_boundary_updated_for_3_services"
     ],
-    "16": [
+    "19": [
       "docs_srd_data_governance",
       "docs_srd_data_governance_data_governance",
       "docs_srd_data_governance_data_inventory_classification_updated_for_users_students_split",
@@ -557,7 +617,7 @@
       "docs_srd_data_governance_minimization_retention",
       "docs_srd_data_governance_residency_sub_processors"
     ],
-    "17": [
+    "20": [
       "docs_srd_01_current_state",
       "docs_srd_01_current_state_01_current_state",
       "docs_srd_01_current_state_1_\u0447\u0442\u043e_\u043f\u043e\u0434\u0430\u043d\u043e_\u0430_\u0447\u0442\u043e_\u043d\u0435\u0442_\u0431\u0435\u0437_\u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0439_\u0441_\u043f\u0440\u043e\u0448\u043b\u043e\u0433\u043e_\u0445\u043e\u0434\u0430",
@@ -565,95 +625,104 @@
       "docs_srd_01_current_state_3_\u0440\u0430\u043d\u0435\u0435_\u043f\u0440\u0438\u043d\u044f\u0442\u044b\u0435_\u0440\u0435\u0448\u0435\u043d\u0438\u044f_\u0441\u0442\u0430\u0442\u0443\u0441",
       "docs_srd_01_current_state_4_\u0447\u0442\u043e_\u043d\u0435_\u043c\u043e\u0434\u0438\u0444\u0438\u0446\u0438\u0440\u0443\u0435\u0442\u0441\u044f_\u0431\u0435\u0437_\u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0439"
     ],
-    "18": [
+    "21": [
       "docs_srd_00_index",
       "docs_srd_00_index_00_\u0438\u043d\u0434\u0435\u043a\u0441_\u0430\u0440\u0442\u0435\u0444\u0430\u043a\u0442\u043e\u0432_\u0442\u0440\u0435\u043a\u0430_math_task_catalog",
       "docs_srd_00_index_\u0440\u0435\u0435\u0441\u0442\u0440_\u0434\u043e\u043f\u0443\u0449\u0435\u043d\u0438\u0439_\u0438_\u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0445_\u0432\u043e\u043f\u0440\u043e\u0441\u043e\u0432_\u0441\u0432\u043e\u0434\u043d\u044b\u0439_\u043e\u0431\u043d\u043e\u0432\u043b\u0451\u043d",
       "docs_srd_00_index_\u0440\u0435\u0435\u0441\u0442\u0440_\u0440\u0435\u043f\u043e\u0437\u0438\u0442\u043e\u0440\u0438\u0435\u0432_\u0432\u0432\u0435\u0434\u0451\u043d_\u044d\u0442\u0438\u043c_\u0445\u043e\u0434\u043e\u043c_\u0441\u043c_adr_006"
     ],
-    "19": [
+    "22": [
+      "migrations_000010_task_type_templates_up",
+      "migrations_000010_task_type_templates_up_sql_locale",
+      "migrations_000010_task_type_templates_up_task_type_template",
+      "task_type"
+    ],
+    "23": [
       "docs_srd_05_decisions",
       "docs_srd_05_decisions_05_decisions_adrs"
     ],
-    "20": [
+    "24": [
       "migrations_000001_create_phase0_schema_down"
     ],
-    "21": [
+    "25": [
       "migrations_000002_seed_dictionaries_down"
     ],
-    "22": [
+    "26": [
       "migrations_000002_seed_dictionaries_up"
     ],
-    "23": [
+    "27": [
       "migrations_000003_add_idempotency_constraints_down"
     ],
-    "24": [
+    "28": [
       "migrations_000003_add_idempotency_constraints_up"
     ],
-    "25": [
+    "29": [
       "migrations_000004_create_service_roles_down"
     ],
-    "26": [
+    "30": [
       "migrations_000004_create_service_roles_up"
     ],
-    "27": [
+    "31": [
       "migrations_000005_task_type_grade_band_down"
     ],
-    "28": [
+    "32": [
       "migrations_000005_task_type_grade_band_up"
     ],
-    "29": [
+    "33": [
       "migrations_000006_taskgen_task_type_reconciliation_down"
     ],
-    "30": [
+    "34": [
       "migrations_000006_taskgen_task_type_reconciliation_up"
     ],
-    "31": [
+    "35": [
       "migrations_000007_task_type_catalog_relabel_down"
     ],
-    "32": [
+    "36": [
       "migrations_000007_task_type_catalog_relabel_up"
     ],
-    "33": [
+    "37": [
       "migrations_000008_grant_taskgen_student_read_down"
     ],
-    "34": [
+    "38": [
       "migrations_000008_grant_taskgen_student_read_up"
     ],
-    "35": [
+    "39": [
       "migrations_000009_add_cas_evaluation_contract_down"
     ],
-    "36": [
-      "migrations_000009_add_cas_evaluation_contract_down_sql_event_log"
+    "40": [
+      "migrations_000010_task_type_templates_down"
     ],
-    "37": [
+    "41": [
       "pkg_github_com_berdsa_mathprep_schema"
+    ],
+    "42": [
+      "t"
     ]
   },
   "cohesion": {
     "0": 0.009259259259259259,
-    "1": 0.02040816326530612,
-    "2": 0.10272536687631027,
-    "3": 0.14482758620689656,
-    "4": 0.19480519480519481,
-    "5": 0.18181818181818182,
-    "6": 0.2,
-    "7": 0.2,
-    "8": 0.2222222222222222,
-    "9": 0.2222222222222222,
-    "10": 0.2777777777777778,
-    "11": 0.25,
-    "12": 0.25,
-    "13": 0.25,
-    "14": 0.2857142857142857,
-    "15": 0.2857142857142857,
-    "16": 0.2857142857142857,
-    "17": 0.3333333333333333,
-    "18": 0.5,
-    "19": 1.0,
-    "20": 1.0,
-    "21": 1.0,
-    "22": 1.0,
+    "1": 0.02,
+    "2": 0.1657754010695187,
+    "3": 0.11724137931034483,
+    "4": 0.15669515669515668,
+    "5": 0.10507246376811594,
+    "6": 0.18095238095238095,
+    "7": 0.20833333333333334,
+    "8": 0.13333333333333333,
+    "9": 0.18181818181818182,
+    "10": 0.2,
+    "11": 0.2,
+    "12": 0.2222222222222222,
+    "13": 0.2222222222222222,
+    "14": 0.25,
+    "15": 0.25,
+    "16": 0.25,
+    "17": 0.2857142857142857,
+    "18": 0.2857142857142857,
+    "19": 0.2857142857142857,
+    "20": 0.3333333333333333,
+    "21": 0.5,
+    "22": 0.5,
     "23": 1.0,
     "24": 1.0,
     "25": 1.0,
@@ -668,7 +737,12 @@
     "34": 1.0,
     "35": 1.0,
     "36": 1.0,
-    "37": 1.0
+    "37": 1.0,
+    "38": 1.0,
+    "39": 1.0,
+    "40": 1.0,
+    "41": 1.0,
+    "42": 1.0
   },
   "gods": [
     {
@@ -679,7 +753,7 @@
     {
       "id": "docs_agent_log_agent_log",
       "label": "Agent log",
-      "degree": 97
+      "degree": 99
     },
     {
       "id": "validation_result",
@@ -689,11 +763,11 @@
     {
       "id": "pkg_core_validation_pipeline_validate",
       "label": "Validate()",
-      "degree": 16
+      "degree": 14
     },
     {
-      "id": "pkg_core_validation_pipeline_validateexactint",
-      "label": "ValidateExactInt()",
+      "id": "docs_api_contract_responses",
+      "label": "Responses",
       "degree": 11
     },
     {
@@ -717,23 +791,12 @@
       "degree": 9
     },
     {
-      "id": "core_reasoncode",
-      "label": "ReasonCode",
-      "degree": 9
+      "id": "agents_agents_md_schema",
+      "label": "AGENTS.md \u2014 schema",
+      "degree": 8
     }
   ],
   "surprises": [
-    {
-      "source": "TaskType",
-      "target": "GradeBand",
-      "source_files": [
-        "pkg/core/rows.go",
-        "pkg/core/constants.go"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "peripheral node `GradeBand` unexpectedly reaches hub `TaskType`"
-    },
     {
       "source": "Validate()",
       "target": "ValidationMethod",
@@ -743,40 +806,51 @@
       ],
       "confidence": "EXTRACTED",
       "relation": "references",
-      "why": "bridges separate communities"
+      "why": "bridges separate communities; peripheral node `ValidationMethod` unexpectedly reaches hub `Validate()`"
     },
     {
-      "source": "TaskType",
-      "target": "EquivalencePolicy",
+      "source": "Result",
+      "target": "Verdict",
       "source_files": [
-        "pkg/core/rows.go",
+        "pkg/core/validation/pipeline.go",
         "pkg/core/constants.go"
       ],
       "confidence": "EXTRACTED",
       "relation": "references",
-      "why": "peripheral node `EquivalencePolicy` unexpectedly reaches hub `TaskType`"
+      "why": "bridges separate communities; peripheral node `Verdict` unexpectedly reaches hub `Result`"
     },
     {
-      "source": "TaskType",
-      "target": "GenerationMode",
+      "source": "TestLookupTaskTypeTemplateFallsBackToPrimaryLocale()",
+      "target": "LookupTaskTypeTemplate()",
       "source_files": [
-        "pkg/core/rows.go",
-        "pkg/core/constants.go"
+        "pkg/core/templates_test.go",
+        "pkg/core/templates.go"
       ],
-      "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "peripheral node `GenerationMode` unexpectedly reaches hub `TaskType`"
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source"
     },
     {
-      "source": "TaskType",
-      "target": "TaskTypeStatus",
+      "source": "TestLookupTaskTypeTemplateReportsMissingTemplate()",
+      "target": "LookupTaskTypeTemplate()",
       "source_files": [
-        "pkg/core/rows.go",
-        "pkg/core/constants.go"
+        "pkg/core/templates_test.go",
+        "pkg/core/templates.go"
       ],
-      "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "peripheral node `TaskTypeStatus` unexpectedly reaches hub `TaskType`"
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source"
+    },
+    {
+      "source": "TestLookupTaskTypeTemplateUsesRequestedLocale()",
+      "target": "LookupTaskTypeTemplate()",
+      "source_files": [
+        "pkg/core/templates_test.go",
+        "pkg/core/templates.go"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source"
     }
   ],
   "tokens": {

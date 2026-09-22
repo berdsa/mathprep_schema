@@ -526,3 +526,8 @@
 
 - Documented the approved CAS-only asynchronous submission exception in `docs/api-contract.md`.
 - The endpoint and worker remain unimplemented pending confirmation of the drafted type specifications.
+
+## 2026-09-22 — Task-type template infrastructure
+
+- Added migration `000010_task_type_templates`, the core template row and fallback lookup contract, and focused lookup tests.
+- Seeded the five-type taskgen Phase A pilot with existing wording only; no translation backfill was performed.
