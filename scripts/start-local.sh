@@ -11,6 +11,8 @@ TASKGEN_HTTP_ADDR="${TASKGEN_HTTP_ADDR:-:8081}"
 GRADER_ADDR="${GRADER_ADDR:-:8082}"
 DATABASE_URL="${DATABASE_URL:-postgres://${MATHPREP_DB_USER}:${MATHPREP_DB_PASSWORD}@127.0.0.1:${MATHPREP_PG_PORT}/${MATHPREP_DB_NAME}?sslmode=disable}"
 
+[[ "$MATHPREP_DB_NAME" =~ ^[A-Za-z0-9_]+$ ]] || { echo 'MATHPREP_DB_NAME must contain only letters, digits, and underscores' >&2; exit 1; }
+
 command -v docker >/dev/null || { echo 'docker is required' >&2; exit 1; }
 command -v go >/dev/null || { echo 'go is required' >&2; exit 1; }
 
@@ -36,16 +38,97 @@ for _ in $(seq 1 60); do
 done
 if [[ "$ready" != 1 ]]; then echo 'PostgreSQL did not become ready within 60 seconds' >&2; exit 1; fi
 
+database_exists="$(docker exec -e "PGPASSWORD=$MATHPREP_DB_PASSWORD" "$MATHPREP_PG_CONTAINER" \
+  psql -At -U "$MATHPREP_DB_USER" -d postgres \
+  -c "SELECT 1 FROM pg_database WHERE datname = '$MATHPREP_DB_NAME'")"
+if [[ "$database_exists" != 1 ]]; then
+  docker exec -e "PGPASSWORD=$MATHPREP_DB_PASSWORD" "$MATHPREP_PG_CONTAINER" \
+    createdb -U "$MATHPREP_DB_USER" "$MATHPREP_DB_NAME"
+fi
+
+EXISTING_SERVICE_ROLES="$(docker exec -e "PGPASSWORD=$MATHPREP_DB_PASSWORD" "$MATHPREP_PG_CONTAINER" \
+  psql -At -U "$MATHPREP_DB_USER" -d "$MATHPREP_DB_NAME" \
+  -c "SELECT COALESCE(string_agg(rolname, ','), '') FROM pg_roles WHERE rolname IN ('taskgen_svc','grader_svc','cas_svc')")"
+
+apply_migration() {
+  local migration="$1"
+  if [[ -n "$EXISTING_SERVICE_ROLES" ]]; then
+    MATHPREP_EXISTING_ROLES="$EXISTING_SERVICE_ROLES" awk '
+      function role_exists(role, names, count, i) {
+        count = split(ENVIRON["MATHPREP_EXISTING_ROLES"], names, ",")
+        for (i = 1; i <= count; i++) if (names[i] == role) return 1
+        return 0
+      }
+      /^CREATE ROLE / {
+        role = $3
+        if (role_exists(role)) { skipping = 1; next }
+      }
+      skipping { if ($0 ~ /NOINHERIT;/) skipping = 0; next }
+      { print }
+    ' "$migration" | docker exec -i -e "PGPASSWORD=$MATHPREP_DB_PASSWORD" "$MATHPREP_PG_CONTAINER" \
+      psql -v ON_ERROR_STOP=1 -U "$MATHPREP_DB_USER" -d "$MATHPREP_DB_NAME"
+  else
+    docker exec -i -e "PGPASSWORD=$MATHPREP_DB_PASSWORD" "$MATHPREP_PG_CONTAINER" \
+      psql -v ON_ERROR_STOP=1 -U "$MATHPREP_DB_USER" -d "$MATHPREP_DB_NAME" < "$migration"
+  fi
+}
+
 has_schema="$(docker exec -e "PGPASSWORD=$MATHPREP_DB_PASSWORD" "$MATHPREP_PG_CONTAINER" \
   psql -At -U "$MATHPREP_DB_USER" -d "$MATHPREP_DB_NAME" -c "SELECT to_regclass('public.task_type') IS NOT NULL")"
 if [[ "$has_schema" != t ]]; then
   for migration in "$ROOT"/migrations/*.up.sql; do
+    migration_version="${migration##*/}"
+    migration_version="${migration_version%%_*}"
+    migration_version=$((10#$migration_version))
+    if (( migration_version >= 10 )); then continue; fi
     echo "Applying $(basename "$migration")"
-    docker exec -i -e "PGPASSWORD=$MATHPREP_DB_PASSWORD" "$MATHPREP_PG_CONTAINER" \
-      psql -v ON_ERROR_STOP=1 -U "$MATHPREP_DB_USER" -d "$MATHPREP_DB_NAME" < "$migration"
+    apply_migration "$migration"
+  done
+
+  apply_migration "$ROOT/migrations/000011_add_answer_widget_dictionary.up.sql"
+  apply_migration "$ROOT/migrations/000012_add_task_type_widget_columns.up.sql"
+
+  echo 'Reconciling the task_type catalog before applying template migrations'
+  (
+    cd "$ROOT/../taskgen"
+    GOTOOLCHAIN="${GOTOOLCHAIN:-auto}" DATABASE_URL="$DATABASE_URL" TASKGEN_RECONCILE_ONLY=1 go run ./cmd/taskgen
+  )
+
+  for migration in "$ROOT"/migrations/*.up.sql; do
+    migration_version="${migration##*/}"
+    migration_version="${migration_version%%_*}"
+    migration_version=$((10#$migration_version))
+    if (( migration_version != 10 && (migration_version < 13 || migration_version >= 25) )); then continue; fi
+    echo "Applying $(basename "$migration")"
+    apply_migration "$migration"
+  done
+  for migration in "$ROOT"/migrations/*.up.sql; do
+    migration_version="${migration##*/}"
+    migration_version="${migration_version%%_*}"
+    migration_version=$((10#$migration_version))
+    if (( migration_version < 25 )); then continue; fi
+    echo "Applying $(basename "$migration")"
+    apply_migration "$migration"
   done
 else
-  echo 'Existing task_type table found; migrations were not replayed.'
+  echo 'Existing task_type table found; reconciling catalog before replaying idempotent Phase B template seeds.'
+  (
+    cd "$ROOT/../taskgen"
+    GOTOOLCHAIN="${GOTOOLCHAIN:-auto}" DATABASE_URL="$DATABASE_URL" TASKGEN_RECONCILE_ONLY=1 go run ./cmd/taskgen
+  )
+  for migration in "$ROOT"/migrations/*.up.sql; do
+    migration_version="${migration##*/}"
+    migration_version="${migration_version%%_*}"
+    migration_version=$((10#$migration_version))
+    if (( migration_version < 25 )); then continue; fi
+    echo "Applying $(basename "$migration")"
+    apply_migration "$migration"
+  done
+fi
+
+if [[ "${MATHPREP_BOOTSTRAP_ONLY:-0}" == 1 ]]; then
+  echo 'Bootstrap migrations and task_type reconciliation completed; service startup skipped.'
+  exit 0
 fi
 
 mkdir -p "$ROOT/.local-run"

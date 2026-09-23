@@ -632,8 +632,19 @@
 - Added Russian plaintext templates for G6-NUM-001, 003–008 and G6-STA-001. Question examples are agreement-invariant or phrased without variable noun agreement; remainder and absolute-value tasks retain their exact targets.
 - Added additive migration `000037_seed_g6_number_statistics_ru_templates_batch4` with a scoped down migration. Taskgen changes are committed separately.
 
+## 2026-09-24 — Phase B fresh-database template migration ordering
+
+- Fresh migration replay exposed that the registry catalog is populated by taskgen `Reconcile()`, after schema DDL; template migrations from `000025` onward therefore cannot run before catalog reconciliation because of the `task_type` foreign key.
+- Updated `scripts/start-local.sh` to apply migrations through widget-column prerequisites `000012`, run taskgen in reconcile-only mode, then apply template-table/key migrations `000010`, `000013`–`000024`, and the Phase B template seeds. On an existing schema it reconciles first and replays only the idempotent Phase B template seeds.
+- This makes the local bootstrap order explicit; taskgen changes are committed separately.
+
 ## 2026-09-23 — CAS sign-off status correction
 
 - Updated the canonical SRD's CAS status references to match `taskgen/docs/signoffs/OPEN-06.md` (Ken approval; shared infrastructure gate closed; per-type Confirmation Gates remain).
 - Corrected the CAS-related findings in `docs/system-audit-2026-09-23.md` after key-based authentication, successful push verification, and an exact-HEAD scratch-clone comparison.
 - Documentation-only change; no schema/module version tag created.
+
+## 2026-09-24 — Phase B Russian template backfill, Stage 2 batch 1
+
+- Added Russian plaintext templates for `G1-NUM-011`–`G1-NUM-020`. The five apple word problems use count-based, agreement-invariant phrasing while preserving each original unknown and operation.
+- Added additive migration `000038_seed_g1_number_ru_templates_batch1` with a scoped, reversible down migration. Taskgen rendering changes are committed separately.

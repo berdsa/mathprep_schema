@@ -1,192 +1,148 @@
-# Graph Report - schema  (2026-09-24)
+# Graph Report - .  (2026-09-24)
 
 ## Corpus Check
-- 104 files · ~79,038 words
-- Verdict: corpus is large enough that graph structure adds value.
+- cluster-only mode — file stats not available
 
 ## Summary
-- 735 nodes · 818 edges · 99 communities (91 shown, 8 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.8)
-- Token cost: 0 input · 0 output
+- 264 nodes · 349 edges · 101 communities (83 shown, 18 thin omitted)
+- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 27 edges (avg confidence: 0.81)
+- Token cost: 107 input · 10 output
 
 ## Graph Freshness
-- Built from commit: `06613b9d`
+- Built from commit: `42b4f95e`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- 07 — Wave-A Exemplar Task-Type Specs
-- Agent log
-- constants.go
 - pipeline.go
+- constants.go
 - 000001_create_phase0_schema.up.sql
-- Responses
-- Widget configuration and LaTeX metadata log
-- 02 — Requirements
-- 00 — Conventions
-- Math Task Type Catalog — Grade 1 to University
-- AGENTS.md — schema
+- pipeline_test.go
+- Locale
 - 06 — Traceability, Glossary, Stakeholders, Open Items
-- 00 — Scope Lock
-- 08 — Developer Backlog
-- Backend Integration
-- 03 — Architecture
+- Service: taskgen
 - 04 — NFR, Risk, Ops
-- Data Governance
+- Phase 1 — One task type, end to end
 - Delivery Integration Contract
-- 01 — Current State
+- Validation-method legend
 - TestAnswerWidgetDictionaryValues
-- 00 — Индекс артефактов трека `math-task-catalog`
-- 2026-09-23 — Widget metadata and optional LaTeX templates
-- 05-decisions.md
-- 000011_add_answer_widget_dictionary.up.sql
-- answer-widget-migration-report.md
-- task-type-template-infrastructure.md
-- github.com/berdsa/mathprep_schema
-- Cross-repository readiness audit — 2026-09-23
 - start-local.sh
-- local-development.md
+- Agent Log
+- Scope Amendment 01: Grade 1 to University
+- Task: Multi-digit addition (G4-NUM-001)
+- 000011_add_answer_widget_dictionary.up.sql
+- Answer-widget Migration Report
+- Local Service Startup
+- 00 — Index of Artifacts
+- Scope Amendment 02: Multi-locale Support
+- Constraint: Go + PostgreSQL Only
+- Constraint: Independent Repositories
+- G1-NUM-014 — Add three one-digit numbers
+- U-FUN-002 — Sum of a convergent series
+- Cross-repository Readiness Audit
+- Task-type Template Infrastructure
+- Widget Configuration Log
+- github.com/berdsa/mathprep_schema
 
 ## God Nodes (most connected - your core abstractions)
-1. `07 — Wave-A Exemplar Task-Type Specs` - 215 edges
-2. `Agent log` - 129 edges
-3. `Result` - 17 edges
-4. `Validate()` - 16 edges
-5. `2026-09-23 — Widget metadata and optional LaTeX templates` - 14 edges
-6. `ValidateExactInt()` - 12 edges
-7. `task_type` - 10 edges
-8. `TaskType` - 10 edges
-9. `02 — Requirements` - 10 edges
-10. `ReasonCode` - 9 edges
+1. `Result` - 17 edges
+2. `Validate()` - 16 edges
+3. `ValidateExactInt()` - 12 edges
+4. `task_type` - 10 edges
+5. `TaskType` - 10 edges
+6. `ReasonCode` - 9 edges
+7. `Locale` - 8 edges
+8. `CASEvaluationRequest` - 8 edges
+9. `LookupTaskTypeTemplate()` - 8 edges
+10. `06 — Traceability, Glossary, Stakeholders, Open Items` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `TaskType` --references--> `GradeBand`  [EXTRACTED]
-  pkg/core/rows.go → pkg/core/constants.go
-- `Validate()` --references--> `ValidationMethod`  [EXTRACTED]
-  pkg/core/validation/pipeline.go → pkg/core/constants.go
-- `TaskType` --references--> `EquivalencePolicy`  [EXTRACTED]
-  pkg/core/rows.go → pkg/core/constants.go
-- `TaskType` --references--> `GenerationMode`  [EXTRACTED]
-  pkg/core/rows.go → pkg/core/constants.go
-- `TaskType` --references--> `TaskTypeStatus`  [EXTRACTED]
-  pkg/core/rows.go → pkg/core/constants.go
+- `TestValidateCanonStrictForm()` --calls--> `Validate()`  [INFERRED]
+  pkg/core/validation/pipeline_test.go → pkg/core/validation/pipeline.go
+- `TestValidateMatrix()` --calls--> `Validate()`  [INFERRED]
+  pkg/core/validation/pipeline_test.go → pkg/core/validation/pipeline.go
+- `TestValidateClockTime()` --calls--> `ValidateClockTime()`  [INFERRED]
+  pkg/core/validation/pipeline_test.go → pkg/core/validation/pipeline.go
+- `TestValidateInterval()` --calls--> `ValidateInterval()`  [INFERRED]
+  pkg/core/validation/pipeline_test.go → pkg/core/validation/pipeline.go
+- `TestValidateSet()` --calls--> `ValidateSet()`  [INFERRED]
+  pkg/core/validation/pipeline_test.go → pkg/core/validation/pipeline.go
 
 ## Import Cycles
 - None detected.
 
-## Communities (99 total, 8 thin omitted)
+## Hyperedges (group relationships)
+- **System Requirements & Design (SRD)** — docs_srd_00_conventions, docs_srd_00_index, docs_api_contract, docs_integration_delivery_integration [EXTRACTED 1.00]
+- **Independent Service Architecture** — docs_srd_03_architecture_taskgen, docs_srd_03_architecture_grader, docs_srd_03_architecture_db [EXTRACTED 1.00]
+- **Durable Event Logging Flow** — docs_srd_02_requirements_fr_008, docs_srd_03_architecture_db, docs_srd_03_architecture_taskgen, docs_srd_03_architecture_grader [INFERRED 0.85]
+- **Three-Repository Architecture** — docs_srd_backend_integration_schema_repo, docs_srd_backend_integration_taskgen_repo, docs_srd_backend_integration_grader_repo [EXTRACTED 1.00]
+- **Task Type Definition and Validation** — docs_srd_07_task_type_specs_exemplars_u_cal_007, docs_srd_math_task_catalog_validation_legend, docs_srd_backend_integration_grader_repo [INFERRED 0.85]
 
-### Community 0 - "07 — Wave-A Exemplar Task-Type Specs"
-Cohesion: 0.01
-Nodes (215): 07 — Wave-A Exemplar Task-Type Specs, G10-ALG-001,003..005,007..010 — Rational, theorem, radical, variation, and induction contracts, G10-CAL-001 — Basic limit, G10-PRO-001 — Basic single-event probability, G10-PRO-002 — Compound probability, G10-PRO-003..009 and G10-STA-001 — Sampling, probability, and expected value, G10-TRG-001 — Trigonometric equation, G11-ALG-001 — Linear system via matrices (+207 more)
+## Communities (101 total, 18 thin omitted)
 
-### Community 1 - "Agent log"
-Cohesion: 0.02
-Nodes (129): 2026-09-19 — Phase 0 base DDL, 2026-09-19 — Phase 0 dictionary seeds, 2026-09-19 — Phase 0 forbidden-write probes, 2026-09-19 — Phase 0 idempotency constraints, 2026-09-19 — Phase 0 migration plan, 2026-09-19 — Phase 0 migration verification, 2026-09-19 — Phase 0 service roles and grants, 2026-09-19 — Phase 0 summary (+121 more)
+### Community 0 - "pipeline.go"
+Cohesion: 0.17
+Nodes (31): ReasonCode, CompareExactInt(), flattenNumericValue(), formatNumericValue(), gcd64(), isQuadrantLabel(), isRoman(), joinInts() (+23 more)
 
-### Community 2 - "constants.go"
-Cohesion: 0.09
-Nodes (39): AnswerWidget, CASEvaluationOperationType, CASEvaluationRequest, CASEvaluationStatus, Domain, EquivalencePolicy, EventLog, EventType (+31 more)
+### Community 1 - "constants.go"
+Cohesion: 0.15
+Nodes (27): AnswerWidget, CASEvaluationOperationType, CASEvaluationRequest, CASEvaluationStatus, Domain, EquivalencePolicy, EventLog, EventType (+19 more)
 
-### Community 3 - "pipeline.go"
-Cohesion: 0.10
-Nodes (53): ReasonCode, CompareExactInt(), flattenNumericValue(), formatNumericValue(), gcd64(), isQuadrantLabel(), isRoman(), joinInts() (+45 more)
-
-### Community 4 - "000001_create_phase0_schema.up.sql"
+### Community 2 - "000001_create_phase0_schema.up.sql"
 Cohesion: 0.14
 Nodes (26): domain, equivalence_policy, event_log, generation_mode, generation_request, grade_band, locale, mastery_topic (+18 more)
 
-### Community 5 - "Responses"
-Cohesion: 0.06
-Nodes (32): `200 OK`, request `DONE` with a task set, `200 OK`, request not `DONE`, `200 OK` response, `202 Accepted`, `400 Bad Request`, `400 Bad Request`, `401 Unauthorized`, `401 Unauthorized` (+24 more)
-
-### Community 6 - "Widget configuration and LaTeX metadata log"
-Cohesion: 0.50
-Nodes (3): Checks, Per-type status, Widget configuration and LaTeX metadata log
-
-### Community 7 - "02 — Requirements"
+### Community 3 - "pipeline_test.go"
 Cohesion: 0.18
-Nodes (10): 02 — Requirements, FR-001 — Generate a daily task set with adaptive topic weighting, FR-002 — Validate a submitted answer and return a verdict, FR-003 — Idempotent resubmission, FR-004 — UNPARSEABLE never affects mastery or attempt counters, FR-005 — Defect-triggered invalidation and re-grade, snapshot preserved, FR-006 — Fallback-pool exhaustion never silently shrinks a batch, FR-007 — Generation is mediated by a durable job queue, not an in-request call *(new)* (+2 more)
+Nodes (22): ParseExactInt(), T, TestValidateBool(), TestValidateCanonList(), TestValidateCanonStrictForm(), TestValidateClockTime(), TestValidateExactIntAcceptsNegative(), TestValidateExactIntAcceptsSixDigits() (+14 more)
 
-### Community 8 - "00 — Conventions"
-Cohesion: 0.20
-Nodes (9): 00 — Conventions, 1. ID scheme, 2. Validation-method legend, normalization, and reason codes, 3. Canonical-form grammar, 4. Difficulty tier model, 5. NotationProfile — `ru-KZ`, 6. Data-dictionary tables — **new this pass, Phase-0 deliverable**, 7. Generation-safety rules (+1 more)
+### Community 4 - "Locale"
+Cohesion: 0.23
+Nodes (12): Locale, RenderTarget, TaskTypeTemplate, TaskTypeTemplateStore, templateStoreStub, Context, LookupTaskTypeTemplate(), Context (+4 more)
 
-### Community 9 - "Math Task Type Catalog — Grade 1 to University"
-Cohesion: 0.20
-Nodes (9): Grade 10–11 (ages 15–18), Grade 1–2 (ages 6–8), Grade 3–4 (ages 8–10), Grade 5–6 (ages 10–12), Grade 7–9 (ages 12–15), Math Task Type Catalog — Grade 1 to University, Notes for implementation (methodologist + BA perspective), University (higher mathematics) (+1 more)
-
-### Community 10 - "AGENTS.md — schema"
-Cohesion: 0.22
-Nodes (8): AGENTS.md — schema, Conventions, Local infra, Source of truth, Stack, Testing, What this repo is, Workflow
-
-### Community 11 - "06 — Traceability, Glossary, Stakeholders, Open Items"
+### Community 5 - "06 — Traceability, Glossary, Stakeholders, Open Items"
 Cohesion: 0.22
 Nodes (8): 06 — Traceability, Glossary, Stakeholders, Open Items, Definition of Done, Glossary — carried forward from `00-scope-lock.md` (single normative copy per quality-gate rule), Migration / rollout / rollback, Traceability matrix, Карта стейкхолдеров, Реестр допущений — consolidated, Реестр открытых вопросов — consolidated
 
-### Community 12 - "00 — Scope Lock"
-Cohesion: 0.25
-Nodes (7): 00 — Scope Lock, 2. В скоупе (обновлено), 3. Вне скоупа (обновлено), 4–7. Глоссарий, карта стейкхолдеров, реестр допущений, реестр открытых вопросов, SCOPE AMENDMENT — SCOPE-AMD-01 (этот ход), SCOPE AMENDMENT — SCOPE-AMD-02 (this pass), SCOPE AMENDMENT — SCOPE-AMD-03 (this pass)
+### Community 6 - "Service: taskgen"
+Cohesion: 0.32
+Nodes (8): FR-007: Durable Job Queue, FR-008: Immutable Event Journal, PostgreSQL: mathprep schema, Service: grader, Shared Module: schema, Service: taskgen, ADR-006: Independent Services via Postgres, ADR-007: Shared Schema Module
 
-### Community 13 - "08 — Developer Backlog"
-Cohesion: 0.25
-Nodes (7): 08 — Developer Backlog, Confirmation Gate (applies before every subsequent type, not just this first one), Cross-cutting notes for the developer, gathered from every chapter's fine print, Deferred phase — Analytics (`analytics` repo, started only after the above is substantially stable), Phase 0 — Schema, tables, dictionaries (`schema` repo), Phase 1 — One task type, end to end (`taskgen` + `grader` repos, first commits), Phase 2+ — Remaining types, one at a time, curriculum order
-
-### Community 14 - "Backend Integration"
-Cohesion: 0.25
-Nodes (7): 1. Repository split and what each one owns, 2. Shared validation pipeline (lives in `schema`, imported by `grader`), 3. CAS security boundary — implemented and signed off, 4. Golden tests, 5. API contracts, 6. Event journal (FR-008) — write-side contract, Backend Integration
-
-### Community 15 - "03 — Architecture"
-Cohesion: 0.29
-Nodes (6): 03 — Architecture, Context diagram, ERD — revised (findings A, B, E, G applied), Sequence — answer submission via QR (unchanged pattern, new owning service), Sequence — generation via job queue (FR-007), State machine — TaskInstance lifecycle
-
-### Community 16 - "04 — NFR, Risk, Ops"
+### Community 7 - "04 — NFR, Risk, Ops"
 Cohesion: 0.29
 Nodes (6): 04 — NFR, Risk, Ops, Failure modes, Observability, Performance & availability, RAID register, Security — STRIDE per trust boundary (updated for 3 services)
 
-### Community 17 - "Data Governance"
-Cohesion: 0.29
-Nodes (6): Data Governance, Data inventory & classification — updated for USERS/STUDENTS split, Deletion / export, Lawful basis and consent, Minimization & retention, Residency & sub-processors
-
-### Community 18 - "Delivery Integration Contract"
-Cohesion: 0.17
-Nodes (11): 1. System map (detail: `schema/docs/srd/03-architecture.md`), 2. Endpoints, 3. Authentication — both are placeholders right now, 4. The `answer_widget` / `widget_config` contract, 5. Locale and rendering, 6. What this document deliberately does not decide, Delivery Integration Contract, `GET /v1/generation-requests/:id` — `taskgen` (+3 more)
-
-### Community 19 - "01 — Current State"
+### Community 8 - "Phase 1 — One task type, end to end"
 Cohesion: 0.33
-Nodes (5): 01 — Current State, 1. Что подано, а что нет — без изменений с прошлого хода, 2. Жёсткие технические ограничения — пересмотрены этим ходом, 3. Ранее принятые решения — статус, 4. Что не модифицируется — без изменений
+Nodes (7): G1-NUM-013 — Missing minuend, Phase 0 — Schema, tables, dictionaries, Phase 1 — One task type, end to end, grader repository, schema repository, taskgen repository, Minimization & retention
 
-### Community 21 - "00 — Индекс артефактов трека `math-task-catalog`"
+### Community 9 - "Delivery Integration Contract"
 Cohesion: 0.50
-Nodes (3): 00 — Индекс артефактов трека `math-task-catalog`, Реестр допущений и открытых вопросов — сводный, обновлён, Реестр репозиториев (введён этим ходом, см. ADR-006)
+Nodes (3): HTTP API Contract, Delivery Integration Contract, 00 — Conventions
 
-### Community 22 - "2026-09-23 — Widget metadata and optional LaTeX templates"
-Cohesion: 0.13
-Nodes (14): 2026-09-23 — CAS sign-off status correction, 2026-09-23 — Phase B Russian template backfill, batch 1, 2026-09-23 — Phase B Russian template backfill, batch 2, 2026-09-23 — Phase B Russian template backfill, batch 3, 2026-09-23 — Phase B Russian template backfill, batch 4, 2026-09-23 — Phase B Russian template backfill, batch 5, 2026-09-23 — Phase B Russian template backfill, batch 6, 2026-09-23 — Phase B Russian template backfill, batch 7 (+6 more)
-
-### Community 72 - "Cross-repository readiness audit — 2026-09-23"
-Cohesion: 0.25
-Nodes (7): BA — catalog and metadata, Cross-repository readiness audit — 2026-09-23, Dev — builds, local run, and historical issues, DevOps — graphify and cleanliness, Git state / commits, QA — fresh tests and coverage, SA — architecture and contracts
+### Community 10 - "Validation-method legend"
+Cohesion: 0.67
+Nodes (3): U-CAL-007 — Double integral, U-FUN-001 — Series convergence test, Validation-method legend
 
 ## Knowledge Gaps
-- **479 isolated node(s):** `github.com/berdsa/mathprep_schema`, `answer_widget`, `start-local.sh script`, `What this repo is`, `Source of truth` (+474 more)
+- **37 isolated node(s):** `github.com/berdsa/mathprep_schema`, `answer_widget`, `start-local.sh script`, `Performance & availability`, `Observability` (+32 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **18 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Agent log` connect `Agent log` to `2026-09-23 — Widget metadata and optional LaTeX templates`?**
+- **Why does `ReasonCode` connect `pipeline.go` to `constants.go`, `pipeline_test.go`?**
   _High betweenness centrality (0.037) - this node is a cross-community bridge._
+- **Why does `Result` connect `pipeline.go` to `constants.go`, `pipeline_test.go`?**
+  _High betweenness centrality (0.030) - this node is a cross-community bridge._
+- **Why does `Locale` connect `Locale` to `constants.go`?**
+  _High betweenness centrality (0.029) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `Validate()` (e.g. with `TestValidateCanonStrictForm()` and `TestValidateMatrix()`) actually correct?**
   _`Validate()` has 2 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 6 inferred relationships involving `ValidateExactInt()` (e.g. with `TestValidateExactIntAcceptsNegative()` and `TestValidateExactIntAcceptsSixDigits()`) actually correct?**
+  _`ValidateExactInt()` has 6 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `github.com/berdsa/mathprep_schema`, `answer_widget`, `start-local.sh script` to the rest of the system?**
-  _479 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `07 — Wave-A Exemplar Task-Type Specs` be split into smaller, more focused modules?**
-  _Cohesion score 0.009259259259259259 - nodes in this community are weakly interconnected._
-- **Should `Agent log` be split into smaller, more focused modules?**
-  _Cohesion score 0.015503875968992248 - nodes in this community are weakly interconnected._
-- **Should `constants.go` be split into smaller, more focused modules?**
-  _Cohesion score 0.09494949494949495 - nodes in this community are weakly interconnected._
-- **Should `pipeline.go` be split into smaller, more focused modules?**
-  _Cohesion score 0.10101010101010101 - nodes in this community are weakly interconnected._
+  _37 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `000001_create_phase0_schema.up.sql` be split into smaller, more focused modules?**
+  _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._

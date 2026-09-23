@@ -1,3 +1,5 @@
 .DS_Store
 /.local-run/
 /graphify-out/cache/ast/
+/graphify-out/cache/semantic/
+/graphify-out/.graphify_semantic_marker

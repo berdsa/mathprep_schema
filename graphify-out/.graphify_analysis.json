@@ -1,364 +1,6 @@
 {
   "communities": {
     "0": [
-      "docs_srd_07_task_type_specs_exemplars",
-      "docs_srd_07_task_type_specs_exemplars_07_wave_a_exemplar_task_type_specs",
-      "docs_srd_07_task_type_specs_exemplars_g10_alg_001_003_005_007_010_rational_theorem_radical_variation_and_induction_contracts",
-      "docs_srd_07_task_type_specs_exemplars_g10_cal_001_basic_limit",
-      "docs_srd_07_task_type_specs_exemplars_g10_pro_001_basic_single_event_probability",
-      "docs_srd_07_task_type_specs_exemplars_g10_pro_002_compound_probability",
-      "docs_srd_07_task_type_specs_exemplars_g10_pro_003_009_and_g10_sta_001_sampling_probability_and_expected_value",
-      "docs_srd_07_task_type_specs_exemplars_g10_trg_001_trigonometric_equation",
-      "docs_srd_07_task_type_specs_exemplars_g11_alg_001_linear_system_via_matrices",
-      "docs_srd_07_task_type_specs_exemplars_g11_fun_001_exponential_equation",
-      "docs_srd_07_task_type_specs_exemplars_g11_log_001_logarithmic_equation",
-      "docs_srd_07_task_type_specs_exemplars_g11_mat_001_matrix_operations",
-      "docs_srd_07_task_type_specs_exemplars_g11_num_001_complex_number_arithmetic",
-      "docs_srd_07_task_type_specs_exemplars_g11_pro_001_conditional_probability",
-      "docs_srd_07_task_type_specs_exemplars_g1_geo_001_2d_or_3d_classification",
-      "docs_srd_07_task_type_specs_exemplars_g1_geo_002_half_fraction",
-      "docs_srd_07_task_type_specs_exemplars_g1_geo_003_fourth_fraction",
-      "docs_srd_07_task_type_specs_exemplars_g1_geo_004_shaded_fraction",
-      "docs_srd_07_task_type_specs_exemplars_g1_geo_005_equal_parts_count",
-      "docs_srd_07_task_type_specs_exemplars_g1_geo_006_boolean_shape_property",
-      "docs_srd_07_task_type_specs_exemplars_g1_geo_007_compare_sides",
-      "docs_srd_07_task_type_specs_exemplars_g1_geo_008_shape_with_four_equal_sides",
-      "docs_srd_07_task_type_specs_exemplars_g1_geo_009_total_sides_of_two_shapes",
-      "docs_srd_07_task_type_specs_exemplars_g1_mea_001_length_addition",
-      "docs_srd_07_task_type_specs_exemplars_g1_mea_002_length_subtraction",
-      "docs_srd_07_task_type_specs_exemplars_g1_mea_003_compare_lengths",
-      "docs_srd_07_task_type_specs_exemplars_g1_mea_004_order_lengths",
-      "docs_srd_07_task_type_specs_exemplars_g1_mea_005_time_plus_hours",
-      "docs_srd_07_task_type_specs_exemplars_g1_mea_006_time_plus_half_hour",
-      "docs_srd_07_task_type_specs_exemplars_g1_mea_007_time_minus_half_hour",
-      "docs_srd_07_task_type_specs_exemplars_g1_mea_008_unit_selection_for_length",
-      "docs_srd_07_task_type_specs_exemplars_g1_mea_009_true_false_measurement_comparison",
-      "docs_srd_07_task_type_specs_exemplars_g1_mea_010_length_difference_word_problem",
-      "docs_srd_07_task_type_specs_exemplars_g1_num_002_subtraction_within_range",
-      "docs_srd_07_task_type_specs_exemplars_g1_num_003_number_comparison",
-      "docs_srd_07_task_type_specs_exemplars_g1_num_004_missing_addend",
-      "docs_srd_07_task_type_specs_exemplars_g1_num_007_ordering_a_list",
-      "docs_srd_07_task_type_specs_exemplars_g1_num_011_addition_within_20",
-      "docs_srd_07_task_type_specs_exemplars_g1_num_012_missing_subtrahend",
-      "docs_srd_07_task_type_specs_exemplars_g1_num_013_missing_minuend",
-      "docs_srd_07_task_type_specs_exemplars_g1_num_014_add_three_one_digit_numbers",
-      "docs_srd_07_task_type_specs_exemplars_g1_num_015_compare_expression_to_number",
-      "docs_srd_07_task_type_specs_exemplars_g1_num_016_word_problem_add_result_unknown",
-      "docs_srd_07_task_type_specs_exemplars_g1_num_017_word_problem_add_change_unknown",
-      "docs_srd_07_task_type_specs_exemplars_g1_num_018_word_problem_add_start_unknown",
-      "docs_srd_07_task_type_specs_exemplars_g1_num_019_word_problem_subtract_result_unknown",
-      "docs_srd_07_task_type_specs_exemplars_g1_num_020_word_problem_subtract_change_unknown",
-      "docs_srd_07_task_type_specs_exemplars_g1_num_021_word_problem_subtract_start_unknown",
-      "docs_srd_07_task_type_specs_exemplars_g1_num_022_commutative_property",
-      "docs_srd_07_task_type_specs_exemplars_g1_num_023_fact_family_subtraction",
-      "docs_srd_07_task_type_specs_exemplars_g1_num_024_true_false_equation",
-      "docs_srd_07_task_type_specs_exemplars_g1_num_025_multi_step_add_subtraction",
-      "docs_srd_07_task_type_specs_exemplars_g1_num_026_subtract_one_digit_without_borrowing",
-      "docs_srd_07_task_type_specs_exemplars_g1_sta_001_data_total",
-      "docs_srd_07_task_type_specs_exemplars_g1_sta_002_data_difference",
-      "docs_srd_07_task_type_specs_exemplars_g1_sta_003_data_most_category",
-      "docs_srd_07_task_type_specs_exemplars_g1_sta_004_data_total_pets",
-      "docs_srd_07_task_type_specs_exemplars_g2_geo_010_shape_property_lookup",
-      "docs_srd_07_task_type_specs_exemplars_g2_geo_011_shape_sides_lookup",
-      "docs_srd_07_task_type_specs_exemplars_g2_geo_012_shape_vertices_lookup",
-      "docs_srd_07_task_type_specs_exemplars_g2_geo_013_shape_with_n_sides",
-      "docs_srd_07_task_type_specs_exemplars_g2_geo_014_3d_faces_lookup",
-      "docs_srd_07_task_type_specs_exemplars_g2_geo_015_cube_edges",
-      "docs_srd_07_task_type_specs_exemplars_g2_geo_016_cube_vertices",
-      "docs_srd_07_task_type_specs_exemplars_g2_geo_017_022_solid_and_grid_geometry",
-      "docs_srd_07_task_type_specs_exemplars_g2_geo_023_031_fractions_and_shape_properties",
-      "docs_srd_07_task_type_specs_exemplars_g2_mea_008_money_counting",
-      "docs_srd_07_task_type_specs_exemplars_g2_mea_009_013_length_operations",
-      "docs_srd_07_task_type_specs_exemplars_g2_mea_014_016_clock_arithmetic",
-      "docs_srd_07_task_type_specs_exemplars_g2_mea_017_am_pm_selection",
-      "docs_srd_07_task_type_specs_exemplars_g2_mea_018_019_measurement_checks",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_001_addition_within_range",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_005_simple_word_problem_addition_subtraction",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_006_place_value",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_009_skip_counting_next_term",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_010_next_number",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_011_previous_number",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_012_tens_digit",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_013_ones_digit",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_014_place_value_decomposition",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_015_value_of_tens_digit",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_016_value_of_ones_digit",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_017_compare_two_digit_numbers",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_018_order_three_numbers",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_019_add_multiple_of_10",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_020_subtract_multiple_of_10",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_021_ten_more_than_n",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_022_ten_less_than_n",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_023_add_two_digit_and_one_digit_without_carry",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_024_skip_count_by_10s",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_025_skip_count_by_5s",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_026_skip_count_by_2s",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_027_number_from_tens_and_ones",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_028_expanded_form_to_number",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_029_missing_middle_in_count",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_030_greater_of_two_numbers",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_031_034_addition_subtraction_within_100",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_035_038_elementary_add_subtract_relations",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_039_047_groups_comparison_parity_and_multiplication_facts",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_048_051_additive_relations",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_052_056_place_value",
-      "docs_srd_07_task_type_specs_exemplars_g2_num_057_062_three_digit_comparison_and_sequences",
-      "docs_srd_07_task_type_specs_exemplars_g2_sta_001_005_data_counts_and_sums",
-      "docs_srd_07_task_type_specs_exemplars_g3_fra_008_unit_fraction_of_a_quantity",
-      "docs_srd_07_task_type_specs_exemplars_g3_fra_009_014_elementary_fraction_representations",
-      "docs_srd_07_task_type_specs_exemplars_g3_geo_001_009_fractions_and_quadrilateral_geometry",
-      "docs_srd_07_task_type_specs_exemplars_g3_mea_009_perimeter_of_rectangle_square",
-      "docs_srd_07_task_type_specs_exemplars_g3_mea_010_area_of_rectangle_square",
-      "docs_srd_07_task_type_specs_exemplars_g3_mea_011_016_time_and_unit_conversion",
-      "docs_srd_07_task_type_specs_exemplars_g3_mea_017_018_area_and_perimeter",
-      "docs_srd_07_task_type_specs_exemplars_g3_num_002_multiplication_fact",
-      "docs_srd_07_task_type_specs_exemplars_g3_num_003_exact_division",
-      "docs_srd_07_task_type_specs_exemplars_g3_num_006_order_of_operations",
-      "docs_srd_07_task_type_specs_exemplars_g3_num_007_rounding",
-      "docs_srd_07_task_type_specs_exemplars_g3_num_011_division_with_remainder",
-      "docs_srd_07_task_type_specs_exemplars_g3_num_013_simple_sequence_pattern",
-      "docs_srd_07_task_type_specs_exemplars_g3_num_014_division_with_remainder",
-      "docs_srd_07_task_type_specs_exemplars_g3_num_015_missing_factor",
-      "docs_srd_07_task_type_specs_exemplars_g3_num_016_missing_divisor",
-      "docs_srd_07_task_type_specs_exemplars_g3_num_017_missing_dividend",
-      "docs_srd_07_task_type_specs_exemplars_g3_num_018_multiplication_as_repeated_addition",
-      "docs_srd_07_task_type_specs_exemplars_g3_num_019_division_as_sharing",
-      "docs_srd_07_task_type_specs_exemplars_g3_num_020_multiplication_word_problem",
-      "docs_srd_07_task_type_specs_exemplars_g3_num_021_division_word_problem",
-      "docs_srd_07_task_type_specs_exemplars_g3_num_022_028_three_digit_arithmetic",
-      "docs_srd_07_task_type_specs_exemplars_g3_num_029_035_sequences_and_multiplication_properties",
-      "docs_srd_07_task_type_specs_exemplars_g3_num_036_041_multiplication_properties_and_patterns",
-      "docs_srd_07_task_type_specs_exemplars_g3_num_042_047_rounding_and_multi_digit_arithmetic",
-      "docs_srd_07_task_type_specs_exemplars_g3_sta_001_004_graph_and_pictograph_readings",
-      "docs_srd_07_task_type_specs_exemplars_g4_fra_001_008_fraction_equivalence_and_operations",
-      "docs_srd_07_task_type_specs_exemplars_g4_geo_001_007_lines_angles_triangles_quadrilaterals_and_symmetry",
-      "docs_srd_07_task_type_specs_exemplars_g4_mea_002_unit_conversion",
-      "docs_srd_07_task_type_specs_exemplars_g4_mea_003_010_unit_conversion_and_rectangle_measurement",
-      "docs_srd_07_task_type_specs_exemplars_g4_mea_011_015_and_g4_sta_001_composite_measurement_line_plot_and_angles",
-      "docs_srd_07_task_type_specs_exemplars_g4_num_001_multi_digit_addition_with_carry",
-      "docs_srd_07_task_type_specs_exemplars_g4_num_002_008_multi_digit_place_value_and_multiplication",
-      "docs_srd_07_task_type_specs_exemplars_g4_num_004_multi_digit_add_sub_carry_borrow",
-      "docs_srd_07_task_type_specs_exemplars_g4_num_005_simple_word_problem_addition_subtraction_hybrid_ai",
-      "docs_srd_07_task_type_specs_exemplars_g4_num_009_011_division_and_multi_step_arithmetic",
-      "docs_srd_07_task_type_specs_exemplars_g4_num_012_roman_numeral_conversion",
-      "docs_srd_07_task_type_specs_exemplars_g4_num_013_018_factors_and_multiplicative_patterns",
-      "docs_srd_07_task_type_specs_exemplars_g4_num_019_022_operations_and_comparisons",
-      "docs_srd_07_task_type_specs_exemplars_g4_num_023_026_large_number_place_value_and_arithmetic",
-      "docs_srd_07_task_type_specs_exemplars_g4_num_027_031_large_multiplication_division_and_estimation",
-      "docs_srd_07_task_type_specs_exemplars_g4_num_032_036_large_number_comparison_and_representation",
-      "docs_srd_07_task_type_specs_exemplars_g5_dec_001_decimal_arithmetic",
-      "docs_srd_07_task_type_specs_exemplars_g5_dec_009_015_decimal_arithmetic_and_estimation",
-      "docs_srd_07_task_type_specs_exemplars_g5_dis_001_prime_factorization",
-      "docs_srd_07_task_type_specs_exemplars_g5_fra_001_002_g5_dec_002_004_g5_num_003_first_grade_5_arithmetic_contracts",
-      "docs_srd_07_task_type_specs_exemplars_g5_fra_003_fraction_addition_unlike_denominators_proper_result",
-      "docs_srd_07_task_type_specs_exemplars_g5_fra_004_010_fraction_operations_with_unlike_denominators",
-      "docs_srd_07_task_type_specs_exemplars_g5_geo_001_003_and_g5_num_010_shape_properties_and_distributive_property",
-      "docs_srd_07_task_type_specs_exemplars_g5_mea_001_volume_of_a_rectangular_prism",
-      "docs_srd_07_task_type_specs_exemplars_g5_mea_002_007_and_g5_sta_001_conversions_line_plots_and_volume",
-      "docs_srd_07_task_type_specs_exemplars_g5_num_001_gcd_lcm",
-      "docs_srd_07_task_type_specs_exemplars_g5_num_002_divisibility_check",
-      "docs_srd_07_task_type_specs_exemplars_g5_num_004_008_expressions_and_alternating_patterns",
-      "docs_srd_07_task_type_specs_exemplars_g5_num_009_and_g5_dec_005_008_multi_step_arithmetic_and_decimal_place_work",
-      "docs_srd_07_task_type_specs_exemplars_g6_alg_001_linear_equation_1_variable",
-      "docs_srd_07_task_type_specs_exemplars_g6_alg_002_005_exponents_and_algebraic_expressions",
-      "docs_srd_07_task_type_specs_exemplars_g6_alg_006_010_inequalities_and_variable_relationships",
-      "docs_srd_07_task_type_specs_exemplars_g6_dec_001_percentage_of_a_number",
-      "docs_srd_07_task_type_specs_exemplars_g6_dec_002_percentage_change",
-      "docs_srd_07_task_type_specs_exemplars_g6_dec_003_005_g6_fra_008_009_g6_num_004_percent_ratio_and_division_tasks",
-      "docs_srd_07_task_type_specs_exemplars_g6_dec_006_007_g6_num_005_006_g6_fra_010_011_g6_geo_007_signed_numbers_and_rational_comparison",
-      "docs_srd_07_task_type_specs_exemplars_g6_fra_001_proportion_solving",
-      "docs_srd_07_task_type_specs_exemplars_g6_fra_004_fraction_multiplication_division",
-      "docs_srd_07_task_type_specs_exemplars_g6_fra_005_007_ratios_and_unit_rate_language",
-      "docs_srd_07_task_type_specs_exemplars_g6_fra_012_015_and_g6_num_007_008_signed_rational_operations",
-      "docs_srd_07_task_type_specs_exemplars_g6_geo_001_point_quadrant_identification",
-      "docs_srd_07_task_type_specs_exemplars_g6_geo_003_circle_metrics",
-      "docs_srd_07_task_type_specs_exemplars_g6_geo_008_012_areas_fractional_volume_and_surface_area",
-      "docs_srd_07_task_type_specs_exemplars_g6_geo_009_point_quadrant_identification",
-      "docs_srd_07_task_type_specs_exemplars_g6_geo_013_015_and_g6_sta_001_prisms_nets_coordinate_geometry_and_statistical_questions",
-      "docs_srd_07_task_type_specs_exemplars_g6_num_001_ratio_simplification",
-      "docs_srd_07_task_type_specs_exemplars_g6_num_002_negative_number_arithmetic",
-      "docs_srd_07_task_type_specs_exemplars_g6_num_003_g6_fra_002_003_g6_geo_004_006_coordinates_and_introductory_division",
-      "docs_srd_07_task_type_specs_exemplars_g7_alg_002_linear_system_2_variables",
-      "docs_srd_07_task_type_specs_exemplars_g7_alg_005_linear_inequality",
-      "docs_srd_07_task_type_specs_exemplars_g7_alg_006_exponent_rules",
-      "docs_srd_07_task_type_specs_exemplars_g7_alg_008_011_equations_inequalities_and_interval_notation",
-      "docs_srd_07_task_type_specs_exemplars_g7_dec_001_004_percent_error_rates_and_multi_step_percent_arithmetic",
-      "docs_srd_07_task_type_specs_exemplars_g7_fra_001_004_rates_and_proportional_relationships",
-      "docs_srd_07_task_type_specs_exemplars_g7_fra_005_and_g7_alg_001_004_007_decimal_conversion_and_linear_expressions",
-      "docs_srd_07_task_type_specs_exemplars_g7_fun_002_domain_check",
-      "docs_srd_07_task_type_specs_exemplars_g7_fun_003_007_function_basics",
-      "docs_srd_07_task_type_specs_exemplars_g7_geo_001_002_g7_geo_004_006_scale_composite_area_and_cross_sections",
-      "docs_srd_07_task_type_specs_exemplars_g7_geo_003_missing_triangle_angle",
-      "docs_srd_07_task_type_specs_exemplars_g7_geo_007_010_angle_relationships",
-      "docs_srd_07_task_type_specs_exemplars_g7_sta_001_002_and_g7_sta_004_006_statistical_summaries_and_displays",
-      "docs_srd_07_task_type_specs_exemplars_g7_sta_003_measures_of_center_and_spread",
-      "docs_srd_07_task_type_specs_exemplars_g7_sta_007_008_and_g7_alg_012_015_population_comparisons_and_linear_equation_cases",
-      "docs_srd_07_task_type_specs_exemplars_g8_alg_003_quadratic_equation",
-      "docs_srd_07_task_type_specs_exemplars_g8_alg_004_quadratic_inequality",
-      "docs_srd_07_task_type_specs_exemplars_g8_alg_005_009_systems_inequalities_and_exponents",
-      "docs_srd_07_task_type_specs_exemplars_g8_fun_001_function_evaluation",
-      "docs_srd_07_task_type_specs_exemplars_g8_fun_002_003_and_g8_geo_004_007_linear_functions_and_coordinate_geometry",
-      "docs_srd_07_task_type_specs_exemplars_g8_geo_001_pythagorean_theorem",
-      "docs_srd_07_task_type_specs_exemplars_g8_geo_002_distance_between_two_points",
-      "docs_srd_07_task_type_specs_exemplars_g8_num_001_005_irrational_numbers_roots_and_negative_exponents",
-      "docs_srd_07_task_type_specs_exemplars_g8_trg_004_basic_trig_ratio",
-      "docs_srd_07_task_type_specs_exemplars_g9_alg_001_binomial_theorem_term",
-      "docs_srd_07_task_type_specs_exemplars_g9_dis_001_permutations_and_combinations",
-      "docs_srd_07_task_type_specs_exemplars_g9_fun_001_arithmetic_sequence",
-      "docs_srd_07_task_type_specs_exemplars_g9_fun_002_geometric_sequence",
-      "docs_srd_07_task_type_specs_exemplars_g9_geo_002_similar_triangles_ratio",
-      "docs_srd_07_task_type_specs_exemplars_g9_pro_001_g9_sta_003_004_g9_fun_003_g9_geo_003_005_counting_frequency_transformations_and_triangle_trigonometry",
-      "docs_srd_07_task_type_specs_exemplars_g9_vec_001_vector_operations",
-      "docs_srd_07_task_type_specs_exemplars_grade_2_early_number_and_measurement_contracts",
-      "docs_srd_07_task_type_specs_exemplars_grade_3_early_number_contracts",
-      "docs_srd_07_task_type_specs_exemplars_u_cal_001_limit_with_indeterminate_form",
-      "docs_srd_07_task_type_specs_exemplars_u_cal_004_gradient_directional_derivative",
-      "docs_srd_07_task_type_specs_exemplars_u_cal_006_definite_integral",
-      "docs_srd_07_task_type_specs_exemplars_u_cal_007_double_integral",
-      "docs_srd_07_task_type_specs_exemplars_u_fun_001_series_convergence_test",
-      "docs_srd_07_task_type_specs_exemplars_u_fun_002_sum_of_a_convergent_series"
-    ],
-    "1": [
-      "docs_agent_log",
-      "docs_agent_log_2026_09_19_phase_0_base_ddl",
-      "docs_agent_log_2026_09_19_phase_0_dictionary_seeds",
-      "docs_agent_log_2026_09_19_phase_0_forbidden_write_probes",
-      "docs_agent_log_2026_09_19_phase_0_idempotency_constraints",
-      "docs_agent_log_2026_09_19_phase_0_migration_plan",
-      "docs_agent_log_2026_09_19_phase_0_migration_verification",
-      "docs_agent_log_2026_09_19_phase_0_service_roles_and_grants",
-      "docs_agent_log_2026_09_19_phase_0_summary",
-      "docs_agent_log_2026_09_19_repository_initialization",
-      "docs_agent_log_2026_09_20_bool_shared_validator",
-      "docs_agent_log_2026_09_20_canon_list_validator",
-      "docs_agent_log_2026_09_20_exact_rat_shared_validation",
-      "docs_agent_log_2026_09_20_g10_seq_002_specification",
-      "docs_agent_log_2026_09_20_g10_trg_001_notation_correction",
-      "docs_agent_log_2026_09_20_g10_trg_001_specification",
-      "docs_agent_log_2026_09_20_g3_num_002",
-      "docs_agent_log_2026_09_20_g3_num_003",
-      "docs_agent_log_2026_09_20_g3_num_004",
-      "docs_agent_log_2026_09_20_g3_num_006",
-      "docs_agent_log_2026_09_20_g3_num_007",
-      "docs_agent_log_2026_09_20_g3_num_008",
-      "docs_agent_log_2026_09_20_g3_num_009",
-      "docs_agent_log_2026_09_20_g3_num_010",
-      "docs_agent_log_2026_09_20_g3_num_011",
-      "docs_agent_log_2026_09_20_g6_dec_001_specification",
-      "docs_agent_log_2026_09_20_g6_fra_004_specification",
-      "docs_agent_log_2026_09_20_g6_ns_001_specification",
-      "docs_agent_log_2026_09_20_g6_ns_002_specification",
-      "docs_agent_log_2026_09_20_g6_pct_002_specification",
-      "docs_agent_log_2026_09_20_g6_rat_001_preparation",
-      "docs_agent_log_2026_09_20_g6_rp_001_specification",
-      "docs_agent_log_2026_09_20_g7_f_001_specification",
-      "docs_agent_log_2026_09_20_g7_f_002_specification",
-      "docs_agent_log_2026_09_20_g7_geo_004_specification",
-      "docs_agent_log_2026_09_20_g7_sp_003_specification",
-      "docs_agent_log_2026_09_20_one_time_generic_grader_dispatch",
-      "docs_agent_log_2026_09_20_phase_0_step_7_github_remote",
-      "docs_agent_log_2026_09_20_phase_0_step_7_shared_go_module",
-      "docs_agent_log_2026_09_20_shared_go_module_root_correction",
-      "docs_agent_log_2026_09_20_task_type_grade_band_correction",
-      "docs_agent_log_2026_09_20_task_type_reconciliation_grant",
-      "docs_agent_log_2026_09_20_tuple_validator",
-      "docs_agent_log_2026_09_21_catalog_relabel_and_shared_validators",
-      "docs_agent_log_2026_09_21_g1_geo_001_canonical_spec_and_bool_dimensions",
-      "docs_agent_log_2026_09_21_g1_geo_006_canonical_spec",
-      "docs_agent_log_2026_09_21_g1_geo_008_canonical_spec",
-      "docs_agent_log_2026_09_21_g1_mea_001_canonical_spec",
-      "docs_agent_log_2026_09_21_g1_mea_002_canonical_spec",
-      "docs_agent_log_2026_09_21_g1_mea_003_canonical_spec",
-      "docs_agent_log_2026_09_21_g1_mea_004_canonical_spec",
-      "docs_agent_log_2026_09_21_g1_mea_005_canonical_spec",
-      "docs_agent_log_2026_09_21_g1_mea_006_canonical_spec_and_clock_validation",
-      "docs_agent_log_2026_09_21_g1_mea_007_canonical_spec",
-      "docs_agent_log_2026_09_21_g1_mea_008_canonical_spec_and_bool_units",
-      "docs_agent_log_2026_09_21_g1_mea_009_canonical_spec",
-      "docs_agent_log_2026_09_21_g1_mea_010_canonical_spec",
-      "docs_agent_log_2026_09_21_g1_num_013_canonical_spec",
-      "docs_agent_log_2026_09_21_g1_num_014_canonical_spec",
-      "docs_agent_log_2026_09_21_g1_num_015_canonical_spec",
-      "docs_agent_log_2026_09_21_g1_num_016_canonical_spec",
-      "docs_agent_log_2026_09_21_g1_num_017_canonical_spec",
-      "docs_agent_log_2026_09_21_g1_num_018_canonical_spec",
-      "docs_agent_log_2026_09_21_g1_num_019_canonical_spec",
-      "docs_agent_log_2026_09_21_g1_num_020_canonical_spec",
-      "docs_agent_log_2026_09_21_g1_num_021_canonical_spec",
-      "docs_agent_log_2026_09_21_g1_num_022_canonical_spec",
-      "docs_agent_log_2026_09_21_g1_num_023_canonical_spec",
-      "docs_agent_log_2026_09_21_g1_num_024_canonical_spec_and_bool_extension",
-      "docs_agent_log_2026_09_21_g1_num_025_canonical_spec",
-      "docs_agent_log_2026_09_21_g1_num_026_canonical_spec",
-      "docs_agent_log_2026_09_21_g1_sta_003_canonical_spec_and_bool_labels",
-      "docs_agent_log_2026_09_21_g2_geo_014_canonical_spec",
-      "docs_agent_log_2026_09_21_g2_num_010_canonical_spec",
-      "docs_agent_log_2026_09_21_g2_num_011_canonical_spec",
-      "docs_agent_log_2026_09_21_g2_num_012_canonical_spec",
-      "docs_agent_log_2026_09_21_g2_num_013_canonical_spec",
-      "docs_agent_log_2026_09_21_g2_num_014_canonical_spec",
-      "docs_agent_log_2026_09_21_g2_num_015_canonical_spec",
-      "docs_agent_log_2026_09_21_g2_num_016_canonical_spec",
-      "docs_agent_log_2026_09_21_g2_num_017_canonical_spec",
-      "docs_agent_log_2026_09_21_g2_num_018_canonical_spec",
-      "docs_agent_log_2026_09_21_g2_num_019_canonical_spec",
-      "docs_agent_log_2026_09_21_g2_num_020_canonical_spec",
-      "docs_agent_log_2026_09_21_g2_num_021_canonical_spec",
-      "docs_agent_log_2026_09_21_g2_num_022_canonical_spec",
-      "docs_agent_log_2026_09_21_g2_num_023_canonical_spec",
-      "docs_agent_log_2026_09_21_g2_num_024_canonical_spec",
-      "docs_agent_log_2026_09_21_g2_num_025_canonical_spec",
-      "docs_agent_log_2026_09_21_g2_num_026_canonical_spec",
-      "docs_agent_log_2026_09_21_g2_num_027_canonical_spec",
-      "docs_agent_log_2026_09_21_g2_num_028_canonical_spec",
-      "docs_agent_log_2026_09_21_g2_num_029_canonical_spec",
-      "docs_agent_log_2026_09_21_g2_num_030_canonical_spec",
-      "docs_agent_log_2026_09_21_phase_3_g1_num_012",
-      "docs_agent_log_2026_09_21_phase_3_resumed_with_g1_num_011",
-      "docs_agent_log_2026_09_21_taskgen_student_read_grant",
-      "docs_agent_log_2026_09_22_cas_async_api_contract_draft",
-      "docs_agent_log_2026_09_22_cas_evaluation_contract",
-      "docs_agent_log_agent_log"
-    ],
-    "2": [
-      "context",
-      "core_answerwidget",
-      "core_casevaluationoperationtype",
-      "core_casevaluationrequest",
-      "core_casevaluationstatus",
-      "core_domain",
-      "core_equivalencepolicy",
-      "core_eventlog",
-      "core_eventtype",
-      "core_generationmode",
-      "core_generationrequest",
-      "core_generationrequeststatus",
-      "core_gradeband",
-      "core_locale",
-      "core_masterytopic",
-      "core_rendertarget",
-      "core_student",
-      "core_submission",
-      "core_taskinstance",
-      "core_taskset",
-      "core_tasktype",
-      "core_tasktypestatus",
-      "core_tasktypetemplate",
-      "core_templatestorestub",
-      "core_templatestorestub_findtasktypelocale",
-      "core_templatestorestub_findtasktypetemplate",
-      "core_tiercode",
-      "core_user",
-      "core_usertype",
-      "core_validationmethod",
-      "core_verdict",
-      "pkg_core_constants",
-      "pkg_core_rows",
-      "rawmessage",
-      "time",
-      "uuid"
-    ],
-    "3": [
       "core_reasoncode",
       "pkg_core_validation_pipeline",
       "pkg_core_validation_pipeline_compareexactint",
@@ -370,7 +12,6 @@
       "pkg_core_validation_pipeline_joinints",
       "pkg_core_validation_pipeline_normalizeexactint",
       "pkg_core_validation_pipeline_numericvaluesmatch",
-      "pkg_core_validation_pipeline_parseexactint",
       "pkg_core_validation_pipeline_parseexactrat",
       "pkg_core_validation_pipeline_parsenumericvalue",
       "pkg_core_validation_pipeline_parseratio",
@@ -380,7 +21,6 @@
       "pkg_core_validation_pipeline_validatebool",
       "pkg_core_validation_pipeline_validatecanonlist",
       "pkg_core_validation_pipeline_validateclocktime",
-      "pkg_core_validation_pipeline_validateexactint",
       "pkg_core_validation_pipeline_validateexactrat",
       "pkg_core_validation_pipeline_validateinterval",
       "pkg_core_validation_pipeline_validatematrix",
@@ -394,7 +34,38 @@
       "validation_result",
       "validation_stage"
     ],
-    "4": [
+    "1": [
+      "core_answerwidget",
+      "core_casevaluationoperationtype",
+      "core_casevaluationrequest",
+      "core_casevaluationstatus",
+      "core_domain",
+      "core_equivalencepolicy",
+      "core_eventlog",
+      "core_eventtype",
+      "core_generationmode",
+      "core_generationrequest",
+      "core_generationrequeststatus",
+      "core_gradeband",
+      "core_masterytopic",
+      "core_student",
+      "core_submission",
+      "core_taskinstance",
+      "core_taskset",
+      "core_tasktype",
+      "core_tasktypestatus",
+      "core_tiercode",
+      "core_user",
+      "core_usertype",
+      "core_validationmethod",
+      "core_verdict",
+      "pkg_core_constants",
+      "pkg_core_rows",
+      "rawmessage",
+      "time",
+      "uuid"
+    ],
+    "2": [
       "migrations_000001_create_phase0_schema_up",
       "migrations_000001_create_phase0_schema_up_domain",
       "migrations_000001_create_phase0_schema_up_equivalence_policy",
@@ -421,35 +92,12 @@
       "migrations_000009_add_cas_evaluation_contract_up_cas_evaluation_request",
       "migrations_000009_add_cas_evaluation_contract_up_cas_evaluation_status",
       "migrations_000009_add_cas_evaluation_contract_up_cas_operation_type",
-      "migrations_000009_add_cas_evaluation_contract_up_event_type"
+      "migrations_000009_add_cas_evaluation_contract_up_event_type",
+      "migrations_000010_task_type_templates_up",
+      "migrations_000010_task_type_templates_up_task_type_template"
     ],
-    "5": [
-      "docs_api_contract",
-      "docs_api_contract_200_ok_request_done_with_a_task_set",
-      "docs_api_contract_200_ok_request_not_done",
-      "docs_api_contract_200_ok_response",
-      "docs_api_contract_202_accepted",
-      "docs_api_contract_400_bad_request",
-      "docs_api_contract_401_unauthorized",
-      "docs_api_contract_404_not_found",
-      "docs_api_contract_405_method_not_allowed",
-      "docs_api_contract_422_unprocessable_entity",
-      "docs_api_contract_500_internal_server_error",
-      "docs_api_contract_cas_submission_lifecycle_approved_exception_not_yet_implemented",
-      "docs_api_contract_common_conventions",
-      "docs_api_contract_get_v1_generation_requests_id",
-      "docs_api_contract_grader",
-      "docs_api_contract_http_api_contract_taskgen_and_grader",
-      "docs_api_contract_method_mismatch",
-      "docs_api_contract_post_v1_generation_requests",
-      "docs_api_contract_post_v1_items_id_submissions",
-      "docs_api_contract_request",
-      "docs_api_contract_responses",
-      "docs_api_contract_spec_vs_code_drift_register",
-      "docs_api_contract_taskgen",
-      "docs_api_contract_taskgen_unmatched_paths"
-    ],
-    "6": [
+    "3": [
+      "pkg_core_validation_pipeline_parseexactint",
       "pkg_core_validation_pipeline_test",
       "pkg_core_validation_pipeline_test_go_t",
       "pkg_core_validation_pipeline_test_testvalidatebool",
@@ -470,107 +118,49 @@
       "pkg_core_validation_pipeline_test_testvalidateroman",
       "pkg_core_validation_pipeline_test_testvalidateset",
       "pkg_core_validation_pipeline_test_testvalidatetol",
-      "pkg_core_validation_pipeline_test_testvalidatetuple"
+      "pkg_core_validation_pipeline_test_testvalidatetuple",
+      "pkg_core_validation_pipeline_validateexactint"
     ],
-    "7": [
-      "docs_srd_02_requirements",
-      "docs_srd_02_requirements_02_requirements",
-      "docs_srd_02_requirements_fr_001_generate_a_daily_task_set_with_adaptive_topic_weighting",
-      "docs_srd_02_requirements_fr_002_validate_a_submitted_answer_and_return_a_verdict",
-      "docs_srd_02_requirements_fr_003_idempotent_resubmission",
-      "docs_srd_02_requirements_fr_004_unparseable_never_affects_mastery_or_attempt_counters",
-      "docs_srd_02_requirements_fr_005_defect_triggered_invalidation_and_re_grade_snapshot_preserved",
-      "docs_srd_02_requirements_fr_006_fallback_pool_exhaustion_never_silently_shrinks_a_batch",
-      "docs_srd_02_requirements_fr_007_generation_is_mediated_by_a_durable_job_queue_not_an_in_request_call_new",
-      "docs_srd_02_requirements_fr_008_every_service_call_appends_to_an_immutable_event_journal_new",
-      "docs_srd_02_requirements_non_functional_requirements"
+    "4": [
+      "core_locale",
+      "core_rendertarget",
+      "core_tasktypetemplate",
+      "core_tasktypetemplatestore",
+      "core_templatestorestub",
+      "core_templatestorestub_findtasktypelocale",
+      "core_templatestorestub_findtasktypetemplate",
+      "pkg_core_templates",
+      "pkg_core_templates_go_context",
+      "pkg_core_templates_lookuptasktypetemplate",
+      "pkg_core_templates_test",
+      "pkg_core_templates_test_go_context",
+      "pkg_core_templates_test_go_t",
+      "pkg_core_templates_test_testlookuptasktypetemplatefallsbacktoprimarylocale",
+      "pkg_core_templates_test_testlookuptasktypetemplatereportsmissingtemplate",
+      "pkg_core_templates_test_testlookuptasktypetemplateusesrequestedlocale"
     ],
-    "8": [
-      "docs_srd_00_conventions",
-      "docs_srd_00_conventions_00_conventions",
-      "docs_srd_00_conventions_1_id_scheme",
-      "docs_srd_00_conventions_2_validation_method_legend_normalization_and_reason_codes",
-      "docs_srd_00_conventions_3_canonical_form_grammar",
-      "docs_srd_00_conventions_4_difficulty_tier_model",
-      "docs_srd_00_conventions_5_notationprofile_ru_kz",
-      "docs_srd_00_conventions_6_data_dictionary_tables_new_this_pass_phase_0_deliverable",
-      "docs_srd_00_conventions_7_generation_safety_rules",
-      "docs_srd_00_conventions_8_cross_service_contract_discipline_new_this_pass"
-    ],
-    "9": [
-      "docs_srd_math_task_catalog",
-      "docs_srd_math_task_catalog_grade_10_11_ages_15_18",
-      "docs_srd_math_task_catalog_grade_1_2_ages_6_8",
-      "docs_srd_math_task_catalog_grade_3_4_ages_8_10",
-      "docs_srd_math_task_catalog_grade_5_6_ages_10_12",
-      "docs_srd_math_task_catalog_grade_7_9_ages_12_15",
-      "docs_srd_math_task_catalog_math_task_type_catalog_grade_1_to_university",
-      "docs_srd_math_task_catalog_notes_for_implementation_methodologist_ba_perspective",
-      "docs_srd_math_task_catalog_university_higher_mathematics",
-      "docs_srd_math_task_catalog_validation_method_legend"
-    ],
-    "10": [
-      "agents",
-      "agents_agents_md_schema",
-      "agents_conventions",
-      "agents_local_infra",
-      "agents_source_of_truth",
-      "agents_stack",
-      "agents_testing",
-      "agents_what_this_repo_is",
-      "agents_workflow"
-    ],
-    "11": [
+    "5": [
       "docs_srd_06_traceability",
       "docs_srd_06_traceability_06_traceability_glossary_stakeholders_open_items",
       "docs_srd_06_traceability_definition_of_done",
       "docs_srd_06_traceability_glossary_carried_forward_from_00_scope_lock_md_single_normative_copy_per_quality_gate_rule",
       "docs_srd_06_traceability_migration_rollout_rollback",
       "docs_srd_06_traceability_traceability_matrix",
-      "docs_srd_06_traceability_\u043a\u0430\u0440\u0442\u0430_\u0441\u0442\u0435\u0439\u043a\u0445\u043e\u043b\u0434\u0435\u0440\u043e\u0432",
-      "docs_srd_06_traceability_\u0440\u0435\u0435\u0441\u0442\u0440_\u0434\u043e\u043f\u0443\u0449\u0435\u043d\u0438\u0439_consolidated",
-      "docs_srd_06_traceability_\u0440\u0435\u0435\u0441\u0442\u0440_\u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0445_\u0432\u043e\u043f\u0440\u043e\u0441\u043e\u0432_consolidated"
+      "docs_srd_06_traceability_карта_стейкхолдеров",
+      "docs_srd_06_traceability_реестр_допущений_consolidated",
+      "docs_srd_06_traceability_реестр_открытых_вопросов_consolidated"
     ],
-    "12": [
-      "docs_srd_00_scope_lock",
-      "docs_srd_00_scope_lock_00_scope_lock",
-      "docs_srd_00_scope_lock_2_\u0432_\u0441\u043a\u043e\u0443\u043f\u0435_\u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u043e",
-      "docs_srd_00_scope_lock_3_\u0432\u043d\u0435_\u0441\u043a\u043e\u0443\u043f\u0430_\u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u043e",
-      "docs_srd_00_scope_lock_4_7_\u0433\u043b\u043e\u0441\u0441\u0430\u0440\u0438\u0439_\u043a\u0430\u0440\u0442\u0430_\u0441\u0442\u0435\u0439\u043a\u0445\u043e\u043b\u0434\u0435\u0440\u043e\u0432_\u0440\u0435\u0435\u0441\u0442\u0440_\u0434\u043e\u043f\u0443\u0449\u0435\u043d\u0438\u0439_\u0440\u0435\u0435\u0441\u0442\u0440_\u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0445_\u0432\u043e\u043f\u0440\u043e\u0441\u043e\u0432",
-      "docs_srd_00_scope_lock_scope_amendment_scope_amd_01_\u044d\u0442\u043e\u0442_\u0445\u043e\u0434",
-      "docs_srd_00_scope_lock_scope_amendment_scope_amd_02_this_pass",
-      "docs_srd_00_scope_lock_scope_amendment_scope_amd_03_this_pass"
+    "6": [
+      "docs_srd_02_requirements_fr_007",
+      "docs_srd_02_requirements_fr_008",
+      "docs_srd_03_architecture_db",
+      "docs_srd_03_architecture_grader",
+      "docs_srd_03_architecture_schema",
+      "docs_srd_03_architecture_taskgen",
+      "docs_srd_05_decisions_adr_006",
+      "docs_srd_05_decisions_adr_007"
     ],
-    "13": [
-      "docs_srd_08_developer_backlog",
-      "docs_srd_08_developer_backlog_08_developer_backlog",
-      "docs_srd_08_developer_backlog_confirmation_gate_applies_before_every_subsequent_type_not_just_this_first_one",
-      "docs_srd_08_developer_backlog_cross_cutting_notes_for_the_developer_gathered_from_every_chapter_s_fine_print",
-      "docs_srd_08_developer_backlog_deferred_phase_analytics_analytics_repo_started_only_after_the_above_is_substantially_stable",
-      "docs_srd_08_developer_backlog_phase_0_schema_tables_dictionaries_schema_repo",
-      "docs_srd_08_developer_backlog_phase_1_one_task_type_end_to_end_taskgen_grader_repos_first_commits",
-      "docs_srd_08_developer_backlog_phase_2_remaining_types_one_at_a_time_curriculum_order"
-    ],
-    "14": [
-      "docs_srd_backend_integration",
-      "docs_srd_backend_integration_1_repository_split_and_what_each_one_owns",
-      "docs_srd_backend_integration_2_shared_validation_pipeline_lives_in_schema_imported_by_grader",
-      "docs_srd_backend_integration_3_cas_security_boundary_reserved_still_no_consumer_but_now_schedule_relevant",
-      "docs_srd_backend_integration_4_golden_tests",
-      "docs_srd_backend_integration_5_api_contracts",
-      "docs_srd_backend_integration_6_event_journal_fr_008_write_side_contract",
-      "docs_srd_backend_integration_backend_integration"
-    ],
-    "15": [
-      "docs_srd_03_architecture",
-      "docs_srd_03_architecture_03_architecture",
-      "docs_srd_03_architecture_context_diagram",
-      "docs_srd_03_architecture_erd_revised_findings_a_b_e_g_applied",
-      "docs_srd_03_architecture_sequence_answer_submission_via_qr_unchanged_pattern_new_owning_service",
-      "docs_srd_03_architecture_sequence_generation_via_job_queue_fr_007",
-      "docs_srd_03_architecture_state_machine_taskinstance_lifecycle"
-    ],
-    "16": [
+    "7": [
       "docs_srd_04_nfr_risk_ops",
       "docs_srd_04_nfr_risk_ops_04_nfr_risk_ops",
       "docs_srd_04_nfr_risk_ops_failure_modes",
@@ -579,237 +169,328 @@
       "docs_srd_04_nfr_risk_ops_raid_register",
       "docs_srd_04_nfr_risk_ops_security_stride_per_trust_boundary_updated_for_3_services"
     ],
-    "17": [
-      "docs_srd_data_governance",
-      "docs_srd_data_governance_data_governance",
-      "docs_srd_data_governance_data_inventory_classification_updated_for_users_students_split",
-      "docs_srd_data_governance_deletion_export",
-      "docs_srd_data_governance_lawful_basis_and_consent",
-      "docs_srd_data_governance_minimization_retention",
-      "docs_srd_data_governance_residency_sub_processors"
+    "8": [
+      "docs_srd_07_task_type_specs_exemplars_g1_num_013",
+      "docs_srd_08_developer_backlog_phase_0",
+      "docs_srd_08_developer_backlog_phase_1",
+      "docs_srd_backend_integration_grader_repo",
+      "docs_srd_backend_integration_schema_repo",
+      "docs_srd_backend_integration_taskgen_repo",
+      "docs_srd_data_governance_minimization"
     ],
-    "18": [
-      "pkg_core_templates_test",
-      "pkg_core_templates_test_testlookuptasktypetemplatefallsbacktoprimarylocale",
-      "pkg_core_templates_test_testlookuptasktypetemplatereportsmissingtemplate",
-      "pkg_core_templates_test_testlookuptasktypetemplateusesrequestedlocale",
+    "9": [
+      "agents_md",
+      "docs_api_contract",
+      "docs_integration_delivery_integration",
+      "docs_srd_00_conventions"
+    ],
+    "10": [
+      "docs_srd_07_task_type_specs_exemplars_u_cal_007",
+      "docs_srd_07_task_type_specs_exemplars_u_fun_001",
+      "docs_srd_math_task_catalog_validation_legend"
+    ],
+    "11": [
       "pkg_core_widgets_test",
-      "pkg_core_widgets_test_testanswerwidgetdictionaryvalues",
-      "t"
+      "pkg_core_widgets_test_go_t",
+      "pkg_core_widgets_test_testanswerwidgetdictionaryvalues"
     ],
-    "19": [
-      "docs_srd_01_current_state",
-      "docs_srd_01_current_state_01_current_state",
-      "docs_srd_01_current_state_1_\u0447\u0442\u043e_\u043f\u043e\u0434\u0430\u043d\u043e_\u0430_\u0447\u0442\u043e_\u043d\u0435\u0442_\u0431\u0435\u0437_\u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0439_\u0441_\u043f\u0440\u043e\u0448\u043b\u043e\u0433\u043e_\u0445\u043e\u0434\u0430",
-      "docs_srd_01_current_state_2_\u0436\u0451\u0441\u0442\u043a\u0438\u0435_\u0442\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u0435_\u043e\u0433\u0440\u0430\u043d\u0438\u0447\u0435\u043d\u0438\u044f_\u043f\u0435\u0440\u0435\u0441\u043c\u043e\u0442\u0440\u0435\u043d\u044b_\u044d\u0442\u0438\u043c_\u0445\u043e\u0434\u043e\u043c",
-      "docs_srd_01_current_state_3_\u0440\u0430\u043d\u0435\u0435_\u043f\u0440\u0438\u043d\u044f\u0442\u044b\u0435_\u0440\u0435\u0448\u0435\u043d\u0438\u044f_\u0441\u0442\u0430\u0442\u0443\u0441",
-      "docs_srd_01_current_state_4_\u0447\u0442\u043e_\u043d\u0435_\u043c\u043e\u0434\u0438\u0444\u0438\u0446\u0438\u0440\u0443\u0435\u0442\u0441\u044f_\u0431\u0435\u0437_\u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0439"
+    "12": [
+      "scripts_start_local",
+      "scripts_start_local_sh__entry",
+      "scripts_start_local_stop_services"
     ],
-    "20": [
-      "core_tasktypetemplatestore",
-      "pkg_core_templates",
-      "pkg_core_templates_go_context",
-      "pkg_core_templates_go_locale",
-      "pkg_core_templates_lookuptasktypetemplate"
+    "13": [
+      "docs_agent_log"
     ],
-    "21": [
-      "docs_srd_00_index",
-      "docs_srd_00_index_00_\u0438\u043d\u0434\u0435\u043a\u0441_\u0430\u0440\u0442\u0435\u0444\u0430\u043a\u0442\u043e\u0432_\u0442\u0440\u0435\u043a\u0430_math_task_catalog",
-      "docs_srd_00_index_\u0440\u0435\u0435\u0441\u0442\u0440_\u0434\u043e\u043f\u0443\u0449\u0435\u043d\u0438\u0439_\u0438_\u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0445_\u0432\u043e\u043f\u0440\u043e\u0441\u043e\u0432_\u0441\u0432\u043e\u0434\u043d\u044b\u0439_\u043e\u0431\u043d\u043e\u0432\u043b\u0451\u043d",
-      "docs_srd_00_index_\u0440\u0435\u0435\u0441\u0442\u0440_\u0440\u0435\u043f\u043e\u0437\u0438\u0442\u043e\u0440\u0438\u0435\u0432_\u0432\u0432\u0435\u0434\u0451\u043d_\u044d\u0442\u0438\u043c_\u0445\u043e\u0434\u043e\u043c_\u0441\u043c_adr_006"
+    "14": [
+      "docs_srd_00_scope_lock_scope_amd_01",
+      "docs_srd_00_scope_lock_scope_amd_03"
     ],
-    "22": [
-      "migrations_000010_task_type_templates_up",
-      "migrations_000010_task_type_templates_up_sql_locale",
-      "migrations_000010_task_type_templates_up_task_type_template",
-      "task_type"
+    "15": [
+      "docs_srd_07_task_type_specs_exemplars_g4_num_001",
+      "docs_srd_07_task_type_specs_exemplars_g4_num_005"
     ],
-    "23": [
-      "docs_srd_05_decisions",
-      "docs_srd_05_decisions_05_decisions_adrs"
-    ],
-    "24": [
+    "16": [
       "migrations_000011_add_answer_widget_dictionary_up",
       "migrations_000011_add_answer_widget_dictionary_up_answer_widget"
     ],
+    "17": [
+      "docs_answer_widget_migration_report"
+    ],
+    "18": [
+      "docs_local_development"
+    ],
+    "19": [
+      "docs_srd_00_index"
+    ],
+    "20": [
+      "docs_srd_00_scope_lock_scope_amd_02"
+    ],
+    "21": [
+      "docs_srd_01_current_state_con_09"
+    ],
+    "22": [
+      "docs_srd_01_current_state_con_10"
+    ],
+    "23": [
+      "docs_srd_07_task_type_specs_exemplars_g1_num_014"
+    ],
+    "24": [
+      "docs_srd_07_task_type_specs_exemplars_u_fun_002"
+    ],
     "25": [
-      "casevaluationoperationtype"
+      "docs_system_audit_2026_09_23"
     ],
     "26": [
-      "casevaluationstatus"
+      "docs_task_type_template_infrastructure"
     ],
     "27": [
-      "domain"
+      "docs_widget_config_log"
     ],
     "28": [
-      "equivalencepolicy"
-    ],
-    "29": [
-      "eventtype"
-    ],
-    "30": [
-      "generationmode"
-    ],
-    "31": [
-      "gradeband"
-    ],
-    "32": [
       "migrations_000001_create_phase0_schema_down"
     ],
-    "33": [
+    "29": [
       "migrations_000002_seed_dictionaries_down"
     ],
-    "34": [
+    "30": [
       "migrations_000002_seed_dictionaries_up"
     ],
-    "35": [
+    "31": [
       "migrations_000003_add_idempotency_constraints_down"
     ],
-    "36": [
+    "32": [
       "migrations_000003_add_idempotency_constraints_up"
     ],
-    "37": [
+    "33": [
       "migrations_000004_create_service_roles_down"
     ],
-    "38": [
+    "34": [
       "migrations_000004_create_service_roles_up"
     ],
-    "39": [
+    "35": [
       "migrations_000005_task_type_grade_band_down"
     ],
-    "40": [
+    "36": [
       "migrations_000005_task_type_grade_band_up"
     ],
-    "41": [
+    "37": [
       "migrations_000006_taskgen_task_type_reconciliation_down"
     ],
-    "42": [
+    "38": [
       "migrations_000006_taskgen_task_type_reconciliation_up"
     ],
-    "43": [
+    "39": [
       "migrations_000007_task_type_catalog_relabel_down"
     ],
-    "44": [
+    "40": [
       "migrations_000007_task_type_catalog_relabel_up"
     ],
-    "45": [
+    "41": [
       "migrations_000008_grant_taskgen_student_read_down"
     ],
-    "46": [
+    "42": [
       "migrations_000008_grant_taskgen_student_read_up"
     ],
-    "47": [
+    "43": [
       "migrations_000009_add_cas_evaluation_contract_down"
     ],
-    "48": [
+    "44": [
       "migrations_000010_task_type_templates_down"
     ],
-    "49": [
+    "45": [
       "migrations_000011_add_answer_widget_dictionary_down"
     ],
-    "50": [
+    "46": [
       "migrations_000012_add_task_type_widget_columns_down"
     ],
-    "51": [
-      "migrations_000012_add_task_type_widget_columns_down_sql_task_type"
-    ],
-    "52": [
+    "47": [
       "migrations_000012_add_task_type_widget_columns_up"
     ],
-    "53": [
-      "migrations_000012_add_task_type_widget_columns_up_sql_task_type"
-    ],
-    "54": [
+    "48": [
       "migrations_000013_extend_task_type_template_key_down"
     ],
-    "55": [
-      "migrations_000013_extend_task_type_template_key_down_sql_task_type_template"
-    ],
-    "56": [
+    "49": [
       "migrations_000013_extend_task_type_template_key_up"
     ],
-    "57": [
-      "migrations_000013_extend_task_type_template_key_up_sql_task_type_template"
-    ],
-    "58": [
+    "50": [
       "migrations_000014_activate_latex_render_target_down"
     ],
-    "59": [
+    "51": [
       "migrations_000014_activate_latex_render_target_up"
     ],
-    "60": [
+    "52": [
       "migrations_000015_map_task_type_answer_widgets_down"
     ],
-    "61": [
+    "53": [
       "migrations_000015_map_task_type_answer_widgets_up"
     ],
-    "62": [
+    "54": [
       "migrations_000016_seed_bool_widget_choices_down"
     ],
-    "63": [
+    "55": [
       "migrations_000016_seed_bool_widget_choices_up"
     ],
+    "56": [
+      "migrations_000017_seed_tuple_widget_configs_down"
+    ],
+    "57": [
+      "migrations_000017_seed_tuple_widget_configs_up"
+    ],
+    "58": [
+      "migrations_000018_seed_set_widget_configs_down"
+    ],
+    "59": [
+      "migrations_000018_seed_set_widget_configs_up"
+    ],
+    "60": [
+      "migrations_000019_seed_matrix_widget_configs_down"
+    ],
+    "61": [
+      "migrations_000019_seed_matrix_widget_configs_up"
+    ],
+    "62": [
+      "migrations_000020_seed_canon_widget_configs_batch_1_down"
+    ],
+    "63": [
+      "migrations_000020_seed_canon_widget_configs_batch_1_up"
+    ],
     "64": [
-      "pkg_core_rows_go_locale"
+      "migrations_000021_seed_canon_widget_configs_batch_2_down"
     ],
     "65": [
-      "pkg_core_templates_test_go_context"
+      "migrations_000021_seed_canon_widget_configs_batch_2_up"
     ],
     "66": [
-      "pkg_core_templates_test_go_locale"
+      "migrations_000022_seed_canon_widget_configs_batch_3_down"
     ],
     "67": [
-      "pkg_core_templates_test_go_t"
+      "migrations_000022_seed_canon_widget_configs_batch_3_up"
     ],
     "68": [
-      "pkg_github_com_berdsa_mathprep_schema"
+      "migrations_000023_seed_canon_widget_configs_batch_4_down"
     ],
     "69": [
-      "reasoncode"
+      "migrations_000023_seed_canon_widget_configs_batch_4_up"
     ],
     "70": [
-      "rendertarget"
+      "migrations_000024_seed_latex_templates_down"
     ],
     "71": [
-      "tasktypestatus"
+      "migrations_000024_seed_latex_templates_up"
     ],
     "72": [
-      "tiercode"
+      "migrations_000025_seed_g3_fraction_geometry_ru_templates_down"
     ],
     "73": [
-      "usertype"
+      "migrations_000025_seed_g3_fraction_geometry_ru_templates_up"
     ],
     "74": [
-      "validationmethod"
+      "migrations_000026_seed_g3_geometry_measurement_ru_templates_down"
     ],
     "75": [
-      "verdict"
+      "migrations_000026_seed_g3_geometry_measurement_ru_templates_up"
+    ],
+    "76": [
+      "migrations_000027_seed_g3_measurement_number_ru_templates_down"
+    ],
+    "77": [
+      "migrations_000027_seed_g3_measurement_number_ru_templates_up"
+    ],
+    "78": [
+      "migrations_000028_seed_g3_number_ru_templates_down"
+    ],
+    "79": [
+      "migrations_000028_seed_g3_number_ru_templates_up"
+    ],
+    "80": [
+      "migrations_000029_seed_g3_number_ru_templates_batch2_down"
+    ],
+    "81": [
+      "migrations_000029_seed_g3_number_ru_templates_batch2_up"
+    ],
+    "82": [
+      "migrations_000030_seed_g3_number_ru_templates_batch3_down"
+    ],
+    "83": [
+      "migrations_000030_seed_g3_number_ru_templates_batch3_up"
+    ],
+    "84": [
+      "migrations_000031_seed_g3_stats_g6_algebra_ru_templates_down"
+    ],
+    "85": [
+      "migrations_000031_seed_g3_stats_g6_algebra_ru_templates_up"
+    ],
+    "86": [
+      "migrations_000032_seed_g3_early_g6_algebra_ru_templates_down"
+    ],
+    "87": [
+      "migrations_000032_seed_g3_early_g6_algebra_ru_templates_up"
+    ],
+    "88": [
+      "migrations_000033_seed_g6_algebra_decimal_ru_templates_down"
+    ],
+    "89": [
+      "migrations_000033_seed_g6_algebra_decimal_ru_templates_up"
+    ],
+    "90": [
+      "migrations_000034_seed_g6_fraction_ru_templates_batch1_down"
+    ],
+    "91": [
+      "migrations_000034_seed_g6_fraction_ru_templates_batch1_up"
+    ],
+    "92": [
+      "migrations_000035_seed_g6_fraction_geometry_ru_templates_batch2_down"
+    ],
+    "93": [
+      "migrations_000035_seed_g6_fraction_geometry_ru_templates_batch2_up"
+    ],
+    "94": [
+      "migrations_000036_seed_g6_geometry_ru_templates_batch3_down"
+    ],
+    "95": [
+      "migrations_000036_seed_g6_geometry_ru_templates_batch3_up"
+    ],
+    "96": [
+      "migrations_000037_seed_g6_number_statistics_ru_templates_batch4_down"
+    ],
+    "97": [
+      "migrations_000037_seed_g6_number_statistics_ru_templates_batch4_up"
+    ],
+    "98": [
+      "pkg_github_com_berdsa_mathprep_schema"
+    ],
+    "99": [
+      "migrations_000038_seed_g1_number_ru_templates_batch1_down"
+    ],
+    "100": [
+      "migrations_000038_seed_g1_number_ru_templates_batch1_up"
     ]
   },
   "cohesion": {
-    "0": 0.009259259259259259,
-    "1": 0.02,
-    "2": 0.12380952380952381,
-    "3": 0.1657754010695187,
-    "4": 0.15669515669515668,
-    "5": 0.10507246376811594,
-    "6": 0.18095238095238095,
-    "7": 0.18181818181818182,
-    "8": 0.2,
-    "9": 0.2,
-    "10": 0.2222222222222222,
-    "11": 0.2222222222222222,
-    "12": 0.25,
-    "13": 0.25,
-    "14": 0.25,
-    "15": 0.2857142857142857,
-    "16": 0.2857142857142857,
-    "17": 0.2857142857142857,
-    "18": 0.38095238095238093,
-    "19": 0.3333333333333333,
-    "20": 0.5,
-    "21": 0.5,
-    "22": 0.5,
+    "0": 0.16733870967741934,
+    "1": 0.15024630541871922,
+    "2": 0.14285714285714285,
+    "3": 0.18181818181818182,
+    "4": 0.225,
+    "5": 0.2222222222222222,
+    "6": 0.32142857142857145,
+    "7": 0.2857142857142857,
+    "8": 0.3333333333333333,
+    "9": 0.5,
+    "10": 0.6666666666666666,
+    "11": 0.6666666666666666,
+    "12": 0.6666666666666666,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0,
+    "19": 1.0,
+    "20": 1.0,
+    "21": 1.0,
+    "22": 1.0,
     "23": 1.0,
     "24": 1.0,
     "25": 1.0,
@@ -862,19 +543,34 @@
     "72": 1.0,
     "73": 1.0,
     "74": 1.0,
-    "75": 1.0
+    "75": 1.0,
+    "76": 1.0,
+    "77": 1.0,
+    "78": 1.0,
+    "79": 1.0,
+    "80": 1.0,
+    "81": 1.0,
+    "82": 1.0,
+    "83": 1.0,
+    "84": 1.0,
+    "85": 1.0,
+    "86": 1.0,
+    "87": 1.0,
+    "88": 1.0,
+    "89": 1.0,
+    "90": 1.0,
+    "91": 1.0,
+    "92": 1.0,
+    "93": 1.0,
+    "94": 1.0,
+    "95": 1.0,
+    "96": 1.0,
+    "97": 1.0,
+    "98": 1.0,
+    "99": 1.0,
+    "100": 1.0
   },
   "gods": [
-    {
-      "id": "docs_srd_07_task_type_specs_exemplars_07_wave_a_exemplar_task_type_specs",
-      "label": "07 \u2014 Wave-A Exemplar Task-Type Specs",
-      "degree": 215
-    },
-    {
-      "id": "docs_agent_log_agent_log",
-      "label": "Agent log",
-      "degree": 99
-    },
     {
       "id": "validation_result",
       "label": "Result",
@@ -883,16 +579,16 @@
     {
       "id": "pkg_core_validation_pipeline_validate",
       "label": "Validate()",
-      "degree": 14
+      "degree": 16
     },
     {
-      "id": "docs_api_contract_responses",
-      "label": "Responses",
-      "degree": 11
+      "id": "pkg_core_validation_pipeline_validateexactint",
+      "label": "ValidateExactInt()",
+      "degree": 12
     },
     {
-      "id": "docs_srd_02_requirements_02_requirements",
-      "label": "02 \u2014 Requirements",
+      "id": "migrations_000001_create_phase0_schema_up_task_type",
+      "label": "task_type",
       "degree": 10
     },
     {
@@ -901,80 +597,123 @@
       "degree": 10
     },
     {
-      "id": "migrations_000001_create_phase0_schema_up_task_type",
-      "label": "task_type",
+      "id": "core_reasoncode",
+      "label": "ReasonCode",
       "degree": 9
     },
     {
-      "id": "docs_srd_00_conventions_00_conventions",
-      "label": "00 \u2014 Conventions",
-      "degree": 9
+      "id": "core_locale",
+      "label": "Locale",
+      "degree": 8
     },
     {
-      "id": "docs_srd_math_task_catalog_math_task_type_catalog_grade_1_to_university",
-      "label": "Math Task Type Catalog \u2014 Grade 1 to University",
-      "degree": 9
+      "id": "core_casevaluationrequest",
+      "label": "CASEvaluationRequest",
+      "degree": 8
+    },
+    {
+      "id": "pkg_core_templates_lookuptasktypetemplate",
+      "label": "LookupTaskTypeTemplate()",
+      "degree": 8
+    },
+    {
+      "id": "docs_srd_06_traceability_06_traceability_glossary_stakeholders_open_items",
+      "label": "06 — Traceability, Glossary, Stakeholders, Open Items",
+      "degree": 8
     }
   ],
   "surprises": [
     {
-      "source": "Result",
-      "target": "Verdict",
+      "source": "TestValidateCanonStrictForm()",
+      "target": "Validate()",
       "source_files": [
-        "pkg/core/validation/pipeline.go",
-        "pkg/core/constants.go"
+        "pkg/core/validation/pipeline_test.go",
+        "pkg/core/validation/pipeline.go"
       ],
-      "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "bridges separate communities"
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
     },
     {
-      "source": "Validate()",
-      "target": "ValidationMethod",
+      "source": "TestValidateMatrix()",
+      "target": "Validate()",
       "source_files": [
-        "pkg/core/validation/pipeline.go",
-        "pkg/core/constants.go"
+        "pkg/core/validation/pipeline_test.go",
+        "pkg/core/validation/pipeline.go"
       ],
-      "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "bridges separate communities"
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
     },
     {
-      "source": "LookupTaskTypeTemplate()",
-      "target": "TaskTypeTemplate",
+      "source": "TestValidateClockTime()",
+      "target": "ValidateClockTime()",
       "source_files": [
-        "pkg/core/templates.go",
-        "pkg/core/rows.go"
+        "pkg/core/validation/pipeline_test.go",
+        "pkg/core/validation/pipeline.go"
       ],
-      "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "bridges separate communities"
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
     },
     {
-      "source": "TaskType",
-      "target": "GradeBand",
+      "source": "TestValidateInterval()",
+      "target": "ValidateInterval()",
       "source_files": [
-        "pkg/core/rows.go",
-        "pkg/core/constants.go"
+        "pkg/core/validation/pipeline_test.go",
+        "pkg/core/validation/pipeline.go"
       ],
-      "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "peripheral node `GradeBand` unexpectedly reaches hub `TaskType`"
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
     },
     {
-      "source": "TaskType",
-      "target": "EquivalencePolicy",
+      "source": "TestValidateSet()",
+      "target": "ValidateSet()",
       "source_files": [
-        "pkg/core/rows.go",
-        "pkg/core/constants.go"
+        "pkg/core/validation/pipeline_test.go",
+        "pkg/core/validation/pipeline.go"
       ],
-      "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "peripheral node `EquivalencePolicy` unexpectedly reaches hub `TaskType`"
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
     }
   ],
-  "tokens": {
-    "input": 0,
-    "output": 0
-  }
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `ReasonCode` connect `pipeline.go` to `constants.go`, `pipeline_test.go`?",
+      "why": "High betweenness centrality (0.037) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Result` connect `pipeline.go` to `constants.go`, `pipeline_test.go`?",
+      "why": "High betweenness centrality (0.030) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Locale` connect `Locale` to `constants.go`?",
+      "why": "High betweenness centrality (0.029) - this node is a cross-community bridge."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 2 inferred relationships involving `Validate()` (e.g. with `TestValidateCanonStrictForm()` and `TestValidateMatrix()`) actually correct?",
+      "why": "`Validate()` has 2 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 6 inferred relationships involving `ValidateExactInt()` (e.g. with `TestValidateExactIntAcceptsNegative()` and `TestValidateExactIntAcceptsSixDigits()`) actually correct?",
+      "why": "`ValidateExactInt()` has 6 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `github.com/berdsa/mathprep_schema`, `answer_widget`, `start-local.sh script` to the rest of the system?",
+      "why": "37 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `000001_create_phase0_schema.up.sql` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected."
+    }
+  ]
 }
