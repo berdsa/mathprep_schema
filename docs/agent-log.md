@@ -668,3 +668,8 @@
 
 - Added Russian plaintext templates for `G2-NUM-011`–`G2-NUM-020`. Place-value, comparison, ordering, and arithmetic prompts retain their established parameters, operations, and answer contracts.
 - Added additive migration `000042_seed_g2_number_ru_templates_batch5` with a scoped, reversible down migration. Taskgen rendering changes remain separate and uncommitted for review.
+
+## 2026-09-24 — Phase B Russian template backfill, Stage 2 batch 6
+
+- Added Russian plaintext templates for `G2-NUM-021`–`G2-NUM-030` in `docs/phase2-loop-log.md` order. Sequence rows use derived rendered terms while preserving their generator parameters and answers; arithmetic, place-value, and comparison rows preserve the existing answer contracts.
+- Added additive migration `000043_seed_g2_number_ru_templates_batch6` with a scoped, reversible down migration. Taskgen rendering changes remain separate and uncommitted for review.
