@@ -548,3 +548,11 @@
 ## 2026-09-23 — Activate LaTeX render target
 
 - Seeded `latex` as the third active `render_target` dictionary value; `html-mathml` remains reserved.
+
+## 2026-09-23 — Mechanical answer-widget mapping
+
+- Assigned every existing `task_type` its convention-defined widget from `validation_method`, covering the full catalog without per-type UI guesses.
+
+## 2026-09-23 — BOOL widget choices
+
+- Seeded non-empty `CHOICE.choices` configuration for every BOOL type from the shared validator whitelist, including the quadrant-label branch.

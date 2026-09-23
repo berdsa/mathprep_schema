@@ -6748,9 +6748,9 @@
       "source_file": "migrations/000013_extend_task_type_template_key.down.sql",
       "source_location": null,
       "_origin": "ast",
-      "id": "migrations_000013_extend_task_type_template_key_down",
       "community": 54,
-      "norm_label": "000013_extend_task_type_template_key.down.sql"
+      "norm_label": "000013_extend_task_type_template_key.down.sql",
+      "id": "migrations_000013_extend_task_type_template_key_down"
     },
     {
       "label": "task_type_template",
@@ -6758,9 +6758,9 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "migrations_000013_extend_task_type_template_key_down_sql_task_type_template",
       "community": 55,
-      "norm_label": "task_type_template"
+      "norm_label": "task_type_template",
+      "id": "migrations_000013_extend_task_type_template_key_down_sql_task_type_template"
     },
     {
       "label": "000013_extend_task_type_template_key.up.sql",
@@ -6768,9 +6768,9 @@
       "source_file": "migrations/000013_extend_task_type_template_key.up.sql",
       "source_location": null,
       "_origin": "ast",
-      "id": "migrations_000013_extend_task_type_template_key_up",
       "community": 56,
-      "norm_label": "000013_extend_task_type_template_key.up.sql"
+      "norm_label": "000013_extend_task_type_template_key.up.sql",
+      "id": "migrations_000013_extend_task_type_template_key_up"
     },
     {
       "label": "task_type_template",
@@ -6778,9 +6778,9 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "migrations_000013_extend_task_type_template_key_up_sql_task_type_template",
       "community": 57,
-      "norm_label": "task_type_template"
+      "norm_label": "task_type_template",
+      "id": "migrations_000013_extend_task_type_template_key_up_sql_task_type_template"
     },
     {
       "label": "000014_activate_latex_render_target.down.sql",
@@ -6788,9 +6788,9 @@
       "source_file": "migrations/000014_activate_latex_render_target.down.sql",
       "source_location": null,
       "_origin": "ast",
-      "id": "migrations_000014_activate_latex_render_target_down",
       "community": 58,
-      "norm_label": "000014_activate_latex_render_target.down.sql"
+      "norm_label": "000014_activate_latex_render_target.down.sql",
+      "id": "migrations_000014_activate_latex_render_target_down"
     },
     {
       "label": "000014_activate_latex_render_target.up.sql",
@@ -6798,9 +6798,9 @@
       "source_file": "migrations/000014_activate_latex_render_target.up.sql",
       "source_location": null,
       "_origin": "ast",
-      "id": "migrations_000014_activate_latex_render_target_up",
       "community": 59,
-      "norm_label": "000014_activate_latex_render_target.up.sql"
+      "norm_label": "000014_activate_latex_render_target.up.sql",
+      "id": "migrations_000014_activate_latex_render_target_up"
     }
   ],
   "links": [
@@ -14877,5 +14877,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "444b9c1b59066a3b41be690211418a39b1e90947"
+  "built_at_commit": "ca4fe33834029430c9fa906e64359c84c871ced1"
 }

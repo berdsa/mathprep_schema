@@ -736,39 +736,51 @@
       "migrations_000014_activate_latex_render_target_up"
     ],
     "60": [
-      "pkg_core_rows_go_locale"
+      "migrations_000015_map_task_type_answer_widgets_down"
     ],
     "61": [
-      "pkg_core_templates_test_go_context"
+      "migrations_000015_map_task_type_answer_widgets_up"
     ],
     "62": [
-      "pkg_core_templates_test_go_locale"
+      "migrations_000016_seed_bool_widget_choices_down"
     ],
     "63": [
-      "pkg_core_templates_test_go_t"
+      "migrations_000016_seed_bool_widget_choices_up"
     ],
     "64": [
-      "pkg_github_com_berdsa_mathprep_schema"
+      "pkg_core_rows_go_locale"
     ],
     "65": [
-      "reasoncode"
+      "pkg_core_templates_test_go_context"
     ],
     "66": [
-      "rendertarget"
+      "pkg_core_templates_test_go_locale"
     ],
     "67": [
-      "tasktypestatus"
+      "pkg_core_templates_test_go_t"
     ],
     "68": [
-      "tiercode"
+      "pkg_github_com_berdsa_mathprep_schema"
     ],
     "69": [
-      "usertype"
+      "reasoncode"
     ],
     "70": [
-      "validationmethod"
+      "rendertarget"
     ],
     "71": [
+      "tasktypestatus"
+    ],
+    "72": [
+      "tiercode"
+    ],
+    "73": [
+      "usertype"
+    ],
+    "74": [
+      "validationmethod"
+    ],
+    "75": [
       "verdict"
     ]
   },
@@ -844,7 +856,11 @@
     "68": 1.0,
     "69": 1.0,
     "70": 1.0,
-    "71": 1.0
+    "71": 1.0,
+    "72": 1.0,
+    "73": 1.0,
+    "74": 1.0,
+    "75": 1.0
   },
   "gods": [
     {
