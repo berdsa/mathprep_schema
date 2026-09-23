@@ -627,6 +627,11 @@
 - Added Russian plaintext templates for G6-GEO-006–015. Composite dimensions, prism measurements, and net-face descriptions retain their mathematical inputs and targets.
 - Added additive migration `000036_seed_g6_geometry_ru_templates_batch3` with a scoped down migration. Taskgen changes are committed separately.
 
+## 2026-09-24 — Phase B Russian template backfill, batch 13
+
+- Added Russian plaintext templates for G6-NUM-001, 003–008 and G6-STA-001. Question examples are agreement-invariant or phrased without variable noun agreement; remainder and absolute-value tasks retain their exact targets.
+- Added additive migration `000037_seed_g6_number_statistics_ru_templates_batch4` with a scoped down migration. Taskgen changes are committed separately.
+
 ## 2026-09-23 — CAS sign-off status correction
 
 - Updated the canonical SRD's CAS status references to match `taskgen/docs/signoffs/OPEN-06.md` (Ken approval; shared infrastructure gate closed; per-type Confirmation Gates remain).

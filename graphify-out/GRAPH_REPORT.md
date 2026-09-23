@@ -1,16 +1,16 @@
 # Graph Report - schema  (2026-09-24)
 
 ## Corpus Check
-- 104 files · ~79,038 words
+- 106 files · ~79,228 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 735 nodes · 818 edges · 99 communities (91 shown, 8 thin omitted)
+- 738 nodes · 819 edges · 101 communities (93 shown, 8 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `06613b9d`
+- Built from commit: `2b19fa28`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -52,7 +52,7 @@
 2. `Agent log` - 129 edges
 3. `Result` - 17 edges
 4. `Validate()` - 16 edges
-5. `2026-09-23 — Widget metadata and optional LaTeX templates` - 14 edges
+5. `2026-09-23 — Widget metadata and optional LaTeX templates` - 15 edges
 6. `ValidateExactInt()` - 12 edges
 7. `task_type` - 10 edges
 8. `TaskType` - 10 edges
@@ -74,7 +74,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (99 total, 8 thin omitted)
+## Communities (101 total, 8 thin omitted)
 
 ### Community 0 - "07 — Wave-A Exemplar Task-Type Specs"
 Cohesion: 0.01
@@ -161,15 +161,15 @@ Cohesion: 0.50
 Nodes (3): 00 — Индекс артефактов трека `math-task-catalog`, Реестр допущений и открытых вопросов — сводный, обновлён, Реестр репозиториев (введён этим ходом, см. ADR-006)
 
 ### Community 22 - "2026-09-23 — Widget metadata and optional LaTeX templates"
-Cohesion: 0.13
-Nodes (14): 2026-09-23 — CAS sign-off status correction, 2026-09-23 — Phase B Russian template backfill, batch 1, 2026-09-23 — Phase B Russian template backfill, batch 2, 2026-09-23 — Phase B Russian template backfill, batch 3, 2026-09-23 — Phase B Russian template backfill, batch 4, 2026-09-23 — Phase B Russian template backfill, batch 5, 2026-09-23 — Phase B Russian template backfill, batch 6, 2026-09-23 — Phase B Russian template backfill, batch 7 (+6 more)
+Cohesion: 0.12
+Nodes (15): 2026-09-23 — CAS sign-off status correction, 2026-09-23 — Phase B Russian template backfill, batch 1, 2026-09-23 — Phase B Russian template backfill, batch 2, 2026-09-23 — Phase B Russian template backfill, batch 3, 2026-09-23 — Phase B Russian template backfill, batch 4, 2026-09-23 — Phase B Russian template backfill, batch 5, 2026-09-23 — Phase B Russian template backfill, batch 6, 2026-09-23 — Phase B Russian template backfill, batch 7 (+7 more)
 
 ### Community 72 - "Cross-repository readiness audit — 2026-09-23"
 Cohesion: 0.25
 Nodes (7): BA — catalog and metadata, Cross-repository readiness audit — 2026-09-23, Dev — builds, local run, and historical issues, DevOps — graphify and cleanliness, Git state / commits, QA — fresh tests and coverage, SA — architecture and contracts
 
 ## Knowledge Gaps
-- **479 isolated node(s):** `github.com/berdsa/mathprep_schema`, `answer_widget`, `start-local.sh script`, `What this repo is`, `Source of truth` (+474 more)
+- **480 isolated node(s):** `github.com/berdsa/mathprep_schema`, `answer_widget`, `start-local.sh script`, `What this repo is`, `Source of truth` (+475 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -177,11 +177,11 @@ Nodes (7): BA — catalog and metadata, Cross-repository readiness audit — 202
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Agent log` connect `Agent log` to `2026-09-23 — Widget metadata and optional LaTeX templates`?**
-  _High betweenness centrality (0.037) - this node is a cross-community bridge._
+  _High betweenness centrality (0.038) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `Validate()` (e.g. with `TestValidateCanonStrictForm()` and `TestValidateMatrix()`) actually correct?**
   _`Validate()` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `github.com/berdsa/mathprep_schema`, `answer_widget`, `start-local.sh script` to the rest of the system?**
-  _479 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _480 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `07 — Wave-A Exemplar Task-Type Specs` be split into smaller, more focused modules?**
   _Cohesion score 0.009259259259259259 - nodes in this community are weakly interconnected._
 - **Should `Agent log` be split into smaller, more focused modules?**
