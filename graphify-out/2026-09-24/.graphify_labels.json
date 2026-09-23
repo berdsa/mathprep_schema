@@ -111,5 +111,7 @@
   "109": "000043_seed_g2_number_ru_templates_batch6.down.sql",
   "110": "000043_seed_g2_number_ru_templates_batch6.up.sql",
   "111": "000044_seed_g2_geometry_ru_templates_batch7.down.sql",
-  "112": "000044_seed_g2_geometry_ru_templates_batch7.up.sql"
+  "112": "000044_seed_g2_geometry_ru_templates_batch7.up.sql",
+  "113": "000045_seed_g2_number_ru_templates_batch8.down.sql",
+  "114": "000045_seed_g2_number_ru_templates_batch8.up.sql"
 }

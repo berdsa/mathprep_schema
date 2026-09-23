@@ -683,3 +683,8 @@
 
 - Added Russian plaintext templates for `G2-NUM-031`–`040`, starting at the historical loop cursor after `G2-GEO-016`. Arithmetic, missing-number, count, and comparison prompts preserve their exact operation and requested result; the count prompt uses agreement-invariant wording.
 - Added additive migration `000045_seed_g2_number_ru_templates_batch8` with a scoped, reversible down migration. Taskgen rendering changes remain separate and uncommitted for review.
+
+## 2026-09-24 — Phase B Russian template backfill, Stage 2 batch 9
+
+- Added Russian plaintext templates for `G2-NUM-041`–`050` in historical implementation-loop order. Boolean and parity answer codes remain the established `TRUE`/`FALSE` and `even`/`odd` (identified as codes in the prompt); the set prompt retains its bracketed, source-order answer contract. Count wording is agreement-invariant.
+- Added additive migration `000046_seed_g2_number_ru_templates_batch9` with a scoped, reversible down migration. Taskgen rendering changes remain separate and uncommitted for review.
