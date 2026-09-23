@@ -678,3 +678,8 @@
 
 - Added Russian plaintext templates for `G2-GEO-011`–`G2-GEO-020` in documented catalog order. Polygon and solid names render in Russian; the source's flat-and-curved-surface convention is stated explicitly; numeric side-count wording avoids Russian numeral agreement; legacy English shape codes and `TRUE`/`FALSE` answer codes remain literal where validation requires them.
 - Added additive migration `000044_seed_g2_geometry_ru_templates_batch7` with a scoped, reversible down migration. Taskgen rendering changes remain separate and uncommitted for review.
+
+## 2026-09-24 — Phase B Russian template backfill, Stage 2 batch 8
+
+- Added Russian plaintext templates for `G2-NUM-031`–`040`, starting at the historical loop cursor after `G2-GEO-016`. Arithmetic, missing-number, count, and comparison prompts preserve their exact operation and requested result; the count prompt uses agreement-invariant wording.
+- Added additive migration `000045_seed_g2_number_ru_templates_batch8` with a scoped, reversible down migration. Taskgen rendering changes remain separate and uncommitted for review.
