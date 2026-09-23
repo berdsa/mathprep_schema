@@ -693,3 +693,8 @@
 
 - Added Russian plaintext templates for `G2-NUM-051`–`G2-NUM-062`, completing the historical `048`–`062` groups. Place-value labels, sequences, comparison operators, and tuple/list answer formats retain their existing mathematical and validator-facing meaning; count wording is agreement-invariant.
 - Added additive migration `000047_seed_g2_number_ru_templates_batch10` with a scoped, reversible down migration. Taskgen rendering changes remain separate and uncommitted for review.
+
+## 2026-09-24 — Phase B Russian template backfill, Stage 2 batch 11
+
+- Added Russian plaintext templates for `G2-MEA-009`–`G2-MEA-017` and `G2-STA-001`, following the historical implementation-loop cursor after `G2-NUM-062`. Variable-count wording is agreement-invariant; clock prompts preserve the `H:MM` output format and literal `AM`/`PM` answer codes.
+- Added additive migration `000048_seed_g2_measurement_statistics_ru_templates_batch11` with a scoped, reversible down migration. Taskgen rendering changes remain separate and uncommitted for review.

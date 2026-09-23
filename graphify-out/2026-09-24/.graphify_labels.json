@@ -115,5 +115,7 @@
   "113": "000045_seed_g2_number_ru_templates_batch8.down.sql",
   "114": "000045_seed_g2_number_ru_templates_batch8.up.sql",
   "115": "000046_seed_g2_number_ru_templates_batch9.down.sql",
-  "116": "000046_seed_g2_number_ru_templates_batch9.up.sql"
+  "116": "000046_seed_g2_number_ru_templates_batch9.up.sql",
+  "117": "000047_seed_g2_number_ru_templates_batch10.down.sql",
+  "118": "000047_seed_g2_number_ru_templates_batch10.up.sql"
 }
