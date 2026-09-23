@@ -1,0 +1,17 @@
+BEGIN;
+UPDATE task_type SET widget_config = '{"template":{"template":"{a},{b},{c}"}}'::jsonb WHERE type_id = 'G4-NUM-006';
+UPDATE task_type SET widget_config = '{"template":{"template":"{expanded_terms}"}}'::jsonb WHERE type_id = 'G4-NUM-007';
+UPDATE task_type SET widget_config = '{"template":{"template":"{roman_numeral}"}}'::jsonb WHERE type_id = 'G4-NUM-012';
+UPDATE task_type SET widget_config = '{"template":{"template":"{item_1},{item_2},...,{item_n}"}}'::jsonb WHERE type_id = 'G4-NUM-015';
+UPDATE task_type SET widget_config = '{"template":{"template":"{a},{b},{c},{d}"}}'::jsonb WHERE type_id = 'G4-NUM-033';
+UPDATE task_type SET widget_config = '{"template":{"template":"{expanded_terms}"}}'::jsonb WHERE type_id = 'G4-NUM-034';
+UPDATE task_type SET widget_config = '{"template":{"template":"{whole} {place_value}"}}'::jsonb WHERE type_id = 'G5-DEC-006';
+UPDATE task_type SET widget_config = '{"template":{"template":"{p1}^{e1} {p2}^{e2} ..."}}'::jsonb WHERE type_id = 'G5-DIS-001';
+UPDATE task_type SET widget_config = '{"template":{"template":"{a} + {b} × {c}"}}'::jsonb WHERE type_id = 'G5-NUM-005';
+UPDATE task_type SET widget_config = '{"template":{"template":"{operation_text}"}}'::jsonb WHERE type_id = 'G5-NUM-006';
+UPDATE task_type SET widget_config = '{"template":{"template":"{g}({c} + {d})"}}'::jsonb WHERE type_id = 'G5-NUM-010';
+UPDATE task_type SET widget_config = '{"template":{"template":"{b}x − {a}"}}'::jsonb WHERE type_id = 'G6-ALG-003';
+UPDATE task_type SET widget_config = '{"template":{"template":"{a}x + {constant}"}}'::jsonb WHERE type_id = 'G6-ALG-005';
+UPDATE task_type SET widget_config = '{"template":{"template":"x {relation} {bound}"}}'::jsonb WHERE type_id = 'G6-ALG-006';
+UPDATE task_type SET widget_config = '{"template":{"template":"{n1}/{d1}, {n2}/{d2}, {n3}/{d3}, {n4}/{d4}"}}'::jsonb WHERE type_id = 'G6-FRA-011';
+COMMIT;
