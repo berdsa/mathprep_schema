@@ -567,6 +567,11 @@
 - Added one pilot LaTeX companion row for `G5-FRA-003`; arithmetic pilot rows and types without an existing plaintext DB template remain intentionally deferred.
 - No generator, validator, plaintext-template, or test behavior changed. See `docs/widget-config-log.md`.
 
+## 2026-09-23 — Phase B Russian template backfill, batch 1
+
+- Added Russian plaintext templates for G3-FRA-009–014 and G3-GEO-001–004. Prompts preserve the same comparison targets and quantities; numeric wordings avoid grammatical number agreement.
+- Added additive migration `000025_seed_g3_fraction_geometry_ru_templates` with a scoped down migration. Taskgen rendering changes are committed separately in its repository.
+
 ## 2026-09-23 — CAS sign-off status correction
 
 - Updated the canonical SRD's CAS status references to match `taskgen/docs/signoffs/OPEN-06.md` (Ken approval; shared infrastructure gate closed; per-type Confirmation Gates remain).
