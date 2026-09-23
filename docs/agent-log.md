@@ -612,6 +612,11 @@
 - Added Russian plaintext templates for G6-ALG-008–010 and G6-DEC-001–007. Decimal displays and direction labels are formatted as derived template values while numeric generation remains unchanged.
 - Added additive migration `000033_seed_g6_algebra_decimal_ru_templates` with a scoped down migration. Taskgen changes are committed separately.
 
+## 2026-09-24 — Phase B Russian template backfill, batch 10
+
+- Added Russian plaintext templates for G6-FRA-001–010. Ratio, unit-cost, and fraction prompts preserve the original equations, requested quantities, and comparison targets without variable noun agreement.
+- Added additive migration `000034_seed_g6_fraction_ru_templates_batch1` with a scoped down migration. Taskgen changes are committed separately.
+
 ## 2026-09-23 — CAS sign-off status correction
 
 - Updated the canonical SRD's CAS status references to match `taskgen/docs/signoffs/OPEN-06.md` (Ken approval; shared infrastructure gate closed; per-type Confirmation Gates remain).
