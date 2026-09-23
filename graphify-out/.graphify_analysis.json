@@ -706,39 +706,51 @@
       "migrations_000011_add_answer_widget_dictionary_down"
     ],
     "50": [
-      "pkg_core_rows_go_locale"
+      "migrations_000012_add_task_type_widget_columns_down"
     ],
     "51": [
-      "pkg_core_templates_test_go_context"
+      "migrations_000012_add_task_type_widget_columns_down_sql_task_type"
     ],
     "52": [
-      "pkg_core_templates_test_go_locale"
+      "migrations_000012_add_task_type_widget_columns_up"
     ],
     "53": [
-      "pkg_core_templates_test_go_t"
+      "migrations_000012_add_task_type_widget_columns_up_sql_task_type"
     ],
     "54": [
-      "pkg_github_com_berdsa_mathprep_schema"
+      "pkg_core_rows_go_locale"
     ],
     "55": [
-      "reasoncode"
+      "pkg_core_templates_test_go_context"
     ],
     "56": [
-      "rendertarget"
+      "pkg_core_templates_test_go_locale"
     ],
     "57": [
-      "tasktypestatus"
+      "pkg_core_templates_test_go_t"
     ],
     "58": [
-      "tiercode"
+      "pkg_github_com_berdsa_mathprep_schema"
     ],
     "59": [
-      "usertype"
+      "reasoncode"
     ],
     "60": [
-      "validationmethod"
+      "rendertarget"
     ],
     "61": [
+      "tasktypestatus"
+    ],
+    "62": [
+      "tiercode"
+    ],
+    "63": [
+      "usertype"
+    ],
+    "64": [
+      "validationmethod"
+    ],
+    "65": [
       "verdict"
     ]
   },
@@ -804,7 +816,11 @@
     "58": 1.0,
     "59": 1.0,
     "60": 1.0,
-    "61": 1.0
+    "61": 1.0,
+    "62": 1.0,
+    "63": 1.0,
+    "64": 1.0,
+    "65": 1.0
   },
   "gods": [
     {

@@ -536,3 +536,7 @@
 
 - Added the eight-value `answer_widget` dictionary and exported shared `AnswerWidget` constants.
 - Activated the shared `latex` render-target constant in `pkg/core`; database seeding is committed in its own migration step.
+
+## 2026-09-23 — Task-type widget columns
+
+- Added non-null `task_type.answer_widget` with a temporary NUMERIC baseline for existing rows, plus nullable JSONB `widget_config`.

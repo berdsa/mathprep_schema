@@ -228,5 +228,15 @@
     "mtime": 1790139637.6390698,
     "ast_hash": "4b23a9eef0eb8a5cdf72d1dd7da01714",
     "semantic_hash": "4b23a9eef0eb8a5cdf72d1dd7da01714"
+  },
+  "migrations/000012_add_task_type_widget_columns.down.sql": {
+    "mtime": 1790139677.2826242,
+    "ast_hash": "8ab8516f2e5d89e8732553a0c24869b2",
+    "semantic_hash": "8ab8516f2e5d89e8732553a0c24869b2"
+  },
+  "migrations/000012_add_task_type_widget_columns.up.sql": {
+    "mtime": 1790139677.2815175,
+    "ast_hash": "94326d2a3cfb495dcbed7cddb0293496",
+    "semantic_hash": "94326d2a3cfb495dcbed7cddb0293496"
   }
 }

@@ -115,14 +115,14 @@
     "semantic_hash": "843852865243fd09619b93338757f372"
   },
   "pkg/core/constants.go": {
-    "mtime": 1790050639.6898587,
-    "ast_hash": "3334c9446d51fc963bd7ad960970e3e0",
-    "semantic_hash": "3334c9446d51fc963bd7ad960970e3e0"
+    "mtime": 1790139637.6379163,
+    "ast_hash": "07235f7d0e0e174294ad23a8f5dac807",
+    "semantic_hash": "07235f7d0e0e174294ad23a8f5dac807"
   },
   "pkg/core/rows.go": {
-    "mtime": 1790072759.4871182,
-    "ast_hash": "89f5f7494e403e5459d29893e64e75a2",
-    "semantic_hash": "89f5f7494e403e5459d29893e64e75a2"
+    "mtime": 1790139637.638633,
+    "ast_hash": "64954b3e0821a3ec081cce1c282057e4",
+    "semantic_hash": "64954b3e0821a3ec081cce1c282057e4"
   },
   "pkg/core/validation/pipeline.go": {
     "mtime": 1789998416.98422,
@@ -215,8 +215,18 @@
     "semantic_hash": "9e28f3d92f68be9ecd40354bf7ec4839"
   },
   "pkg/core/templates_test.go": {
-    "mtime": 1790072808.73244,
-    "ast_hash": "717362cf1d5232c0f1d619e1300ad863",
-    "semantic_hash": "717362cf1d5232c0f1d619e1300ad863"
+    "mtime": 1790139637.639654,
+    "ast_hash": "454ec778b55578fa48033fb83ab8888c",
+    "semantic_hash": "454ec778b55578fa48033fb83ab8888c"
+  },
+  "migrations/000011_add_answer_widget_dictionary.down.sql": {
+    "mtime": 1790139637.6393392,
+    "ast_hash": "ca4f450b2aa22c9f3d4a6dc962a88927",
+    "semantic_hash": "ca4f450b2aa22c9f3d4a6dc962a88927"
+  },
+  "migrations/000011_add_answer_widget_dictionary.up.sql": {
+    "mtime": 1790139637.6390698,
+    "ast_hash": "4b23a9eef0eb8a5cdf72d1dd7da01714",
+    "semantic_hash": "4b23a9eef0eb8a5cdf72d1dd7da01714"
   }
 }
