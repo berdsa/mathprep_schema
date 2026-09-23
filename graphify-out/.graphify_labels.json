@@ -93,5 +93,7 @@
   "91": "000033_seed_g6_algebra_decimal_ru_templates.down.sql",
   "92": "000033_seed_g6_algebra_decimal_ru_templates.up.sql",
   "93": "000034_seed_g6_fraction_ru_templates_batch1.down.sql",
-  "94": "000034_seed_g6_fraction_ru_templates_batch1.up.sql"
+  "94": "000034_seed_g6_fraction_ru_templates_batch1.up.sql",
+  "95": "000035_seed_g6_fraction_geometry_ru_templates_batch2.down.sql",
+  "96": "000035_seed_g6_fraction_geometry_ru_templates_batch2.up.sql"
 }
