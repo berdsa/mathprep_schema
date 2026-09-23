@@ -11,7 +11,7 @@
       "source_file": "go.mod",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 64,
+      "community": 68,
       "community_name": "github.com/berdsa/mathprep_schema",
       "norm_label": "github.com/berdsa/mathprep_schema",
       "id": "pkg_github_com_berdsa_mathprep_schema"
@@ -5858,7 +5858,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 69,
+      "community": 73,
       "norm_label": "usertype",
       "id": "usertype"
     },
@@ -5898,7 +5898,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 67,
+      "community": 71,
       "norm_label": "tasktypestatus",
       "id": "tasktypestatus"
     },
@@ -5918,7 +5918,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 70,
+      "community": 74,
       "norm_label": "validationmethod",
       "id": "validationmethod"
     },
@@ -5928,7 +5928,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 60,
+      "community": 64,
       "norm_label": "locale",
       "id": "pkg_core_rows_go_locale"
     },
@@ -5938,7 +5938,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 68,
+      "community": 72,
       "norm_label": "tiercode",
       "id": "tiercode"
     },
@@ -5948,7 +5948,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 66,
+      "community": 70,
       "norm_label": "rendertarget",
       "id": "rendertarget"
     },
@@ -5958,7 +5958,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 71,
+      "community": 75,
       "norm_label": "verdict",
       "id": "verdict"
     },
@@ -5968,7 +5968,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 65,
+      "community": 69,
       "norm_label": "reasoncode",
       "id": "reasoncode"
     },
@@ -6058,7 +6058,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 62,
+      "community": 66,
       "norm_label": "locale",
       "id": "pkg_core_templates_test_go_locale"
     },
@@ -6068,7 +6068,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 61,
+      "community": 65,
       "norm_label": "context",
       "id": "pkg_core_templates_test_go_context"
     },
@@ -6078,7 +6078,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 63,
+      "community": 67,
       "norm_label": "t",
       "id": "pkg_core_templates_test_go_t"
     },
@@ -6801,6 +6801,46 @@
       "community": 59,
       "norm_label": "000014_activate_latex_render_target.up.sql",
       "id": "migrations_000014_activate_latex_render_target_up"
+    },
+    {
+      "label": "000015_map_task_type_answer_widgets.down.sql",
+      "file_type": "code",
+      "source_file": "migrations/000015_map_task_type_answer_widgets.down.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000015_map_task_type_answer_widgets_down",
+      "community": 60,
+      "norm_label": "000015_map_task_type_answer_widgets.down.sql"
+    },
+    {
+      "label": "000015_map_task_type_answer_widgets.up.sql",
+      "file_type": "code",
+      "source_file": "migrations/000015_map_task_type_answer_widgets.up.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000015_map_task_type_answer_widgets_up",
+      "community": 61,
+      "norm_label": "000015_map_task_type_answer_widgets.up.sql"
+    },
+    {
+      "label": "000016_seed_bool_widget_choices.down.sql",
+      "file_type": "code",
+      "source_file": "migrations/000016_seed_bool_widget_choices.down.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000016_seed_bool_widget_choices_down",
+      "community": 62,
+      "norm_label": "000016_seed_bool_widget_choices.down.sql"
+    },
+    {
+      "label": "000016_seed_bool_widget_choices.up.sql",
+      "file_type": "code",
+      "source_file": "migrations/000016_seed_bool_widget_choices.up.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000016_seed_bool_widget_choices_up",
+      "community": 63,
+      "norm_label": "000016_seed_bool_widget_choices.up.sql"
     }
   ],
   "links": [
@@ -14877,5 +14917,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "ca4fe33834029430c9fa906e64359c84c871ced1"
+  "built_at_commit": "ac4bb482e0cb3fa2cc514b627a44002e82dae083"
 }

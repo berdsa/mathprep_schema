@@ -258,5 +258,25 @@
     "mtime": 1790139701.1093044,
     "ast_hash": "29a793c0d52db5ed53e628c27c6a9765",
     "semantic_hash": "29a793c0d52db5ed53e628c27c6a9765"
+  },
+  "migrations/000015_map_task_type_answer_widgets.down.sql": {
+    "mtime": 1790139734.3906534,
+    "ast_hash": "3e907a1ba851461222db836681aeba50",
+    "semantic_hash": "3e907a1ba851461222db836681aeba50"
+  },
+  "migrations/000015_map_task_type_answer_widgets.up.sql": {
+    "mtime": 1790139734.39035,
+    "ast_hash": "8ce60314cbfe798eecbb698878de54d7",
+    "semantic_hash": "8ce60314cbfe798eecbb698878de54d7"
+  },
+  "migrations/000016_seed_bool_widget_choices.down.sql": {
+    "mtime": 1790139745.525799,
+    "ast_hash": "4121b5a392529bf42a398dd5d30895ba",
+    "semantic_hash": "4121b5a392529bf42a398dd5d30895ba"
+  },
+  "migrations/000016_seed_bool_widget_choices.up.sql": {
+    "mtime": 1790139745.5254312,
+    "ast_hash": "48a660f6c8390816d3d861582f3aafd9",
+    "semantic_hash": "48a660f6c8390816d3d861582f3aafd9"
   }
 }
