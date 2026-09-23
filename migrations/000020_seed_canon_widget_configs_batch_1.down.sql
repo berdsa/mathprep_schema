@@ -1,0 +1,17 @@
+BEGIN;
+UPDATE task_type SET widget_config = NULL WHERE type_id = 'G1-MEA-004';
+UPDATE task_type SET widget_config = NULL WHERE type_id = 'G1-MEA-006';
+UPDATE task_type SET widget_config = NULL WHERE type_id = 'G1-MEA-007';
+UPDATE task_type SET widget_config = NULL WHERE type_id = 'G1-NUM-007';
+UPDATE task_type SET widget_config = NULL WHERE type_id = 'G10-FUN-002';
+UPDATE task_type SET widget_config = NULL WHERE type_id = 'G2-MEA-004';
+UPDATE task_type SET widget_config = NULL WHERE type_id = 'G2-MEA-006';
+UPDATE task_type SET widget_config = NULL WHERE type_id = 'G2-MEA-007';
+UPDATE task_type SET widget_config = NULL WHERE type_id = 'G2-MEA-012';
+UPDATE task_type SET widget_config = NULL WHERE type_id = 'G2-MEA-014';
+UPDATE task_type SET widget_config = NULL WHERE type_id = 'G2-MEA-015';
+UPDATE task_type SET widget_config = NULL WHERE type_id = 'G2-NUM-018';
+UPDATE task_type SET widget_config = NULL WHERE type_id = 'G2-NUM-055';
+UPDATE task_type SET widget_config = NULL WHERE type_id = 'G2-NUM-058';
+UPDATE task_type SET widget_config = NULL WHERE type_id = 'G3-MEA-011';
+COMMIT;
