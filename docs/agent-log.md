@@ -577,6 +577,11 @@
 - Added Russian plaintext templates for G3-GEO-005–009 and G3-MEA-009–013. Time values are rendered zero-padded to preserve the displayed clock format; unit prompts avoid assuming a unit absent from the source.
 - Added additive migration `000026_seed_g3_geometry_measurement_ru_templates` with a scoped down migration. Taskgen changes are committed separately.
 
+## 2026-09-23 — Phase B Russian template backfill, batch 3
+
+- Added Russian plaintext templates for G3-MEA-014–018 and G3-NUM-006, 007, 011, 013, 015. Sequence type and terms are passed as derived template values; division-with-remainder instructions name both answer fields.
+- Added additive migration `000027_seed_g3_measurement_number_ru_templates` with a scoped down migration. Taskgen changes are committed separately.
+
 ## 2026-09-23 — CAS sign-off status correction
 
 - Updated the canonical SRD's CAS status references to match `taskgen/docs/signoffs/OPEN-06.md` (Ken approval; shared infrastructure gate closed; per-type Confirmation Gates remain).

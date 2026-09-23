@@ -75,5 +75,7 @@
   "73": "start-local.sh",
   "74": "local-development.md",
   "75": "000025_seed_g3_fraction_geometry_ru_templates.down.sql",
-  "76": "000025_seed_g3_fraction_geometry_ru_templates.up.sql"
+  "76": "000025_seed_g3_fraction_geometry_ru_templates.up.sql",
+  "77": "000026_seed_g3_geometry_measurement_ru_templates.down.sql",
+  "78": "000026_seed_g3_geometry_measurement_ru_templates.up.sql"
 }

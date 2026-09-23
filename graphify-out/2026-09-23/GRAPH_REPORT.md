@@ -1,16 +1,16 @@
 # Graph Report - schema  (2026-09-23)
 
 ## Corpus Check
-- 82 files · ~76,560 words
+- 84 files · ~76,787 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 702 nodes · 807 edges · 77 communities (69 shown, 8 thin omitted)
+- 705 nodes · 808 edges · 79 communities (71 shown, 8 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `71b76f7a`
+- Built from commit: `4b5d5684`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -74,7 +74,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (77 total, 8 thin omitted)
+## Communities (79 total, 8 thin omitted)
 
 ### Community 0 - "07 — Wave-A Exemplar Task-Type Specs"
 Cohesion: 0.01
@@ -161,15 +161,15 @@ Cohesion: 0.50
 Nodes (3): 00 — Индекс артефактов трека `math-task-catalog`, Реестр допущений и открытых вопросов — сводный, обновлён, Реестр репозиториев (введён этим ходом, см. ADR-006)
 
 ### Community 22 - "2026-09-23 — Widget metadata and optional LaTeX templates"
-Cohesion: 0.50
-Nodes (3): 2026-09-23 — CAS sign-off status correction, 2026-09-23 — Phase B Russian template backfill, batch 1, 2026-09-23 — Widget metadata and optional LaTeX templates
+Cohesion: 0.40
+Nodes (4): 2026-09-23 — CAS sign-off status correction, 2026-09-23 — Phase B Russian template backfill, batch 1, 2026-09-23 — Phase B Russian template backfill, batch 2, 2026-09-23 — Widget metadata and optional LaTeX templates
 
 ### Community 72 - "Cross-repository readiness audit — 2026-09-23"
 Cohesion: 0.25
 Nodes (7): BA — catalog and metadata, Cross-repository readiness audit — 2026-09-23, Dev — builds, local run, and historical issues, DevOps — graphify and cleanliness, Git state / commits, QA — fresh tests and coverage, SA — architecture and contracts
 
 ## Knowledge Gaps
-- **468 isolated node(s):** `github.com/berdsa/mathprep_schema`, `answer_widget`, `start-local.sh script`, `What this repo is`, `Source of truth` (+463 more)
+- **469 isolated node(s):** `github.com/berdsa/mathprep_schema`, `answer_widget`, `start-local.sh script`, `What this repo is`, `Source of truth` (+464 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -183,7 +183,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Are the 2 inferred relationships involving `Validate()` (e.g. with `TestValidateCanonStrictForm()` and `TestValidateMatrix()`) actually correct?**
   _`Validate()` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `github.com/berdsa/mathprep_schema`, `answer_widget`, `start-local.sh script` to the rest of the system?**
-  _468 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _469 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `07 — Wave-A Exemplar Task-Type Specs` be split into smaller, more focused modules?**
   _Cohesion score 0.009259259259259259 - nodes in this community are weakly interconnected._
 - **Should `Agent log` be split into smaller, more focused modules?**
