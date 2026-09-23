@@ -589,6 +589,15 @@
       "docs_srd_data_governance_residency_sub_processors"
     ],
     "18": [
+      "pkg_core_templates_test",
+      "pkg_core_templates_test_testlookuptasktypetemplatefallsbacktoprimarylocale",
+      "pkg_core_templates_test_testlookuptasktypetemplatereportsmissingtemplate",
+      "pkg_core_templates_test_testlookuptasktypetemplateusesrequestedlocale",
+      "pkg_core_widgets_test",
+      "pkg_core_widgets_test_testanswerwidgetdictionaryvalues",
+      "t"
+    ],
+    "19": [
       "docs_srd_01_current_state",
       "docs_srd_01_current_state_01_current_state",
       "docs_srd_01_current_state_1_\u0447\u0442\u043e_\u043f\u043e\u0434\u0430\u043d\u043e_\u0430_\u0447\u0442\u043e_\u043d\u0435\u0442_\u0431\u0435\u0437_\u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0439_\u0441_\u043f\u0440\u043e\u0448\u043b\u043e\u0433\u043e_\u0445\u043e\u0434\u0430",
@@ -596,19 +605,12 @@
       "docs_srd_01_current_state_3_\u0440\u0430\u043d\u0435\u0435_\u043f\u0440\u0438\u043d\u044f\u0442\u044b\u0435_\u0440\u0435\u0448\u0435\u043d\u0438\u044f_\u0441\u0442\u0430\u0442\u0443\u0441",
       "docs_srd_01_current_state_4_\u0447\u0442\u043e_\u043d\u0435_\u043c\u043e\u0434\u0438\u0444\u0438\u0446\u0438\u0440\u0443\u0435\u0442\u0441\u044f_\u0431\u0435\u0437_\u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0439"
     ],
-    "19": [
+    "20": [
       "core_tasktypetemplatestore",
       "pkg_core_templates",
       "pkg_core_templates_go_context",
       "pkg_core_templates_go_locale",
       "pkg_core_templates_lookuptasktypetemplate"
-    ],
-    "20": [
-      "pkg_core_templates_test",
-      "pkg_core_templates_test_testlookuptasktypetemplatefallsbacktoprimarylocale",
-      "pkg_core_templates_test_testlookuptasktypetemplatereportsmissingtemplate",
-      "pkg_core_templates_test_testlookuptasktypetemplateusesrequestedlocale",
-      "t"
     ],
     "21": [
       "docs_srd_00_index",
@@ -803,9 +805,9 @@
     "15": 0.2857142857142857,
     "16": 0.2857142857142857,
     "17": 0.2857142857142857,
-    "18": 0.3333333333333333,
-    "19": 0.5,
-    "20": 0.6,
+    "18": 0.38095238095238093,
+    "19": 0.3333333333333333,
+    "20": 0.5,
     "21": 0.5,
     "22": 0.5,
     "23": 1.0,

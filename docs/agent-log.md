@@ -556,3 +556,8 @@
 ## 2026-09-23 — BOOL widget choices
 
 - Seeded non-empty `CHOICE.choices` configuration for every BOOL type from the shared validator whitelist, including the quadrant-label branch.
+
+## 2026-09-23 — Answer-widget verification
+
+- Applied migrations `000011`–`000016` to the local catalog and verified all 658 types have non-null widgets; all 106 BOOL types have non-empty choices arrays.
+- Added core dictionary tests and the migration verification report.

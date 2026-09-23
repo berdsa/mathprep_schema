@@ -278,5 +278,10 @@
     "mtime": 1790139745.5254312,
     "ast_hash": "48a660f6c8390816d3d861582f3aafd9",
     "semantic_hash": "48a660f6c8390816d3d861582f3aafd9"
+  },
+  "pkg/core/widgets_test.go": {
+    "mtime": 1790139802.4995973,
+    "ast_hash": "3e6c9c85afce01e08b1f30c1c618612b",
+    "semantic_hash": "3e6c9c85afce01e08b1f30c1c618612b"
   }
 }
