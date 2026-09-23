@@ -592,6 +592,11 @@
 - Added Russian plaintext templates for G3-NUM-026–036. Sequence terms and derived products are supplied as template values; the word problem uses neutral count labels.
 - Added additive migration `000029_seed_g3_number_ru_templates_batch2` with a scoped down migration. Taskgen changes are committed separately.
 
+## 2026-09-23 — Phase B Russian template backfill, batch 6
+
+- Added Russian plaintext templates for G3-NUM-037–046: arithmetic and geometric sequences, equality/comparison, rounding, and integer operations.
+- Added additive migration `000030_seed_g3_number_ru_templates_batch3` with a scoped down migration. Taskgen changes are committed separately.
+
 ## 2026-09-23 — CAS sign-off status correction
 
 - Updated the canonical SRD's CAS status references to match `taskgen/docs/signoffs/OPEN-06.md` (Ken approval; shared infrastructure gate closed; per-type Confirmation Gates remain).
