@@ -5,13 +5,13 @@
     "semantic_hash": ""
   },
   "docs/agent-log.md": {
-    "mtime": 1790062522.1749518,
-    "ast_hash": "ab34248a8647e9d95f3313b514110c74",
+    "mtime": 1790141475.3284044,
+    "ast_hash": "e366429a685774354a800655047aa31e",
     "semantic_hash": ""
   },
   "docs/srd/00-conventions.md": {
-    "mtime": 1790061798.045967,
-    "ast_hash": "beca4f65cf03a99dd3e242ceee675e6b",
+    "mtime": 1790139410.7447982,
+    "ast_hash": "7aef094132c8880f21733122280f51d7",
     "semantic_hash": ""
   },
   "docs/srd/00-index.md": {
@@ -278,5 +278,105 @@
     "mtime": 1790139745.5254312,
     "ast_hash": "48a660f6c8390816d3d861582f3aafd9",
     "semantic_hash": "48a660f6c8390816d3d861582f3aafd9"
+  },
+  "pkg/core/widgets_test.go": {
+    "mtime": 1790139802.4995973,
+    "ast_hash": "3e6c9c85afce01e08b1f30c1c618612b",
+    "semantic_hash": "3e6c9c85afce01e08b1f30c1c618612b"
+  },
+  "migrations/000017_seed_tuple_widget_configs.down.sql": {
+    "mtime": 1790141394.955542,
+    "ast_hash": "50f8660cc09cf86edd2722c4ef63a857",
+    "semantic_hash": ""
+  },
+  "migrations/000017_seed_tuple_widget_configs.up.sql": {
+    "mtime": 1790141394.9554183,
+    "ast_hash": "3363bb6e2f713b47e2f846f89338451c",
+    "semantic_hash": ""
+  },
+  "migrations/000018_seed_set_widget_configs.down.sql": {
+    "mtime": 1790141394.9558659,
+    "ast_hash": "82b8ef94df017c690ac0b0b9c7d653a1",
+    "semantic_hash": ""
+  },
+  "migrations/000018_seed_set_widget_configs.up.sql": {
+    "mtime": 1790141394.9557989,
+    "ast_hash": "8038f6f26deb884d65c56b6fcd8c1c6e",
+    "semantic_hash": ""
+  },
+  "migrations/000019_seed_matrix_widget_configs.down.sql": {
+    "mtime": 1790141394.9561658,
+    "ast_hash": "afbbbdd721d49af4cb529bd0b847de96",
+    "semantic_hash": ""
+  },
+  "migrations/000019_seed_matrix_widget_configs.up.sql": {
+    "mtime": 1790141394.956102,
+    "ast_hash": "7bd62dda1a0701eccb9585ea047d73bb",
+    "semantic_hash": ""
+  },
+  "migrations/000020_seed_canon_widget_configs_batch_1.down.sql": {
+    "mtime": 1790141411.0779161,
+    "ast_hash": "f0fbd523673fed386751af12cbdde0cb",
+    "semantic_hash": ""
+  },
+  "migrations/000020_seed_canon_widget_configs_batch_1.up.sql": {
+    "mtime": 1790141411.077828,
+    "ast_hash": "0ffb9b0262ad76e610ee774aef6f0427",
+    "semantic_hash": ""
+  },
+  "migrations/000021_seed_canon_widget_configs_batch_2.down.sql": {
+    "mtime": 1790141411.0780773,
+    "ast_hash": "97de9ca77d64fe754c8034b5ccb9cc32",
+    "semantic_hash": ""
+  },
+  "migrations/000021_seed_canon_widget_configs_batch_2.up.sql": {
+    "mtime": 1790141411.0780146,
+    "ast_hash": "ab38705ed38cdacac880bb76f8b44f88",
+    "semantic_hash": ""
+  },
+  "migrations/000022_seed_canon_widget_configs_batch_3.down.sql": {
+    "mtime": 1790141411.0782282,
+    "ast_hash": "f8c501fb9642d7c76fed633dd5451c86",
+    "semantic_hash": ""
+  },
+  "migrations/000022_seed_canon_widget_configs_batch_3.up.sql": {
+    "mtime": 1790141411.0781696,
+    "ast_hash": "e26999c9d4420efe66fe1324fa9147cd",
+    "semantic_hash": ""
+  },
+  "migrations/000023_seed_canon_widget_configs_batch_4.down.sql": {
+    "mtime": 1790141411.0783722,
+    "ast_hash": "eeca80fd329976eb4e7529b0632f1145",
+    "semantic_hash": ""
+  },
+  "migrations/000023_seed_canon_widget_configs_batch_4.up.sql": {
+    "mtime": 1790141411.078314,
+    "ast_hash": "a46d4f6300e11eb7747d3255b49602ff",
+    "semantic_hash": ""
+  },
+  "migrations/000024_seed_latex_templates.down.sql": {
+    "mtime": 1790141394.956925,
+    "ast_hash": "78bf9dc0f5c8d73d108a969c3240b877",
+    "semantic_hash": ""
+  },
+  "migrations/000024_seed_latex_templates.up.sql": {
+    "mtime": 1790141394.956865,
+    "ast_hash": "fa6b914ae6d41ecf94198fc722753255",
+    "semantic_hash": ""
+  },
+  "docs/answer-widget-migration-report.md": {
+    "mtime": 1790139798.3061874,
+    "ast_hash": "0dcb3139b65a8ca6762ceca61f4d759f",
+    "semantic_hash": ""
+  },
+  "docs/task-type-template-infrastructure.md": {
+    "mtime": 1790072913.6335433,
+    "ast_hash": "300df2bf64e83663fdc54932f2096f86",
+    "semantic_hash": ""
+  },
+  "docs/widget-config-log.md": {
+    "mtime": 1790141570.420778,
+    "ast_hash": "fcd61dc3f3f75892eebb6ef0ff6355a3",
+    "semantic_hash": ""
   }
 }

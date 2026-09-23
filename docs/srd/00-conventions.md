@@ -14,7 +14,7 @@ Unchanged in substance from the prior pass. Consolidated table (this is now the 
 
 | Code | Normalize | Compare | Reason codes |
 |---|---|---|---|
-| EXACT-INT | trim; strip leading `+`; strip leading zeros; any `,`/`.` present ⇒ reject | integer equality | `WRONG_FORMAT`, `VALUE_MISMATCH` |
+| EXACT-INT | trim; strip leading `+` or `-` (sign kept for the value); strip leading zeros; any `,`/`.` present ⇒ reject | integer equality (sign-aware) | `WRONG_FORMAT`, `VALUE_MISMATCH` |
 | EXACT-RAT | parse `p/q`; reduce via gcd; `q>0`; `q=1` ⇒ canonical bare integer | `(p,q)` equality post-reduction | `WRONG_FORMAT`, `VALUE_MISMATCH`, `CANON_NOT_REDUCED` |
 | TOL | parse float per NotationProfile separator | `\|given−correct\| ≤ tol` (default `1e-6`; "round to N" ⇒ `0.5·10⁻ᴺ`) | `WRONG_FORMAT`, `VALUE_MISMATCH` |
 | SET | split by declared separator, trim, parse per sub-type | sorted **multiset** equality (duplicates preserved) | `WRONG_FORMAT`, `SET_CARDINALITY_MISMATCH`, `VALUE_MISMATCH` |
@@ -35,7 +35,7 @@ Unchanged from prior pass (decimal comma, space-grouped digits, `;` interval sep
 
 ## 6. Data-dictionary tables — **new this pass, Phase-0 deliverable**
 
-These are the enumerations previously used only in prose. They now become actual lookup tables (or `CHECK` constraints, developer's call per §9 of `08-developer-backlog.md`), seeded once in `schema`, referenced by both `taskgen` and `grader`.
+These are the enumerations previously used only in prose. They now become actual lookup tables (or `CHECK` constraints, developer's call per §9 of `08-developer-backlog.md`), seeded once in `mathprep-schema`, referenced by both `mathprep-taskgen` and `mathprep-grader`.
 
 | Dictionary | Values | Consumer |
 |---|---|---|
@@ -48,9 +48,12 @@ These are the enumerations previously used only in prose. They now become actual
 | `task_type_status` | `DRAFT, GATED, FINAL` — only `FINAL` (and, for the family pilot, `GATED` per ASM-08) may be loaded into a service's active registry | `task_type.status` |
 | `verdict` | `CORRECT, INCORRECT, UNPARSEABLE` | `submission.verdict` |
 | `reason_code` | `OK, PARSE_ERROR, EMPTY_INPUT, INPUT_TOO_LONG, WRONG_FORMAT, VALUE_MISMATCH, CANON_NOT_REDUCED, INCOMPLETE_TUPLE, SET_CARDINALITY_MISMATCH, CAS_TIMEOUT` — extend only by adding a row and documenting it here | `submission.reason_code` |
-| `render_target` | `plaintext, unicode-math` (Wave A/B); `latex, html-mathml` reserved, not seeded yet | `task_instance.render_target` |
+| `render_target` | `plaintext, unicode-math, latex` (`latex` activated this pass — see finding on answer-input UX); `html-mathml` still reserved, not seeded | `task_instance.render_target` |
 | `locale` | `ru-KZ` (seeded); `kk-KZ` reserved, not seeded yet (OOS-08) | `task_instance.locale`, `task_type.locale` |
+| `answer_widget` *(new, per this pass)* | `NUMERIC, FRACTION, CHOICE, TUPLE_N, SET_LIST, MATRIX_GRID, STRUCTURED_CANON, EXPRESSION` — the frontend input-affordance for a type, derived by default from `validation_method` (`EXACT-INT`/`TOL`→`NUMERIC`, `EXACT-RAT`→`FRACTION`, `BOOL`→`CHOICE`, `TUPLE`→`TUPLE_N`, `SET`→`SET_LIST`, `MATRIX`→`MATRIX_GRID`, `CANON`→`STRUCTURED_CANON`, `CAS`→`EXPRESSION`). The frontend always serializes structured input into the exact string `POST /v1/items/:id/submissions` already expects — this dictionary changes nothing about the backend validation contract, only what UI captures the answer | `task_type.answer_widget` |
 | `user_type` *(new, per this pass — see finding G)* | `STUDENT, GUARDIAN, ADMIN, TEACHER` — only `STUDENT` is exercised by any FR in this pack; the others are declared so the column never needs an unplanned migration later. `TEACHER` added this pass, dictionary value only — no capability built yet, pending clarification of whether it means the operator in a different UI role (covered by `ASM-08`) or a real third party (reopens `OPEN-02`) | `users.user_type` |
+
+`task_type_template`'s key extends to `(type_id, locale, render_target, spec_version)` — a type now carries a plaintext template and, where warranted, a separate `latex` one side by side, not one replacing the other. `task_type.widget_config` (JSONB, nullable) holds the per-type structural detail `answer_widget` needs beyond the default mapping — field labels/count for `TUPLE_N`, max size for `SET_LIST`, dimensions for `MATRIX_GRID`, the field template for `STRUCTURED_CANON` (e.g. `"{a}√{b}"`), and the exact button set for `CHOICE` (derived from the type's existing validator whitelist, never invented fresh).
 
 `[DERIVED]` — none of these value sets were stated verbatim by the operator; they are extracted from the cartridge's mandatory-field vocabulary (REF-02) and this session's own prose. Flagged for review, not asserted as final.
 
@@ -59,4 +62,4 @@ Unchanged: 200-attempt retry cap, `WARN` at 50, fallback pool, never an infinite
 
 ## 8. Cross-service contract discipline — **new this pass**
 
-Because generation and validation are now two independent codebases (not two modules in one binary), the shared vocabulary in §6 above is the **only** thing allowed to drift between them undetected if it isn't centralized. Rule: neither `taskgen` nor `grader` hardcodes any enum from §6 as a Go string literal in application logic — both import the generated types from the `schema` module (see ADR-006, ADR-007). A reason code, verdict, or validation-method string that exists in one service's code but not in the `schema` module is a build-time error, not a runtime surprise.
+Because generation and validation are now two independent codebases (not two modules in one binary), the shared vocabulary in §6 above is the **only** thing allowed to drift between them undetected if it isn't centralized. Rule: neither `mathprep-taskgen` nor `mathprep-grader` hardcodes any enum from §6 as a Go string literal in application logic — both import the generated types from the `mathprep-schema` module (see ADR-006, ADR-007). A reason code, verdict, or validation-method string that exists in one service's code but not in the `mathprep-schema` module is a build-time error, not a runtime surprise.
