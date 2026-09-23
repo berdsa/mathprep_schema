@@ -238,5 +238,25 @@
     "mtime": 1790139677.2815175,
     "ast_hash": "94326d2a3cfb495dcbed7cddb0293496",
     "semantic_hash": "94326d2a3cfb495dcbed7cddb0293496"
+  },
+  "migrations/000013_extend_task_type_template_key.down.sql": {
+    "mtime": 1790139701.108379,
+    "ast_hash": "13037daba4757fc75a362f4efff42eb9",
+    "semantic_hash": "13037daba4757fc75a362f4efff42eb9"
+  },
+  "migrations/000013_extend_task_type_template_key.up.sql": {
+    "mtime": 1790139701.108079,
+    "ast_hash": "3bd53170cdd4b4e468adf10deb64d295",
+    "semantic_hash": "3bd53170cdd4b4e468adf10deb64d295"
+  },
+  "migrations/000014_activate_latex_render_target.down.sql": {
+    "mtime": 1790139701.1095772,
+    "ast_hash": "258fd74912e011e8edfd37657ae9ebaa",
+    "semantic_hash": "258fd74912e011e8edfd37657ae9ebaa"
+  },
+  "migrations/000014_activate_latex_render_target.up.sql": {
+    "mtime": 1790139701.1093044,
+    "ast_hash": "29a793c0d52db5ed53e628c27c6a9765",
+    "semantic_hash": "29a793c0d52db5ed53e628c27c6a9765"
   }
 }
