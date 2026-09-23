@@ -718,39 +718,57 @@
       "migrations_000012_add_task_type_widget_columns_up_sql_task_type"
     ],
     "54": [
-      "pkg_core_rows_go_locale"
+      "migrations_000013_extend_task_type_template_key_down"
     ],
     "55": [
-      "pkg_core_templates_test_go_context"
+      "migrations_000013_extend_task_type_template_key_down_sql_task_type_template"
     ],
     "56": [
-      "pkg_core_templates_test_go_locale"
+      "migrations_000013_extend_task_type_template_key_up"
     ],
     "57": [
-      "pkg_core_templates_test_go_t"
+      "migrations_000013_extend_task_type_template_key_up_sql_task_type_template"
     ],
     "58": [
-      "pkg_github_com_berdsa_mathprep_schema"
+      "migrations_000014_activate_latex_render_target_down"
     ],
     "59": [
-      "reasoncode"
+      "migrations_000014_activate_latex_render_target_up"
     ],
     "60": [
-      "rendertarget"
+      "pkg_core_rows_go_locale"
     ],
     "61": [
-      "tasktypestatus"
+      "pkg_core_templates_test_go_context"
     ],
     "62": [
-      "tiercode"
+      "pkg_core_templates_test_go_locale"
     ],
     "63": [
-      "usertype"
+      "pkg_core_templates_test_go_t"
     ],
     "64": [
-      "validationmethod"
+      "pkg_github_com_berdsa_mathprep_schema"
     ],
     "65": [
+      "reasoncode"
+    ],
+    "66": [
+      "rendertarget"
+    ],
+    "67": [
+      "tasktypestatus"
+    ],
+    "68": [
+      "tiercode"
+    ],
+    "69": [
+      "usertype"
+    ],
+    "70": [
+      "validationmethod"
+    ],
+    "71": [
       "verdict"
     ]
   },
@@ -820,7 +838,13 @@
     "62": 1.0,
     "63": 1.0,
     "64": 1.0,
-    "65": 1.0
+    "65": 1.0,
+    "66": 1.0,
+    "67": 1.0,
+    "68": 1.0,
+    "69": 1.0,
+    "70": 1.0,
+    "71": 1.0
   },
   "gods": [
     {

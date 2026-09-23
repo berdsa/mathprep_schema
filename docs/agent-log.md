@@ -540,3 +540,11 @@
 ## 2026-09-23 — Task-type widget columns
 
 - Added non-null `task_type.answer_widget` with a temporary NUMERIC baseline for existing rows, plus nullable JSONB `widget_config`.
+
+## 2026-09-23 — Render-target template key
+
+- Extended `task_type_template` to carry `render_target` and use `(type_id, locale, render_target, spec_version)` as its key; existing rows are preserved as plaintext.
+
+## 2026-09-23 — Activate LaTeX render target
+
+- Seeded `latex` as the third active `render_target` dictionary value; `html-mathml` remains reserved.

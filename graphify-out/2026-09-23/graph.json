@@ -11,7 +11,7 @@
       "source_file": "go.mod",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 54,
+      "community": 58,
       "community_name": "github.com/berdsa/mathprep_schema",
       "norm_label": "github.com/berdsa/mathprep_schema",
       "id": "pkg_github_com_berdsa_mathprep_schema"
@@ -5858,7 +5858,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 59,
+      "community": 63,
       "norm_label": "usertype",
       "id": "usertype"
     },
@@ -5898,7 +5898,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 57,
+      "community": 61,
       "norm_label": "tasktypestatus",
       "id": "tasktypestatus"
     },
@@ -5918,7 +5918,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 60,
+      "community": 64,
       "norm_label": "validationmethod",
       "id": "validationmethod"
     },
@@ -5928,7 +5928,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 50,
+      "community": 54,
       "norm_label": "locale",
       "id": "pkg_core_rows_go_locale"
     },
@@ -5938,7 +5938,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 58,
+      "community": 62,
       "norm_label": "tiercode",
       "id": "tiercode"
     },
@@ -5948,7 +5948,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 56,
+      "community": 60,
       "norm_label": "rendertarget",
       "id": "rendertarget"
     },
@@ -5958,7 +5958,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 61,
+      "community": 65,
       "norm_label": "verdict",
       "id": "verdict"
     },
@@ -5968,7 +5968,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 55,
+      "community": 59,
       "norm_label": "reasoncode",
       "id": "reasoncode"
     },
@@ -6058,7 +6058,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 52,
+      "community": 56,
       "norm_label": "locale",
       "id": "pkg_core_templates_test_go_locale"
     },
@@ -6068,7 +6068,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 51,
+      "community": 55,
       "norm_label": "context",
       "id": "pkg_core_templates_test_go_context"
     },
@@ -6078,7 +6078,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 53,
+      "community": 57,
       "norm_label": "t",
       "id": "pkg_core_templates_test_go_t"
     },
@@ -6298,9 +6298,9 @@
       "source_file": "migrations/000011_add_answer_widget_dictionary.down.sql",
       "source_location": null,
       "_origin": "ast",
-      "id": "migrations_000011_add_answer_widget_dictionary_down",
       "community": 49,
-      "norm_label": "000011_add_answer_widget_dictionary.down.sql"
+      "norm_label": "000011_add_answer_widget_dictionary.down.sql",
+      "id": "migrations_000011_add_answer_widget_dictionary_down"
     },
     {
       "label": "000011_add_answer_widget_dictionary.up.sql",
@@ -6308,9 +6308,9 @@
       "source_file": "migrations/000011_add_answer_widget_dictionary.up.sql",
       "source_location": null,
       "_origin": "ast",
-      "id": "migrations_000011_add_answer_widget_dictionary_up",
       "community": 24,
-      "norm_label": "000011_add_answer_widget_dictionary.up.sql"
+      "norm_label": "000011_add_answer_widget_dictionary.up.sql",
+      "id": "migrations_000011_add_answer_widget_dictionary_up"
     },
     {
       "label": "answer_widget",
@@ -6318,9 +6318,9 @@
       "source_file": "migrations/000011_add_answer_widget_dictionary.up.sql",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "migrations_000011_add_answer_widget_dictionary_up_answer_widget",
       "community": 24,
-      "norm_label": "answer_widget"
+      "norm_label": "answer_widget",
+      "id": "migrations_000011_add_answer_widget_dictionary_up_answer_widget"
     },
     {
       "label": "constants.go",
@@ -6328,9 +6328,9 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "pkg_core_constants",
       "community": 2,
-      "norm_label": "constants.go"
+      "norm_label": "constants.go",
+      "id": "pkg_core_constants"
     },
     {
       "label": "Domain",
@@ -6338,9 +6338,9 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "core_domain",
       "community": 2,
-      "norm_label": "domain"
+      "norm_label": "domain",
+      "id": "core_domain"
     },
     {
       "label": "GradeBand",
@@ -6348,9 +6348,9 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L26",
       "_origin": "ast",
-      "id": "core_gradeband",
       "community": 2,
-      "norm_label": "gradeband"
+      "norm_label": "gradeband",
+      "id": "core_gradeband"
     },
     {
       "label": "TierCode",
@@ -6358,9 +6358,9 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L43",
       "_origin": "ast",
-      "id": "core_tiercode",
       "community": 2,
-      "norm_label": "tiercode"
+      "norm_label": "tiercode",
+      "id": "core_tiercode"
     },
     {
       "label": "ValidationMethod",
@@ -6368,9 +6368,9 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L51",
       "_origin": "ast",
-      "id": "core_validationmethod",
       "community": 2,
-      "norm_label": "validationmethod"
+      "norm_label": "validationmethod",
+      "id": "core_validationmethod"
     },
     {
       "label": "EquivalencePolicy",
@@ -6378,9 +6378,9 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L67",
       "_origin": "ast",
-      "id": "core_equivalencepolicy",
       "community": 2,
-      "norm_label": "equivalencepolicy"
+      "norm_label": "equivalencepolicy",
+      "id": "core_equivalencepolicy"
     },
     {
       "label": "GenerationMode",
@@ -6388,9 +6388,9 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L75",
       "_origin": "ast",
-      "id": "core_generationmode",
       "community": 2,
-      "norm_label": "generationmode"
+      "norm_label": "generationmode",
+      "id": "core_generationmode"
     },
     {
       "label": "TaskTypeStatus",
@@ -6398,9 +6398,9 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L82",
       "_origin": "ast",
-      "id": "core_tasktypestatus",
       "community": 2,
-      "norm_label": "tasktypestatus"
+      "norm_label": "tasktypestatus",
+      "id": "core_tasktypestatus"
     },
     {
       "label": "Verdict",
@@ -6408,9 +6408,9 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L90",
       "_origin": "ast",
-      "id": "core_verdict",
       "community": 2,
-      "norm_label": "verdict"
+      "norm_label": "verdict",
+      "id": "core_verdict"
     },
     {
       "label": "ReasonCode",
@@ -6418,9 +6418,9 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L98",
       "_origin": "ast",
-      "id": "core_reasoncode",
       "community": 3,
-      "norm_label": "reasoncode"
+      "norm_label": "reasoncode",
+      "id": "core_reasoncode"
     },
     {
       "label": "CASEvaluationOperationType",
@@ -6428,9 +6428,9 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L113",
       "_origin": "ast",
-      "id": "core_casevaluationoperationtype",
       "community": 2,
-      "norm_label": "casevaluationoperationtype"
+      "norm_label": "casevaluationoperationtype",
+      "id": "core_casevaluationoperationtype"
     },
     {
       "label": "CASEvaluationStatus",
@@ -6438,9 +6438,9 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L119",
       "_origin": "ast",
-      "id": "core_casevaluationstatus",
       "community": 2,
-      "norm_label": "casevaluationstatus"
+      "norm_label": "casevaluationstatus",
+      "id": "core_casevaluationstatus"
     },
     {
       "label": "EventType",
@@ -6448,9 +6448,9 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L128",
       "_origin": "ast",
-      "id": "core_eventtype",
       "community": 2,
-      "norm_label": "eventtype"
+      "norm_label": "eventtype",
+      "id": "core_eventtype"
     },
     {
       "label": "RenderTarget",
@@ -6458,9 +6458,9 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L140",
       "_origin": "ast",
-      "id": "core_rendertarget",
       "community": 2,
-      "norm_label": "rendertarget"
+      "norm_label": "rendertarget",
+      "id": "core_rendertarget"
     },
     {
       "label": "AnswerWidget",
@@ -6468,9 +6468,9 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L148",
       "_origin": "ast",
-      "id": "core_answerwidget",
       "community": 2,
-      "norm_label": "answerwidget"
+      "norm_label": "answerwidget",
+      "id": "core_answerwidget"
     },
     {
       "label": "Locale",
@@ -6478,9 +6478,9 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L161",
       "_origin": "ast",
-      "id": "core_locale",
       "community": 2,
-      "norm_label": "locale"
+      "norm_label": "locale",
+      "id": "core_locale"
     },
     {
       "label": "UserType",
@@ -6488,9 +6488,9 @@
       "source_file": "pkg/core/constants.go",
       "source_location": "L165",
       "_origin": "ast",
-      "id": "core_usertype",
       "community": 2,
-      "norm_label": "usertype"
+      "norm_label": "usertype",
+      "id": "core_usertype"
     },
     {
       "label": "rows.go",
@@ -6498,9 +6498,9 @@
       "source_file": "pkg/core/rows.go",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "pkg_core_rows",
       "community": 2,
-      "norm_label": "rows.go"
+      "norm_label": "rows.go",
+      "id": "pkg_core_rows"
     },
     {
       "label": "User",
@@ -6508,9 +6508,9 @@
       "source_file": "pkg/core/rows.go",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "core_user",
       "community": 2,
-      "norm_label": "user"
+      "norm_label": "user",
+      "id": "core_user"
     },
     {
       "label": "Student",
@@ -6518,9 +6518,9 @@
       "source_file": "pkg/core/rows.go",
       "source_location": "L15",
       "_origin": "ast",
-      "id": "core_student",
       "community": 2,
-      "norm_label": "student"
+      "norm_label": "student",
+      "id": "core_student"
     },
     {
       "label": "GenerationRequestStatus",
@@ -6528,9 +6528,9 @@
       "source_file": "pkg/core/rows.go",
       "source_location": "L20",
       "_origin": "ast",
-      "id": "core_generationrequeststatus",
       "community": 2,
-      "norm_label": "generationrequeststatus"
+      "norm_label": "generationrequeststatus",
+      "id": "core_generationrequeststatus"
     },
     {
       "label": "GenerationRequest",
@@ -6538,9 +6538,9 @@
       "source_file": "pkg/core/rows.go",
       "source_location": "L29",
       "_origin": "ast",
-      "id": "core_generationrequest",
       "community": 2,
-      "norm_label": "generationrequest"
+      "norm_label": "generationrequest",
+      "id": "core_generationrequest"
     },
     {
       "label": "TaskType",
@@ -6548,9 +6548,9 @@
       "source_file": "pkg/core/rows.go",
       "source_location": "L41",
       "_origin": "ast",
-      "id": "core_tasktype",
       "community": 2,
-      "norm_label": "tasktype"
+      "norm_label": "tasktype",
+      "id": "core_tasktype"
     },
     {
       "label": "TaskTypeTemplate",
@@ -6558,9 +6558,9 @@
       "source_file": "pkg/core/rows.go",
       "source_location": "L55",
       "_origin": "ast",
-      "id": "core_tasktypetemplate",
       "community": 2,
-      "norm_label": "tasktypetemplate"
+      "norm_label": "tasktypetemplate",
+      "id": "core_tasktypetemplate"
     },
     {
       "label": "TaskSet",
@@ -6568,9 +6568,9 @@
       "source_file": "pkg/core/rows.go",
       "source_location": "L63",
       "_origin": "ast",
-      "id": "core_taskset",
       "community": 2,
-      "norm_label": "taskset"
+      "norm_label": "taskset",
+      "id": "core_taskset"
     },
     {
       "label": "TaskInstance",
@@ -6578,9 +6578,9 @@
       "source_file": "pkg/core/rows.go",
       "source_location": "L71",
       "_origin": "ast",
-      "id": "core_taskinstance",
       "community": 2,
-      "norm_label": "taskinstance"
+      "norm_label": "taskinstance",
+      "id": "core_taskinstance"
     },
     {
       "label": "Submission",
@@ -6588,9 +6588,9 @@
       "source_file": "pkg/core/rows.go",
       "source_location": "L85",
       "_origin": "ast",
-      "id": "core_submission",
       "community": 2,
-      "norm_label": "submission"
+      "norm_label": "submission",
+      "id": "core_submission"
     },
     {
       "label": "MasteryTopic",
@@ -6598,9 +6598,9 @@
       "source_file": "pkg/core/rows.go",
       "source_location": "L97",
       "_origin": "ast",
-      "id": "core_masterytopic",
       "community": 2,
-      "norm_label": "masterytopic"
+      "norm_label": "masterytopic",
+      "id": "core_masterytopic"
     },
     {
       "label": "EventLog",
@@ -6608,9 +6608,9 @@
       "source_file": "pkg/core/rows.go",
       "source_location": "L105",
       "_origin": "ast",
-      "id": "core_eventlog",
       "community": 2,
-      "norm_label": "eventlog"
+      "norm_label": "eventlog",
+      "id": "core_eventlog"
     },
     {
       "label": "CASEvaluationRequest",
@@ -6618,9 +6618,9 @@
       "source_file": "pkg/core/rows.go",
       "source_location": "L112",
       "_origin": "ast",
-      "id": "core_casevaluationrequest",
       "community": 2,
-      "norm_label": "casevaluationrequest"
+      "norm_label": "casevaluationrequest",
+      "id": "core_casevaluationrequest"
     },
     {
       "label": "templates_test.go",
@@ -6628,9 +6628,9 @@
       "source_file": "pkg/core/templates_test.go",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "pkg_core_templates_test",
       "community": 20,
-      "norm_label": "templates_test.go"
+      "norm_label": "templates_test.go",
+      "id": "pkg_core_templates_test"
     },
     {
       "label": "templateStoreStub",
@@ -6638,9 +6638,9 @@
       "source_file": "pkg/core/templates_test.go",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "core_templatestorestub",
       "community": 2,
-      "norm_label": "templatestorestub"
+      "norm_label": "templatestorestub",
+      "id": "core_templatestorestub"
     },
     {
       "label": ".FindTaskTypeTemplate()",
@@ -6648,9 +6648,9 @@
       "source_file": "pkg/core/templates_test.go",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "core_templatestorestub_findtasktypetemplate",
       "community": 2,
-      "norm_label": ".findtasktypetemplate()"
+      "norm_label": ".findtasktypetemplate()",
+      "id": "core_templatestorestub_findtasktypetemplate"
     },
     {
       "label": "Context",
@@ -6658,9 +6658,9 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "context",
       "community": 2,
-      "norm_label": "context"
+      "norm_label": "context",
+      "id": "context"
     },
     {
       "label": ".FindTaskTypeLocale()",
@@ -6668,9 +6668,9 @@
       "source_file": "pkg/core/templates_test.go",
       "source_location": "L18",
       "_origin": "ast",
-      "id": "core_templatestorestub_findtasktypelocale",
       "community": 2,
-      "norm_label": ".findtasktypelocale()"
+      "norm_label": ".findtasktypelocale()",
+      "id": "core_templatestorestub_findtasktypelocale"
     },
     {
       "label": "TestLookupTaskTypeTemplateUsesRequestedLocale()",
@@ -6678,9 +6678,9 @@
       "source_file": "pkg/core/templates_test.go",
       "source_location": "L22",
       "_origin": "ast",
-      "id": "pkg_core_templates_test_testlookuptasktypetemplateusesrequestedlocale",
       "community": 20,
-      "norm_label": "testlookuptasktypetemplateusesrequestedlocale()"
+      "norm_label": "testlookuptasktypetemplateusesrequestedlocale()",
+      "id": "pkg_core_templates_test_testlookuptasktypetemplateusesrequestedlocale"
     },
     {
       "label": "TestLookupTaskTypeTemplateFallsBackToPrimaryLocale()",
@@ -6688,9 +6688,9 @@
       "source_file": "pkg/core/templates_test.go",
       "source_location": "L30",
       "_origin": "ast",
-      "id": "pkg_core_templates_test_testlookuptasktypetemplatefallsbacktoprimarylocale",
       "community": 20,
-      "norm_label": "testlookuptasktypetemplatefallsbacktoprimarylocale()"
+      "norm_label": "testlookuptasktypetemplatefallsbacktoprimarylocale()",
+      "id": "pkg_core_templates_test_testlookuptasktypetemplatefallsbacktoprimarylocale"
     },
     {
       "label": "TestLookupTaskTypeTemplateReportsMissingTemplate()",
@@ -6698,9 +6698,49 @@
       "source_file": "pkg/core/templates_test.go",
       "source_location": "L38",
       "_origin": "ast",
-      "id": "pkg_core_templates_test_testlookuptasktypetemplatereportsmissingtemplate",
       "community": 20,
-      "norm_label": "testlookuptasktypetemplatereportsmissingtemplate()"
+      "norm_label": "testlookuptasktypetemplatereportsmissingtemplate()",
+      "id": "pkg_core_templates_test_testlookuptasktypetemplatereportsmissingtemplate"
+    },
+    {
+      "label": "000012_add_task_type_widget_columns.down.sql",
+      "file_type": "code",
+      "source_file": "migrations/000012_add_task_type_widget_columns.down.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000012_add_task_type_widget_columns_down",
+      "community": 50,
+      "norm_label": "000012_add_task_type_widget_columns.down.sql"
+    },
+    {
+      "label": "task_type",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "migrations_000012_add_task_type_widget_columns_down_sql_task_type",
+      "community": 51,
+      "norm_label": "task_type"
+    },
+    {
+      "label": "000012_add_task_type_widget_columns.up.sql",
+      "file_type": "code",
+      "source_file": "migrations/000012_add_task_type_widget_columns.up.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000012_add_task_type_widget_columns_up",
+      "community": 52,
+      "norm_label": "000012_add_task_type_widget_columns.up.sql"
+    },
+    {
+      "label": "task_type",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "migrations_000012_add_task_type_widget_columns_up_sql_task_type",
+      "community": 53,
+      "norm_label": "task_type"
     }
   ],
   "links": [
@@ -7317,9 +7357,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_casevaluationrequest",
-      "target": "uuid",
-      "confidence_score": 1.0
+      "target": "uuid"
     },
     {
       "relation": "references",
@@ -7329,9 +7369,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_eventlog",
-      "target": "uuid",
-      "confidence_score": 1.0
+      "target": "uuid"
     },
     {
       "relation": "references",
@@ -7341,9 +7381,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_generationrequest",
-      "target": "uuid",
-      "confidence_score": 1.0
+      "target": "uuid"
     },
     {
       "relation": "references",
@@ -7353,9 +7393,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_masterytopic",
-      "target": "uuid",
-      "confidence_score": 1.0
+      "target": "uuid"
     },
     {
       "relation": "references",
@@ -7365,9 +7405,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_student",
-      "target": "uuid",
-      "confidence_score": 1.0
+      "target": "uuid"
     },
     {
       "relation": "references",
@@ -7377,9 +7417,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_submission",
-      "target": "uuid",
-      "confidence_score": 1.0
+      "target": "uuid"
     },
     {
       "relation": "references",
@@ -7389,9 +7429,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_taskinstance",
-      "target": "uuid",
-      "confidence_score": 1.0
+      "target": "uuid"
     },
     {
       "relation": "references",
@@ -7401,9 +7441,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_taskset",
-      "target": "uuid",
-      "confidence_score": 1.0
+      "target": "uuid"
     },
     {
       "relation": "references",
@@ -7413,9 +7453,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_user",
-      "target": "uuid",
-      "confidence_score": 1.0
+      "target": "uuid"
     },
     {
       "relation": "references",
@@ -7425,9 +7465,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_casevaluationrequest",
-      "target": "rawmessage",
-      "confidence_score": 1.0
+      "target": "rawmessage"
     },
     {
       "relation": "references",
@@ -7437,9 +7477,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_eventlog",
-      "target": "rawmessage",
-      "confidence_score": 1.0
+      "target": "rawmessage"
     },
     {
       "relation": "references",
@@ -7449,9 +7489,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_generationrequest",
-      "target": "rawmessage",
-      "confidence_score": 1.0
+      "target": "rawmessage"
     },
     {
       "relation": "references",
@@ -7461,9 +7501,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_taskinstance",
-      "target": "rawmessage",
-      "confidence_score": 1.0
+      "target": "rawmessage"
     },
     {
       "relation": "references",
@@ -7473,9 +7513,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_tasktype",
-      "target": "rawmessage",
-      "confidence_score": 1.0
+      "target": "rawmessage"
     },
     {
       "relation": "references",
@@ -7485,9 +7525,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_casevaluationrequest",
-      "target": "time",
-      "confidence_score": 1.0
+      "target": "time"
     },
     {
       "relation": "references",
@@ -7497,9 +7537,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_eventlog",
-      "target": "time",
-      "confidence_score": 1.0
+      "target": "time"
     },
     {
       "relation": "references",
@@ -7509,9 +7549,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_generationrequest",
-      "target": "time",
-      "confidence_score": 1.0
+      "target": "time"
     },
     {
       "relation": "references",
@@ -7521,9 +7561,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_masterytopic",
-      "target": "time",
-      "confidence_score": 1.0
+      "target": "time"
     },
     {
       "relation": "references",
@@ -7533,9 +7573,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_submission",
-      "target": "time",
-      "confidence_score": 1.0
+      "target": "time"
     },
     {
       "relation": "references",
@@ -7545,9 +7585,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_taskset",
-      "target": "time",
-      "confidence_score": 1.0
+      "target": "time"
     },
     {
       "relation": "contains",
@@ -8665,9 +8705,9 @@
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_templates_test_testlookuptasktypetemplatefallsbacktoprimarylocale",
-      "target": "t",
-      "confidence_score": 1.0
+      "target": "t"
     },
     {
       "relation": "references",
@@ -8677,9 +8717,9 @@
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_templates_test_testlookuptasktypetemplatereportsmissingtemplate",
-      "target": "t",
-      "confidence_score": 1.0
+      "target": "t"
     },
     {
       "relation": "references",
@@ -8689,9 +8729,9 @@
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_templates_test_testlookuptasktypetemplateusesrequestedlocale",
-      "target": "t",
-      "confidence_score": 1.0
+      "target": "t"
     },
     {
       "relation": "contains",
@@ -14025,9 +14065,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "migrations_000011_add_answer_widget_dictionary_up",
-      "target": "migrations_000011_add_answer_widget_dictionary_up_answer_widget",
-      "confidence_score": 1.0
+      "target": "migrations_000011_add_answer_widget_dictionary_up_answer_widget"
     },
     {
       "relation": "contains",
@@ -14036,9 +14076,9 @@
       "source_location": "L148",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_constants",
-      "target": "core_answerwidget",
-      "confidence_score": 1.0
+      "target": "core_answerwidget"
     },
     {
       "relation": "contains",
@@ -14047,9 +14087,9 @@
       "source_location": "L113",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_constants",
-      "target": "core_casevaluationoperationtype",
-      "confidence_score": 1.0
+      "target": "core_casevaluationoperationtype"
     },
     {
       "relation": "contains",
@@ -14058,9 +14098,9 @@
       "source_location": "L119",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_constants",
-      "target": "core_casevaluationstatus",
-      "confidence_score": 1.0
+      "target": "core_casevaluationstatus"
     },
     {
       "relation": "contains",
@@ -14069,9 +14109,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_constants",
-      "target": "core_domain",
-      "confidence_score": 1.0
+      "target": "core_domain"
     },
     {
       "relation": "contains",
@@ -14080,9 +14120,9 @@
       "source_location": "L67",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_constants",
-      "target": "core_equivalencepolicy",
-      "confidence_score": 1.0
+      "target": "core_equivalencepolicy"
     },
     {
       "relation": "contains",
@@ -14091,9 +14131,9 @@
       "source_location": "L128",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_constants",
-      "target": "core_eventtype",
-      "confidence_score": 1.0
+      "target": "core_eventtype"
     },
     {
       "relation": "contains",
@@ -14102,9 +14142,9 @@
       "source_location": "L75",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_constants",
-      "target": "core_generationmode",
-      "confidence_score": 1.0
+      "target": "core_generationmode"
     },
     {
       "relation": "contains",
@@ -14113,9 +14153,9 @@
       "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_constants",
-      "target": "core_gradeband",
-      "confidence_score": 1.0
+      "target": "core_gradeband"
     },
     {
       "relation": "contains",
@@ -14124,9 +14164,9 @@
       "source_location": "L161",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_constants",
-      "target": "core_locale",
-      "confidence_score": 1.0
+      "target": "core_locale"
     },
     {
       "relation": "contains",
@@ -14135,9 +14175,9 @@
       "source_location": "L98",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_constants",
-      "target": "core_reasoncode",
-      "confidence_score": 1.0
+      "target": "core_reasoncode"
     },
     {
       "relation": "contains",
@@ -14146,9 +14186,9 @@
       "source_location": "L140",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_constants",
-      "target": "core_rendertarget",
-      "confidence_score": 1.0
+      "target": "core_rendertarget"
     },
     {
       "relation": "contains",
@@ -14157,9 +14197,9 @@
       "source_location": "L82",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_constants",
-      "target": "core_tasktypestatus",
-      "confidence_score": 1.0
+      "target": "core_tasktypestatus"
     },
     {
       "relation": "contains",
@@ -14168,9 +14208,9 @@
       "source_location": "L43",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_constants",
-      "target": "core_tiercode",
-      "confidence_score": 1.0
+      "target": "core_tiercode"
     },
     {
       "relation": "contains",
@@ -14179,9 +14219,9 @@
       "source_location": "L165",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_constants",
-      "target": "core_usertype",
-      "confidence_score": 1.0
+      "target": "core_usertype"
     },
     {
       "relation": "contains",
@@ -14190,9 +14230,9 @@
       "source_location": "L51",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_constants",
-      "target": "core_validationmethod",
-      "confidence_score": 1.0
+      "target": "core_validationmethod"
     },
     {
       "relation": "contains",
@@ -14201,9 +14241,9 @@
       "source_location": "L90",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_constants",
-      "target": "core_verdict",
-      "confidence_score": 1.0
+      "target": "core_verdict"
     },
     {
       "relation": "references",
@@ -14213,9 +14253,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_masterytopic",
-      "target": "core_domain",
-      "confidence_score": 1.0
+      "target": "core_domain"
     },
     {
       "relation": "references",
@@ -14225,9 +14265,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_tasktype",
-      "target": "core_domain",
-      "confidence_score": 1.0
+      "target": "core_domain"
     },
     {
       "relation": "references",
@@ -14237,9 +14277,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_tasktype",
-      "target": "core_gradeband",
-      "confidence_score": 1.0
+      "target": "core_gradeband"
     },
     {
       "relation": "references",
@@ -14249,9 +14289,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_masterytopic",
-      "target": "core_tiercode",
-      "confidence_score": 1.0
+      "target": "core_tiercode"
     },
     {
       "relation": "references",
@@ -14261,9 +14301,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_taskinstance",
-      "target": "core_tiercode",
-      "confidence_score": 1.0
+      "target": "core_tiercode"
     },
     {
       "relation": "references",
@@ -14273,9 +14313,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_tasktype",
-      "target": "core_validationmethod",
-      "confidence_score": 1.0
+      "target": "core_validationmethod"
     },
     {
       "relation": "references",
@@ -14285,9 +14325,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_tasktype",
-      "target": "core_equivalencepolicy",
-      "confidence_score": 1.0
+      "target": "core_equivalencepolicy"
     },
     {
       "relation": "references",
@@ -14297,9 +14337,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_tasktype",
-      "target": "core_generationmode",
-      "confidence_score": 1.0
+      "target": "core_generationmode"
     },
     {
       "relation": "references",
@@ -14309,9 +14349,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_tasktype",
-      "target": "core_tasktypestatus",
-      "confidence_score": 1.0
+      "target": "core_tasktypestatus"
     },
     {
       "relation": "references",
@@ -14321,9 +14361,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_casevaluationrequest",
-      "target": "core_verdict",
-      "confidence_score": 1.0
+      "target": "core_verdict"
     },
     {
       "relation": "references",
@@ -14333,9 +14373,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_submission",
-      "target": "core_verdict",
-      "confidence_score": 1.0
+      "target": "core_verdict"
     },
     {
       "relation": "references",
@@ -14345,9 +14385,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_casevaluationrequest",
-      "target": "core_reasoncode",
-      "confidence_score": 1.0
+      "target": "core_reasoncode"
     },
     {
       "relation": "references",
@@ -14357,9 +14397,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_submission",
-      "target": "core_reasoncode",
-      "confidence_score": 1.0
+      "target": "core_reasoncode"
     },
     {
       "relation": "references",
@@ -14369,9 +14409,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_casevaluationrequest",
-      "target": "core_casevaluationoperationtype",
-      "confidence_score": 1.0
+      "target": "core_casevaluationoperationtype"
     },
     {
       "relation": "references",
@@ -14381,9 +14421,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_casevaluationrequest",
-      "target": "core_casevaluationstatus",
-      "confidence_score": 1.0
+      "target": "core_casevaluationstatus"
     },
     {
       "relation": "references",
@@ -14393,9 +14433,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_eventlog",
-      "target": "core_eventtype",
-      "confidence_score": 1.0
+      "target": "core_eventtype"
     },
     {
       "relation": "references",
@@ -14405,9 +14445,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_taskinstance",
-      "target": "core_rendertarget",
-      "confidence_score": 1.0
+      "target": "core_rendertarget"
     },
     {
       "relation": "references",
@@ -14417,9 +14457,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_tasktypetemplate",
-      "target": "core_rendertarget",
-      "confidence_score": 1.0
+      "target": "core_rendertarget"
     },
     {
       "relation": "references",
@@ -14429,9 +14469,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_tasktype",
-      "target": "core_answerwidget",
-      "confidence_score": 1.0
+      "target": "core_answerwidget"
     },
     {
       "relation": "references",
@@ -14441,9 +14481,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_taskinstance",
-      "target": "core_locale",
-      "confidence_score": 1.0
+      "target": "core_locale"
     },
     {
       "relation": "references",
@@ -14453,9 +14493,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_tasktype",
-      "target": "core_locale",
-      "confidence_score": 1.0
+      "target": "core_locale"
     },
     {
       "relation": "references",
@@ -14465,9 +14505,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_tasktypetemplate",
-      "target": "core_locale",
-      "confidence_score": 1.0
+      "target": "core_locale"
     },
     {
       "relation": "references",
@@ -14477,9 +14517,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_templatestorestub",
-      "target": "core_locale",
-      "confidence_score": 1.0
+      "target": "core_locale"
     },
     {
       "relation": "references",
@@ -14489,9 +14529,9 @@
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_templatestorestub_findtasktypelocale",
-      "target": "core_locale",
-      "confidence_score": 1.0
+      "target": "core_locale"
     },
     {
       "relation": "references",
@@ -14501,9 +14541,9 @@
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_templatestorestub_findtasktypetemplate",
-      "target": "core_locale",
-      "confidence_score": 1.0
+      "target": "core_locale"
     },
     {
       "relation": "references",
@@ -14513,9 +14553,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_user",
-      "target": "core_usertype",
-      "confidence_score": 1.0
+      "target": "core_usertype"
     },
     {
       "relation": "contains",
@@ -14524,9 +14564,9 @@
       "source_location": "L112",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_rows",
-      "target": "core_casevaluationrequest",
-      "confidence_score": 1.0
+      "target": "core_casevaluationrequest"
     },
     {
       "relation": "contains",
@@ -14535,9 +14575,9 @@
       "source_location": "L105",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_rows",
-      "target": "core_eventlog",
-      "confidence_score": 1.0
+      "target": "core_eventlog"
     },
     {
       "relation": "contains",
@@ -14546,9 +14586,9 @@
       "source_location": "L29",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_rows",
-      "target": "core_generationrequest",
-      "confidence_score": 1.0
+      "target": "core_generationrequest"
     },
     {
       "relation": "contains",
@@ -14557,9 +14597,9 @@
       "source_location": "L20",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_rows",
-      "target": "core_generationrequeststatus",
-      "confidence_score": 1.0
+      "target": "core_generationrequeststatus"
     },
     {
       "relation": "contains",
@@ -14568,9 +14608,9 @@
       "source_location": "L97",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_rows",
-      "target": "core_masterytopic",
-      "confidence_score": 1.0
+      "target": "core_masterytopic"
     },
     {
       "relation": "contains",
@@ -14579,9 +14619,9 @@
       "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_rows",
-      "target": "core_student",
-      "confidence_score": 1.0
+      "target": "core_student"
     },
     {
       "relation": "contains",
@@ -14590,9 +14630,9 @@
       "source_location": "L85",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_rows",
-      "target": "core_submission",
-      "confidence_score": 1.0
+      "target": "core_submission"
     },
     {
       "relation": "contains",
@@ -14601,9 +14641,9 @@
       "source_location": "L71",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_rows",
-      "target": "core_taskinstance",
-      "confidence_score": 1.0
+      "target": "core_taskinstance"
     },
     {
       "relation": "contains",
@@ -14612,9 +14652,9 @@
       "source_location": "L63",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_rows",
-      "target": "core_taskset",
-      "confidence_score": 1.0
+      "target": "core_taskset"
     },
     {
       "relation": "contains",
@@ -14623,9 +14663,9 @@
       "source_location": "L41",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_rows",
-      "target": "core_tasktype",
-      "confidence_score": 1.0
+      "target": "core_tasktype"
     },
     {
       "relation": "contains",
@@ -14634,9 +14674,9 @@
       "source_location": "L55",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_rows",
-      "target": "core_tasktypetemplate",
-      "confidence_score": 1.0
+      "target": "core_tasktypetemplate"
     },
     {
       "relation": "contains",
@@ -14645,9 +14685,9 @@
       "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_rows",
-      "target": "core_user",
-      "confidence_score": 1.0
+      "target": "core_user"
     },
     {
       "relation": "references",
@@ -14657,9 +14697,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_generationrequest",
-      "target": "core_generationrequeststatus",
-      "confidence_score": 1.0
+      "target": "core_generationrequeststatus"
     },
     {
       "relation": "references",
@@ -14669,9 +14709,9 @@
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_templatestorestub",
-      "target": "core_tasktypetemplate",
-      "confidence_score": 1.0
+      "target": "core_tasktypetemplate"
     },
     {
       "relation": "references",
@@ -14681,9 +14721,9 @@
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_templatestorestub_findtasktypetemplate",
-      "target": "core_tasktypetemplate",
-      "confidence_score": 1.0
+      "target": "core_tasktypetemplate"
     },
     {
       "relation": "contains",
@@ -14692,9 +14732,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_templates_test",
-      "target": "core_templatestorestub",
-      "confidence_score": 1.0
+      "target": "core_templatestorestub"
     },
     {
       "relation": "contains",
@@ -14703,9 +14743,9 @@
       "source_location": "L30",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_templates_test",
-      "target": "pkg_core_templates_test_testlookuptasktypetemplatefallsbacktoprimarylocale",
-      "confidence_score": 1.0
+      "target": "pkg_core_templates_test_testlookuptasktypetemplatefallsbacktoprimarylocale"
     },
     {
       "relation": "contains",
@@ -14714,9 +14754,9 @@
       "source_location": "L38",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_templates_test",
-      "target": "pkg_core_templates_test_testlookuptasktypetemplatereportsmissingtemplate",
-      "confidence_score": 1.0
+      "target": "pkg_core_templates_test_testlookuptasktypetemplatereportsmissingtemplate"
     },
     {
       "relation": "contains",
@@ -14725,9 +14765,9 @@
       "source_location": "L22",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "pkg_core_templates_test",
-      "target": "pkg_core_templates_test_testlookuptasktypetemplateusesrequestedlocale",
-      "confidence_score": 1.0
+      "target": "pkg_core_templates_test_testlookuptasktypetemplateusesrequestedlocale"
     },
     {
       "relation": "method",
@@ -14736,9 +14776,9 @@
       "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_templatestorestub",
-      "target": "core_templatestorestub_findtasktypelocale",
-      "confidence_score": 1.0
+      "target": "core_templatestorestub_findtasktypelocale"
     },
     {
       "relation": "method",
@@ -14747,9 +14787,9 @@
       "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_templatestorestub",
-      "target": "core_templatestorestub_findtasktypetemplate",
-      "confidence_score": 1.0
+      "target": "core_templatestorestub_findtasktypetemplate"
     },
     {
       "relation": "references",
@@ -14759,9 +14799,9 @@
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_templatestorestub_findtasktypetemplate",
-      "target": "context",
-      "confidence_score": 1.0
+      "target": "context"
     },
     {
       "relation": "references",
@@ -14771,11 +14811,11 @@
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "core_templatestorestub_findtasktypelocale",
-      "target": "context",
-      "confidence_score": 1.0
+      "target": "context"
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "2be40c35f116e9e5cc5d894aba69d8b9bbe6b867"
+  "built_at_commit": "78af6da3075b588775bd8ec36bd6886ee07482bc"
 }
