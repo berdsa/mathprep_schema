@@ -531,3 +531,8 @@
 
 - Added migration `000010_task_type_templates`, the core template row and fallback lookup contract, and focused lookup tests.
 - Seeded the five-type taskgen Phase A pilot with existing wording only; no translation backfill was performed.
+
+## 2026-09-23 — Answer-widget dictionary
+
+- Added the eight-value `answer_widget` dictionary and exported shared `AnswerWidget` constants.
+- Activated the shared `latex` render-target constant in `pkg/core`; database seeding is committed in its own migration step.

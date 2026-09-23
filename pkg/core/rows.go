@@ -48,11 +48,14 @@ type TaskType struct {
 	EquivalencePolicy EquivalencePolicy
 	ValidationMethod  ValidationMethod
 	Locale            Locale
+	AnswerWidget      AnswerWidget
+	WidgetConfig      json.RawMessage
 }
 
 type TaskTypeTemplate struct {
 	TypeID       string
 	Locale       Locale
+	RenderTarget RenderTarget
 	TemplateText string
 	SpecVersion  string
 }

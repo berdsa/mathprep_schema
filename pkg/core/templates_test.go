@@ -20,7 +20,7 @@ func (s templateStoreStub) FindTaskTypeLocale(context.Context, string) (Locale, 
 }
 
 func TestLookupTaskTypeTemplateUsesRequestedLocale(t *testing.T) {
-	want := TaskTypeTemplate{TypeID: "G3-NUM-002", Locale: "en-US", TemplateText: "{{a}} × {{b}} = ?", SpecVersion: "1.0.0-draft"}
+	want := TaskTypeTemplate{TypeID: "G3-NUM-002", Locale: "en-US", RenderTarget: RenderTargetPlaintext, TemplateText: "{{a}} × {{b}} = ?", SpecVersion: "1.0.0-draft"}
 	got, err := LookupTaskTypeTemplate(context.Background(), templateStoreStub{templates: map[Locale]TaskTypeTemplate{"en-US": want}, primary: LocaleRuKZ}, "G3-NUM-002", "en-US")
 	if err != nil || got != want {
 		t.Fatalf("got %#v, err %v", got, err)
@@ -28,7 +28,7 @@ func TestLookupTaskTypeTemplateUsesRequestedLocale(t *testing.T) {
 }
 
 func TestLookupTaskTypeTemplateFallsBackToPrimaryLocale(t *testing.T) {
-	want := TaskTypeTemplate{TypeID: "G3-NUM-002", Locale: LocaleRuKZ, TemplateText: "{{a}} × {{b}} = ?", SpecVersion: "1.0.0-draft"}
+	want := TaskTypeTemplate{TypeID: "G3-NUM-002", Locale: LocaleRuKZ, RenderTarget: RenderTargetPlaintext, TemplateText: "{{a}} × {{b}} = ?", SpecVersion: "1.0.0-draft"}
 	got, err := LookupTaskTypeTemplate(context.Background(), templateStoreStub{templates: map[Locale]TaskTypeTemplate{LocaleRuKZ: want}, primary: LocaleRuKZ}, "G3-NUM-002", "kk-KZ")
 	if err != nil || got != want {
 		t.Fatalf("got %#v, err %v", got, err)

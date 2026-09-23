@@ -142,6 +142,20 @@ type RenderTarget string
 const (
 	RenderTargetPlaintext   RenderTarget = "plaintext"
 	RenderTargetUnicodeMath RenderTarget = "unicode-math"
+	RenderTargetLatex       RenderTarget = "latex"
+)
+
+type AnswerWidget string
+
+const (
+	AnswerWidgetNumeric         AnswerWidget = "NUMERIC"
+	AnswerWidgetFraction        AnswerWidget = "FRACTION"
+	AnswerWidgetChoice          AnswerWidget = "CHOICE"
+	AnswerWidgetTupleN          AnswerWidget = "TUPLE_N"
+	AnswerWidgetSetList         AnswerWidget = "SET_LIST"
+	AnswerWidgetMatrixGrid      AnswerWidget = "MATRIX_GRID"
+	AnswerWidgetStructuredCanon AnswerWidget = "STRUCTURED_CANON"
+	AnswerWidgetExpression      AnswerWidget = "EXPRESSION"
 )
 
 type Locale string
