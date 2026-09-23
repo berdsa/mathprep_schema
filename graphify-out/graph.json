@@ -842,6 +842,50 @@
       "norm_label": "000024_seed_latex_templates.up.sql"
     },
     {
+      "label": "000025_seed_g3_fraction_geometry_ru_templates.down.sql",
+      "file_type": "code",
+      "source_file": "migrations/000025_seed_g3_fraction_geometry_ru_templates.down.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000025_seed_g3_fraction_geometry_ru_templates_down",
+      "community": 75,
+      "community_name": "000025_seed_g3_fraction_geometry_ru_templates.down.sql",
+      "norm_label": "000025_seed_g3_fraction_geometry_ru_templates.down.sql"
+    },
+    {
+      "label": "000025_seed_g3_fraction_geometry_ru_templates.up.sql",
+      "file_type": "code",
+      "source_file": "migrations/000025_seed_g3_fraction_geometry_ru_templates.up.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000025_seed_g3_fraction_geometry_ru_templates_up",
+      "community": 76,
+      "community_name": "000025_seed_g3_fraction_geometry_ru_templates.up.sql",
+      "norm_label": "000025_seed_g3_fraction_geometry_ru_templates.up.sql"
+    },
+    {
+      "label": "000026_seed_g3_geometry_measurement_ru_templates.down.sql",
+      "file_type": "code",
+      "source_file": "migrations/000026_seed_g3_geometry_measurement_ru_templates.down.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000026_seed_g3_geometry_measurement_ru_templates_down",
+      "community": 77,
+      "community_name": "000026_seed_g3_geometry_measurement_ru_templates.down.sql",
+      "norm_label": "000026_seed_g3_geometry_measurement_ru_templates.down.sql"
+    },
+    {
+      "label": "000026_seed_g3_geometry_measurement_ru_templates.up.sql",
+      "file_type": "code",
+      "source_file": "migrations/000026_seed_g3_geometry_measurement_ru_templates.up.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000026_seed_g3_geometry_measurement_ru_templates_up",
+      "community": 78,
+      "community_name": "000026_seed_g3_geometry_measurement_ru_templates.up.sql",
+      "norm_label": "000026_seed_g3_geometry_measurement_ru_templates.up.sql"
+    },
+    {
       "label": "constants.go",
       "file_type": "code",
       "source_file": "pkg/core/constants.go",
@@ -2126,7 +2170,7 @@
       "_origin": "ast",
       "id": "docs_agent_log",
       "community": 22,
-      "community_name": "agent-log.md",
+      "community_name": "2026-09-23 \u2014 Widget metadata and optional LaTeX templates",
       "norm_label": "agent-log.md"
     },
     {
@@ -3556,18 +3600,40 @@
       "_origin": "ast",
       "id": "docs_agent_log_2026_09_23_widget_metadata_and_optional_latex_templates",
       "community": 22,
-      "community_name": "agent-log.md",
+      "community_name": "2026-09-23 \u2014 Widget metadata and optional LaTeX templates",
       "norm_label": "2026-09-23 \u2014 widget metadata and optional latex templates"
+    },
+    {
+      "label": "2026-09-23 \u2014 Phase B Russian template backfill, batch 1",
+      "file_type": "document",
+      "source_file": "docs/agent-log.md",
+      "source_location": "L570",
+      "_origin": "ast",
+      "id": "docs_agent_log_2026_09_23_phase_b_russian_template_backfill_batch_1",
+      "community": 22,
+      "community_name": "2026-09-23 \u2014 Widget metadata and optional LaTeX templates",
+      "norm_label": "2026-09-23 \u2014 phase b russian template backfill, batch 1"
+    },
+    {
+      "label": "2026-09-23 \u2014 Phase B Russian template backfill, batch 2",
+      "file_type": "document",
+      "source_file": "docs/agent-log.md",
+      "source_location": "L575",
+      "_origin": "ast",
+      "id": "docs_agent_log_2026_09_23_phase_b_russian_template_backfill_batch_2",
+      "community": 22,
+      "community_name": "2026-09-23 \u2014 Widget metadata and optional LaTeX templates",
+      "norm_label": "2026-09-23 \u2014 phase b russian template backfill, batch 2"
     },
     {
       "label": "2026-09-23 \u2014 CAS sign-off status correction",
       "file_type": "document",
       "source_file": "docs/agent-log.md",
-      "source_location": "L570",
+      "source_location": "L580",
       "_origin": "ast",
       "id": "docs_agent_log_2026_09_23_cas_sign_off_status_correction",
       "community": 22,
-      "community_name": "agent-log.md",
+      "community_name": "2026-09-23 \u2014 Widget metadata and optional LaTeX templates",
       "norm_label": "2026-09-23 \u2014 cas sign-off status correction"
     },
     {
@@ -12825,11 +12891,33 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/agent-log.md",
-      "source_location": "L570",
+      "source_location": "L580",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_agent_log_2026_09_23_widget_metadata_and_optional_latex_templates",
       "target": "docs_agent_log_2026_09_23_cas_sign_off_status_correction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/agent-log.md",
+      "source_location": "L570",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_agent_log_2026_09_23_widget_metadata_and_optional_latex_templates",
+      "target": "docs_agent_log_2026_09_23_phase_b_russian_template_backfill_batch_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/agent-log.md",
+      "source_location": "L575",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_agent_log_2026_09_23_widget_metadata_and_optional_latex_templates",
+      "target": "docs_agent_log_2026_09_23_phase_b_russian_template_backfill_batch_2",
       "confidence_score": 1.0
     },
     {
@@ -16739,5 +16827,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "fc5c8925d6b95d7540c578be68ee717739f5b306"
+  "built_at_commit": "4b5d5684a77296a88632f2b0641316231a57eef6"
 }

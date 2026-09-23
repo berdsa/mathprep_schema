@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   "docs/agent-log.md": {
-    "mtime": 1790187623.0207076,
-    "ast_hash": "81381912a274cad3661b08e46b1cb7ad",
+    "mtime": 1790188694.8225427,
+    "ast_hash": "cc44b3d07908d9a9e5de6379466f6919",
     "semantic_hash": ""
   },
   "docs/srd/00-conventions.md": {
@@ -35,8 +35,8 @@
     "semantic_hash": ""
   },
   "docs/srd/03-architecture.md": {
-    "mtime": 1790187570.3115292,
-    "ast_hash": "acd0987690b7859fbcee51a4f2b63a4c",
+    "mtime": 1790187658.8989162,
+    "ast_hash": "64195f34e6bba7069f179e6d8433fc25",
     "semantic_hash": ""
   },
   "docs/srd/04-nfr-risk-ops.md": {
@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "docs/srd/backend-integration.md": {
-    "mtime": 1790187570.310222,
-    "ast_hash": "311da3af6f2f08d439bb2ff0af5147f9",
+    "mtime": 1790187757.8590045,
+    "ast_hash": "83167b4849eae4e34e7ea371ef665fa0",
     "semantic_hash": ""
   },
   "docs/srd/data-governance.md": {
@@ -397,6 +397,16 @@
   "docs/system-audit-2026-09-23.md": {
     "mtime": 1790187607.2919002,
     "ast_hash": "b094bd7b0387fd27ef7a57c7567474bf",
+    "semantic_hash": ""
+  },
+  "migrations/000025_seed_g3_fraction_geometry_ru_templates.down.sql": {
+    "mtime": 1790188694.8222046,
+    "ast_hash": "68d5c19e4d0cb68a724d1567f195459c",
+    "semantic_hash": ""
+  },
+  "migrations/000025_seed_g3_fraction_geometry_ru_templates.up.sql": {
+    "mtime": 1790188694.8218572,
+    "ast_hash": "55ac982dc4ad38c458b5655a50287e9b",
     "semantic_hash": ""
   }
 }

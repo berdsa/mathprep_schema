@@ -21,7 +21,7 @@
   "19": "01 — Current State",
   "20": "TestAnswerWidgetDictionaryValues",
   "21": "00 — Индекс артефактов трека `math-task-catalog`",
-  "22": "agent-log.md",
+  "22": "2026-09-23 — Widget metadata and optional LaTeX templates",
   "23": "05-decisions.md",
   "24": "000011_add_answer_widget_dictionary.up.sql",
   "25": "answer-widget-migration-report.md",
@@ -73,5 +73,7 @@
   "71": "000024_seed_latex_templates.up.sql",
   "72": "Cross-repository readiness audit — 2026-09-23",
   "73": "start-local.sh",
-  "74": "local-development.md"
+  "74": "local-development.md",
+  "75": "000025_seed_g3_fraction_geometry_ru_templates.down.sql",
+  "76": "000025_seed_g3_fraction_geometry_ru_templates.up.sql"
 }
