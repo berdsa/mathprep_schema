@@ -99,5 +99,7 @@
   "97": "000037_seed_g6_number_statistics_ru_templates_batch4.up.sql",
   "98": "github.com/berdsa/mathprep_schema",
   "99": "000038_seed_g1_number_ru_templates_batch1.down.sql",
-  "100": "Russian Number Templates"
+  "100": "Russian Number Templates",
+  "101": "000039_seed_g1_number_measurement_ru_templates_batch2.down.sql",
+  "102": "000039_seed_g1_number_measurement_ru_templates_batch2.up.sql"
 }

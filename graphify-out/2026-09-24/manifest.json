@@ -5,9 +5,9 @@
     "semantic_hash": "7560d8d214cbda307df0472f5cd472c9"
   },
   "docs/agent-log.md": {
-    "mtime": 1790193463.6634479,
-    "ast_hash": "823227a09958cc6c96332359879d68ea",
-    "semantic_hash": "823227a09958cc6c96332359879d68ea"
+    "mtime": 1790194369.8688502,
+    "ast_hash": "788151a424c4bd3261fe4aedcb466c95",
+    "semantic_hash": ""
   },
   "docs/srd/00-conventions.md": {
     "mtime": 1790187570.3109066,
@@ -385,9 +385,9 @@
     "semantic_hash": "77eb212d9737486a36a54a868306d358"
   },
   "scripts/start-local.sh": {
-    "mtime": 1790169440.4179704,
-    "ast_hash": "706e724e215f8716843df831a98c67fd",
-    "semantic_hash": "706e724e215f8716843df831a98c67fd"
+    "mtime": 1790194498.1394234,
+    "ast_hash": "fd36ec583f3999d9380372550c0a53d0",
+    "semantic_hash": ""
   },
   "docs/local-development.md": {
     "mtime": 1790169129.2473695,

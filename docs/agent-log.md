@@ -648,3 +648,8 @@
 
 - Added Russian plaintext templates for `G1-NUM-011`–`G1-NUM-020`. The five apple word problems use count-based, agreement-invariant phrasing while preserving each original unknown and operation.
 - Added additive migration `000038_seed_g1_number_ru_templates_batch1` with a scoped, reversible down migration. Taskgen rendering changes are committed separately.
+
+## 2026-09-24 — Phase B Russian template backfill, Stage 2 batch 2
+
+- Added Russian plaintext templates for `G1-NUM-021`–`G1-NUM-026` and `G1-MEA-001`–`G1-MEA-004`. The apple word problems use count-based, agreement-invariant phrasing; arithmetic and length prompts preserve their original operands, operation, comparison, and requested quantity.
+- Added additive migration `000039_seed_g1_number_measurement_ru_templates_batch2` with a scoped, reversible down migration. Taskgen rendering changes are deliberately uncommitted for separate review.

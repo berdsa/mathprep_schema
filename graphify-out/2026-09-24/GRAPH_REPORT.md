@@ -1,12 +1,13 @@
-# Graph Report - .  (2026-09-24)
+# Graph Report - schema  (2026-09-24)
 
 ## Corpus Check
-- cluster-only mode — file stats not available
+- 108 files · ~79,883 words
+- Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 264 nodes · 349 edges · 101 communities (83 shown, 18 thin omitted)
+- 265 nodes · 351 edges · 101 communities (83 shown, 18 thin omitted)
 - Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 27 edges (avg confidence: 0.81)
-- Token cost: 107 input · 10 output
+- Token cost: 0 input · 0 output
 
 ## Graph Freshness
 - Built from commit: `42b4f95e`
@@ -81,24 +82,24 @@
 ## Communities (101 total, 18 thin omitted)
 
 ### Community 0 - "pipeline.go"
-Cohesion: 0.17
-Nodes (31): ReasonCode, CompareExactInt(), flattenNumericValue(), formatNumericValue(), gcd64(), isQuadrantLabel(), isRoman(), joinInts() (+23 more)
+Cohesion: 0.16
+Nodes (32): ReasonCode, CompareExactInt(), flattenNumericValue(), formatNumericValue(), gcd64(), isQuadrantLabel(), isRoman(), joinInts() (+24 more)
 
 ### Community 1 - "constants.go"
-Cohesion: 0.15
-Nodes (27): AnswerWidget, CASEvaluationOperationType, CASEvaluationRequest, CASEvaluationStatus, Domain, EquivalencePolicy, EventLog, EventType (+19 more)
+Cohesion: 0.14
+Nodes (28): AnswerWidget, CASEvaluationOperationType, CASEvaluationRequest, CASEvaluationStatus, Domain, EquivalencePolicy, EventLog, EventType (+20 more)
 
 ### Community 2 - "000001_create_phase0_schema.up.sql"
 Cohesion: 0.14
 Nodes (26): domain, equivalence_policy, event_log, generation_mode, generation_request, grade_band, locale, mastery_topic (+18 more)
 
 ### Community 3 - "pipeline_test.go"
-Cohesion: 0.18
-Nodes (22): ParseExactInt(), T, TestValidateBool(), TestValidateCanonList(), TestValidateCanonStrictForm(), TestValidateClockTime(), TestValidateExactIntAcceptsNegative(), TestValidateExactIntAcceptsSixDigits() (+14 more)
+Cohesion: 0.19
+Nodes (21): T, TestValidateBool(), TestValidateCanonList(), TestValidateCanonStrictForm(), TestValidateClockTime(), TestValidateExactIntAcceptsNegative(), TestValidateExactIntAcceptsSixDigits(), TestValidateExactIntBoundary() (+13 more)
 
 ### Community 4 - "Locale"
-Cohesion: 0.23
-Nodes (12): Locale, RenderTarget, TaskTypeTemplate, TaskTypeTemplateStore, templateStoreStub, Context, LookupTaskTypeTemplate(), Context (+4 more)
+Cohesion: 0.25
+Nodes (11): Locale, TaskTypeTemplate, TaskTypeTemplateStore, templateStoreStub, Context, LookupTaskTypeTemplate(), Context, T (+3 more)
 
 ### Community 5 - "06 — Traceability, Glossary, Stakeholders, Open Items"
 Cohesion: 0.22
@@ -125,24 +126,24 @@ Cohesion: 0.67
 Nodes (3): U-CAL-007 — Double integral, U-FUN-001 — Series convergence test, Validation-method legend
 
 ## Knowledge Gaps
-- **37 isolated node(s):** `github.com/berdsa/mathprep_schema`, `answer_widget`, `start-local.sh script`, `Performance & availability`, `Observability` (+32 more)
+- **36 isolated node(s):** `github.com/berdsa/mathprep_schema`, `answer_widget`, `Performance & availability`, `Observability`, `Security — STRIDE per trust boundary (updated for 3 services)` (+31 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **18 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `ReasonCode` connect `pipeline.go` to `constants.go`, `pipeline_test.go`?**
+- **Why does `ReasonCode` connect `pipeline.go` to `constants.go`?**
   _High betweenness centrality (0.037) - this node is a cross-community bridge._
 - **Why does `Result` connect `pipeline.go` to `constants.go`, `pipeline_test.go`?**
-  _High betweenness centrality (0.030) - this node is a cross-community bridge._
+  _High betweenness centrality (0.029) - this node is a cross-community bridge._
 - **Why does `Locale` connect `Locale` to `constants.go`?**
   _High betweenness centrality (0.029) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `Validate()` (e.g. with `TestValidateCanonStrictForm()` and `TestValidateMatrix()`) actually correct?**
   _`Validate()` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 6 inferred relationships involving `ValidateExactInt()` (e.g. with `TestValidateExactIntAcceptsNegative()` and `TestValidateExactIntAcceptsSixDigits()`) actually correct?**
   _`ValidateExactInt()` has 6 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `github.com/berdsa/mathprep_schema`, `answer_widget`, `start-local.sh script` to the rest of the system?**
-  _37 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `000001_create_phase0_schema.up.sql` be split into smaller, more focused modules?**
-  _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._
+- **What connects `github.com/berdsa/mathprep_schema`, `answer_widget`, `Performance & availability` to the rest of the system?**
+  _36 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `constants.go` be split into smaller, more focused modules?**
+  _Cohesion score 0.14482758620689656 - nodes in this community are weakly interconnected._
