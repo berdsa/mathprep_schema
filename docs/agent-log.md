@@ -622,6 +622,11 @@
 - Added Russian plaintext templates for G6-FRA-011–015 and G6-GEO-001–005. Fraction ordering inputs are carried as derived text; circle task labels distinguish circumference from area.
 - Added additive migration `000035_seed_g6_fraction_geometry_ru_templates_batch2` with a scoped down migration. Taskgen changes are committed separately.
 
+## 2026-09-24 — Phase B Russian template backfill, batch 12
+
+- Added Russian plaintext templates for G6-GEO-006–015. Composite dimensions, prism measurements, and net-face descriptions retain their mathematical inputs and targets.
+- Added additive migration `000036_seed_g6_geometry_ru_templates_batch3` with a scoped down migration. Taskgen changes are committed separately.
+
 ## 2026-09-23 — CAS sign-off status correction
 
 - Updated the canonical SRD's CAS status references to match `taskgen/docs/signoffs/OPEN-06.md` (Ken approval; shared infrastructure gate closed; per-type Confirmation Gates remain).
