@@ -77,5 +77,7 @@
   "75": "000025_seed_g3_fraction_geometry_ru_templates.down.sql",
   "76": "000025_seed_g3_fraction_geometry_ru_templates.up.sql",
   "77": "000026_seed_g3_geometry_measurement_ru_templates.down.sql",
-  "78": "000026_seed_g3_geometry_measurement_ru_templates.up.sql"
+  "78": "000026_seed_g3_geometry_measurement_ru_templates.up.sql",
+  "79": "000027_seed_g3_measurement_number_ru_templates.down.sql",
+  "80": "000027_seed_g3_measurement_number_ru_templates.up.sql"
 }

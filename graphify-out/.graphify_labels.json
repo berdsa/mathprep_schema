@@ -79,5 +79,7 @@
   "77": "000026_seed_g3_geometry_measurement_ru_templates.down.sql",
   "78": "000026_seed_g3_geometry_measurement_ru_templates.up.sql",
   "79": "000027_seed_g3_measurement_number_ru_templates.down.sql",
-  "80": "000027_seed_g3_measurement_number_ru_templates.up.sql"
+  "80": "000027_seed_g3_measurement_number_ru_templates.up.sql",
+  "81": "000028_seed_g3_number_ru_templates.down.sql",
+  "82": "000028_seed_g3_number_ru_templates.up.sql"
 }
