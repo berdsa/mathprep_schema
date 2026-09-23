@@ -1,0 +1,17 @@
+BEGIN;
+UPDATE task_type SET widget_config = '{"template":{"template":"{lo} < x < {hi}"}}'::jsonb WHERE type_id = 'G8-ALG-011';
+UPDATE task_type SET widget_config = '{"template":{"template":"{gcf}({x} + {y})"}}'::jsonb WHERE type_id = 'G8-ALG-012';
+UPDATE task_type SET widget_config = '{"template":{"template":"(x − {a})(x + {a})"}}'::jsonb WHERE type_id = 'G8-ALG-013';
+UPDATE task_type SET widget_config = '{"template":{"template":"{a}^{exponent}"}}'::jsonb WHERE type_id = 'G8-ALG-019';
+UPDATE task_type SET widget_config = '{"template":{"template":"x + {a}"}}'::jsonb WHERE type_id = 'G8-ALG-021';
+UPDATE task_type SET widget_config = '{"template":{"template":"(x + {a})/(x − {b})"}}'::jsonb WHERE type_id = 'G8-ALG-022';
+UPDATE task_type SET widget_config = '{"template":{"template":"y = {m}x + {b}"}}'::jsonb WHERE type_id = 'G8-FUN-003';
+UPDATE task_type SET widget_config = '{"template":{"template":"[{a},∞)"}}'::jsonb WHERE type_id = 'G8-FUN-004';
+UPDATE task_type SET widget_config = '{"template":{"template":"[{a},∞)"}}'::jsonb WHERE type_id = 'G8-FUN-005';
+UPDATE task_type SET widget_config = '{"template":{"template":"{a}^{exponent}"}}'::jsonb WHERE type_id = 'G8-NUM-006';
+UPDATE task_type SET widget_config = '{"template":{"template":"{coefficient} × 10^6"}}'::jsonb WHERE type_id = 'G8-NUM-007';
+UPDATE task_type SET widget_config = '{"template":{"template":"{coefficient} × 10^{exponent}"}}'::jsonb WHERE type_id = 'G8-NUM-008';
+UPDATE task_type SET widget_config = '{"template":{"template":"(x − {h})^2 + (y − {k})^2 = {r2}"}}'::jsonb WHERE type_id = 'G9-GEO-010';
+UPDATE task_type SET widget_config = '{"template":{"template":"y = x²"}}'::jsonb WHERE type_id = 'U-ALG-003';
+UPDATE task_type SET widget_config = '{"template":{"template":"A=1/{d}; B=−1/{d}"}}'::jsonb WHERE type_id = 'U-ALG-008';
+COMMIT;
