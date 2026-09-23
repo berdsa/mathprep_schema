@@ -607,6 +607,11 @@
 - Added Russian plaintext templates for the eight early G3 arithmetic/sequence types missed by a constant-only registry census, plus G6-ALG-006–007. This corrected the initial Grade 3/6 enumeration to 133 total catalog type IDs (77 Grade 3, 56 Grade 6).
 - Added additive migration `000032_seed_g3_early_g6_algebra_ru_templates` with a scoped down migration. Taskgen changes are committed separately.
 
+## 2026-09-23 — Phase B Russian template backfill, batch 9
+
+- Added Russian plaintext templates for G6-ALG-008–010 and G6-DEC-001–007. Decimal displays and direction labels are formatted as derived template values while numeric generation remains unchanged.
+- Added additive migration `000033_seed_g6_algebra_decimal_ru_templates` with a scoped down migration. Taskgen changes are committed separately.
+
 ## 2026-09-23 — CAS sign-off status correction
 
 - Updated the canonical SRD's CAS status references to match `taskgen/docs/signoffs/OPEN-06.md` (Ken approval; shared infrastructure gate closed; per-type Confirmation Gates remain).
