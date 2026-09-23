@@ -101,5 +101,7 @@
   "99": "000038_seed_g1_number_ru_templates_batch1.down.sql",
   "100": "Russian Number Templates",
   "101": "000039_seed_g1_number_measurement_ru_templates_batch2.down.sql",
-  "102": "000039_seed_g1_number_measurement_ru_templates_batch2.up.sql"
+  "102": "000039_seed_g1_number_measurement_ru_templates_batch2.up.sql",
+  "103": "000040_seed_g1_measurement_statistics_ru_templates_batch3.down.sql",
+  "104": "000040_seed_g1_measurement_statistics_ru_templates_batch3.up.sql"
 }
