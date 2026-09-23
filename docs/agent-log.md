@@ -663,3 +663,8 @@
 
 - Added Russian plaintext templates for `G1-GEO-001`–`G1-GEO-009` and `G2-NUM-010` in catalog order. Geometry fractions preserve their numerator/denominator semantics; count phrasing avoids number-dependent agreement. Legacy `2D`/`3D`, `TRUE`/`FALSE`, and shape-code answers are explicitly identified as codes and remain unchanged where validators require them.
 - Added additive migration `000041_seed_g1_geometry_g2_number_ru_templates_batch4` with a scoped, reversible down migration. Taskgen rendering changes remain separate and uncommitted for review.
+
+## 2026-09-24 — Phase B Russian template backfill, Stage 2 batch 5
+
+- Added Russian plaintext templates for `G2-NUM-011`–`G2-NUM-020`. Place-value, comparison, ordering, and arithmetic prompts retain their established parameters, operations, and answer contracts.
+- Added additive migration `000042_seed_g2_number_ru_templates_batch5` with a scoped, reversible down migration. Taskgen rendering changes remain separate and uncommitted for review.

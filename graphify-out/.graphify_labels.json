@@ -105,5 +105,7 @@
   "103": "000040_seed_g1_measurement_statistics_ru_templates_batch3.down.sql",
   "104": "000040_seed_g1_measurement_statistics_ru_templates_batch3.up.sql",
   "105": "000041_seed_g1_geometry_g2_number_ru_templates_batch4.down.sql",
-  "106": "000041_seed_g1_geometry_g2_number_ru_templates_batch4.up.sql"
+  "106": "000041_seed_g1_geometry_g2_number_ru_templates_batch4.up.sql",
+  "107": "000042_seed_g2_number_ru_templates_batch5.down.sql",
+  "108": "000042_seed_g2_number_ru_templates_batch5.up.sql"
 }
