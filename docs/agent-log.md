@@ -561,3 +561,8 @@
 
 - Applied migrations `000011`–`000016` to the local catalog and verified all 658 types have non-null widgets; all 106 BOOL types have non-empty choices arrays.
 - Added core dictionary tests and the migration verification report.
+# 2026-09-23 — Widget metadata and optional LaTeX templates
+
+- Added real `widget_config` metadata for all 105 structured widgets, batched by validation method: 30 `TUPLE_N`, 13 `SET_LIST`, 2 `MATRIX_GRID`, and 60 `STRUCTURED_CANON` types.
+- Added one pilot LaTeX companion row for `G5-FRA-003`; arithmetic pilot rows and types without an existing plaintext DB template remain intentionally deferred.
+- No generator, validator, plaintext-template, or test behavior changed. See `docs/widget-config-log.md`.
