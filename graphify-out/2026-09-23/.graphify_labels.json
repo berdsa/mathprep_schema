@@ -85,5 +85,7 @@
   "83": "000029_seed_g3_number_ru_templates_batch2.down.sql",
   "84": "000029_seed_g3_number_ru_templates_batch2.up.sql",
   "85": "000030_seed_g3_number_ru_templates_batch3.down.sql",
-  "86": "000030_seed_g3_number_ru_templates_batch3.up.sql"
+  "86": "000030_seed_g3_number_ru_templates_batch3.up.sql",
+  "87": "000031_seed_g3_stats_g6_algebra_ru_templates.down.sql",
+  "88": "000031_seed_g3_stats_g6_algebra_ru_templates.up.sql"
 }

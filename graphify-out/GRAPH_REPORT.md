@@ -1,16 +1,16 @@
 # Graph Report - schema  (2026-09-23)
 
 ## Corpus Check
-- 94 files · ~77,901 words
+- 96 files · ~78,127 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 720 nodes · 813 edges · 89 communities (81 shown, 8 thin omitted)
+- 723 nodes · 814 edges · 91 communities (83 shown, 8 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `2abb128a`
+- Built from commit: `bbae0a8b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -55,9 +55,9 @@
 5. `ValidateExactInt()` - 12 edges
 6. `task_type` - 10 edges
 7. `TaskType` - 10 edges
-8. `02 — Requirements` - 10 edges
-9. `ReasonCode` - 9 edges
-10. `2026-09-23 — Widget metadata and optional LaTeX templates` - 9 edges
+8. `2026-09-23 — Widget metadata and optional LaTeX templates` - 10 edges
+9. `02 — Requirements` - 10 edges
+10. `ReasonCode` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `TaskType` --references--> `GradeBand`  [EXTRACTED]
@@ -74,7 +74,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (89 total, 8 thin omitted)
+## Communities (91 total, 8 thin omitted)
 
 ### Community 0 - "07 — Wave-A Exemplar Task-Type Specs"
 Cohesion: 0.01
@@ -161,15 +161,15 @@ Cohesion: 0.50
 Nodes (3): 00 — Индекс артефактов трека `math-task-catalog`, Реестр допущений и открытых вопросов — сводный, обновлён, Реестр репозиториев (введён этим ходом, см. ADR-006)
 
 ### Community 22 - "2026-09-23 — Widget metadata and optional LaTeX templates"
-Cohesion: 0.20
-Nodes (9): 2026-09-23 — CAS sign-off status correction, 2026-09-23 — Phase B Russian template backfill, batch 1, 2026-09-23 — Phase B Russian template backfill, batch 2, 2026-09-23 — Phase B Russian template backfill, batch 3, 2026-09-23 — Phase B Russian template backfill, batch 4, 2026-09-23 — Phase B Russian template backfill, batch 5, 2026-09-23 — Phase B Russian template backfill, batch 6, 2026-09-23 — Phase B Russian template backfill, batch 7 (+1 more)
+Cohesion: 0.18
+Nodes (10): 2026-09-23 — CAS sign-off status correction, 2026-09-23 — Phase B Russian template backfill, batch 1, 2026-09-23 — Phase B Russian template backfill, batch 2, 2026-09-23 — Phase B Russian template backfill, batch 3, 2026-09-23 — Phase B Russian template backfill, batch 4, 2026-09-23 — Phase B Russian template backfill, batch 5, 2026-09-23 — Phase B Russian template backfill, batch 6, 2026-09-23 — Phase B Russian template backfill, batch 7 (+2 more)
 
 ### Community 72 - "Cross-repository readiness audit — 2026-09-23"
 Cohesion: 0.25
 Nodes (7): BA — catalog and metadata, Cross-repository readiness audit — 2026-09-23, Dev — builds, local run, and historical issues, DevOps — graphify and cleanliness, Git state / commits, QA — fresh tests and coverage, SA — architecture and contracts
 
 ## Knowledge Gaps
-- **474 isolated node(s):** `github.com/berdsa/mathprep_schema`, `answer_widget`, `start-local.sh script`, `What this repo is`, `Source of truth` (+469 more)
+- **475 isolated node(s):** `github.com/berdsa/mathprep_schema`, `answer_widget`, `start-local.sh script`, `What this repo is`, `Source of truth` (+470 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -177,13 +177,13 @@ Nodes (7): BA — catalog and metadata, Cross-repository readiness audit — 202
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Agent log` connect `Agent log` to `2026-09-23 — Widget metadata and optional LaTeX templates`?**
-  _High betweenness centrality (0.036) - this node is a cross-community bridge._
+  _High betweenness centrality (0.037) - this node is a cross-community bridge._
 - **Why does `ReasonCode` connect `pipeline.go` to `constants.go`?**
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `Validate()` (e.g. with `TestValidateCanonStrictForm()` and `TestValidateMatrix()`) actually correct?**
   _`Validate()` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `github.com/berdsa/mathprep_schema`, `answer_widget`, `start-local.sh script` to the rest of the system?**
-  _474 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _475 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `07 — Wave-A Exemplar Task-Type Specs` be split into smaller, more focused modules?**
   _Cohesion score 0.009259259259259259 - nodes in this community are weakly interconnected._
 - **Should `Agent log` be split into smaller, more focused modules?**
