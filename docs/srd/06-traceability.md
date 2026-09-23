@@ -47,7 +47,7 @@ Unchanged from prior pass — Ученица 3 класса, Ученица 6 к
 | OPEN-03 | Допустим ли внешний AI-провайдер | authoring-time HYBRID-AI only (ADR-005) | Legal/Security |
 | OPEN-04 | Порог расхождения эмпирической/заявленной сложности | Статистика считается, авто-флаг не выставляется | Владелец продукта |
 | OPEN-05 | Минимальный `\|S\|`/cooldown | `≥200` / 30 дней | Методолог |
-| OPEN-06 | CAS security boundary sign-off | CAS не регистрируется **— теперь блокирует конкретные фазы бэклога, не просто «когда-нибудь»** (SCOPE-AMD-01) | Backend |
+| OPEN-06 | CAS security boundary sign-off | **CLOSED** — implemented and approved by Ken on 2026-09-22; see `taskgen/docs/signoffs/OPEN-06.md` and `backend-integration.md` §3. Per-type Confirmation Gates remain separate. | Backend |
 | OPEN-07 | Сверка ERD/схемы со старым каталогом task-bank-generator | Ни одна миграция не пишется до закрытия | Backend |
 | OPEN-08 *(new, finding G)* | Поведение `MASTERY_TOPIC` при переходе ученицы в следующий класс | Не определено, не решается по умолчанию | Методолог |
 

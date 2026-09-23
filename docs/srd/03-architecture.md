@@ -11,10 +11,11 @@ graph TD
     Web[QR Self-Check Web Page] -->|POST submission| GR[grader]
     TG -->|read/write mathprep schema| DB[(PostgreSQL: mathprep schema)]
     GR -->|read/write mathprep schema| DB
+    CAS[CAS evaluator] -->|claim jobs / persist results| DB
     TG -.->|internal worker goroutine, same binary| TG
     AN[analytics — later phase, not built yet] -.->|reads EVENT_LOG, read-only role| DB
 ```
-Asserts: three independently deployable Go binaries (`taskgen`, `grader`, and later `analytics`), one shared Postgres schema owned by `schema`'s migrations, zero direct service-to-service network calls — all coordination is through the database (CON-04, CON-09, CON-10). Does not cover: authentication of the bot's own webhook (see `backend-integration.md` §5), or the CAS evaluator (no consumer yet, `OPEN-06`).
+Asserts: independently deployable services (`taskgen`, `grader`, the signed-off CAS evaluator, and later `analytics`), one shared Postgres schema owned by `schema`'s migrations, zero direct service-to-service network calls — all coordination is through the database (CON-04, CON-09, CON-10). Does not cover authentication of the bot's own webhook (see `backend-integration.md` §5). The CAS service boundary and its sign-off are documented in `backend-integration.md` §3.
 
 `taskgen`'s "worker" is not a fourth service — it is a goroutine inside the same binary, run in the same process as its HTTP handler (CON-06: keep this simple at family scale). This satisfies "separate independent services" (the operator's unit of separation was taskgen vs. grader vs. analytics, not handler-vs-worker within one service) — flagged as `[ASSUMPTION: ASM-11]` since the operator did not spell out whether handler and worker must themselves be separate deployables; the cheaper interpretation is adopted, reversible later at low cost (it is already structured as two goroutines communicating only through the DB, so splitting them into two binaries later is a small change).
 

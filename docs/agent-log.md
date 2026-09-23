@@ -566,3 +566,9 @@
 - Added real `widget_config` metadata for all 105 structured widgets, batched by validation method: 30 `TUPLE_N`, 13 `SET_LIST`, 2 `MATRIX_GRID`, and 60 `STRUCTURED_CANON` types.
 - Added one pilot LaTeX companion row for `G5-FRA-003`; arithmetic pilot rows and types without an existing plaintext DB template remain intentionally deferred.
 - No generator, validator, plaintext-template, or test behavior changed. See `docs/widget-config-log.md`.
+
+## 2026-09-23 — CAS sign-off status correction
+
+- Updated the canonical SRD's CAS status references to match `taskgen/docs/signoffs/OPEN-06.md` (Ken approval; shared infrastructure gate closed; per-type Confirmation Gates remain).
+- Corrected the CAS-related findings in `docs/system-audit-2026-09-23.md` after key-based authentication, successful push verification, and an exact-HEAD scratch-clone comparison.
+- Documentation-only change; no schema/module version tag created.

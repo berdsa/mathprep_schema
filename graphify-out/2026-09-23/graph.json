@@ -1211,8 +1211,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pkg_core_templates",
-      "community": 18,
-      "community_name": "LookupTaskTypeTemplate",
+      "community": 2,
+      "community_name": "constants.go",
       "norm_label": "templates.go"
     },
     {
@@ -1222,8 +1222,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "core_tasktypetemplatestore",
-      "community": 18,
-      "community_name": "LookupTaskTypeTemplate",
+      "community": 2,
+      "community_name": "constants.go",
       "norm_label": "tasktypetemplatestore"
     },
     {
@@ -1233,8 +1233,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "pkg_core_templates_lookuptasktypetemplate",
-      "community": 18,
-      "community_name": "LookupTaskTypeTemplate",
+      "community": 2,
+      "community_name": "constants.go",
       "norm_label": "lookuptasktypetemplate()"
     },
     {
@@ -1244,8 +1244,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "pkg_core_templates_go_context",
-      "community": 18,
-      "community_name": "LookupTaskTypeTemplate",
+      "community": 2,
+      "community_name": "constants.go",
       "norm_label": "context"
     },
     {
@@ -1255,8 +1255,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pkg_core_templates_test",
-      "community": 18,
-      "community_name": "LookupTaskTypeTemplate",
+      "community": 2,
+      "community_name": "constants.go",
       "norm_label": "templates_test.go"
     },
     {
@@ -1310,8 +1310,8 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "pkg_core_templates_test_testlookuptasktypetemplateusesrequestedlocale",
-      "community": 18,
-      "community_name": "LookupTaskTypeTemplate",
+      "community": 2,
+      "community_name": "constants.go",
       "norm_label": "testlookuptasktypetemplateusesrequestedlocale()"
     },
     {
@@ -1321,8 +1321,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "pkg_core_templates_test_go_t",
-      "community": 18,
-      "community_name": "LookupTaskTypeTemplate",
+      "community": 2,
+      "community_name": "constants.go",
       "norm_label": "t"
     },
     {
@@ -1332,8 +1332,8 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "pkg_core_templates_test_testlookuptasktypetemplatefallsbacktoprimarylocale",
-      "community": 18,
-      "community_name": "LookupTaskTypeTemplate",
+      "community": 2,
+      "community_name": "constants.go",
       "norm_label": "testlookuptasktypetemplatefallsbacktoprimarylocale()"
     },
     {
@@ -1343,8 +1343,8 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "pkg_core_templates_test_testlookuptasktypetemplatereportsmissingtemplate",
-      "community": 18,
-      "community_name": "LookupTaskTypeTemplate",
+      "community": 2,
+      "community_name": "constants.go",
       "norm_label": "testlookuptasktypetemplatereportsmissingtemplate()"
     },
     {
@@ -1973,6 +1973,51 @@
       "community": 20,
       "community_name": "TestAnswerWidgetDictionaryValues",
       "norm_label": "t"
+    },
+    {
+      "label": "start-local.sh",
+      "file_type": "code",
+      "source_file": "scripts/start-local.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "scripts_start_local",
+      "community": 73,
+      "community_name": "start-local.sh",
+      "norm_label": "start-local.sh"
+    },
+    {
+      "label": "start-local.sh script",
+      "file_type": "code",
+      "source_file": "scripts/start-local.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "scripts_start_local_sh__entry",
+      "community": 73,
+      "community_name": "start-local.sh",
+      "norm_label": "start-local.sh script"
+    },
+    {
+      "label": "stop_services()",
+      "file_type": "code",
+      "source_file": "scripts/start-local.sh",
+      "source_location": "L81",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_function"
+      },
+      "_origin": "ast",
+      "id": "scripts_start_local_stop_services",
+      "community": 73,
+      "community_name": "start-local.sh",
+      "norm_label": "stop_services()"
     },
     {
       "label": "AGENTS.md",
@@ -3515,6 +3560,17 @@
       "norm_label": "2026-09-23 \u2014 widget metadata and optional latex templates"
     },
     {
+      "label": "2026-09-23 \u2014 CAS sign-off status correction",
+      "file_type": "document",
+      "source_file": "docs/agent-log.md",
+      "source_location": "L570",
+      "_origin": "ast",
+      "id": "docs_agent_log_2026_09_23_cas_sign_off_status_correction",
+      "community": 22,
+      "community_name": "agent-log.md",
+      "norm_label": "2026-09-23 \u2014 cas sign-off status correction"
+    },
+    {
       "label": "answer-widget-migration-report.md",
       "file_type": "document",
       "source_file": "docs/answer-widget-migration-report.md",
@@ -3898,6 +3954,160 @@
       "community": 5,
       "community_name": "Responses",
       "norm_label": "spec-vs-code drift register"
+    },
+    {
+      "label": "delivery-integration.md",
+      "file_type": "document",
+      "source_file": "docs/integration/delivery-integration.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_integration_delivery_integration",
+      "community": 18,
+      "community_name": "Delivery Integration Contract",
+      "norm_label": "delivery-integration.md"
+    },
+    {
+      "label": "Delivery Integration Contract",
+      "file_type": "document",
+      "source_file": "docs/integration/delivery-integration.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_integration_delivery_integration_delivery_integration_contract",
+      "community": 18,
+      "community_name": "Delivery Integration Contract",
+      "norm_label": "delivery integration contract"
+    },
+    {
+      "label": "1. System map (detail: `schema/docs/srd/03-architecture.md`)",
+      "file_type": "document",
+      "source_file": "docs/integration/delivery-integration.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "docs_integration_delivery_integration_1_system_map_detail_schema_docs_srd_03_architecture_md",
+      "community": 18,
+      "community_name": "Delivery Integration Contract",
+      "norm_label": "1. system map (detail: `schema/docs/srd/03-architecture.md`)"
+    },
+    {
+      "label": "2. Endpoints",
+      "file_type": "document",
+      "source_file": "docs/integration/delivery-integration.md",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "docs_integration_delivery_integration_2_endpoints",
+      "community": 18,
+      "community_name": "Delivery Integration Contract",
+      "norm_label": "2. endpoints"
+    },
+    {
+      "label": "`POST /v1/generation-requests` \u2014 `taskgen`",
+      "file_type": "document",
+      "source_file": "docs/integration/delivery-integration.md",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "docs_integration_delivery_integration_post_v1_generation_requests_taskgen",
+      "community": 18,
+      "community_name": "Delivery Integration Contract",
+      "norm_label": "`post /v1/generation-requests` \u2014 `taskgen`"
+    },
+    {
+      "label": "`GET /v1/generation-requests/:id` \u2014 `taskgen`",
+      "file_type": "document",
+      "source_file": "docs/integration/delivery-integration.md",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "docs_integration_delivery_integration_get_v1_generation_requests_id_taskgen",
+      "community": 18,
+      "community_name": "Delivery Integration Contract",
+      "norm_label": "`get /v1/generation-requests/:id` \u2014 `taskgen`"
+    },
+    {
+      "label": "`POST /v1/items/:id/submissions` \u2014 `grader`",
+      "file_type": "document",
+      "source_file": "docs/integration/delivery-integration.md",
+      "source_location": "L61",
+      "_origin": "ast",
+      "id": "docs_integration_delivery_integration_post_v1_items_id_submissions_grader",
+      "community": 18,
+      "community_name": "Delivery Integration Contract",
+      "norm_label": "`post /v1/items/:id/submissions` \u2014 `grader`"
+    },
+    {
+      "label": "3. Authentication \u2014 both are placeholders right now",
+      "file_type": "document",
+      "source_file": "docs/integration/delivery-integration.md",
+      "source_location": "L82",
+      "_origin": "ast",
+      "id": "docs_integration_delivery_integration_3_authentication_both_are_placeholders_right_now",
+      "community": 18,
+      "community_name": "Delivery Integration Contract",
+      "norm_label": "3. authentication \u2014 both are placeholders right now"
+    },
+    {
+      "label": "4. The `answer_widget` / `widget_config` contract",
+      "file_type": "document",
+      "source_file": "docs/integration/delivery-integration.md",
+      "source_location": "L92",
+      "_origin": "ast",
+      "id": "docs_integration_delivery_integration_4_the_answer_widget_widget_config_contract",
+      "community": 18,
+      "community_name": "Delivery Integration Contract",
+      "norm_label": "4. the `answer_widget` / `widget_config` contract"
+    },
+    {
+      "label": "Widget kinds and exact serialization",
+      "file_type": "document",
+      "source_file": "docs/integration/delivery-integration.md",
+      "source_location": "L98",
+      "_origin": "ast",
+      "id": "docs_integration_delivery_integration_widget_kinds_and_exact_serialization",
+      "community": 18,
+      "community_name": "Delivery Integration Contract",
+      "norm_label": "widget kinds and exact serialization"
+    },
+    {
+      "label": "5. Locale and rendering",
+      "file_type": "document",
+      "source_file": "docs/integration/delivery-integration.md",
+      "source_location": "L115",
+      "_origin": "ast",
+      "id": "docs_integration_delivery_integration_5_locale_and_rendering",
+      "community": 18,
+      "community_name": "Delivery Integration Contract",
+      "norm_label": "5. locale and rendering"
+    },
+    {
+      "label": "6. What this document deliberately does not decide",
+      "file_type": "document",
+      "source_file": "docs/integration/delivery-integration.md",
+      "source_location": "L122",
+      "_origin": "ast",
+      "id": "docs_integration_delivery_integration_6_what_this_document_deliberately_does_not_decide",
+      "community": 18,
+      "community_name": "Delivery Integration Contract",
+      "norm_label": "6. what this document deliberately does not decide"
+    },
+    {
+      "label": "local-development.md",
+      "file_type": "document",
+      "source_file": "docs/local-development.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_local_development",
+      "community": 74,
+      "community_name": "local-development.md",
+      "norm_label": "local-development.md"
+    },
+    {
+      "label": "Local service startup",
+      "file_type": "document",
+      "source_file": "docs/local-development.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_local_development_local_service_startup",
+      "community": 74,
+      "community_name": "local-development.md",
+      "norm_label": "local service startup"
     },
     {
       "label": "00-conventions.md",
@@ -7112,21 +7322,21 @@
       "norm_label": "2. shared validation pipeline (lives in `schema`, imported by `grader`)"
     },
     {
-      "label": "3. CAS security boundary \u2014 reserved, still no consumer, but now schedule-relevant",
+      "label": "3. CAS security boundary \u2014 implemented and signed off",
       "file_type": "document",
       "source_file": "docs/srd/backend-integration.md",
       "source_location": "L19",
       "_origin": "ast",
-      "id": "docs_srd_backend_integration_3_cas_security_boundary_reserved_still_no_consumer_but_now_schedule_relevant",
+      "id": "docs_srd_backend_integration_3_cas_security_boundary_implemented_and_signed_off",
       "community": 14,
       "community_name": "Backend Integration",
-      "norm_label": "3. cas security boundary \u2014 reserved, still no consumer, but now schedule-relevant"
+      "norm_label": "3. cas security boundary \u2014 implemented and signed off"
     },
     {
       "label": "4. Golden tests",
       "file_type": "document",
       "source_file": "docs/srd/backend-integration.md",
-      "source_location": "L22",
+      "source_location": "L24",
       "_origin": "ast",
       "id": "docs_srd_backend_integration_4_golden_tests",
       "community": 14,
@@ -7137,7 +7347,7 @@
       "label": "5. API contracts",
       "file_type": "document",
       "source_file": "docs/srd/backend-integration.md",
-      "source_location": "L25",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "docs_srd_backend_integration_5_api_contracts",
       "community": 14,
@@ -7148,7 +7358,7 @@
       "label": "6. Event journal (FR-008) \u2014 write-side contract",
       "file_type": "document",
       "source_file": "docs/srd/backend-integration.md",
-      "source_location": "L76",
+      "source_location": "L78",
       "_origin": "ast",
       "id": "docs_srd_backend_integration_6_event_journal_fr_008_write_side_contract",
       "community": 14,
@@ -7341,6 +7551,94 @@
       "community": 9,
       "community_name": "Math Task Type Catalog \u2014 Grade 1 to University",
       "norm_label": "notes for implementation (methodologist + ba perspective)"
+    },
+    {
+      "label": "system-audit-2026-09-23.md",
+      "file_type": "document",
+      "source_file": "docs/system-audit-2026-09-23.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_system_audit_2026_09_23",
+      "community": 72,
+      "community_name": "Cross-repository readiness audit \u2014 2026-09-23",
+      "norm_label": "system-audit-2026-09-23.md"
+    },
+    {
+      "label": "Cross-repository readiness audit \u2014 2026-09-23",
+      "file_type": "document",
+      "source_file": "docs/system-audit-2026-09-23.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_system_audit_2026_09_23_cross_repository_readiness_audit_2026_09_23",
+      "community": 72,
+      "community_name": "Cross-repository readiness audit \u2014 2026-09-23",
+      "norm_label": "cross-repository readiness audit \u2014 2026-09-23"
+    },
+    {
+      "label": "BA \u2014 catalog and metadata",
+      "file_type": "document",
+      "source_file": "docs/system-audit-2026-09-23.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "docs_system_audit_2026_09_23_ba_catalog_and_metadata",
+      "community": 72,
+      "community_name": "Cross-repository readiness audit \u2014 2026-09-23",
+      "norm_label": "ba \u2014 catalog and metadata"
+    },
+    {
+      "label": "SA \u2014 architecture and contracts",
+      "file_type": "document",
+      "source_file": "docs/system-audit-2026-09-23.md",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "docs_system_audit_2026_09_23_sa_architecture_and_contracts",
+      "community": 72,
+      "community_name": "Cross-repository readiness audit \u2014 2026-09-23",
+      "norm_label": "sa \u2014 architecture and contracts"
+    },
+    {
+      "label": "Dev \u2014 builds, local run, and historical issues",
+      "file_type": "document",
+      "source_file": "docs/system-audit-2026-09-23.md",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "docs_system_audit_2026_09_23_dev_builds_local_run_and_historical_issues",
+      "community": 72,
+      "community_name": "Cross-repository readiness audit \u2014 2026-09-23",
+      "norm_label": "dev \u2014 builds, local run, and historical issues"
+    },
+    {
+      "label": "QA \u2014 fresh tests and coverage",
+      "file_type": "document",
+      "source_file": "docs/system-audit-2026-09-23.md",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "docs_system_audit_2026_09_23_qa_fresh_tests_and_coverage",
+      "community": 72,
+      "community_name": "Cross-repository readiness audit \u2014 2026-09-23",
+      "norm_label": "qa \u2014 fresh tests and coverage"
+    },
+    {
+      "label": "DevOps \u2014 graphify and cleanliness",
+      "file_type": "document",
+      "source_file": "docs/system-audit-2026-09-23.md",
+      "source_location": "L73",
+      "_origin": "ast",
+      "id": "docs_system_audit_2026_09_23_devops_graphify_and_cleanliness",
+      "community": 72,
+      "community_name": "Cross-repository readiness audit \u2014 2026-09-23",
+      "norm_label": "devops \u2014 graphify and cleanliness"
+    },
+    {
+      "label": "Git state / commits",
+      "file_type": "document",
+      "source_file": "docs/system-audit-2026-09-23.md",
+      "source_location": "L79",
+      "_origin": "ast",
+      "id": "docs_system_audit_2026_09_23_git_state_commits",
+      "community": 72,
+      "community_name": "Cross-repository readiness audit \u2014 2026-09-23",
+      "norm_label": "git state / commits"
     },
     {
       "label": "task-type-template-infrastructure.md",
@@ -10986,6 +11284,28 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "scripts/start-local.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "scripts_start_local",
+      "target": "scripts_start_local_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/start-local.sh",
+      "source_location": "L81",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "scripts_start_local",
+      "target": "scripts_start_local_stop_services",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "AGENTS.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -12504,6 +12824,17 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/agent-log.md",
+      "source_location": "L570",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_agent_log_2026_09_23_widget_metadata_and_optional_latex_templates",
+      "target": "docs_agent_log_2026_09_23_cas_sign_off_status_correction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/answer-widget-migration-report.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -12862,6 +13193,138 @@
       "_origin": "ast",
       "source": "docs_api_contract_200_ok_response",
       "target": "docs_api_contract_500_internal_server_error_394",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/integration/delivery-integration.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_integration_delivery_integration",
+      "target": "docs_integration_delivery_integration_delivery_integration_contract",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/integration/delivery-integration.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_integration_delivery_integration_delivery_integration_contract",
+      "target": "docs_integration_delivery_integration_1_system_map_detail_schema_docs_srd_03_architecture_md",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/integration/delivery-integration.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_integration_delivery_integration_delivery_integration_contract",
+      "target": "docs_integration_delivery_integration_2_endpoints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/integration/delivery-integration.md",
+      "source_location": "L82",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_integration_delivery_integration_delivery_integration_contract",
+      "target": "docs_integration_delivery_integration_3_authentication_both_are_placeholders_right_now",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/integration/delivery-integration.md",
+      "source_location": "L92",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_integration_delivery_integration_delivery_integration_contract",
+      "target": "docs_integration_delivery_integration_4_the_answer_widget_widget_config_contract",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/integration/delivery-integration.md",
+      "source_location": "L115",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_integration_delivery_integration_delivery_integration_contract",
+      "target": "docs_integration_delivery_integration_5_locale_and_rendering",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/integration/delivery-integration.md",
+      "source_location": "L122",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_integration_delivery_integration_delivery_integration_contract",
+      "target": "docs_integration_delivery_integration_6_what_this_document_deliberately_does_not_decide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/integration/delivery-integration.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_integration_delivery_integration_2_endpoints",
+      "target": "docs_integration_delivery_integration_get_v1_generation_requests_id_taskgen",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/integration/delivery-integration.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_integration_delivery_integration_2_endpoints",
+      "target": "docs_integration_delivery_integration_post_v1_generation_requests_taskgen",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/integration/delivery-integration.md",
+      "source_location": "L61",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_integration_delivery_integration_2_endpoints",
+      "target": "docs_integration_delivery_integration_post_v1_items_id_submissions_grader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/integration/delivery-integration.md",
+      "source_location": "L98",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_integration_delivery_integration_4_the_answer_widget_widget_config_contract",
+      "target": "docs_integration_delivery_integration_widget_kinds_and_exact_serialization",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/local-development.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_local_development",
+      "target": "docs_local_development_local_service_startup",
       "confidence_score": 1.0
     },
     {
@@ -15952,14 +16415,14 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_srd_backend_integration_backend_integration",
-      "target": "docs_srd_backend_integration_3_cas_security_boundary_reserved_still_no_consumer_but_now_schedule_relevant",
+      "target": "docs_srd_backend_integration_3_cas_security_boundary_implemented_and_signed_off",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/srd/backend-integration.md",
-      "source_location": "L22",
+      "source_location": "L24",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_srd_backend_integration_backend_integration",
@@ -15970,7 +16433,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/srd/backend-integration.md",
-      "source_location": "L25",
+      "source_location": "L27",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_srd_backend_integration_backend_integration",
@@ -15981,7 +16444,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/srd/backend-integration.md",
-      "source_location": "L76",
+      "source_location": "L78",
       "weight": 1.0,
       "_origin": "ast",
       "source": "docs_srd_backend_integration_backend_integration",
@@ -16156,6 +16619,83 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/system-audit-2026-09-23.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_system_audit_2026_09_23",
+      "target": "docs_system_audit_2026_09_23_cross_repository_readiness_audit_2026_09_23",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/system-audit-2026-09-23.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_system_audit_2026_09_23_cross_repository_readiness_audit_2026_09_23",
+      "target": "docs_system_audit_2026_09_23_ba_catalog_and_metadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/system-audit-2026-09-23.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_system_audit_2026_09_23_cross_repository_readiness_audit_2026_09_23",
+      "target": "docs_system_audit_2026_09_23_dev_builds_local_run_and_historical_issues",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/system-audit-2026-09-23.md",
+      "source_location": "L73",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_system_audit_2026_09_23_cross_repository_readiness_audit_2026_09_23",
+      "target": "docs_system_audit_2026_09_23_devops_graphify_and_cleanliness",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/system-audit-2026-09-23.md",
+      "source_location": "L79",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_system_audit_2026_09_23_cross_repository_readiness_audit_2026_09_23",
+      "target": "docs_system_audit_2026_09_23_git_state_commits",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/system-audit-2026-09-23.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_system_audit_2026_09_23_cross_repository_readiness_audit_2026_09_23",
+      "target": "docs_system_audit_2026_09_23_qa_fresh_tests_and_coverage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/system-audit-2026-09-23.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_system_audit_2026_09_23_cross_repository_readiness_audit_2026_09_23",
+      "target": "docs_system_audit_2026_09_23_sa_architecture_and_contracts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/task-type-template-infrastructure.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -16199,5 +16739,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "a7fe015b2356f498bc5932fbfb50520ea6341d9f"
+  "built_at_commit": "fc5c8925d6b95d7540c578be68ee717739f5b306"
 }

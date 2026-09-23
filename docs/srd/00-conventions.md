@@ -19,7 +19,7 @@ Unchanged in substance from the prior pass. Consolidated table (this is now the 
 | TOL | parse float per NotationProfile separator | `\|given−correct\| ≤ tol` (default `1e-6`; "round to N" ⇒ `0.5·10⁻ᴺ`) | `WRONG_FORMAT`, `VALUE_MISMATCH` |
 | SET | split by declared separator, trim, parse per sub-type | sorted **multiset** equality (duplicates preserved) | `WRONG_FORMAT`, `SET_CARDINALITY_MISMATCH`, `VALUE_MISMATCH` |
 | CANON | apply the type's canonical-form grammar (§3) to both sides | exact string equality | `WRONG_FORMAT`, `VALUE_MISMATCH` |
-| CAS | *(no consumer until `OPEN-06` closes — do not implement early)* | symbolic equivalence, sandboxed | `CAS_TIMEOUT` (never `INCORRECT`) |
+| CAS | Implemented in the independent `cas` service; shared boundary `OPEN-06` signed off (see `backend-integration.md` §3 and `taskgen/docs/signoffs/OPEN-06.md`) | symbolic equivalence, sandboxed | `CAS_TIMEOUT` (never `INCORRECT`) |
 | BOOL | map synonym → canonical enum via declared table, case-insensitive | enum equality against whitelist | `WRONG_FORMAT` |
 | TUPLE | split by declared order/separator; per-component sub-validator | ordered component-wise (never sorted) | `WRONG_FORMAT`, `INCOMPLETE_TUPLE`, `VALUE_MISMATCH` |
 | MATRIX | *(no consumer yet)* row-major flatten | element-wise, TOL if needed | `WRONG_FORMAT`, `VALUE_MISMATCH` |

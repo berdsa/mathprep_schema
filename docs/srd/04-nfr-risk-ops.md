@@ -35,7 +35,7 @@ RISK-001 through RISK-004 carried forward unchanged. New:
 | ID | Risk | L×I | Mitigation | Residual | Owner |
 |---|---|---|---|---|---|
 | RISK-005 | `schema` module version drifts between `taskgen` and `grader` (one upgrades, the other doesn't) | MED×MED | CI in each consuming service pins and checks the `schema` version; a mismatch beyond a documented compatibility window fails the build | LOW | backend |
-| RISK-006 | CAS boundary (`OPEN-06`) is rushed to unblock university types now that SCOPE-AMD-01 put them on the visible backlog | MED×HIGH | `08-developer-backlog.md` makes CAS boundary sign-off an explicit, non-skippable gate before any CAS-type work starts — named cost, not hidden | MED (open until built) | backend |
+| RISK-006 | CAS-backed task work bypasses per-type confirmation or exceeds the signed-off evaluator boundary | MED×HIGH | Shared CAS boundary `OPEN-06` is signed off; retain the independent-service, bounded-parser/evaluator controls and require each CAS-backed type's own Confirmation Gate | LOW (infrastructure gate closed; per-type gates remain) | backend |
 | RISK-007 | Bot given direct DB write access instead of going through `taskgen`'s HTTP API, for simplicity | LOW×HIGH | Not the current design (ASM-10) — named here so a future shortcut doesn't get taken silently | LOW | backend |
 
 ## Failure modes

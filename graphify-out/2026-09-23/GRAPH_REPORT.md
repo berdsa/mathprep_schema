@@ -1,16 +1,16 @@
 # Graph Report - schema  (2026-09-23)
 
 ## Corpus Check
-- 76 files · ~77,668 words
+- 80 files · ~76,297 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 673 nodes · 784 edges · 72 communities (65 shown, 7 thin omitted)
+- 699 nodes · 806 edges · 75 communities (66 shown, 9 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 22 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a7fe015b`
+- Built from commit: `fc5c8925`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -33,7 +33,7 @@
 - 03 — Architecture
 - 04 — NFR, Risk, Ops
 - Data Governance
-- LookupTaskTypeTemplate
+- Delivery Integration Contract
 - 01 — Current State
 - TestAnswerWidgetDictionaryValues
 - 00 — Индекс артефактов трека `math-task-catalog`
@@ -43,6 +43,9 @@
 - answer-widget-migration-report.md
 - task-type-template-infrastructure.md
 - github.com/berdsa/mathprep_schema
+- Cross-repository readiness audit — 2026-09-23
+- start-local.sh
+- local-development.md
 
 ## God Nodes (most connected - your core abstractions)
 1. `07 — Wave-A Exemplar Task-Type Specs` - 215 edges
@@ -71,7 +74,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (72 total, 7 thin omitted)
+## Communities (75 total, 9 thin omitted)
 
 ### Community 0 - "07 — Wave-A Exemplar Task-Type Specs"
 Cohesion: 0.01
@@ -82,8 +85,8 @@ Cohesion: 0.02
 Nodes (129): 2026-09-19 — Phase 0 base DDL, 2026-09-19 — Phase 0 dictionary seeds, 2026-09-19 — Phase 0 forbidden-write probes, 2026-09-19 — Phase 0 idempotency constraints, 2026-09-19 — Phase 0 migration plan, 2026-09-19 — Phase 0 migration verification, 2026-09-19 — Phase 0 service roles and grants, 2026-09-19 — Phase 0 summary (+121 more)
 
 ### Community 2 - "constants.go"
-Cohesion: 0.12
-Nodes (32): AnswerWidget, CASEvaluationOperationType, CASEvaluationRequest, CASEvaluationStatus, Domain, EquivalencePolicy, EventLog, EventType (+24 more)
+Cohesion: 0.09
+Nodes (39): AnswerWidget, CASEvaluationOperationType, CASEvaluationRequest, CASEvaluationStatus, Domain, EquivalencePolicy, EventLog, EventType (+31 more)
 
 ### Community 3 - "pipeline.go"
 Cohesion: 0.10
@@ -131,7 +134,7 @@ Nodes (7): 08 — Developer Backlog, Confirmation Gate (applies before every sub
 
 ### Community 14 - "Backend Integration"
 Cohesion: 0.25
-Nodes (7): 1. Repository split and what each one owns, 2. Shared validation pipeline (lives in `schema`, imported by `grader`), 3. CAS security boundary — reserved, still no consumer, but now schedule-relevant, 4. Golden tests, 5. API contracts, 6. Event journal (FR-008) — write-side contract, Backend Integration
+Nodes (7): 1. Repository split and what each one owns, 2. Shared validation pipeline (lives in `schema`, imported by `grader`), 3. CAS security boundary — implemented and signed off, 4. Golden tests, 5. API contracts, 6. Event journal (FR-008) — write-side contract, Backend Integration
 
 ### Community 15 - "03 — Architecture"
 Cohesion: 0.29
@@ -145,9 +148,9 @@ Nodes (6): 04 — NFR, Risk, Ops, Failure modes, Observability, Performance & av
 Cohesion: 0.29
 Nodes (6): Data Governance, Data inventory & classification — updated for USERS/STUDENTS split, Deletion / export, Lawful basis and consent, Minimization & retention, Residency & sub-processors
 
-### Community 18 - "LookupTaskTypeTemplate"
-Cohesion: 0.36
-Nodes (7): TaskTypeTemplateStore, Context, LookupTaskTypeTemplate(), T, TestLookupTaskTypeTemplateFallsBackToPrimaryLocale(), TestLookupTaskTypeTemplateReportsMissingTemplate(), TestLookupTaskTypeTemplateUsesRequestedLocale()
+### Community 18 - "Delivery Integration Contract"
+Cohesion: 0.17
+Nodes (11): 1. System map (detail: `schema/docs/srd/03-architecture.md`), 2. Endpoints, 3. Authentication — both are placeholders right now, 4. The `answer_widget` / `widget_config` contract, 5. Locale and rendering, 6. What this document deliberately does not decide, Delivery Integration Contract, `GET /v1/generation-requests/:id` — `taskgen` (+3 more)
 
 ### Community 19 - "01 — Current State"
 Cohesion: 0.33
@@ -157,25 +160,29 @@ Nodes (5): 01 — Current State, 1. Что подано, а что нет — б
 Cohesion: 0.50
 Nodes (3): 00 — Индекс артефактов трека `math-task-catalog`, Реестр допущений и открытых вопросов — сводный, обновлён, Реестр репозиториев (введён этим ходом, см. ADR-006)
 
+### Community 72 - "Cross-repository readiness audit — 2026-09-23"
+Cohesion: 0.25
+Nodes (7): BA — catalog and metadata, Cross-repository readiness audit — 2026-09-23, Dev — builds, local run, and historical issues, DevOps — graphify and cleanliness, Git state / commits, QA — fresh tests and coverage, SA — architecture and contracts
+
 ## Knowledge Gaps
-- **451 isolated node(s):** `github.com/berdsa/mathprep_schema`, `answer_widget`, `What this repo is`, `Source of truth`, `Stack` (+446 more)
+- **467 isolated node(s):** `github.com/berdsa/mathprep_schema`, `answer_widget`, `start-local.sh script`, `What this repo is`, `Source of truth` (+462 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Agent log` connect `Agent log` to `agent-log.md`?**
-  _High betweenness centrality (0.037) - this node is a cross-community bridge._
+  _High betweenness centrality (0.035) - this node is a cross-community bridge._
 - **Why does `ReasonCode` connect `pipeline.go` to `constants.go`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+  _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `Validate()` (e.g. with `TestValidateCanonStrictForm()` and `TestValidateMatrix()`) actually correct?**
   _`Validate()` has 2 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `github.com/berdsa/mathprep_schema`, `answer_widget`, `What this repo is` to the rest of the system?**
-  _451 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `github.com/berdsa/mathprep_schema`, `answer_widget`, `start-local.sh script` to the rest of the system?**
+  _467 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `07 — Wave-A Exemplar Task-Type Specs` be split into smaller, more focused modules?**
   _Cohesion score 0.009259259259259259 - nodes in this community are weakly interconnected._
 - **Should `Agent log` be split into smaller, more focused modules?**
   _Cohesion score 0.015503875968992248 - nodes in this community are weakly interconnected._
 - **Should `constants.go` be split into smaller, more focused modules?**
-  _Cohesion score 0.12380952380952381 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09494949494949495 - nodes in this community are weakly interconnected._
