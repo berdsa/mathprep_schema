@@ -1,0 +1,17 @@
+BEGIN;
+UPDATE task_type SET widget_config = '{"template":{"template":"{reduced_a}:{reduced_b}"}}'::jsonb WHERE type_id = 'G6-NUM-001';
+UPDATE task_type SET widget_config = '{"template":{"template":"{a}x + {b}"}}'::jsonb WHERE type_id = 'G7-ALG-001';
+UPDATE task_type SET widget_config = '{"template":{"template":"{a}x + {b}"}}'::jsonb WHERE type_id = 'G7-ALG-004';
+UPDATE task_type SET widget_config = '{"template":{"template":"(-∞,{bound}]"}}'::jsonb WHERE type_id = 'G7-ALG-005';
+UPDATE task_type SET widget_config = '{"template":{"template":"{factor}(x + y)"}}'::jsonb WHERE type_id = 'G7-ALG-007';
+UPDATE task_type SET widget_config = '{"template":{"template":"x ≥ {bound}"}}'::jsonb WHERE type_id = 'G7-ALG-010';
+UPDATE task_type SET widget_config = '{"template":{"template":"({bound},∞)"}}'::jsonb WHERE type_id = 'G7-ALG-011';
+UPDATE task_type SET widget_config = '{"template":{"template":"({c} − {a}x)/{b}"}}'::jsonb WHERE type_id = 'G7-ALG-018';
+UPDATE task_type SET widget_config = '{"template":{"template":"x ≤ {bound}"}}'::jsonb WHERE type_id = 'G7-ALG-019';
+UPDATE task_type SET widget_config = '{"template":{"template":"y − {y0} = {m}(x − {x0})"}}'::jsonb WHERE type_id = 'G7-ALG-021';
+UPDATE task_type SET widget_config = '{"template":{"template":"y = {m}x + {b}"}}'::jsonb WHERE type_id = 'G7-FUN-011';
+UPDATE task_type SET widget_config = '{"template":{"template":"y − {y0} = {m}(x − {x0})"}}'::jsonb WHERE type_id = 'G7-FUN-012';
+UPDATE task_type SET widget_config = '{"template":{"template":"({r2},∞)"}}'::jsonb WHERE type_id = 'G8-ALG-004';
+UPDATE task_type SET widget_config = '{"template":{"template":"x {relation} {bound}"}}'::jsonb WHERE type_id = 'G8-ALG-007';
+UPDATE task_type SET widget_config = '{"template":{"template":"{a}^{exponent}"}}'::jsonb WHERE type_id = 'G8-ALG-008';
+COMMIT;
