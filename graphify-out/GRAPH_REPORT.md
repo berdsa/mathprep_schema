@@ -1,16 +1,16 @@
 # Graph Report - schema  (2026-09-24)
 
 ## Corpus Check
-- 110 files · ~80,145 words
+- 112 files · ~80,429 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 267 nodes · 351 edges · 103 communities (85 shown, 18 thin omitted)
+- 269 nodes · 351 edges · 105 communities (87 shown, 18 thin omitted)
 - Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 27 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `3ad3f1ff`
+- Built from commit: `0545c614`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -79,7 +79,7 @@
 - **Three-Repository Architecture** — docs_srd_backend_integration_schema_repo, docs_srd_backend_integration_taskgen_repo, docs_srd_backend_integration_grader_repo [EXTRACTED 1.00]
 - **Task Type Definition and Validation** — docs_srd_07_task_type_specs_exemplars_u_cal_007, docs_srd_math_task_catalog_validation_legend, docs_srd_backend_integration_grader_repo [INFERRED 0.85]
 
-## Communities (103 total, 18 thin omitted)
+## Communities (105 total, 18 thin omitted)
 
 ### Community 0 - "pipeline.go"
 Cohesion: 0.16
@@ -138,7 +138,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `Result` connect `pipeline.go` to `constants.go`, `pipeline_test.go`?**
   _High betweenness centrality (0.029) - this node is a cross-community bridge._
 - **Why does `Locale` connect `Locale` to `constants.go`?**
-  _High betweenness centrality (0.029) - this node is a cross-community bridge._
+  _High betweenness centrality (0.028) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `Validate()` (e.g. with `TestValidateCanonStrictForm()` and `TestValidateMatrix()`) actually correct?**
   _`Validate()` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 6 inferred relationships involving `ValidateExactInt()` (e.g. with `TestValidateExactIntAcceptsNegative()` and `TestValidateExactIntAcceptsSixDigits()`) actually correct?**

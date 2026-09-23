@@ -653,3 +653,8 @@
 
 - Added Russian plaintext templates for `G1-NUM-021`–`G1-NUM-026` and `G1-MEA-001`–`G1-MEA-004`. The apple word problems use count-based, agreement-invariant phrasing; arithmetic and length prompts preserve their original operands, operation, comparison, and requested quantity.
 - Added additive migration `000039_seed_g1_number_measurement_ru_templates_batch2` with a scoped, reversible down migration. Taskgen rendering changes are deliberately uncommitted for separate review.
+
+## 2026-09-24 — Phase B Russian template backfill, Stage 2 batch 3
+
+- Added Russian plaintext templates for `G1-MEA-005`–`010` and `G1-STA-001`–`004` in the documented catalog order. The clock prompts retain the `H:MM` answer contract; prompts whose validators still require legacy answer tokens retain those tokens explicitly.
+- Added additive migration `000040_seed_g1_measurement_statistics_ru_templates_batch3` with a scoped, reversible down migration. Taskgen rendering changes remain separate and uncommitted for review.
