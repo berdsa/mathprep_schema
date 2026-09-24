@@ -795,3 +795,8 @@
 
 - Added ten Grade 8 Russian templates in migration `000066_seed_g8_number_algebra_ru_templates_batch29`, with exact-ID rollback.
 - Verification: DB retained 658 catalog rows, inserted ten, rolled back exactly ten, and reapplied. Separately replayed previously unapplied committed seeds `000025`–`000057` to reconcile the local database to repository history.
+
+# 2026-09-24 — Phase B batch 30
+
+- Added ten G8 algebra/functions/geometry Russian templates in migration `000067_seed_g8_algebra_functions_geometry_ru_templates_batch30`, with exact-ID down migration.
+- Verification: local DB kept 658 catalog rows, inserted ten, rolled back exactly ten, then reapplied.

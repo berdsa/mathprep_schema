@@ -1833,6 +1833,28 @@
       "norm_label": "000066_seed_g8_number_algebra_ru_templates_batch29.up.sql"
     },
     {
+      "label": "000067_seed_g8_algebra_functions_geometry_ru_templates_batch30.down.sql",
+      "file_type": "code",
+      "source_file": "migrations/000067_seed_g8_algebra_functions_geometry_ru_templates_batch30.down.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000067_seed_g8_algebra_functions_geometry_ru_templates_batch30_down",
+      "community": 157,
+      "community_name": "000067_seed_g8_algebra_functions_geometry_ru_templates_batch30.down.sql",
+      "norm_label": "000067_seed_g8_algebra_functions_geometry_ru_templates_batch30.down.sql"
+    },
+    {
+      "label": "000067_seed_g8_algebra_functions_geometry_ru_templates_batch30.up.sql",
+      "file_type": "code",
+      "source_file": "migrations/000067_seed_g8_algebra_functions_geometry_ru_templates_batch30.up.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000067_seed_g8_algebra_functions_geometry_ru_templates_batch30_up",
+      "community": 158,
+      "community_name": "000067_seed_g8_algebra_functions_geometry_ru_templates_batch30.up.sql",
+      "norm_label": "000067_seed_g8_algebra_functions_geometry_ru_templates_batch30.up.sql"
+    },
+    {
       "label": "constants.go",
       "file_type": "code",
       "source_file": "pkg/core/constants.go",
@@ -7646,5 +7668,5 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md"
     }
   ],
-  "built_at_commit": "6fa203375b8559bf57d1ee585d758d65533e1bea"
+  "built_at_commit": "dc0307d940b2b9d8b12dff72cb86ba26201a2e41"
 }
