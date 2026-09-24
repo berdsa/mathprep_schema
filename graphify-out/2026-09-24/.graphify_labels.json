@@ -191,5 +191,7 @@
   "189": "000083_seed_g11_statistics_trigonometry_vectors_ru_templates_batch46.down.sql",
   "190": "000083_seed_g11_statistics_trigonometry_vectors_ru_templates_batch46.up.sql",
   "191": "000084_seed_university_algebra_calculus_ru_templates_batch47.down.sql",
-  "192": "000084_seed_university_algebra_calculus_ru_templates_batch47.up.sql"
+  "192": "000084_seed_university_algebra_calculus_ru_templates_batch47.up.sql",
+  "193": "000085_seed_university_algebra_calculus_more_ru_templates_batch48.down.sql",
+  "194": "000085_seed_university_algebra_calculus_more_ru_templates_batch48.up.sql"
 }

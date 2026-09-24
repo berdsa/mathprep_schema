@@ -2229,6 +2229,28 @@
       "norm_label": "000084_seed_university_algebra_calculus_ru_templates_batch47.up.sql"
     },
     {
+      "label": "000085_seed_university_algebra_calculus_more_ru_templates_batch48.down.sql",
+      "file_type": "code",
+      "source_file": "migrations/000085_seed_university_algebra_calculus_more_ru_templates_batch48.down.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000085_seed_university_algebra_calculus_more_ru_templates_batch48_down",
+      "community": 193,
+      "community_name": "000085_seed_university_algebra_calculus_more_ru_templates_batch48.down.sql",
+      "norm_label": "000085_seed_university_algebra_calculus_more_ru_templates_batch48.down.sql"
+    },
+    {
+      "label": "000085_seed_university_algebra_calculus_more_ru_templates_batch48.up.sql",
+      "file_type": "code",
+      "source_file": "migrations/000085_seed_university_algebra_calculus_more_ru_templates_batch48.up.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000085_seed_university_algebra_calculus_more_ru_templates_batch48_up",
+      "community": 194,
+      "community_name": "000085_seed_university_algebra_calculus_more_ru_templates_batch48.up.sql",
+      "norm_label": "000085_seed_university_algebra_calculus_more_ru_templates_batch48.up.sql"
+    },
+    {
       "label": "constants.go",
       "file_type": "code",
       "source_file": "pkg/core/constants.go",
@@ -8042,5 +8064,5 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md"
     }
   ],
-  "built_at_commit": "a5146cba2b9502516f5a298e0d83cc7cf305e2f9"
+  "built_at_commit": "ab4e670725ab9b51235af6cf5492a8222a5638eb"
 }
