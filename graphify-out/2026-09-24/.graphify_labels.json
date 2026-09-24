@@ -195,5 +195,7 @@
   "193": "000085_seed_university_algebra_calculus_more_ru_templates_batch48.down.sql",
   "194": "000085_seed_university_algebra_calculus_more_ru_templates_batch48.up.sql",
   "195": "000086_seed_university_calculus_advanced_ru_templates_batch49.down.sql",
-  "196": "000086_seed_university_calculus_advanced_ru_templates_batch49.up.sql"
+  "196": "000086_seed_university_calculus_advanced_ru_templates_batch49.up.sql",
+  "197": "000087_seed_university_calculus_discrete_ru_templates_batch50.down.sql",
+  "198": "000087_seed_university_calculus_discrete_ru_templates_batch50.up.sql"
 }

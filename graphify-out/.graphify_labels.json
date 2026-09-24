@@ -197,5 +197,7 @@
   "195": "000086_seed_university_calculus_advanced_ru_templates_batch49.down.sql",
   "196": "000086_seed_university_calculus_advanced_ru_templates_batch49.up.sql",
   "197": "000087_seed_university_calculus_discrete_ru_templates_batch50.down.sql",
-  "198": "000087_seed_university_calculus_discrete_ru_templates_batch50.up.sql"
+  "198": "000087_seed_university_calculus_discrete_ru_templates_batch50.up.sql",
+  "199": "000088_seed_university_functions_matrices_ru_templates_batch51.down.sql",
+  "200": "000088_seed_university_functions_matrices_ru_templates_batch51.up.sql"
 }

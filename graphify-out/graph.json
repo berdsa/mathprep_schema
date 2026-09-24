@@ -2295,6 +2295,28 @@
       "norm_label": "000087_seed_university_calculus_discrete_ru_templates_batch50.up.sql"
     },
     {
+      "label": "000088_seed_university_functions_matrices_ru_templates_batch51.down.sql",
+      "file_type": "code",
+      "source_file": "migrations/000088_seed_university_functions_matrices_ru_templates_batch51.down.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000088_seed_university_functions_matrices_ru_templates_batch51_down",
+      "community": 199,
+      "community_name": "000088_seed_university_functions_matrices_ru_templates_batch51.down.sql",
+      "norm_label": "000088_seed_university_functions_matrices_ru_templates_batch51.down.sql"
+    },
+    {
+      "label": "000088_seed_university_functions_matrices_ru_templates_batch51.up.sql",
+      "file_type": "code",
+      "source_file": "migrations/000088_seed_university_functions_matrices_ru_templates_batch51.up.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000088_seed_university_functions_matrices_ru_templates_batch51_up",
+      "community": 200,
+      "community_name": "000088_seed_university_functions_matrices_ru_templates_batch51.up.sql",
+      "norm_label": "000088_seed_university_functions_matrices_ru_templates_batch51.up.sql"
+    },
+    {
       "label": "constants.go",
       "file_type": "code",
       "source_file": "pkg/core/constants.go",
@@ -8108,5 +8130,5 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md"
     }
   ],
-  "built_at_commit": "da72bf123f3fbda89db5be859198072c562abf71"
+  "built_at_commit": "e294c9a66b1dc006a037d328fdb092c142286519"
 }
