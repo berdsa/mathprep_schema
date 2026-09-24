@@ -149,5 +149,7 @@
   "147": "000062_seed_g7_functions_ru_templates_batch25.down.sql",
   "148": "000062_seed_g7_functions_ru_templates_batch25.up.sql",
   "149": "000063_seed_g7_geometry_ru_templates_batch26.down.sql",
-  "150": "000063_seed_g7_geometry_ru_templates_batch26.up.sql"
+  "150": "000063_seed_g7_geometry_ru_templates_batch26.up.sql",
+  "151": "000064_seed_g7_statistics_geometry_ru_templates_batch27.down.sql",
+  "152": "000064_seed_g7_statistics_geometry_ru_templates_batch27.up.sql"
 }

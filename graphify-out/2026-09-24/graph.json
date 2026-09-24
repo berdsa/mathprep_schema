@@ -1745,6 +1745,28 @@
       "norm_label": "000062_seed_g7_functions_ru_templates_batch25.up.sql"
     },
     {
+      "label": "000063_seed_g7_geometry_ru_templates_batch26.down.sql",
+      "file_type": "code",
+      "source_file": "migrations/000063_seed_g7_geometry_ru_templates_batch26.down.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000063_seed_g7_geometry_ru_templates_batch26_down",
+      "community": 149,
+      "community_name": "000063_seed_g7_geometry_ru_templates_batch26.down.sql",
+      "norm_label": "000063_seed_g7_geometry_ru_templates_batch26.down.sql"
+    },
+    {
+      "label": "000063_seed_g7_geometry_ru_templates_batch26.up.sql",
+      "file_type": "code",
+      "source_file": "migrations/000063_seed_g7_geometry_ru_templates_batch26.up.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000063_seed_g7_geometry_ru_templates_batch26_up",
+      "community": 150,
+      "community_name": "000063_seed_g7_geometry_ru_templates_batch26.up.sql",
+      "norm_label": "000063_seed_g7_geometry_ru_templates_batch26.up.sql"
+    },
+    {
       "label": "constants.go",
       "file_type": "code",
       "source_file": "pkg/core/constants.go",
@@ -7558,5 +7580,5 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md"
     }
   ],
-  "built_at_commit": "2024fb9a7569691c3e3f93c247e98eb5e74ab32c"
+  "built_at_commit": "b93f31cccfdcb693e09ef53728bfe79a4ea46861"
 }

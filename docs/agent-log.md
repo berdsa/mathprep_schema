@@ -780,3 +780,8 @@
 
 - Added ten G7 geometry Russian templates in migration `000063_seed_g7_geometry_ru_templates_batch26`, with exact-ID down migration.
 - Verification: local DB retained 658 catalog rows; migration inserted ten, rollback deleted exactly ten, and reapply succeeded. GEO-021 remains excluded from the batch due its pre-existing integer-truncation issue.
+
+# 2026-09-24 — Phase B batch 27
+
+- Added ten G7 statistics/geometry Russian templates in migration `000064_seed_g7_statistics_geometry_ru_templates_batch27`, with exact-ID down migration. This adds the DB row previously omitted for G7-GEO-010.
+- Verification: 658 catalog rows retained, ten rows inserted, down migration deleted exactly ten, then up reapplied cleanly.

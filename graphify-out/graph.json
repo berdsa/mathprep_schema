@@ -1767,6 +1767,28 @@
       "norm_label": "000063_seed_g7_geometry_ru_templates_batch26.up.sql"
     },
     {
+      "label": "000064_seed_g7_statistics_geometry_ru_templates_batch27.down.sql",
+      "file_type": "code",
+      "source_file": "migrations/000064_seed_g7_statistics_geometry_ru_templates_batch27.down.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000064_seed_g7_statistics_geometry_ru_templates_batch27_down",
+      "community": 151,
+      "community_name": "000064_seed_g7_statistics_geometry_ru_templates_batch27.down.sql",
+      "norm_label": "000064_seed_g7_statistics_geometry_ru_templates_batch27.down.sql"
+    },
+    {
+      "label": "000064_seed_g7_statistics_geometry_ru_templates_batch27.up.sql",
+      "file_type": "code",
+      "source_file": "migrations/000064_seed_g7_statistics_geometry_ru_templates_batch27.up.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000064_seed_g7_statistics_geometry_ru_templates_batch27_up",
+      "community": 152,
+      "community_name": "000064_seed_g7_statistics_geometry_ru_templates_batch27.up.sql",
+      "norm_label": "000064_seed_g7_statistics_geometry_ru_templates_batch27.up.sql"
+    },
+    {
       "label": "constants.go",
       "file_type": "code",
       "source_file": "pkg/core/constants.go",
@@ -7580,5 +7602,5 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md"
     }
   ],
-  "built_at_commit": "b93f31cccfdcb693e09ef53728bfe79a4ea46861"
+  "built_at_commit": "bfefd161479f90f01b930b98ec9ab8ca65bee3f2"
 }
