@@ -785,3 +785,8 @@
 
 - Added ten G7 statistics/geometry Russian templates in migration `000064_seed_g7_statistics_geometry_ru_templates_batch27`, with exact-ID down migration. This adds the DB row previously omitted for G7-GEO-010.
 - Verification: 658 catalog rows retained, ten rows inserted, down migration deleted exactly ten, then up reapplied cleanly.
+
+# 2026-09-24 — Phase B batch 28
+
+- Added seven G7 algebra/statistics Russian templates in migration `000065_seed_g7_algebra_statistics_ru_templates_batch28`, with exact-ID down migration.
+- Verification: local DB retained 658 catalog rows, inserted seven, rolled back exactly seven, and reapplied. Grade 7 now has one deliberately flagged untemplated row, G7-GEO-021.
