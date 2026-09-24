@@ -920,3 +920,7 @@
 # 2026-09-24 — Phase B Stage 4 locale cleanup
 
 - Re-audit found five English-language Russian templates plus two language-neutral arithmetic strings. Migration `000092` replaced the five with Russian phrasing; the two neutral strings remain language-independent. No non-neutral English plaintext templates remain.
+
+# 2026-09-24 — Phase B Stage 4 final three
+
+- Added Russian DB templates for `G2-MEA-006`, `G2-MEA-007`, and `G7-GEO-021` in migration `000093`; the generator now routes all 658 catalog types through the template-backed path. Existing answer calculations were intentionally unchanged, so the time-format and angle-truncation contract defects remain separately visible to QA.
