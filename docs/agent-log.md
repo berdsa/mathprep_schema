@@ -831,3 +831,8 @@
 
 - Added ten Russian plaintext templates for G2 number/coin-value cases in migration `000073_seed_g2_number_ru_templates_batch36`, with exact-ID down migration.
 - Verification: migration applied cleanly; taskgen fixed-seed/oracle tests and new DB-template-route assertions passed.
+
+# 2026-09-24 — Phase B batch 37
+
+- Added twelve Grade 4 number Russian plaintext templates in migration `000074_seed_g4_number_ru_templates_batch37`, with exact-ID down migration.
+- Verification: migration applied cleanly; taskgen grouped fixed-seed and new template-backed assertions passed.

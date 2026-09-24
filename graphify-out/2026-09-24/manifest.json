@@ -5,8 +5,8 @@
     "semantic_hash": "7560d8d214cbda307df0472f5cd472c9"
   },
   "docs/agent-log.md": {
-    "mtime": 1790220716.3081136,
-    "ast_hash": "534e1048cd3f6ae66976bf895e3657d1",
+    "mtime": 1790220971.52427,
+    "ast_hash": "f50fffabe220d550a0ac90f9f1727d1d",
     "semantic_hash": ""
   },
   "docs/srd/00-conventions.md": {
@@ -877,6 +877,16 @@
   "migrations/000072_seed_g1_g2_measurement_ru_templates_batch35.up.sql": {
     "mtime": 1790220677.8067112,
     "ast_hash": "ed40988fd5aa3abf9e18d39d5b30232f",
+    "semantic_hash": ""
+  },
+  "migrations/000073_seed_g2_number_ru_templates_batch36.down.sql": {
+    "mtime": 1790220929.8247526,
+    "ast_hash": "dfe5d9b33fb09246bfd2fe723a855440",
+    "semantic_hash": ""
+  },
+  "migrations/000073_seed_g2_number_ru_templates_batch36.up.sql": {
+    "mtime": 1790220941.2312489,
+    "ast_hash": "470a68ed8b98ac11fcdde95b7cd49071",
     "semantic_hash": ""
   }
 }

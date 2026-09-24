@@ -1965,6 +1965,28 @@
       "norm_label": "000072_seed_g1_g2_measurement_ru_templates_batch35.up.sql"
     },
     {
+      "label": "000073_seed_g2_number_ru_templates_batch36.down.sql",
+      "file_type": "code",
+      "source_file": "migrations/000073_seed_g2_number_ru_templates_batch36.down.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000073_seed_g2_number_ru_templates_batch36_down",
+      "community": 169,
+      "community_name": "000073_seed_g2_number_ru_templates_batch36.down.sql",
+      "norm_label": "000073_seed_g2_number_ru_templates_batch36.down.sql"
+    },
+    {
+      "label": "000073_seed_g2_number_ru_templates_batch36.up.sql",
+      "file_type": "code",
+      "source_file": "migrations/000073_seed_g2_number_ru_templates_batch36.up.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000073_seed_g2_number_ru_templates_batch36_up",
+      "community": 170,
+      "community_name": "000073_seed_g2_number_ru_templates_batch36.up.sql",
+      "norm_label": "000073_seed_g2_number_ru_templates_batch36.up.sql"
+    },
+    {
       "label": "constants.go",
       "file_type": "code",
       "source_file": "pkg/core/constants.go",
@@ -7778,5 +7800,5 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md"
     }
   ],
-  "built_at_commit": "e5893186242752dc9e6fb0fd0978b7d36785842a"
+  "built_at_commit": "841f6df074559241c3cd2f3c8c9d925e65a7b986"
 }
