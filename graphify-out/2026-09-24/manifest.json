@@ -728,5 +728,15 @@
     "mtime": 1790217467.2342098,
     "ast_hash": "10bc893a45febf586364a3f93a6ac568",
     "semantic_hash": ""
+  },
+  "migrations/000058_seed_g7_templates_batch21.down.sql": {
+    "mtime": 1790217658.1634955,
+    "ast_hash": "bef8e84f0a07b18dcfaf768633a19a17",
+    "semantic_hash": ""
+  },
+  "migrations/000058_seed_g7_templates_batch21.up.sql": {
+    "mtime": 1790217658.163018,
+    "ast_hash": "88f7fb1c4cae4d47916aa803d9d30f1f",
+    "semantic_hash": ""
   }
 }

@@ -755,3 +755,8 @@
 
 - Added Russian DB templates for G7-FRA-001–004, G7-DEC-001–004, G7-GEO-001–002, and G7-GEO-004–005. Migration `000058_seed_g7_templates_batch21` has an exact-ID down migration. Generator wiring is committed separately in taskgen.
 - Verification: local database retained all 658 task types and contained exactly 12 rows for the batch; rollback/reapply and full migration replay remain part of this batch's verification.
+
+# 2026-09-24 — Phase B batch 22
+
+- Added Russian plaintext template rows for G7-ALG-006–015 in migration `000059_seed_g7_algebra_ru_templates_batch22`, with exact-ID down migration. Generator template-source changes are in taskgen.
+- Verification: local DB retained 658 task rows, inserted 10 batch rows, down removed exactly 10, then up restored the rows.
