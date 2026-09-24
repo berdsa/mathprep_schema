@@ -3275,5 +3275,5 @@ The following catalog types use CODE generation, `ru-KZ` plaintext rendering, st
 | G2-MEA-003 | `Compare a cm and b cm`; answer `<`, `>`, or `=`, `a,b∈[1,200]` | BOOL |
 | G2-MEA-004 | `Order a,b,c cm from shortest to longest`; answer canonical ascending tuple | CANON |
 | G2-MEA-005 | `Three pieces are a,b,c cm. Total?`; answer `a+b+c`, each in `[1,100]` | EXACT-INT |
-| G2-MEA-006 | `It is h:00. What time is k minutes later?`; answer total minutes, `k∈{5,…,55}` | CANON |
-| G2-MEA-007 | `It is h:m. What time is k minutes earlier?`; answer total minutes, `m≥k`, multiples of five | CANON |
+| G2-MEA-006 | `It is h:00. What time is k minutes later?`; answer canonical `H:MM`, `k∈{5,…,55}` | CANON |
+| G2-MEA-007 | `It is h:m. What time is k minutes earlier?`; answer canonical `H:MM`, `m≥k`, multiples of five | CANON |
