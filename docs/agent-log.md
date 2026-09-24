@@ -924,3 +924,7 @@
 # 2026-09-24 — Phase B Stage 4 final three
 
 - Added Russian DB templates for `G2-MEA-006`, `G2-MEA-007`, and `G7-GEO-021` in migration `000093`; the generator now routes all 658 catalog types through the template-backed path. Existing answer calculations were intentionally unchanged, so the time-format and angle-truncation contract defects remain separately visible to QA.
+
+# 2026-09-24 — widget_config data-validation tests
+
+- Added `pkg/core/widget_config_data_test.go` plus a reviewed catalog contract snapshot. The test queries live `task_type` rows directly, using the running `postgres` container automatically when host `psql` is unavailable, and checks the exact BOOL whitelist, tuple field counts/labels, matrix dimensions, and CANON template structure/identity. Local populated-database run passed.

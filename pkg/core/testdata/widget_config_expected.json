@@ -1,0 +1,530 @@
+{
+  "choices": [
+    "<",
+    "less",
+    "less than",
+    ">",
+    "greater",
+    "greater than",
+    "=",
+    "equal",
+    "equal to",
+    "true",
+    "false",
+    "red",
+    "blue",
+    "green",
+    "cats",
+    "dogs",
+    "birds",
+    "cm",
+    "kg",
+    "l",
+    "2d",
+    "3d",
+    "square",
+    "triangle",
+    "pentagon",
+    "hexagon",
+    "octagon",
+    "odd",
+    "even",
+    "am",
+    "pm",
+    "prime",
+    "composite",
+    "+",
+    "-",
+    "×",
+    "÷",
+    "i",
+    "ii",
+    "iii",
+    "iv",
+    "ox",
+    "oy",
+    "o"
+  ],
+  "tuple": {
+    "G11-ALG-001": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "x"
+        },
+        {
+          "key": "field_2",
+          "label": "y"
+        }
+      ],
+      "field_count": 2
+    },
+    "G11-NUM-001": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "real"
+        },
+        {
+          "key": "field_2",
+          "label": "imaginary"
+        }
+      ],
+      "field_count": 2
+    },
+    "G2-NUM-014": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "tens"
+        },
+        {
+          "key": "field_2",
+          "label": "ones"
+        }
+      ],
+      "field_count": 2
+    },
+    "G2-NUM-052": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "hundreds"
+        },
+        {
+          "key": "field_2",
+          "label": "tens"
+        },
+        {
+          "key": "field_3",
+          "label": "ones"
+        }
+      ],
+      "field_count": 3
+    },
+    "G3-NUM-011": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "quotient"
+        },
+        {
+          "key": "field_2",
+          "label": "remainder"
+        }
+      ],
+      "field_count": 2
+    },
+    "G4-NUM-002": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "thousands"
+        },
+        {
+          "key": "field_2",
+          "label": "hundreds"
+        },
+        {
+          "key": "field_3",
+          "label": "tens"
+        },
+        {
+          "key": "field_4",
+          "label": "ones"
+        }
+      ],
+      "field_count": 4
+    },
+    "G4-NUM-010": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "quotient"
+        },
+        {
+          "key": "field_2",
+          "label": "remainder"
+        }
+      ],
+      "field_count": 2
+    },
+    "G4-NUM-029": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "quotient"
+        },
+        {
+          "key": "field_2",
+          "label": "remainder"
+        }
+      ],
+      "field_count": 2
+    },
+    "G6-NUM-004": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "quotient"
+        },
+        {
+          "key": "field_2",
+          "label": "remainder"
+        }
+      ],
+      "field_count": 2
+    },
+    "G7-ALG-002": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "x"
+        },
+        {
+          "key": "field_2",
+          "label": "y"
+        }
+      ],
+      "field_count": 2
+    },
+    "G7-ALG-020": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "slope"
+        },
+        {
+          "key": "field_2",
+          "label": "y-intercept"
+        }
+      ],
+      "field_count": 2
+    },
+    "G7-ALG-023": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "x"
+        },
+        {
+          "key": "field_2",
+          "label": "y"
+        }
+      ],
+      "field_count": 2
+    },
+    "G7-ALG-024": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "x"
+        },
+        {
+          "key": "field_2",
+          "label": "y"
+        }
+      ],
+      "field_count": 2
+    },
+    "G7-ALG-025": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "x"
+        },
+        {
+          "key": "field_2",
+          "label": "y"
+        }
+      ],
+      "field_count": 2
+    },
+    "G7-ALG-026": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "adult tickets"
+        },
+        {
+          "key": "field_2",
+          "label": "child tickets"
+        }
+      ],
+      "field_count": 2
+    },
+    "G8-ALG-005": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "x"
+        },
+        {
+          "key": "field_2",
+          "label": "y"
+        }
+      ],
+      "field_count": 2
+    },
+    "G8-ALG-006": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "adult tickets"
+        },
+        {
+          "key": "field_2",
+          "label": "child tickets"
+        }
+      ],
+      "field_count": 2
+    },
+    "G8-ALG-018": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "x"
+        },
+        {
+          "key": "field_2",
+          "label": "y"
+        }
+      ],
+      "field_count": 2
+    },
+    "G8-FUN-006": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "x-coordinate"
+        },
+        {
+          "key": "field_2",
+          "label": "y-coordinate"
+        }
+      ],
+      "field_count": 2
+    },
+    "G8-GEO-005": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "x"
+        },
+        {
+          "key": "field_2",
+          "label": "y"
+        }
+      ],
+      "field_count": 2
+    },
+    "G8-GEO-006": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "x"
+        },
+        {
+          "key": "field_2",
+          "label": "y"
+        }
+      ],
+      "field_count": 2
+    },
+    "G8-GEO-007": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "x"
+        },
+        {
+          "key": "field_2",
+          "label": "y"
+        }
+      ],
+      "field_count": 2
+    },
+    "G8-GEO-023": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "x"
+        },
+        {
+          "key": "field_2",
+          "label": "y"
+        }
+      ],
+      "field_count": 2
+    },
+    "G9-VEC-002": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "x"
+        },
+        {
+          "key": "field_2",
+          "label": "y"
+        }
+      ],
+      "field_count": 2
+    },
+    "U-ALG-002": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "x"
+        },
+        {
+          "key": "field_2",
+          "label": "y"
+        }
+      ],
+      "field_count": 2
+    },
+    "U-CAL-004": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "first component"
+        },
+        {
+          "key": "field_2",
+          "label": "second component"
+        }
+      ],
+      "field_count": 2
+    },
+    "U-CAL-020": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "real"
+        },
+        {
+          "key": "field_2",
+          "label": "imaginary"
+        }
+      ],
+      "field_count": 2
+    },
+    "U-CAL-021": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "real"
+        },
+        {
+          "key": "field_2",
+          "label": "imaginary"
+        }
+      ],
+      "field_count": 2
+    },
+    "U-CAL-022": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "real"
+        },
+        {
+          "key": "field_2",
+          "label": "imaginary"
+        }
+      ],
+      "field_count": 2
+    },
+    "U-MAT-004": {
+      "fields": [
+        {
+          "key": "field_1",
+          "label": "x₁"
+        },
+        {
+          "key": "field_2",
+          "label": "x₂"
+        },
+        {
+          "key": "field_3",
+          "label": "x₃"
+        }
+      ],
+      "field_count": 3
+    }
+  },
+  "matrix": {
+    "G11-MAT-001": {
+      "rows": 2,
+      "columns": 2,
+      "cell_label": "entry"
+    },
+    "U-MAT-003": {
+      "rows": 2,
+      "columns": 2,
+      "cell_label": "entry"
+    }
+  },
+  "canon": {
+    "G10-FUN-002": "(x-{b})/{a}",
+    "G1-MEA-004": "{a},{b},{c}",
+    "G1-MEA-006": "{hour}:{minute}",
+    "G1-MEA-007": "{hour}:{minute}",
+    "G1-NUM-007": "{v1},{v2},{v3},{v4}",
+    "G2-MEA-004": "{a},{b},{c}",
+    "G2-MEA-006": "{hour}:{minute}",
+    "G2-MEA-007": "{hour}:{minute}",
+    "G2-MEA-012": "{a},{b},{c}",
+    "G2-MEA-014": "{hour}:{minute}",
+    "G2-MEA-015": "{hour}:{minute}",
+    "G2-NUM-018": "{a},{b},{c}",
+    "G2-NUM-055": "{h}00 + {t}0 + {o}",
+    "G2-NUM-058": "{a},{b},{c}",
+    "G3-MEA-011": "{hour}:{minute}",
+    "G4-NUM-006": "{a},{b},{c}",
+    "G4-NUM-007": "{expanded_terms}",
+    "G4-NUM-012": "{roman_numeral}",
+    "G4-NUM-015": "{item_1},{item_2},...,{item_n}",
+    "G4-NUM-033": "{a},{b},{c},{d}",
+    "G4-NUM-034": "{expanded_terms}",
+    "G5-DEC-006": "{whole} {place_value}",
+    "G5-DIS-001": "{p1}^{e1} {p2}^{e2} ...",
+    "G5-NUM-005": "{a} + {b} × {c}",
+    "G5-NUM-006": "{operation_text}",
+    "G5-NUM-010": "{g}({c} + {d})",
+    "G6-ALG-003": "{b}x − {a}",
+    "G6-ALG-005": "{a}x + {constant}",
+    "G6-ALG-006": "x {relation} {bound}",
+    "G6-FRA-011": "{n1}/{d1}, {n2}/{d2}, {n3}/{d3}, {n4}/{d4}",
+    "G6-NUM-001": "{reduced_a}:{reduced_b}",
+    "G7-ALG-001": "{a}x + {b}",
+    "G7-ALG-004": "{a}x + {b}",
+    "G7-ALG-005": "(-∞,{bound}]",
+    "G7-ALG-007": "{factor}(x + y)",
+    "G7-ALG-010": "x ≥ {bound}",
+    "G7-ALG-011": "({bound},∞)",
+    "G7-ALG-018": "({c} − {a}x)/{b}",
+    "G7-ALG-019": "x ≤ {bound}",
+    "G7-ALG-021": "y − {y0} = {m}(x − {x0})",
+    "G7-FUN-011": "y = {m}x + {b}",
+    "G7-FUN-012": "y − {y0} = {m}(x − {x0})",
+    "G8-ALG-004": "({r2},∞)",
+    "G8-ALG-007": "x {relation} {bound}",
+    "G8-ALG-008": "{a}^{exponent}",
+    "G8-ALG-011": "{lo} < x < {hi}",
+    "G8-ALG-012": "{gcf}({x} + {y})",
+    "G8-ALG-013": "(x − {a})(x + {a})",
+    "G8-ALG-019": "{a}^{exponent}",
+    "G8-ALG-021": "x + {a}",
+    "G8-ALG-022": "(x + {a})/(x − {b})",
+    "G8-FUN-003": "y = {m}x + {b}",
+    "G8-FUN-004": "[{a},∞)",
+    "G8-FUN-005": "[{a},∞)",
+    "G8-NUM-006": "{a}^{exponent}",
+    "G8-NUM-007": "{coefficient} × 10^6",
+    "G8-NUM-008": "{coefficient} × 10^{exponent}",
+    "G9-GEO-010": "(x − {h})^2 + (y − {k})^2 = {r2}",
+    "U-ALG-003": "y = x²",
+    "U-ALG-008": "A=1/{d}; B=−1/{d}"
+  }
+}
