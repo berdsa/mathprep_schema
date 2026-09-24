@@ -881,3 +881,8 @@
 
 - Added six Grade 11 statistics, trigonometry, and vector Russian plaintext templates in reversible migration `000083_seed_g11_statistics_trigonometry_vectors_ru_templates_batch46`.
 - Verification: down/up removed and restored six rows; the DB contains 593 distinct `ru-KZ` plaintext template type IDs out of 658 catalog rows.
+
+# 2026-09-24 — Phase B batch 47
+
+- Added seven University algebra/calculus Russian plaintext templates in reversible migration `000084_seed_university_algebra_calculus_ru_templates_batch47`.
+- Verification: down/up removed and restored seven rows; the DB contains 600 distinct `ru-KZ` plaintext template type IDs out of 658 catalog rows.
