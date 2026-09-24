@@ -720,3 +720,9 @@
 - Added Russian plaintext templates for G4-GEO-001–005, G4-GEO-007, and G4-MEA-002–005. Existing answer codes for geometric classifications are explicitly listed in Russian prompts; unit labels and quantity meaning are preserved. Excluded G4-GEO-006 after detecting that its source claim (a circle has zero symmetry axes) is false; do not translate that premise as if valid.
 - Migration: `000052_seed_g4_geometry_measurement_ru_templates_batch15`, with exact-ID down migration.
 - Verification: fresh bootstrap through `000052` retained 658 task types, inserted all 10 intended rows, and left G4-GEO-006 without a DB template; down deleted exactly 10 and left 0. Focused generator oracle/golden tests passed in taskgen.
+
+# 2026-09-24 — Phase B batch 16
+
+- Added Russian plaintext templates for G4-MEA-006–015 and G4-STA-001, preserving time zero-padding, numeric inputs, and existing answer representations.
+- Migration: `000053_seed_g4_measurement_statistics_ru_templates_batch16` with exact-ID down migration.
+- Verification: fresh bootstrap through `000053` retained 658 task types, inserted all 11 rows, and down deleted exactly 11 leaving 0. Focused oracle/golden tests passed in taskgen.
