@@ -708,3 +708,9 @@
 - Added eleven Russian `plaintext` templates for G2-GEO-025–031 and G4-NUM-001–004, retaining each generator's existing operands, answer encoding, and validation meaning.
 - Migration: `000050_seed_g2_geometry_g4_number_ru_templates` with an ID-scoped down migration.
 - Verification: fresh bootstrap through migration `000050` retained 658 task types and inserted all 11 rows; batch down deleted 11 and left 0; up replay restored all 11 before the disposable database was dropped. Focused deterministic/oracle/golden tests passed in taskgen.
+
+# 2026-09-24 — Phase B batch 14
+
+- Added Russian plaintext templates for G4-NUM-005–006 and G4-FRA-001–008. Prompts preserve the existing numeric expressions and answers; the word prompt uses neutral quantity labels.
+- Migration: `000051_seed_g4_number_fraction_ru_templates_batch14`, with exact-ID down migration.
+- Verification: fresh bootstrap through `000051` retained 658 task types and inserted all 10 batch rows; down deleted exactly 10 and left 0. Focused generator oracle/golden tests passed in taskgen.

@@ -1459,6 +1459,28 @@
       "norm_label": "000049_seed_g2_statistics_geometry_ru_templates_batch12.up.sql"
     },
     {
+      "label": "000050_seed_g2_geometry_g4_number_ru_templates_batch13.down.sql",
+      "file_type": "code",
+      "source_file": "migrations/000050_seed_g2_geometry_g4_number_ru_templates_batch13.down.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000050_seed_g2_geometry_g4_number_ru_templates_batch13_down",
+      "community": 123,
+      "community_name": "000050_seed_g2_geometry_g4_number_ru_templates_batch13.down.sql",
+      "norm_label": "000050_seed_g2_geometry_g4_number_ru_templates_batch13.down.sql"
+    },
+    {
+      "label": "000050_seed_g2_geometry_g4_number_ru_templates_batch13.up.sql",
+      "file_type": "code",
+      "source_file": "migrations/000050_seed_g2_geometry_g4_number_ru_templates_batch13.up.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000050_seed_g2_geometry_g4_number_ru_templates_batch13_up",
+      "community": 124,
+      "community_name": "000050_seed_g2_geometry_g4_number_ru_templates_batch13.up.sql",
+      "norm_label": "000050_seed_g2_geometry_g4_number_ru_templates_batch13.up.sql"
+    },
+    {
       "label": "constants.go",
       "file_type": "code",
       "source_file": "pkg/core/constants.go",
@@ -7272,5 +7294,5 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md"
     }
   ],
-  "built_at_commit": "e947e084a8fb1b60063271868e2cd53fe67887a2"
+  "built_at_commit": "dbb933bdd289403e5e79e78cd6fc93f5e59c08b8"
 }
