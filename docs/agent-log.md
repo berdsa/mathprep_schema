@@ -775,3 +775,8 @@
 
 - Added eleven G7 function Russian plaintext templates in migration `000062_seed_g7_functions_ru_templates_batch25`, with exact-ID rollback.
 - Verification: local database retained 658 catalog rows; migration inserted eleven rows, rollback removed all eleven, and reapply succeeded.
+
+# 2026-09-24 — Phase B batch 26
+
+- Added ten G7 geometry Russian templates in migration `000063_seed_g7_geometry_ru_templates_batch26`, with exact-ID down migration.
+- Verification: local DB retained 658 catalog rows; migration inserted ten, rollback deleted exactly ten, and reapply succeeded. GEO-021 remains excluded from the batch due its pre-existing integer-truncation issue.
