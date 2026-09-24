@@ -726,3 +726,9 @@
 - Added Russian plaintext templates for G4-MEA-006–015 and G4-STA-001, preserving time zero-padding, numeric inputs, and existing answer representations.
 - Migration: `000053_seed_g4_measurement_statistics_ru_templates_batch16` with exact-ID down migration.
 - Verification: fresh bootstrap through `000053` retained 658 task types, inserted all 11 rows, and down deleted exactly 11 leaving 0. Focused oracle/golden tests passed in taskgen.
+
+# 2026-09-24 — Phase B batch 17
+
+- Added Russian plaintext templates for G5-NUM-001–010. Arithmetic expressions, divisibility codes, and expected output encodings remain unchanged.
+- Migration: `000054_seed_g5_number_ru_templates_batch17`, with exact-ID down migration.
+- Verification: fresh bootstrap through `000054` retained 658 catalog rows and inserted all 10 rows; down deleted exactly 10 and left 0. Focused generator oracle/golden tests passed in taskgen.
