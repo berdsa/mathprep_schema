@@ -5,8 +5,8 @@
     "semantic_hash": "7560d8d214cbda307df0472f5cd472c9"
   },
   "docs/agent-log.md": {
-    "mtime": 1790220290.3528728,
-    "ast_hash": "956fdd0f93a14075cf12ca7734a3e0c2",
+    "mtime": 1790220466.9682758,
+    "ast_hash": "0a2c13742c12afe9d0aef68f6d168901",
     "semantic_hash": ""
   },
   "docs/srd/00-conventions.md": {
@@ -857,6 +857,16 @@
   "migrations/000070_seed_g8_geometry_functions_ru_templates_batch33.up.sql": {
     "mtime": 1790220270.5441546,
     "ast_hash": "9be875b66bf760da18be4bae8b086f3b",
+    "semantic_hash": ""
+  },
+  "migrations/000071_seed_g8_late_registry_ru_templates_batch34.down.sql": {
+    "mtime": 1790220425.7303448,
+    "ast_hash": "ecaf0bf879830acb7866a5fb7c09ad55",
+    "semantic_hash": ""
+  },
+  "migrations/000071_seed_g8_late_registry_ru_templates_batch34.up.sql": {
+    "mtime": 1790220444.6441395,
+    "ast_hash": "99eafd174d354ffb3938281b5f111c7d",
     "semantic_hash": ""
   }
 }
