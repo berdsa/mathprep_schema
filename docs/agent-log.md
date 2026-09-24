@@ -820,3 +820,9 @@
 
 - Added six late-registered Grade 8 Russian templates in migration `000071_seed_g8_late_registry_ru_templates_batch34`, with exact-ID down migration.
 - Verification: migration applied cleanly; taskgen focused oracle suites now also assert the six generators return DB-template-backed instances.
+
+# 2026-09-24 — Phase B batch 35
+
+- Added ten Russian plaintext templates for Grade 1–2 number/measurement/shape cases in migration `000072_seed_g1_g2_measurement_ru_templates_batch35`, with exact-ID down migration.
+- G2-MEA-006 was deliberately omitted because its existing time prompt and integer-minute answer disagree; it needs a separate mathematical contract decision before localization.
+- Verification: migration applied cleanly and focused taskgen seed/oracle/golden tests passed.

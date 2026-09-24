@@ -1921,6 +1921,28 @@
       "norm_label": "000070_seed_g8_geometry_functions_ru_templates_batch33.up.sql"
     },
     {
+      "label": "000071_seed_g8_late_registry_ru_templates_batch34.down.sql",
+      "file_type": "code",
+      "source_file": "migrations/000071_seed_g8_late_registry_ru_templates_batch34.down.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000071_seed_g8_late_registry_ru_templates_batch34_down",
+      "community": 165,
+      "community_name": "000071_seed_g8_late_registry_ru_templates_batch34.down.sql",
+      "norm_label": "000071_seed_g8_late_registry_ru_templates_batch34.down.sql"
+    },
+    {
+      "label": "000071_seed_g8_late_registry_ru_templates_batch34.up.sql",
+      "file_type": "code",
+      "source_file": "migrations/000071_seed_g8_late_registry_ru_templates_batch34.up.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000071_seed_g8_late_registry_ru_templates_batch34_up",
+      "community": 166,
+      "community_name": "000071_seed_g8_late_registry_ru_templates_batch34.up.sql",
+      "norm_label": "000071_seed_g8_late_registry_ru_templates_batch34.up.sql"
+    },
+    {
       "label": "constants.go",
       "file_type": "code",
       "source_file": "pkg/core/constants.go",
@@ -7734,5 +7756,5 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md"
     }
   ],
-  "built_at_commit": "52828e5d8440db2a4b4bc9a052cde888e6799487"
+  "built_at_commit": "60ad99c12afd5977569a316c1608313ec45fdd14"
 }
