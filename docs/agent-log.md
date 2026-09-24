@@ -866,3 +866,8 @@
 
 - Added ten Grade 10 algebra, calculus, and functions Russian plaintext rows through migration `000080_seed_g10_algebra_calculus_functions_ru_templates_batch43`.
 - Verification: migration down/up removed and restored ten rows; the DB has 565 unique Russian plaintext template type IDs among 658 catalog rows.
+
+# 2026-09-24 — Phase B batch 44
+
+- Added twelve Grade 10 functions, probability, and statistics Russian plaintext templates in reversible migration `000081_seed_g10_functions_probability_statistics_ru_templates_batch44`.
+- Verification: down/up removed and restored twelve rows; the DB contains 577 unique `ru-KZ` plaintext template type IDs out of 658 catalog rows.

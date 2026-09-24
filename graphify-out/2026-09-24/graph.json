@@ -2119,6 +2119,28 @@
       "norm_label": "000079_seed_g9_vectors_trigonometry_ru_templates_batch42.up.sql"
     },
     {
+      "label": "000080_seed_g10_algebra_calculus_functions_ru_templates_batch43.down.sql",
+      "file_type": "code",
+      "source_file": "migrations/000080_seed_g10_algebra_calculus_functions_ru_templates_batch43.down.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000080_seed_g10_algebra_calculus_functions_ru_templates_batch43_down",
+      "community": 183,
+      "community_name": "000080_seed_g10_algebra_calculus_functions_ru_templates_batch43.down.sql",
+      "norm_label": "000080_seed_g10_algebra_calculus_functions_ru_templates_batch43.down.sql"
+    },
+    {
+      "label": "000080_seed_g10_algebra_calculus_functions_ru_templates_batch43.up.sql",
+      "file_type": "code",
+      "source_file": "migrations/000080_seed_g10_algebra_calculus_functions_ru_templates_batch43.up.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000080_seed_g10_algebra_calculus_functions_ru_templates_batch43_up",
+      "community": 184,
+      "community_name": "000080_seed_g10_algebra_calculus_functions_ru_templates_batch43.up.sql",
+      "norm_label": "000080_seed_g10_algebra_calculus_functions_ru_templates_batch43.up.sql"
+    },
+    {
       "label": "constants.go",
       "file_type": "code",
       "source_file": "pkg/core/constants.go",
@@ -7932,5 +7954,5 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md"
     }
   ],
-  "built_at_commit": "3216f47abb95c7d528f054d78278ac85d6e1a4fd"
+  "built_at_commit": "7ec28cc2a2f14818271fc1a7f983ad34a8846525"
 }

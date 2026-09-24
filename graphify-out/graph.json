@@ -2141,6 +2141,28 @@
       "norm_label": "000080_seed_g10_algebra_calculus_functions_ru_templates_batch43.up.sql"
     },
     {
+      "label": "000081_seed_g10_functions_probability_statistics_ru_templates_batch44.down.sql",
+      "file_type": "code",
+      "source_file": "migrations/000081_seed_g10_functions_probability_statistics_ru_templates_batch44.down.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000081_seed_g10_functions_probability_statistics_ru_templates_batch44_down",
+      "community": 185,
+      "community_name": "000081_seed_g10_functions_probability_statistics_ru_templates_batch44.down.sql",
+      "norm_label": "000081_seed_g10_functions_probability_statistics_ru_templates_batch44.down.sql"
+    },
+    {
+      "label": "000081_seed_g10_functions_probability_statistics_ru_templates_batch44.up.sql",
+      "file_type": "code",
+      "source_file": "migrations/000081_seed_g10_functions_probability_statistics_ru_templates_batch44.up.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000081_seed_g10_functions_probability_statistics_ru_templates_batch44_up",
+      "community": 186,
+      "community_name": "000081_seed_g10_functions_probability_statistics_ru_templates_batch44.up.sql",
+      "norm_label": "000081_seed_g10_functions_probability_statistics_ru_templates_batch44.up.sql"
+    },
+    {
       "label": "constants.go",
       "file_type": "code",
       "source_file": "pkg/core/constants.go",
@@ -7954,5 +7976,5 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md"
     }
   ],
-  "built_at_commit": "7ec28cc2a2f14818271fc1a7f983ad34a8846525"
+  "built_at_commit": "d5b237e24550a05b314aa304277a7950e8b4209e"
 }
