@@ -896,3 +896,8 @@
 
 - Added ten advanced University calculus Russian plaintext templates in reversible migration `000086_seed_university_calculus_advanced_ru_templates_batch49`.
 - Verification: down/up removed and restored ten rows; the DB contains 620 distinct `ru-KZ` plaintext template type IDs out of 658 catalog rows.
+
+# 2026-09-24 — Phase B batch 50
+
+- Added eleven University calculus/discrete-mathematics Russian plaintext templates in reversible migration `000087_seed_university_calculus_discrete_ru_templates_batch50`.
+- Verification: down/up removed and restored eleven rows; the DB contains 631 distinct `ru-KZ` plaintext template type IDs out of 658 catalog rows.
