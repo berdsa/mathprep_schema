@@ -1679,6 +1679,28 @@
       "norm_label": "000059_seed_g7_algebra_ru_templates_batch22.up.sql"
     },
     {
+      "label": "000060_seed_g7_algebra_ru_templates_batch23.down.sql",
+      "file_type": "code",
+      "source_file": "migrations/000060_seed_g7_algebra_ru_templates_batch23.down.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000060_seed_g7_algebra_ru_templates_batch23_down",
+      "community": 143,
+      "community_name": "000060_seed_g7_algebra_ru_templates_batch23.down.sql",
+      "norm_label": "000060_seed_g7_algebra_ru_templates_batch23.down.sql"
+    },
+    {
+      "label": "000060_seed_g7_algebra_ru_templates_batch23.up.sql",
+      "file_type": "code",
+      "source_file": "migrations/000060_seed_g7_algebra_ru_templates_batch23.up.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000060_seed_g7_algebra_ru_templates_batch23_up",
+      "community": 144,
+      "community_name": "000060_seed_g7_algebra_ru_templates_batch23.up.sql",
+      "norm_label": "000060_seed_g7_algebra_ru_templates_batch23.up.sql"
+    },
+    {
       "label": "constants.go",
       "file_type": "code",
       "source_file": "pkg/core/constants.go",
@@ -7492,5 +7514,5 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md"
     }
   ],
-  "built_at_commit": "0e29b1b6a5b102366bfa5c427aff6f3e5364fdc1"
+  "built_at_commit": "1d60e6f56ddf431dd072cfe8b7b373e3159528b1"
 }

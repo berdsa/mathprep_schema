@@ -765,3 +765,8 @@
 
 - Added ten G7-ALG-016–025 Russian templates in migration `000060_seed_g7_algebra_ru_templates_batch23`, plus exact-ID down migration; taskgen generator source changes are separate.
 - Verification: local DB retained 658 catalog rows, inserted ten rows, rollback deleted exactly ten, and reapply restored all ten.
+
+# 2026-09-24 — Phase B batch 24
+
+- Added ten G7 mixed-domain Russian templates in migration `000061_seed_g7_templates_batch24`, with exact-ID down migration.
+- Verification: local DB retained 658 catalog rows; migration inserted ten, rollback removed exactly ten, and reapply succeeded.

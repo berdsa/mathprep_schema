@@ -143,5 +143,7 @@
   "141": "000059_seed_g7_algebra_ru_templates_batch22.down.sql",
   "142": "000059_seed_g7_algebra_ru_templates_batch22.up.sql",
   "143": "000060_seed_g7_algebra_ru_templates_batch23.down.sql",
-  "144": "000060_seed_g7_algebra_ru_templates_batch23.up.sql"
+  "144": "000060_seed_g7_algebra_ru_templates_batch23.up.sql",
+  "145": "000061_seed_g7_templates_batch24.down.sql",
+  "146": "000061_seed_g7_templates_batch24.up.sql"
 }
