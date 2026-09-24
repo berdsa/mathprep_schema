@@ -131,5 +131,7 @@
   "129": "000053_seed_g4_measurement_statistics_ru_templates_batch16.down.sql",
   "130": "000053_seed_g4_measurement_statistics_ru_templates_batch16.up.sql",
   "131": "000054_seed_g5_number_ru_templates_batch17.down.sql",
-  "132": "000054_seed_g5_number_ru_templates_batch17.up.sql"
+  "132": "000054_seed_g5_number_ru_templates_batch17.up.sql",
+  "133": "000055_seed_g5_fraction_ru_templates_batch18.down.sql",
+  "134": "000055_seed_g5_fraction_ru_templates_batch18.up.sql"
 }

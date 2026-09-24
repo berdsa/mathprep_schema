@@ -133,5 +133,7 @@
   "131": "000054_seed_g5_number_ru_templates_batch17.down.sql",
   "132": "000054_seed_g5_number_ru_templates_batch17.up.sql",
   "133": "000055_seed_g5_fraction_ru_templates_batch18.down.sql",
-  "134": "000055_seed_g5_fraction_ru_templates_batch18.up.sql"
+  "134": "000055_seed_g5_fraction_ru_templates_batch18.up.sql",
+  "135": "000056_seed_g5_decimal_ru_templates_batch19.down.sql",
+  "136": "000056_seed_g5_decimal_ru_templates_batch19.up.sql"
 }
