@@ -165,5 +165,7 @@
   "163": "000070_seed_g8_geometry_functions_ru_templates_batch33.down.sql",
   "164": "000070_seed_g8_geometry_functions_ru_templates_batch33.up.sql",
   "165": "000071_seed_g8_late_registry_ru_templates_batch34.down.sql",
-  "166": "000071_seed_g8_late_registry_ru_templates_batch34.up.sql"
+  "166": "000071_seed_g8_late_registry_ru_templates_batch34.up.sql",
+  "167": "000072_seed_g1_g2_measurement_ru_templates_batch35.down.sql",
+  "168": "000072_seed_g1_g2_measurement_ru_templates_batch35.up.sql"
 }

@@ -826,3 +826,8 @@
 - Added ten Russian plaintext templates for Grade 1–2 number/measurement/shape cases in migration `000072_seed_g1_g2_measurement_ru_templates_batch35`, with exact-ID down migration.
 - G2-MEA-006 was deliberately omitted because its existing time prompt and integer-minute answer disagree; it needs a separate mathematical contract decision before localization.
 - Verification: migration applied cleanly and focused taskgen seed/oracle/golden tests passed.
+
+# 2026-09-24 — Phase B batch 36
+
+- Added ten Russian plaintext templates for G2 number/coin-value cases in migration `000073_seed_g2_number_ru_templates_batch36`, with exact-ID down migration.
+- Verification: migration applied cleanly; taskgen fixed-seed/oracle tests and new DB-template-route assertions passed.
