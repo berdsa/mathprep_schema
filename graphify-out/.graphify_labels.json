@@ -135,5 +135,7 @@
   "133": "000055_seed_g5_fraction_ru_templates_batch18.down.sql",
   "134": "000055_seed_g5_fraction_ru_templates_batch18.up.sql",
   "135": "000056_seed_g5_decimal_ru_templates_batch19.down.sql",
-  "136": "000056_seed_g5_decimal_ru_templates_batch19.up.sql"
+  "136": "000056_seed_g5_decimal_ru_templates_batch19.up.sql",
+  "137": "000057_seed_g5_geometry_measurement_statistics_discrete_ru_templates_batch20.down.sql",
+  "138": "000057_seed_g5_geometry_measurement_statistics_discrete_ru_templates_batch20.up.sql"
 }

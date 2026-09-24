@@ -744,3 +744,9 @@
 - Added Russian plaintext templates for G5-DEC-001–015, preserving decimal precision, rounding places, comparison tokens, and existing answer encodings.
 - Migration: `000056_seed_g5_decimal_ru_templates_batch19`, with exact-ID down migration.
 - Verification: fresh bootstrap through `000056` retained 658 catalog rows, inserted 15 rows, and down deleted exactly 15 leaving 0. Focused generator oracle/golden tests passed in taskgen.
+
+# 2026-09-24 — Phase B batch 20
+
+- Added Russian plaintext templates for G5-GEO-001–003, G5-MEA-001–007, G5-STA-001, and G5-DIS-001. Existing boolean and choice answer tokens remain unchanged.
+- Migration: `000057_seed_g5_geometry_measurement_statistics_discrete_ru_templates_batch20` with exact-ID down migration.
+- Verification: fresh bootstrap through `000057` retained 658 catalog rows and inserted 12 rows; down deleted exactly 12 and left 0. Focused generator oracle/golden tests passed in taskgen.
