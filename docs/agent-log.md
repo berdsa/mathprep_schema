@@ -714,3 +714,9 @@
 - Added Russian plaintext templates for G4-NUM-005–006 and G4-FRA-001–008. Prompts preserve the existing numeric expressions and answers; the word prompt uses neutral quantity labels.
 - Migration: `000051_seed_g4_number_fraction_ru_templates_batch14`, with exact-ID down migration.
 - Verification: fresh bootstrap through `000051` retained 658 task types and inserted all 10 batch rows; down deleted exactly 10 and left 0. Focused generator oracle/golden tests passed in taskgen.
+
+# 2026-09-24 — Phase B batch 15
+
+- Added Russian plaintext templates for G4-GEO-001–005, G4-GEO-007, and G4-MEA-002–005. Existing answer codes for geometric classifications are explicitly listed in Russian prompts; unit labels and quantity meaning are preserved. Excluded G4-GEO-006 after detecting that its source claim (a circle has zero symmetry axes) is false; do not translate that premise as if valid.
+- Migration: `000052_seed_g4_geometry_measurement_ru_templates_batch15`, with exact-ID down migration.
+- Verification: fresh bootstrap through `000052` retained 658 task types, inserted all 10 intended rows, and left G4-GEO-006 without a DB template; down deleted exactly 10 and left 0. Focused generator oracle/golden tests passed in taskgen.

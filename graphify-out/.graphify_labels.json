@@ -125,5 +125,7 @@
   "123": "000050_seed_g2_geometry_g4_number_ru_templates_batch13.down.sql",
   "124": "000050_seed_g2_geometry_g4_number_ru_templates_batch13.up.sql",
   "125": "000051_seed_g4_number_fraction_ru_templates_batch14.down.sql",
-  "126": "000051_seed_g4_number_fraction_ru_templates_batch14.up.sql"
+  "126": "000051_seed_g4_number_fraction_ru_templates_batch14.up.sql",
+  "127": "000052_seed_g4_geometry_measurement_ru_templates_batch15.down.sql",
+  "128": "000052_seed_g4_geometry_measurement_ru_templates_batch15.up.sql"
 }
