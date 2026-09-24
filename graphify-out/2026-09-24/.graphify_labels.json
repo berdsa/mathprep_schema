@@ -129,5 +129,7 @@
   "127": "000052_seed_g4_geometry_measurement_ru_templates_batch15.down.sql",
   "128": "000052_seed_g4_geometry_measurement_ru_templates_batch15.up.sql",
   "129": "000053_seed_g4_measurement_statistics_ru_templates_batch16.down.sql",
-  "130": "000053_seed_g4_measurement_statistics_ru_templates_batch16.up.sql"
+  "130": "000053_seed_g4_measurement_statistics_ru_templates_batch16.up.sql",
+  "131": "000054_seed_g5_number_ru_templates_batch17.down.sql",
+  "132": "000054_seed_g5_number_ru_templates_batch17.up.sql"
 }

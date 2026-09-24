@@ -1569,6 +1569,28 @@
       "norm_label": "000054_seed_g5_number_ru_templates_batch17.up.sql"
     },
     {
+      "label": "000055_seed_g5_fraction_ru_templates_batch18.down.sql",
+      "file_type": "code",
+      "source_file": "migrations/000055_seed_g5_fraction_ru_templates_batch18.down.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000055_seed_g5_fraction_ru_templates_batch18_down",
+      "community": 133,
+      "community_name": "000055_seed_g5_fraction_ru_templates_batch18.down.sql",
+      "norm_label": "000055_seed_g5_fraction_ru_templates_batch18.down.sql"
+    },
+    {
+      "label": "000055_seed_g5_fraction_ru_templates_batch18.up.sql",
+      "file_type": "code",
+      "source_file": "migrations/000055_seed_g5_fraction_ru_templates_batch18.up.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000055_seed_g5_fraction_ru_templates_batch18_up",
+      "community": 134,
+      "community_name": "000055_seed_g5_fraction_ru_templates_batch18.up.sql",
+      "norm_label": "000055_seed_g5_fraction_ru_templates_batch18.up.sql"
+    },
+    {
       "label": "constants.go",
       "file_type": "code",
       "source_file": "pkg/core/constants.go",
@@ -7382,5 +7404,5 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md"
     }
   ],
-  "built_at_commit": "c04db72ddae51aacbb47cb64e54b140f06130b7f"
+  "built_at_commit": "a4c59c91c53561612282804b95f3148554cf8f5a"
 }

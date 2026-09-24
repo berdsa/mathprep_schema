@@ -732,3 +732,9 @@
 - Added Russian plaintext templates for G5-NUM-001–010. Arithmetic expressions, divisibility codes, and expected output encodings remain unchanged.
 - Migration: `000054_seed_g5_number_ru_templates_batch17`, with exact-ID down migration.
 - Verification: fresh bootstrap through `000054` retained 658 catalog rows and inserted all 10 rows; down deleted exactly 10 and left 0. Focused generator oracle/golden tests passed in taskgen.
+
+# 2026-09-24 — Phase B batch 18
+
+- Added Russian templates for G5-FRA-001–002 and G5-FRA-004–010; also replaced the English pilot text for G5-FRA-003 with Russian. The down migration removes only the nine new rows and restores the pilot's prior English text.
+- Migration: `000055_seed_g5_fraction_ru_templates_batch18`.
+- Verification: fresh bootstrap through `000055` kept 658 catalog rows and all 10 fraction template rows. The down migration removed exactly 9 newly added rows and restored the original G5-FRA-003 pilot text exactly. Focused oracle/golden tests passed in taskgen.
