@@ -906,3 +906,8 @@
 
 - Added ten University functions/matrices Russian plaintext templates in reversible migration `000088_seed_university_functions_matrices_ru_templates_batch51`.
 - Verification: down/up removed and restored ten rows; the DB contains 641 distinct `ru-KZ` plaintext template type IDs out of 658 catalog rows.
+
+# 2026-09-24 — Phase B batch 52
+
+- Added fourteen University number/probability/statistics Russian plaintext templates in reversible migration `000089_seed_university_number_probability_statistics_ru_templates_batch52`.
+- Verification: migration applied successfully; the DB contains 655 distinct `ru-KZ` plaintext template type IDs out of 658 catalog rows, with three previously flagged contract-defect types intentionally excluded.
