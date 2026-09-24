@@ -810,3 +810,8 @@
 
 - Added eleven Grade 8 algebra/functions/geometry Russian plaintext templates in migration `000069_seed_g8_algebra_geometry_ru_templates_batch32`, with exact-ID down migration.
 - Verification: migration applied cleanly; focused generator seed/oracle tests passed.
+
+# 2026-09-24 — Phase B batch 33
+
+- Added ten Grade 8 geometry/function Russian plaintext templates in migration `000070_seed_g8_geometry_functions_ru_templates_batch33`, with exact-ID down migration.
+- Verification: migration applied cleanly; taskgen's grouped fixed-seed/oracle test passed.
