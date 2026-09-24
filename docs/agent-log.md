@@ -750,3 +750,8 @@
 - Added Russian plaintext templates for G5-GEO-001–003, G5-MEA-001–007, G5-STA-001, and G5-DIS-001. Existing boolean and choice answer tokens remain unchanged.
 - Migration: `000057_seed_g5_geometry_measurement_statistics_discrete_ru_templates_batch20` with exact-ID down migration.
 - Verification: fresh bootstrap through `000057` retained 658 catalog rows and inserted 12 rows; down deleted exactly 12 and left 0. Focused generator oracle/golden tests passed in taskgen.
+
+# 2026-09-24 — Phase B batch 21
+
+- Added Russian DB templates for G7-FRA-001–004, G7-DEC-001–004, G7-GEO-001–002, and G7-GEO-004–005. Migration `000058_seed_g7_templates_batch21` has an exact-ID down migration. Generator wiring is committed separately in taskgen.
+- Verification: local database retained all 658 task types and contained exactly 12 rows for the batch; rollback/reapply and full migration replay remain part of this batch's verification.

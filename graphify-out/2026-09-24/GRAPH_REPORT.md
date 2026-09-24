@@ -1,16 +1,16 @@
 # Graph Report - schema  (2026-09-24)
 
 ## Corpus Check
-- 144 files · ~84,747 words
+- 146 files · ~85,064 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 301 nodes · 351 edges · 137 communities (119 shown, 18 thin omitted)
+- 303 nodes · 351 edges · 139 communities (121 shown, 18 thin omitted)
 - Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 27 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8de0fb07`
+- Built from commit: `4e968a8c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -79,7 +79,7 @@
 - **Three-Repository Architecture** — docs_srd_backend_integration_schema_repo, docs_srd_backend_integration_taskgen_repo, docs_srd_backend_integration_grader_repo [EXTRACTED 1.00]
 - **Task Type Definition and Validation** — docs_srd_07_task_type_specs_exemplars_u_cal_007, docs_srd_math_task_catalog_validation_legend, docs_srd_backend_integration_grader_repo [INFERRED 0.85]
 
-## Communities (137 total, 18 thin omitted)
+## Communities (139 total, 18 thin omitted)
 
 ### Community 0 - "pipeline.go"
 Cohesion: 0.16
@@ -134,11 +134,11 @@ Nodes (3): U-CAL-007 — Double integral, U-FUN-001 — Series convergence test,
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `ReasonCode` connect `pipeline.go` to `constants.go`?**
-  _High betweenness centrality (0.029) - this node is a cross-community bridge._
+  _High betweenness centrality (0.028) - this node is a cross-community bridge._
 - **Why does `Result` connect `pipeline.go` to `constants.go`, `pipeline_test.go`?**
   _High betweenness centrality (0.023) - this node is a cross-community bridge._
 - **Why does `Locale` connect `Locale` to `constants.go`?**
-  _High betweenness centrality (0.023) - this node is a cross-community bridge._
+  _High betweenness centrality (0.022) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `Validate()` (e.g. with `TestValidateCanonStrictForm()` and `TestValidateMatrix()`) actually correct?**
   _`Validate()` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 6 inferred relationships involving `ValidateExactInt()` (e.g. with `TestValidateExactIntAcceptsNegative()` and `TestValidateExactIntAcceptsSixDigits()`) actually correct?**
