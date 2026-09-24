@@ -173,5 +173,7 @@
   "171": "000074_seed_g4_number_ru_templates_batch37.down.sql",
   "172": "000074_seed_g4_number_ru_templates_batch37.up.sql",
   "173": "000075_seed_g4_number_ru_templates_batch38.down.sql",
-  "174": "000075_seed_g4_number_ru_templates_batch38.up.sql"
+  "174": "000075_seed_g4_number_ru_templates_batch38.up.sql",
+  "175": "000076_seed_g4_number_geometry_ru_templates_batch39.down.sql",
+  "176": "000076_seed_g4_number_geometry_ru_templates_batch39.up.sql"
 }

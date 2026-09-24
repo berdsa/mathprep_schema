@@ -841,3 +841,8 @@
 
 - Added ten Grade 4 number Russian plaintext templates in migration `000075_seed_g4_number_ru_templates_batch38`, with exact-ID down migration.
 - Verification: migration applied, down removed ten, and reapply restored ten; DB retained all 658 catalog rows and now has 523 unique Russian plaintext-template IDs. Full taskgen suite passed.
+
+# 2026-09-24 — Phase B batch 39
+
+- Added nine Grade 4 number/geometry Russian plaintext templates in migration `000076_seed_g4_number_geometry_ru_templates_batch39`, with exact-ID down migration.
+- Verification: migration applied cleanly; focused taskgen seed/oracle tests passed.
