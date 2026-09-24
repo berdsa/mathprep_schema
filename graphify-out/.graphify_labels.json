@@ -175,5 +175,7 @@
   "173": "000075_seed_g4_number_ru_templates_batch38.down.sql",
   "174": "000075_seed_g4_number_ru_templates_batch38.up.sql",
   "175": "000076_seed_g4_number_geometry_ru_templates_batch39.down.sql",
-  "176": "000076_seed_g4_number_geometry_ru_templates_batch39.up.sql"
+  "176": "000076_seed_g4_number_geometry_ru_templates_batch39.up.sql",
+  "177": "000077_seed_g9_algebra_discrete_functions_geometry_ru_templates_batch40.down.sql",
+  "178": "000077_seed_g9_algebra_discrete_functions_geometry_ru_templates_batch40.up.sql"
 }

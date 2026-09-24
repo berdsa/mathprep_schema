@@ -1,16 +1,16 @@
 # Graph Report - schema  (2026-09-24)
 
 ## Corpus Check
-- 182 files · ~89,559 words
+- 184 files · ~89,761 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 339 nodes · 351 edges · 175 communities (157 shown, 18 thin omitted)
+- 341 nodes · 351 edges · 177 communities (159 shown, 18 thin omitted)
 - Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 27 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `db088fb9`
+- Built from commit: `34860553`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -79,7 +79,7 @@
 - **Three-Repository Architecture** — docs_srd_backend_integration_schema_repo, docs_srd_backend_integration_taskgen_repo, docs_srd_backend_integration_grader_repo [EXTRACTED 1.00]
 - **Task Type Definition and Validation** — docs_srd_07_task_type_specs_exemplars_u_cal_007, docs_srd_math_task_catalog_validation_legend, docs_srd_backend_integration_grader_repo [INFERRED 0.85]
 
-## Communities (175 total, 18 thin omitted)
+## Communities (177 total, 18 thin omitted)
 
 ### Community 0 - "pipeline.go"
 Cohesion: 0.16
