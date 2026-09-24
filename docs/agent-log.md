@@ -800,3 +800,8 @@
 
 - Added ten G8 algebra/functions/geometry Russian templates in migration `000067_seed_g8_algebra_functions_geometry_ru_templates_batch30`, with exact-ID down migration.
 - Verification: local DB kept 658 catalog rows, inserted ten, rolled back exactly ten, then reapplied.
+
+# 2026-09-24 — Phase B batch 31
+
+- Added ten Grade 8 algebra Russian plaintext templates in migration `000068_seed_g8_algebra_ru_templates_batch31`, with exact-ID down migration.
+- Verification: DB retained 658 catalog rows, inserted ten, down deleted exactly ten, and up reapplied cleanly; 454 distinct Russian plaintext-template type IDs now exist.
