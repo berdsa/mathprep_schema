@@ -159,5 +159,7 @@
   "157": "000067_seed_g8_algebra_functions_geometry_ru_templates_batch30.down.sql",
   "158": "000067_seed_g8_algebra_functions_geometry_ru_templates_batch30.up.sql",
   "159": "000068_seed_g8_algebra_ru_templates_batch31.down.sql",
-  "160": "000068_seed_g8_algebra_ru_templates_batch31.up.sql"
+  "160": "000068_seed_g8_algebra_ru_templates_batch31.up.sql",
+  "161": "000069_seed_g8_algebra_geometry_ru_templates_batch32.down.sql",
+  "162": "000069_seed_g8_algebra_geometry_ru_templates_batch32.up.sql"
 }
