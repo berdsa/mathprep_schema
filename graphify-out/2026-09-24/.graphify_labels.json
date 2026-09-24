@@ -179,5 +179,7 @@
   "177": "000077_seed_g9_algebra_discrete_functions_geometry_ru_templates_batch40.down.sql",
   "178": "000077_seed_g9_algebra_discrete_functions_geometry_ru_templates_batch40.up.sql",
   "179": "000078_seed_g9_geometry_probability_statistics_ru_templates_batch41.down.sql",
-  "180": "000078_seed_g9_geometry_probability_statistics_ru_templates_batch41.up.sql"
+  "180": "000078_seed_g9_geometry_probability_statistics_ru_templates_batch41.up.sql",
+  "181": "000079_seed_g9_vectors_trigonometry_ru_templates_batch42.down.sql",
+  "182": "000079_seed_g9_vectors_trigonometry_ru_templates_batch42.up.sql"
 }

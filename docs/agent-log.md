@@ -861,3 +861,8 @@
 
 - Added three Grade 9 vector and trigonometry templates in reversible migration `000079_seed_g9_vectors_trigonometry_ru_templates_batch42`.
 - Verification: down/up cycle removed and restored all three rows; database has 555 distinct `ru-KZ` plaintext-template types among 658 catalog rows.
+
+# 2026-09-24 — Phase B batch 43
+
+- Added ten Grade 10 algebra, calculus, and functions Russian plaintext rows through migration `000080_seed_g10_algebra_calculus_functions_ru_templates_batch43`.
+- Verification: migration down/up removed and restored ten rows; the DB has 565 unique Russian plaintext template type IDs among 658 catalog rows.
