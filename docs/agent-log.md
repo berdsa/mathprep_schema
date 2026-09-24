@@ -698,3 +698,8 @@
 
 - Added Russian plaintext templates for `G2-MEA-009`–`G2-MEA-017` and `G2-STA-001`, following the historical implementation-loop cursor after `G2-NUM-062`. Variable-count wording is agreement-invariant; clock prompts preserve the `H:MM` output format and literal `AM`/`PM` answer codes.
 - Added additive migration `000048_seed_g2_measurement_statistics_ru_templates_batch11` with a scoped, reversible down migration. Taskgen rendering changes remain separate and uncommitted for review.
+
+## 2026-09-24 — Phase B Russian template backfill, Stage 2 batch 12
+
+- Added Russian plaintext templates for `G2-STA-002`–`005`, `G2-MEA-018`–`019`, and `G2-GEO-021`–`024` in historical order. Numeric lists are carried through template values; legacy animal/unit/boolean codes remain explicit. Geometry templates preserve row/column products, area, and fixed fraction answers.
+- Added additive migration `000049_seed_g2_statistics_geometry_ru_templates_batch12` with a scoped, reversible down migration.

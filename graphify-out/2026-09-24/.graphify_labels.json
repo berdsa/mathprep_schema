@@ -117,5 +117,7 @@
   "115": "000046_seed_g2_number_ru_templates_batch9.down.sql",
   "116": "000046_seed_g2_number_ru_templates_batch9.up.sql",
   "117": "000047_seed_g2_number_ru_templates_batch10.down.sql",
-  "118": "000047_seed_g2_number_ru_templates_batch10.up.sql"
+  "118": "000047_seed_g2_number_ru_templates_batch10.up.sql",
+  "119": "000048_seed_g2_measurement_statistics_ru_templates_batch11.down.sql",
+  "120": "000048_seed_g2_measurement_statistics_ru_templates_batch11.up.sql"
 }

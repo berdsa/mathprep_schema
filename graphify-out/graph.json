@@ -1437,6 +1437,28 @@
       "norm_label": "000048_seed_g2_measurement_statistics_ru_templates_batch11.up.sql"
     },
     {
+      "label": "000049_seed_g2_statistics_geometry_ru_templates_batch12.down.sql",
+      "file_type": "code",
+      "source_file": "migrations/000049_seed_g2_statistics_geometry_ru_templates_batch12.down.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000049_seed_g2_statistics_geometry_ru_templates_batch12_down",
+      "community": 121,
+      "community_name": "000049_seed_g2_statistics_geometry_ru_templates_batch12.down.sql",
+      "norm_label": "000049_seed_g2_statistics_geometry_ru_templates_batch12.down.sql"
+    },
+    {
+      "label": "000049_seed_g2_statistics_geometry_ru_templates_batch12.up.sql",
+      "file_type": "code",
+      "source_file": "migrations/000049_seed_g2_statistics_geometry_ru_templates_batch12.up.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000049_seed_g2_statistics_geometry_ru_templates_batch12_up",
+      "community": 122,
+      "community_name": "000049_seed_g2_statistics_geometry_ru_templates_batch12.up.sql",
+      "norm_label": "000049_seed_g2_statistics_geometry_ru_templates_batch12.up.sql"
+    },
+    {
       "label": "constants.go",
       "file_type": "code",
       "source_file": "pkg/core/constants.go",
@@ -7250,5 +7272,5 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md"
     }
   ],
-  "built_at_commit": "9ddfb5259cf386d86e60402bc26fb043e12260be"
+  "built_at_commit": "e947e084a8fb1b60063271868e2cd53fe67887a2"
 }
