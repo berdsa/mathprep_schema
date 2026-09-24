@@ -918,5 +918,15 @@
     "mtime": 1790221712.0932925,
     "ast_hash": "3935b5d64569bc445c99b184f57c31e7",
     "semantic_hash": ""
+  },
+  "migrations/000077_seed_g9_algebra_discrete_functions_geometry_ru_templates_batch40.down.sql": {
+    "mtime": 1790222113.234999,
+    "ast_hash": "b6e890587a3aaccbddba88c2c2267164",
+    "semantic_hash": ""
+  },
+  "migrations/000077_seed_g9_algebra_discrete_functions_geometry_ru_templates_batch40.up.sql": {
+    "mtime": 1790222113.2346835,
+    "ast_hash": "a44f8255d5db91ec434c4f20ac03b760",
+    "semantic_hash": ""
   }
 }

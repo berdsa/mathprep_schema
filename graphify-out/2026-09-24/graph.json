@@ -2053,6 +2053,28 @@
       "norm_label": "000076_seed_g4_number_geometry_ru_templates_batch39.up.sql"
     },
     {
+      "label": "000077_seed_g9_algebra_discrete_functions_geometry_ru_templates_batch40.down.sql",
+      "file_type": "code",
+      "source_file": "migrations/000077_seed_g9_algebra_discrete_functions_geometry_ru_templates_batch40.down.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000077_seed_g9_algebra_discrete_functions_geometry_ru_templates_batch40_down",
+      "community": 177,
+      "community_name": "000077_seed_g9_algebra_discrete_functions_geometry_ru_templates_batch40.down.sql",
+      "norm_label": "000077_seed_g9_algebra_discrete_functions_geometry_ru_templates_batch40.down.sql"
+    },
+    {
+      "label": "000077_seed_g9_algebra_discrete_functions_geometry_ru_templates_batch40.up.sql",
+      "file_type": "code",
+      "source_file": "migrations/000077_seed_g9_algebra_discrete_functions_geometry_ru_templates_batch40.up.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000077_seed_g9_algebra_discrete_functions_geometry_ru_templates_batch40_up",
+      "community": 178,
+      "community_name": "000077_seed_g9_algebra_discrete_functions_geometry_ru_templates_batch40.up.sql",
+      "norm_label": "000077_seed_g9_algebra_discrete_functions_geometry_ru_templates_batch40.up.sql"
+    },
+    {
       "label": "constants.go",
       "file_type": "code",
       "source_file": "pkg/core/constants.go",
@@ -7866,5 +7888,5 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md"
     }
   ],
-  "built_at_commit": "34860553815574d622534fe3244f909096a820ce"
+  "built_at_commit": "f3a6e1c69ef36c04a299788bb62be7aec82d8a75"
 }

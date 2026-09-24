@@ -851,3 +851,8 @@
 
 - Added ten Grade 9 algebra, discrete mathematics, functions, and geometry Russian plaintext templates in migration `000077_seed_g9_algebra_discrete_functions_geometry_ru_templates_batch40`, with exact-ID down migration.
 - Verification: local down/up cycle removed and restored exactly ten rows; schema tests passed. The DB now has 542 distinct Russian plaintext-template type IDs among 658 catalog rows.
+
+# 2026-09-24 — Phase B batch 41
+
+- Added ten Grade 9 geometry, probability, and statistics Russian plaintext templates in migration `000078_seed_g9_geometry_probability_statistics_ru_templates_batch41`.
+- Verification: down/up cycle removed and restored all ten rows; DB has 552 unique RU plaintext-template type IDs out of 658; schema unit tests passed.
