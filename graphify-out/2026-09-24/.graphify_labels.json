@@ -183,5 +183,7 @@
   "181": "000079_seed_g9_vectors_trigonometry_ru_templates_batch42.down.sql",
   "182": "000079_seed_g9_vectors_trigonometry_ru_templates_batch42.up.sql",
   "183": "000080_seed_g10_algebra_calculus_functions_ru_templates_batch43.down.sql",
-  "184": "000080_seed_g10_algebra_calculus_functions_ru_templates_batch43.up.sql"
+  "184": "000080_seed_g10_algebra_calculus_functions_ru_templates_batch43.up.sql",
+  "185": "000081_seed_g10_functions_probability_statistics_ru_templates_batch44.down.sql",
+  "186": "000081_seed_g10_functions_probability_statistics_ru_templates_batch44.up.sql"
 }

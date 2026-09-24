@@ -2163,6 +2163,28 @@
       "norm_label": "000081_seed_g10_functions_probability_statistics_ru_templates_batch44.up.sql"
     },
     {
+      "label": "000082_seed_g10_trg_g11_core_ru_templates_batch45.down.sql",
+      "file_type": "code",
+      "source_file": "migrations/000082_seed_g10_trg_g11_core_ru_templates_batch45.down.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000082_seed_g10_trg_g11_core_ru_templates_batch45_down",
+      "community": 187,
+      "community_name": "000082_seed_g10_trg_g11_core_ru_templates_batch45.down.sql",
+      "norm_label": "000082_seed_g10_trg_g11_core_ru_templates_batch45.down.sql"
+    },
+    {
+      "label": "000082_seed_g10_trg_g11_core_ru_templates_batch45.up.sql",
+      "file_type": "code",
+      "source_file": "migrations/000082_seed_g10_trg_g11_core_ru_templates_batch45.up.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000082_seed_g10_trg_g11_core_ru_templates_batch45_up",
+      "community": 188,
+      "community_name": "000082_seed_g10_trg_g11_core_ru_templates_batch45.up.sql",
+      "norm_label": "000082_seed_g10_trg_g11_core_ru_templates_batch45.up.sql"
+    },
+    {
       "label": "constants.go",
       "file_type": "code",
       "source_file": "pkg/core/constants.go",
@@ -7976,5 +7998,5 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md"
     }
   ],
-  "built_at_commit": "d5b237e24550a05b314aa304277a7950e8b4209e"
+  "built_at_commit": "7ef9ed7f996d76dd892f6258fd210865100d1877"
 }

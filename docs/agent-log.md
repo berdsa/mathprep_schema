@@ -871,3 +871,8 @@
 
 - Added twelve Grade 10 functions, probability, and statistics Russian plaintext templates in reversible migration `000081_seed_g10_functions_probability_statistics_ru_templates_batch44`.
 - Verification: down/up removed and restored twelve rows; the DB contains 577 unique `ru-KZ` plaintext template type IDs out of 658 catalog rows.
+
+# 2026-09-24 — Phase B batch 45
+
+- Added ten Grade 10/11 Russian plaintext templates in reversible migration `000082_seed_g10_trg_g11_core_ru_templates_batch45`.
+- Verification: down/up removed and restored ten rows; the DB contains 587 distinct `ru-KZ` plaintext template type IDs out of 658 catalog rows.

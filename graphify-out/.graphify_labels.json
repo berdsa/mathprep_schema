@@ -185,5 +185,7 @@
   "183": "000080_seed_g10_algebra_calculus_functions_ru_templates_batch43.down.sql",
   "184": "000080_seed_g10_algebra_calculus_functions_ru_templates_batch43.up.sql",
   "185": "000081_seed_g10_functions_probability_statistics_ru_templates_batch44.down.sql",
-  "186": "000081_seed_g10_functions_probability_statistics_ru_templates_batch44.up.sql"
+  "186": "000081_seed_g10_functions_probability_statistics_ru_templates_batch44.up.sql",
+  "187": "000082_seed_g10_trg_g11_core_ru_templates_batch45.down.sql",
+  "188": "000082_seed_g10_trg_g11_core_ru_templates_batch45.up.sql"
 }
