@@ -916,3 +916,7 @@
 
 - Added 182 `ru-KZ` LaTeX companion rows for formula-appropriate grade 5+ domains. Batch 53 uses explicit formula templates; the remaining additive companions preserve the Russian source template inside LaTeX delimiters. Arithmetic-only types remain excluded.
 - Verified reversible migrations `000090` and `000091` by down/up; the database reports 182 LaTeX rows.
+
+# 2026-09-24 — Phase B Stage 4 locale cleanup
+
+- Re-audit found five English-language Russian templates plus two language-neutral arithmetic strings. Migration `000092` replaced the five with Russian phrasing; the two neutral strings remain language-independent. No non-neutral English plaintext templates remain.
