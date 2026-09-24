@@ -770,3 +770,8 @@
 
 - Added ten G7 mixed-domain Russian templates in migration `000061_seed_g7_templates_batch24`, with exact-ID down migration.
 - Verification: local DB retained 658 catalog rows; migration inserted ten, rollback removed exactly ten, and reapply succeeded.
+
+# 2026-09-24 — Phase B batch 25
+
+- Added eleven G7 function Russian plaintext templates in migration `000062_seed_g7_functions_ru_templates_batch25`, with exact-ID rollback.
+- Verification: local database retained 658 catalog rows; migration inserted eleven rows, rollback removed all eleven, and reapply succeeded.
