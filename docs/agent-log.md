@@ -911,3 +911,8 @@
 
 - Added fourteen University number/probability/statistics Russian plaintext templates in reversible migration `000089_seed_university_number_probability_statistics_ru_templates_batch52`.
 - Verification: migration applied successfully; the DB contains 655 distinct `ru-KZ` plaintext template type IDs out of 658 catalog rows, with three previously flagged contract-defect types intentionally excluded.
+
+# 2026-09-24 — Phase B Stage 3 LaTeX companions
+
+- Added 182 `ru-KZ` LaTeX companion rows for formula-appropriate grade 5+ domains. Batch 53 uses explicit formula templates; the remaining additive companions preserve the Russian source template inside LaTeX delimiters. Arithmetic-only types remain excluded.
+- Verified reversible migrations `000090` and `000091` by down/up; the database reports 182 LaTeX rows.

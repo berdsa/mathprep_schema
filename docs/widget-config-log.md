@@ -670,5 +670,5 @@ This log covers all 658 existing `task_type` rows after schema v0.3.9. Structure
 - Total task types: **658**.
 - Structured widget configs: **105/105** (30 `TUPLE_N`, 13 `SET_LIST`, 2 `MATRIX_GRID`, 60 `STRUCTURED_CANON`).
 - BOOL choices: **106/106** have non-empty validator-derived `choices` lists.
-- LaTeX companion rows added: **1** (`G5-FRA-003`).
+- LaTeX companion rows added: **182** formula-appropriate `ru-KZ` rows (15 explicit formula variants in batch 53; 167 additive companions in batch 54 migration; arithmetic-only types remain excluded).
 - Existing generation, validation, plaintext templates, and tests were not modified.
