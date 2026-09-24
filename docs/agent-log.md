@@ -703,3 +703,8 @@
 
 - Added Russian plaintext templates for `G2-STA-002`–`005`, `G2-MEA-018`–`019`, and `G2-GEO-021`–`024` in historical order. Numeric lists are carried through template values; legacy animal/unit/boolean codes remain explicit. Geometry templates preserve row/column products, area, and fixed fraction answers.
 - Added additive migration `000049_seed_g2_statistics_geometry_ru_templates_batch12` with a scoped, reversible down migration.
+# 2026-09-24 — Phase B batch 13
+
+- Added eleven Russian `plaintext` templates for G2-GEO-025–031 and G4-NUM-001–004, retaining each generator's existing operands, answer encoding, and validation meaning.
+- Migration: `000050_seed_g2_geometry_g4_number_ru_templates` with an ID-scoped down migration.
+- Verification: fresh bootstrap through migration `000050` retained 658 task types and inserted all 11 rows; batch down deleted 11 and left 0; up replay restored all 11 before the disposable database was dropped. Focused deterministic/oracle/golden tests passed in taskgen.

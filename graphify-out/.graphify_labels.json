@@ -121,5 +121,7 @@
   "119": "000048_seed_g2_measurement_statistics_ru_templates_batch11.down.sql",
   "120": "000048_seed_g2_measurement_statistics_ru_templates_batch11.up.sql",
   "121": "000049_seed_g2_statistics_geometry_ru_templates_batch12.down.sql",
-  "122": "000049_seed_g2_statistics_geometry_ru_templates_batch12.up.sql"
+  "122": "000049_seed_g2_statistics_geometry_ru_templates_batch12.up.sql",
+  "123": "000050_seed_g2_geometry_g4_number_ru_templates_batch13.down.sql",
+  "124": "000050_seed_g2_geometry_g4_number_ru_templates_batch13.up.sql"
 }
