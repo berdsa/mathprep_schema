@@ -935,3 +935,9 @@
 - Added `Locale` to `core.GenerationRequest` and typed constants for `kk-KZ` and `en-US`.
 - Verification: applied `000094` to isolated `schema_locale_migration_test` in the existing Postgres container, not the existing `mathprep` database. Omitted locale inserted as `ru-KZ`; explicit `kk-KZ` and `en-US` inserts succeeded; unsupported `fr-FR` failed `generation_request_locale_check`; catalog inspection confirmed `generation_request_locale_fkey`. Down migration removed both new dictionary rows and the column (`1|0` remained for ru-KZ count and locale column count), and reapplying succeeded with `en-US,kk-KZ,ru-KZ` present.
 - Privilege verification: existing `taskgen_svc` has table-level `INSERT` and `UPDATE` on `generation_request` (`true|true`), which includes the new column without an additional grant. The synthetic test database was dropped after verification.
+
+# 2026-09-26 — CAS receipt mapping and grader permissions
+
+- Plan: `docs/cas-receipt-migration-plan.md` records the grader CAS receipt contract and least-privilege access.
+- Added additive migration `000095_cas_submission_receipt`. `cas_submission.submission_id` maps to `cas_evaluation_request.request_id`; the receipt also references `task_instance` and `students`, defaults `submitted_at` to `now()`, and uniquely keys `(item_id, student_id, idempotency_key)`. `grader_svc` receives SELECT/INSERT on the queue and receipt tables plus SELECT on `task_set`; it receives no queue UPDATE privilege.
+- Verification: applied migration to isolated `schema_cas_receipt_test`; valid related-row insert succeeded and default timestamp populated; duplicate `(item_id, student_id, idempotency_key)` was rejected; privilege checks returned queue SELECT/INSERT/UPDATE=`true/true/false`, receipt SELECT/INSERT/UPDATE=`true/true/false`, and task_set SELECT=`true`. Down migration dropped the receipt table; synthetic database was then dropped. Existing `mathprep` database was not changed.
