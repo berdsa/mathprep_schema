@@ -928,3 +928,10 @@
 # 2026-09-24 — widget_config data-validation tests
 
 - Added `pkg/core/widget_config_data_test.go` plus a reviewed catalog contract snapshot. The test queries live `task_type` rows directly, using the running `postgres` container automatically when host `psql` is unavailable, and checks the exact BOOL whitelist, tuple field counts/labels, matrix dimensions, and CANON template structure/identity. Local populated-database run passed.
+
+# 2026-09-26 — Local platform integration: request locale foundation
+
+- Plan: `docs/local-platform-integration-plan.md` records the existing SRD conflict and the additive locale decision. Per `00-scope-lock.md` SCOPE-AMD-02 and the current local integration directive, migration `000094_generation_request_locale` adds the supported development dictionary entries `kk-KZ` and `en-US` and persists `generation_request.locale` with default `ru-KZ`, a foreign key to `locale(code)`, and an allowlist check. The historical `000002` seed remains unchanged. `en-US` remains a development assumption pending product confirmation; no translation, notation, or curriculum review is implied.
+- Added `Locale` to `core.GenerationRequest` and typed constants for `kk-KZ` and `en-US`.
+- Verification: applied `000094` to isolated `schema_locale_migration_test` in the existing Postgres container, not the existing `mathprep` database. Omitted locale inserted as `ru-KZ`; explicit `kk-KZ` and `en-US` inserts succeeded; unsupported `fr-FR` failed `generation_request_locale_check`; catalog inspection confirmed `generation_request_locale_fkey`. Down migration removed both new dictionary rows and the column (`1|0` remained for ru-KZ count and locale column count), and reapplying succeeded with `en-US,kk-KZ,ru-KZ` present.
+- Privilege verification: existing `taskgen_svc` has table-level `INSERT` and `UPDATE` on `generation_request` (`true|true`), which includes the new column without an additional grant. The synthetic test database was dropped after verification.

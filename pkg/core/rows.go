@@ -30,6 +30,7 @@ type GenerationRequest struct {
 	RequestID      uuid.UUID
 	StudentID      uuid.UUID
 	Grade          int
+	Locale         Locale
 	Topics         json.RawMessage
 	Count          int
 	Status         GenerationRequestStatus

@@ -160,7 +160,11 @@ const (
 
 type Locale string
 
-const LocaleRuKZ Locale = "ru-KZ"
+const (
+	LocaleRuKZ Locale = "ru-KZ"
+	LocaleKkKZ Locale = "kk-KZ"
+	LocaleEnUS Locale = "en-US"
+)
 
 type UserType string
 
