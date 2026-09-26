@@ -947,3 +947,11 @@
 - Plan: `docs/grader-task-type-read-plan.md` identifies the missing `task_type` read needed by the grader's boot-time cache and submission queries.
 - Added migration `000096_grant_grader_task_type_read`, granting only `SELECT` on `task_type` to `grader_svc`, with a down migration. No other dictionary table is read directly by grader SQL.
 - Verification: on fresh isolated `schema_grader_privilege_test`, connected with `current_user=grader_svc` via Postgres connection role option. Started the actual grader (`GOTOOLCHAIN=auto`, `GRADER_ADDR=:18082`); it logged `grader listening on :18082` and its CAS finalizer ran without permission errors before shutdown. Privilege matrix confirmed task_type SELECT only; task_instance SELECT but no INSERT/UPDATE; event_log INSERT but no UPDATE; submission INSERT and mastery_topic UPDATE. Direct probes confirmed task_instance insert and event_log update fail with permission denied while event_log insert succeeds. Down migration revoked task_type SELECT and reapplying restored it. Synthetic database was dropped; existing `mathprep` database was not changed.
+
+# 2026-09-26 — Taskgen localized template read permission
+
+- Plan: `docs/taskgen-template-read-plan.md`. Real platform generation under `taskgen_svc` exposed missing SELECT on `task_type_template`; a SQL error left the request retrying under its lease. No generator or task-type gate was changed.
+- Added migration 000097, SELECT only, with down migration. Verified SELECT=true, UPDATE=false and event_log UPDATE=false on the dedicated synthetic database.
+- Fresh `mathprep_platform_verify_20260926` bootstrapped through 000097; repeated platform bootstrap passed. Down removed the read grant and up restored it. Existing `mathprep` was untouched.
+- Real multiplication requests then completed through taskgen; independent student-visible multiplication calculation graded CORRECT, idempotent replay matched, invalid input graded UNPARSEABLE. Evidence session `7d9714c2-823c-4321-b2d5-bc6deb6749ce` and later `9bf1f63d-d63b-43b6-9291-0313384d92e6`.
+- `graphify update . --no-cluster` completed: 476 nodes / 480 edges. Generated graph files remain outside this discrete schema commit.
