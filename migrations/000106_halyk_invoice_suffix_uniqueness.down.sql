@@ -1,0 +1,2 @@
+DROP INDEX public.payment_attempt_halyk_invoice_suffix6_uq;
+

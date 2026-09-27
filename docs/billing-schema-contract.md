@@ -113,3 +113,11 @@ provider_event_id)` key handles retries. Platform-api remains responsible for
 the transaction, terminal payment/order transition, and entitlement policy.
 This grant does not connect a provider or make callback data authoritative by
 itself.
+
+Migration `000106_halyk_invoice_suffix_uniqueness` adds a partial unique index
+on `right(provider_invoice_id, 6)` for non-null `halyk_epay` invoices. Halyk's
+official widget contract requires merchant invoice IDs to be unique by their
+last six characters when the ID has more than six characters
+([Payment widget documentation](https://epayment.kz/en-US/docs/platezhnyi-vidzhet)).
+The existing full-invoice unique index remains in place; this additional index
+prevents different full IDs from colliding under the provider's suffix rule.

@@ -1,5 +1,11 @@
 # Agent log
 
+## 2026-09-28 — Halyk ePay invoice suffix uniqueness
+
+- Added migration `000106_halyk_invoice_suffix_uniqueness` with a partial unique expression index on the last six characters of non-null `halyk_epay` invoice IDs. This enforces Halyk ePay's merchant invoice uniqueness rule in addition to the existing full-ID index.
+- Added the provider constraint and official widget documentation reference to `docs/billing-schema-contract.md`, plus a focused static migration test. No database was accessed or changed.
+- `GOTOOLCHAIN=auto go test ./...`, `graphify update . --no-cluster`, and `git diff --check` passed. The generated Graphify rewrites were discarded as unrelated artifacts; the up/down migrations remain un-applied.
+
 ## 2026-09-28 — Platform API provider correlation writes
 
 - Added migration `000105_platform_api_payment_correlation_grants` for the existing platform API role. Migration 000103 already grants attempt reads and lifecycle updates; 000105 adds provider invoice ID and digest-only Halyk callback-hash updates while documenting the combined provider-correlation field set.
