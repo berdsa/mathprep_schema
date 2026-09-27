@@ -1875,7 +1875,7 @@
       "label": "billing_order_child",
       "file_type": "code",
       "source_file": "migrations/000098_billing_foundation.up.sql",
-      "source_location": "L30",
+      "source_location": "L32",
       "_origin": "ast"
     },
     {
@@ -1883,7 +1883,7 @@
       "label": "payment_attempt",
       "file_type": "code",
       "source_file": "migrations/000098_billing_foundation.up.sql",
-      "source_location": "L42",
+      "source_location": "L46",
       "_origin": "ast"
     },
     {
@@ -1891,7 +1891,7 @@
       "label": "verified_provider_event",
       "file_type": "code",
       "source_file": "migrations/000098_billing_foundation.up.sql",
-      "source_location": "L84",
+      "source_location": "L88",
       "_origin": "ast"
     },
     {
@@ -1899,7 +1899,7 @@
       "label": "child_entitlement_period",
       "file_type": "code",
       "source_file": "migrations/000098_billing_foundation.up.sql",
-      "source_location": "L106",
+      "source_location": "L110",
       "_origin": "ast"
     },
     {
@@ -3019,7 +3019,7 @@
       "label": "Lifecycle and invariants",
       "file_type": "document",
       "source_file": "docs/billing-schema-contract.md",
-      "source_location": "L43",
+      "source_location": "L44",
       "_origin": "ast"
     },
     {
@@ -3027,7 +3027,7 @@
       "label": "Service and deployment gates",
       "file_type": "document",
       "source_file": "docs/billing-schema-contract.md",
-      "source_location": "L61",
+      "source_location": "L64",
       "_origin": "ast"
     },
     {
@@ -4750,32 +4750,12 @@
       "_origin": "ast"
     },
     {
-      "source": "migrations_000098_billing_foundation_up_billing_order",
-      "target": "migrations_000001_create_phase0_schema_up_users",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "migrations/000098_billing_foundation.up.sql",
-      "source_location": "L3",
-      "weight": 1.0,
-      "_origin": "ast"
-    },
-    {
       "source": "migrations_000098_billing_foundation_up",
       "target": "migrations_000098_billing_foundation_up_billing_order_child",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "migrations/000098_billing_foundation.up.sql",
-      "source_location": "L30",
-      "weight": 1.0,
-      "_origin": "ast"
-    },
-    {
-      "source": "migrations_000098_billing_foundation_up_billing_order_child",
-      "target": "migrations_000001_create_phase0_schema_up_students",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "migrations/000098_billing_foundation.up.sql",
-      "source_location": "L30",
+      "source_location": "L32",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4785,7 +4765,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "migrations/000098_billing_foundation.up.sql",
-      "source_location": "L30",
+      "source_location": "L32",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4795,7 +4775,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "migrations/000098_billing_foundation.up.sql",
-      "source_location": "L42",
+      "source_location": "L46",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4805,7 +4785,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "migrations/000098_billing_foundation.up.sql",
-      "source_location": "L42",
+      "source_location": "L46",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4815,7 +4795,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "migrations/000098_billing_foundation.up.sql",
-      "source_location": "L84",
+      "source_location": "L88",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4825,7 +4805,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "migrations/000098_billing_foundation.up.sql",
-      "source_location": "L84",
+      "source_location": "L88",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4835,17 +4815,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "migrations/000098_billing_foundation.up.sql",
-      "source_location": "L106",
-      "weight": 1.0,
-      "_origin": "ast"
-    },
-    {
-      "source": "migrations_000098_billing_foundation_up_child_entitlement_period",
-      "target": "migrations_000001_create_phase0_schema_up_students",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "migrations/000098_billing_foundation.up.sql",
-      "source_location": "L106",
+      "source_location": "L110",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -4855,7 +4825,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "migrations/000098_billing_foundation.up.sql",
-      "source_location": "L106",
+      "source_location": "L110",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8060,7 +8030,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/billing-schema-contract.md",
-      "source_location": "L43",
+      "source_location": "L44",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8070,7 +8040,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/billing-schema-contract.md",
-      "source_location": "L61",
+      "source_location": "L64",
       "weight": 1.0,
       "_origin": "ast"
     },

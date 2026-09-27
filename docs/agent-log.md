@@ -1010,3 +1010,9 @@
 - Recovered the platform API source snapshot from the generated Docker build context into `/Users/saken/code/math/backend/platform-api`; no independent backend Git remote was present in the workspace.
 - Moved the previous mixed `math_gen` workspace, auxiliary projects, imported Claude materials, generated root graph, and historical reports to `archive/2026-09-27/workspace/` without deletion. Updated the root navigation README and IDE VCS mappings.
 - Verification: `docker compose config` passed; `./deploy/local/start-local.sh` passed; all four application containers reported healthy; web `GET /` and platform API `/healthz` succeeded.
+## 2026-09-27 — Independent student tenant kind
+
+- Added additive migration `000099_student_tenant_kind` so direct student self-registration can use an isolated `student` tenant instead of incorrectly labeling the account as a family.
+- No guardian, parent, learner profile, school placement, consent, or learning access is implied by the new tenant kind. The down migration refuses rollback while such tenants exist.
+- Validation is performed transactionally on the existing `mathprep` database, per workspace requirements; no persistent tenant/test rows are created during validation. Platform-api will switch to the new kind only after the migration is applied.
+- See `docs/student-tenant-contract.md`.
