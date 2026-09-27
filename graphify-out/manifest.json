@@ -5,8 +5,8 @@
     "semantic_hash": "7560d8d214cbda307df0472f5cd472c9"
   },
   "docs/agent-log.md": {
-    "mtime": 1790522418.4192443,
-    "ast_hash": "64b4b6632bb3f16fd11611224f120fb7",
+    "mtime": 1790524273.9752846,
+    "ast_hash": "ae0af9789476520f2670daa360fd5525",
     "semantic_hash": ""
   },
   "docs/srd/00-conventions.md": {
@@ -1197,6 +1197,21 @@
   "docs/student-tenant-contract.md": {
     "mtime": 1790522418.418233,
     "ast_hash": "e86eba4e125232a4657e82c53b025184",
+    "semantic_hash": ""
+  },
+  "migrations/000100_verified_phone_identity.down.sql": {
+    "mtime": 1790524154.886677,
+    "ast_hash": "98738f1507ce428c5e01752ef67448c1",
+    "semantic_hash": ""
+  },
+  "migrations/000100_verified_phone_identity.up.sql": {
+    "mtime": 1790524103.1962965,
+    "ast_hash": "e07696ba9688a4774f17a5cca03ed84c",
+    "semantic_hash": ""
+  },
+  "docs/phone-identity-contract.md": {
+    "mtime": 1790524154.8869245,
+    "ast_hash": "ea8b8986c9fc27b38abaf1b24ef31015",
     "semantic_hash": ""
   }
 }

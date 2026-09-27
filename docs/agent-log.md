@@ -1016,3 +1016,9 @@
 - No guardian, parent, learner profile, school placement, consent, or learning access is implied by the new tenant kind. The down migration refuses rollback while such tenants exist.
 - Validation is performed transactionally on the existing `mathprep` database, per workspace requirements; no persistent tenant/test rows are created during validation. Platform-api will switch to the new kind only after the migration is applied.
 - See `docs/student-tenant-contract.md`.
+
+## 2026-09-27 — Verified phone identity contract
+
+- Added additive migration `000100_verified_phone_identity` and its contract. The table references `mathprep.access_principals(id)`, supports pending/verified/revoked lifecycle timestamps, allows one current destination per principal, and enforces global uniqueness for currently verified E.164 numbers.
+- Pending numbers are never login identities. The contract covers authenticated linking, student new-device OTP, parent/child separation, PII minimization, and rollback that refuses to discard identity history.
+- The dependency existed in the local `mathprep` database. Up/down were exercised transactionally and rolled back; then up was applied persistently and recorded as `0021_verified_phone_identity` (SHA-256 `56f32e6ed935461ce7629bbad6e910cf04cf71c54a92dec03f29f2d04ddbe8af`). Verified the table exists with zero identity rows. No user or phone records were created.

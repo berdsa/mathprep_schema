@@ -2636,6 +2636,50 @@
       "norm_label": "mathprep.access_tenants"
     },
     {
+      "label": "000100_verified_phone_identity.down.sql",
+      "file_type": "code",
+      "source_file": "migrations/000100_verified_phone_identity.down.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000100_verified_phone_identity_down",
+      "community": 236,
+      "community_name": "000100_verified_phone_identity.down.sql",
+      "norm_label": "000100_verified_phone_identity.down.sql"
+    },
+    {
+      "label": "000100_verified_phone_identity.up.sql",
+      "file_type": "code",
+      "source_file": "migrations/000100_verified_phone_identity.up.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000100_verified_phone_identity_up",
+      "community": 235,
+      "community_name": "mathprep.phone_identity",
+      "norm_label": "000100_verified_phone_identity.up.sql"
+    },
+    {
+      "label": "mathprep.phone_identity",
+      "file_type": "code",
+      "source_file": "migrations/000100_verified_phone_identity.up.sql",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "migrations_000100_verified_phone_identity_up_mathprep_phone_identity",
+      "community": 235,
+      "community_name": "mathprep.phone_identity",
+      "norm_label": "mathprep.phone_identity"
+    },
+    {
+      "label": "mathprep.access_principals",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "mathprep_access_principals",
+      "community": 235,
+      "community_name": "mathprep.phone_identity",
+      "norm_label": "mathprep.access_principals"
+    },
+    {
       "label": "constants.go",
       "file_type": "code",
       "source_file": "pkg/core/constants.go",
@@ -4962,6 +5006,61 @@
       "norm_label": "appendix: decisions required before final product copy or policy lock"
     },
     {
+      "label": "phone-identity-contract.md",
+      "file_type": "document",
+      "source_file": "docs/phone-identity-contract.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_phone_identity_contract",
+      "community": 234,
+      "community_name": "Verified phone identity contract",
+      "norm_label": "phone-identity-contract.md"
+    },
+    {
+      "label": "Verified phone identity contract",
+      "file_type": "document",
+      "source_file": "docs/phone-identity-contract.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_phone_identity_contract_verified_phone_identity_contract",
+      "community": 234,
+      "community_name": "Verified phone identity contract",
+      "norm_label": "verified phone identity contract"
+    },
+    {
+      "label": "Table and lifecycle",
+      "file_type": "document",
+      "source_file": "docs/phone-identity-contract.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "docs_phone_identity_contract_table_and_lifecycle",
+      "community": 234,
+      "community_name": "Verified phone identity contract",
+      "norm_label": "table and lifecycle"
+    },
+    {
+      "label": "Enrollment and account linking",
+      "file_type": "document",
+      "source_file": "docs/phone-identity-contract.md",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "docs_phone_identity_contract_enrollment_and_account_linking",
+      "community": 234,
+      "community_name": "Verified phone identity contract",
+      "norm_label": "enrollment and account linking"
+    },
+    {
+      "label": "Rollback",
+      "file_type": "document",
+      "source_file": "docs/phone-identity-contract.md",
+      "source_location": "L63",
+      "_origin": "ast",
+      "id": "docs_phone_identity_contract_rollback",
+      "community": 234,
+      "community_name": "Verified phone identity contract",
+      "norm_label": "rollback"
+    },
+    {
       "label": "04-nfr-risk-ops.md",
       "file_type": "document",
       "source_file": "docs/srd/04-nfr-risk-ops.md",
@@ -6322,6 +6421,28 @@
       "_origin": "ast",
       "source": "migrations_000098_billing_foundation_up_verified_provider_event",
       "target": "migrations_000098_billing_foundation_up_payment_attempt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "migrations/000100_verified_phone_identity.up.sql",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "migrations_000100_verified_phone_identity_up",
+      "target": "migrations_000100_verified_phone_identity_up_mathprep_phone_identity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "migrations/000100_verified_phone_identity.up.sql",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "migrations_000100_verified_phone_identity_up_mathprep_phone_identity",
+      "target": "mathprep_access_principals",
       "confidence_score": 1.0
     },
     {
@@ -10545,6 +10666,50 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/phone-identity-contract.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_phone_identity_contract",
+      "target": "docs_phone_identity_contract_verified_phone_identity_contract",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/phone-identity-contract.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_phone_identity_contract_verified_phone_identity_contract",
+      "target": "docs_phone_identity_contract_enrollment_and_account_linking",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/phone-identity-contract.md",
+      "source_location": "L63",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_phone_identity_contract_verified_phone_identity_contract",
+      "target": "docs_phone_identity_contract_rollback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/phone-identity-contract.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_phone_identity_contract_verified_phone_identity_contract",
+      "target": "docs_phone_identity_contract_table_and_lifecycle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/srd/04-nfr-risk-ops.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -10987,5 +11152,5 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md"
     }
   ],
-  "built_at_commit": "bb3d0cd5ffbb107c933845e33c087295f258b951"
+  "built_at_commit": "df21938b74d998b1ae16a293a1d708b076ec5dac"
 }
