@@ -1080,3 +1080,14 @@
 - The migration was not applied to any database, per task instructions. PostgreSQL up/down validation remains outstanding; deployment must apply this migration before the platform API uses the intent tables.
 - Follow-up: added required `terms_acknowledged_at TIMESTAMPTZ NOT NULL` to registration intent rows and the restricted `platform_api_svc` INSERT grant. This timestamp records affirmative terms acceptance only, not legal guardianship or consent on behalf of a learner. See `docs/preauth-intents-schema-contract.md`; no migration was applied.
 - Follow-up integration review added only `INSERT(verified_at)` on `mathprep.phone_identity`, because Auth-gated registration finalization must atomically insert the OTP-verified identity. The platform API role still has no broad column or delete privileges; rollback revokes this one added column grant. This exact grant is now asserted by the migration contract test.
+
+## 2026-09-28 — Bounded pre-auth intent retention permissions
+
+- Added additive migration `000108_preauth_intent_retention_role`. It creates a non-login role that can delete only expired registration/login intents and expired/revoked trusted-device records. The API role can assume it explicitly (`SET ROLE`) without inheriting DELETE during ordinary requests; supporting indexes bound the retention scan.
+- Added static tests for the explicit, narrow grant and reversible role setup. Runtime PostgreSQL permission verification is pending application to the existing `mathprep` database.
+
+## 2026-09-28 — Encapsulated pre-auth cleanup
+
+- Added migration `000109_preauth_retention_function` after live permission testing showed that `SELECT ... FOR UPDATE` would require UPDATE privileges, which the cleanup worker should not have. Cleanup is now encapsulated in a `SECURITY DEFINER` function owned by the non-login retention role, with an allowlisted search path and a strict 1–500 batch bound. The function deletes only expired intent/device rows; `platform_api_svc` can execute it but cannot assume the cleanup role or delete directly.
+- The existing `platform_api_svc` SELECT grants on the intent tables remain unchanged because they are required for normal auth-intent validation. Do not claim the API cannot read those tables.
+- Static migration tests and rollback-only up/down syntax checks passed. Migration `000109` was applied to the existing `mathprep` database as `0031_preauth_retention_function` (SHA-256 `9702dd16cc9614da50fe58d9cbd600f687266c7c1502beecb1d430fa221b9736`). With the local deployment identity, execution returned zero rows and direct DELETE remained denied. No application rows were changed.
