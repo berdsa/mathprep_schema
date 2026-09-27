@@ -1,0 +1,719 @@
+{
+  "communities": {
+    "0": [
+      "core_reasoncode",
+      "pkg_core_validation_pipeline",
+      "pkg_core_validation_pipeline_compareexactint",
+      "pkg_core_validation_pipeline_flattennumericvalue",
+      "pkg_core_validation_pipeline_formatnumericvalue",
+      "pkg_core_validation_pipeline_gcd64",
+      "pkg_core_validation_pipeline_isquadrantlabel",
+      "pkg_core_validation_pipeline_isroman",
+      "pkg_core_validation_pipeline_joinints",
+      "pkg_core_validation_pipeline_normalizeexactint",
+      "pkg_core_validation_pipeline_numericvaluesmatch",
+      "pkg_core_validation_pipeline_parseexactrat",
+      "pkg_core_validation_pipeline_parsenumericvalue",
+      "pkg_core_validation_pipeline_parseratio",
+      "pkg_core_validation_pipeline_parseroman",
+      "pkg_core_validation_pipeline_romanfromint",
+      "pkg_core_validation_pipeline_validate",
+      "pkg_core_validation_pipeline_validatebool",
+      "pkg_core_validation_pipeline_validatecanonlist",
+      "pkg_core_validation_pipeline_validateclocktime",
+      "pkg_core_validation_pipeline_validateexactrat",
+      "pkg_core_validation_pipeline_validateinterval",
+      "pkg_core_validation_pipeline_validatematrix",
+      "pkg_core_validation_pipeline_validateratio",
+      "pkg_core_validation_pipeline_validateroman",
+      "pkg_core_validation_pipeline_validateset",
+      "pkg_core_validation_pipeline_validatetol",
+      "pkg_core_validation_pipeline_validatetuple",
+      "validation_numericvalue",
+      "validation_parsedexactint",
+      "validation_result",
+      "validation_stage"
+    ],
+    "1": [
+      "core_answerwidget",
+      "core_casevaluationoperationtype",
+      "core_casevaluationrequest",
+      "core_casevaluationstatus",
+      "core_domain",
+      "core_equivalencepolicy",
+      "core_eventlog",
+      "core_eventtype",
+      "core_generationmode",
+      "core_generationrequest",
+      "core_generationrequeststatus",
+      "core_gradeband",
+      "core_masterytopic",
+      "core_student",
+      "core_submission",
+      "core_taskinstance",
+      "core_taskset",
+      "core_tasktype",
+      "core_tasktypestatus",
+      "core_tiercode",
+      "core_user",
+      "core_usertype",
+      "core_validationmethod",
+      "core_verdict",
+      "pkg_core_constants",
+      "pkg_core_rows",
+      "rawmessage",
+      "time",
+      "uuid"
+    ],
+    "2": [
+      "migrations_000001_create_phase0_schema_up",
+      "migrations_000001_create_phase0_schema_up_domain",
+      "migrations_000001_create_phase0_schema_up_equivalence_policy",
+      "migrations_000001_create_phase0_schema_up_event_log",
+      "migrations_000001_create_phase0_schema_up_generation_mode",
+      "migrations_000001_create_phase0_schema_up_generation_request",
+      "migrations_000001_create_phase0_schema_up_grade_band",
+      "migrations_000001_create_phase0_schema_up_locale",
+      "migrations_000001_create_phase0_schema_up_mastery_topic",
+      "migrations_000001_create_phase0_schema_up_reason_code",
+      "migrations_000001_create_phase0_schema_up_render_target",
+      "migrations_000001_create_phase0_schema_up_students",
+      "migrations_000001_create_phase0_schema_up_submission",
+      "migrations_000001_create_phase0_schema_up_task_instance",
+      "migrations_000001_create_phase0_schema_up_task_set",
+      "migrations_000001_create_phase0_schema_up_task_type",
+      "migrations_000001_create_phase0_schema_up_task_type_status",
+      "migrations_000001_create_phase0_schema_up_tier_code",
+      "migrations_000001_create_phase0_schema_up_user_type",
+      "migrations_000001_create_phase0_schema_up_users",
+      "migrations_000001_create_phase0_schema_up_validation_method",
+      "migrations_000001_create_phase0_schema_up_verdict",
+      "migrations_000009_add_cas_evaluation_contract_up",
+      "migrations_000009_add_cas_evaluation_contract_up_cas_evaluation_request",
+      "migrations_000009_add_cas_evaluation_contract_up_cas_evaluation_status",
+      "migrations_000009_add_cas_evaluation_contract_up_cas_operation_type",
+      "migrations_000009_add_cas_evaluation_contract_up_event_type",
+      "migrations_000010_task_type_templates_up",
+      "migrations_000010_task_type_templates_up_task_type_template"
+    ],
+    "3": [
+      "pkg_core_validation_pipeline_parseexactint",
+      "pkg_core_validation_pipeline_test",
+      "pkg_core_validation_pipeline_test_go_t",
+      "pkg_core_validation_pipeline_test_testvalidatebool",
+      "pkg_core_validation_pipeline_test_testvalidatecanonlist",
+      "pkg_core_validation_pipeline_test_testvalidatecanonstrictform",
+      "pkg_core_validation_pipeline_test_testvalidateclocktime",
+      "pkg_core_validation_pipeline_test_testvalidateexactintacceptsnegative",
+      "pkg_core_validation_pipeline_test_testvalidateexactintacceptssixdigits",
+      "pkg_core_validation_pipeline_test_testvalidateexactintboundary",
+      "pkg_core_validation_pipeline_test_testvalidateexactintcorrect",
+      "pkg_core_validation_pipeline_test_testvalidateexactintincorrect",
+      "pkg_core_validation_pipeline_test_testvalidateexactintnegativemismatchisincorrect",
+      "pkg_core_validation_pipeline_test_testvalidateexactintunparseable",
+      "pkg_core_validation_pipeline_test_testvalidateexactrat",
+      "pkg_core_validation_pipeline_test_testvalidateinterval",
+      "pkg_core_validation_pipeline_test_testvalidatematrix",
+      "pkg_core_validation_pipeline_test_testvalidateratio",
+      "pkg_core_validation_pipeline_test_testvalidateroman",
+      "pkg_core_validation_pipeline_test_testvalidateset",
+      "pkg_core_validation_pipeline_test_testvalidatetol",
+      "pkg_core_validation_pipeline_test_testvalidatetuple",
+      "pkg_core_validation_pipeline_validateexactint"
+    ],
+    "4": [
+      "core_locale",
+      "core_rendertarget",
+      "core_tasktypetemplate",
+      "core_tasktypetemplatestore",
+      "core_templatestorestub",
+      "core_templatestorestub_findtasktypelocale",
+      "core_templatestorestub_findtasktypetemplate",
+      "pkg_core_templates",
+      "pkg_core_templates_go_context",
+      "pkg_core_templates_lookuptasktypetemplate",
+      "pkg_core_templates_test",
+      "pkg_core_templates_test_go_context",
+      "pkg_core_templates_test_go_t",
+      "pkg_core_templates_test_testlookuptasktypetemplatefallsbacktoprimarylocale",
+      "pkg_core_templates_test_testlookuptasktypetemplatereportsmissingtemplate",
+      "pkg_core_templates_test_testlookuptasktypetemplateusesrequestedlocale"
+    ],
+    "5": [
+      "docs_srd_06_traceability",
+      "docs_srd_06_traceability_06_traceability_glossary_stakeholders_open_items",
+      "docs_srd_06_traceability_definition_of_done",
+      "docs_srd_06_traceability_glossary_carried_forward_from_00_scope_lock_md_single_normative_copy_per_quality_gate_rule",
+      "docs_srd_06_traceability_migration_rollout_rollback",
+      "docs_srd_06_traceability_traceability_matrix",
+      "docs_srd_06_traceability_карта_стейкхолдеров",
+      "docs_srd_06_traceability_реестр_допущений_consolidated",
+      "docs_srd_06_traceability_реестр_открытых_вопросов_consolidated"
+    ],
+    "6": [
+      "docs_srd_02_requirements_fr_007",
+      "docs_srd_02_requirements_fr_008",
+      "docs_srd_03_architecture_db",
+      "docs_srd_03_architecture_grader",
+      "docs_srd_03_architecture_schema",
+      "docs_srd_03_architecture_taskgen",
+      "docs_srd_05_decisions_adr_006",
+      "docs_srd_05_decisions_adr_007"
+    ],
+    "7": [
+      "docs_srd_04_nfr_risk_ops",
+      "docs_srd_04_nfr_risk_ops_04_nfr_risk_ops",
+      "docs_srd_04_nfr_risk_ops_failure_modes",
+      "docs_srd_04_nfr_risk_ops_observability",
+      "docs_srd_04_nfr_risk_ops_performance_availability",
+      "docs_srd_04_nfr_risk_ops_raid_register",
+      "docs_srd_04_nfr_risk_ops_security_stride_per_trust_boundary_updated_for_3_services"
+    ],
+    "8": [
+      "docs_srd_07_task_type_specs_exemplars_g1_num_013",
+      "docs_srd_08_developer_backlog_phase_0",
+      "docs_srd_08_developer_backlog_phase_1",
+      "docs_srd_backend_integration_grader_repo",
+      "docs_srd_backend_integration_schema_repo",
+      "docs_srd_backend_integration_taskgen_repo",
+      "docs_srd_data_governance_minimization"
+    ],
+    "9": [
+      "agents_md",
+      "docs_api_contract",
+      "docs_integration_delivery_integration",
+      "docs_srd_00_conventions"
+    ],
+    "10": [
+      "docs_srd_07_task_type_specs_exemplars_u_cal_007",
+      "docs_srd_07_task_type_specs_exemplars_u_fun_001",
+      "docs_srd_math_task_catalog_validation_legend"
+    ],
+    "11": [
+      "pkg_core_widgets_test",
+      "pkg_core_widgets_test_go_t",
+      "pkg_core_widgets_test_testanswerwidgetdictionaryvalues"
+    ],
+    "12": [
+      "scripts_start_local",
+      "scripts_start_local_sh__entry",
+      "scripts_start_local_stop_services"
+    ],
+    "13": [
+      "docs_agent_log"
+    ],
+    "14": [
+      "docs_srd_00_scope_lock_scope_amd_01",
+      "docs_srd_00_scope_lock_scope_amd_03"
+    ],
+    "15": [
+      "docs_srd_07_task_type_specs_exemplars_g4_num_001",
+      "docs_srd_07_task_type_specs_exemplars_g4_num_005"
+    ],
+    "16": [
+      "migrations_000011_add_answer_widget_dictionary_up",
+      "migrations_000011_add_answer_widget_dictionary_up_answer_widget"
+    ],
+    "17": [
+      "docs_answer_widget_migration_report"
+    ],
+    "18": [
+      "docs_local_development"
+    ],
+    "19": [
+      "docs_srd_00_index"
+    ],
+    "20": [
+      "docs_srd_00_scope_lock_scope_amd_02"
+    ],
+    "21": [
+      "docs_srd_01_current_state_con_09"
+    ],
+    "22": [
+      "docs_srd_01_current_state_con_10"
+    ],
+    "23": [
+      "docs_srd_07_task_type_specs_exemplars_g1_num_014"
+    ],
+    "24": [
+      "docs_srd_07_task_type_specs_exemplars_u_fun_002"
+    ],
+    "25": [
+      "docs_system_audit_2026_09_23"
+    ],
+    "26": [
+      "docs_task_type_template_infrastructure"
+    ],
+    "27": [
+      "docs_widget_config_log"
+    ],
+    "28": [
+      "migrations_000001_create_phase0_schema_down"
+    ],
+    "29": [
+      "migrations_000002_seed_dictionaries_down"
+    ],
+    "30": [
+      "migrations_000002_seed_dictionaries_up"
+    ],
+    "31": [
+      "migrations_000003_add_idempotency_constraints_down"
+    ],
+    "32": [
+      "migrations_000003_add_idempotency_constraints_up"
+    ],
+    "33": [
+      "migrations_000004_create_service_roles_down"
+    ],
+    "34": [
+      "migrations_000004_create_service_roles_up"
+    ],
+    "35": [
+      "migrations_000005_task_type_grade_band_down"
+    ],
+    "36": [
+      "migrations_000005_task_type_grade_band_up"
+    ],
+    "37": [
+      "migrations_000006_taskgen_task_type_reconciliation_down"
+    ],
+    "38": [
+      "migrations_000006_taskgen_task_type_reconciliation_up"
+    ],
+    "39": [
+      "migrations_000007_task_type_catalog_relabel_down"
+    ],
+    "40": [
+      "migrations_000007_task_type_catalog_relabel_up"
+    ],
+    "41": [
+      "migrations_000008_grant_taskgen_student_read_down"
+    ],
+    "42": [
+      "migrations_000008_grant_taskgen_student_read_up"
+    ],
+    "43": [
+      "migrations_000009_add_cas_evaluation_contract_down"
+    ],
+    "44": [
+      "migrations_000010_task_type_templates_down"
+    ],
+    "45": [
+      "migrations_000011_add_answer_widget_dictionary_down"
+    ],
+    "46": [
+      "migrations_000012_add_task_type_widget_columns_down"
+    ],
+    "47": [
+      "migrations_000012_add_task_type_widget_columns_up"
+    ],
+    "48": [
+      "migrations_000013_extend_task_type_template_key_down"
+    ],
+    "49": [
+      "migrations_000013_extend_task_type_template_key_up"
+    ],
+    "50": [
+      "migrations_000014_activate_latex_render_target_down"
+    ],
+    "51": [
+      "migrations_000014_activate_latex_render_target_up"
+    ],
+    "52": [
+      "migrations_000015_map_task_type_answer_widgets_down"
+    ],
+    "53": [
+      "migrations_000015_map_task_type_answer_widgets_up"
+    ],
+    "54": [
+      "migrations_000016_seed_bool_widget_choices_down"
+    ],
+    "55": [
+      "migrations_000016_seed_bool_widget_choices_up"
+    ],
+    "56": [
+      "migrations_000017_seed_tuple_widget_configs_down"
+    ],
+    "57": [
+      "migrations_000017_seed_tuple_widget_configs_up"
+    ],
+    "58": [
+      "migrations_000018_seed_set_widget_configs_down"
+    ],
+    "59": [
+      "migrations_000018_seed_set_widget_configs_up"
+    ],
+    "60": [
+      "migrations_000019_seed_matrix_widget_configs_down"
+    ],
+    "61": [
+      "migrations_000019_seed_matrix_widget_configs_up"
+    ],
+    "62": [
+      "migrations_000020_seed_canon_widget_configs_batch_1_down"
+    ],
+    "63": [
+      "migrations_000020_seed_canon_widget_configs_batch_1_up"
+    ],
+    "64": [
+      "migrations_000021_seed_canon_widget_configs_batch_2_down"
+    ],
+    "65": [
+      "migrations_000021_seed_canon_widget_configs_batch_2_up"
+    ],
+    "66": [
+      "migrations_000022_seed_canon_widget_configs_batch_3_down"
+    ],
+    "67": [
+      "migrations_000022_seed_canon_widget_configs_batch_3_up"
+    ],
+    "68": [
+      "migrations_000023_seed_canon_widget_configs_batch_4_down"
+    ],
+    "69": [
+      "migrations_000023_seed_canon_widget_configs_batch_4_up"
+    ],
+    "70": [
+      "migrations_000024_seed_latex_templates_down"
+    ],
+    "71": [
+      "migrations_000024_seed_latex_templates_up"
+    ],
+    "72": [
+      "migrations_000025_seed_g3_fraction_geometry_ru_templates_down"
+    ],
+    "73": [
+      "migrations_000025_seed_g3_fraction_geometry_ru_templates_up"
+    ],
+    "74": [
+      "migrations_000026_seed_g3_geometry_measurement_ru_templates_down"
+    ],
+    "75": [
+      "migrations_000026_seed_g3_geometry_measurement_ru_templates_up"
+    ],
+    "76": [
+      "migrations_000027_seed_g3_measurement_number_ru_templates_down"
+    ],
+    "77": [
+      "migrations_000027_seed_g3_measurement_number_ru_templates_up"
+    ],
+    "78": [
+      "migrations_000028_seed_g3_number_ru_templates_down"
+    ],
+    "79": [
+      "migrations_000028_seed_g3_number_ru_templates_up"
+    ],
+    "80": [
+      "migrations_000029_seed_g3_number_ru_templates_batch2_down"
+    ],
+    "81": [
+      "migrations_000029_seed_g3_number_ru_templates_batch2_up"
+    ],
+    "82": [
+      "migrations_000030_seed_g3_number_ru_templates_batch3_down"
+    ],
+    "83": [
+      "migrations_000030_seed_g3_number_ru_templates_batch3_up"
+    ],
+    "84": [
+      "migrations_000031_seed_g3_stats_g6_algebra_ru_templates_down"
+    ],
+    "85": [
+      "migrations_000031_seed_g3_stats_g6_algebra_ru_templates_up"
+    ],
+    "86": [
+      "migrations_000032_seed_g3_early_g6_algebra_ru_templates_down"
+    ],
+    "87": [
+      "migrations_000032_seed_g3_early_g6_algebra_ru_templates_up"
+    ],
+    "88": [
+      "migrations_000033_seed_g6_algebra_decimal_ru_templates_down"
+    ],
+    "89": [
+      "migrations_000033_seed_g6_algebra_decimal_ru_templates_up"
+    ],
+    "90": [
+      "migrations_000034_seed_g6_fraction_ru_templates_batch1_down"
+    ],
+    "91": [
+      "migrations_000034_seed_g6_fraction_ru_templates_batch1_up"
+    ],
+    "92": [
+      "migrations_000035_seed_g6_fraction_geometry_ru_templates_batch2_down"
+    ],
+    "93": [
+      "migrations_000035_seed_g6_fraction_geometry_ru_templates_batch2_up"
+    ],
+    "94": [
+      "migrations_000036_seed_g6_geometry_ru_templates_batch3_down"
+    ],
+    "95": [
+      "migrations_000036_seed_g6_geometry_ru_templates_batch3_up"
+    ],
+    "96": [
+      "migrations_000037_seed_g6_number_statistics_ru_templates_batch4_down"
+    ],
+    "97": [
+      "migrations_000037_seed_g6_number_statistics_ru_templates_batch4_up"
+    ],
+    "98": [
+      "pkg_github_com_berdsa_mathprep_schema"
+    ],
+    "99": [
+      "migrations_000038_seed_g1_number_ru_templates_batch1_down"
+    ],
+    "100": [
+      "migrations_000038_seed_g1_number_ru_templates_batch1_up"
+    ]
+  },
+  "cohesion": {
+    "0": 0.16733870967741934,
+    "1": 0.15024630541871922,
+    "2": 0.14285714285714285,
+    "3": 0.18181818181818182,
+    "4": 0.225,
+    "5": 0.2222222222222222,
+    "6": 0.32142857142857145,
+    "7": 0.2857142857142857,
+    "8": 0.3333333333333333,
+    "9": 0.5,
+    "10": 0.6666666666666666,
+    "11": 0.6666666666666666,
+    "12": 0.6666666666666666,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0,
+    "19": 1.0,
+    "20": 1.0,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0,
+    "24": 1.0,
+    "25": 1.0,
+    "26": 1.0,
+    "27": 1.0,
+    "28": 1.0,
+    "29": 1.0,
+    "30": 1.0,
+    "31": 1.0,
+    "32": 1.0,
+    "33": 1.0,
+    "34": 1.0,
+    "35": 1.0,
+    "36": 1.0,
+    "37": 1.0,
+    "38": 1.0,
+    "39": 1.0,
+    "40": 1.0,
+    "41": 1.0,
+    "42": 1.0,
+    "43": 1.0,
+    "44": 1.0,
+    "45": 1.0,
+    "46": 1.0,
+    "47": 1.0,
+    "48": 1.0,
+    "49": 1.0,
+    "50": 1.0,
+    "51": 1.0,
+    "52": 1.0,
+    "53": 1.0,
+    "54": 1.0,
+    "55": 1.0,
+    "56": 1.0,
+    "57": 1.0,
+    "58": 1.0,
+    "59": 1.0,
+    "60": 1.0,
+    "61": 1.0,
+    "62": 1.0,
+    "63": 1.0,
+    "64": 1.0,
+    "65": 1.0,
+    "66": 1.0,
+    "67": 1.0,
+    "68": 1.0,
+    "69": 1.0,
+    "70": 1.0,
+    "71": 1.0,
+    "72": 1.0,
+    "73": 1.0,
+    "74": 1.0,
+    "75": 1.0,
+    "76": 1.0,
+    "77": 1.0,
+    "78": 1.0,
+    "79": 1.0,
+    "80": 1.0,
+    "81": 1.0,
+    "82": 1.0,
+    "83": 1.0,
+    "84": 1.0,
+    "85": 1.0,
+    "86": 1.0,
+    "87": 1.0,
+    "88": 1.0,
+    "89": 1.0,
+    "90": 1.0,
+    "91": 1.0,
+    "92": 1.0,
+    "93": 1.0,
+    "94": 1.0,
+    "95": 1.0,
+    "96": 1.0,
+    "97": 1.0,
+    "98": 1.0,
+    "99": 1.0,
+    "100": 1.0
+  },
+  "gods": [
+    {
+      "id": "validation_result",
+      "label": "Result",
+      "degree": 17
+    },
+    {
+      "id": "pkg_core_validation_pipeline_validate",
+      "label": "Validate()",
+      "degree": 16
+    },
+    {
+      "id": "pkg_core_validation_pipeline_validateexactint",
+      "label": "ValidateExactInt()",
+      "degree": 12
+    },
+    {
+      "id": "migrations_000001_create_phase0_schema_up_task_type",
+      "label": "task_type",
+      "degree": 10
+    },
+    {
+      "id": "core_tasktype",
+      "label": "TaskType",
+      "degree": 10
+    },
+    {
+      "id": "core_reasoncode",
+      "label": "ReasonCode",
+      "degree": 9
+    },
+    {
+      "id": "core_locale",
+      "label": "Locale",
+      "degree": 8
+    },
+    {
+      "id": "core_casevaluationrequest",
+      "label": "CASEvaluationRequest",
+      "degree": 8
+    },
+    {
+      "id": "pkg_core_templates_lookuptasktypetemplate",
+      "label": "LookupTaskTypeTemplate()",
+      "degree": 8
+    },
+    {
+      "id": "docs_srd_06_traceability_06_traceability_glossary_stakeholders_open_items",
+      "label": "06 — Traceability, Glossary, Stakeholders, Open Items",
+      "degree": 8
+    }
+  ],
+  "surprises": [
+    {
+      "source": "TestValidateCanonStrictForm()",
+      "target": "Validate()",
+      "source_files": [
+        "pkg/core/validation/pipeline_test.go",
+        "pkg/core/validation/pipeline.go"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "TestValidateMatrix()",
+      "target": "Validate()",
+      "source_files": [
+        "pkg/core/validation/pipeline_test.go",
+        "pkg/core/validation/pipeline.go"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "TestValidateClockTime()",
+      "target": "ValidateClockTime()",
+      "source_files": [
+        "pkg/core/validation/pipeline_test.go",
+        "pkg/core/validation/pipeline.go"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "TestValidateInterval()",
+      "target": "ValidateInterval()",
+      "source_files": [
+        "pkg/core/validation/pipeline_test.go",
+        "pkg/core/validation/pipeline.go"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "TestValidateSet()",
+      "target": "ValidateSet()",
+      "source_files": [
+        "pkg/core/validation/pipeline_test.go",
+        "pkg/core/validation/pipeline.go"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `ReasonCode` connect `pipeline.go` to `constants.go`, `pipeline_test.go`?",
+      "why": "High betweenness centrality (0.037) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Result` connect `pipeline.go` to `constants.go`, `pipeline_test.go`?",
+      "why": "High betweenness centrality (0.030) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Locale` connect `Locale` to `constants.go`?",
+      "why": "High betweenness centrality (0.029) - this node is a cross-community bridge."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 2 inferred relationships involving `Validate()` (e.g. with `TestValidateCanonStrictForm()` and `TestValidateMatrix()`) actually correct?",
+      "why": "`Validate()` has 2 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 6 inferred relationships involving `ValidateExactInt()` (e.g. with `TestValidateExactIntAcceptsNegative()` and `TestValidateExactIntAcceptsSixDigits()`) actually correct?",
+      "why": "`ValidateExactInt()` has 6 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `github.com/berdsa/mathprep_schema`, `answer_widget`, `start-local.sh script` to the rest of the system?",
+      "why": "37 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `000001_create_phase0_schema.up.sql` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

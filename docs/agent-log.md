@@ -955,3 +955,10 @@
 - Fresh `mathprep_platform_verify_20260926` bootstrapped through 000097; repeated platform bootstrap passed. Down removed the read grant and up restored it. Existing `mathprep` was untouched.
 - Real multiplication requests then completed through taskgen; independent student-visible multiplication calculation graded CORRECT, idempotent replay matched, invalid input graded UNPARSEABLE. Evidence session `7d9714c2-823c-4321-b2d5-bc6deb6749ce` and later `9bf1f63d-d63b-43b6-9291-0313384d92e6`.
 - `graphify update . --no-cluster` completed: 476 nodes / 480 edges. Generated graph files remain outside this discrete schema commit.
+
+## 2026-09-27 — Publish existing workspace changes
+
+- User requested all pending work pushed to the service repositories and identified GitLab/GitHub schema mirrors.
+- Publishing the existing UX specification and retained graph reports, alongside previously committed canonical migrations. No new schema, migration, task gate or database operation in this publication step.
+- Both mirrors were at6762fe0 before publication; local history is a fast-forward descendant.
+- Refresh code-only graph using the supported local update command; preserve existing report snapshots and no external semantic extraction.

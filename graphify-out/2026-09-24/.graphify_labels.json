@@ -197,5 +197,18 @@
   "195": "000086_seed_university_calculus_advanced_ru_templates_batch49.down.sql",
   "196": "000086_seed_university_calculus_advanced_ru_templates_batch49.up.sql",
   "197": "000087_seed_university_calculus_discrete_ru_templates_batch50.down.sql",
-  "198": "000087_seed_university_calculus_discrete_ru_templates_batch50.up.sql"
+  "198": "000087_seed_university_calculus_discrete_ru_templates_batch50.up.sql",
+  "199": "000088_seed_university_functions_matrices_ru_templates_batch51.down.sql",
+  "200": "000088_seed_university_functions_matrices_ru_templates_batch51.up.sql",
+  "201": "000089_seed_university_number_probability_statistics_ru_templates_batch52.down.sql",
+  "202": "000089_seed_university_number_probability_statistics_ru_templates_batch52.up.sql",
+  "203": "000092_fix_remaining_english_ru_templates.down.sql",
+  "204": "000092_fix_remaining_english_ru_templates.up.sql",
+  "205": "widget_config_data_test.go",
+  "206": "000093_seed_last_three_ru_templates.down.sql",
+  "207": "000093_seed_last_three_ru_templates.up.sql",
+  "215": "000090_seed_latex_templates_batch53.down.sql",
+  "216": "000090_seed_latex_templates_batch53.up.sql",
+  "217": "000091_seed_latex_templates_remaining.down.sql",
+  "218": "000091_seed_latex_templates_remaining.up.sql"
 }

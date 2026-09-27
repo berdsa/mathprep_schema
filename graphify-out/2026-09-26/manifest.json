@@ -5,8 +5,8 @@
     "semantic_hash": "7560d8d214cbda307df0472f5cd472c9"
   },
   "docs/agent-log.md": {
-    "mtime": 1790484965.8275683,
-    "ast_hash": "0c521437bc79c6317c93d0842da50c61",
+    "mtime": 1790417220.2146657,
+    "ast_hash": "9f26dcca1f647715e024baa2864a92d9",
     "semantic_hash": ""
   },
   "docs/srd/00-conventions.md": {
@@ -1147,21 +1147,6 @@
   "docs/grader-task-type-read-plan.md": {
     "mtime": 1790417042.7020245,
     "ast_hash": "ec8c6841ace2a3af84c7b841988ea599",
-    "semantic_hash": ""
-  },
-  "migrations/000097_grant_taskgen_template_read.down.sql": {
-    "mtime": 1790419855.1108968,
-    "ast_hash": "10647a6b7d11a21177a72234a0fced99",
-    "semantic_hash": ""
-  },
-  "migrations/000097_grant_taskgen_template_read.up.sql": {
-    "mtime": 1790419855.1107557,
-    "ast_hash": "835a33d78e8a98a7191a7f9ee2713039",
-    "semantic_hash": ""
-  },
-  "docs/taskgen-template-read-plan.md": {
-    "mtime": 1790419855.1106286,
-    "ast_hash": "37efe354861b64c8858539567a1bd377",
     "semantic_hash": ""
   }
 }
