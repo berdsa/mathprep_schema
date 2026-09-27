@@ -60,6 +60,25 @@ project's retention/deletion policy. The database uniqueness index necessarily
 contains the value; this migration does not provide encryption at rest beyond
 the database's storage controls.
 
+## Platform API grants
+
+Migration `000104_platform_api_phone_identity_grants` grants the existing
+`platform_api_svc` role narrowly scoped access to `mathprep.phone_identity`.
+It depends on the table from 000100, role from 000101, and `mathprep` schema
+USAGE granted by 000102. SELECT is limited to `phone_identity_id`,
+`principal_id`, `phone_e164`, and `status`: these columns support owner-scoped
+state lookup, matching the pending number, returning only a server-masked
+suffix, and selecting the row for lifecycle changes. In particular,
+`phone_e164` remains sensitive even though the API response masks it; the
+service must never expose or log the full value.
+
+INSERT is limited to `phone_identity_id`, `principal_id`, `phone_e164`, and
+`status`. UPDATE is limited to `status`, `verified_at`, and `revoked_at`.
+`created_at` is database-defaulted and immutable through this role. No DELETE,
+TRUNCATE, or privilege on OTP or delivery data is granted. The down migration
+revokes only these column grants and leaves the shared role and schema USAGE
+intact.
+
 ## Rollback
 
 The up migration only adds the table and indexes. The down migration refuses

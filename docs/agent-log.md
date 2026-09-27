@@ -1,5 +1,11 @@
 # Agent log
 
+## 2026-09-27 — Platform API phone identity grants
+
+- Added additive migration `000104_platform_api_phone_identity_grants` for the authenticated phone-enrollment contract. `platform_api_svc` receives SELECT only on `phone_identity_id`, `principal_id`, `phone_e164`, and `status`; INSERT only on `phone_identity_id`, `principal_id`, `phone_e164`, and `status`; and UPDATE only on `status`, `verified_at`, and `revoked_at` in `mathprep.phone_identity`.
+- Added a down migration that revokes only these column grants, plus the access rationale and dependency on 000100/000101/000102 in `docs/phone-identity-contract.md`. No DELETE is granted.
+- No database was accessed or changed. `GOTOOLCHAIN=auto go test ./...` and `git diff --check` passed. `graphify update . --no-cluster` completed successfully (528 nodes/516 edges); its broad generated graph rewrite was discarded as unrelated output. The grant statements were statically reviewed; no runtime privilege probe was run, per instruction not to touch a database.
+
 ## 2026-09-27 — Platform API billing table grants
 
 - Added additive migration `000103_platform_api_billing_grants` for the `platform_api_svc` role on the canonical tables from 000098. It grants SELECT/INSERT on required billing relations and UPDATE only on the order, attempt, and verified-event columns platform-api reconciliation writes; it grants no billing DELETE/TRUNCATE.
