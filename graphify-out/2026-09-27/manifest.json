@@ -5,8 +5,8 @@
     "semantic_hash": "7560d8d214cbda307df0472f5cd472c9"
   },
   "docs/agent-log.md": {
-    "mtime": 1790520614.4075835,
-    "ast_hash": "4d7c4d102698ba08a8778b89e618d15f",
+    "mtime": 1790520125.3512404,
+    "ast_hash": "f39d156c58e5ced7ab39861da11504fb",
     "semantic_hash": ""
   },
   "docs/srd/00-conventions.md": {
@@ -1160,8 +1160,8 @@
     "semantic_hash": ""
   },
   "migrations/000098_billing_foundation.up.sql": {
-    "mtime": 1790520581.592185,
-    "ast_hash": "304a17ac5e03d465432bd4a80a734d3d",
+    "mtime": 1790519964.9032056,
+    "ast_hash": "1a3d547299c1445a5fa083013a5a0ba7",
     "semantic_hash": ""
   },
   "deploy/local/docs/README.md": {
@@ -1180,8 +1180,8 @@
     "semantic_hash": ""
   },
   "docs/billing-schema-contract.md": {
-    "mtime": 1790520614.4062245,
-    "ast_hash": "8afce95cfbc54f815ae35a6a52d4b600",
+    "mtime": 1790520013.8097255,
+    "ast_hash": "bcd20d0e6f1a90b5a5108e38bb60efee",
     "semantic_hash": ""
   }
 }

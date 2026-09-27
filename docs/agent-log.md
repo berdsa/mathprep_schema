@@ -1,5 +1,38 @@
 # Agent log
 
+## 2026-09-27 — Provider-neutral billing schema foundation
+
+- Plan: add an additive DDL foundation for an order, per-child order allocation,
+  provider payment attempts, verified-provider-event idempotency, and explicit
+  per-child paid periods. See `docs/billing-schema-contract.md` for scope and
+  the external tenant identity limitation.
+- Added migration `000098_billing_foundation`. It uses tenant/actor/order
+  idempotency, KZT amounts, provider invoice/payment identifiers, a digest-only
+  callback-hash slot, unique provider-event IDs, and state/timestamp checks.
+  It stores no card data, raw callback, or access token and does not choose
+  trial, tax, discount, refund, renewal, or period-duration policies.
+- Corrected identity scope after comparing with platform-api: actor IDs use
+  `access_principals.principal_id` and child IDs use the platform child-profile
+  IDs. They are not `users.user_id` / `students.user_id`, so this migration has
+  no misleading cross-domain identity FKs. API writes and entitlement grants
+  must authorize live tenant/principal/child membership in MathPrep tables
+  within the same transaction; the schema infers no role or guardianship.
+- Product basis: UX spec §3.7 names 500 KZT/month/student as a target but leaves
+  trial duration, billing-day rules, taxes/fees, cancellation, access after
+  failed payment, and sibling discount undecided. The schema therefore stores
+  explicit amounts and explicit period boundaries without defaults.
+- Validation: applied the up migration and representative linked order,
+  attempt, verified-event, and entitlement rows using generated platform
+  principal/child-profile UUIDs (without creating `users`/`students` rows)
+  inside a transaction against the existing local `mathprep` database. FK
+  inspection showed only billing-internal relationships. Rolled back and
+  confirmed the tables were absent. Also ran up + down in one transaction and
+  confirmed the down migration removed the objects before rolling back. No
+  migration was applied persistently and no existing row was modified.
+- `git diff --check` passed. No commit or push.
+- `graphify update . --no-cluster` completed (494 nodes / 500 edges); Graphify
+  reported its existing zero-node `widget_config_expected.json` warning.
+
 ## 2026-09-21 — Phase 3 resumed with G1-NUM-011
 
 - Added the canonical `G1-NUM-011` addition-within-20 specification to `07-task-type-specs-exemplars.md`; taskgen implemented and verified the corresponding generator.
