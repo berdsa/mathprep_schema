@@ -7,7 +7,7 @@ END $$;
 
 REVOKE ALL PRIVILEGES ON mathprep.platform_push_outbox
     FROM platform_api_svc, mathprep_notifications_svc;
-REVOKE USAGE ON SCHEMA mathprep FROM platform_api_svc;
 DROP INDEX mathprep.platform_push_outbox_expired_lease_idx;
 DROP INDEX mathprep.platform_push_outbox_pending_claim_idx;
 DROP TABLE mathprep.platform_push_outbox;
+DROP INDEX mathprep.platform_notifications_push_outbox_identity_uq;

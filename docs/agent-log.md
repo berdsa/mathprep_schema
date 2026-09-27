@@ -1031,7 +1031,13 @@
 
 ## 2026-09-27 — Platform Web Push transactional outbox
 
-- Added additive migration `000102_platform_push_outbox` and `docs/platform-push-outbox-contract.md`. The queue stores only the inbox notification ID, recipient principal ID, supported event kind, and lease/retry state; no message text, OTP, phone, or provider payload.
+- Added additive migration `000102_platform_push_outbox` and `docs/platform-push-outbox-contract.md`. The queue stores only the inbox notification ID, recipient principal ID, supported event kind, and lease/retry state; no message text, OTP, phone, or provider payload. A composite FK enforces that the recipient and event kind match the referenced inbox row.
 - `platform_api_svc` receives schema usage and column-scoped `INSERT` on the outbox. Existing `mathprep_notifications_svc` receives `SELECT` and column-scoped `UPDATE` for claim, lease, retry, and completion fields; neither role can delete or rewrite event identity.
 - Read-only catalog inspection confirmed the live `mathprep.platform_notifications` parent table and both role names. No migration was applied or recorded in `mathprep`, and no separate test database was created, per task instruction. Static review and `git diff --check` only; apply/runtime validation remains outstanding.
 - The platform API must capture the inserted inbox ID with `RETURNING` and insert the outbox row in that same transaction. The notifications service must consume with `SKIP LOCKED`, lease-token guarded updates, bounded exponential retries, and generic push copy.
+
+## 2026-09-27 — Push outbox identity integrity follow-up
+
+- Strengthened migration 000102 with a unique inbox index on `(id, recipient_principal_id, kind)` and a composite outbox foreign key to that tuple, preventing an outbox row from targeting a different recipient or event kind than the referenced inbox notification.
+- Updated down ordering to remove the outbox before its parent index. Rollback intentionally leaves `USAGE` on schema `mathprep` for `platform_api_svc`; that namespace-only privilege does not grant table access, and revoking it could break access to other platform objects.
+- Static review only, as requested. No database writes or test database were used; `git diff --check` passed. The follow-up is committed locally; no push.

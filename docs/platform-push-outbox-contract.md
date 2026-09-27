@@ -14,9 +14,10 @@ When the platform API creates an inbox notification, it inserts the matching
 use the ID returned by the successful inbox `INSERT ... RETURNING id`, and
 enqueue only when that insert created a row. The outbox primary key is the
 inbox notification ID, so retries or duplicate enqueue attempts are
-idempotent. The foreign key prevents dispatch for a missing inbox row. The
-recipient and event kind must be the same recipient and kind selected for that
-inbox row. Supported event kinds currently match the platform inbox kinds:
+idempotent. The composite foreign key prevents dispatch for a missing inbox
+row and requires `recipient_principal_id` and `event_kind` to match that exact
+row. A unique index on `(id, recipient_principal_id, kind)` supports this
+constraint. Supported event kinds currently match the platform inbox kinds:
 `join_requested`, `join_approved`, and `join_declined`.
 
 `platform_api_svc` may insert only `notification_id`,
@@ -61,7 +62,11 @@ deferred.
 
 The down migration refuses to drop the table while any delivery rows remain.
 Operators must drain/archive the queue and remove retained rows deliberately
-before rolling back the schema.
+before rolling back the schema. It removes the composite inbox index after the
+outbox table. It leaves `USAGE` on schema `mathprep` granted to
+`platform_api_svc`: schema visibility alone does not grant table access, and
+revoking this namespace privilege during rollback could break other platform
+objects added later.
 
 ## Required integration work
 

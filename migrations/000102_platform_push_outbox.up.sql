@@ -1,8 +1,12 @@
 -- Durable handoff from the platform inbox writer to the independent push
 -- notification service. The inbox row and this row are inserted together.
+-- The composite unique index lets the outbox FK bind recipient and kind to
+-- the exact inbox row, not merely to an existing notification ID.
+CREATE UNIQUE INDEX platform_notifications_push_outbox_identity_uq
+    ON mathprep.platform_notifications (id, recipient_principal_id, kind);
+
 CREATE TABLE mathprep.platform_push_outbox (
-    notification_id UUID PRIMARY KEY
-        REFERENCES mathprep.platform_notifications(id) ON DELETE RESTRICT,
+    notification_id UUID PRIMARY KEY,
     recipient_principal_id UUID NOT NULL,
     event_kind TEXT NOT NULL
         CHECK (event_kind IN ('join_requested', 'join_approved', 'join_declined')),
@@ -20,6 +24,10 @@ CREATE TABLE mathprep.platform_push_outbox (
         )),
     created_at TIMESTAMPTZ NOT NULL DEFAULT transaction_timestamp(),
     updated_at TIMESTAMPTZ NOT NULL DEFAULT transaction_timestamp(),
+    CONSTRAINT platform_push_outbox_notification_identity_fkey
+        FOREIGN KEY (notification_id, recipient_principal_id, event_kind)
+        REFERENCES mathprep.platform_notifications (id, recipient_principal_id, kind)
+        ON DELETE RESTRICT,
     CONSTRAINT platform_push_outbox_lifecycle_check CHECK (
         (status = 'pending' AND lease_token IS NULL AND lease_expires_at IS NULL
             AND delivered_at IS NULL)
