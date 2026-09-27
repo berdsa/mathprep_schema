@@ -931,7 +931,7 @@
 
 # 2026-09-26 — Local platform integration: request locale foundation
 
-- Plan: `docs/local-platform-integration-plan.md` records the existing SRD conflict and the additive locale decision. Per `00-scope-lock.md` SCOPE-AMD-02 and the current local integration directive, migration `000094_generation_request_locale` adds the supported development dictionary entries `kk-KZ` and `en-US` and persists `generation_request.locale` with default `ru-KZ`, a foreign key to `locale(code)`, and an allowlist check. The historical `000002` seed remains unchanged. `en-US` remains a development assumption pending product confirmation; no translation, notation, or curriculum review is implied.
+- Plan: `deploy/local/docs/local-platform-integration-plan.md` records the existing SRD conflict and the additive locale decision. Per `00-scope-lock.md` SCOPE-AMD-02 and the current local integration directive, migration `000094_generation_request_locale` adds the supported development dictionary entries `kk-KZ` and `en-US` and persists `generation_request.locale` with default `ru-KZ`, a foreign key to `locale(code)`, and an allowlist check. The historical `000002` seed remains unchanged. `en-US` remains a development assumption pending product confirmation; no translation, notation, or curriculum review is implied.
 - Added `Locale` to `core.GenerationRequest` and typed constants for `kk-KZ` and `en-US`.
 - Verification: applied `000094` to isolated `schema_locale_migration_test` in the existing Postgres container, not the existing `mathprep` database. Omitted locale inserted as `ru-KZ`; explicit `kk-KZ` and `en-US` inserts succeeded; unsupported `fr-FR` failed `generation_request_locale_check`; catalog inspection confirmed `generation_request_locale_fkey`. Down migration removed both new dictionary rows and the column (`1|0` remained for ru-KZ count and locale column count), and reapplying succeeded with `en-US,kk-KZ,ru-KZ` present.
 - Privilege verification: existing `taskgen_svc` has table-level `INSERT` and `UPDATE` on `generation_request` (`true|true`), which includes the new column without an additional grant. The synthetic test database was dropped after verification.
@@ -962,3 +962,10 @@
 - Publishing the existing UX specification and retained graph reports, alongside previously committed canonical migrations. No new schema, migration, task gate or database operation in this publication step.
 - Both mirrors were at6762fe0 before publication; local history is a fast-forward descendant.
 - Refresh code-only graph using the supported local update command; preserve existing report snapshots and no external semantic extraction.
+
+## 2026-09-27 — Local deployment guide relocation and Lovable web refresh
+
+- Moved the local-operation guides into `deploy/local/docs/` and added an index describing the local deployment surface. Canonical SRD documents remain under `docs/srd/`.
+- Updated `local-development.md` for the active Lovable checkout at `/Users/saken/code/math/frontend/lovable/learn-path-kz`, the local API address, and the direct web-container refresh procedure used when the compose file is unavailable.
+- Updated the historical system-audit reference and this log to point to the new guide location.
+- Rebuilt `mathprep-platform-web:local` from the updated Lovable checkout and refreshed the local web container on `mathprep-platform-local`, preserving the existing API, taskgen, grader, and PostgreSQL containers.
