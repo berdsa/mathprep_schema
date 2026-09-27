@@ -100,3 +100,8 @@ GRANT INSERT (
 ) ON mathprep.platform_trusted_device TO platform_api_svc;
 GRANT UPDATE (last_seen_at, expires_at, revoked_at)
     ON mathprep.platform_trusted_device TO platform_api_svc;
+
+-- Only Auth-gated, atomic registration finalization may insert an already
+-- verified number. Auth proves the OTP; the platform API owns the identity row.
+GRANT INSERT (verified_at)
+    ON mathprep.phone_identity TO platform_api_svc;

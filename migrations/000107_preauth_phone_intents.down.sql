@@ -12,6 +12,8 @@ $$;
 
 REVOKE UPDATE (last_seen_at, expires_at, revoked_at)
     ON mathprep.platform_trusted_device FROM platform_api_svc;
+REVOKE INSERT (verified_at)
+    ON mathprep.phone_identity FROM platform_api_svc;
 REVOKE INSERT (trusted_device_id, principal_id, token_digest, expires_at)
     ON mathprep.platform_trusted_device FROM platform_api_svc;
 REVOKE SELECT ON mathprep.platform_trusted_device FROM platform_api_svc;

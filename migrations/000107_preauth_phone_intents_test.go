@@ -36,6 +36,7 @@ func TestPreauthIntentMigrationDefinesContractAndLeastPrivilege(t *testing.T) {
 		"GRANT UPDATE (status, finalized_principal_id, finalized_at)",
 		"GRANT UPDATE (device_token_digest, status)",
 		"GRANT UPDATE (last_seen_at, expires_at, revoked_at)",
+		"GRANT INSERT (verified_at) ON mathprep.phone_identity TO platform_api_svc",
 	} {
 		if !strings.Contains(up, want) {
 			t.Errorf("up migration is missing required contract capability: %s", want)
