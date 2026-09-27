@@ -1,5 +1,11 @@
 # Agent log
 
+## 2026-09-27 — Platform API billing table grants
+
+- Added additive migration `000103_platform_api_billing_grants` for the `platform_api_svc` role on the canonical tables from 000098. It grants SELECT/INSERT on required billing relations and UPDATE only on the order, attempt, and verified-event columns platform-api reconciliation writes; it grants no billing DELETE/TRUNCATE.
+- Added a down migration that removes these billing capabilities without dropping the shared role, and documented the role/table boundary and migration dependency in `docs/billing-schema-contract.md`.
+- No database migration was applied. Per the one-database workspace rule, no fresh or scratch database was created; a read-only catalog check confirmed the existing `mathprep` DB has no billing relations, so applying these grants—even inside a rollback transaction—would first require creating substitute public relations and is not a safe validation here. `GOTOOLCHAIN=auto go test ./...` passed; static SQL review passed, but live up/down privilege validation remains outstanding until the canonical relations are deployed in a permissible test environment. `graphify update . --no-cluster` ran successfully; its generated code-graph rewrites were discarded as unrelated artifacts.
+
 ## 2026-09-27 — Provider-neutral billing schema foundation
 
 - Plan: add an additive DDL foundation for an order, per-child order allocation,

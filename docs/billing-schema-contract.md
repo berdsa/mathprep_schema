@@ -63,17 +63,27 @@ product decisions (`docs/math-prep-kz-ux-functional-spec.md` §3.7 and Appendix)
 
 ## Service and deployment gates
 
-No database roles or grants are added for this foundation because no payment
-service/account or authoritative platform checkout contract exists in the
-canonical schema. Before provider adapters write these tables, define the
-least-privilege payment service role and transaction rules for
-order/attempt/event/entitlement updates. The API must authorize tenant scope,
-parent/principal access, and child membership from the authoritative MathPrep
-tables inside the same transaction before inserting an order or granting an
-entitlement period. This schema does not infer role or guardianship.
-Also define provider event authenticity and reconciliation behavior, and an
-idempotent paid-period allocation contract. The application should treat
-entitlement period rows as immutable; the migration does not add a trigger or
-service-role grant to enforce that yet. The current platform API's development
-checkout is simulated and does not process payments; this migration alone does
-not connect it to provider adapters.
+Migration `000103_platform_api_billing_grants` grants the existing
+`platform_api_svc` role access to the canonical billing tables. It requires
+`platform_api_svc` from migration 000101 and tables from 000098. The API receives
+`SELECT, INSERT` on the five billing tables, plus only these column-scoped
+updates:
+
+- `billing_order`: `status`, `paid_at`, `updated_at`
+- `payment_attempt`: `provider_payment_id`, `status`, `updated_at`,
+  `completed_at`
+- `verified_provider_event`: `status`, `processed_at`
+
+No UPDATE, DELETE, or TRUNCATE privilege is granted on order allocations or
+entitlement periods; paid-period rows are immutable to this role. The grant
+migration configures no provider credentials or provider adapter. The API
+still must authorize tenant scope, payer/principal access, and child membership
+from authoritative MathPrep tables inside the same transaction before
+inserting an order or granting an entitlement period. This schema does not
+infer role or guardianship. Provider event authenticity, reconciliation, and
+an explicit paid-period allocation policy remain service/product gates.
+
+Migration 000103's down migration removes only these billing-table privileges;
+it leaves the shared `platform_api_svc` role and grants for other platform
+features intact. The migration must be applied before the API's billing
+capability preflight can pass.
