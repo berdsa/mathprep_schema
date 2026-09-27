@@ -1,5 +1,11 @@
 # Agent log
 
+## 2026-09-28 — Platform API provider correlation writes
+
+- Added migration `000105_platform_api_payment_correlation_grants` for the existing platform API role. Migration 000103 already grants attempt reads and lifecycle updates; 000105 adds provider invoice ID and digest-only Halyk callback-hash updates while documenting the combined provider-correlation field set.
+- Kept database ownership with platform-api: a future payment adapter calls the authenticated API session boundary, while terminal payment/order state, the existing verified-event idempotency inbox, and entitlements remain platform-owned. xpayment `delivery_id` is the stable provider event ID; `ext_tran_id` maps to the existing provider payment ID.
+- Added a static migration contract test and updated `docs/billing-schema-contract.md`. `GOTOOLCHAIN=auto go test ./...`, `graphify update . --no-cluster`, and `git diff --check` passed. Generated Graphify rewrites were discarded as unrelated. No database was accessed or changed.
+
 ## 2026-09-27 — Platform API phone identity grants
 
 - Added additive migration `000104_platform_api_phone_identity_grants` for the authenticated phone-enrollment contract. `platform_api_svc` receives SELECT only on `phone_identity_id`, `principal_id`, `phone_e164`, and `status`; INSERT only on `phone_identity_id`, `principal_id`, `phone_e164`, and `status`; and UPDATE only on `status`, `verified_at`, and `revoked_at` in `mathprep.phone_identity`.

@@ -90,3 +90,26 @@ Migration 000103's down migration removes only these billing-table privileges;
 it leaves the shared `platform_api_svc` role and grants for other platform
 features intact. The migration must be applied before the API's billing
 capability preflight can pass.
+
+Migration `000105_platform_api_payment_correlation_grants` keeps provider
+correlation under the existing `platform_api_svc` database role. Migration
+000103 already grants SELECT and UPDATE on `provider_payment_id`, `status`,
+`updated_at`, and `completed_at`; 000105 adds the missing UPDATE privileges for
+`provider_invoice_id` and `callback_secret_hash_sha256`. The down migration
+revokes only those two newly added columns, preserving 000103's lifecycle
+grants. No separate payment-service database role or login credential is
+introduced: once the authenticated platform API session endpoint is added, a
+payment adapter must use it to persist provider correlation values
+transactionally.
+
+Halyk's callback correlation value is stored only as the existing SHA-256
+field. xpayment's `ext_tran_id` is stored in `provider_payment_id`, and the
+payment-attempt UUID is the local merchant-order correlation value. After a
+provider callback is authenticated and status-reconciled, the adapter sends a
+trusted normalized result to platform-api. For xpayment, the stable
+`delivery_id` becomes `provider_event_id` in the existing
+`verified_provider_event` inbox, whose unique `(provider_code,
+provider_event_id)` key handles retries. Platform-api remains responsible for
+the transaction, terminal payment/order transition, and entitlement policy.
+This grant does not connect a provider or make callback data authoritative by
+itself.
