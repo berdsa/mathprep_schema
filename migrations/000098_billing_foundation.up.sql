@@ -1,6 +1,6 @@
 -- Provider-neutral billing foundation. Tenant IDs are owned by platform-api,
 -- which is not represented in this schema yet; see docs/billing-schema-contract.md.
-CREATE TABLE billing_order (
+CREATE TABLE public.billing_order (
     order_id UUID PRIMARY KEY,
     tenant_id UUID NOT NULL,
     -- platform-api access_principals.principal_id; intentionally no FK because
@@ -29,7 +29,7 @@ CREATE TABLE billing_order (
 
 -- A parent checkout can cover multiple children. Amounts are explicit per-child
 -- allocations; no discount or tax calculation is implied by this table.
-CREATE TABLE billing_order_child (
+CREATE TABLE public.billing_order_child (
     order_id UUID NOT NULL,
     tenant_id UUID NOT NULL,
     -- platform-api platform_children child-profile ID; no fabricated mapping
@@ -40,10 +40,10 @@ CREATE TABLE billing_order_child (
     PRIMARY KEY (order_id, child_profile_id),
     UNIQUE (order_id, tenant_id, child_profile_id),
     FOREIGN KEY (order_id, tenant_id)
-        REFERENCES billing_order(order_id, tenant_id) ON DELETE RESTRICT
+        REFERENCES public.billing_order(order_id, tenant_id) ON DELETE RESTRICT
 );
 
-CREATE TABLE payment_attempt (
+CREATE TABLE public.payment_attempt (
     payment_attempt_id UUID PRIMARY KEY,
     order_id UUID NOT NULL,
     tenant_id UUID NOT NULL,
@@ -66,7 +66,7 @@ CREATE TABLE payment_attempt (
     UNIQUE (order_id, attempt_number),
     UNIQUE (order_id, idempotency_key),
     FOREIGN KEY (order_id, tenant_id)
-        REFERENCES billing_order(order_id, tenant_id) ON DELETE RESTRICT,
+        REFERENCES public.billing_order(order_id, tenant_id) ON DELETE RESTRICT,
     CHECK (updated_at >= created_at),
     CHECK (completed_at IS NULL OR completed_at >= created_at),
     CHECK (
@@ -76,20 +76,20 @@ CREATE TABLE payment_attempt (
 );
 
 CREATE UNIQUE INDEX payment_attempt_provider_invoice_uq
-    ON payment_attempt(provider_code, provider_invoice_id)
+    ON public.payment_attempt(provider_code, provider_invoice_id)
     WHERE provider_invoice_id IS NOT NULL;
 
 CREATE UNIQUE INDEX payment_attempt_provider_payment_uq
-    ON payment_attempt(provider_code, provider_payment_id)
+    ON public.payment_attempt(provider_code, provider_payment_id)
     WHERE provider_payment_id IS NOT NULL;
 
 -- Rows represent callbacks/events that have already passed provider-specific
 -- authenticity checks. Raw callback bodies and access tokens are never stored.
-CREATE TABLE verified_provider_event (
+CREATE TABLE public.verified_provider_event (
     verified_provider_event_id UUID PRIMARY KEY,
     provider_code TEXT NOT NULL CHECK (length(btrim(provider_code)) > 0),
     provider_event_id TEXT NOT NULL CHECK (length(btrim(provider_event_id)) > 0),
-    payment_attempt_id UUID REFERENCES payment_attempt(payment_attempt_id) ON DELETE RESTRICT,
+    payment_attempt_id UUID REFERENCES public.payment_attempt(payment_attempt_id) ON DELETE RESTRICT,
     body_sha256 BYTEA NOT NULL CHECK (octet_length(body_sha256) = 32),
     status TEXT NOT NULL DEFAULT 'VERIFIED'
         CHECK (status IN ('VERIFIED', 'APPLIED', 'IGNORED')),
@@ -107,7 +107,7 @@ CREATE TABLE verified_provider_event (
 
 -- Paid coverage periods; access is the explicit half-open interval
 -- [period_starts_at, period_ends_at). Refund/cancellation policy is not encoded.
-CREATE TABLE child_entitlement_period (
+CREATE TABLE public.child_entitlement_period (
     entitlement_period_id UUID PRIMARY KEY,
     tenant_id UUID NOT NULL,
     child_profile_id UUID NOT NULL,
@@ -116,18 +116,18 @@ CREATE TABLE child_entitlement_period (
     period_ends_at TIMESTAMPTZ NOT NULL,
     created_at TIMESTAMPTZ NOT NULL DEFAULT transaction_timestamp(),
     FOREIGN KEY (order_id, tenant_id, child_profile_id)
-        REFERENCES billing_order_child(order_id, tenant_id, child_profile_id) ON DELETE RESTRICT,
+        REFERENCES public.billing_order_child(order_id, tenant_id, child_profile_id) ON DELETE RESTRICT,
     UNIQUE (order_id, child_profile_id, period_starts_at),
     CHECK (period_ends_at > period_starts_at),
     CHECK (created_at <= period_starts_at)
 );
 
 CREATE INDEX billing_order_actor_recent_idx
-    ON billing_order(tenant_id, actor_principal_id, created_at DESC);
+    ON public.billing_order(tenant_id, actor_principal_id, created_at DESC);
 CREATE INDEX payment_attempt_order_recent_idx
-    ON payment_attempt(order_id, created_at DESC);
+    ON public.payment_attempt(order_id, created_at DESC);
 CREATE INDEX verified_provider_event_attempt_recent_idx
-    ON verified_provider_event(payment_attempt_id, received_at DESC)
+    ON public.verified_provider_event(payment_attempt_id, received_at DESC)
     WHERE payment_attempt_id IS NOT NULL;
 CREATE INDEX child_entitlement_period_child_window_idx
-    ON child_entitlement_period(tenant_id, child_profile_id, period_starts_at, period_ends_at);
+    ON public.child_entitlement_period(tenant_id, child_profile_id, period_starts_at, period_ends_at);

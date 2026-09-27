@@ -1047,3 +1047,9 @@
 - Strengthened migration 000102 with a unique inbox index on `(id, recipient_principal_id, kind)` and a composite outbox foreign key to that tuple, preventing an outbox row from targeting a different recipient or event kind than the referenced inbox notification.
 - Updated down ordering to remove the outbox before its parent index. Rollback intentionally leaves `USAGE` on schema `mathprep` for `platform_api_svc`; that namespace-only privilege does not grant table access, and revoking it could break access to other platform objects.
 - Static review only, as requested. No database writes or test database were used; `git diff --check` passed. The follow-up is committed locally; no push.
+
+## 2026-09-27 — Billing service grants and schema qualification
+
+- Added `000103_platform_api_billing_grants`, granting the existing platform API group SELECT/INSERT on the billing relations and UPDATE only on fields used for verified reconciliation. It does not grant DELETE/TRUNCATE or UPDATE on allocation or entitlement tables.
+- Rollback-only validation against the shared `mathprep` DB found that `000098` used unqualified table names; the `mathprep` role's search path would create those relations in schema `mathprep` while platform-api queries `public`. The test transaction was rolled back; no billing table exists afterward.
+- Corrected the still-unapplied `000098` up/down migration to explicitly qualify every table and index in `public`, and documented the search-path contract. No already-applied migration was changed. A rollback-only run of 000098+000103 then created the expected `public` relations and returned `exact_scoped_grants_ok = true`; the transaction rolled back, leaving no billing tables or grants behind. Fresh-database validation was not run because the workspace requires the existing `mathprep` database only.

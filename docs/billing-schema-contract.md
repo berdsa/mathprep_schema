@@ -63,7 +63,10 @@ product decisions (`docs/math-prep-kz-ux-functional-spec.md` §3.7 and Appendix)
 
 ## Service and deployment gates
 
-Migration `000103_platform_api_billing_grants` grants the existing
+Migration `000098_billing_foundation` creates all five relations explicitly in
+the `public` schema so its target is independent of the deployer's PostgreSQL
+`search_path`; the platform API reads those same `public` relations. Migration
+`000103_platform_api_billing_grants` grants the existing
 `platform_api_svc` role access to the canonical billing tables. It requires
 `platform_api_svc` from migration 000101 and tables from 000098. The API receives
 `SELECT, INSERT` on the five billing tables, plus only these column-scoped
