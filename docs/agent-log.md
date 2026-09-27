@@ -969,3 +969,11 @@
 - Updated `local-development.md` for the active Lovable checkout at `/Users/saken/code/math/frontend/lovable/learn-path-kz`, the local API address, and the direct web-container refresh procedure used when the compose file is unavailable.
 - Updated the historical system-audit reference and this log to point to the new guide location.
 - Rebuilt `mathprep-platform-web:local` from the updated Lovable checkout and refreshed the local web container on `mathprep-platform-local`, preserving the existing API, taskgen, grader, and PostgreSQL containers.
+
+## 2026-09-27 — Unified local Compose entry point and workspace cleanup
+
+- Replaced the missing historical compose reference with the workspace-level `deploy/local/docker-compose.yml`, which manages web, platform API, taskgen, and grader together on the existing `mathprep-platform-local` network and reuses the existing `postgres` container.
+- Added `deploy/local/start-local.sh` as the single local startup command and added an opt-in bridge in `scripts/start-local.sh` via `MATHPREP_USE_COMPOSE=1`.
+- Recovered the platform API source snapshot from the generated Docker build context into `/Users/saken/code/math/backend/platform-api`; no independent backend Git remote was present in the workspace.
+- Moved the previous mixed `math_gen` workspace, auxiliary projects, imported Claude materials, generated root graph, and historical reports to `archive/2026-09-27/workspace/` without deletion. Updated the root navigation README and IDE VCS mappings.
+- Verification: `docker compose config` passed; `./deploy/local/start-local.sh` passed; all four application containers reported healthy; web `GET /` and platform API `/healthz` succeeded.

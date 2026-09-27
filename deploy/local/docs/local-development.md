@@ -4,7 +4,7 @@ The local platform is run from the sibling repositories under `/Users/saken/code
 
 ## Database and service startup
 
-From the schema repo, run `scripts/start-local.sh`. It starts a standalone PostgreSQL 16 container (no compose), applies the ordered `migrations/*.up.sql` files only when `public.task_type` is absent, then starts taskgen and grader as background Go processes.
+From the workspace root, run `deploy/local/start-local.sh`. It starts the four-service Compose stack (web, platform API, taskgen, and grader) on the existing `mathprep-platform-local` network and reuses the already-running PostgreSQL container. The schema-only helper remains available for migration/bootstrap work; invoke it with `MATHPREP_USE_COMPOSE=1` when a caller needs the full stack.
 
 Defaults: PostgreSQL `127.0.0.1:5432`, database/user `mathprep`, password `phase0-local-only-change-me`; taskgen `:8081`; grader `:8082`. Override with `MATHPREP_PG_CONTAINER`, `MATHPREP_PG_PORT`, `MATHPREP_DB_USER`, `MATHPREP_DB_NAME`, `MATHPREP_DB_PASSWORD`, `DATABASE_URL`, `TASKGEN_HTTP_ADDR`, and `GRADER_ADDR`. Use a URL-safe local password if overriding `DATABASE_URL` implicitly. Logs and PID files go to the ignored `schema/.local-run/` directory. Existing databases are not migrated automatically: apply subsequent migrations explicitly after reviewing them.
 
@@ -38,17 +38,10 @@ cp schema/deploy/local/web.Dockerfile "$build_context/"
 docker build --file "$build_context/web.Dockerfile" --tag mathprep-platform-web:local "$build_context"
 ```
 
-Replace the running web container while preserving its local network and port:
+The full stack is defined in `deploy/local/docker-compose.yml`. Recreate all services after an image refresh with:
 
 ```sh
-docker rename mathprep-platform-local-web-1 mathprep-platform-local-web-previous
-docker run -d --name mathprep-platform-local-web-1 \
-  --network mathprep-platform-local --network-alias web \
-  --restart unless-stopped -p 127.0.0.1:5173:8080 \
-  --health-cmd='node -e "fetch(\"http://127.0.0.1:8080/\").then(r => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))"' \
-  --health-interval=5s --health-timeout=5s --health-start-period=10s --health-retries=12 \
-  mathprep-platform-web:local
-docker rm -f mathprep-platform-local-web-previous
+./deploy/local/start-local.sh
 ```
 
-Verify `http://127.0.0.1:5173`, a successful `GET /`, and all local containers before removing the previous container. Keep the previous container instead of removing it when a rollback is needed.
+Verify `http://127.0.0.1:5173`, a successful `GET /`, and `docker compose -f deploy/local/docker-compose.yml ps` after each refresh.

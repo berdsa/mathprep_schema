@@ -16,6 +16,12 @@ DATABASE_URL="${DATABASE_URL:-postgres://${MATHPREP_DB_USER}:${MATHPREP_DB_PASSW
 command -v docker >/dev/null || { echo 'docker is required' >&2; exit 1; }
 command -v go >/dev/null || { echo 'go is required' >&2; exit 1; }
 
+# The supported full-stack entry point lives at the workspace root. Keep this
+# opt-in bridge for callers that already invoke the schema script.
+if [[ "${MATHPREP_USE_COMPOSE:-0}" == 1 ]]; then
+  exec "$ROOT/../deploy/local/start-local.sh"
+fi
+
 if ! docker inspect "$MATHPREP_PG_CONTAINER" >/dev/null 2>&1; then
   docker run -d --name "$MATHPREP_PG_CONTAINER" \
     -e "POSTGRES_USER=$MATHPREP_DB_USER" \
