@@ -24,6 +24,7 @@ func TestPreauthIntentMigrationDefinesContractAndLeastPrivilege(t *testing.T) {
 		"CREATE TABLE mathprep.platform_login_intent",
 		"CREATE TABLE mathprep.platform_trusted_device",
 		"requested_role IN ('family_owner', 'student')",
+		"terms_acknowledged_at TIMESTAMPTZ NOT NULL",
 		"status IN ('pending', 'finalized', 'expired')",
 		"status IN ('pending', 'completed', 'expired')",
 		"phone_e164 ~ '^\\+[1-9][0-9]{1,14}$'",
@@ -41,6 +42,12 @@ func TestPreauthIntentMigrationDefinesContractAndLeastPrivilege(t *testing.T) {
 		if !strings.Contains(up, want) {
 			t.Errorf("up migration is missing required contract capability: %s", want)
 		}
+	}
+	if !strings.Contains(up, "phone_e164, terms_version, terms_acknowledged_at, device_binding, expires_at") {
+		t.Error("Platform API INSERT grant omits the affirmative terms acknowledgement timestamp")
+	}
+	if !strings.Contains(down, "phone_e164, terms_version, terms_acknowledged_at, device_binding, expires_at") {
+		t.Error("down migration does not revoke the terms acknowledgement INSERT privilege")
 	}
 
 	for _, forbidden := range []string{

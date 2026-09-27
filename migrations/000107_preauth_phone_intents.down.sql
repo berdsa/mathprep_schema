@@ -30,7 +30,7 @@ REVOKE UPDATE (status, finalized_principal_id, finalized_at)
     ON mathprep.platform_registration_intent FROM platform_api_svc;
 REVOKE INSERT (
     intent_id, email, password_hash, display_name, locale, requested_role,
-    phone_e164, terms_version, device_binding, expires_at
+    phone_e164, terms_version, terms_acknowledged_at, device_binding, expires_at
 ) ON mathprep.platform_registration_intent FROM platform_api_svc;
 REVOKE SELECT ON mathprep.platform_registration_intent FROM platform_api_svc;
 

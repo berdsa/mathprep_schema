@@ -10,6 +10,8 @@ CREATE TABLE mathprep.platform_registration_intent (
     requested_role TEXT NOT NULL CHECK (requested_role IN ('family_owner', 'student')),
     phone_e164 TEXT NOT NULL CHECK (phone_e164 ~ '^\+[1-9][0-9]{1,14}$'),
     terms_version TEXT NOT NULL CHECK (length(terms_version) BETWEEN 1 AND 64),
+    -- Records the user's affirmative acknowledgement, not a guardian/legal claim.
+    terms_acknowledged_at TIMESTAMPTZ NOT NULL,
     device_binding TEXT NOT NULL CHECK (device_binding ~ '^[a-f0-9]{64}$'),
     created_at TIMESTAMPTZ NOT NULL DEFAULT transaction_timestamp(),
     expires_at TIMESTAMPTZ NOT NULL,
@@ -81,7 +83,7 @@ CREATE INDEX platform_trusted_device_principal_active_idx
 GRANT SELECT ON mathprep.platform_registration_intent TO platform_api_svc;
 GRANT INSERT (
     intent_id, email, password_hash, display_name, locale, requested_role,
-    phone_e164, terms_version, device_binding, expires_at
+    phone_e164, terms_version, terms_acknowledged_at, device_binding, expires_at
 ) ON mathprep.platform_registration_intent TO platform_api_svc;
 GRANT UPDATE (status, finalized_principal_id, finalized_at)
     ON mathprep.platform_registration_intent TO platform_api_svc;
