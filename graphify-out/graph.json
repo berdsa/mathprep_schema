@@ -2680,6 +2680,28 @@
       "norm_label": "mathprep.access_principals"
     },
     {
+      "label": "000101_platform_api_student_identity_grants.down.sql",
+      "file_type": "code",
+      "source_file": "migrations/000101_platform_api_student_identity_grants.down.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000101_platform_api_student_identity_grants_down",
+      "community": 238,
+      "community_name": "000101_platform_api_student_identity_grants.down.sql",
+      "norm_label": "000101_platform_api_student_identity_grants.down.sql"
+    },
+    {
+      "label": "000101_platform_api_student_identity_grants.up.sql",
+      "file_type": "code",
+      "source_file": "migrations/000101_platform_api_student_identity_grants.up.sql",
+      "source_location": null,
+      "_origin": "ast",
+      "id": "migrations_000101_platform_api_student_identity_grants_up",
+      "community": 239,
+      "community_name": "000101_platform_api_student_identity_grants.up.sql",
+      "norm_label": "000101_platform_api_student_identity_grants.up.sql"
+    },
+    {
       "label": "constants.go",
       "file_type": "code",
       "source_file": "pkg/core/constants.go",
@@ -5059,6 +5081,28 @@
       "community": 234,
       "community_name": "Verified phone identity contract",
       "norm_label": "rollback"
+    },
+    {
+      "label": "platform-api-student-identity-contract.md",
+      "file_type": "document",
+      "source_file": "docs/platform-api-student-identity-contract.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_platform_api_student_identity_contract",
+      "community": 237,
+      "community_name": "platform-api-student-identity-contract.md",
+      "norm_label": "platform-api-student-identity-contract.md"
+    },
+    {
+      "label": "Platform API compatibility grants for student identity",
+      "file_type": "document",
+      "source_file": "docs/platform-api-student-identity-contract.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_platform_api_student_identity_contract_platform_api_compatibility_grants_for_student_identity",
+      "community": 237,
+      "community_name": "platform-api-student-identity-contract.md",
+      "norm_label": "platform api compatibility grants for student identity"
     },
     {
       "label": "04-nfr-risk-ops.md",
@@ -10710,6 +10754,17 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/platform-api-student-identity-contract.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_platform_api_student_identity_contract",
+      "target": "docs_platform_api_student_identity_contract_platform_api_compatibility_grants_for_student_identity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/srd/04-nfr-risk-ops.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -11152,5 +11207,5 @@
       "source_file": "docs/srd/07-task-type-specs-exemplars.md"
     }
   ],
-  "built_at_commit": "df21938b74d998b1ae16a293a1d708b076ec5dac"
+  "built_at_commit": "23c9736a8d713e2b7800422a9210108b6f381157"
 }

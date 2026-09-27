@@ -232,5 +232,8 @@
   "230": "mathprep.access_tenants",
   "231": "000099_student_tenant_kind.up.sql",
   "232": "mathprep.access_tenants",
-  "233": "github.com/berdsa/mathprep_schema"
+  "233": "github.com/berdsa/mathprep_schema",
+  "234": "Verified phone identity contract",
+  "235": "mathprep.phone_identity",
+  "236": "000100_verified_phone_identity.down.sql"
 }

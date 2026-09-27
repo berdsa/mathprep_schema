@@ -1,16 +1,16 @@
 # Graph Report - schema  (2026-09-27)
 
 ## Corpus Check
-- 243 files · ~106,064 words
+- 246 files · ~106,428 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 509 nodes · 480 edges · 237 communities (215 shown, 22 thin omitted)
+- 513 nodes · 481 edges · 240 communities (217 shown, 23 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 27 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `df21938b`
+- Built from commit: `23c9736a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -58,6 +58,7 @@
 - github.com/berdsa/mathprep_schema
 - Verified phone identity contract
 - mathprep.phone_identity
+- platform-api-student-identity-contract.md
 
 ## God Nodes (most connected - your core abstractions)
 1. `Result` - 17 edges
@@ -93,7 +94,7 @@
 - **Three-Repository Architecture** — docs_srd_backend_integration_schema_repo, docs_srd_backend_integration_taskgen_repo, docs_srd_backend_integration_grader_repo [EXTRACTED 1.00]
 - **Task Type Definition and Validation** — docs_srd_07_task_type_specs_exemplars_u_cal_007, docs_srd_math_task_catalog_validation_legend, docs_srd_backend_integration_grader_repo [INFERRED 0.85]
 
-## Communities (237 total, 22 thin omitted)
+## Communities (240 total, 23 thin omitted)
 
 ### Community 0 - "pipeline.go"
 Cohesion: 0.16
@@ -180,9 +181,9 @@ Cohesion: 0.40
 Nodes (4): Enrollment and account linking, Rollback, Table and lifecycle, Verified phone identity contract
 
 ## Knowledge Gaps
-- **103 isolated node(s):** `github.com/berdsa/mathprep_schema`, `answer_widget`, `Local deployment guides`, `Database and service startup`, `Lovable web checkout` (+98 more)
+- **104 isolated node(s):** `github.com/berdsa/mathprep_schema`, `answer_widget`, `Local deployment guides`, `Database and service startup`, `Lovable web checkout` (+99 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **22 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **23 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -198,6 +199,6 @@ _Questions this graph is uniquely positioned to answer:_
 - **Are the 6 inferred relationships involving `ValidateExactInt()` (e.g. with `TestValidateExactIntAcceptsNegative()` and `TestValidateExactIntAcceptsSixDigits()`) actually correct?**
   _`ValidateExactInt()` has 6 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `github.com/berdsa/mathprep_schema`, `answer_widget`, `Local deployment guides` to the rest of the system?**
-  _103 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _104 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `constants.go` be split into smaller, more focused modules?**
   _Cohesion score 0.14482758620689656 - nodes in this community are weakly interconnected._

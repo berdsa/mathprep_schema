@@ -235,5 +235,8 @@
   "233": "github.com/berdsa/mathprep_schema",
   "234": "Verified phone identity contract",
   "235": "mathprep.phone_identity",
-  "236": "000100_verified_phone_identity.down.sql"
+  "236": "000100_verified_phone_identity.down.sql",
+  "237": "platform-api-student-identity-contract.md",
+  "238": "000101_platform_api_student_identity_grants.down.sql",
+  "239": "000101_platform_api_student_identity_grants.up.sql"
 }
