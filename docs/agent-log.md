@@ -1081,6 +1081,13 @@
 - Follow-up: added required `terms_acknowledged_at TIMESTAMPTZ NOT NULL` to registration intent rows and the restricted `platform_api_svc` INSERT grant. This timestamp records affirmative terms acceptance only, not legal guardianship or consent on behalf of a learner. See `docs/preauth-intents-schema-contract.md`; no migration was applied.
 - Follow-up integration review added only `INSERT(verified_at)` on `mathprep.phone_identity`, because Auth-gated registration finalization must atomically insert the OTP-verified identity. The platform API role still has no broad column or delete privileges; rollback revokes this one added column grant. This exact grant is now asserted by the migration contract test.
 
+## 2026-09-28 — Account-level Web Push quiet hours
+
+- Added additive migration `000112_platform_push_quiet_hours` for optional principal-scoped quiet windows, using IANA timezone names and the Kazakhstan timezone by default. Only `mathprep_notifications_svc` receives table access; updates are column-scoped. Equal or partially-null windows are rejected.
+- The notifications API exposes authenticated `GET` and `PUT /v1/push/preferences`; timezone validity is checked by Go and PostgreSQL's timezone catalog. The worker defers pending events during quiet hours without leasing them or consuming attempts. Existing leases remain unaffected.
+- The profile PWA now presents localized RU/KK/EN account-wide quiet-hours controls; device push opt-in/revoke remains separate. Localized copy identifies Kazakhstan time.
+- Go contract tests, route validation tests, frontend component tests, TypeScript, lint, and build passed. The migration was rehearsed in a rollback-only transaction and applied to the existing `mathprep` DB as ledger `0034_platform_push_quiet_hours`, checksum `bf6814c2b349a7f32304398d69322ea1090a3fc721a0160b38f4afbd63196cd9`. Catalog checks confirm notification-service access and no Platform API SELECT. The authenticated API smoke and all-eight-container launcher check passed; see `/deploy/local/docs/implementation-history.md`.
+
 ## 2026-09-28 — Bounded pre-auth intent retention permissions
 
 - Added additive migration `000108_preauth_intent_retention_role`. It creates a non-login role that can delete only expired registration/login intents and expired/revoked trusted-device records. The API role can assume it explicitly (`SET ROLE`) without inheriting DELETE during ordinary requests; supporting indexes bound the retention scan.

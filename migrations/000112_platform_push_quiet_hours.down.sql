@@ -1,0 +1,2 @@
+REVOKE ALL PRIVILEGES ON mathprep.platform_push_preferences FROM mathprep_notifications_svc;
+DROP TABLE mathprep.platform_push_preferences;

@@ -68,6 +68,21 @@ outbox table. It leaves `USAGE` on schema `mathprep` granted to
 revoking this namespace privilege during rollback could break other platform
 objects added later.
 
+## Quiet-hours recipient preferences
+
+Migration `000112_platform_push_quiet_hours` adds optional account-level
+preferences in `mathprep.platform_push_preferences`. The notification service
+owns reads/writes; the platform API and browser have no direct table grants.
+Absent rows and NULL start/end times mean no quiet window. A configured window
+uses an IANA timezone (default `Asia/Almaty`), and both times must be set and
+different. A window may cross midnight.
+
+The notification worker excludes due pending events for principals currently
+inside their quiet window. It does not lease the event or increment
+`attempt_count`; after the local quiet window ends, the next poll can claim it.
+Already-leased events are completed normally. Preferences apply to all of an
+account's push devices; device subscription removal remains device-scoped.
+
 ## Required integration work
 
 The platform API's current inbox insert path must capture `RETURNING id` and
