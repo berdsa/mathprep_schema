@@ -5,7 +5,7 @@
 | ID | Артефакт | Статус | Примечание |
 |---|---|---|---|
 | ART-00 | `00-index.md` | RUNNING | Этот файл |
-| ART-01 | `00-scope-lock.md` | FINAL (подтверждён оператором), с **SCOPE-AMD-01** поверх |
+| ART-01 | `00-scope-lock.md` | FINAL (подтверждён оператором), с **SCOPE-AMD-01…04** поверх |
 | ART-02 | `01-current-state.md` | FINAL (подтверждён оператором) |
 | ART-03 | `02-requirements.md` | DRAFT — добавлены FR-007 (job queue), FR-008 (event log) |
 | ART-04 | `00-conventions.md` | DRAFT — заблокирован от FINAL пунктом OPEN-07 (сверка со старым каталогом типов); добавлены dictionary-таблицы |

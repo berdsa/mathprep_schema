@@ -79,3 +79,9 @@ Scenario: Failure/abuse — journal is never mutated after the fact
 
 ## Non-functional requirements
 Unchanged from prior pass (NFR-001…007) with NFR-004 now read as "per type **and per service that owns it**" and NFR-007 (`raw_input` retention) unchanged. No new NFRs this pass; CAS-specific NFRs (evaluator timeout budget, sandboxing overhead) are deferred to whichever pass first specs a CAS-bearing type, per `00-scope-lock.md`'s SCOPE-AMD-01 note.
+
+## FR-009 — Guardian-provisioned student sign-in stays bound to the existing child
+
+As a guardian, I want to set up sign-in for an existing child profile and verify the child's own phone, so the child can use a new device without creating a duplicate learner or borrowing the guardian's phone identity.
+
+The Platform API creates a short-lived one-use intent only after checking the authenticated guardian relationship and applicable consent. Auth owns OTP delivery/challenge state in Redis and returns a success result bound to the same intent and device flow. Only then may the Platform API atomically set the existing child principal's credentials, insert that principal's verified `phone_identity`, and mark/scrub the intent. Failed, expired, replayed, or mismatched OTP/device flows create no account, membership, consent, or verified identity. See SCOPE-AMD-04 and `docs/student-access-phone-intent-contract.md`.

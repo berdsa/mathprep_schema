@@ -43,6 +43,14 @@ Operator directive: task content must support Kazakh (`kk-KZ`), Russian (`ru-KZ`
 
 `OPEN-01` (frozen Kazakhstani curriculum edition) remains unresolved — neither operator nor model has a verifiable source. The Russian ФГОС standard is treated as the more defensible primary reference where Kazakhstan-specific detail is unavailable, given shared post-Soviet educational heritage and this project's own `ru-KZ` locale — this is a reasoned methodological choice, not a verified fact, and every grade placement not traceable to an actual source stays marked as such rather than presented as authoritative.
 
+## SCOPE AMENDMENT — SCOPE-AMD-04 (2026-09-28)
+
+Operator-approved platform requirement: a signed-in guardian may provision student sign-in credentials and a student-owned phone for an **already-existing child profile** in that guardian's family tenant. Auth sends the OTP to the child's submitted WhatsApp destination (SMS fallback is an application/provider policy); Auth owns OTP and Redis challenge state. A new-device student login uses only the phone identity that the student proved. The family relationship and applicable consent remain independently checked by Platform API.
+
+The schema contract is limited to expiring, one-use intent state. It does not create or merge principals, children, memberships, guardian relationships, or consent; does not assert legal guardianship; and does not mark a phone verified before the Auth OTP succeeds. The intent is bound to one existing child, tenant, child principal, guardian relationship and guardian actor, E.164 destination, email/password hash, and one-way device-binding digest. It expires within 15 minutes and sensitive values are scrubbed at finalization/expiry; residual rows are eligible for bounded cleanup after a 24-hour grace period.
+
+Migration `000114_student_access_phone_intent` depends on the pre-existing platform identity tables (`access_tenants`, `access_principals`, `access_guardian_relationships`, `platform_children`, and `platform_accounts`) that are used by existing platform migrations but are not defined in this repository's migration source. Deployment must validate the exact live table keys/columns and compatible migration ledger before rollout. This amendment does not close that source-of-truth gap or authorize a direct shared-database application by this migration author.
+
 
 
 | Поле | Значение | Тег |
