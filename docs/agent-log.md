@@ -1,5 +1,11 @@
 # Agent log
 
+## 2026-09-29 — notifications recipient locale lookup grant
+
+- A real browser Web Push check showed the service must filter `platform_accounts` by `principal_id` while selecting `locale`. PostgreSQL correctly rejected the query because migration 000120 grants only `locale`.
+- Added additive migration `000121_notifications_account_locale_lookup`: grants and revokes only `SELECT(principal_id, locale)` for `mathprep_notifications_svc`; no email, name, password hash, or table-level account read is included. Migration 000120 is unchanged.
+- Added migration contract/checksum test and updated the canonical push-outbox contract. Contract tests passed; applied transactionally to existing `mathprep` as ledger `0043_notifications_account_locale_lookup`, checksum `6590155d538162ecc4ea6e6d87352ff3ae92de08ad9ddc9506a7bb7ea7a2bc79`. Verification confirms both scoped column grants. Existing `0042_notifications_account_locale_read` is unchanged.
+
 ## 2026-09-29 — Notification copy uses the recipient's saved locale
 
 - A live VAPID/Chrome delivery smoke confirmed the push service reached a real temporary browser subscription, then showed that the service worker defaulted every received notification to Russian. The worker already supports RU/KK/EN, but delivery never supplied the recipient's stored language.

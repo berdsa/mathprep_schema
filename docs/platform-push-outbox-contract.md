@@ -85,11 +85,12 @@ account's push devices; device subscription removal remains device-scoped.
 
 ## Recipient language
 
-The delivery service may read only the `locale` column on
-`mathprep.platform_accounts` to localize the generic notification body for the
-recipient. Migration `000120_notifications_account_locale_read` grants this
-single-column SELECT to `mathprep_notifications_svc`; it does not grant access
-to names, email addresses, password hashes, or the full account row. Supported
+The delivery service may read only the `principal_id` and `locale` columns on
+`mathprep.platform_accounts` to look up the recipient's locale and localize the
+generic notification body. Migration `000120_notifications_account_locale_read`
+grants the locale column; migration `000121_notifications_account_locale_lookup`
+adds the lookup key required by the recipient filter. Neither grants access to
+names, email addresses, password hashes, or the full account row. Supported
 display locales are `ru`, `kk`, and `en`; an absent or unsupported value uses
 Russian as the explicit fallback. Keep notification text generic and do not
 localize it by placing learner, class, or assignment data in the push payload.
