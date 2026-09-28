@@ -83,6 +83,17 @@ inside their quiet window. It does not lease the event or increment
 Already-leased events are completed normally. Preferences apply to all of an
 account's push devices; device subscription removal remains device-scoped.
 
+## Recipient language
+
+The delivery service may read only the `locale` column on
+`mathprep.platform_accounts` to localize the generic notification body for the
+recipient. Migration `000120_notifications_account_locale_read` grants this
+single-column SELECT to `mathprep_notifications_svc`; it does not grant access
+to names, email addresses, password hashes, or the full account row. Supported
+display locales are `ru`, `kk`, and `en`; an absent or unsupported value uses
+Russian as the explicit fallback. Keep notification text generic and do not
+localize it by placing learner, class, or assignment data in the push payload.
+
 ## Required integration work
 
 The platform API's current inbox insert path must capture `RETURNING id` and

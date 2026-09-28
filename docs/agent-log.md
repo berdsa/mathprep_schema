@@ -1,5 +1,12 @@
 # Agent log
 
+## 2026-09-29 — Notification copy uses the recipient's saved locale
+
+- A live VAPID/Chrome delivery smoke confirmed the push service reached a real temporary browser subscription, then showed that the service worker defaulted every received notification to Russian. The worker already supports RU/KK/EN, but delivery never supplied the recipient's stored language.
+- Added additive migration `000120_notifications_account_locale_read` granting `mathprep_notifications_svc` column-only SELECT on `mathprep.platform_accounts.locale`; rollback revokes only that grant. Updated `docs/platform-push-outbox-contract.md` to constrain the read to generic copy localization and the existing three UI languages.
+- Up SHA-256: `94475520c759f1e1a4c5c0d893dc48ef99d35517dea186125a1668cdca7139c8`; down SHA-256: `37a3720db69cdc5a75dc32069d9bbe2db5d7104f0a6f137c0847dbaeb8332560`.
+- Contract test and a rollback-only up/down rehearsal passed against the existing `mathprep` database. The fresh-database migration check was not run because the approved local topology uses only the already-running `mathprep` database; no database was created. Apply/ledger verification is recorded after rollout below; no child/profile content is exposed to the notification service by this change.
+
 ## 2026-09-29 — Legacy student phone enrollment scope and migration
 
 - Added SCOPE-AMD-06 and FR-012 for a legacy student to prove existing credentials, enter and OTP-verify their own phone, and only then receive a trusted-device session. Updated traceability; this also maps the previously unmapped FR-011.
