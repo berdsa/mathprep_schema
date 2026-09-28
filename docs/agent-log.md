@@ -1098,3 +1098,9 @@
 - The active MathPrep plan calls for account profiles and language control. The self-service profile endpoint is limited to authenticated principal-owned display name and supported interface locale; email changes still need verification and role assignment remains administrative.
 - Migration source and static privilege tests are recorded here; local DB apply/runtime verification is pending.
 - Follow-up: migration `000110` was tested up/down in rollback-only transactions against the existing `mathprep` database, then applied as ledger `0032_platform_profile_self_update` (SHA-256 `2479d7ea3b6f3adb4b4251a23934128e3f394e93805218f170586c3144fdd2b7`). Catalog checks confirmed UPDATE is available for name/locale and denied for email/password. A no-row UPDATE executed under the local service identity and was rolled back; no account data changed.
+
+## 2026-09-28 — Scrub finalized registration intents
+
+- A live synthetic parent/student registration showed that finalized one-use intent rows retained a duplicate password hash, display name, email, phone and flow-binding digest until the expiry-plus-24-hour cleanup window. This duplicates active account credentials and contact data after they are no longer needed.
+- Added additive migration `000111_preauth_registration_intent_scrub` with only column-scoped UPDATE grants for those five intent fields and an exact down migration. The Platform API finalizer will overwrite them with non-usable sentinels in the account-creation transaction; finalization link, role, locale, notice acknowledgement metadata and bounded expiry remain for audit/retention.
+- The scope follows this repository's data-minimization principles and the existing one-use/retention intent contract. Static migration tests and transaction-only up/down rehearsal are required before applying to the shared MathPrep database. No unrelated tables or accounts are changed.
