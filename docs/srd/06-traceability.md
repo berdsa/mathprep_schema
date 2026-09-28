@@ -62,8 +62,9 @@ Unchanged from prior pass — Ученица 3 класса, Ученица 6 к
 | BG-05 "no request lost, none double-processed" *(new)* | FR-007 | `taskgen` job queue |
 | BG-06 "complete history for future analytics, without blocking it" *(new)* | FR-008 | `EVENT_LOG`, written by both `taskgen` and `grader` |
 | BG-07 "student proves their own phone while retaining the existing family child identity" *(new, SCOPE-AMD-04)* | FR-009 | Platform API, Auth/Redis, `platform_student_access_intent`, `phone_identity` |
+| BG-08 "independent student uses a family learning profile without identity guessing or merge" *(new, SCOPE-AMD-05)* | FR-010 | Platform API, `platform_student_profile_link`, family/consent authorization |
 
-No orphan FRs (six map to six goals); no orphan ERD entities (`USERS`, `STUDENTS`, `GENERATION_REQUEST`, `TASK_TYPE`, `TASK_SET`, `TASK_INSTANCE`, `SUBMISSION`, `MASTERY_TOPIC`, `EVENT_LOG` — all reachable from at least one FR above).
+No orphan FRs (FR-001…FR-010 map to the goals above); no orphan ERD entities (`USERS`, `STUDENTS`, `GENERATION_REQUEST`, `TASK_TYPE`, `TASK_SET`, `TASK_INSTANCE`, `SUBMISSION`, `MASTERY_TOPIC`, `EVENT_LOG` — all reachable from at least one FR above).
 
 ## Definition of Done
 **Per task type:** `DRAFT → GATED` (oracle 1000/1000 both directions, golden fixture committed) `→ FINAL` (ID reconciled non-PROVISIONAL against `MISS-02`, curriculum ref confirmed against `MISS-01`). Only `FINAL` (or, within the family pilot only, `GATED` per ASM-08) types compile into a service's active registry.

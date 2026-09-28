@@ -1,5 +1,9 @@
 # 00 — Scope Lock
 
+## SCOPE AMENDMENT — SCOPE-AMD-05 (2026-09-28)
+
+The approved MathPrep roadmap requires independently registered students to have a safe path to a family learning profile. Additive local-development scope: an authenticated student initiates a short-lived pairing; a family owner selects and confirms one child profile; the initiating student reviews and confirms that same profile. Store a cross-tenant authorization link without merging principals, changing phone identity, moving tenant ownership, or granting consent. Enforce the existing active family-consent check whenever student learning data is read or changed. Restrict all synthetic-policy use to local development; production activation remains gated on approved policy and legal review. See `docs/student-profile-linking-contract.md` and migration `000115_student_profile_pairing`.
+
 ## SCOPE AMENDMENT — SCOPE-AMD-01 (этот ход)
 
 Директива оператора: «go to the next tasks one, by one each for all types from 1st to the university grade» отменяет прежнее ограничение скоупа до 3 и 6 класса (ASM-02) и прежний вывод вуза за скоуп (OOS-04).
