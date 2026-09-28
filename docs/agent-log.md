@@ -1,5 +1,14 @@
 # Agent log
 
+## 2026-09-29 — Legacy student phone enrollment scope and migration
+
+- Added SCOPE-AMD-06 and FR-012 for a legacy student to prove existing credentials, enter and OTP-verify their own phone, and only then receive a trusted-device session. Updated traceability; this also maps the previously unmapped FR-011.
+- Added the cross-service trust-boundary contract in `docs/student-phone-enrollment-contract.md`.
+- Added additive migration `000118_student_phone_enrollment`: a device-bound, ten-minute one-use intent with no raw phone/OTP/password/guardian/consent data; active student-membership scope trigger; terminal-state binding scrub; least-privilege API writes; retention-role cleanup after 24 hours.
+- Added a migration contract test. Rehearsed both up and down inside a rolled-back transaction against the existing `mathprep` database; table creation, column-scoped API privileges, retention-role cleanup, revokes, and rollback all passed. Applied the additive migration atomically as ledger `0040_student_phone_enrollment` with checksum `d32bf54527a137622e72894602fa5262180ec461b6e58a045761b9f0adfbded3`.
+- Platform API readiness integration passed against the live ledger/grants. API/Auth/frontend service integration, synthetic end-to-end validation, local stack health after rebuild, and separate repo commits are in progress.
+- Graphify was not run because the repository already contains modified generated graph files and an untracked graph snapshot that predate this change; preserve those user/session artifacts.
+
 ## 2026-09-28 — Halyk ePay invoice suffix uniqueness
 
 - Added migration `000106_halyk_invoice_suffix_uniqueness` with a partial unique expression index on the last six characters of non-null `halyk_epay` invoice IDs. This enforces Halyk ePay's merchant invoice uniqueness rule in addition to the existing full-ID index.
@@ -1154,3 +1163,7 @@ Owner-authorized all-age independent student onboarding requires a useful privat
 - A full student-practice run against the actual local Taskgen and Grader containers exposed that `generation_request.locale` had not been applied to the shared `mathprep` database. Taskgen's catalog-only health probe had reported healthy although `POST /v1/generation-requests` failed with PostgreSQL `column "locale" ... does not exist`.
 - Applied the existing canonical additive migration `000094_generation_request_locale` atomically to the running `mathprep` DB, recorded checksum `9efd94f321b4bb95be83f8b4b8e67f9247fe9162211f3fa0e8ff70da8846e17d`, and verified the non-null locale column, RU/KK/EN dictionary entries and `taskgen_svc` insert grant. This reconciles the live DB with the previously verified migration contract; no real student data was changed.
 - The self-profile practice integration test now supports explicit real engine URLs and passed against the actual containers: create private profile, generate through Taskgen, grade through Grader, verify history/session ownership, and assert mutable fixture cleanup. `GOTOOLCHAIN=auto go test ./...` passes with the required Go 1.27.1 toolchain. Graphify output remains untouched because its generated directory has pre-existing user changes.
+
+- Live API/OTP E2E found that 000118 declared `device_binding NOT NULL` while its terminal-state invariant and API finalizer scrub that value. Added additive migration `000119_student_phone_enrollment_binding_scrub` to align the column with the existing invariant; rollback refuses while scrubbed terminal records remain.
+
+- Post-correction live E2E passed: registration OTP, legacy password login without a session, phone-required state, OTP destination mismatch rejection, correct bound OTP finalization/session issuance, OTP replay rejection, and database confirmation that the completed intent's binding is scrubbed. Synthetic identity was sanitized/revoked and fixture intents removed.

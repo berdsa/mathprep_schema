@@ -55,6 +55,12 @@ The schema contract is limited to expiring, one-use intent state. It does not cr
 
 Migration `000114_student_access_phone_intent` depends on the pre-existing platform identity tables (`access_tenants`, `access_principals`, `access_guardian_relationships`, `platform_children`, and `platform_accounts`) that are used by existing platform migrations but are not defined in this repository's migration source. Deployment must validate the exact live table keys/columns and compatible migration ledger before rollout. This amendment does not close that source-of-truth gap or authorize a direct shared-database application by this migration author.
 
+## SCOPE AMENDMENT — SCOPE-AMD-06 (2026-09-29)
+
+Operator-approved recovery for an existing student account that predates phone verification: after the student proves their existing password, they may enter and verify their own phone by Auth OTP before receiving a session on an untrusted device. Auth owns OTP/challenge and session state in Redis. Platform API creates a short-lived one-use intent bound to the already-authenticated principal, active student membership, and device digest; it stores no unverified phone. Auth validates the destination against that intent before WhatsApp-first OTP delivery, with rate-limited SMS fallback. Only successful OTP proof to the exact destination may atomically create the verified phone identity, consume the intent, and issue a trusted-device session.
+
+This flow does not use a guardian's phone, create or merge a learner, infer age/guardian/consent, or grant family access. Existing verified-phone and trusted-device login behavior remains unchanged. Context switching into a student account cannot use a different active user's session as proof: verified-phone students must complete their own OTP; students without a verified phone must sign out and authenticate directly to prove their password and phone. Intents are one-use, expire within 10 minutes, are device-bound, contain no raw phone, and are retained no longer than 24 hours after expiry/completion. This additive scope does not authorize production use before the existing minor-data, privacy, messaging, and legal gates are closed.
+
 
 
 | Поле | Значение | Тег |
