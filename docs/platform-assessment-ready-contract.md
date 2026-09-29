@@ -15,6 +15,9 @@ join-request reference, class, recipient/tenant/kind/reference uniqueness,
 test-session, and push-outbox constraints used by migration 000123. The
 migration checks for those relations, columns, key constraints, and the
 existing outbox identity index and aborts if they are absent or incompatible.
+Foreign-key preflight compares catalog relation OIDs and ordered key-column
+names, not the display formatting of `pg_get_constraintdef`; PostgreSQL may
+render the same FK with or without explicit schema qualification.
 
 This does not recover the historical source migration, certify every property
 of the deployed base schema, or make an empty database bootstrappable from the
@@ -39,10 +42,13 @@ key; `assessment_ready` is added to the allowed event kinds. The producer must
 insert the inbox and outbox rows in the same transaction and enqueue only when
 the inbox insert returns a newly created ID.
 
-The Platform API may insert the new `session_id` column; this migration grants
-only `INSERT(session_id)` to `platform_api_svc`. It grants no inbox reads,
-updates, deletes, or broader outbox access. Existing table/column permissions
-remain as they were before the migration.
+Migration `000123` grants only the new `INSERT(session_id)` column to
+`platform_api_svc`; the companion migration `000124_platform_notification_api_grants`
+adds the least-column reads and inbox insert/read-state update privileges
+required by both the existing placement notification flow and this assessment
+flow. Neither migration grants notification deletion, writes to recipient
+resolution tables, nor broader outbox access. See
+`platform-notification-api-grants-contract.md` for the exact column contract.
 
 ## Producer and recipient boundary
 

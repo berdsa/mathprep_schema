@@ -27,11 +27,16 @@ func TestPlatformAssessmentReadyMigrationContract(t *testing.T) {
 		"baseline platform table columns are incomplete",
 		"baseline platform table constraints/indexes do not match the reviewed contract",
 		"baseline inbox reference, class, recipient, and tenant UUID columns to be NOT NULL",
-		"FOREIGN KEY (reference_id) REFERENCES mathprep.platform_join_requests(id)",
-		"FOREIGN KEY (class_id) REFERENCES mathprep.platform_classes(id)",
+		"c.confrelid='mathprep.platform_join_requests'::regclass",
+		"ARRAY['reference_id']::text[]",
+		"c.confrelid='mathprep.platform_classes'::regclass",
+		"ARRAY['class_id']::text[]",
 		"UNIQUE (recipient_principal_id, tenant_id, kind, reference_id)",
-		"FOREIGN KEY (test_id) REFERENCES mathprep.platform_tests(id)",
-		"FOREIGN KEY (notification_id, recipient_principal_id, event_kind) REFERENCES mathprep.platform_notifications(id, recipient_principal_id, kind)",
+		"c.confrelid='mathprep.platform_tests'::regclass",
+		"ARRAY['test_id']::text[]",
+		"ARRAY['notification_id','recipient_principal_id','event_kind']::text[]",
+		"ARRAY['id','recipient_principal_id','kind']::text[]",
+		"array_agg(a.attname::text ORDER BY k.ordinality)",
 		"ADD COLUMN session_id UUID",
 		"ALTER COLUMN reference_id DROP NOT NULL",
 		"REFERENCES mathprep.platform_learning_sessions(id)",
@@ -69,7 +74,7 @@ func TestPlatformAssessmentReadyMigrationContract(t *testing.T) {
 
 	upSum := fmt.Sprintf("%x", sha256.Sum256(upBytes))
 	downSum := fmt.Sprintf("%x", sha256.Sum256(downBytes))
-	if upSum != "ad58945cc1e2a546c1fe441f703058352ce596a57c48e8c76dbdab79dd662afa" {
+	if upSum != "df82d702e5373bf2da138febd4bae2221f8b137a48d2a8d9d63acfd6eeb506d9" {
 		t.Errorf("up checksum changed: %s", upSum)
 	}
 	if downSum != "689ef073561e7bb8824ec12ce79bab656ef3ab08b418d1b3e0a8174f5d527f58" {

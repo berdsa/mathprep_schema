@@ -60,13 +60,31 @@ BEGIN
         WHERE c.conrelid='mathprep.platform_notifications'::regclass
           AND c.conname='platform_notifications_reference_id_fkey'
           AND c.contype='f' AND c.confrelid='mathprep.platform_join_requests'::regclass
-          AND pg_get_constraintdef(c.oid) LIKE 'FOREIGN KEY (reference_id) REFERENCES mathprep.platform_join_requests(id)%'
+          AND (
+              SELECT array_agg(a.attname::text ORDER BY k.ordinality)
+              FROM unnest(c.conkey) WITH ORDINALITY AS k(attnum, ordinality)
+              JOIN pg_attribute a ON a.attrelid=c.conrelid AND a.attnum=k.attnum
+          ) = ARRAY['reference_id']::text[]
+          AND (
+              SELECT array_agg(a.attname::text ORDER BY k.ordinality)
+              FROM unnest(c.confkey) WITH ORDINALITY AS k(attnum, ordinality)
+              JOIN pg_attribute a ON a.attrelid=c.confrelid AND a.attnum=k.attnum
+          ) = ARRAY['id']::text[]
     ) OR NOT EXISTS (
         SELECT 1 FROM pg_constraint c
         WHERE c.conrelid='mathprep.platform_notifications'::regclass
           AND c.conname='platform_notifications_class_id_fkey'
           AND c.contype='f' AND c.confrelid='mathprep.platform_classes'::regclass
-          AND pg_get_constraintdef(c.oid) LIKE 'FOREIGN KEY (class_id) REFERENCES mathprep.platform_classes(id)%'
+          AND (
+              SELECT array_agg(a.attname::text ORDER BY k.ordinality)
+              FROM unnest(c.conkey) WITH ORDINALITY AS k(attnum, ordinality)
+              JOIN pg_attribute a ON a.attrelid=c.conrelid AND a.attnum=k.attnum
+          ) = ARRAY['class_id']::text[]
+          AND (
+              SELECT array_agg(a.attname::text ORDER BY k.ordinality)
+              FROM unnest(c.confkey) WITH ORDINALITY AS k(attnum, ordinality)
+              JOIN pg_attribute a ON a.attrelid=c.confrelid AND a.attnum=k.attnum
+          ) = ARRAY['id']::text[]
     ) OR NOT EXISTS (
         SELECT 1 FROM pg_constraint c
         WHERE c.conrelid='mathprep.platform_notifications'::regclass
@@ -83,7 +101,16 @@ BEGIN
         WHERE c.conrelid='mathprep.platform_learning_sessions'::regclass
           AND c.conname='platform_learning_sessions_test_id_fkey'
           AND c.contype='f' AND c.confrelid='mathprep.platform_tests'::regclass
-          AND pg_get_constraintdef(c.oid) LIKE 'FOREIGN KEY (test_id) REFERENCES mathprep.platform_tests(id)%'
+          AND (
+              SELECT array_agg(a.attname::text ORDER BY k.ordinality)
+              FROM unnest(c.conkey) WITH ORDINALITY AS k(attnum, ordinality)
+              JOIN pg_attribute a ON a.attrelid=c.conrelid AND a.attnum=k.attnum
+          ) = ARRAY['test_id']::text[]
+          AND (
+              SELECT array_agg(a.attname::text ORDER BY k.ordinality)
+              FROM unnest(c.confkey) WITH ORDINALITY AS k(attnum, ordinality)
+              JOIN pg_attribute a ON a.attrelid=c.confrelid AND a.attnum=k.attnum
+          ) = ARRAY['id']::text[]
     ) OR NOT EXISTS (
         SELECT 1 FROM pg_constraint c
         WHERE c.conrelid='mathprep.platform_learning_sessions'::regclass
@@ -112,7 +139,16 @@ BEGIN
         WHERE c.conrelid='mathprep.platform_push_outbox'::regclass
           AND c.conname='platform_push_outbox_notification_identity_fkey'
           AND c.contype='f' AND c.confrelid='mathprep.platform_notifications'::regclass
-          AND pg_get_constraintdef(c.oid) LIKE 'FOREIGN KEY (notification_id, recipient_principal_id, event_kind) REFERENCES mathprep.platform_notifications(id, recipient_principal_id, kind)%'
+          AND (
+              SELECT array_agg(a.attname::text ORDER BY k.ordinality)
+              FROM unnest(c.conkey) WITH ORDINALITY AS k(attnum, ordinality)
+              JOIN pg_attribute a ON a.attrelid=c.conrelid AND a.attnum=k.attnum
+          ) = ARRAY['notification_id','recipient_principal_id','event_kind']::text[]
+          AND (
+              SELECT array_agg(a.attname::text ORDER BY k.ordinality)
+              FROM unnest(c.confkey) WITH ORDINALITY AS k(attnum, ordinality)
+              JOIN pg_attribute a ON a.attrelid=c.confrelid AND a.attnum=k.attnum
+          ) = ARRAY['id','recipient_principal_id','kind']::text[]
     ) OR to_regclass('mathprep.platform_notifications_push_outbox_identity_uq') IS NULL THEN
         RAISE EXCEPTION '000123 baseline platform table constraints/indexes do not match the reviewed contract';
     END IF;

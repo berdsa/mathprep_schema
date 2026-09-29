@@ -1,5 +1,21 @@
 # Agent log
 
+# 2026-09-29 — assessment-ready preflight qualification fix
+
+- Corrected migration `000123_platform_assessment_ready` after the rollback rehearsal exposed that PostgreSQL's `pg_get_constraintdef` omits explicit `mathprep.` qualifiers for referenced tables. The false-negative affected only baseline verification; no source migration was applied.
+- Foreign-key preflight now requires the expected `confrelid` relation OID and compares ordered source/referenced key-column names from `pg_constraint.conkey/confkey` and `pg_attribute` for the join-request, class, test, and exact composite outbox identity FKs. This is robust to PostgreSQL's display qualification while retaining fail-closed checks on both relation and key columns.
+- Updated the static migration contract test, pinned checksum, and recovered-baseline documentation. No database query, apply, rollback, or source edit was performed during this fix.
+- Current 000123 up SHA-256: `df82d702e5373bf2da138febd4bae2221f8b137a48d2a8d9d63acfd6eeb506d9`; down SHA-256 remains `689ef073561e7bb8824ec12ce79bab656ef3ab08b418d1b3e0a8174f5d527f58`.
+- Validation: `GOTOOLCHAIN=auto go test ./migrations -count=1`, `GOTOOLCHAIN=auto go test ./... -count=1`, `GOTOOLCHAIN=auto go vet ./...`, and `git diff --check` passed. `graphify update <temporary-schema-copy> --no-cluster` completed (741 nodes / 750 edges; it reported the existing zero-node `widget_config_expected.json` warning); existing graph artifacts in this worktree were preserved. No migration or database source was applied.
+
+# 2026-09-29 — Platform API notification column grants
+
+- Added additive migration `000124_platform_notification_api_grants` for notification SQL that was previously masked by the broad local runtime role. It fails closed unless `platform_api_svc`, the inbox/session/outbox relations, all exact columns used in producer/list/read scope, and the existing 000102 outbox identity INSERT grants exist.
+- Grants the Platform API column-only SELECT needed to resolve placement and test-assessment recipients and authorize inbox access; INSERT only for the inbox fields written by the two producers; SELECT of inbox `id` (within the list SELECT set, also required for `RETURNING id`); and UPDATE of only `read_at`. Outbox grants and runtime login memberships are unchanged. Added exact revokes in the down migration.
+- Documented the contract in `docs/platform-notification-api-grants-contract.md` and updated the assessment-ready contract to explain the 000123/000124 split. A read-only live privilege audit found that `platform_api_svc` lacked inbox and recipient-resolution privileges while `mathprep_platform_local` had broader inbox table privileges; this migration addresses group-role grants without changing local role grants.
+- No `docs/srd` edits, database apply/read in this implementation step, other-repo changes, commit, or push. Up SHA-256: `9001fa09c1f50765a2759d0f5d40d7c3caeab7a445786b57c5905e0790b22f99`; down SHA-256: `eff7eb58488416409cbadd267c3f9ce5bb3fa712900e95aebdf3e5e3d323febe`.
+- Validation: `GOTOOLCHAIN=auto go test ./migrations -count=1`, `GOTOOLCHAIN=auto go test ./... -count=1`, `GOTOOLCHAIN=auto go vet ./...`, and `git diff --check` passed. `graphify update <temporary-schema-copy> --no-cluster` completed (750 nodes / 760 edges; it reported the existing zero-node `widget_config_expected.json` warning); existing graph output in this worktree was preserved. No migration was applied to a database.
+
 # 2026-09-29 — assessment-ready inbox schema extension
 
 - Plan: add only the canonical schema step for a typed `assessment_ready` inbox/outbox event, guarded by compatibility checks against the recovered live baseline. Preserve the existing placement reference FK, constrain assessment references to a typed learning-session FK, make assessment notifications idempotent per recipient/tenant/session, and refuse rollback while event rows remain.
@@ -1197,3 +1213,8 @@ Owner-authorized all-age independent student onboarding requires a useful privat
 - Live API/OTP E2E found that 000118 declared `device_binding NOT NULL` while its terminal-state invariant and API finalizer scrub that value. Added additive migration `000119_student_phone_enrollment_binding_scrub` to align the column with the existing invariant; rollback refuses while scrubbed terminal records remain.
 
 - Post-correction live E2E passed: registration OTP, legacy password login without a session, phone-required state, OTP destination mismatch rejection, correct bound OTP finalization/session issuance, OTP replay rejection, and database confirmation that the completed intent's binding is scrubbed. Synthetic identity was sanitized/revoked and fixture intents removed.
+## 2026-09-29 — Assessment-ready migrations applied and verified locally
+
+- After rollback-only up rehearsal, applied 000123 and 000124 atomically to the existing `mathprep` database as ledgers `0045_platform_assessment_ready` (`df82d702e5373bf2da138febd4bae2221f8b137a48d2a8d9d63acfd6eeb506d9`) and `0046_platform_notification_api_grants` (`9001fa09c1f50765a2759d0f5d40d7c3caeab7a445786b57c5905e0790b22f99`). Catalog checks and Platform API readiness pass. A `SET ROLE platform_api_svc` transaction exercised the scoped inbox/list/read/write and outbox SQL then rolled back.
+- First rehearsal safely exposed a false-negative 000123 FK preflight because PostgreSQL formatted FK target table names without schema qualifiers. Replaced string matching with catalog relation identity and ordered source/target key-column checks, updated contract tests/checksum, then repeated the full rollback rehearsal successfully before applying.
+- One API integration test was initially invoked with the restricted runtime role, so its test-only fixture cleanup/count probe failed. The uniquely identified synthetic fixture was removed with the owner DB connection; the test was rerun successfully with that owner connection. No unrelated rows were modified.
