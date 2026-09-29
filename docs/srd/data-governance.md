@@ -17,7 +17,15 @@
 Unchanged: `ASM-08` — family-only pilot, operator is the legal guardian of the data subjects. Does not extend to `client-access-expansion`; `OPEN-02`'s fail-closed gate stands there.
 
 ## Minimization & retention
-Unchanged in substance: `raw_input` 90 days then redacted to verdict+reason_code only; `seed`+`params_json` retained indefinitely (reproducibility, CON-05); `SUBMISSION` verdict/reason/attempt indefinite, append-only; `TASK_SET`/`TASK_INSTANCE` indefinite; `MASTERY_TOPIC` current EMA only.
+Unchanged in substance: `raw_input` 90 days then redacted to verdict+reason_code only; `seed`+`params_json` retained indefinitely (reproducibility, CON-05); `SUBMISSION` verdict/reason/attempt indefinite, append-only; `TASK_SET`/`TASK_INSTANCE` indefinite; `MASTERY_TOPIC` current EMA plus the count of evidence observations contributing to that estimate.
+
+### Mastery evidence count
+
+`MASTERY_TOPIC.evidence_count` is a nonnegative count of parseable graded response events that actually update the row's EMA. Each counted observation corresponds to one `MASTERY_UPDATED` event written in the same transaction as the mastery update. `UNPARSEABLE` responses do not update mastery and do not count. An idempotent retry does not count again; it contributes only when a new submission is persisted and produces its own mastery update/event. The count is supporting context for interpreting an EMA, not a score, grade, attempt count, or analytics rollup.
+
+Migration `000122_mastery_topic_evidence_count` backfills from grouped `MASTERY_UPDATED` events. It fails closed unless every current mastery row has source events, every source event maps to a current row, the latest event timestamp matches `mastery_topic.updated_at`, and replaying each row's event scores in `(occurred_at, event_id)` order reproduces its stored EMA (within `1e-12` floating-point tolerance). It uses an insert/update trigger to initialize the count at one and add one for each change to the EMA observation; the trigger prevents callers from setting or resetting the derived count directly. The Platform API receives column-scoped SELECT for the count only. It receives no `EVENT_LOG` access. The existing grader role already has mastery-row DML required for EMA writes, so this migration adds no broader grader or journal privilege.
+
+The count contains no response text or identity beyond the row's existing pseudonymous student key. It is stored alongside the same moderate-sensitivity inferred proficiency data and follows the existing `MASTERY_TOPIC` retention and export rules.
 
 **New this pass:** `EVENT_LOG` retention is **indefinite by design** (FR-008's entire purpose is a complete history for later analytics) — this is a deliberate exception to the 90-day `raw_input` policy above, so the two must not be confused: `EVENT_LOG.payload_json` for a `SUBMISSION_GRADED` event should carry the verdict and reason_code, **not a copy of `raw_input`** — otherwise the 90-day minimization on `SUBMISSION.raw_input` is silently defeated by an indefinitely-retained duplicate in the journal. `[DERIVED]` — this is a genuine minimization requirement the new journal introduces; flagging it now rather than letting the developer discover it as a compliance gap later.
 
