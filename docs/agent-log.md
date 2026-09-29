@@ -1,5 +1,13 @@
 # Agent log
 
+# 2026-09-29 — assessment-ready inbox schema extension
+
+- Plan: add only the canonical schema step for a typed `assessment_ready` inbox/outbox event, guarded by compatibility checks against the recovered live baseline. Preserve the existing placement reference FK, constrain assessment references to a typed learning-session FK, make assessment notifications idempotent per recipient/tenant/session, and refuse rollback while event rows remain.
+- Added migration `000123_platform_assessment_ready` after `000122`. Its preflight fails closed unless all three existing platform tables, required columns, reviewed named constraints, and push-outbox identity index are present. It allows nullable `reference_id` only for the assessment event, adds `session_id`, extends both kind checks, adds a partial recipient/tenant/session unique index, and grants only `INSERT(session_id)` to `platform_api_svc`.
+- Added migration contract/checksum tests and `docs/platform-assessment-ready-contract.md`. The contract explicitly records that base creation DDL is absent from this canonical migration history; this migration does not solve clean bootstrap or assert complete recovery of the deployed base schema.
+- No `docs/srd` edits, service/frontend edits, live database reads/writes, migration application, or push. Up SHA-256: `ad58945cc1e2a546c1fe441f703058352ce596a57c48e8c76dbdab79dd662afa`; down SHA-256: `689ef073561e7bb8824ec12ce79bab656ef3ab08b418d1b3e0a8174f5d527f58`.
+- Validation: `GOTOOLCHAIN=auto go test ./migrations -count=1`, `GOTOOLCHAIN=auto go test ./... -count=1`, `GOTOOLCHAIN=auto go vet ./...`, and `git diff --check` passed. `graphify update <temporary-schema-copy> --no-cluster` completed (741 nodes / 750 edges; it reported the existing zero-node `widget_config_expected.json` warning); existing graph output in this worktree was preserved. No SQL migration was applied or executed against a database. Local commit follows.
+
 # 2026-09-29 — Mastery evidence count contract
 
 - Added canonical migration `000122_mastery_topic_evidence_count` with a nonnegative `BIGINT evidence_count` on `public.mastery_topic`. It initializes/backfills one count per transactional `MASTERY_UPDATED` event and uses a trigger to increment only when an EMA observation changes, so existing grader writes and idempotent-replay behavior remain aligned without granting direct count mutation.
