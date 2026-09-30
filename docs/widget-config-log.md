@@ -353,7 +353,7 @@ This log covers all 658 existing `task_type` rows after schema v0.3.9. Structure
 | `G5-DEC-013` | `TOL` | `NUMERIC` | `—` | not added: no existing plaintext DB row; deferred |
 | `G5-DEC-014` | `TOL` | `NUMERIC` | `—` | not added: no existing plaintext DB row; deferred |
 | `G5-DEC-015` | `EXACT-INT` | `NUMERIC` | `—` | not added: no existing plaintext DB row; deferred |
-| `G5-DIS-001` | `CANON` | `STRUCTURED_CANON` | `{"template":{"template":"{p1}^{e1} {p2}^{e2} ..."}}` | not added: no existing plaintext DB row; deferred |
+| `G5-DIS-001` | `CANON` | `STRUCTURED_CANON` | `{"template":{"template":"{factors}"}}` | not added: no existing plaintext DB row; deferred |
 | `G5-FRA-001` | `EXACT-RAT` | `FRACTION` | `—` | not added: no existing plaintext DB row; deferred |
 | `G5-FRA-002` | `EXACT-RAT` | `FRACTION` | `—` | not added: no existing plaintext DB row; deferred |
 | `G5-FRA-003` | `EXACT-RAT` | `FRACTION` | `—` | added: real fraction template |
