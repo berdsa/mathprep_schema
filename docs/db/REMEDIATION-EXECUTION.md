@@ -16,8 +16,8 @@ workflows. [CODE] `platform-api/internal/platformidentity/http.go:600-940`,
 
 Critical path: `DB-00 -> DB-01 -> DB-02 -> DB-03 -> GO-03 -> DB-04 ->
 DB-05 -> GO-05`; `GO-00` is complete and supplies DB-03/04, while GO-01/02
-can proceed after DB-01. GO-04 cannot complete until an immutable schema tag
-is published and consumers resolve it.
+can proceed after DB-01. GO-04 is not on this path because the remediation did
+not change the shared Go module.
 
 | Task | Owner | Repository | Steps / acceptance / rollback | Status |
 |---|---|---|---|---|
@@ -28,7 +28,7 @@ is published and consumers resolve it.
 | DB-03 | Senior DB Engineer | schema | `000131_engine_service_least_privilege` was rehearsed on the restored snapshot and applied live as ledger `0053_engine_service_least_privilege` (`dd866f…8bb911d`). It revokes taskgen/grader billing access, removes grader task-instance mutation, preserves taskgen generation and grader submission rights, and grants CAS queue lifecycle updates. Positive rolled-back mutation probes and negative denial probes passed in the isolated DB. Platform-role/default-privilege review remains. | PENDING |
 | DB-04 | Senior DB Engineer | schema | Catalog revalidation found no invalid indexes, no unvalidated FKs, no partitions, and no demonstrated query-plan integrity/performance gap requiring DDL. No speculative index or constraint was added. | NOT_APPLICABLE |
 | GO-01 | Senior Go Developer | taskgen, grader, cas | All reachable engine SQL is qualified as `public.*`: taskgen `14dba5a`, grader `16aae00`, CAS `b33a11e`. `GOTOOLCHAIN=auto go test ./...` passed in each repository; qualified reads also succeeded under `search_path=pg_catalog`. | DONE |
-| GO-02 | Senior Go Developer | platform-api, notifications, payments, auxiliary/auth | Reachable PA/NT SQL qualifies platform relations as `mathprep.*` and engine bridge relations as `public.*`; payments has no DB client. Auth is in platform-session mode, so its legacy `mathprep_auth` direct DB path is not reached. The bridge and limitation are documented in the audit. | DONE |
+| GO-02 | Senior Go Developer | platform-api, notifications, payments, auxiliary/auth, auxiliary/kaspi | Reachable PA/NT SQL qualifies platform relations as `mathprep.*` and engine bridge relations as `public.*`; canonical payments has no DB client. Auth is in platform-session mode, so its legacy `mathprep_auth` direct DB path is not reached. The legacy Kaspi repository is not a Compose build context; its standalone schema has no matching live table names. `GOTOOLCHAIN=auto go test ./...` passed there. The bridge and limitations are documented in the audit. | DONE |
 | GO-03 | Senior Go Developer | each active service | Existing taskgen/grader connections authenticate as the `mathprep` owner then use connection-level `SET ROLE` to group roles. Although resulting permissions are now restricted, the session can reset to the owner; dedicated non-owner login credentials and secret distribution are not available in the workspace. Do not claim this boundary is complete. | BLOCKED |
 | GO-04 | Senior Go Developer | schema + consumers | Verified module path `github.com/berdsa/mathprep_schema`, GitHub remote, and existing immutable `v0.3.10` consumer pins. This remediation changes migrations/docs only, not the shared Go module, so no new tag or consumer update is appropriate. Tracked local `replace ../schema` directives are existing development wiring and were not introduced or altered. | NOT_APPLICABLE |
 | DB-05 | Senior DB Engineer | schema / deploy runbook | Bounded writer freeze only if needed, service-by-service readiness, pre/post checks, explicit previous-image/config recovery. | PENDING — cannot claim live cutover before DB-00 through DB-04. |
@@ -38,9 +38,9 @@ is published and consumers resolve it.
 
 ## Verified migration and role facts
 
-`mathprep.schema_migrations` has 52 rows; it is the only live ledger. `public`
+`mathprep.schema_migrations` has 53 rows; it is the only live ledger. `public`
 has no migration ledger. The ledger contains a legacy platform stream plus
-canonical mappings, and the active platform API readiness check validates
+canonical mappings, including `0053_engine_service_least_privilege`, and the active platform API readiness check validates
 specific version/checksum pairs. [DB] `SELECT version, left(checksum,16) FROM
 mathprep.schema_migrations`; [CODE] `platform-api/cmd/platform-api/main.go:45-58`;
 [MIGRATION] `schema/migrations/000094_generation_request_locale.up.sql` and

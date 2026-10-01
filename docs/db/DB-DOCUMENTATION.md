@@ -9,7 +9,7 @@
 3. Platform API преимущественно использует явно квалифицированные `mathprep.*`, но также намеренно создаёт/читает `public.users` и `public.students` для bridge к engine [CODE]. Значит формула «backend только mathprep» неполна.
 4. Исходная SRD предписывает **одну** общую `mathprep schema` для `taskgen` и `grader` [DOC: `docs/srd/03-architecture.md:12-18`].
 5. Первые 97 миграций schema-репозитория созданы без квалификации либо явно в `public`; начиная с platform-контрактов появляются `mathprep.*` [MIGRATION]. Это противоречит SRD.
-6. У `mathprep` есть собственная таблица `schema_migrations` (52 применённых записи), но в schema-репозитории 130 файловых миграций; общего миграционного журнала `public` нет [DB][MIGRATION].
+6. У `mathprep` есть собственная таблица `schema_migrations` (53 применённые записи, включая validated remediation entry `0053_engine_service_least_privilege`), но в schema-репозитории 130 файловых миграций; общего миграционного журнала `public` нет [DB][MIGRATION].
 7. Следовательно это **смешанный результат: задуманная изоляция platform и фактически сложившийся legacy/default-schema engine**, а не подтверждённая единая архитектурная развилка. Уверенность: высокая для фактов, средняя для причин [INFERRED].
 8. Рекомендация: вариант **B — оставить две схемы, но формализовать границу и миграционное владение**, не переносить данные сейчас. Это минимизирует риск для живых student/answer данных [INFERRED].
 
@@ -17,7 +17,7 @@
 
 Порядок источников соблюдён: (1) `schema`: все `migrations/*.sql`, Go module, SRD, теги и журнал Git; (2) `graphify-out` каждого найденного backend-репозитория; (3) targeted code reading DSN и SQL; затем каталог живой БД и `pg_dump --schema-only --no-owner --schema=public --schema=mathprep` [MIGRATION][GRAPH][CODE][DB].
 
-Найдены git-репозитории backend: `schema`, `taskgen`, `grader`, `cas`, `analytics`, `platform-api`, `notifications`, `payments`, `generator`; frontend не анализировался. Graphify имеется и не пуст для `schema`, `taskgen`, `grader`, `cas`; его root snapshots устарели относительно HEAD (например taskgen graph от `9a4aedfd`, HEAD новее), поэтому использовался только как вторичный навигатор [GRAPH][GIT]. Для platform-api графа в корне не найдено [UNKNOWN].
+Найдены git-репозитории backend: `schema`, `taskgen`, `grader`, `cas`, `analytics`, `platform-api`, `notifications`, `payments`, `generator`, `auxiliary/auth`, `auxiliary/kaspi`; frontend не анализировался. Graphify имеется и не пуст для `schema`, `taskgen`, `grader`, `cas`; его root snapshots устарели относительно HEAD (например taskgen graph от `9a4aedfd`, HEAD новее), поэтому использовался только как вторичный навигатор [GRAPH][GIT]. Для platform-api графа в корне не найдено [UNKNOWN]. `auxiliary/kaspi` — legacy provenance: Compose builds sibling `payments`, its prototype is explicitly not a Compose build, and its standalone table names are absent from the live catalog [CODE][DB][DOC].
 
 Локально запущены `postgres:16`, taskgen, grader, platform-api, payments, notifications и Redis-контейнеры с именами `mathprep-platform-local-*`; это наблюдение, не изменение. Оно расходится с описанием «только отдельные docker run/no compose», но источник запуска не устанавливался [DB][UNKNOWN]. DSN в документе не раскрываются: пример из `.env.example` нормализуется как `postgres://mathprep:***@localhost:5432/mathprep` [CODE].
 
@@ -57,9 +57,9 @@
 | Learning | `platform_learning_sessions`, `platform_learning_answers`, `platform_learning_drafts`, `platform_learning_events`, `platform_learning_capabilities`, `platform_student_self_profile`, `platform_student_profile_link`, `platform_student_access_intent`, `platform_student_phone_enrollment_intent` | 113,263,158,15,34,1,10 |
 | Notification | `platform_notifications`, `platform_push_outbox`, `platform_push_preferences`, `platform_push_subscriptions`, `telegram_delivery_attempts`, `telegram_update_receipts` | 112,1 |
 | Curriculum/content | `curriculum_versions`, `topics`, `skills`, `item_versions`, `item_version_skills`, `items`, `adaptation_rule_versions`, `difficulty_overrides`, `difficulty_override_events`, `content_*` | 2,8,8,96,96,96,1 |
-| Assessment/pack/telemetry/ops | `attempts`, `attempt_answers`, `attempt_score_revisions`, `answer_evaluation_revisions`, `assistance_marks`, `packs`, `pack_*`, `skill_events`, `skill_event_exclusions`, `learner_skill_projection`, `jobs`, `job_attempts`, `operation_events`, `retention_runs`, `backup_runs`, `backup_artifact_manifests`, `restore_drills`, `slo_daily_aggregates`, `deletion_requests`, `retake_authorizations`, `profile_*`, `schema_migrations` | `profile_schedules` 4; `schema_migrations` 52 |
+| Assessment/pack/telemetry/ops | `attempts`, `attempt_answers`, `attempt_score_revisions`, `answer_evaluation_revisions`, `assistance_marks`, `packs`, `pack_*`, `skill_events`, `skill_event_exclusions`, `learner_skill_projection`, `jobs`, `job_attempts`, `operation_events`, `retention_runs`, `backup_runs`, `backup_artifact_manifests`, `restore_drills`, `slo_daily_aggregates`, `deletion_requests`, `retake_authorizations`, `profile_*`, `schema_migrations` | `profile_schedules` 4; `schema_migrations` 53 |
 
-`mathprep` не содержит user-defined sequences, views или materialized views [DB]. Полный список 95 имён и exact counts — приложение B. `schema_migrations` имеет `(version, checksum, applied_at, applied_by)` и 52 записи; её применённые версии/содержимое не выводятся во избежание лишней operational metadata, но count и columns проверены [DB].
+`mathprep` не содержит user-defined sequences, views или materialized views [DB]. Полный список 95 имён и exact counts — приложение B. `schema_migrations` имеет `(version, checksum, applied_at, applied_by)` и 53 записи; её применённые версии/содержимое не выводятся во избежание лишней operational metadata, но count и columns проверены [DB].
 
 ## 6. ER-диаграммы
 
@@ -102,7 +102,7 @@ erDiagram
 
 `schema/migrations/000001..000130` — SQL-first contract; Go module `github.com/berdsa/mathprep_schema` tagged and required by taskgen/grader/cas at `v0.3.10` [MIGRATION][CODE]. Module path соответствует каталогу schema, но taskgen/grader имеют другие import roots (`gitlab.com/math_gen/taskgen`, `github.com/math_gen/grader`) [CODE]. Tool runner в schema не найден как committed Go binary/config; применённый набор для `public` не имеет bookkeeping table [UNKNOWN].
 
-Drift: live `mathprep` содержит 95 таблиц и 52 migration records, которых schema migration tree не способен объяснить целиком; platform-api не содержит committed SQL migrations, хотя его Go code зависит от этих объектов [DB][CODE]. `public` содержит schema-contract tables и поздние billing tables, а `mathprep` — platform tables. Это two independent evolution streams without one authoritative applied-state journal [INFERRED].
+Drift: live `mathprep` содержит 95 таблиц и 53 migration records, которых schema migration tree не способен объяснить целиком; platform-api не содержит committed SQL migrations, хотя его Go code зависит от этих объектов [DB][CODE]. `public` содержит schema-contract tables и поздние billing tables, а `mathprep` — platform tables. Это two independent evolution streams without one authoritative applied-state journal [INFERRED].
 
 ## 9. Матрица доступа
 
@@ -202,7 +202,7 @@ Rollback: stop only affected service, restore previous image/DSN and revoke newl
 PGOPTIONS='-c default_transaction_read_only=on' pg_dump --schema-only --no-owner --schema=public --schema=mathprep 'postgres://mathprep:***@host/mathprep'
 ```
 
-В этом аудите она вернула 9,700 строк. Полный dump не помещён в Markdown намеренно: он содержит все дефиниции, но его включение дублировало бы machine-generated артефакт на сотни KiB; authoritative recreate artifact должен храниться как signed backup, не как вручную редактируемый документ [DB][INFERRED]. Это ограничение отчёта, которое DB-00/DB-02 обязаны закрыть в будущем manifest/backup runbook.
+В этом аудите она вернула 9,688 строк. Полный dump не помещён в Markdown намеренно: он содержит все дефиниции, но его включение дублировало бы machine-generated artifact на сотни KiB; authoritative recreate artifact должен храниться как signed backup, не как вручную редактируемый документ [DB][INFERRED]. Это ограничение отчёта, которое DB-00/DB-02 обязаны закрыть в будущем manifest/backup runbook.
 
 That limitation is now closed for the audited catalog: the complete, data-free
 live DDL extraction is tracked as
@@ -233,7 +233,7 @@ baseline, not a substitute for a migration runner.
 The original inventory was rechecked before implementation: it still has 33
 relations in `public` and 95 in `mathprep`, with no partitions, materialized
 views, RLS policies, rules, or user-defined event triggers. The live
-`mathprep.schema_migrations` ledger has 52 rows and `public` has no ledger.
+`mathprep.schema_migrations` ledger has 53 rows and `public` has no ledger.
 The durable table-by-table classification, exact snapshot counts, candidate
 limits, SQL-access manifest, catalog query forms, and the second inventory
 reconciliation are in `UNUSED-TABLES-AUDIT.md`. [DB]

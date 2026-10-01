@@ -8,8 +8,8 @@ perform removal of any relation.
 
 The audit covered the current Go sources and current container topology for
 `taskgen`, `grader`, `cas`, `platform-api`, `notifications`, `payments`,
-`generator`, and `auxiliary/auth`, excluding vendored code and archived source
-from runtime evidence. The running containers were `postgres`, taskgen,
+`generator`, `auxiliary/auth`, and `auxiliary/kaspi`, excluding vendored code
+and archived source from runtime evidence. The running containers were `postgres`, taskgen,
 grader, platform-api, notifications, payments, auth, web, and Redis; no CAS
 container was running. [DB] `docker ps` 2026-10-01; [CODE]
 `taskgen/cmd/taskgen/main.go:21-29`, `grader/cmd/grader/main.go`,
@@ -38,7 +38,15 @@ tables, FKs, migration text, and static negative searches do not prove a table
 is obsolete. The active Auth container is configured in platform-session mode,
 so its legacy direct database path is not reached
 (`auxiliary/auth/cmd/server/main.go:45-72`,
-`deploy/local/docker-compose.yml:112-130`). Potential external administrative
+`deploy/local/docker-compose.yml:102-169`). The legacy Kaspi repository was
+also inspected: Compose builds the sibling `payments` repository, not
+`auxiliary/kaspi`; its five standalone table names (`organization`, `city`,
+`device`, `orders`, `payment`) are absent from both live schemas, and its
+prototype Dockerfile is explicitly documented as unused by Compose
+(`auxiliary/kaspi/Dockerfile.payments:1-14`,
+`auxiliary/kaspi/docs/provider-adapters.md:1-10`). Its legacy unqualified SQL
+therefore establishes provenance only, not a current consumer of a live table.
+Potential external administrative
 or operational consumers are still not ruled out. Therefore no table is called
 "confirmed unused".
 
@@ -187,7 +195,7 @@ or active query even where code does not name it directly.
 | `mathprep.restore_drills` | P | no current restore-drill runner | 0 | operations-design contract; medium |
 | `mathprep.retake_authorizations` | P | no enabled assessment service | 0 | assessment subsystem; medium |
 | `mathprep.retention_runs` | P | no current retention runner | 0 | operations-design contract; medium |
-| `mathprep.schema_migrations` | R | platform startup/readiness ledger | 52 | PA readiness query; high |
+| `mathprep.schema_migrations` | R | platform startup/readiness ledger | 53 | PA readiness query; high |
 | `mathprep.skill_event_exclusions` | P | analytics deferred | 0 | analytics/content subsystem; high |
 | `mathprep.skill_events` | P | analytics deferred | 0 | analytics/content subsystem; high |
 | `mathprep.skill_prerequisites` | P | no enabled content service | 0 | content subsystem; medium |
@@ -238,8 +246,9 @@ WHERE connamespace IN ('public'::regnamespace,'mathprep'::regnamespace);
 
 Migration provenance is mixed: `public` is described by
 `schema/migrations/000001` onward but has no ledger; `mathprep.schema_migrations`
-has 52 applied records, including legacy baseline labels (`0002_schema` through
-`0019_web_push_subscriptions`) and canonical mappings (`0020` onward). [DB]
+has 53 applied records, including legacy baseline labels (`0002_schema` through
+`0019_web_push_subscriptions`), canonical mappings (`0020` onward), and the
+validated remediation entry `0053_engine_service_least_privilege`. [DB]
 live ledger query; [MIGRATION] `schema/migrations/000094_generation_request_locale.up.sql`,
 `000098_billing_foundation.up.sql`, `000099` onward; [DOC]
 `deploy/local/docs/platform-schema-source-gaps.md:1-45`.
