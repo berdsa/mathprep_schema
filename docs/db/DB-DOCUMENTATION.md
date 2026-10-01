@@ -204,6 +204,17 @@ PGOPTIONS='-c default_transaction_read_only=on' pg_dump --schema-only --no-owner
 
 В этом аудите она вернула 9,700 строк. Полный dump не помещён в Markdown намеренно: он содержит все дефиниции, но его включение дублировало бы machine-generated артефакт на сотни KiB; authoritative recreate artifact должен храниться как signed backup, не как вручную редактируемый документ [DB][INFERRED]. Это ограничение отчёта, которое DB-00/DB-02 обязаны закрыть в будущем manifest/backup runbook.
 
+That limitation is now closed for the audited catalog: the complete, data-free
+live DDL extraction is tracked as
+[`LIVE-CATALOG-DDL-2026-10-01.sql`](LIVE-CATALOG-DDL-2026-10-01.sql), 9,688
+lines, SHA-256
+`0b370703691dfa820053f770b09619f186c47f40e3e78c8a00eb6898a7526209`.
+It contains all 128 table definitions, columns, constraints, indexes,
+functions, triggers, schemas, and ACLs, with `--no-owner`; it contains no table
+data, credentials, or password hashes. The restricted DB-00 logical backup
+remains the restoration artifact; this checked-in file is a reviewed catalog
+baseline, not a substitute for a migration runner.
+
 ## Приложение B. Verification queries and results
 
 Использованы: `pg_namespace`/`pg_roles`/`pg_class`, `information_schema.columns`, `pg_constraint`, `pg_index`, `pg_type`, `pg_proc`, `pg_trigger`, `pg_policies`, `pg_auth_members`, `pg_db_role_setting`, `pg_extension`, `pg_default_acl`, `information_schema.role_table_grants`, `pg_event_trigger`; exact count каждой таблицы через generated `SELECT count(*)`. Финальный re-check: schemas=2, tables=`public:33`, `mathprep:95`, total=128; functions=24; triggers=31; policies=0; sequences=0; extensions=`plpgsql` only [DB].

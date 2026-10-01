@@ -30,6 +30,12 @@ reason to replay or invent old ledger entries. The required resolution is to
 recover the authoritative legacy base migration repository or obtain a
 reviewed, reproducible baseline with explicit owner approval.
 
+The live catalog is nevertheless reproducibly captured as the data-free
+`LIVE-CATALOG-DDL-2026-10-01.sql` baseline (SHA-256
+`0b370703691dfa820053f770b09619f186c47f40e3e78c8a00eb6898a7526209`). It
+supports provenance review and drift detection; it must not be replayed as a
+historical migration against an existing database.
+
 ## Runner contract
 
 Before any subsequent live migration, the runner must:
