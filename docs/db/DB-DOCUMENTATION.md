@@ -272,3 +272,8 @@ queue lifecycle update rights and append-only event write. No table, data, or
 schema location changed. [MIGRATION]
 `migrations/000131_engine_service_least_privilege.up.sql`; [DB] live ledger
 and grant checks after commit.
+
+Final post-apply catalog reconciliation: `public=33`, `mathprep=95`,
+`mathprep.schema_migrations=53`, user functions=24, user triggers=31,
+unvalidated foreign keys=0, invalid indexes=0, policies=0. This is structural
+reconciliation only; live row totals remain time-varying operational data.
