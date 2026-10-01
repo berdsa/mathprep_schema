@@ -7,7 +7,7 @@ events or checksums.
 | Stream | Objects | Source / bookkeeping | State |
 |---|---|---|---|
 | Engine | `public.*` task, generation, submission, CAS, journal, and billing relations | `schema/migrations/000001` through `000098` and later engine changes; **no live public ledger exists** | Historical application order cannot be proven from the catalog alone. New cross-cutting remediation is recorded in the existing platform ledger pending a dedicated verified engine runner. |
-| Legacy platform baseline | foundational `mathprep.*` access, platform, learning, school, and content relations | live `mathprep.schema_migrations` labels `0002_schema` through `0019_web_push_subscriptions` | Applied records exist, but corresponding full source DDL is absent from the active workspace. Fresh bootstrap is blocked. |
+| Catalog-derived baseline | all `public`/`mathprep` definitions as captured 2026-10-01 | `bootstrap/2026-10-01/catalog.sql`, marker `9000_catalog_baseline_20261001` | New reconstruction for fresh installs and existing adoption; never a claim that legacy source was recovered. |
 | Canonical platform additions | named `mathprep.*` and bridge grants | `schema/migrations/000099` onward mapped to live ledger labels `0020` onward | Applied values/checksums are verified directly by readiness checks and the ledger. |
 | Remediation boundary | role grants only; no object relocation | `schema/migrations/000131_engine_service_least_privilege.up.sql` -> live ledger `0053_engine_service_least_privilege` | Applied 2026-10-01 with SHA-256 `dd866f285d4e1db7e7513837d31d55f168eecd0b91b6c14da90919c6d8bb911d`. |
 
@@ -47,8 +47,18 @@ Before any subsequent live migration, the runner must:
 4. apply source and ledger insert atomically; and
 5. rerun schema/grant fingerprints before service rollout.
 
-The present workspace has no committed generic runner that implements this
-contract. `000131` was applied through an explicit, transaction-bounded
-operator session after restored-snapshot rehearsal; that proven procedure is
-documented in `REMEDIATION-EXECUTION.md`, but it is not misrepresented as a
-reusable runner.
+`scripts/dbmigrate.sh` now implements this contract for transactional SQL:
+advisory lock, bounded timeouts, source checksum verification, runner state,
+and atomic ledger write. Nontransactional migrations must be split and handled
+explicitly; none is in this remediation.
+
+## Follow-up resolution path, 2026-10-01
+
+Only `0019_web_push_subscriptions.sql` was found in the archived monolith's
+migration directory; historical recovery remains partial. If full recovery
+fails, adopt a new catalog-derived baseline for clean installs and a
+fingerprint-checked adoption marker for existing databases. Preserve old
+ledger records and avoid replaying already embodied migrations. This is
+proposed work, not a completed bootstrap. The declared migrator currently
+lacks schema CREATE and ledger INSERT rights. [DB][CODE]
+See `UNBLOCK-AND-COMPLETE-PROMPT.md` for executable resolution steps.

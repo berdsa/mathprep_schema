@@ -5,7 +5,7 @@
 ## 1. Краткое резюме
 
 1. В живой БД есть ровно две пользовательские схемы: `public` (33 таблицы) и `mathprep` (95 таблиц) [DB].
-2. Гипотеза владельца в основном верна: `taskgen` использует не квалифицированные имена и обычный `search_path`, поэтому работает с `public`; его healthcheck прямо проверяет `public.generation_request` [CODE].
+2. Исторически taskgen использовал неквалифицированные имена; после GO-01 рабочие engine SQL квалифицированы как `public.*`. Live taskgen/grader всё ещё подключаются как superuser `mathprep` с startup role, поэтому login isolation не завершена [CODE][DB].
 3. Platform API преимущественно использует явно квалифицированные `mathprep.*`, но также намеренно создаёт/читает `public.users` и `public.students` для bridge к engine [CODE]. Значит формула «backend только mathprep» неполна.
 4. Исходная SRD предписывает **одну** общую `mathprep schema` для `taskgen` и `grader` [DOC: `docs/srd/03-architecture.md:12-18`].
 5. Первые 97 миграций schema-репозитория созданы без квалификации либо явно в `public`; начиная с platform-контрактов появляются `mathprep.*` [MIGRATION]. Это противоречит SRD.
@@ -30,7 +30,7 @@
 
 Только `plpgsql` установлен. Пользовательских enum/domain и standalone composite types нет (128 catalog composite types — автоматически созданные row types таблиц); materialized views, RLS policies, rules и event triggers отсутствуют; `LISTEN/NOTIFY` в DDL/коде не найден [DB][CODE]. Два role-level `search_path`: `mathprep_app` и `mathprep_migrator` = `mathprep, pg_catalog`; у `taskgen_svc`/`grader_svc`/`cas_svc` настройки нет, поэтому используется серверный `"$user", public` [DB]. Это непосредственная техническая причина попадания unqualified SQL taskgen в `public` [INFERRED].
 
-Живые login-роли: `mathprep` (superuser), `mathprep_app`, `mathprep_migrator`, `mathprep_notifications_svc`, `mathprep_platform_local`; сервисные `taskgen_svc`, `grader_svc`, `cas_svc`, `platform_api_svc` сейчас `NOLOGIN` [DB]. Это расходится с README/AGENTS, называющими первые две ролями подключения [DOC][DB]. Default privileges отсутствуют [DB].
+Живые login-роли: `mathprep` (superuser), `mathprep_app`, `mathprep_migrator`, `mathprep_notifications_svc`, `mathprep_platform_local`; сервисные group roles `taskgen_svc`, `grader_svc`, `cas_svc`, `platform_api_svc` — NOLOGIN [DB]. Default privileges **существуют**: `mathprep_owner/mathprep` tables → `mathprep_app`; `mathprep/public` tables и sequences → taskgen/grader с широкими правами. Предыдущее заявление об их отсутствии ошибочно. Migrator membership не обеспечивает CREATE в обеих схемах или INSERT в ledger; все 128 таблиц принадлежат `mathprep` [DB].
 
 ## 4. Схема `public`
 
@@ -108,15 +108,25 @@ Drift: live `mathprep` содержит 95 таблиц и 53 migration records,
 
 | Сервис | Роль/DSN evidence | `public` | `mathprep` |
 |---|---|---|---|
-| taskgen | `DATABASE_URL`, unqualified SQL, `taskgen_svc` documented | R/W: generation/catalog/event | нет direct SQL |
+| taskgen | `DATABASE_URL`, explicit `public.*`; login `mathprep`, startup role `taskgen_svc` | R/W: generation/catalog/event | нет direct SQL |
 | grader | `DATABASE_URL`, `grader_svc` documented | R/W submissions/mastery/event; R task instances | нет direct SQL |
 | cas | pgx DSN / `cas_svc` | R/W CAS queue/receipt | нет direct SQL |
 | platform-api | pool DSN; mostly `mathprep.*` | explicit R/W `users`,`students`; selected engine reads | R/W platform |
 | notifications | `NOTIFICATIONS_DATABASE_URL` | нет найденного direct SQL | R/W push outbox/preferences/notifications |
-| payments | service code/contracts | billing tables | not established |
+| payments | HTTP provider adapter; PostgreSQL client отсутствует | indirect billing operations через Platform API | нет direct SQL |
+| auxiliary/auth | `PLATFORM_API_URL`, Redis session mode | нет direct SQL | indirect identity persistence через Platform API; sessions/challenges в Redis |
+| auxiliary/kaspi | legacy source/prototype, не active Payments build context | direct SQL только в legacy source | current consumer не установлен |
 | analytics | no live worker/config established | intended event-log read-only | none established |
 
 R/W здесь отражает code intent, не эффективные ACL; effective privileges — каталог [CODE][DB].
+
+### 9.1 Auxiliary services и повторная проверка blockers
+
+Auth deliberately не подключается напрямую к PostgreSQL: в текущем режиме он хранит sessions/OTP challenges в Redis и делегирует identity persistence Platform API. Payments также DB-free по контракту: Platform API владеет orders/attempts/entitlements, adapter передаёт verified result через authenticated API. Legacy Kaspi не запущен; Notifications использует PostgreSQL напрямую [CODE][RUNTIME].
+
+2026-10-01: Auth, Payments, Platform API, Notifications, taskgen/grader healthy с zero restarts. Auth health=200; Payments ready=200 (`halyk_epay=true`, `xpayment=false`); engine `/app/healthcheck` exit=0. Auth health unconditional; Payments readiness не проверяет provider credentials/upstream. Полные OTP/payment journeys не запускались; targeted Auth tests и Payments suite прошли, но source/image parity не доказана [RUNTIME][CODE][TEST].
+
+Docker labels и `deploy/local/docker-compose.yml` подтверждают существующий Compose-managed launcher, Auth build context `auxiliary/auth`, Payments — `payments`. Это исправляет прежнее UNKNOWN об источнике запуска; следующий rollout должен явно переходить к отдельным `docker run`, сохраняя aliases [RUNTIME][CODE]. DB-02 можно закрывать новым catalog-derived baseline после попытки source recovery; GO-03 — отдельными local login roles и protected configuration. Дополнительно требуется реальная migrator authority и reconciliation default ACL [DB][INFERRED]. Подробные доказательства: `BLOCKERS-AND-AUXILIARY-SERVICES.md`; executable English prompt: `UNBLOCK-AND-COMPLETE-PROMPT.md`.
 
 ## 10. Почему две схемы
 
@@ -229,6 +239,14 @@ baseline, not a substitute for a migration runner.
 - [DB] catalog extraction and schema-only dump executed 2026-10-01 with read-only session.
 
 ## Addendum — remediation execution revalidation (2026-10-01)
+
+Final local remediation state: `public=33`, `mathprep=96`, and the platform
+ledger has 55 rows. `mathprep.migration_runner_state` is infrastructure added
+by `0054_default_acl_and_migration_runner`; `9000_catalog_baseline_20261001`
+is a new catalog-baseline adoption marker, not reconstructed history. The
+fresh bootstrap and restored-upgrade catalogs normalized to the same SHA-256
+`8beace9f9fc9e75855323db6d7688004ee93a64d7eebd69247aa8001822e4142`.
+Taskgen and grader now authenticate as dedicated non-owner local logins.
 
 The original inventory was rechecked before implementation: it still has 33
 relations in `public` and 95 in `mathprep`, with no partitions, materialized

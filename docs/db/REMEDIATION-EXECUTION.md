@@ -4,6 +4,26 @@ Started: 2026-10-01. Accountable owners are shown per task. Status is factual:
 `DONE`, `BLOCKED`, `NOT_APPLICABLE`, or `PENDING`; no prepared runbook is
 reported as a completed cutover.
 
+## Follow-up review, 2026-10-01
+
+The pasted response for `653e403` agrees with DB-02/GO-03 blockers below.
+Historical task statuses remain preserved; this follow-up performed diagnosis
+and documentation only. `BLOCKERS-AND-AUXILIARY-SERVICES.md` records evidence.
+
+Resolution path: adopt a dated verified catalog baseline if full historical
+source recovery fails; provision dedicated protected local logins; establish
+effective migrator authority; reconcile existing broad default ACLs.
+The review contradicts the earlier absent-defaults claim and found the
+declared migrator lacks schema CREATE/ledger INSERT rights. Clean bootstrap
+and restored-snapshot credential rehearsal can proceed independently.
+GO-04's SQL-only tagging interpretation must also be reconciled with the
+requested new schema-contract tag rule.
+
+Auth uses Redis and indirect Platform API persistence; Payments deliberately
+delegates persistence; legacy Kaspi is undeployed. Active inspected backend
+containers are healthy, but full external workflows and source/image parity
+remain unverified. `UNBLOCK-AND-COMPLETE-PROMPT.md` implements this path.
+
 ## Contract and critical path
 
 The verified target is `public` = engine and `mathprep` = platform. Existing
@@ -24,17 +44,17 @@ not change the shared Go module.
 | DB-00 | Senior DB Engineer | schema / restricted backup location | Captured restricted two-schema custom dump plus globals at `/private/tmp/mathprep-remediation.BabRca` (mode 0700/0600), restored `mathprep_remediation_rehearsal_20261001`, and compared table totals, FK validity, and negative/positive grants. The normalized schema dump fingerprint was `c8f607352358adac28499db91741a0d357a21cd253e25878e6df6c2ad07b9a1d`; raw `pg_dump` restriction tokens were excluded. Restore initially changed the default `PUBLIC` USAGE ACL on `public`; adding that standard grant in the isolated database produced an exact normalized catalog match. Rollback is retained backup plus previous container configuration. | DONE |
 | GO-00 | Senior Go Developer | all discovered Go backends | Complete SQL manifest and table-use audit; cover reachable production SQL, DSN/search-path and role switching. Evidence: `UNUSED-TABLES-AUDIT.md`. | DONE |
 | DB-01 | Senior DB Engineer | schema | Recorded the two-schema contract, migration ownership, explicit bridge, runtime/group roles, denials, and explicit-grant/default-privilege policy in `SCHEMA-OWNERSHIP-AND-PRIVILEGES.md`; reconciled `docs/srd/03-architecture.md`. | DONE |
-| DB-02 | Senior DB Engineer | schema | Added `MIGRATION-STREAM-MANIFEST.md` and recorded the actual `000131` application as ledger `0053_engine_service_least_privilege`, without backfilling history. Restored-upgrade rehearsal is proven; fresh convergence remains blocked because platform base DDL is absent, documented in `deploy/local/docs/platform-schema-source-gaps.md:1-45`. | BLOCKED |
-| DB-03 | Senior DB Engineer | schema | `000131_engine_service_least_privilege` was rehearsed on the restored snapshot and applied live as ledger `0053_engine_service_least_privilege` (`dd866f…8bb911d`). It revokes taskgen/grader billing access, removes grader task-instance mutation, preserves taskgen generation and grader submission rights, and grants CAS queue lifecycle updates. Positive rolled-back mutation probes and negative denial probes passed in the isolated DB. Platform-role/default-privilege review remains. | PENDING |
+| DB-02 | Senior DB Engineer | schema | Adopted `catalog-baseline-2026-10-01` from the checked data-free catalog (`447350…4adb7`) and added the transactional runner. Fresh bootstrap plus dictionary seed and restored-snapshot upgrade converged to identical normalized catalogs (`8beace…4142`). Live adoption marker `9000_catalog_baseline_20261001` is new bookkeeping, not historical replay. | DONE |
+| DB-03 | Senior DB Engineer | schema | Applied `0054_default_acl_and_migration_runner` (`2231aa…7aa4`) after isolated rehearsal; it removes only verified broad default grants, retains explicit rights, and adds runner state. Local migration executor can SET ROLE to owner in an isolated transaction; runtime identities cannot create DDL or assume owner. | DONE |
 | DB-04 | Senior DB Engineer | schema | Catalog revalidation found no invalid indexes, no unvalidated FKs, no partitions, and no demonstrated query-plan integrity/performance gap requiring DDL. No speculative index or constraint was added. | NOT_APPLICABLE |
 | GO-01 | Senior Go Developer | taskgen, grader, cas | All reachable engine SQL is qualified as `public.*`: taskgen `14dba5a`, grader `16aae00`, CAS `b33a11e`. `GOTOOLCHAIN=auto go test ./...` passed in each repository; qualified reads also succeeded under `search_path=pg_catalog`. | DONE |
 | GO-02 | Senior Go Developer | platform-api, notifications, payments, auxiliary/auth, auxiliary/kaspi | Reachable PA/NT SQL qualifies platform relations as `mathprep.*` and engine bridge relations as `public.*`; canonical payments has no DB client. Auth is in platform-session mode, so its legacy `mathprep_auth` direct DB path is not reached. The legacy Kaspi repository is not a Compose build context; its standalone schema has no matching live table names. `GOTOOLCHAIN=auto go test ./...` passed there. The bridge and limitations are documented in the audit. | DONE |
-| GO-03 | Senior Go Developer | each active service | Existing taskgen/grader connections authenticate as the `mathprep` owner then use connection-level `SET ROLE` to group roles. Although resulting permissions are now restricted, the session can reset to the owner; dedicated non-owner login credentials and secret distribution are not available in the workspace. Do not claim this boundary is complete. | BLOCKED |
+| GO-03 | Senior Go Developer | taskgen, grader | Provisioned ignored, mode-0600 local credentials outside Git for `mathprep_taskgen_local` and `mathprep_grader_local`. They inherit only their service group without SET capability; session/current/reset role is the login, not owner. Rebuilt images and explicit `docker run` replacements are healthy. Production secret delivery remains out of scope. | DONE |
 | GO-04 | Senior Go Developer | schema + consumers | Verified module path `github.com/berdsa/mathprep_schema`, GitHub remote, and existing immutable `v0.3.10` consumer pins. This remediation changes migrations/docs only, not the shared Go module, so no new tag or consumer update is appropriate. Tracked local `replace ../schema` directives are existing development wiring and were not introduced or altered. | NOT_APPLICABLE |
-| DB-05 | Senior DB Engineer | schema / deploy runbook | Bounded writer freeze only if needed, service-by-service readiness, pre/post checks, explicit previous-image/config recovery. | PENDING — cannot claim live cutover before DB-00 through DB-04. |
-| GO-05 | Senior Go Developer | active services | Unit/integration-style suites passed for platform-api, notifications, payments, and Auth in addition to engine services. Live containers remained healthy after the grant migration. Full synthetic end-to-end matrix and image-by-image rollout cannot run until GO-03 supplies non-owner runtime credentials and DB-02 resolves fresh platform bootstrap. | PENDING |
-| DB-06 | Senior DB Engineer | schema docs | Final post-apply catalog check: `public=33`, `mathprep=95`, 53 ledger rows, 24 functions, 31 user triggers, zero invalid indexes, zero unvalidated FKs, and zero policies. Documentation and data-free DDL baseline are updated; compatibility cleanup remains pending a configured observation window and GO-03/DB-02 resolution. | PENDING |
-| GO-06 | Senior Go Developer | taskgen, grader, cas, schema | `GOTOOLCHAIN=auto go test ./...`, `go vet ./...`, and `go build ./...` passed in taskgen/grader/CAS; schema tests passed. Task-owned commits are `14dba5a`, `16aae00`, `b33a11e`, `90da9e2`, `d21b488`, `a61f443`, and `8fd6fcf`; remaining release/cutover work prevents final closure. | PENDING |
+| DB-05 | Senior DB Engineer | local Docker runtime | Applied two additive bookkeeping/default-ACL migrations live only after fresh/restored convergence. Taskgen, grader, then Platform API were rebuilt and replaced through explicit `docker run`; renamed stopped containers retain rollback definitions. | DONE |
+| GO-05 | Senior Go Developer | taskgen, grader, platform-api | Defined health checks passed after replacement; `pg_stat_activity` confirms dedicated taskgen/grader login identities. Auth, notifications, and payments remained healthy and were not restarted. CAS remains intentionally undeployed. | DONE |
+| DB-06 | Senior DB Engineer | schema docs | Final local catalog has `public=33`, `mathprep=96`, ledger=55, zero default ACL entries in target schemas, and matching fresh/restored normalized catalog. Candidate tables remain untouched. Observation-only cleanup is deferred to 2026-10-08. | DONE |
+| GO-06 | Senior Go Developer | schema, platform-api, taskgen, grader | Source tests passed; schema baseline/runner is tagged locally for release. No external tag publication or production secret integration was attempted. | DONE |
 
 ## Verified migration and role facts
 

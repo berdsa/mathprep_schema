@@ -4,6 +4,17 @@ Audit time: 2026-10-01 (Asia/Almaty). Database: `mathprep`, PostgreSQL 16.15.
 This is a read-only, current-project-scope audit; it does **not** authorize or
 perform removal of any relation.
 
+## Auxiliary follow-up verification, 2026-10-01
+
+No table classification is changed by this follow-up. Auth intentionally uses
+Redis for sessions/challenges and Platform API for persistent identity;
+Payments intentionally delegates PostgreSQL persistence to Platform API.
+The running Payments container builds from `payments`, not `auxiliary/kaspi`.
+Notifications has a direct PostgreSQL connection. Healthy containers do not
+prove complete OTP/provider workflows or latest-source image parity.
+[CODE][RUNTIME] See `BLOCKERS-AND-AUXILIARY-SERVICES.md` for sanitized
+runtime evidence, test results and limitations. No candidates were removed.
+
 ## Scope and method
 
 The audit covered the current Go sources and current container topology for
@@ -196,6 +207,7 @@ or active query even where code does not name it directly.
 | `mathprep.retake_authorizations` | P | no enabled assessment service | 0 | assessment subsystem; medium |
 | `mathprep.retention_runs` | P | no current retention runner | 0 | operations-design contract; medium |
 | `mathprep.schema_migrations` | R | platform startup/readiness ledger | 53 | PA readiness query; high |
+| `mathprep.migration_runner_state` | R | catalog migration runner state | 0 | added by `0054`; no runtime service grant; high |
 | `mathprep.skill_event_exclusions` | P | analytics deferred | 0 | analytics/content subsystem; high |
 | `mathprep.skill_events` | P | analytics deferred | 0 | analytics/content subsystem; high |
 | `mathprep.skill_prerequisites` | P | no enabled content service | 0 | content subsystem; medium |
@@ -258,3 +270,11 @@ work in `REMEDIATION-EXECUTION.md`. Any future retirement proposal must name
 the candidate relation, demonstrate all consumer searches (including Auth and
 external operations), state data-retention impact, and receive separate
 authorization.
+
+## Post-remediation reconciliation
+
+After the local baseline adoption, `mathprep` has 96 tables: the new
+`migration_runner_state` is required infrastructure, not a candidate. The
+legacy candidates and their classifications are unchanged; none was removed.
+The ledger has 55 rows, including `0054_default_acl_and_migration_runner` and
+`9000_catalog_baseline_20261001`. [DB] final read-only catalog query.

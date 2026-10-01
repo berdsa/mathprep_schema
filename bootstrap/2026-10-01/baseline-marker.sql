@@ -1,0 +1,2 @@
+-- New baseline-adoption bookkeeping only. Catalog creation happens separately
+-- on a fresh database; existing databases execute this marker without replay.

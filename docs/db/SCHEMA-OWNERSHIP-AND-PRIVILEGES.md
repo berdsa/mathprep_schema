@@ -13,11 +13,17 @@ authorized two-schema target; it does not move or remove data.
 | Public historical stream | schema migration files | No applied public ledger was found. Never synthesize historical records. |
 | Platform stream | `mathprep.schema_migrations` | Legacy baseline labels plus verified canonical additions; see `MIGRATION-STREAM-MANIFEST.md`. |
 
-Default privileges are intentionally not relied upon: the catalog has no
-`pg_default_acl` entries for these streams. Every migration that creates a
-runtime-consumed object must include an explicit, reviewed `GRANT` in the same
-migration. This prevents accidental privilege expansion from an owner-default
-change. [DB] `pg_default_acl` query 2026-10-01.
+Explicit reviewed grants remain the target policy. A subsequent read-only
+check found three default ACL entries: `mathprep_owner/mathprep` grants table
+rights to `mathprep_app`; `mathprep/public` grants broad future table and
+sequence rights to taskgen/grader. The previous absence claim was incorrect.
+Reconciliation is pending. [DB] See `BLOCKERS-AND-AUXILIARY-SERVICES.md`.
+
+For local development, `mathprep_local_migrator` is a non-runtime LOGIN role
+with only controlled SET membership in owner `mathprep`; this is required for
+owner-held DDL and is verified only in isolated transactions. Runtime roles
+have neither this membership nor DDL authority. Broad default ACLs were
+removed by `0054_default_acl_and_migration_runner`; explicit grants remain.
 
 ## Runtime identity model
 
