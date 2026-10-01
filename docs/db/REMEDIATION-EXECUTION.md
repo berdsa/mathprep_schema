@@ -50,11 +50,26 @@ not change the shared Go module.
 | GO-01 | Senior Go Developer | taskgen, grader, cas | All reachable engine SQL is qualified as `public.*`: taskgen `14dba5a`, grader `16aae00`, CAS `b33a11e`. `GOTOOLCHAIN=auto go test ./...` passed in each repository; qualified reads also succeeded under `search_path=pg_catalog`. | DONE |
 | GO-02 | Senior Go Developer | platform-api, notifications, payments, auxiliary/auth, auxiliary/kaspi | Reachable PA/NT SQL qualifies platform relations as `mathprep.*` and engine bridge relations as `public.*`; canonical payments has no DB client. Auth is in platform-session mode, so its legacy `mathprep_auth` direct DB path is not reached. The legacy Kaspi repository is not a Compose build context; its standalone schema has no matching live table names. `GOTOOLCHAIN=auto go test ./...` passed there. The bridge and limitations are documented in the audit. | DONE |
 | GO-03 | Senior Go Developer | taskgen, grader | Provisioned ignored, mode-0600 local credentials outside Git for `mathprep_taskgen_local` and `mathprep_grader_local`. They inherit only their service group without SET capability; session/current/reset role is the login, not owner. Rebuilt images and explicit `docker run` replacements are healthy. Production secret delivery remains out of scope. | DONE |
-| GO-04 | Senior Go Developer | schema + consumers | Verified module path `github.com/berdsa/mathprep_schema`, GitHub remote, and existing immutable `v0.3.10` consumer pins. This remediation changes migrations/docs only, not the shared Go module, so no new tag or consumer update is appropriate. Tracked local `replace ../schema` directives are existing development wiring and were not introduced or altered. | NOT_APPLICABLE |
+| GO-04 | Senior Go Developer | schema, taskgen, grader, cas | Published immutable schema tag `v0.3.11-remediation-20261001` to GitHub after verifying the tag adds the shared locale constants and `GenerationRequest.Locale` contract since v0.3.10. Consumers removed local `replace` directives and pin the exact tag. `go list -m`, tests, and builds pass. | DONE |
 | DB-05 | Senior DB Engineer | local Docker runtime | Applied two additive bookkeeping/default-ACL migrations live only after fresh/restored convergence. Taskgen, grader, then Platform API were rebuilt and replaced through explicit `docker run`; renamed stopped containers retain rollback definitions. | DONE |
 | GO-05 | Senior Go Developer | taskgen, grader, platform-api | Defined health checks passed after replacement; `pg_stat_activity` confirms dedicated taskgen/grader login identities. Auth, notifications, and payments remained healthy and were not restarted. CAS remains intentionally undeployed. | DONE |
 | DB-06 | Senior DB Engineer | schema docs | Final local catalog has `public=33`, `mathprep=96`, ledger=55, zero default ACL entries in target schemas, and matching fresh/restored normalized catalog. Candidate tables remain untouched. Observation-only cleanup is deferred to 2026-10-08. | DONE |
-| GO-06 | Senior Go Developer | schema, platform-api, taskgen, grader | Source tests passed; schema baseline/runner is tagged locally for release. No external tag publication or production secret integration was attempted. | DONE |
+| GO-06 | Senior Go Developer | schema, platform-api, taskgen, grader, cas | Published schema main/tag to GitHub (`5564c7b`, tag points at `30b98e6`). Pushed service pins to GitLab: taskgen `f1dfd48`, grader `40bb9cc`, CAS `0242fd3`. Rebuilt taskgen/grader from the remote module pin and verified healthy. Platform API baseline-readiness commit `5da3ee7` is deployed locally, but this checkout has no remote; adjacent `momentskz/backend-api` is a distinct service and was not treated as its destination. | PENDING |
+
+## Publication and runtime update, 2026-10-01
+
+Schema `main` is pushed to `github/berdsa/mathprep_schema`; immutable tag
+`v0.3.11-remediation-20261001` points at commit `30b98e6`. Taskgen, grader,
+and CAS now resolve that exact module version with no local `replace` and are
+pushed to their configured GitLab `main` branches. The running taskgen/grader
+containers were rebuilt from the updated module pins and use their protected
+local identities. Platform API is rebuilt and healthy locally, but its current
+checkout has no configured Git remote. The nearby `momentskz/backend-api`
+repository is an unrelated legacy service with a separate history and was not
+used as a guessed destination. To publish Platform API commit `5da3ee7`, its
+owner must configure the correct remote or identify the authoritative
+GitLab project. Production credentials remain each deployment's secret
+manager responsibility.
 
 ## Verified migration and role facts
 
