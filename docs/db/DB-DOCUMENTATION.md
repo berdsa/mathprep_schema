@@ -247,3 +247,17 @@ positive/negative service grant probes matched. The detailed result and the
 cutover limitation are maintained in `REMEDIATION-EXECUTION.md`. No live DDL,
 data move, table removal, or privilege revocation was applied by this
 remediation run. [DB]
+
+### 2026-10-01 applied least-privilege change
+
+Canonical migration `000131_engine_service_least_privilege` was rehearsed on
+the restored snapshot and then applied atomically to the live database as
+ledger version `0053_engine_service_least_privilege`, checksum
+`dd866f285d4e1db7e7513837d31d55f168eecd0b91b6c14da90919c6d8bb911d`.
+It removes taskgen/grader table privileges from public billing relations,
+removes grader mutation of `public.task_instance`, and grants only the engine
+operations demonstrated by current qualified SQL. CAS retains its column-level
+queue lifecycle update rights and append-only event write. No table, data, or
+schema location changed. [MIGRATION]
+`migrations/000131_engine_service_least_privilege.up.sql`; [DB] live ledger
+and grant checks after commit.

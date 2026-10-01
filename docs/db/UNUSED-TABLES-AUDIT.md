@@ -35,9 +35,11 @@ predate current heads for several repositories. [GRAPH]
 Limits: PostgreSQL catalogs do not retain table creation timestamps. Scan
 counters are resettable and only corroborate use; they do not prove it. Empty
 tables, FKs, migration text, and static negative searches do not prove a table
-is obsolete. The active Auth container has its own configurable database
-connection (`auxiliary/auth/internal/db/db.go:14-25`); its effective database
-identity was not exposed in this audit. Therefore no table is called
+is obsolete. The active Auth container is configured in platform-session mode,
+so its legacy direct database path is not reached
+(`auxiliary/auth/cmd/server/main.go:45-72`,
+`deploy/local/docker-compose.yml:112-130`). Potential external administrative
+or operational consumers are still not ruled out. Therefore no table is called
 "confirmed unused".
 
 Legend: `A` = `ACTIVE_RUNTIME`; `I` = `REQUIRED_INDIRECT`; `R` =
@@ -101,7 +103,7 @@ or active query even where code does not name it directly.
 |---|---|---|---:|---|
 | `mathprep.access_audit_events` | A | PA inserts safe audit events | 1294 | append-only operational journal; high |
 | `mathprep.access_consents` | A | PA consent R/W | 469 | guarded FKs/triggers; high |
-| `mathprep.access_external_identities` | ? | no current direct Go reference | 1 | Auth external consumer not ruled out; low |
+| `mathprep.access_external_identities` | U | no current direct Go reference | 1 | Auth ruled out; external admin consumer unresolved; low |
 | `mathprep.access_guardian_relationships` | A | PA identity/school R/W | 405 | tenant guard trigger; high |
 | `mathprep.access_invitations` | ? | no current direct Go reference | 0 | external/admin consumer not ruled out; low |
 | `mathprep.access_legacy_parent_mappings` | A | PA preauth/Google bridge reads | 474 | legacy bridge still active; high |
@@ -201,10 +203,10 @@ There are **no confirmed unused tables** within the audited project scope.
 The following are candidates to retain and investigate, not deletion targets:
 
 * `access_external_identities`, `access_invitations`, and
-  `access_recovery_cases`: no direct active-source query was found, but the
-  current Auth container and potential administrative consumers prevent a
-  conclusion. Obtain its effective database/schema inventory and production
-  query telemetry before reclassification.
+  `access_recovery_cases`: no direct active-source query was found. The active
+  Auth container is ruled out, but potential administrative consumers prevent
+  a conclusion. Obtain their inventory and query telemetry before
+  reclassification.
 * `learner_profiles`, `parent_active_profiles`, `parent_command_receipts`,
   `parent_consents`, `platform_checkouts`, `profile_level_history`,
   `profile_pauses`, `profile_schedules`, `telegram_delivery_attempts`, and
